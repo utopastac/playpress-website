@@ -1,0 +1,8 @@
+.cache
+.eslintcache
+.stylelintcache
+.DS_Store
+.parcel-cache
+node_modules
+dist
+

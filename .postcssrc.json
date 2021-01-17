@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "postcss-nesting": {},
+    "postcss-logical": { "dir": "ltr" },
+    "autoprefixer": {}
+  }
+}
