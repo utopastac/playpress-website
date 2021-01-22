@@ -1,134 +1,265 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      href="light.css"
-      rel="stylesheet"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      href="dark.css"
-      rel="stylesheet"
-      media="(prefers-color-scheme: dark)"
-    />
-    <link href="main.css" rel="stylesheet" />
-    <link type="image/svg+xml" href="favicon.svg" rel="icon" />
-    <script src="dark-mode-toggle.js" type="module"></script>
-    <script src="main.js" type="module"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Beautifully crafted websites.
-      Built to last & blazingly fast."
-    />
-    <title>Playpress</title>
-  </head>
-  <body is="home">
-    <header role="banner">
-      <a href="/" aria-label="Playpress">
-        <svg width="215" height="85" fill="none">
-          <title>Playpress</title>
-          <path
-            d="M0 36.7a5 5 0 005 5h31.7a5 5 0 005-5V5a5 5 0 00-5-5H5a5 5 0 00-5 5v31.7z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M22 19c1.5 0 2.8-1.2 2.8-2.8 0-1.5-1.2-2.7-2.8-2.7h-3.5V19H22zM13 9c0-.4.2-.7.6-.7h8.7c4.4 0 8.1 3.6 8.1 8a8 8 0 01-8 8h-3.8v8.6c0 .4-.4.7-.7.7h-4.3a.7.7 0 01-.7-.7v-24z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M43.3 36.7a5 5 0 005 5H80a5 5 0 005-5V5a5 5 0 00-5-5H48.3a5 5 0 00-5 5v31.7z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M57.5 8.9c0-.4.3-.7.7-.7h4.3c.4 0 .7.3.7.7v19.3h8.6c.4 0 .7.3.7.7v3.9c0 .4-.3.7-.7.7H58.2a.7.7 0 01-.7-.7v-24z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M86.7 36.7a5 5 0 005 5h31.6a5 5 0 005-5V5a5 5 0 00-5-5H91.7a5 5 0 00-5 5v31.7z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M110.3 24.8l-2.8-6-2.8 6h5.5zm-15 7.7l11.4-24.3c.1-.2.4-.4.6-.4h.4c.2 0 .5.2.6.4l11.3 24.3c.2.5 0 1-.6 1h-4c-.7 0-1-.3-1.3-1l-1.3-2.8h-9.8l-1.3 3c-.2.3-.6.8-1.3.8h-4c-.5 0-.8-.5-.6-1"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M130 36.7a5 5 0 005 5h31.7a5 5 0 005-5V5a5 5 0 00-5-5H135a5 5 0 00-5 5v31.7z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M148 21.3l-8-12c-.3-.5 0-1.1.5-1.1h4.7c.3 0 .5.2.6.3l5 7.4 5-7.4c.2-.1.3-.3.7-.3h4.6c.6 0 .9.5.6 1l-8 12v11.6c0 .4-.4.7-.8.7h-4.3c-.4 0-.6-.3-.6-.7V21.3z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M0 80a5 5 0 005 5h31.7a5 5 0 005-5V48.3a5 5 0 00-5-5H5a5 5 0 00-5 5V80z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M22 62.4c1.5 0 2.8-1.3 2.8-2.9 0-1.5-1.2-2.7-2.8-2.7h-3.5v5.6H22zm-9-10.2c0-.4.2-.7.6-.7h8.7c4.4 0 8.1 3.6 8.1 8 0 4.5-3.7 8.1-8 8.1h-3.8v8.5c0 .4-.4.7-.7.7h-4.3a.7.7 0 01-.7-.7V52.2z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M43.3 80a5 5 0 005 5H80a5 5 0 005-5V48.3a5 5 0 00-5-5H48.3a5 5 0 00-5 5V80z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M66.3 62.3c1.5 0 2.8-1.3 2.8-2.9 0-1.5-1.3-2.7-2.8-2.7H61v5.6h5.3zm-11-10c0-.5.3-.8.7-.8h10.8a8 8 0 018 7.8c0 3.4-2.3 6-5.5 7.3l5 9.2c.2.5 0 1-.6 1h-4.8a.7.7 0 01-.6-.3l-4.8-9.6H61v9.2c0 .4-.3.7-.7.7H56a.7.7 0 01-.7-.7V52.2z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M86.7 80a5 5 0 005 5h31.6a5 5 0 005-5V48.3a5 5 0 00-5-5H91.7a5 5 0 00-5 5V80z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M99.3 52.2c0-.4.3-.7.7-.7h15c.4 0 .7.3.7.7v4c0 .3-.3.6-.7.6h-10v4.5h8.2c.4 0 .7.3.7.7v4c0 .3-.3.6-.7.6H105v4.9h10c.4 0 .7.3.7.7v4c0 .3-.3.6-.7.6h-15c-.4 0-.6-.3-.6-.7V52.2z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M130 80a5 5 0 005 5h31.7a5 5 0 005-5V48.3a5 5 0 00-5-5H135a5 5 0 00-5 5V80z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M143 73.4l1.6-3c.3-.5 1-.4 1.2-.2.2 0 2.8 2 5.2 2 1.4 0 2.5-1 2.5-2.2 0-1.5-1.3-2.7-3.8-3.7-3-1.2-7-3.6-7-8 0-3.5 2.8-7.1 8.4-7.1 3.7 0 6.7 1.9 7.7 2.7.4.2.4.9.2 1.1l-1.8 2.8c-.2.4-1 .7-1.2.5-.4-.2-3-2.2-5.2-2.2-1.3 0-2.3.9-2.3 1.9 0 1.3 1.1 2.3 4 3.5 2.8 1 7.3 3.3 7.3 8.2 0 3.8-3.3 7.5-8.6 7.5-3 .2-5.9-.8-8.1-2.8-.3-.4-.5-.5-.2-1"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M173.3 80a5 5 0 005 5H210a5 5 0 005-5V48.3a5 5 0 00-5-5h-31.7a5 5 0 00-5 5V80z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M186.3 73.4l1.6-3c.3-.5 1-.4 1.3-.2.1 0 2.7 2 5.1 2 1.4 0 2.5-1 2.5-2.2 0-1.5-1.3-2.7-3.7-3.7-3.1-1.2-7-3.6-7-8 0-3.5 2.7-7.1 8.3-7.1 3.8 0 6.7 1.9 7.8 2.7.4.2.3.9.2 1.1l-1.9 2.8c-.2.4-.9.7-1.2.5-.3-.2-3-2.2-5.2-2.2-1.3 0-2.3.9-2.3 1.9 0 1.3 1.2 2.3 4 3.5 2.8 1 7.3 3.3 7.3 8.2 0 3.8-3.2 7.5-8.5 7.5-3 .2-6-.8-8.2-2.8-.3-.4-.4-.5-.2-1"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M173.3 36.7a5 5 0 005 5H210a5 5 0 005-5V5a5 5 0 00-5-5h-31.7a5 5 0 00-5 5v31.7z"
-            fill="hsl(var(--logo))"
-          />
-          <path
-            d="M194.8 26.3h1.9c.2 0 .1.2.1.2-.5 1.8-2 1.8-2 1.8s-1.6 0-2-1.8l.1-.2h1.9z"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M200.4 28.8h-.1s-1.5 1.6-5.6 1.6c-4 0-5.6-1.5-5.6-1.5l-.1-.1s-3.7-2.5-3.3-9.2c0-.1 0-.8.3-1.8 1.4.5 9.7 3.8 12-3 0 0 .9 4.6 5.3 3l.4 1.8c.3 6.6-3.2 9.1-3.3 9.2zm4.5-9.3s-.4-9.3-10.2-9.3c-9.9 0-10.2 9.3-10.2 9.3-.5 7 3.2 10 3.7 10.3.4.3 2.2 1.8 6.5 1.8s6-1.5 6.4-1.8c.5-.4 4.2-3.3 3.8-10.3"
-            fill="hsl(var(--logo-secondary))"
-          />
-          <path
-            d="M191.4 22.6c-1-1-1.9-.1-2 0l-.5-.6c.5-.5 1.8-1.2 3 0l-.5.6zm8.7 0c-.9-1-1.8-.1-1.9 0l-.6-.6c.6-.5 1.9-1.2 3.1 0l-.6.6z"
-            fill="hsl(var(--logo-secondary))"
-          />
-        </svg>
-      </a>
-      <dark-mode-toggle
-        id="dark-mode-toggle"
-        label="Dark mode"
-      ></dark-mode-toggle>
-    </header>
+<extends src="src/base.html">
+  <block name="content">
     <main>
-      <h1>Playpress website</h1>
+      <section>
+        <h1>Build their ambition</h1>
+        <img
+          src="https://via.placeholder.com/900x600.webp?text=Child playing with toyset"
+          alt="Child playing with toyset"
+          width="900"
+          height="600"
+        />
+        <h2>Press out, build up and play on!</h2>
+        <p>
+          Playpress is a buildable playsets for ages 4 and up, made right here
+          in the UK.
+        </p>
+        <p>
+          We believe in the power of planet-friendly, hands-on fun! Our
+          inventive sets can be pressed out, built up, and played with time and
+          time again.
+        </p>
+        <h3>Fun for kids, kind to the planet</h3>
+        <p>
+          Playpress is made from Playboard, a sturdy material that’s strong
+          enough to stand up to everyday adventures but also completely
+          sustainable, recyclable and biodegradable.
+        </p>
+        <ul>
+          <li>FSC certified sourcing</li>
+          <li>100% recyclable and biodegradable</li>
+        </ul>
+        <a is="signpost" href="about.html">Find out more about our playsets</a>
+      </section>
+      <section>
+        <h2>Our best-selling sets</h2>
+        <div is="promos" class="four">
+          <article is="promo">
+            <a href="product.html">
+              <h3>Gruffalo eco-friendly playset</h3>
+              <img
+                src="https://via.placeholder.com/600x400.webp?text=Gruffalo playset"
+                alt="Gruffalo playset"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <p><strong>£14.99</strong></p>
+              <p>Oh help! Oh no! It’s a Gruffalo!</p>
+            </a>
+          </article>
+          <article is="promo">
+            <a href="product.html">
+              <h3>Space station eco-friendly playset</h3>
+              <img
+                src="https://via.placeholder.com/600x400.webp?text=Space Station playset"
+                alt="Space Station playset"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <p><strong>£14.99</strong></p>
+              <p>Space, the final frontier!</p>
+            </a>
+          </article>
+          <article is="promo">
+            <a href="product.html">
+              <h3>Farmyard eco-friendly playset</h3>
+              <img
+                src="https://via.placeholder.com/600x400.webp?text=Farmyard eco playset"
+                alt="Farmyard eco playset"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <p><strong>£11.99</strong></p>
+              <p>Fun for all to be had on the farm today!</p>
+            </a>
+          </article>
+          <article is="promo">
+            <a href="product.html">
+              <h3>Savannah Animals Playset</h3>
+              <img
+                src="https://via.placeholder.com/600x400.webp?text=Gruffalo playset"
+                alt="Savannah playset"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <p><strong>£11.95</strong></p>
+              <p>Ignite their wild imagination!</p>
+            </a>
+          </article>
+        </div>
+        <a is="signpost" href="shop.html">Go to shop</a>
+      </section>
+      <section>
+        <h2>Create a bespoke Playpress for your business</h2>
+        <p>
+          Looking for a bespoke playset that’s a little more… quirky? We can
+          work with you to design and produce relatively small, affordable runs
+          of your very own Playpress set.
+        </p>
+        <div is="call-outs">
+          <article is="call-out">
+            <h3>Saving plastic and saving lives</h3>
+            <img
+              src="https://via.placeholder.com/600x400.webp?text=RNLI showcase"
+              alt="RNLI showcase"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <p>
+              Helping to raise valuable funds with a unique playset for the RNLI
+            </p>
+          </article>
+          <article is="call-out">
+            <h3>Exploring space one small step at a time</h3>
+            <img
+              src="https://via.placeholder.com/600x400.webp?text=Science Museum showcase"
+              alt="Science Museum showcase"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <p>Making space more hands-on with the Science Museum</p>
+          </article>
+        </div>
+        <a is="signpost" href="bespoke.html"
+          >Find out more about bespoke playsets</a
+        >
+      </section>
+      <section>
+        <h2>Playpress partners</h2>
+        <p>You'll find our fantastic toy sets in these stores too!</p>
+        <ul is="logos">
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Royal Academy of Arts"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Royal Academy of Arts
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Royal Museums Greenwich"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Royal Museums Greenwich
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Science Museum"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Science Museum
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Jiminy"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Jiminy
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=New Internationalist"
+              alt="Royal Museums Greenwich"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            New Internationalist
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=RNLI"
+              alt="Royal Museums Greenwich"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            RNLI
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Weald and Download"
+              alt="Royal Museums Greenwich"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Weald and Download
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Winchester Science Center"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Winchester Science Center
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Tate"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Tate
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Southend on Sea"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Southend on Sea
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Observatory Science Center"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Observatory Science Center
+          </li>
+          <li>
+            <img
+              src="https://via.placeholder.com/100x100.webp?text=Pendon"
+              alt="Partner logo"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            Pendon
+          </li>
+        </ul>
+        <a is="signpost" href="stock.html">Become a Playpress stockist</a>
+      </section>
     </main>
-    <footer role="contentinfo">
-      <small>Copyright 2020 Playpress</small>
-    </footer>
-  </body>
-</html>
+  </block>
+</extends>

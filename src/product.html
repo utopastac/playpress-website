@@ -1,0 +1,138 @@
+<extends src="src/base.html">
+  <block name="title"
+    ><title>Gruffalo eco-friendly playset - Playpress Toys</title></block
+  >
+  <block name="content">
+    <ul is="breadcrumbs">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+    </ul>
+    <main is="product">
+      <h1>Gruffalo eco-friendly playset</h1>
+      <img
+        src="https://via.placeholder.com/900x600.webp?text=Gruffalo playset 1"
+        alt="Gruffalo primary product image"
+        width="900"
+        height="600"
+      />
+      <form action="cart.html" method="get" is="add-to-cart">
+        <fieldset>
+          <legend>Gruffalo eco-friendly playset</legend>
+          <label for="quantity">£14.99 x</label>
+          <input id="quantity" type="number" value="1" size="2" />
+          <button>Add to cart</button>
+          <p><em>We ship worldwide - UK orders are free of charge.</em></p>
+        </fieldset>
+      </form>
+      <p><em>We ship worldwide - UK orders are free of charge.</em></p>
+      <div is="gallery">
+        <img
+          src="https://via.placeholder.com/600x400.webp?text=Gruffalo playset 2"
+          alt="Gruffalo playset 2"
+          width="600"
+          height="400"
+          loading="lazy"
+        />
+        <img
+          src="https://via.placeholder.com/600x400.webp?text=Gruffalo playset 3"
+          alt="Gruffalo playset 3"
+          width="600"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+      <p>Oh help! Oh no! It’s a Gruffalo!</p>
+      <p>
+        See the much-loved story of Julia Donaldson and Axel Scheffler’s ‘The
+        Gruffalo’ come to life with our new and exciting interactive playset.
+        Consisting of 44 pop-out pieces made from sturdy and sustainable
+        materials, the charming characters have been lovingly realised to be
+        played with again and again along with the deep dark wood backdrop,
+        creating many opportunities for fun imaginative and constructive play.
+      </p>
+      <dl>
+        <dt>Pack size</dt>
+        <dd>22.6cm x 22.6cm x 1.6cm</dd>
+      </dl>
+      <p>
+        <a
+          href="https://www.playpresstoys.co.uk/s/L0005_Gruffalo_Pop-out_Playset_Instructions_148mmx148mm_09062020.pdf"
+          >Instructions included</a
+        >.
+      </p>
+      <h2>Love for the Gruffalo playset</h2>
+      <div is="call-out" class="testimonial">
+        <img
+          src="https://via.placeholder.com/120x120.webp?text=Customer photo"
+          alt="Customer photo"
+          width="120"
+          height="120"
+        />
+        <div>
+          <blockquote>
+            Absolutely love this play set. It was soooo easy to pop out the
+            pieces and build the Gruffalo "nest" as my 5 year old likes to call
+            it. Also love that it's plastic-free!!
+          </blockquote>
+          <cite>Jemma, London</cite>
+        </div>
+      </div>
+      <h3>Playpressers on Instagram</h3>
+      <p>
+        Use the hashtag #playpress to feature on our profile and share your fun!
+      </p>
+      <ul is="photo-stream">
+        <li>
+          <img
+            src="https://via.placeholder.com/100x100.webp?text=Instagram photo"
+            alt="Instagram customer"
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/200x200.webp?text=Instagram photo"
+            alt="Instagram customer"
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/200x200.webp?text=Instagram photo"
+            alt="Instagram customer"
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/200x200.webp?text=Instagram photo"
+            alt="Instagram customer"
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+        </li>
+      </ul>
+    </main>
+    <ul is="pagination">
+      <li>
+        <a href="product.html"
+          ><span>Previous</span
+          ><span> Space station eco-friendly playset</span></a
+        >
+      </li>
+      <li>
+        <a href="product.html"
+          ><span>Next</span><span> Farm eco-friendly playset</span></a
+        >
+      </li>
+    </ul>
+    <include src="src/about-summary.html"></include>
+  </block>
+</extends>
