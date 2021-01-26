@@ -64,7 +64,7 @@
       }
     ],
     "scales/border-width": [[1, 2, 4], { "unit": "px" }],
-    "scales/font-family": [["system-ui", "sans-serif"]],
+    "scales/font-family": [["Sofia Pro", "sans-serif"]],
     "scales/font-size": [
       [
         0.28,

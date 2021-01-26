@@ -2,13 +2,37 @@
  * Fonts
  */
 
-/* @font-face {
+@font-face {
   font-display: swap;
-  font-family: "Sofia Pro Soft";
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("sofia-pro.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 400;
+  src: url("sofia-pro-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Sofia Pro";
   font-style: normal;
   font-weight: 700;
-  src: url("sofia-pro-soft-bold.woff2") format("woff2");
-} */
+  src: url("sofia-pro-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 700;
+  src: url("sofia-pro-bold-italic.woff2") format("woff2");
+}
 
 /**
  * Root
@@ -72,7 +96,7 @@ html {
   background-color: hsl(var(--background, var(--wheat-50)));
   color: hsl(var(--text));
   color-scheme: light dark;
-  font-family: system-ui;
+  font-family: "Sofia Pro", sans-serif;
   font-size: 93.75%;
 
   @media (min-width: 40rem) {
@@ -93,15 +117,6 @@ body {
   margin: 0 auto;
   max-inline-size: 90rem;
   padding-inline: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: system-ui;
 }
 
 h1,
@@ -251,7 +266,7 @@ fieldset {
 }
 
 legend {
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 1.5em;
   font-weight: 700;
   margin-block-end: 1rem;
@@ -625,7 +640,6 @@ article[is="call-out"] {
   padding: 2rem;
 
   & > h2 {
-    font-family: sans-serif;
     font-size: 1.5em;
     margin-block: 0;
   }
@@ -819,7 +833,6 @@ dl[is="fact"] {
 
   & > dt {
     display: flex;
-    font-family: sans-serif;
     font-size: 3em;
     font-weight: 700;
     line-height: 1;
