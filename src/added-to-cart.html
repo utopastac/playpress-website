@@ -1,0 +1,68 @@
+<extends src="src/base.html">
+  <block name="title"><title>Cart - Playpress Toys</title></block>
+  <block name="content">
+    <ul is="breadcrumbs">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+    </ul>
+    <main is="cart">
+      <h1>Added to your cart</h1>
+      <article is="nofification">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <a href="product.html"
+                  ><img
+                    src="https://via.placeholder.com/100x100.webp?text=Gruffalo playset 1"
+                    alt="Gruffalo primary product image"
+                    width="100"
+                    height="100"
+                /></a>
+              </td>
+              <td><a href="product.html">Gruffalo eco-friendly playset</a></td>
+              <td>1 x £14.99</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Cart total: £14.99</p>
+        <form action="not-in-prototype.html" method="get">
+          <button>Checkout</button>
+          <a href="cart.html">View cart</a>
+        </form>
+      </article>
+      <h2>You may also be interested in</h2>
+      <div is="promos" class="two">
+        <article is="promo">
+          <a href="product.html">
+            <h4>Farmyard eco-friendly playset</h4>
+            <img
+              src="https://via.placeholder.com/600x400.webp?text=Farmyard eco playset"
+              alt="Farmyard eco playset"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <p><strong>£11.99</strong></p>
+            <p>Fun for all to be had on the farm today!</p>
+          </a>
+        </article>
+        <article is="promo">
+          <a href="product.html">
+            <h4>Space station eco-friendly playset</h4>
+            <img
+              src="https://via.placeholder.com/600x400.webp?text=Space Station playset"
+              alt="Space Station playset"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <p><strong>£14.99</strong></p>
+            <p>Space, the final frontier!</p>
+          </a>
+        </article>
+      </div>
+      <a href="shop.html" is="signpost">Continue shopping</a>
+    </main>
+  </block>
+</extends>
