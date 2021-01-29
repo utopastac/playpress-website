@@ -657,9 +657,9 @@ div[is="call-outs"] {
   }
 }
 
-/* Cart */
+/* Basket */
 
-main[is="cart"] {
+main[is="basket"] {
   & > form {
     & > table {
       & > tbody {
@@ -695,6 +695,15 @@ main[is="cart"] {
       }
     }
   }
+}
+
+/* Command */
+
+button[is="command"] {
+  background-color: hsl(var(--command));
+  font-size: 0.83em;
+  font-weight: 400;
+  padding: 0.25rem 0.5rem;
 }
 
 /* Error */
@@ -1051,6 +1060,14 @@ ul[is="photo-stream"] {
   @media (min-width: 50rem) {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* Proceed to checkout */
+
+div[is="proceed-to-checkout"] {
+  background-color: hsl(var(--elevated));
+  margin-block-start: 1rem;
+  padding: 1rem;
 }
 
 /* Promo */

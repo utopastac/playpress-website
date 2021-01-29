@@ -5,15 +5,16 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
     </ul>
-    <main is="cart">
-      <h1>Your cart</h1>
+    <main is="basket">
+      <h1>Your basket</h1>
       <form action="not-in-prototype.html" method="get">
         <table>
           <thead>
             <tr>
-              <td colspan="2">Product</td>
-              <td>Price</td>
-              <td><label for="quantity">Quatity</label></td>
+              <th colspan="2">Product</th>
+              <th>Price</th>
+              <th><label for="quantity">Quantity</label></th>
+              <th>Remove</th>
             </tr>
           </thead>
           <tbody>
@@ -30,22 +31,24 @@
               <td><a href="product.html">Gruffalo eco-friendly playset</a></td>
               <td>£14.99</td>
               <td><input id="quantity" type="number" value="1" /></td>
+              <td><button is="command">Remove</button></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <th scope="row" colspan="2">Total</th>
-              <td colspan="3">£14.99</td>
+              <td>£14.99</td>
+              <td colspan="2"><button is="command">Update</button></td>
             </tr>
           </tfoot>
         </table>
-        <div>
+        <div is="proceed-to-checkout">
           <p>
             <a href="delivery.html"
               >We ship worldwide - UK orders are free of charge.</a
             >
           </p>
-          <div><button>Checkout</button></div>
+          <div><button>Proceed to checkout</button></div>
         </div>
       </form>
       <a href="shop.html" is="signpost">Continue shopping</a>

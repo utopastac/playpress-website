@@ -1,13 +1,13 @@
 <extends src="src/base.html">
-  <block name="title"><title>Cart - Playpress Toys</title></block>
+  <block name="title"><title>Basket - Playpress Toys</title></block>
   <block name="content">
     <ul is="breadcrumbs">
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
     </ul>
-    <main is="cart">
-      <h1>Added to your cart</h1>
-      <article is="nofification">
+    <main is="basket">
+      <h1>Added to your basket</h1>
+      <form action="not-in-prototype.html" method="get">
         <table>
           <tbody>
             <tr>
@@ -25,12 +25,12 @@
             </tr>
           </tbody>
         </table>
-        <p>Cart total: £14.99</p>
-        <form action="not-in-prototype.html" method="get">
-          <button>Checkout</button>
-          <a href="cart.html">View cart</a>
-        </form>
-      </article>
+        <div is="proceed-to-checkout">
+          <p>Basket total: £14.99</p>
+          <button>Proceed to checkout</button>
+          <a href="basket.html">View basket</a>
+        </div>
+      </form>
       <h2>You may also be interested in</h2>
       <div is="promos" class="two">
         <article is="promo">
