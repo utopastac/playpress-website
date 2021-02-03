@@ -60,58 +60,59 @@ template.innerHTML = `
   [part="label"] {
     align-items: center;
     display: flex;
-    color: var(--${NAME}-label-color, inherit);
-    font: var(--${NAME}-label-font, inherit);
+    color: var(--${NAME}-label, inherit);
+    font: inherit;
     font-weight: 700;
-    min-height: calc(2rem + 3px);
+    min-height: 2rem;
     position: relative;
     padding-right: 4.5rem;
     -webkit-tap-highlight-color: transparent;
-    text-align: right;   
+    text-align: right;
     user-select: none;
   }
 
   [part="label"]::before {
-    background: var(--${NAME}-track-background, transparent);
+    background: var(--${NAME}-track, transparent);
     border-radius: 500rem;
-    box-shadow: 0 1px 0 0 var(--${NAME}-track-drop, transparent),
-      inset 0 1px 0 0 var(--${NAME}-track-inset, transparent);
     content: "";
     display: block;
     height: 2rem;
     position: absolute;
     right: 0;
-    top: 1px;
-    width: 4rem;
+    top: 0;
+    width: 3.5rem;
   }
 
   [part="label"]::after {
-    background: var(--${NAME}-thumb-background, transparent);
+    background: var(--${NAME}-thumb, transparent);
     border-radius: 100%;
-    box-shadow: 0 1px 0 0 var(--${NAME}-thumb-drop, transparent),
-      inset 0 1px 0 0 var(--${NAME}-thumb-inset, transparent);
     content: "";
     display: block;
-    height: calc(2rem + 2px);
+    height: calc(2rem - 6px);
     position: absolute;
     right: 0;
-    top: 0;
-    transform: translateX(-1.85rem);
-    width: calc(2rem + 2px);
+    top: 3px;
+    transform: translateX(calc(-1.5rem - 2px));
+    width: calc(2rem - 6px);
   }
 
-  [part="input"]:focus-visible + [part="label"] {
-    background-image: linear-gradient(to right, var(--${NAME}-focus) 58%, transparent 58%);
-    color: var(--${NAME}-on-focus, transparent);
+  @media (prefers-reduced-motion: no-preference) {
+    [part="label"]::after {
+      transition: transform 0.2s;
+    }
   }
 
   [part="input"]:checked + [part="label"]::after {
-    transform: translateX(0);
+    transform: translateX(-4px);
+  }
+
+  [part="input"]:focus-visible + [part="label"]::before {
+    background: var(--${NAME}-focus, transparent);
   }
 </style>
 <form part="form">
-  <input part="input" id="t" type="checkbox"> 
-  <label part="label" for="t"></label>  
+  <input part="input" id="t" type="checkbox">
+  <label part="label" for="t"></label>
 </form>
 `;
 

@@ -50,9 +50,13 @@
     ],
     "order/properties-alphabetical-order": [true, { "severity": "warning" }],
     "property-disallowed-list": [
-      "height",
       "/(min|max)-height/",
       "/(min|max)-width/",
+      "/bottom/",
+      "/left/",
+      "/right/",
+      "/top/",
+      "height",
       "width"
     ],
     "property-no-vendor-prefix": true,
@@ -85,7 +89,7 @@
       ]
     ],
     "scales/font-weight": [[400, 700]],
-    "scales/line-height": [[1, 1.2, 1.5]],
+    "scales/line-height": [[1, 1.2, 1.5, 1.75]],
     "scales/space": [
       [
         0.125,
