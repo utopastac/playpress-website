@@ -24,7 +24,7 @@
     "*.{css,htmljs,json,md,yml}": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
-    "@signal-noise/stylelint-scales": "^1.5.0",
+    "@signal-noise/stylelint-scales": "github:signal-noise/stylelint-scales#master",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.16.0",
     "husky": "^4.3.6",
@@ -42,6 +42,5 @@
     "stylelint-order": "^4.1.0",
     "stylelint-use-logical": "^1.1.0",
     "stylelint-use-nesting": "^3.0.0"
-  },
-  "dependencies": {}
+  }
 }

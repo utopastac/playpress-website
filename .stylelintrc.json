@@ -7,8 +7,16 @@
     "stylelint-use-nesting"
   ],
   "rules": {
+    "alpha-value-notation": "percentage",
+    "at-rule-allowed-list": ["font-face", "supports", "media"],
+    "at-rule-no-vendor-prefix": true,
+    "color-function-notation": "modern",
+    "color-named": "never",
+    "color-no-hex": true,
     "csstools/use-logical": "always",
+    "no-unknown-animations": true,
     "csstools/use-nesting": "always",
+    "custom-media-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "custom-property-empty-line-before": [
       "always",
       {
@@ -17,6 +25,8 @@
         "severity": "warning"
       }
     ],
+    "custom-property-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "declaration-block-no-redundant-longhand-properties": true,
     "declaration-empty-line-before": [
       "always",
       {
@@ -27,28 +37,57 @@
     ],
     "declaration-no-important": true,
     "declaration-property-unit-allowed-list": {
-      "border": ["px"],
-      "outline": ["px"],
+      "/^border$|^border.*(width$|block$|inline$|start$|end$/)": ["px"],
       "/^font/": ["%", "em"],
       "/^gap/": ["rem"],
+      "/^inset": ["rem"],
       "/^margin/": ["em", "rem", "vw"],
-      "/^padding/": ["em", "rem"]
+      "/^padding/": ["em", "rem"],
+      "/outline/": ["px"]
     },
     "font-weight-notation": "numeric",
+    "function-allowed-list": [
+      "attr",
+      "calc",
+      "counters",
+      "format",
+      "grayscale",
+      "hsl",
+      "linear-gradient",
+      "minmax",
+      "polygon",
+      "repeat",
+      "rotate",
+      "scale",
+      "translate",
+      "translateX",
+      "translateY",
+      "url",
+      "var"
+    ],
     "function-url-no-scheme-relative": true,
-    "media-feature-name-no-vendor-prefix": true,
+    "function-url-scheme-allowed-list": ["data"],
+    "keyframes-name-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "media-feature-name-allowed-list": [
       "min-height",
       "min-width",
       "prefers-reduced-motion"
     ],
+    "media-feature-name-no-vendor-prefix": true,
     "no-descending-specificity": null,
     "number-max-precision": 4,
     "order/order": [
       ["custom-properties", "declarations", "rules", "at-rules"],
-      { "severity": "warning" }
+      {
+        "severity": "warning"
+      }
     ],
-    "order/properties-alphabetical-order": [true, { "severity": "warning" }],
+    "order/properties-alphabetical-order": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "property-disallowed-list": [
       "/(min|max)-height/",
       "/(min|max)-width/",
@@ -67,60 +106,95 @@
         "severity": "warning"
       }
     ],
-    "scales/border-width": [[1, 2, 4], { "unit": "px" }],
+    "scales/border-width": [
+      {
+        "scale": [1, 2, 4],
+        "units": ["px"]
+      }
+    ],
     "scales/font-family": [["Sofia Pro", "sans-serif"]],
     "scales/font-size": [
-      [
-        0.28,
-        0.48,
-        0.58,
-        0.67,
-        0.83,
-        1,
-        1.17,
-        1.5,
-        1.73,
-        2,
-        2.5,
-        3,
-        3.6,
-        4.3,
-        5.2
-      ]
+      {
+        "scale": [
+          0.28,
+          0.48,
+          0.58,
+          0.67,
+          0.83,
+          1,
+          1.17,
+          1.5,
+          1.73,
+          2,
+          2.5,
+          3,
+          3.6,
+          4.3,
+          5.2
+        ],
+        "units": ["em"]
+      }
     ],
-    "scales/font-weight": [[400, 700]],
-    "scales/line-height": [[1, 1.2, 1.5, 1.75]],
+    "scales/font-weight": [400, 700],
+    "scales/line-height": [1, 1.2, 1.5, 1.75],
     "scales/space": [
-      [
-        0.125,
-        0.23,
-        0.25,
-        0.28,
-        0.48,
-        0.5,
-        0.58,
-        0.75,
-        0.83,
-        1,
-        1.25,
-        1.5,
-        2,
-        2.5,
-        3,
-        4,
-        5,
-        8,
-        12,
-        16,
-        24,
-        32
-      ]
+      {
+        "scale": [
+          0.125,
+          0.25,
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          2,
+          2.5,
+          3,
+          4,
+          5,
+          6,
+          8,
+          12,
+          16
+        ],
+        "units": ["rem"]
+      },
+      {
+        "scale": [0.23, 0.28, 0.48, 0.58, 0.75, 0.83, 1, 1.25, 1.5, 2, 2.5],
+        "units": ["em"]
+      }
     ],
-    "selector-combinator-disallowed-list": [" "],
-    "selector-pseudo-element-colon-notation": "double",
-    "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
+    "selector-attribute-operator-allowed-list": ["="],
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "selector-combinator-allowed-list": [">", "+"],
+    "selector-id-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "selector-max-attribute": 1,
+    "selector-max-class": 2,
+    "selector-max-id": 0,
+    "selector-nested-pattern": "^&",
     "selector-no-vendor-prefix": true,
-    "value-no-vendor-prefix": true,
-    "unit-allowed-list": ["%", "deg", "em", "fr", "px", "rem", "s", "vw"]
+    "selector-pseudo-class-allowed-list": [
+      "active",
+      "checked",
+      "first-of-type",
+      "focus-visible",
+      "focus",
+      "hover",
+      "is",
+      "last-of-type",
+      "not",
+      "root",
+      "visited"
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": ["custom-elements"]
+      }
+    ],
+    "shorthand-property-no-redundant-values": true,
+    "unit-allowed-list": ["%", "deg", "em", "fr", "px", "rem", "s", "vw"],
+    "value-no-vendor-prefix": true
   }
 }
