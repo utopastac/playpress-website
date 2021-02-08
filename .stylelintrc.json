@@ -106,14 +106,14 @@
         "severity": "warning"
       }
     ],
-    "scales/border-width": [
+    "scales/border-widths": [
       {
         "scale": [1, 2, 4],
         "units": ["px"]
       }
     ],
-    "scales/font-family": [["Sofia Pro", "sans-serif"]],
-    "scales/font-size": [
+    "scales/font-families": [["Sofia Pro", "sans-serif"]],
+    "scales/font-sizes": [
       {
         "scale": [
           0.28,
@@ -135,8 +135,8 @@
         "units": ["em"]
       }
     ],
-    "scales/font-weight": [400, 700],
-    "scales/line-height": [1, 1.2, 1.5, 1.75],
+    "scales/font-weights": [400, 700],
+    "scales/line-heights": [1, 1.2, 1.5, 1.75],
     "scales/space": [
       {
         "scale": [
