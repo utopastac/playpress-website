@@ -31,7 +31,8 @@
   --accent-inset: var(--sun-1);
   --on-accent: var(--sea-12);
   --complementary: var(--sea-11);
-  --on-complementary: var(--sea-1-2);
+  --complementary-hover: var(--sea-10);
+  --on-complementary: var(--charcoal-1-05);
   --on-complementary-link: var(--sky-2);
   --on-complementary-visited: var(--violet-2);
   --on-complementary-active: var(--berry-2);
@@ -43,6 +44,8 @@
   --toggle-thumb: var(--sea-1);
   --logo: var(--sea-11);
   --logo-secondary: var(--sea-1);
+  --hero: var(--sea-6);
+  --on-hero: var(--charcoal-1);
   --call-out: var(--sea-1-2);
   --call-out-separator: var(--sea-1-4);
   --product: var(--sea-1-2);

@@ -38,12 +38,14 @@
     "declaration-no-important": true,
     "declaration-property-unit-allowed-list": {
       "/^border$|^border.*(width$|block$|inline$|start$|end$/)": ["px"],
+      "/^((min|max)-)?(block-size$|inline-size$)/": ["%", "ch", "rem"],
       "/^font/": ["%", "em"],
       "/^gap/": ["rem"],
       "/^inset": ["rem"],
       "/^margin/": ["em", "rem", "vw"],
+      "/outline/": ["px"],
       "/^padding/": ["em", "rem"],
-      "/outline/": ["px"]
+      "/radius$/": ["%", "rem"]
     },
     "font-weight-notation": "numeric",
     "function-allowed-list": [
@@ -74,6 +76,9 @@
       "prefers-reduced-motion"
     ],
     "media-feature-name-no-vendor-prefix": true,
+    "media-feature-name-value-allowed-list": {
+      "/^((min|max)-)?(width|height$)/": ["/[0-9]em$/"]
+    },
     "no-descending-specificity": null,
     "number-max-precision": 4,
     "order/order": [
@@ -106,6 +111,28 @@
         "severity": "warning"
       }
     ],
+    "scales/alpha-values": [
+      0,
+      5,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ],
     "scales/border-widths": [
       {
         "scale": [1, 2, 4],
@@ -137,6 +164,22 @@
     ],
     "scales/font-weights": [400, 700],
     "scales/line-heights": [1, 1.2, 1.5, 1.75],
+    "scales/radii": [
+      {
+        "scale": [0.125, 0.25, 0.5, 1, 2, 5],
+        "units": ["rem"]
+      }
+    ],
+    "scales/sizes": [
+      {
+        "scale": [0.125, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 40, 30, 50, 90],
+        "units": ["rem"]
+      },
+      {
+        "scale": [50],
+        "units": ["ch"]
+      }
+    ],
     "scales/space": [
       {
         "scale": [
@@ -164,6 +207,7 @@
         "units": ["em"]
       }
     ],
+    "scales/z-indices": [-1, 1, 2, 3],
     "selector-attribute-operator-allowed-list": ["="],
     "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "selector-combinator-allowed-list": [">", "+"],
@@ -194,7 +238,7 @@
       }
     ],
     "shorthand-property-no-redundant-values": true,
-    "unit-allowed-list": ["%", "deg", "em", "fr", "px", "rem", "s", "vw"],
+    "unit-allowed-list": ["%", "deg", "ch", "em", "fr", "px", "rem", "s", "vw"],
     "value-no-vendor-prefix": true
   }
 }

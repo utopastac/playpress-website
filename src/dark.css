@@ -43,6 +43,8 @@
   --toggle-thumb: var(--sea-1);
   --logo: var(--sea-11);
   --logo-secondary: var(--sea-1);
+  --hero: var(--sea-16);
+  --on-hero: var(--charcoal-1-5);
   --call-out: var(--sea-16);
   --call-out-separator: var(--sea-12);
   --product: var(--sea-16);

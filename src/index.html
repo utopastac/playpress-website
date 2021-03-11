@@ -1,35 +1,19 @@
 <extends src="src/base.html">
   <block name="content">
     <main id="main">
-      <section>
-        <h1>Build their ambition</h1>
+      <section is="hero">
+        <h1>Press out, build up and play on!</h1>
+        <p is="lede">
+          Playpress are buildable playsets for ages 4 and up, made right here in
+          the UK.
+        </p>
         <img
           src="https://via.placeholder.com/900x600.webp?text=Child playing with toyset"
           alt="Child playing with toyset"
           width="900"
           height="600"
+          is="in-action"
         />
-        <h2>Press out, build up and play on!</h2>
-        <p>
-          Playpress is a buildable playsets for ages 4 and up, made right here
-          in the UK.
-        </p>
-        <p>
-          We believe in the power of planet-friendly, hands-on fun! Our
-          inventive sets can be pressed out, built up, and played with time and
-          time again.
-        </p>
-        <h3>Fun for kids, kind to the planet</h3>
-        <p>
-          Playpress is made from Playboard, a sturdy material that’s strong
-          enough to stand up to everyday adventures but also completely
-          sustainable, recyclable and biodegradable.
-        </p>
-        <ul>
-          <li>FSC certified sourcing</li>
-          <li>100% recyclable and biodegradable</li>
-        </ul>
-        <a is="signpost" href="about.html">Find out more about our playsets</a>
       </section>
       <section>
         <h2>Our best-selling sets</h2>
@@ -130,7 +114,7 @@
           >Find out more about bespoke playsets</a
         >
       </section>
-      <section>
+      <section is="partners">
         <h2>Playpress partners</h2>
         <p>You'll find our fantastic toy sets in these stores too!</p>
         <ul is="logos">
@@ -259,6 +243,31 @@
           </li>
         </ul>
         <a is="signpost" href="stock.html">Become a Playpress stockist</a>
+      </section>
+      <section is="brand">
+        <img
+          src="https://via.placeholder.com/900x600.webp?text=Child playing with toyset"
+          alt="2nd child playing with toyset"
+          width="900"
+          height="600"
+          is="in-action"
+        />
+        <div>
+          <h3>Fun for kids, kind to the planet</h3>
+          <p>
+            We believe in the power of planet-friendly, hands-on fun! Our
+            inventive sets can be pressed out, built up, and played with time
+            and time again.
+          </p>
+          <p>
+            Playpress is made from Playboard, a sturdy material that’s strong
+            enough to stand up to everyday adventures but also completely FSC
+            certified sustainable, recyclable and biodegradable.
+          </p>
+          <a is="signpost" href="about.html"
+            >Find out more about our playsets</a
+          >
+        </div>
       </section>
     </main>
   </block>
