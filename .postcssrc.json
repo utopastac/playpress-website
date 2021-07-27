@@ -1,7 +1,11 @@
 {
   "plugins": {
+    "postcss-import": {},
     "postcss-nesting": {},
     "postcss-logical": { "dir": "ltr" },
-    "autoprefixer": {}
+    "autoprefixer": {},
+    "cssnano": {
+      "preset": "default"
+    }
   }
 }

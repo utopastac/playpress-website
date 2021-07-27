@@ -1,0 +1,15 @@
+button[is="command"] {
+  background-color: hsl(var(--command));
+  font-size: 0.83em;
+  font-weight: 400;
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    background-color: hsl(var(--accent) / 90%);
+  }
+
+  &:focus-visible {
+    background-color: hsl(var(--focus));
+    color: hsl(var(--on-focus));
+  }
+}

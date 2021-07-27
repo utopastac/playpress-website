@@ -1,0 +1,11 @@
+ul[is="photo-stream"] {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  padding-inline-start: 0;
+
+  @media (min-width: 50em) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

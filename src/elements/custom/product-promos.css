@@ -1,0 +1,40 @@
+div[is="product-promos"] {
+  display: grid;
+  grid-column: auto / span 1;
+  grid-gap: 2rem;
+  grid-row: 3;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding-block-start: 2rem;
+
+  &.two {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &.three {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 60em) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.four {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 80em) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<a is="product-promo" href="{{ product.url }}">
+  <img
+    alt="{{ product.featured_image.alt }}"
+    src="{{ product.featured_media | img_url: '600x' }}"
+    loading="lazy"
+    width="600"
+    height="400"
+  />
+  <div>
+    <h3>{{ product.title }}</h3>
+    <p>{{ product.price | money }}</p>
+  </div>
+</a>

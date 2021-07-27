@@ -1,8 +1,7 @@
-.cache
+config
+locales
+node_modules
 .eslintcache
 .stylelintcache
 .DS_Store
-.parcel-cache
-node_modules
-dist
-
+config.yml

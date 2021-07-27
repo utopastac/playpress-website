@@ -1,0 +1,43 @@
+a[is="product-promo"] {
+  max-inline-size: 40rem;
+  text-decoration: none;
+
+  & > img {
+    border-radius: 0.5rem;
+  }
+
+  &:focus-visible {
+    background: none;
+    box-shadow: none;
+
+    & > div {
+      & > h3 {
+        background-color: hsl(var(--focus));
+        box-shadow: 0 0 0 3px hsl(var(--focus));
+      }
+    }
+  }
+
+  & > div {
+    & > h3 {
+      color: hsl(var(--link));
+
+      &:active {
+        color: hsl(var(--active));
+      }
+
+      &:visited {
+        color: hsl(var(--active));
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & > p {
+      color: hsl(var(--text));
+      font-size: 1.17em;
+    }
+  }
+}

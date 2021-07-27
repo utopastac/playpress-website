@@ -1,0 +1,35 @@
+<main id="main" is="shop">
+  <h1>Shop our playsets</h1>
+  <div>
+    <p is="lede">Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!</p>
+    <div>
+      {% include 'delivery', expanded: 'true' %}
+    </div>
+  </div>
+  <section>
+  <h2>Our best-selling sets</h2>
+    <div is="product-promos" class="two">
+      {% for product in collections['best-sellers'].products limit: 2 %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h2>Our other excellent sets</h2>
+    <div is="product-promos" class="three">
+      {% for product in collections['shop-featured'].products %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h2>Bundles</h2>
+    <p>Even better value to build a Playpress universe.</p>
+    <div is="product-promos" class="two">
+      {% for product in collections['bundle-playsets'].products limit: 2 %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+</main>
+{% include 'about-brand' %}

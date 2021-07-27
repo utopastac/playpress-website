@@ -1,0 +1,17 @@
+div[is="error"] {
+  border-inline-start: hsl(var(--error)) solid 0.5rem;
+  padding-inline-start: 0.5rem;
+
+  & > p {
+    margin-block: 0.48em;
+
+    & > strong {
+      background-color: hsl(var(--error));
+      border-radius: 0.125rem;
+      color: hsl(var(--on-error));
+      display: inline-block;
+      font-weight: 400;
+      padding: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+ul[is="benefits"] {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    margin-block: 1rem;
+    padding-inline-end: 2rem;
+    text-align: center;
+
+    & > img {
+      margin-block: 1rem;
+      margin-inline: auto;
+    }
+  }
+
+  @media (min-width: 50em) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

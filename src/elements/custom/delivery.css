@@ -1,0 +1,28 @@
+p[is="delivery"] {
+  margin-block: 0;
+
+  & > a {
+    display: flex;
+    margin-block-end: 0;
+
+    & > svg {
+      margin-inline-end: 0.5rem;
+    }
+  }
+
+  &.expanded {
+    background-color: hsl(var(--triadic));
+    border-radius: 0.5rem;
+    color: hsl(var(--on-triadic));
+    max-inline-size: 100%;
+    padding: 1.5rem 1rem;
+
+    & > a {
+      color: hsl(var(--on-triadic));
+    }
+
+    @media (min-width: 40em) {
+      padding: 2rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+main[is="shop"] {
+  margin-block-end: 2rem;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: start;
+
+    @media (min-width: 40em) {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+
+      & > div {
+        justify-self: end;
+      }
+    }
+  }
+
+  & > section {
+    padding-block-start: 1rem;
+
+    @media (min-width: 40em) {
+      padding-block-start: 2rem;
+
+      & > h2,
+      & > p {
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
+  }
+}

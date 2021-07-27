@@ -1,0 +1,96 @@
+main[is="cart"] {
+  margin-block-end: 5rem;
+
+  & > form {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+
+    & > table {
+      inline-size: 100%;
+
+      & > tbody {
+        & > tr {
+          & > td {
+            & > a {
+              & > img {
+                display: block;
+                margin-block-end: 1rem;
+                margin-inline-end: 1rem;
+              }
+            }
+
+            & > label {
+              display: none;
+            }
+
+            & > input {
+              inline-size: 2.5rem; /* stylelint-disable-line scales/sizes */
+            }
+          }
+        }
+      }
+    }
+
+    & > div {
+      background-color: hsl(var(--background-secondary));
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 0 hsl(var(--drop) / 20%);
+      padding: 2rem 1rem;
+
+      & > button {
+        inline-size: 100%;
+        max-inline-size: 100%;
+        padding-block: 1rem;
+      }
+
+      & > p {
+        margin-block: 1.25em 0;
+      }
+    }
+
+    @media (min-width: 40em) {
+      grid-column-gap: 2rem;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto;
+
+      & > * {
+        grid-column: 1;
+      }
+
+      & > div {
+        align-self: flex-start;
+        grid-column: 2;
+        grid-row: 1;
+        inset-block-start: 1rem;
+        padding: 2rem;
+        position: sticky;
+      }
+
+      & > table {
+        & > tbody {
+          & > tr {
+            & > td {
+              & > a {
+                align-items: center;
+                display: flex;
+
+                & > img {
+                  margin-block-end: 0;
+                }
+              }
+
+              & > input {
+                inline-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > p {
+    margin-block-start: 2.5em;
+  }
+}

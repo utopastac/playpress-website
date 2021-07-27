@@ -1,0 +1,46 @@
+a[is="promo"] {
+  background: hsl(var(--elevated-secondary));
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 0 hsl(var(--charcoal-14) / 20%);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.75rem 1.25rem;
+  place-content: start;
+  text-decoration: none;
+
+  &:active {
+    box-shadow: none;
+    inset-block-start: 2px;
+    position: relative;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 2px 0 hsl(var(--drop)), 0 0 0 4px hsl(var(--focus));
+  }
+
+  &:visited {
+    & > h3 {
+      color: hsl(var(--visited));
+    }
+  }
+
+  & > img {
+    align-self: center;
+  }
+
+  & > h3 {
+    color: unset;
+    margin-block-start: 1rem;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & > p {
+    align-self: start;
+    color: hsl(var(--text));
+    margin-block-start: 0;
+  }
+}

@@ -1,0 +1,15 @@
+div[class="testimonial"] {
+  & > img {
+    margin-inline-end: 2rem;
+  }
+
+  & > div {
+    & > blockquote {
+      margin-inline-start: 0;
+    }
+  }
+
+  @media (min-width: 30em) {
+    display: flex;
+  }
+}

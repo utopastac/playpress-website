@@ -1,0 +1,62 @@
+<section is="section">
+  {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+      <p>{{ section.settings.text | escape }}</p>
+  {% endif %}
+
+  {% case section.settings.grid %}
+    {% when 2 %}
+      {%- assign grid_row = 'two' -%}
+    {% when 3 %}
+      {%- assign grid_row = 'three' -%}
+    {% when 4 %}
+      {%- assign grid_row = 'four' -%}
+    {% when 5 %}
+      {%- assign grid_row = 'five' -%}
+  {% endcase %}
+
+  <div is="featured-list" class="{{ grid_row }}">
+    {% for block in section.blocks %}
+      <article is="feature">
+        {% if block.settings.enable_image %}
+          {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt=""
+                is="in-action"
+                loading="lazy"
+                width="800"
+                height="600"
+                />
+          {% else %}
+            <p>
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </p>
+          {% endif %}
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h3>{{ block.settings.title | escape }}</h3>
+        {% endif %}
+        {% if block.settings.text != blank %}
+          <p>{{ block.settings.text }}</p>
+        {% endif %}
+        </article>
+    {% endfor %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+  </div>
+
+  {% if section.settings.show_signpost_link %}
+      <p>
+        <a is="signpost" href="{{ section.settings.link_url }}">
+        {{ section.settings.link_text }}
+        </a>
+      </p>
+  {% endif %}
+
+</section>

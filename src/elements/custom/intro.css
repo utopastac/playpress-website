@@ -1,0 +1,41 @@
+section[is="intro"] {
+  margin-inline: -1rem;
+  padding: 0 1rem;
+
+  &.with-image {
+    padding-block-end: 2rem;
+
+    @media (min-width: 40em) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 2rem;
+      grid-row: auto;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+
+      & > div {
+        grid-column: 2;
+        max-inline-size: 30rem;
+        text-align: start;
+
+        & > h1 {
+          margin-block: 0;
+        }
+      }
+
+      & > img {
+        grid-column: 1;
+      }
+    }
+  }
+
+  @media (min-width: 40em) {
+    padding-block-end: 2rem;
+
+    & > div {
+      margin-inline: auto;
+      max-inline-size: 30rem;
+      text-align: center;
+    }
+  }
+}

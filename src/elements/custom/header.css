@@ -1,0 +1,97 @@
+header[is="header"] {
+  align-items: center;
+  background-color: hsl(var(--complementary));
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: -1rem -1rem 0;
+  position: relative;
+  z-index: 1;
+
+  & > a {
+    background-color: hsl(var(--accent));
+    padding: 1rem;
+    z-index: 2;
+
+    &:focus-visible {
+      background-color: hsl(var(--focus));
+      box-shadow: none;
+    }
+
+    & > svg {
+      block-size: auto;
+      max-inline-size: 100%;
+    }
+  }
+
+  & > nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  & > p {
+    align-items: center;
+    align-self: stretch;
+    border-block-end: 1px solid hsl(var(--on-complementary-separator));
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    margin: 0;
+    max-inline-size: none;
+    white-space: nowrap;
+
+    & > a {
+      border-radius: 0.5rem;
+      color: hsl(var(--on-complementary));
+      display: flex;
+      font-weight: 700;
+      margin-inline-end: 1rem;
+      padding-block: 0.5rem;
+      padding-inline: 0.75rem;
+      text-decoration: none;
+
+      & > strong {
+        align-items: center;
+        background-color: hsl(var(--accent));
+        block-size: 1.5rem;
+        border-radius: 50%;
+        color: hsl(var(--on-accent));
+        display: flex;
+        font-style: normal;
+        inline-size: 1.5rem;
+        justify-content: center;
+        margin-inline-end: 0.5rem;
+      }
+
+      &:hover {
+        background-color: hsl(var(--complementary-hover));
+      }
+    }
+  }
+
+  @media (min-width: 40em) {
+    margin: -2rem -2rem 0;
+  }
+
+  @media (min-width: 44em) {
+    grid-template-columns: 10rem 1fr 12rem;
+    grid-template-rows: auto;
+
+    & > nav {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    & > p {
+      border-block-end: none;
+      border-inline-start: 1px solid hsl(var(--on-complementary-separator));
+      grid-column: 3;
+
+      & > a {
+        margin-inline-end: auto;
+        margin-inline-start: auto;
+      }
+    }
+  }
+}

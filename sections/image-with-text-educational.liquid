@@ -1,0 +1,68 @@
+{% include 'image-with-text' %}
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Image with text"
+      }
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_colour",
+      "label": "Show background colour",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "last_on_page",
+      "label": "Last on page?",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

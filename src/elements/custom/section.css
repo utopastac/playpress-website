@@ -1,0 +1,31 @@
+section[is="section"] {
+  margin-inline: -1rem;
+  padding: 3rem 1rem;
+
+  & > *:first-child {
+    margin-block-start: 0;
+  }
+
+  & > p:last-child {
+    margin-block-start: 2rem;
+  }
+
+  &.alternative {
+    background-color: hsl(var(--background-secondary));
+  }
+
+  @media (min-width: 40em) {
+    margin-inline: -2rem;
+    padding: 3rem 2rem;
+
+    & > h2,
+    & > p {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    & > p:last-child {
+      margin-block-start: 3rem;
+    }
+  }
+}

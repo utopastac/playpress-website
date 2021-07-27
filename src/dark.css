@@ -1,11 +1,14 @@
 :root {
-  --text: var(--charcoal-1-5);
-  --text-display: var(--charcoal-1-25);
+  --text: var(--charcoal-1-05);
+  --text-display: var(--charcoal-1);
   --text-secondary: var(--charcoal-2-5);
-  --background: var(--sea-14);
-  --sunken: var(--sea-16);
-  --drop: var(--sea-17);
-  --inset: var(--sea-6);
+  --background: var(--sea-16);
+  --background-secondary: var(--sea-14);
+  --elevated: var(--sea-12);
+  --elevated-secondary: var(--sea-12);
+  --sunken: var(--sea-17);
+  --drop: var(--charcoal-14);
+  --inset: var(--charcoal-1);
   --separator: var(--sea-11);
   --input: var(--sea-6);
   --input-icon: var(--sea-3);
@@ -17,7 +20,6 @@
   --active: var(--berry-2);
   --focus: var(--sun-1-2);
   --focus-drop: var(--sun-1-5);
-  --focus-inset: var(--sun-1-1);
   --on-focus: var(--sea-10);
   --on-focus-link: var(--sky-6);
   --on-focus-visited: var(--violet-6);
@@ -43,13 +45,11 @@
   --toggle-thumb: var(--sea-1);
   --logo: var(--sea-11);
   --logo-secondary: var(--sea-1);
-  --hero: var(--sea-16);
-  --on-hero: var(--charcoal-1-5);
-  --call-out: var(--sea-16);
-  --call-out-separator: var(--sea-12);
-  --product: var(--sea-16);
+  --hero: var(--sea-13);
+  --on-hero: var(--charcoal-1);
   --pete: var(--sea-6);
   --pete-drop: var(--sea-16);
-  --about-background: var(--sea-16);
-  --about-elevated: var(--sea-12);
+  --tertiary-background: var(--sea-13);
+  --tertiary-elevated: var(--sea-10);
+  --logo-list: var(--charcoal-1);
 }

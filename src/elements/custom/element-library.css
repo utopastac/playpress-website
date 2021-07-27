@@ -1,0 +1,6 @@
+main[is="element-library"] {
+  margin-block-start: 4rem;
+  margin-inline: auto;
+  max-inline-size: 30rem;
+  padding-inline: 1rem;
+}

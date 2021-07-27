@@ -1,0 +1,50 @@
+<section is="hero">
+  {%- if section.settings.image == blank -%}
+    {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
+  {%- else -%}
+    <img
+      src="{{ section.settings.image | img_url: 'master' }}"
+      alt=""
+      width="900"
+      height="600"
+      is="in-action"
+    />
+  {%- endif -%}
+
+  <div>
+    {%- if section.settings.heading != blank -%}
+      <h1>{{ section.settings.heading | escape }}</h1>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p is="lede">{{ section.settings.text }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+    },
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Text"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    { "name": "Hero",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

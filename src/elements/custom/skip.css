@@ -1,0 +1,18 @@
+a[is="skip"] {
+  color: hsl(var(--on-focus));
+  display: block;
+  inset-inline-start: -100vw;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: hsl(var(--focus));
+    inset-inline: 0;
+    z-index: 3;
+  }
+}

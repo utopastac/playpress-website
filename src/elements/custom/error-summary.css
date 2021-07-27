@@ -1,0 +1,6 @@
+div[is="error-summary"] {
+  background-color: hsl(var(--error));
+  border-radius: 0.125rem;
+  color: hsl(var(--on-error));
+  padding: 0.25rem 1rem;
+}

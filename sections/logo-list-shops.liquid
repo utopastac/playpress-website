@@ -1,0 +1,85 @@
+{% include 'logo-list' %}
+
+{% schema %}
+{
+  "name": "Logo list",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Logo list",
+      "info": "Optional"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "title_secondary",
+      "label": "Secondary heading",
+      "info": "Optional"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signpost_link",
+      "label": "Show 'view more' link",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "View more",
+      "info": "Optional"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "info": "Optional"
+    },
+    {
+      "type": "checkbox",
+      "id": "no_top_padding",
+      "label": "Remove top spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_colour",
+      "label": "Show background colour",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_text",
+          "label": "Logo text",
+          "info": "Optional"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

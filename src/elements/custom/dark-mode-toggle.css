@@ -1,0 +1,8 @@
+dark-mode-toggle {
+  --dark-mode-toggle-label: hsl(var(--toggle-label));
+  --dark-mode-toggle-track: hsl(var(--toggle-track));
+  --dark-mode-toggle-thumb: hsl(var(--toggle-thumb));
+  --dark-mode-toggle-focus: hsl(var(--focus));
+
+  margin-block-end: 1.5rem;
+}

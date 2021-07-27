@@ -1,0 +1,19 @@
+<section is="intro" {%- if section.settings.image != blank -%}class="with-image"{%- endif -%}>
+  <div>
+    {%- if section.settings.heading != blank -%}
+      <h1>{{ section.settings.heading | escape }}</h1>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p is="lede">{{ section.settings.text }}</p>
+    {%- endif -%}
+  </div>
+  {%- if section.settings.image != blank -%}
+  <img
+    src="{{ section.settings.image | img_url: '900x' }}"
+    alt=""
+    width="900"
+    height="600"
+    is="in-action"
+  />
+  {%- endif -%}
+</section>
