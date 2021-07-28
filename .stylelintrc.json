@@ -4,7 +4,8 @@
     "@signal-noise/stylelint-scales",
     "stylelint-order",
     "stylelint-use-logical",
-    "stylelint-use-nesting"
+    "stylelint-use-nesting",
+    "stylelint-csstree-validator"
   ],
   "rules": {
     "alpha-value-notation": "percentage",
@@ -16,6 +17,13 @@
     "csstools/use-logical": "always",
     "no-unknown-animations": true,
     "csstools/use-nesting": "always",
+    "csstree/validator": {
+      "ignore": ["content"],
+      "properties": {
+        "color-scheme": "<any-value>",
+        "font-display": "<any-value>"
+      }
+    },
     "custom-media-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "custom-property-empty-line-before": [
       "always",
