@@ -1,21 +1,46 @@
-{% include 'image-with-text' %}
+<section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}">
+  {% if section.settings.image != blank %}
+    <img
+      src="{{ section.settings.image | img_url: '800x' }}"
+      alt="{{ section.settings.image.alt | escape }}"
+      is="in-action"
+      loading="lazy"
+      width="{{section.settings.image.width}}"
+      height="{{section.settings.image.height}}"
+    />
+  {% else %}
+    {{ "image" | placeholder_svg_tag: "placeholder-svg" }}
+  {% endif %}
+
+  <div>
+    {% if section.settings.title != blank %}
+      <h3>{{ section.settings.title | escape }}</h3>
+    {% endif %}
+
+    <p>{{ section.settings.text }}</p>
+
+    {% if section.settings.link_text != blank %}
+      <p>
+        <a
+          href="{{ section.settings.link_url }}"
+          is="signpost"
+        >
+          {{ section.settings.link_text | escape }}
+        </a>
+      </p>
+    {% endif %}
+  </div>
+</section>
 
 {% schema %}
 {
-  "name": {
-    "en": "Image with text"
-  },
-  "class": "index-section",
+  "name": "Image with text",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": {
-        "en": "Heading"
-      },
-      "default": {
-        "en": "Image with text"
-      }
+      "label": "Heading",
+      "default": "Image with text"
     },
     {
       "type": "richtext",
@@ -69,8 +94,7 @@
   ],
   "presets": [
     {
-      "name": "Image with Text",
-      "category": "Image"
+      "name": "Image with text"
     }
   ]
 }

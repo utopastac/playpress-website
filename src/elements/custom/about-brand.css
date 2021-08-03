@@ -1,4 +1,4 @@
-aside[is="about"] {
+aside[is="about-brand"] {
   background-color: hsl(var(--tertiary-background));
   display: grid;
   gap: 2rem;

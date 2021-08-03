@@ -1,10 +1,10 @@
-main[is="shop"] {
+div[is="shop"] {
   margin-block-end: 2rem;
 
   & > div {
     display: grid;
     grid-template-columns: 1fr;
-    place-items: start;
+    place-items: flex-start;
 
     @media (min-width: 40em) {
       display: grid;

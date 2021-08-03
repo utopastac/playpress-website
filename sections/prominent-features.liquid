@@ -1,0 +1,146 @@
+<section is="section" class="alternative">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p>{{ section.settings.text | escape }}</p>
+  {% endif %}
+
+  {% case section.settings.grid %}
+    {% when 2 %}
+      {%- assign grid_row = 'two' -%}
+    {% when 3 %}
+      {%- assign grid_row = 'three' -%}
+    {% when 4 %}
+      {%- assign grid_row = 'four' -%}
+  {% endcase %}
+
+  <div is="prominent-features" class="{{ grid_row }}">
+    {% for block in section.blocks %}
+      <article is="prominent-feature">
+        {% if block.settings.enable_image %}
+          {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt=""
+                is="in-action"
+                loading="lazy"
+                width="800"
+                height="600"
+                />
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        {% endif %}
+        <div>
+          {% if block.settings.title != blank %}
+            <h3>{{ block.settings.title | escape }}</h3>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            {{ block.settings.text }}
+          {% endif %}
+        </div>
+        </article>
+    {% endfor %}
+    {% if section.blocks.size == 0 %}
+      {% include 'no-blocks' %}
+    {% endif %}
+  </div>
+
+  {% if section.settings.show_signpost_link %}
+      <p>
+        <a is="signpost" href="{{ section.settings.link_url }}">
+          {{ section.settings.link_text }}
+        </a>
+      </p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Prominent features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Features per row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signpost_link",
+      "label": "Show 'View more' link",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "View more"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "prominent_feature",
+      "name": "Prominent feature",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "Show image",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Add a title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add descriptve text</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Prominent features",
+      "blocks": [
+        {
+          "type": "prominent_feature"
+        },
+        {
+          "type": "prominent_feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

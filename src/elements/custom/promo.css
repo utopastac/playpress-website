@@ -5,7 +5,7 @@ a[is="promo"] {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0.75rem 1.25rem;
-  place-content: start;
+  place-content: flex-start;
   text-decoration: none;
 
   &:active {
@@ -39,7 +39,7 @@ a[is="promo"] {
   }
 
   & > p {
-    align-self: start;
+    align-self: flex-start;
     color: hsl(var(--text));
     margin-block-start: 0;
   }

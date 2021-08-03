@@ -1,14 +1,11 @@
-<main is="collection">
+<h1>{{ collection.title }}</h1>
 
-  <h1>{{ collection.title }}</h1>
+{%- if collection.description != blank -%}
+  <p>{{ collection.description }}</p>
+{%- endif -%}
 
-  {%- if collection.description != blank -%}
-    <p>{{ collection.description }}</p>
-  {%- endif -%}
-
-  <div is="product-promos" class="four">
-    {%- for product in collection.products -%}
-      {% include 'product-promo', product: product %}
-    {%- endfor -%}
-  </div>
-</main>
+<div is="product-promos" class="four">
+  {%- for product in collection.products -%}
+    {% include 'product-promo', product: product %}
+  {%- endfor -%}
+</div>

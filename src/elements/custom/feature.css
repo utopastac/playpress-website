@@ -1,14 +1,12 @@
 article[is="feature"] {
+  text-align: center;
+
   & > img {
     margin-block-end: 1.25rem;
   }
 
-  & > div {
-    padding-inline: 0.75rem;
-  }
-
   & > h3 {
-    font-size: 1.73em;
+    font-size: 1.5em;
     margin-block: 0;
   }
 }

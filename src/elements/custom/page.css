@@ -1,4 +1,4 @@
-main[is="page"] {
+div[is="page"] {
   padding-block-end: 4rem;
 
   @media (min-width: 40em) {

@@ -133,7 +133,9 @@
     {% section 'skip' %}
     {% section 'header' %}
     {% section 'breadcrumbs' %}
-    {{ content_for_layout }}
+    <main id="main">
+      {{ content_for_layout }}
+    </main>
     {% section 'footer' %}
   </body>
 </html>

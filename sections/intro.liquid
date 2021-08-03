@@ -17,3 +17,33 @@
   />
   {%- endif -%}
 </section>
+
+{% schema %}
+{
+  "name": "Intro",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Intro"
+    },
+    {
+    "id": "text",
+    "type": "text",
+    "label": "Text",
+    "default": "Introduce this page"
+    },
+    {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Intro"
+    }
+  ]
+}
+{% endschema %}

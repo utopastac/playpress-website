@@ -1,0 +1,18 @@
+article[is="prominent-feature"] {
+  background-color: hsl(var(--elevated));
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 0 hsl(var(--drop) / 10%);
+  padding: 1rem;
+
+  & > img {
+    margin-block-end: 1.25rem;
+  }
+
+  & > div {
+    padding-inline: 0.75rem;
+  }
+
+  @media (min-width: 40em) {
+    padding: 1.5rem;
+  }
+}

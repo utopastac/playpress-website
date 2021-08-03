@@ -1,4 +1,4 @@
-main[is="cart"] {
+div[is="cart"] {
   margin-block-end: 5rem;
 
   & > form {

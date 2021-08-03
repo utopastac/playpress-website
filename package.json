@@ -5,9 +5,8 @@
   "description": "The website of Playpress",
   "scripts": {
     "build": "postcss src/*.css --dir assets",
-    "start:theme": "theme watch --allow-live --notify='http://localhost:35729/changed'",
+    "start:theme": "shopify theme serve",
     "start:css": "postcss src/*.css --dir assets --watch",
-    "start:live": "node live-reload.js",
     "start": "npm-run-all --parallel start:**",
     "check:css": "stylelint 'src/**/*.css'",
     "check:format": "prettier '**/*.{css,html,js,json,md,yml}' --check",
