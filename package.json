@@ -12,6 +12,8 @@
     "check:format": "prettier '**/*.{css,html,js,json,md,yml}' --check",
     "check:js": "eslint '**/*.js'",
     "check": "npm-run-all check:*",
+    "pull": "shopify theme pull --nodelete",
+    "push": "shopify theme push --nodelete",
     "test": "npm run check",
     "format": "prettier '**/*.{css,html,js,json,md,yml}' --write"
   },

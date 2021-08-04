@@ -1,8 +1,244 @@
 {
   "sections": {
     "intro": {
-      "type": "intro"
+      "type": "intro",
+      "settings": {
+        "heading": "A world of creativity that doesn’t cost the earth",
+        "text": ""
+      }
+    },
+    "1627851513e6e2c0af": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Press out, build up and play on!",
+        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "162785160093d2365d": {
+      "type": "prominent-features",
+      "blocks": {
+        "162785160093d2365d-0": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/inks.jpg",
+            "title": "Printing & binding",
+            "text": "<p>We use vegetable-based inks and water-based glues that are vegan, biodegradable and ocean-friendly.<\/p>"
+          }
+        },
+        "162785160093d2365d-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/board.jpg",
+            "title": "Board & paper",
+            "text": "<p>The fibres for our Playboard are bleach-free and sourced from sustainably managed forests in Finland.<\/p>"
+          }
+        },
+        "cdfaf31d-0adf-49e0-a06c-7da466b379c6": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/transport.jpg",
+            "title": "Manufacturing & transport",
+            "text": "<p>Our toys confirm to European standards and are locally manufactured in the UK to minimise air miles.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "162785160093d2365d-0",
+        "162785160093d2365d-1",
+        "cdfaf31d-0adf-49e0-a06c-7da466b379c6"
+      ],
+      "settings": {
+        "title": "Sustainability & quality",
+        "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
+    },
+    "1627851648bbbb1c7c": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Award-winning design",
+        "text": "<p>Our products win awards. Most recently we won the Play Creators Awards 2019 \"Toy Designer of the year\" for our collaboration with the RNLI.<\/p><p>Our design <a href=\"https:\/\/playpress.myshopify.com\/pages\/studio\" title=\"Studio\">studio<\/a> reguarly share early-stage prototypes of our playsets on <a href=\"https:\/\/instagram.com\/playpresstoys\">instagram<\/a> and they love feedback! <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/Custom_Design_RNLI_Inshore_Lifeboat-01-01.jpg",
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "16278518348af94fc5": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Playpress Pete",
+        "text": "<p>Our mascot Playpress Pete was named after our very own Peter, the creative brains behind his beaming smile. Playpress Pete is our seal of quality – you’ll find him on the back of every Playpress pack.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/PlayPress-Pete.jpg",
+        "layout": "right",
+        "show_colour": true,
+        "last_on_page": false
+      }
+    },
+    "1627851925d01952d2": {
+      "type": "features",
+      "blocks": {
+        "1627851925d01952d2-0": {
+          "type": "feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/M0006_Space_Ranger_Child_Playing_On_Floor.jpg",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1627851925d01952d2-1": {
+          "type": "feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/L0001_Farm_Child_Playing_On_Floor.jpg",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1627851925d01952d2-2": {
+          "type": "feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/M0014_Savannah_Animals_Childs_Hands_Popping_Pieces.jpg",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1f33d893-b1d0-467b-bfe6-387f5b9d14fa": {
+          "type": "feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/L0002_Town_Corner_Child_Playing_On_Floor_Back.jpg",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1627851925d01952d2-0",
+        "1627851925d01952d2-1",
+        "1627851925d01952d2-2",
+        "1f33d893-b1d0-467b-bfe6-387f5b9d14fa"
+      ],
+      "settings": {
+        "title": "We love finding new ways to build new worlds",
+        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
+        "grid": 4,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
+    },
+    "16278519919130b139": {
+      "type": "prominent-features",
+      "blocks": {
+        "16278519919130b139-0": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Matthew.jpg",
+            "title": "Matthew - the fearless founder",
+            "text": "<p>Matthew is our fearless founder and the beating heart of our business. He brings his passion for quality, clever design and craftsmanship to every single Playpress pack.<\/p>"
+          }
+        },
+        "16278519919130b139-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/PlayPress-Melvin.jpg",
+            "title": "Melvin - the business brains",
+            "text": "<p>Dad and business brain Melvin has helped us to grow Playpress from a humble market stall to an international stockist with a range of products and partners.<\/p>"
+          }
+        },
+        "75ac356e-3198-442b-8ab7-1af802c9d47e": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/PlayPress-Peter.jpg",
+            "title": "Peter - the creative powerhouse",
+            "text": "<p>Peter helped brother Matthew to design, develop and launch the very first Playpress sets. He’s still lending his creative skills to help bring new ideas for the brand to life.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16278519919130b139-0",
+        "16278519919130b139-1",
+        "75ac356e-3198-442b-8ab7-1af802c9d47e"
+      ],
+      "settings": {
+        "title": "Meet our team",
+        "text": "",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
+    },
+    "16278904348453009f": {
+      "type": "promos",
+      "blocks": {
+        "16278904348453009f-0": {
+          "type": "promo",
+          "settings": {
+            "title": "Shop",
+            "text": "Buy our eco-friendly playsets for yourself or as a gift.",
+            "link_url": "\/products"
+          }
+        },
+        "16278904348453009f-1": {
+          "type": "promo",
+          "settings": {
+            "title": "Studio",
+            "text": "Get a bespoke eco-friendly design for your brand.",
+            "link_url": "shopify:\/\/pages\/studio"
+          }
+        },
+        "411ee405-4b3e-45e0-8507-aa16402e2872": {
+          "type": "promo",
+          "settings": {
+            "title": "Stock us",
+            "text": "Playpress Toys are a great addition to your shop.",
+            "link_url": "shopify:\/\/pages\/stock-us"
+          }
+        }
+      },
+      "block_order": [
+        "16278904348453009f-0",
+        "16278904348453009f-1",
+        "411ee405-4b3e-45e0-8507-aa16402e2872"
+      ],
+      "settings": {
+        "title": "Keep exploring Playpress",
+        "text": "",
+        "grid": 3
+      }
     }
   },
-  "order": ["intro"]
+  "order": [
+    "intro",
+    "1627851513e6e2c0af",
+    "162785160093d2365d",
+    "1627851648bbbb1c7c",
+    "16278518348af94fc5",
+    "1627851925d01952d2",
+    "16278519919130b139",
+    "16278904348453009f"
+  ]
 }
