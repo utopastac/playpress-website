@@ -138,6 +138,11 @@
         "text": "<p>Get in touch by emailing us at <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com<\/a><\/p>",
         "show_colour": false
       }
+    },
+    "16282378513ce79dba": {
+      "type": "about-brand",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -145,6 +150,7 @@
     "16277526109825a14a",
     "162775294018191133",
     "16277530953a8433e6",
-    "162775330702ef7b43"
+    "162775330702ef7b43",
+    "16282378513ce79dba"
   ]
 }

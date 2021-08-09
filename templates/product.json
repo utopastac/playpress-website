@@ -9,10 +9,16 @@
       "type": "product-recommendations",
       "settings": {
       }
+    },
+    "162823772699f88715": {
+      "type": "about-brand",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "recommendations"
+    "recommendations",
+    "162823772699f88715"
   ]
 }
