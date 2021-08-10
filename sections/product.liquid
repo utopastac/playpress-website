@@ -1,10 +1,14 @@
 <main id="main" is="product">
   <h1>{{ product.title }}</h1>
   <img
-    alt="{{ product.featured_image.alt | escape }}"
-    src="{{ product.featured_image | img_url: '1000x'}}"
+    srcset="
+      {{ product.featured_image | img_url: '500x' }} 500w,
+      {{ product.featured_image | img_url: '1000x' }} 1000w"
+    src="{{ product.featured_image | img_url: '1000x' }}"
+    sizes="(max-width: 500px) 460px, 1000px"
     width="1000"
     height="750"
+    alt="{{ product.featured_image.alt | escape }}"
   >
   {% form 'product', product %}
     <p>{{ product.price | money }}</p>
