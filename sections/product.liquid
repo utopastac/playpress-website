@@ -2,10 +2,12 @@
   <h1>{{ product.title }}</h1>
   <img
     srcset="
+      {{ product.featured_image | img_url: '320x' }} 320w,
       {{ product.featured_image | img_url: '500x' }} 500w,
+      {{ product.featured_image | img_url: '740x' }} 740w,
       {{ product.featured_image | img_url: '1000x' }} 1000w"
-    src="{{ product.featured_image | img_url: '1000x' }}"
-    sizes="(max-width: 500px) 460px, 1000px"
+    src="{{ product.featured_image | img_url: '500x' }}"
+    sizes="calc(100vw - 2rem)"
     width="1000"
     height="750"
     alt="{{ product.featured_image.alt | escape }}"
