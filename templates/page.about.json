@@ -175,12 +175,42 @@
             "title": "Peter - the creative powerhouse",
             "text": "<p>Peter helped brother Matthew to design, develop and launch the very first Playpress sets. He’s still lending his creative skills to help bring new ideas for the brand to life.<\/p>"
           }
+        },
+        "cb70c93e-f8ad-46c1-8df5-570546747364": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/mikey_482293c3-3a17-45ec-b7ca-df7a9a0b337d.jpg",
+            "title": "Mike - the artist",
+            "text": "<p>Mike, best friends with Matthew since School, brought his amazing artistic talents to help found PlayPress, launch the brand and shape the designs. Mike left the company in 2019 to work on new artist projects.<\/p>"
+          }
+        },
+        "c9817865-f0dc-40bc-a437-c008c311931f": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Karen1-01.jpg",
+            "title": "Karen - master of many trades",
+            "text": "<p>Mum and a constant support to the running of the business as well as an expert wordsmith. Karen helps with everything from keeping accounts to writing product descriptions.<\/p>"
+          }
+        },
+        "2bf2ce19-44e1-456b-a190-12a2bdc93eb3": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Kingsley-01.jpg",
+            "title": "Kingsley - People person extraordinaire",
+            "text": "<p>Kingsley, also a brother, is our brilliant sales person and operations manager. Helping the business grow and an excellant person to deal with.<\/p>"
+          }
         }
       },
       "block_order": [
         "16278519919130b139-0",
         "16278519919130b139-1",
-        "75ac356e-3198-442b-8ab7-1af802c9d47e"
+        "75ac356e-3198-442b-8ab7-1af802c9d47e",
+        "cb70c93e-f8ad-46c1-8df5-570546747364",
+        "c9817865-f0dc-40bc-a437-c008c311931f",
+        "2bf2ce19-44e1-456b-a190-12a2bdc93eb3"
       ],
       "settings": {
         "title": "Meet our team",

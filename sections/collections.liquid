@@ -1,0 +1,64 @@
+{% assign isEmpty = true %}
+{% assign collection_count = section.blocks.size %}
+
+{% if collection_count > 0 %}
+  {% assign isEmpty = false %}
+{% endif %}
+
+  <div class="site-box box--big lap--box--small-fl box--typo-big box--center-align box--column-flow box__heading box--add-hr {% if collection__count == 1 %} fix-me-with-height-hard {% endif %}" data-order="0">
+
+    <div class="site-box-content fix-me-with-margin">
+          
+      <h1 class="title">{{ page.title | escape }}</h1>
+      {% unless section.settings.caption == blank %}
+        <div class="rte"><div>{{ section.settings.caption }}</div></div>
+      {% endunless %}
+
+    </div>
+
+  </div>
+
+  {% unless section.blocks == empty %}
+
+    <div class="collection__holder">
+      {% for block in section.blocks %}
+        {% assign collection = collections[block.settings.collection] %}
+        {% assign collection_handle = collection.handle %}
+        {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %}
+      {% endfor %}
+    </div>
+
+  {% endunless %}
+
+{% schema %}
+{
+  "name": {
+    "en": "Collections list"
+  },
+  "class": "site-box-container container--fullscreen",
+  "settings": [
+     {
+      "type": "richtext",
+      "id": "caption",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": {
+        "en": "Collection"
+      },
+      "settings": [
+        {
+          "label": {
+            "en": "Collection"
+          },
+          "id": "collection",
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

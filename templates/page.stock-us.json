@@ -25,7 +25,7 @@
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/M0014_Savannah_Animals_Childs_Hands_Popping_Pieces.jpg",
             "title": "Free samples",
-            "text": "<p>If you would like to receive a sample of our playsets before you order, we will try send it out on the same day of your request.<\/p>"
+            "text": "<p>If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.<\/p>"
           }
         }
       },
@@ -111,7 +111,7 @@
       "type": "rich-text",
       "settings": {
         "heading": "Our stockists",
-        "text": "<p>We very are proud to be associated with and stocked in an amazing range of organisations, near 100 zero waste stores and over 200 gift, concept and toy stores across the UK. You'll also find our sets in some wonderful attractions. <\/p>",
+        "text": "<p>We are very proud to be associated with and stocked in an amazing range of organisations, near 100 zero waste stores and over 200 gift, concept and toy stores across the UK. You'll also find our sets in some wonderful attractions. <\/p>",
         "show_colour": true
       }
     },
@@ -298,6 +298,34 @@
             "image": "shopify:\/\/shop_images\/Stockist_Observatory_Science_Centre.jpg",
             "link": ""
           }
+        },
+        "d9c57eae-a69b-4787-bad2-ef59818c11f0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_logo_images_Bath_and_North_East_Somerset_Council.jpg",
+            "link": ""
+          }
+        },
+        "e2404ac3-2abe-4031-a490-93f8d8bc04e6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_logo_images_Sir_John_Soanes_Museum_London.jpg",
+            "link": ""
+          }
+        },
+        "9f3a38a9-010f-44ff-b6c1-9756c99798de": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_logo_images_British_Library.jpg",
+            "link": ""
+          }
+        },
+        "9035d245-a605-48b5-a5da-923152aed4fd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_logo_images_Gainsboroughs_House.jpg",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -312,7 +340,11 @@
         "e3abf0ed-cd44-4f34-b53c-6aeaad7773eb",
         "4fe3528b-b28b-45bc-b162-ad7f105d573d",
         "c49f9c30-5cca-4765-b883-da13d5326579",
-        "24d57527-c9e0-4ece-8426-65bb7cc60711"
+        "24d57527-c9e0-4ece-8426-65bb7cc60711",
+        "d9c57eae-a69b-4787-bad2-ef59818c11f0",
+        "e2404ac3-2abe-4031-a490-93f8d8bc04e6",
+        "9f3a38a9-010f-44ff-b6c1-9756c99798de",
+        "9035d245-a605-48b5-a5da-923152aed4fd"
       ],
       "settings": {
         "title": "Museums and galleries",
@@ -376,6 +408,20 @@
             "image": "shopify:\/\/shop_images\/Stockist_Bicton_park_552941c1-a37c-48d3-aa5d-2d1eeade84c7.jpg",
             "link": ""
           }
+        },
+        "9f9d7336-cad7-46fd-8202-4883c61924b5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_The_Eden_Project_4759580e-2834-4180-80c8-c43b70dce373.jpg",
+            "link": ""
+          }
+        },
+        "a2ff0a9e-6070-4fe4-9cfb-14ad69e49f67": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stockist_logo_images_International_Centre_for_LIfe.jpg",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -385,7 +431,9 @@
         "16278504013ad231b3-3",
         "9ca60774-afaf-4604-a632-67bad4807f29",
         "b4754a89-1116-4a78-835e-0dcf75c803e7",
-        "31e15f6e-ff99-463b-ba5f-ca7e744e4581"
+        "31e15f6e-ff99-463b-ba5f-ca7e744e4581",
+        "9f9d7336-cad7-46fd-8202-4883c61924b5",
+        "a2ff0a9e-6070-4fe4-9cfb-14ad69e49f67"
       ],
       "settings": {
         "title": "Attractions",

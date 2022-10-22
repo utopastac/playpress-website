@@ -2,6 +2,7 @@
   "plugins": {
     "postcss-import": {},
     "postcss-nesting": {},
+    "postcss-sassy-mixins": {},
     "postcss-logical": { "dir": "ltr" },
     "autoprefixer": {},
     "cssnano": {
