@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400500600700&display=swap')
 
 code
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+  font-family: Sofia Pro, sans-serif
 
 *, *:before, *:after
   -webkit-box-sizing: border-box
@@ -15,20 +15,33 @@ html
   font-size: 62.5%
   //overflow-x: hidden
 
+html
+  background-color: $sunken
+  color: $text
+  font-size: 93.75%
+
+  @include min($screen-s)
+    font-size: 100%
+  @include min($screen-m)
+    font-size: 106.25%
+  @include min($screen-l)
+    font-size: 112.5%
+
 li
   list-style-type: none
 
 body
   padding: 0
   margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif
+  font-family: Sofia Pro, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif
   -moz-osx-font-smoothing: grayscale
   position: relative
   width: 100%
   -webkit-tap-highlight-color: rgba(0,0,0,0)
   -webkit-font-smoothing: antialiased
   font-size: 100%
-  color: $black
+  background-color: $background
+  margin: 0 auto
   //overflow-x: hidden
 
   &.fixed
@@ -42,7 +55,6 @@ h1, h2, h3, h4, h5, h6, li, ul, html, body
   margin: 0
   padding: 0
   border: 0
-  font-weight: normal
 
 li
   color: inherit
@@ -88,10 +100,6 @@ td,th
   border-bottom: 1px solid $separator
   padding: 0.75rem 1.5rem 0.75rem 0
 
-body
-  background-color: $background
-  margin: 0 auto
-
 section[is="section"]
   padding: 3rem 1rem
 
@@ -117,7 +125,6 @@ div[is="product-promos"]
 
 p[is="lede"]
   font-size: 1.33em
-  line-height: 1.75
   max-width: 30rem
 
 div[is="error-summary"]
@@ -221,10 +228,29 @@ div[class="testimonial"]
   > img 
     margin-right: 2rem
 
-  > div > blockquote 
+  > div > blockquote
     margin-left: 0
 
   @include min($screen-s)
     display: flex
   
 
+// h1
+//   @extend %heading-xl
+//   @extend %bold
+
+// h2
+//   @extend %heading-l
+//   @extend %bold
+
+// h3
+//   @extend %heading-m
+//   @extend %bold
+
+// h4
+//   @extend %heading-s
+//   @extend %bold
+
+// p
+//   @extend %body-s
+//   @extend %regular

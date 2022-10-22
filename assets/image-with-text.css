@@ -1,6 +1,9 @@
 section[is=image-with-text] {
   padding: 1.5rem 1rem;
 }
+section[is=image-with-text] > div {
+  max-width: 40rem;
+}
 section[is=image-with-text] > div > p:last-child {
   margin-top: 2em;
 }

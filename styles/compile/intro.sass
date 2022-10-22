@@ -1,18 +1,19 @@
 @import '../assets'
 
 section[is="intro"]
-  padding: units(3)
+  padding: units(4)
 
   &.with-image 
     padding-bottom: 2rem
 
   @include min($screen-s)
-    padding-bottom: 2rem
+
+    padding: units(8)
 
     > div 
       margin-left: auto
       margin-right: auto
-      max-width: 30rem
+      max-width: size(600)
       text-align: center
 
     &.with-image 
