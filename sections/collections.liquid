@@ -32,7 +32,7 @@
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
         {% assign collection_handle = collection.handle %}
-        <div class="rte"><div>{{ collection.settings.label }}</div></div>
+        <div>{{ collection.settings.id }}</div>
         {% comment %} {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %} {% endcomment %}
       {% endfor %}
     </div>
@@ -43,15 +43,14 @@
 
 {% schema %}
 {
-  "name": {
-    "en": "Collections list"
-  },
-  "class": "site-box-container container--fullscreen",
+  "name": "Collections",
+  "tag": "section",
+  "class": "collections",
   "settings": [
-     {
-      "type": "richtext",
-      "id": "caption",
-      "label": "Description"
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Collections"
     }
   ],
   "blocks": [
