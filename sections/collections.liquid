@@ -6,7 +6,7 @@
 {% endif %} {% endcomment %}
 
 <section is="section">
-  {% comment %} {% if section.settings.title != blank %}
+  {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
   {% if section.settings.text != blank %}
@@ -37,7 +37,7 @@
       {% endfor %}
     </div>
 
-  {% endunless %} {% endcomment %}
+  {% endunless %}
   <h1>Hello</h1>
 
 </section>
