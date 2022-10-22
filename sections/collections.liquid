@@ -29,16 +29,15 @@
   {% unless section.blocks == empty %}
 
     <div class="collection__holder">
+      <h1>collections</h1>
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
-        {% assign collection_handle = collection.handle %}
-        <div>{{ collection.settings.id }}</div>
+        <div>{{ collection.title }}</div>
         {% comment %} {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %} {% endcomment %}
       {% endfor %}
     </div>
 
   {% endunless %}
-  <h1>Hello</h1>
 
 </section>
 
