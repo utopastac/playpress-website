@@ -3,86 +3,98 @@
 main[is="product"] 
   padding: units(4)
 
-  img
-    border-radius: $border-s
+  > div
+    @extend %main-content
 
-  > h1 
-    margin-top: 0
+    .description
+      @extend %typography-hierarchy
+      margin-bottom: units(4)
 
-  > img:first-of-type
-    margin-bottom: 2rem
-    margin-top: 2rem
+      > div *
+        margin-bottom: units(2)
 
-  > form 
-    grid-gap: 0.75rem
-    background-color: $background-secondary
-    border-radius: 0 0 0.25rem 0.25rem
-    box-shadow: 0 2px 0 $drop
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    left: 0
-    margin-bottom: 0
-    margin-top: 0
-    padding: 1.5rem 1rem
-    position: sticky
-    right: 0
-    top: 0
-    z-index: 1
-
-    > button, > p 
-      grid-row: 2
-
-    > div 
-      grid-column: 1 / span 2
-      grid-row: 1
-      margin-bottom: 0.5rem
-
-    > p 
-      align-self: center
-      font-size: 1.33em
-      margin-bottom: 0
-      margin-top: 0
-
-    > button 
-      max-width: 100%
-      padding-bottom: 0.5rem
-      padding-top: 0.5rem
+    img
+      border-radius: $border-s
       width: 100%
 
-  @include min($screen-s)
-    grid-column-gap: 3rem
-    align-items: flex-start
-    display: grid
-    grid-template-columns: 2fr 1fr
-  
-    > * 
-      grid-column: 1
-  
+    > h1 
+      margin-top: 0
+
+    > img:first-of-type
+      margin-bottom: 2rem
+      margin-top: 2rem
+
     > form 
-      grid-column: 2
-      grid-row: 1 / span 2
-      grid-template-rows: repeat(3, auto)
-      margin-left: 0
-      margin-right: 0
-      padding: 2rem
-      top: 1rem
-  
-      > p 
+      grid-gap: 0.75rem
+      background-color: $background-secondary
+      border-radius: 0 0 0.25rem 0.25rem
+      @extend %elevation-1
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      left: 0
+      margin-bottom: 0
+      margin-top: 0
+      padding: 1.5rem 1rem
+      position: sticky
+      right: 0
+      top: 0
+      z-index: 1
+
+      > button, > p 
+        grid-row: 2
+
+      > div 
+        grid-column: 1 / span 2
         grid-row: 1
+        margin-bottom: 0.5rem
+
+      > p 
+        align-self: center
+        font-size: 1.33em
         margin-bottom: 0
         margin-top: 0
-  
+
       > button 
-        grid-column: 1 / span 2
-        grid-row: 2
-        padding-bottom: 1rem
-        padding-top: 1rem
+        max-width: 100%
+        padding-bottom: 0.5rem
+        padding-top: 0.5rem
         width: 100%
-  
-      > div 
-        grid-row: 3
-        margin-top: 1rem
-  
-    > img:first-of-type 
-      margin-bottom: 0
+
+  @include min($screen-s)
+    > div
+      grid-column-gap: 3rem
+      align-items: flex-start
+      display: grid
+      grid-template-columns: 2fr 1fr
+    
+      > * 
+        grid-column: 1
+    
+      > form 
+        grid-column: 2
+        grid-row: 1 / span 2
+        grid-template-rows: repeat(3, auto)
+        margin-left: 0
+        margin-right: 0
+        padding: 2rem
+        top: 1rem
+    
+        > p 
+          grid-row: 1
+          margin-bottom: 0
+          margin-top: 0
+    
+        > button 
+          grid-column: 1 / span 2
+          grid-row: 2
+          padding-bottom: 1rem
+          padding-top: 1rem
+          width: 100%
+    
+        > div 
+          grid-row: 3
+          margin-top: 1rem
+    
+      > img:first-of-type 
+        margin-bottom: 0
   

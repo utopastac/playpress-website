@@ -102,17 +102,6 @@ td,th
 
 section[is="section"]
   padding: 3rem 1rem
-
-  h2, p
-    margin-left: auto
-    margin-right: auto
-    text-align: center
-
-  &:first-child
-    margin-top: 0
-
-  p:last-child
-  margin-top: 2rem
   
   @include min($screen-m)
     padding: 3rem 2rem
@@ -153,6 +142,7 @@ a[is="signpost"]
   font-weight: 700
   padding-left: 2.25rem
   padding-top: 0.125rem
+  margin-top: units(4)
   position: relative
   text-decoration: none
 
@@ -254,3 +244,109 @@ div[class="testimonial"]
 // p
 //   @extend %body-s
 //   @extend %regular
+
+//
+
+p + p
+  margin-top: units(2) 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+  color: $text-display
+
+h1,
+h2,
+h3 
+  line-height: 1.3
+
+h1,
+h2 
+  max-width: 25ch
+
+h1 
+  font-size: 2.5em
+  margin-bottom: 0.28em
+
+h2 
+  font-size: 2em
+  margin-bottom: 0.48em
+
+h3 
+  font-size: 1.73em
+  margin-bottom: 0.58em
+
+h4 
+  font-size: 1.5em
+  margin-bottom: 0.83em
+
+h5 
+  font-size: 1.17em
+  margin-bottom: 1em
+
+h6 
+  font-size: 1em
+  margin-bottom: 1.5em
+
+cite,
+dd,
+dt,
+hr,
+li,
+p 
+  max-width: 50ch
+
+address,
+dd,
+dt,
+h4,
+h5,
+h6,
+li,
+p,
+td,
+th 
+  line-height: 1.5
+
+blockquote,
+figure 
+  margin-left: 2rem
+  margin-right: 2rem
+
+dd 
+  margin-left: 2rem
+
+ol,
+ul 
+  padding-left: 2rem
+
+figcaption 
+  margin-bottom: 0.48em
+  margin-top: 0.48em
+
+sub,
+sup 
+  line-height: 1
+
+abbr 
+  text-decoration: none
+
+hr 
+  border-style: solid
+  color: $separator
+  margin-left: 0
+  margin-right: 0
+
+.header
+  h2, h3, p
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+  &:first-child
+    margin-top: 0
+
+  p:last-child
+    margin-top: 2rem

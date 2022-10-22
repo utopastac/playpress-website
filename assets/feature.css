@@ -1,8 +1,14 @@
 article[is=feature] {
   text-align: center;
 }
-article[is=feature] > img {
+article[is=feature] .image {
   margin-bottom: 1.25rem;
+  overflow: hidden;
+  height: 8rem;
+  border-radius: 0.8rem;
+}
+article[is=feature] .image img {
+  height: 100%;
 }
 article[is=feature] > h3 {
   font-size: 1.5em;

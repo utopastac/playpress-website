@@ -1,13 +1,15 @@
 @import '../assets'
 
 article[is="prominent-feature"] 
+  padding: 1rem
   background-color: $elevated
   border-radius: 0.5rem
   box-shadow: 0 2px 0 $drop
-  padding: 1rem
+  text-align: left
 
   > img 
     margin-bottom: 1.25rem
+    width: 100%
 
   > div 
     padding-left: 0.75rem
@@ -17,20 +19,23 @@ article[is="prominent-feature"]
     padding: 1.5rem
   
 
-div[is="prominent-features"] 
-  grid-gap: 2rem
-  display: grid
-  margin-bottom: 0
-  margin-top: 3rem
+div[is="prominent-features"]
+  > div
+    @extend %main-content
+    grid-gap: 2rem
+    display: grid
+    margin-bottom: 0
+    margin-top: 3rem
 
   @include min($screen-s)
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-  
-    &.one 
-      grid-template-columns: repeat(1, 1fr)
-    &.three 
-      grid-template-columns: repeat(3, 1fr)
-    &.four 
-      grid-template-columns: repeat(4, 1fr)
+    > div
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    
+      &.one 
+        grid-template-columns: repeat(1, 1fr)
+      &.three 
+        grid-template-columns: repeat(3, 1fr)
+      &.four 
+        grid-template-columns: repeat(4, 1fr)
   

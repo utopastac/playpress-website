@@ -2,43 +2,45 @@
   
 section[is="hero"]
   background-color: $hero
-  padding: 2.5rem 1rem 2rem
   position: relative
 
-  h1, p
-      color: $on-hero
+  > div
+    @extend %main-content
 
-  h1
-    @extend %heading-xl
+    h1, p
+        color: $on-hero
 
-  p
-    @extend %body-l
+    h1
+      @extend %heading-xl
 
-  > div 
-    position: relative
-    z-index: 2
-  
-  > img
-    position: relative
-    z-index: 2
+    p
+      @extend %body-l
+
+    > div 
+      position: relative
+      z-index: 2
+    
+    > img
+      position: relative
+      z-index: 2
 
   @include min($screen-m)
-    grid-column-gap: 2rem
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    padding: 3rem
-    place-items: center
-  
-    img 
-      order: 2
-  
-    div 
-      max-width: 30rem
-      order: 1
-  
-    h1 
-      margin-top: 0
-  
-    p 
-      margin-bottom: 0
+    > div
+      grid-column-gap: 2rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      padding: 3rem
+      place-items: center
+    
+      img 
+        order: 2
+    
+      div 
+        order: 1
+    
+      h1 
+        margin-top: 0
+    
+      p 
+        margin-bottom: 0
   

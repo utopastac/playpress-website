@@ -1,6 +1,8 @@
 .collections {
-  background: blue;
+  max-width: 100rem;
+  margin: 0 auto;
 }
+
 .collections ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

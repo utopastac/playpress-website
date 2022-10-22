@@ -4,25 +4,29 @@ section[is="image-with-text"]
   padding: 1.5rem 1rem
 
   > div
-    max-width: size(400)
+    @extend %main-content
 
-  > div > p:last-child 
-    margin-top: 2em
+    > div
+      max-width: size(400)
+
+      > p:last-child 
+        margin-top: 2em
 
   &.last 
     padding-bottom: 4rem
 
-  @include min($screen-s) 
-    grid-column-gap: 2rem
-    display: grid
-    grid-auto-flow: column
-    grid-template-columns: repeat(2, 1fr)
-    padding: 2rem
-    place-items: center
-  
-    &.swapped > img 
-      grid-column: 2
+  @include min($screen-s)
+    > div 
+      grid-column-gap: 2rem
+      display: grid
+      grid-auto-flow: column
+      grid-template-columns: repeat(2, 1fr)
+      padding: 2rem
+      place-items: center
     
-    &.swapped > div 
-      grid-column: 1
+      &.swapped > img 
+        grid-column: 2
+      
+      &.swapped > div 
+        grid-column: 1
   

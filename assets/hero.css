@@ -1,37 +1,42 @@
-section[is=hero] h1 {
+section[is=hero] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+section[is=hero] > div h1 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-section[is=hero] p {
+section[is=hero] > div p {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-section[is=hero] p {
+section[is=hero] > div p {
   font-weight: 400;
 }
 
-section[is=hero] h1 {
+section[is=hero] > div h1 {
   font-size: 3.2rem;
   line-height: 115%;
   letter-spacing: -0.64px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=hero] h1 {
+  section[is=hero] > div h1 {
     font-size: 4.8rem;
     line-height: 115%;
     letter-spacing: -0.96px;
   }
 }
 
-section[is=hero] p {
+section[is=hero] > div p {
   font-size: 2.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=hero] p {
+  section[is=hero] > div p {
     font-size: 3.2rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -40,39 +45,37 @@ section[is=hero] p {
 
 section[is=hero] {
   background-color: hsl(236deg, 25.9%, 47.6%);
-  padding: 2.5rem 1rem 2rem;
   position: relative;
 }
-section[is=hero] h1, section[is=hero] p {
+section[is=hero] > div h1, section[is=hero] > div p {
   color: hsl(0deg, 0%, 100%);
 }
-section[is=hero] > div {
+section[is=hero] > div > div {
   position: relative;
   z-index: 2;
 }
-section[is=hero] > img {
+section[is=hero] > div > img {
   position: relative;
   z-index: 2;
 }
 @media screen and (min-width: 700px) {
-  section[is=hero] {
+  section[is=hero] > div {
     grid-column-gap: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem;
     place-items: center;
   }
-  section[is=hero] img {
+  section[is=hero] > div img {
     order: 2;
   }
-  section[is=hero] div {
-    max-width: 30rem;
+  section[is=hero] > div div {
     order: 1;
   }
-  section[is=hero] h1 {
+  section[is=hero] > div h1 {
     margin-top: 0;
   }
-  section[is=hero] p {
+  section[is=hero] > div p {
     margin-bottom: 0;
   }
 }

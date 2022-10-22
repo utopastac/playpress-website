@@ -7,9 +7,11 @@
     <p>{{ collection.description }}</p>
   {%- endif -%}
 
-  <div is="product-promos" class="four">
-    {%- for product in collection.products -%}
-      {% include 'product-promo', product: product %}
-    {%- endfor -%}
+  <div is="product-promos">
+    <div class="four">
+      {%- for product in collection.products -%}
+        {% include 'product-promo', product: product %}
+      {%- endfor -%}
+    </div>
   </div>
 </div>

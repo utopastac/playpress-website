@@ -1,17 +1,22 @@
+section[is=image-with-text] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 section[is=image-with-text] {
   padding: 1.5rem 1rem;
 }
-section[is=image-with-text] > div {
+section[is=image-with-text] > div > div {
   max-width: 40rem;
 }
-section[is=image-with-text] > div > p:last-child {
+section[is=image-with-text] > div > div > p:last-child {
   margin-top: 2em;
 }
 section[is=image-with-text].last {
   padding-bottom: 4rem;
 }
 @media screen and (min-width: 400px) {
-  section[is=image-with-text] {
+  section[is=image-with-text] > div {
     grid-column-gap: 2rem;
     display: grid;
     grid-auto-flow: column;
@@ -19,10 +24,10 @@ section[is=image-with-text].last {
     padding: 2rem;
     place-items: center;
   }
-  section[is=image-with-text].swapped > img {
+  section[is=image-with-text] > div.swapped > img {
     grid-column: 2;
   }
-  section[is=image-with-text].swapped > div {
+  section[is=image-with-text] > div.swapped > div {
     grid-column: 1;
   }
 }

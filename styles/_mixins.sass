@@ -107,7 +107,7 @@ $bigUnits: 40
   padding-left: units(4)
   li
     @extend %heading-xl
-    list-style-type: circle
+    list-style-type: disc
 
 %sub-header
   > header
@@ -164,12 +164,26 @@ $bigUnits: 40
       grid-template-columns: repeat(4, 1fr)
 
 %product-list
-  grid-gap: 2rem
-  display: grid
-  grid-column: auto/span 1
-  grid-row: 3
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-  padding-top: 2rem
+  > div
+    @extend %main-content
+    grid-gap: 2rem
+    display: grid
+    grid-column: auto/span 1
+    grid-row: 3
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    padding-top: 2rem
 
-  @extend %columns
+    @extend %columns
 
+%main-content
+  max-width: size(1000)
+  margin: 0 auto
+
+%block-link
+  display: block
+
+%elevation-1
+  box-shadow: 0 1px 4px $drop
+
+%elevation-2
+  box-shadow: 0px 40px 50px -40px rgba($black, 0.08)//0px 1px 4px rgba($black, 0.1), 0px 8px 24px rgba($black, 0.12)

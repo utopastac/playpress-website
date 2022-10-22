@@ -6,12 +6,14 @@
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=3"
 >
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
-    <h3>You may also like...</h3>
-    <div is="product-promos" class="three">
-      {%- for product in recommendations.products -%}
-          {% include 'product-promo', product: product %}
-      {%- endfor -%}
-    </div>
+    <div class="header"><h3>You may also like...</h3></div>
+      <div is="product-promos">
+        <div class="three">
+          {%- for product in recommendations.products -%}
+              {% include 'product-promo', product: product %}
+          {%- endfor -%}
+        </div>
+      </div>
   {%- endif -%}
 </aside>
 

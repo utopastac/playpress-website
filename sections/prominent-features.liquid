@@ -1,12 +1,8 @@
 {{ 'prominent-features.css' | asset_url | stylesheet_tag }}
 
 <section is="section" class="alternative">
-  {% if section.settings.title != blank %}
-    <h2>{{ section.settings.title | escape }}</h2>
-  {% endif %}
-  {% if section.settings.text != blank %}
-    <p>{{ section.settings.text | escape }}</p>
-  {% endif %}
+  
+  {% include 'section-header' %}
 
   {% case section.settings.grid %}
     {% when 2 %}
@@ -17,36 +13,38 @@
       {%- assign grid_row = 'four' -%}
   {% endcase %}
 
-  <div is="prominent-features" class="{{ grid_row }}">
-    {% for block in section.blocks %}
-      <article is="prominent-feature">
-        {% if block.settings.enable_image %}
-          {% if block.settings.image != blank %}
-              <img
-                src="{{ block.settings.image | img_url: '800x' }}"
-                alt=""
-                is="in-action"
-                loading="lazy"
-                width="800"
-                height="600"
-                />
-          {% else %}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+  <div is="prominent-features">
+    <div class="{{ grid_row }}">
+      {% for block in section.blocks %}
+        <article is="prominent-feature">
+          {% if block.settings.enable_image %}
+            {% if block.settings.image != blank %}
+                <img
+                  src="{{ block.settings.image | img_url: '800x' }}"
+                  alt=""
+                  is="in-action"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                  />
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
           {% endif %}
-        {% endif %}
-        <div>
-          {% if block.settings.title != blank %}
-            <h3>{{ block.settings.title | escape }}</h3>
-          {% endif %}
-          {% if block.settings.text != blank %}
-            {{ block.settings.text }}
-          {% endif %}
-        </div>
-        </article>
-    {% endfor %}
-    {% if section.blocks.size == 0 %}
-      {% include 'no-blocks' %}
-    {% endif %}
+          <div>
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title | escape }}</h3>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              {{ block.settings.text }}
+            {% endif %}
+          </div>
+          </article>
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        {% include 'no-blocks' %}
+      {% endif %}
+    </div>
   </div>
 
   {% if section.settings.show_signpost_link %}

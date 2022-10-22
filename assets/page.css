@@ -2,7 +2,7 @@ div[is=page] ul {
   padding-left: 3.2rem;
 }
 div[is=page] ul li {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 div[is=page] h5, div[is=page] h6, div[is=page] h3, div[is=page] .heading-s, div[is=page] h2, div[is=page] .heading-m, div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {

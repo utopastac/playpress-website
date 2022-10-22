@@ -3,6 +3,7 @@
 <article is="feature">
   {% if block.settings.enable_image %}
     {% if block.settings.image != blank %}
+      <div class="image">
         <img
           src="{{ block.settings.image | img_url: '800x' }}"
           alt=""
@@ -11,6 +12,7 @@
           width="800"
           height="600"
           />
+      </div>
     {% else %}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {% endif %}

@@ -1,11 +1,18 @@
+div[is=prominent-features] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 article[is=prominent-feature] {
+  padding: 1rem;
   background-color: hsl(300deg, 33.3%, 99.4%);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 0 hsl(0deg, 0%, 31%);
-  padding: 1rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 article[is=prominent-feature] > img {
   margin-bottom: 1.25rem;
+  width: 100%;
 }
 article[is=prominent-feature] > div {
   padding-left: 0.75rem;
@@ -17,24 +24,24 @@ article[is=prominent-feature] > div {
   }
 }
 
-div[is=prominent-features] {
+div[is=prominent-features] > div {
   grid-gap: 2rem;
   display: grid;
   margin-bottom: 0;
   margin-top: 3rem;
 }
 @media screen and (min-width: 400px) {
-  div[is=prominent-features] {
+  div[is=prominent-features] > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  div[is=prominent-features].one {
+  div[is=prominent-features] > div.one {
     grid-template-columns: repeat(1, 1fr);
   }
-  div[is=prominent-features].three {
+  div[is=prominent-features] > div.three {
     grid-template-columns: repeat(3, 1fr);
   }
-  div[is=prominent-features].four {
+  div[is=prominent-features] > div.four {
     grid-template-columns: repeat(4, 1fr);
   }
 }

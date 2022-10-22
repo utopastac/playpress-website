@@ -1,21 +1,187 @@
+main[is=product] > div .description ul {
+  padding-left: 3.2rem;
+}
+main[is=product] > div .description ul li {
+  list-style-type: disc;
+}
+
+main[is=product] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+main[is=product] > div > form {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+main[is=product] > div .description h5, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+main[is=product] > div .description .body-2, main[is=product] > div .description .body-1, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+main[is=product] > div .description .body-2, main[is=product] > div .description .body-1, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+  font-weight: 400;
+}
+
+main[is=product] > div .description strong, main[is=product] > div .description b, main[is=product] > div .description .button-text {
+  font-weight: 700;
+}
+
+main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
+    font-size: 4.8rem;
+    line-height: 115%;
+    letter-spacing: -0.96px;
+  }
+}
+
+main[is=product] > div .description h2, main[is=product] > div .description .heading-m {
+  font-size: 2.4rem;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description h2, main[is=product] > div .description .heading-m {
+    font-size: 3.2rem;
+    line-height: 115%;
+    letter-spacing: -0.64px;
+  }
+}
+
+main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s {
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: -0.4px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s {
+    font-size: 2.4rem;
+    line-height: 115%;
+    letter-spacing: -0.48px;
+  }
+}
+
+main[is=product] > div .description h5 {
+  font-size: 1.8rem;
+  line-height: 115%;
+  letter-spacing: -0.36px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description h5 {
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: -0.4px;
+  }
+}
+
+main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+  font-size: 2.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+    font-size: 3.2rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+main[is=product] > div .description .body-1, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .button-text {
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description .body-1, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .button-text {
+    font-size: 2.4rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+main[is=product] > div .description .body-2 {
+  font-size: 1.8rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  main[is=product] > div .description .body-2 {
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+main[is=product] > div .description a {
+  text-decoration: underline;
+}
+main[is=product] > div .description p + h2, main[is=product] > div .description p + h3, main[is=product] > div .description ul + h2, main[is=product] > div .description ul + h3 {
+  margin-top: 3.2rem;
+}
+main[is=product] > div .description p + h4, main[is=product] > div .description p + h5, main[is=product] > div .description ul + h4, main[is=product] > div .description ul + h5 {
+  margin-top: 2.4rem;
+}
+main[is=product] > div .description blockquote {
+  margin-top: 2.4rem;
+  padding: 2.4rem 0 0 0;
+}
+main[is=product] > div .description h1, main[is=product] > div .description .heading-l {
+  margin-bottom: 3.2rem;
+}
+main[is=product] > div .description h2, main[is=product] > div .description .heading-m {
+  margin-bottom: 2.4rem;
+}
+main[is=product] > div .description h3, main[is=product] > div .description .heading-s {
+  margin-bottom: 0.8rem;
+}
+main[is=product] > div .description h4 {
+  margin-bottom: 0.8rem;
+}
+main[is=product] > div .description h6 {
+  margin-bottom: 0.8rem;
+}
+main[is=product] > div .description hr {
+  height: 1;
+  border: none;
+  background: #DDE2E8;
+  margin: 3.2rem 0 2.4rem 0;
+}
+
 main[is=product] {
   padding: 3.2rem;
 }
-main[is=product] img {
-  border-radius: 2.4rem;
+main[is=product] > div .description {
+  margin-bottom: 3.2rem;
 }
-main[is=product] > h1 {
+main[is=product] > div .description > div * {
+  margin-bottom: 1.6rem;
+}
+main[is=product] > div img {
+  border-radius: 0.8rem;
+  width: 100%;
+}
+main[is=product] > div > h1 {
   margin-top: 0;
 }
-main[is=product] > img:first-of-type {
+main[is=product] > div > img:first-of-type {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-main[is=product] > form {
+main[is=product] > div > form {
   grid-gap: 0.75rem;
   background-color: hsl(240deg, 25.7%, 93.1%);
   border-radius: 0 0 0.25rem 0.25rem;
-  box-shadow: 0 2px 0 hsl(0deg, 0%, 31%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   left: 0;
@@ -27,37 +193,37 @@ main[is=product] > form {
   top: 0;
   z-index: 1;
 }
-main[is=product] > form > button, main[is=product] > form > p {
+main[is=product] > div > form > button, main[is=product] > div > form > p {
   grid-row: 2;
 }
-main[is=product] > form > div {
+main[is=product] > div > form > div {
   grid-column: 1/span 2;
   grid-row: 1;
   margin-bottom: 0.5rem;
 }
-main[is=product] > form > p {
+main[is=product] > div > form > p {
   align-self: center;
   font-size: 1.33em;
   margin-bottom: 0;
   margin-top: 0;
 }
-main[is=product] > form > button {
+main[is=product] > div > form > button {
   max-width: 100%;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   width: 100%;
 }
 @media screen and (min-width: 400px) {
-  main[is=product] {
+  main[is=product] > div {
     grid-column-gap: 3rem;
     align-items: flex-start;
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
-  main[is=product] > * {
+  main[is=product] > div > * {
     grid-column: 1;
   }
-  main[is=product] > form {
+  main[is=product] > div > form {
     grid-column: 2;
     grid-row: 1/span 2;
     grid-template-rows: repeat(3, auto);
@@ -66,23 +232,23 @@ main[is=product] > form > button {
     padding: 2rem;
     top: 1rem;
   }
-  main[is=product] > form > p {
+  main[is=product] > div > form > p {
     grid-row: 1;
     margin-bottom: 0;
     margin-top: 0;
   }
-  main[is=product] > form > button {
+  main[is=product] > div > form > button {
     grid-column: 1/span 2;
     grid-row: 2;
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
   }
-  main[is=product] > form > div {
+  main[is=product] > div > form > div {
     grid-row: 3;
     margin-top: 1rem;
   }
-  main[is=product] > img:first-of-type {
+  main[is=product] > div > img:first-of-type {
     margin-bottom: 0;
   }
 }

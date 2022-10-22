@@ -1,42 +1,47 @@
-div.two[is=product-promos] {
+div[is=product-promos] > div.two {
   grid-template-columns: 1fr;
 }
-div.three[is=product-promos] {
+div[is=product-promos] > div.three {
   grid-template-columns: 1fr;
 }
-div.four[is=product-promos] {
+div[is=product-promos] > div.four {
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 550px) {
-  div.two[is=product-promos] {
+  div[is=product-promos] > div.two {
     grid-template-columns: repeat(2, 1fr);
   }
-  div.three[is=product-promos] {
+  div[is=product-promos] > div.three {
     grid-template-columns: repeat(2, 1fr);
   }
-  div.four[is=product-promos] {
+  div[is=product-promos] > div.four {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 770px) {
-  div.three[is=product-promos] {
+  div[is=product-promos] > div.three {
     grid-template-columns: repeat(3, 1fr);
   }
-  div.four[is=product-promos] {
+  div[is=product-promos] > div.four {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 1080px) {
-  div.four[is=product-promos] {
+  div[is=product-promos] > div.four {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-div[is=product-promos] {
+div[is=product-promos] > div {
   grid-gap: 2rem;
   display: grid;
   grid-column: auto/span 1;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   padding-top: 2rem;
+}
+
+div[is=product-promos] > div {
+  max-width: 100rem;
+  margin: 0 auto;
 }

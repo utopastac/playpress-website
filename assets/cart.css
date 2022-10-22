@@ -1,3 +1,7 @@
+div[is=cart] > form > div {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
 div[is=cart] {
   margin-bottom: 5rem;
   padding: 2.4rem 3.2rem;
@@ -27,7 +31,6 @@ div[is=cart] > form > table > tbody > tr > td > a > img > tr > td > input {
 div[is=cart] > form > div {
   background-color: hsl(240deg, 25.7%, 93.1%);
   border-radius: 0.25rem;
-  box-shadow: 0 2px 0 hsl(0deg, 0%, 31%);
   padding: 2rem 1rem;
 }
 div[is=cart] > form > div > button {

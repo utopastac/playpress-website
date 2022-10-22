@@ -1,4 +1,9 @@
-div[is=features] {
+div[is=features] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+div[is=features] > div {
   grid-gap: 2rem;
   display: grid;
   grid-column: auto/span 1;
@@ -7,27 +12,27 @@ div[is=features] {
   margin-top: 3rem;
 }
 @media screen and (min-width: 400px) {
-  div[is=features] {
+  div[is=features] > div {
     grid-template-columns: repeat(2, 1fr);
   }
-  div[is=features].one {
+  div[is=features] > div.one {
     grid-template-columns: repeat(1, 1fr);
   }
-  div[is=features].three {
+  div[is=features] > div.three {
     grid-template-columns: repeat(3, 1fr);
   }
-  div[is=features].four {
+  div[is=features] > div.four {
     grid-template-columns: repeat(2, 1fr);
   }
-  div[is=features].five {
+  div[is=features] > div.five {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 700px) {
-  div[is=features].four {
+  div[is=features] > div.four {
     grid-template-columns: repeat(4, 1fr);
   }
-  div[is=features].five {
+  div[is=features] > div.five {
     grid-template-columns: repeat(5, 1fr);
   }
 }

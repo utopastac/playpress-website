@@ -33,9 +33,12 @@ div.four[is=promos] {
 }
 
 a[is=promo] {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+a[is=promo] {
   background: hsl(240deg, 25.7%, 93.1%);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 0 0 0% 16.9%;
   display: grid;
   grid-template-columns: 1fr;
   padding: 0.75rem 1.25rem;
@@ -51,7 +54,7 @@ a[is=promo]:hover h3 {
   text-decoration: none;
 }
 a[is=promo]:focus-visible {
-  box-shadow: 0 2px 0 hsl(0deg, 0%, 31%), 0 0 0 4px hsl(38deg, 100%, 86.9%);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 4px hsl(38deg, 100%, 86.9%);
 }
 a[is=promo]:visited > h3 {
   color: hsl(281deg, 24.7%, 43.7%);

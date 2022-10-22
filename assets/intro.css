@@ -14,6 +14,10 @@ section[is=intro].with-image {
     max-width: 60rem;
     text-align: center;
   }
+  section[is=intro] > div h1, section[is=intro] > div p {
+    margin-left: auto;
+    margin-right: auto;
+  }
   section[is=intro].with-image {
     grid-column-gap: 2rem;
     display: grid;

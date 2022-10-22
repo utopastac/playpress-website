@@ -1,16 +1,21 @@
+section[is=logos] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 section[is=logos] {
   padding: 3rem 1rem;
 }
-section[is=logos] > :first-child {
+section[is=logos] > div > :first-child {
   margin-top: 0;
 }
-section[is=logos] > :last-child {
+section[is=logos] > div > :last-child {
   margin-bottom: 0;
 }
-section[is=logos] > p:last-child {
+section[is=logos] > div > p:last-child {
   margin-top: 2rem;
 }
-section[is=logos] > ul {
+section[is=logos] > div ul {
   grid-gap: 1rem;
   display: grid;
   grid-auto-rows: 1fr;
@@ -19,14 +24,14 @@ section[is=logos] > ul {
   margin-top: 2rem;
   padding-left: 0;
 }
-section[is=logos] > ul > li {
+section[is=logos] > div ul li {
   background: hsl(0deg, 0%, 100%);
   border-radius: 0.5rem;
   display: grid;
   padding: 1rem;
   place-items: center;
 }
-section[is=logos] > ul > li > span {
+section[is=logos] > div ul li span {
   display: none;
 }
 section[is=logos].no-top-padding {
