@@ -1,0 +1,275 @@
+{
+  "current": {
+    "heading_primary": "Hours of hands-on play",
+    "text_primary": "Our sets are designed to let children play creatively while helping them develop key motor and cognitive reasoning skills.",
+    "image_primary": "shopify:\/\/shop_images\/about-girl.jpg",
+    "heading_secondary": "Eco-friendly",
+    "text_secondary": "Our materials are sustainably sourced and 100% recyclable and biodegradable.",
+    "heading_tertiary": "Affordable",
+    "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
+    "link_url": "shopify:\/\/pages\/about",
+    "link_text": "Learn more about Playpress!",
+    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
+    "checkout_logo_size": "large",
+    "checkout_sidebar_background_color": "#e9e9f2",
+    "checkout_accent_color": "#2b68a0",
+    "checkout_button_color": "#f9b42b",
+    "checkout_error_color": "#c4275b",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "type_header_font": "helvetica_n7",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_linklist": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "37a6bace-d661-4e31-8d14-d2e2bc702b28": {
+            "type": "text",
+            "settings": {
+              "link_text": "Playpress on Facebook",
+              "link_url": "https:\/\/www.facebook.com\/playpresstoys",
+              "link_icon": "facebook"
+            }
+          },
+          "ae9027c8-354f-465d-a160-03b0cc0d1bb5": {
+            "type": "text",
+            "settings": {
+              "link_text": "Playpress on Instagram",
+              "link_url": "https:\/\/instagram.com\/playpresstoys",
+              "link_icon": "instagram"
+            }
+          }
+        },
+        "block_order": [
+          "37a6bace-d661-4e31-8d14-d2e2bc702b28",
+          "ae9027c8-354f-465d-a160-03b0cc0d1bb5"
+        ],
+        "settings": {
+          "footer_linklist": "footer",
+          "feedback_text": "<p>If you have any questions, feel free to our email our studio: <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com<\/a><\/p>"
+        }
+      },
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "settings": {
+        }
+      },
+      "16237663901d8f6c9b": {
+        "type": "hero",
+        "settings": {
+          "heading": "Award-winning, eco-friendly playsets",
+          "text": "Playpress are buildable playsets for ages 4 and up, made right here in the UK.",
+          "image": "shopify:\/\/shop_images\/hero-girl.jpg"
+        }
+      },
+      "1623767875c4b2fbf3": {
+        "type": "product-promos",
+        "settings": {
+          "title": "Our best-selling playsets",
+          "text": "",
+          "collection": "best-sellers",
+          "grid": 4,
+          "rows": 1,
+          "show_signpost_link": true,
+          "link_text": "Shop our other playsets",
+          "link_url": "\/products"
+        }
+      },
+      "1623769262eaeeee9b": {
+        "type": "image-with-text",
+        "settings": {
+          "title": "Fun for kids, kind to the planet",
+          "text": "<p>We believe in the power of planet-friendly, hands-on fun! Our inventive sets can be pressed out, built up, and played with time and time again. <\/p><p>Playpress is made from Playboard, a sturdy material that’s strong enough to stand up to everyday adventures but also completely FSC® (FSC-C004309) certified sustainable, recyclable and biodegradable. <\/p>",
+          "link_text": "Find out more about our playsets",
+          "link_url": "shopify:\/\/pages\/about",
+          "image": "shopify:\/\/shop_images\/L0005_The_Gruffalo_Pop-out_Playset_Child_Playing_At_Table.jpg",
+          "layout": "left",
+          "show_colour": true,
+          "last_on_page": true
+        }
+      },
+      "skip": {
+        "type": "skip",
+        "settings": {
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+        }
+      },
+      "1627677335e4bb5de6": {
+        "type": "logos",
+        "blocks": {
+          "1627677335e4bb5de6-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_royal_musuem_greenwich.jpg",
+              "link": ""
+            }
+          },
+          "1627677335e4bb5de6-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_science_musuem.jpg",
+              "link": ""
+            }
+          },
+          "1627677335e4bb5de6-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_The_Eden_Project_4759580e-2834-4180-80c8-c43b70dce373.jpg",
+              "link": ""
+            }
+          },
+          "1627677335e4bb5de6-3": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_new_internationalist.jpg",
+              "link": ""
+            }
+          },
+          "36d14944-5f30-493c-b013-2fc47251ecc5": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_lifeboats.jpg",
+              "link": ""
+            }
+          },
+          "1631db31-df49-4bd2-978d-907357080428": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_weald_down.jpg",
+              "link": ""
+            }
+          },
+          "81098cdf-4ffd-4e98-9351-1b6484f5e086": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_winchester_science.jpg",
+              "link": ""
+            }
+          },
+          "2ab6951c-dc3c-4452-9d28-427f1d9ddfde": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_TATE.jpg",
+              "link": ""
+            }
+          },
+          "84a70b3f-69aa-4c3c-aef9-d635c956e51d": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_Kew_b029a140-18f8-4a1e-bf10-f4ee6a7fdf52.jpg",
+              "link": ""
+            }
+          },
+          "06e2dd28-4db9-4239-9075-e61def2e9711": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_British_Museum_1683c9a6-9f57-4300-8384-3d0532c2a370.jpg",
+              "link": ""
+            }
+          },
+          "8fca1e15-48d8-42a0-a884-b4ffc661351f": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_Swansea_Council.jpg",
+              "link": ""
+            }
+          },
+          "97c5d055-41b2-44da-b71d-6253b24b0bdd": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stockist_ethical_Superstore_d5e52c27-0fdd-4461-8f3b-baf9e24b2078.jpg",
+              "link": ""
+            }
+          },
+          "47f0471f-2381-4508-b823-b5f0b37246e2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/tcs_round_logo.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1627677335e4bb5de6-0",
+          "1627677335e4bb5de6-1",
+          "1627677335e4bb5de6-2",
+          "1627677335e4bb5de6-3",
+          "36d14944-5f30-493c-b013-2fc47251ecc5",
+          "1631db31-df49-4bd2-978d-907357080428",
+          "81098cdf-4ffd-4e98-9351-1b6484f5e086",
+          "2ab6951c-dc3c-4452-9d28-427f1d9ddfde",
+          "84a70b3f-69aa-4c3c-aef9-d635c956e51d",
+          "06e2dd28-4db9-4239-9075-e61def2e9711",
+          "8fca1e15-48d8-42a0-a884-b4ffc661351f",
+          "97c5d055-41b2-44da-b71d-6253b24b0bdd",
+          "47f0471f-2381-4508-b823-b5f0b37246e2"
+        ],
+        "settings": {
+          "title": "Playpress stockists",
+          "text": "You'll find our fantastic toy sets in these stores too!",
+          "title_secondary": "",
+          "show_signpost_link": true,
+          "link_text": "Become a Playpress stockist",
+          "link_url": "shopify:\/\/pages\/stock-us",
+          "no_top_padding": false,
+          "show_colour": false
+        }
+      },
+      "1627677460135d8c42": {
+        "type": "prominent-features",
+        "blocks": {
+          "1627677460135d8c42-0": {
+            "type": "prominent_feature",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Custom_Design_RNLI_Inshore_Lifeboat-01-01.jpg",
+              "title": "Saving plastic and saving lives",
+              "text": "<p>We created a unique playset for the RNLI to helping to raise valuable funds.<\/p>"
+            }
+          },
+          "1627677460135d8c42-1": {
+            "type": "prominent_feature",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Space-Station-Gift-Of-The_Year_Highly-Commended-02.jpg",
+              "title": "Exploring space one small step at a time",
+              "text": "<p>A year later, we made space more hands-on with the Science Museum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1627677460135d8c42-0",
+          "1627677460135d8c42-1"
+        ],
+        "settings": {
+          "title": "Playpress studio",
+          "text": "Looking for a bespoke product that’s a little more… playful? We can work with you to design and produce relatively small, affordable runs of your very own Playpress set.",
+          "grid": 2,
+          "show_signpost_link": true,
+          "link_text": "Learn more about Playpress studio",
+          "link_url": "shopify:\/\/pages\/studio"
+        }
+      },
+      "about-brand": {
+        "type": "about-brand",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+      "16237663901d8f6c9b",
+      "1623767875c4b2fbf3",
+      "1627677460135d8c42",
+      "1627677335e4bb5de6",
+      "1623769262eaeeee9b"
+    ]
+  }
+}

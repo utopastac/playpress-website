@@ -1,0 +1,67 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Playpress V2",
+    "theme_author": "Peter Wright",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  {
+    "name": "About Playpress",
+    "settings": [
+      {
+        "id": "heading_primary",
+        "type": "text",
+        "label": "Primary block heading"
+      },
+      {
+        "id": "text_primary",
+        "type": "text",
+        "label": "Primary block text"
+      },
+      {
+        "id": "image_primary",
+        "type": "image_picker",
+        "label": "Primary block image"
+      },
+      {
+        "id": "heading_secondary",
+        "type": "text",
+        "label": "Second block heading"
+      },
+      {
+        "id": "text_secondary",
+        "type": "text",
+        "label": "Second block text"
+      },
+      {
+        "id": "heading_tertiary",
+        "type": "text",
+        "label": "Third block heading"
+      },
+      {
+        "id": "text_tertiary",
+        "type": "text",
+        "label": "Third block text"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_link",
+        "label": "Show call to action link",
+        "default": true
+      },
+      {
+        "id": "link_url",
+        "type": "url",
+        "label": "Link URL"
+      },
+      {
+        "id": "link_text",
+        "type": "text",
+        "label": "Link text",
+        "default": "Learn more about us"
+      }
+    ]
+  }
+]
