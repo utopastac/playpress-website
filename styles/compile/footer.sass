@@ -1,0 +1,95 @@
+@import '../assets'
+
+footer[is="footer"] 
+  background-color: $complementary
+  color: $on-complementary
+  margin: 0 -1rem -1rem
+  padding: 1rem 1rem 2rem
+  position: relative
+
+  a 
+    color: $on-complementary-link
+  &:visited 
+    color: $on-complementary-visited
+  &:active 
+    color: $on-complementary-active
+  &:focus-visible 
+    color: $on-focus-link
+    &:visited
+      color: $on-focus-visited
+    &:active
+      color: $on-focus-active
+
+  &:after 
+    background-color: $pete
+    background-image: url("data:image/svg+xmlcharset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='46' fill='none'%3E%3Cpath d='M22 34h4c.4 0 .2.4.2.4-1 3.8-4.1 3.8-4.1 3.8s-3.3 0-4.2-3.8l.2-.4h4z' fill='%23fff'/%3E%3Cpath d='M33.7 39.2h-.2s-3.1 3.3-11.6 3.3c-8.3 0-11.6-3-11.6-3l-.3-.3s-7.6-5.2-6.8-19c0-.3 0-1.7.6-3.8 3 1 20.1 7.9 25-6.2 0 0 1.8 9.5 11 6.2l.7 3.7c.7 13.7-6.6 19-6.8 19.1zM43 20S42.2.6 22 .6C1.3.6.7 20 .7 20c-1 14.6 6.6 20.8 7.7 21.4.8.6 4.5 3.7 13.5 3.7 8.9 0 12.4-3 13.3-3.7 1-.8 8.7-6.8 7.8-21.4z' fill='%23fff'/%3E%3Cpath d='M15 26.4c-2-2.1-4-.3-4.1 0l-1-1.3c1-1 3.7-2.5 6.2 0l-1 1.3zm18 0c-1.8-2.1-3.7-.3-3.9 0L28 25c1.2-1 4-2.5 6.4 0l-1.2 1.3z' fill='%23fff'/%3E%3C/svg%3E")
+    background-position: 50%
+    background-repeat: no-repeat
+    background-size: 60%
+    border-radius: 50%
+    box-shadow: 0 2px 0 $charcoal-14
+    content: ""
+    display: block
+    height: 4rem
+    left: 50%
+    position: absolute
+    top: -2rem
+    transform: translateX(-50%)
+    width: 4rem
+    z-index: 2
+
+  > * 
+    z-index: 2
+
+  > ul 
+    list-style: none
+    margin-bottom: 1.5em
+    margin-top: 1.5em
+    padding-left: 0
+
+    li 
+      padding-bottom: 0.75rem
+      padding-top: 0.75rem
+
+    &:first-of-type > li > a 
+      @extend %medium
+
+    &:last-of-type > li > a 
+      align-items: center
+      display: flex
+      > svg
+        margin-right: 0.5rem
+  
+
+  > p:last-of-type 
+    margin-top: 2em
+    z-index: 2
+    > small
+      display: block
+      margin-top: 1em
+
+  @include min($screen-s)
+    padding: 2rem
+  
+    > p:first-of-type 
+      margin-top: 2.5em
+  
+    > ul 
+      display: flex
+      margin-top: 1.5em
+  
+      > li 
+        margin-bottom: 0.5rem
+        margin-right: 1.5rem
+  
+
+  @include min($screen-m)
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(2, auto)
+    text-align: center
+  
+    > * 
+      margin-left: auto
+      margin-right: auto
+  

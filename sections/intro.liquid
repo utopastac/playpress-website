@@ -1,3 +1,5 @@
+{{ 'intro.css' | asset_url | stylesheet_tag }}
+
 <section is="intro" {%- if section.settings.image != blank -%}class="with-image"{%- endif -%}>
   <div>
     {%- if section.settings.heading != blank -%}

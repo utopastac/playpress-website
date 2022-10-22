@@ -1,0 +1,47 @@
+@import '../assets'
+
+ul[is="breadcrumbs"] 
+  display: flex
+  flex-wrap: wrap
+  padding: units(2) units(3)
+  position: relative
+  z-index: 2
+  background: darken($complementary, 10%)
+
+  a
+    color: white
+    @extend %body-m
+
+
+
+  li 
+    display: flex
+    align-items: center
+    justify-content: center
+    list-style: none
+    &:before 
+      background-color: white
+      opacity: 0.5
+      -webkit-clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
+      clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
+      content: ""
+      height: 0.75rem
+      margin-right: 0.5rem
+      position: relative
+      transform: rotate(180deg) translateY(-0.125rem)
+      width: 0.5rem
+
+    &:not(:last-of-type) 
+      display: none
+
+  @include min($screen-s) 
+    > li:first-of-type:before 
+      display: none
+  
+    > li:not(:last-of-type) 
+      display: flex
+  
+    > li:not(:first-of-type):before 
+      margin-left: 0.5rem
+      transform: rotate(0deg) translateY(0.25rem)
+  

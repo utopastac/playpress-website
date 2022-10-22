@@ -1,3 +1,5 @@
+{{ 'rich-text.css' | asset_url | stylesheet_tag }}
+
 <section is="rich-text" {% if section.settings.show_colour == true %}class="alternative"{% endif %}>
   {%- if section.settings.heading != blank -%}
     <h2>{{ section.settings.heading }}</h2>

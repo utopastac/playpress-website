@@ -1,4 +1,6 @@
-<a is="collection-promo" href="{{ collection.url }}">
+{{ 'collection-promo.css' | asset_url | stylesheet_tag }}
+
+<a class="collection-promo" href="{{ collection.url }}">
   <img
     alt="{{ collection.featured_image.alt }}"
     src="{{ collection.featured_media | img_url: '600x' }}"

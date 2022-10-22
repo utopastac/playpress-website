@@ -1,0 +1,49 @@
+@import '../assets'
+
+section[is="logos"]
+  padding: 3rem 1rem
+
+  > :first-child 
+    margin-top: 0
+
+  > :last-child 
+    margin-bottom: 0
+
+  > p:last-child 
+    margin-top: 2rem
+
+  > ul 
+    grid-gap: 1rem
+    display: grid
+    grid-auto-rows: 1fr
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr))
+    list-style: none
+    margin-top: 2rem
+    padding-left: 0
+
+    > li 
+      background: $logo-list
+      border-radius: 0.5rem
+      display: grid
+      padding: 1rem
+      place-items: center
+
+      > span
+        display: none
+
+  &.no-top-padding 
+    padding-top: 0
+
+  @include min($screen-s)
+    padding: 5rem 2rem
+  
+    h2,
+    h3,
+    p 
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+
+    P:last-child 
+      margin-top: 3rem
+  

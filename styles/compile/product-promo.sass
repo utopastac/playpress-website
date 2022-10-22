@@ -1,0 +1,26 @@
+@import '../assets'
+
+[is="product-promo"]
+  display: block
+  overflow: hidden
+  background: $black
+  border-radius: $border-m
+  text-decoration: none
+  color: $link
+
+  h3
+    @extend %heading-m
+
+  p
+    @extend %body-m
+
+  &:focus-visible
+    background: none
+    box-shadow: none
+
+    h3
+      background-color: $focus
+      box-shadow: 0 0 0 3px focus
+
+  &:active
+  &:hover

@@ -1,0 +1,28 @@
+@import '../assets'
+
+section[is="image-with-text"]
+  padding: 1.5rem 1rem
+
+  > div > p:last-child 
+    margin-top: 2em
+
+  &.last 
+    padding-bottom: 4rem
+
+  &.alternative 
+    background-color: $background-secondary
+
+  @include min($screen-s) 
+    grid-column-gap: 2rem
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: repeat(2, 1fr)
+    padding: 2rem
+    place-items: center
+  
+    &.swapped > img 
+      grid-column: 2
+    
+    &.swapped > div 
+      grid-column: 1
+  

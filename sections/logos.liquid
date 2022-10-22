@@ -1,3 +1,5 @@
+{{ 'logos.css' | asset_url | stylesheet_tag }}
+
 <section is="logos" class="{% if section.settings.show_colour == true %}alternative{% endif %}{% if section.settings.no_top_padding == true %} no-top-padding{% endif %}">
   {% if section.settings.title != blank %}
     <h2>{{ section.settings.title | escape }}</h2>

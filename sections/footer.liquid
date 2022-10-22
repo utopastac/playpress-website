@@ -1,3 +1,5 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
 <footer is="footer" role="contentinfo">
     <ul>
       {% for link in linklists[section.settings.footer_linklist].links %}

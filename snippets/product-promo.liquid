@@ -1,3 +1,5 @@
+{{ 'product-promo.css' | asset_url | stylesheet_tag }}
+
 <a is="product-promo" href="{{ product.url }}">
   <img
     alt="{{ product.featured_image.alt }}"

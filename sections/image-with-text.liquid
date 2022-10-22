@@ -1,3 +1,5 @@
+{{ 'image-with-text.css' | asset_url | stylesheet_tag }}
+
 <section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}">
   {% if section.settings.image != blank %}
     <img

@@ -1,0 +1,186 @@
+//
+$screen-xs: 350px
+$screen-s: 550px
+$screen-m: 770px
+$screen-l: 1080px
+$screen-xl: 1200px
+$screen-xxl: 1400px
+//
+
+@mixin contain-background($image)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: $image
+  background-position-y: center
+
+@mixin size-background($image, $size)
+  background-size: $size $size
+  background-repeat: no-repeat
+  background-image: $image
+  background-position: center center
+
+@mixin cover-background($image)
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: $image
+  background-position: center center
+
+@mixin icon($icon, $color: $black, $size: contain, $position: center center)
+  background: $color
+  mask-image: $icon
+  mask-repeat: no-repeat
+  mask-size: $size
+  mask-position: $position
+  -webkit-mask-image: $icon
+  -webkit-mask-repeat: no-repeat
+  -webkit-mask-size: $size
+  -webkit-mask-position: $position
+
+@mixin icon-image($icon)
+  -webkit-mask-image: $icon
+  mask-image: $icon
+
+@function size($size)
+  @return #{($size / 10)}rem
+
+@function -size($size)
+  @return -#{($size / 10)}rem
+
+// fixed spacing variables - subject to change LOL
+$units: 8
+$bigUnits: 40
+
+@function units($num)
+  @return #{($num * $units) / 10}rem
+
+@function -units($num)
+  @return -#{($num * $units) / 10}rem
+
+@function bigUnits($num)
+  @return #{($num * $bigUnits) / 10}rem
+
+@function -bigUnits($num)
+  @return -#{($num * $bigUnits) / 10}rem
+
+@mixin background-block($col, $offset)
+  position: absolute
+  border: 1px solid $col
+  @extend %elevation-1
+  @include animate(0.5s)
+  opacity: 0
+  top: $offset
+  left: $offset
+  right: $offset
+  bottom: $offset
+
+%link-hover
+  cursor: pointer
+  &:not(.active)
+    &:hover
+      color: $black
+      text-decoration: underline
+      &:after
+        background-color: $black
+        
+%links
+  position: relative
+      
+  &:hover
+    text-decoration: underline
+    &:after
+      width: units(2)
+      display: block
+      
+  &:after
+    content: ''
+    position: absolute
+    display: none
+    @include animate(0.1s)
+    top: 50%
+    left: units(3)
+    background-color: currentColor
+    width: units(1)
+    height: size(2)
+
+
+%standard-list
+  padding-left: units(4)
+  li
+    @extend %heading-xl
+    list-style-type: circle
+
+%sub-header
+  > header
+    margin-bottom: units(3)
+    position: relative
+
+    h1
+      @extend %heading-m
+      margin-bottom: units(2)
+
+    h2
+      @extend %heading-m
+      margin-bottom: units(0)
+
+      + p
+        margin-top: units(1)
+        @extend %heading-xl
+
+%content-column
+  padding: 0 units(2)
+
+%content-column-flex
+  display: flex
+  flex-wrap: wrap
+  > *:not(.full-width)
+    display: flex
+    flex-wrap: wrap
+
+%site-links
+  .links
+    @include min($screen-l)
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: units(8)
+
+  .linkBlock
+    max-width: units(55)
+    @include max($screen-l)
+      margin-bottom: units(8)
+    
+    h5
+      @extend %heading-m
+      margin-bottom: units(3)
+
+%product-list
+  grid-gap: 2rem
+  display: grid
+  grid-column: auto/span 1
+  grid-row: 3
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+  padding-top: 2rem
+
+  &.two 
+    grid-template-columns: 1fr
+  &.three 
+    grid-template-columns: 1fr
+  &.four 
+    grid-template-columns: 1fr
+
+  @include min($screen-m) 
+    &.three 
+      grid-template-columns: repeat(3, 1fr)
+    &.four
+      grid-template-columns: 1fr
+
+  @include min($screen-s)
+    &.two
+      grid-template-columns: repeat(2, 1fr)
+    &.three 
+      grid-template-columns: repeat(2, 1fr)
+    &.four 
+      grid-template-columns: repeat(2, 1fr)
+
+  @include min($screen-l) 
+    &.four 
+      grid-template-columns: repeat(4, 1fr)

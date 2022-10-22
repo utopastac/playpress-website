@@ -1,0 +1,290 @@
+button, label,
+legend {
+  font-weight: 500;
+}
+
+form {
+  margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+fieldset {
+  border: none;
+  max-width: 100%;
+  padding: 0;
+}
+fieldset > div {
+  grid-gap: 1.25rem;
+  display: grid;
+  position: relative;
+}
+fieldset > div > div {
+  position: relative;
+}
+
+legend {
+  color: #0A122A;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+label,
+legend {
+  font-family: inherit;
+}
+
+label {
+  display: block;
+  font-size: inherit;
+  margin-bottom: 0.48em;
+  margin-top: 0.48em;
+}
+label > input {
+  margin-right: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid rgba(10, 18, 42, 0.12);
+  border-radius: 0.125rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: hsl(0deg, 0%, 43.5%);
+}
+
+audio:focus,
+input:focus,
+select:focus,
+textarea:focus,
+video:focus {
+  box-shadow: 0 0 0 3px #FFC700;
+  outline: 0;
+}
+
+input[type=radio] {
+  opacity: 0;
+  position: absolute;
+}
+input[type=radio]:before {
+  border: 1px solid rgba(10, 18, 42, 0.12);
+  border-radius: 0.125rem;
+  content: "";
+  height: 1rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  z-index: 1;
+}
+input[type=radio]:after {
+  border-bottom-width: 0;
+  border-bottom: 0.25rem solid rgba(10, 18, 42, 0.12);
+  border-left-width: 0;
+  border-left: 0.25rem solid rgba(10, 18, 42, 0.12);
+  border-right: 0 solid rgba(10, 18, 42, 0.12);
+  border-top: 0 solid transparent;
+  content: "";
+  height: 0.25rem;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0.25rem;
+  transform: rotate(-45deg) scale(0.75) translate(0.125rem);
+  width: 0.75rem;
+}
+input[type=radio] + label {
+  cursor: pointer;
+  padding-left: 2rem;
+  position: relative;
+}
+input[type=radio] + label:before {
+  box-shadow: 0 0 0 3px #0A122A;
+}
+input[type=radio] + label:after {
+  opacity: 100%;
+}
+
+input[type=radio] + label:before {
+  border-radius: 50%;
+}
+
+input[type=radio] + label:after {
+  background: hsl(236deg, 25.9%, 47.6%);
+  border: 1px solid hsl(236deg, 25.9%, 47.6%);
+  border-radius: 50%;
+  height: 1rem;
+  top: 0;
+  transform: scale(0.6);
+  width: 1rem;
+}
+
+input[type=checkbox]:focus + label:before,
+input[type=radio]:focus + label:before {
+  box-shadow: 0 0 0 3px #FFC700;
+}
+
+input[type=range] {
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track {
+  background: hsl(240deg, 23.6%, 65.1%);
+  cursor: pointer;
+  height: 0.125rem;
+}
+
+input[type=range]::-moz-range-thumb, input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: hsl(236deg, 25.9%, 47.6%);
+  border: 1px solid hsl(236deg, 25.9%, 47.6%);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1rem;
+  margin-top: -0.5rem;
+  transform: translateY(1px);
+  width: 1rem;
+}
+
+input[type=range]:focus::-webkit-slider-thumb, input[type=range]:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 4px hsl(38deg, 100%, 86.9%);
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, hsl(236deg, 25.9%, 47.6%) 50%), linear-gradient(135deg, hsl(236deg, 25.9%, 47.6%) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 1rem, calc(100% - 10px) 1rem;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+}
+
+button {
+  background-color: hsl(39deg, 95.1%, 59.8%);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 -2px 0 #FBFAF8;
+  color: hsl(230deg, 49.3%, 28.6%);
+  font-family: inherit;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 0.5rem 1.25rem;
+}
+button:hover {
+  background-color: #FFC700;
+}
+button:active {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+  transition-duration: 0s;
+}
+button:focus-visible {
+  background-color: hsl(230deg, 46.6%, 34.5%);
+}
+
+a,
+button,
+summary {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+a:focus,
+button:focus,
+summary:focus {
+  outline: none;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  background-color: hsl(38deg, 100%, 86.9%);
+  outline: none;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  box-shadow: 0 0 0 4px hsl(38deg, 100%, 86.9%);
+  color: hsl(230deg, 46.6%, 34.5%);
+}
+
+a {
+  color: hsl(209deg, 61.2%, 39.4%);
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  color: hsl(340deg, 68.5%, 43.5%);
+}
+a:active:focus-visible {
+  color: hsl(340deg, 68.5%, 43.5%);
+}
+a:focus {
+  color: hsl(209deg, 61.2%, 39.4%);
+}
+a:visited {
+  color: hsl(281deg, 24.7%, 43.7%);
+}
+a:visited:focus-visible {
+  color: hsl(281deg, 24.7%, 43.7%);
+}
+
+::-moz-selection {
+  background-color: hsl(39deg, 95.1%, 59.8%);
+  color: hsl(230deg, 49.3%, 28.6%);
+}
+
+::selection {
+  background-color: hsl(39deg, 95.1%, 59.8%);
+  color: hsl(230deg, 49.3%, 28.6%);
+}
+
+section[is=image-with-text] {
+  padding: 1.5rem 1rem;
+}
+section[is=image-with-text] > div > p:last-child {
+  margin-top: 2em;
+}
+section[is=image-with-text].last {
+  padding-bottom: 4rem;
+}
+section[is=image-with-text].alternative {
+  background-color: hsl(240deg, 25.7%, 93.1%);
+}
+@media screen and (min-width: 400px) {
+  section[is=image-with-text] {
+    grid-column-gap: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    place-items: center;
+  }
+  section[is=image-with-text].swapped > img {
+    grid-column: 2;
+  }
+  section[is=image-with-text].swapped > div {
+    grid-column: 1;
+  }
+}

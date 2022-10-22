@@ -1,0 +1,21 @@
+%main-content
+  max-width: 1400px
+  margin: 0 auto
+  padding: 0 $space-xs
+  
+  @include min($screen-l)
+    padding: 0 $space-m
+
+%block-link
+  display: block
+
+%grid-rules-container
+  display: grid
+  grid-template-columns: size(240) 1fr
+  grid-column-gap: $space-m
+
+%grid-rules-content
+  position: relative
+
+%elevation-1
+  box-shadow: $elevation-1

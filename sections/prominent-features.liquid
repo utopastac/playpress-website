@@ -1,3 +1,5 @@
+{{ 'prominent-features.css' | asset_url | stylesheet_tag }}
+
 <section is="section" class="alternative">
   {% if section.settings.title != blank %}
     <h2>{{ section.settings.title | escape }}</h2>
