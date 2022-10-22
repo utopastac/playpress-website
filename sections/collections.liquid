@@ -32,7 +32,8 @@
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
         {% assign collection_handle = collection.handle %}
-        {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %}
+        <div class="rte"><div>{{ collection.settings.label }}</div></div>
+        {% comment %} {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %} {% endcomment %}
       {% endfor %}
     </div>
 
