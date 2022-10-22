@@ -1,1 +1,48 @@
 @import '../assets'
+
+a[is="promo"] 
+  background: $elevated-secondary
+  border-radius: 0.5rem
+  box-shadow: 0 2px 0 $charcoal-14
+  display: grid
+  grid-template-columns: 1fr
+  padding: 0.75rem 1.25rem
+  place-content: flex-start
+  text-decoration: none
+
+  &:active 
+    box-shadow: none
+    position: relative
+    top: 2px
+  
+  &:hover h3
+    text-decoration: none
+
+  &:focus-visible 
+    box-shadow: 0 2px 0 $drop, 0 0 0 4px $focus
+
+  &:visited > h3 
+    color: $visited
+
+  > img 
+    align-self: center
+
+  > h3 
+    color: unset
+    margin-top: 1rem
+    text-decoration: underline
+
+  > p 
+    align-self: flex-start
+    color: $text
+    margin-top: 0
+
+div[is="promos"] 
+  grid-gap: 1.5rem
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+  margin-bottom: 4rem
+  margin-top: 2rem
+
+  @extend %columns
+  

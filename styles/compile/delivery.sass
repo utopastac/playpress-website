@@ -1,1 +1,25 @@
 @import '../assets'
+
+p[is="delivery"] 
+  margin-bottom: 0
+  margin-top: 0
+
+  a 
+    display: flex
+    margin-bottom: 0
+    svg 
+      margin-right: 0.5rem
+
+  &.expanded 
+    background-color: $triadic
+    border-radius: 0.5rem
+    max-width: 100%
+    padding: 1.5rem 1rem
+    color: $on-triadic
+    a
+      color: $on-triadic
+
+  @include min($screen-s)
+    &.expanded 
+      padding: 2rem
+  

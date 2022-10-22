@@ -1,6 +1,7 @@
 @import '../fonts'
 @import '../assets'
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
+@import "../forms.sass"
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400500600700&display=swap')
 
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
@@ -67,6 +68,25 @@ h1, h2, h3, h4, h5, h6 p
   a
     color: inherit
 
+iframe,img,svg,video
+  display: block
+  max-width: 100%
+
+img
+  height: auto
+  &[is="in-action"]
+    border-radius: 0.5rem
+
+table
+  border-collapse: collapse
+  max-width: 100%
+
+caption,td,th
+  text-align: left
+
+td,th
+  border-bottom: 1px solid $separator
+  padding: 0.75rem 1.5rem 0.75rem 0
 
 body
   background-color: $background
@@ -85,9 +105,126 @@ section[is="section"]
 
   p:last-child
   margin-top: 2rem
-
-  &.alternative
-    background-color: $background-secondary
   
   @include min($screen-m)
     padding: 3rem 2rem
+
+div[is="product-promos"]
+  @extend %product-list
+
+.alternative
+    background-color: $background-secondary
+
+p[is="lede"]
+  font-size: 1.33em
+  line-height: 1.75
+  max-width: 30rem
+
+div[is="error-summary"]
+  background-color: $error
+  border-radius: 0.125rem
+  color: $on-error
+  padding: 0.25rem 1rem
+
+div[is="error"] 
+  border-left: 0.5rem solid $error
+  padding-left: 0.5rem
+  > p
+    margin-bottom: 0.48em
+    margin-top: 0.48em
+    > strong
+      background-color: $error
+      border-radius: 0.125rem
+      color: $on-error
+      display: inline-block
+      font-weight: 400
+      padding: 0 0.5rem
+
+a[is="signpost"] 
+  display: inline-block
+  font-size: 1.17em
+  font-weight: 700
+  padding-left: 2.25rem
+  padding-top: 0.125rem
+  position: relative
+  text-decoration: none
+
+  &:hover 
+    text-decoration: underline
+
+  &:after 
+    border: 2px solid
+    border-radius: 0.25rem
+    content: ""
+    height: 1.25rem
+    left: 0
+    position: absolute
+    top: 0.25rem
+    width: 1.25rem
+
+  &:before 
+    background-color: currentColor
+    border: 1px solid
+    -webkit-clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
+    clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
+    content: ""
+    display: inline-block
+    height: 0.75rem
+    left: 0.5rem
+    line-height: 1
+    margin-right: 0.5rem
+    position: absolute
+    text-decoration: none
+    top: calc(0.5rem + 1px)
+    width: 0.5rem
+
+a[is="skip"] 
+  color:$on-focus
+  display: block
+  left: -100vw
+  padding: 0.5rem 2rem
+  position: absolute
+  text-align: center
+
+  &:hover 
+    text-decoration: none
+
+  &:focus 
+    background-color:$focus
+    left: 0
+    right: 0
+    z-index: 3
+
+
+ul[is="social-sharing"] 
+  list-style: none
+  padding-left: 0
+
+  > li 
+    padding-bottom: 1rem
+    padding-top: 1rem
+
+    > a 
+      align-items: center
+      display: flex
+
+      > svg 
+        margin-right: 0.5rem
+
+  @include min($screen-s)
+    grid-gap: 0.75rem
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+  
+
+div[class="testimonial"]
+  > img 
+    margin-right: 2rem
+
+  > div > blockquote 
+    margin-left: 0
+
+  @include min($screen-s)
+    display: flex
+  
+

@@ -1,0 +1,11 @@
+article[is=feature] {
+  text-align: center;
+}
+article[is=feature] > img {
+  margin-bottom: 1.25rem;
+}
+article[is=feature] > h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+}

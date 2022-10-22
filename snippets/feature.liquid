@@ -1,0 +1,24 @@
+{{ 'feature.css' | asset_url | stylesheet_tag }}
+
+<article is="feature">
+  {% if block.settings.enable_image %}
+    {% if block.settings.image != blank %}
+        <img
+          src="{{ block.settings.image | img_url: '800x' }}"
+          alt=""
+          is="in-action"
+          loading="lazy"
+          width="800"
+          height="600"
+          />
+    {% else %}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  {% endif %}
+  {% if block.settings.title != blank %}
+    <h3>{{ block.settings.title | escape }}</h3>
+  {% endif %}
+  {% if block.settings.text != blank %}
+    <p>{{ block.settings.text }}</p>
+  {% endif %}
+</article>

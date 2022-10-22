@@ -1,0 +1,29 @@
+div[is=shop] {
+  padding: 2.4rem;
+}
+div[is=shop] > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: flex-start;
+}
+div[is=shop] > section {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 400px) {
+  div[is=shop] > div {
+    grid-column-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  div[is=shop] > div > div {
+    justify-self: end;
+  }
+  div[is=shop] > section {
+    padding-top: 2rem;
+  }
+  div[is=shop] > section > h2, div[is=shop] > section > p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

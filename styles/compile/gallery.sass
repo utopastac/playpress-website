@@ -1,0 +1,13 @@
+@import '../assets'
+
+div[is="gallery"]
+  grid-gap: 1.5rem
+  display: grid
+  margin-bottom: 1.5rem
+  margin-top: 2rem
+
+  > img
+    border-radius: 0.25rem
+
+  @include min($screen-s)
+    grid-template-columns: repeat(2, 1fr)

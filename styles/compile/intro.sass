@@ -1,1 +1,36 @@
 @import '../assets'
+
+section[is="intro"]
+  padding: units(3)
+
+  &.with-image 
+    padding-bottom: 2rem
+
+  @include min($screen-s)
+    padding-bottom: 2rem
+
+    > div 
+      margin-left: auto
+      margin-right: auto
+      max-width: 30rem
+      text-align: center
+
+    &.with-image 
+      grid-column-gap: 2rem
+      display: grid
+      grid-auto-flow: column
+      grid-row: auto
+      grid-template-columns: repeat(2, 1fr)
+      place-items: center
+    
+      > div 
+        grid-column: 2
+        max-width: 30rem
+        text-align: left
+    
+        > h1 
+          margin-bottom: 0
+          margin-top: 0
+    
+      > img 
+        grid-column: 1

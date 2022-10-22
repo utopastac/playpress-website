@@ -136,42 +136,14 @@ $bigUnits: 40
     display: flex
     flex-wrap: wrap
 
-%site-links
-  .links
-    @include min($screen-l)
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr
-      grid-column-gap: units(8)
 
-  .linkBlock
-    max-width: units(55)
-    @include max($screen-l)
-      margin-bottom: units(8)
-    
-    h5
-      @extend %heading-m
-      margin-bottom: units(3)
-
-%product-list
-  grid-gap: 2rem
-  display: grid
-  grid-column: auto/span 1
-  grid-row: 3
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-  padding-top: 2rem
-
+%columns
   &.two 
     grid-template-columns: 1fr
   &.three 
     grid-template-columns: 1fr
   &.four 
     grid-template-columns: 1fr
-
-  @include min($screen-m) 
-    &.three 
-      grid-template-columns: repeat(3, 1fr)
-    &.four
-      grid-template-columns: 1fr
 
   @include min($screen-s)
     &.two
@@ -181,6 +153,23 @@ $bigUnits: 40
     &.four 
       grid-template-columns: repeat(2, 1fr)
 
+  @include min($screen-m) 
+    &.three 
+      grid-template-columns: repeat(3, 1fr)
+    &.four
+      grid-template-columns: 1fr
+
   @include min($screen-l) 
     &.four 
       grid-template-columns: repeat(4, 1fr)
+
+%product-list
+  grid-gap: 2rem
+  display: grid
+  grid-column: auto/span 1
+  grid-row: 3
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+  padding-top: 2rem
+
+  @extend %columns
+

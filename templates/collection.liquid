@@ -1,11 +1,15 @@
-<h1>{{ collection.title }}</h1>
+{{ 'shop.css' | asset_url | stylesheet_tag }}
 
-{%- if collection.description != blank -%}
-  <p>{{ collection.description }}</p>
-{%- endif -%}
+<div is="shop">
+  <h1>{{ collection.title }}</h1>
 
-<div is="product-promos" class="four">
-  {%- for product in collection.products -%}
-    {% include 'product-promo', product: product %}
-  {%- endfor -%}
+  {%- if collection.description != blank -%}
+    <p>{{ collection.description }}</p>
+  {%- endif -%}
+
+  <div is="product-promos" class="four">
+    {%- for product in collection.products -%}
+      {% include 'product-promo', product: product %}
+    {%- endfor -%}
+  </div>
 </div>

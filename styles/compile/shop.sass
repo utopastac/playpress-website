@@ -1,0 +1,30 @@
+@import '../assets'
+
+div[is="shop"] 
+  padding: units(3)
+
+  > div 
+    display: grid
+    grid-template-columns: 1fr
+    place-items: flex-start
+
+  > section 
+    padding-top: 1rem
+
+  @include min($screen-s)
+    > div 
+      grid-column-gap: 2rem
+      display: grid
+      grid-template-columns: 1fr 1fr
+  
+      > div 
+        justify-self: end
+
+    > section 
+      padding-top: 2rem
+  
+      > h2, > p 
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+  
