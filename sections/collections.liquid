@@ -4,6 +4,7 @@
 {% if collection_count > 0 %}
   {% assign isEmpty = false %}
 {% endif %} {% endcomment %}
+{{ 'collections.css' | asset_url | stylesheet_tag }}
 
 <section is="section">
   {% if section.settings.title != blank %}
@@ -13,28 +14,16 @@
     <p>{{ section.settings.text }}</p>
   {% endif %}
 
-  <div class="site-box box--big lap--box--small-fl box--typo-big box--center-align box--column-flow box__heading box--add-hr {% if collection__count == 1 %} fix-me-with-height-hard {% endif %}" data-order="0">
-
-    <div class="site-box-content fix-me-with-margin">
-          
-      <h1 class="title">{{ page.title | escape }}</h1>
-      {% unless section.settings.caption == blank %}
-        <div class="rte"><div>{{ section.settings.caption }}</div></div>
-      {% endunless %}
-
-    </div>
-
-  </div>
-
   {% unless section.blocks == empty %}
 
-    <div class="collection__holder">
-      <h1>collections</h1>
+    <div class="collections">
+      <h1>Collections</h1>
+      <ul>
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
-        <div>{{ collection.title }}</div>
-        {% comment %} {% render 'collection-item', collection: collection, collection_count: collection_count, index: forloop.index %} {% endcomment %}
+        <li>{% include 'collection-promo', collection: collection %}</li>
       {% endfor %}
+      </ul>
     </div>
 
   {% endunless %}
