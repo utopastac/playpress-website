@@ -5,6 +5,14 @@
   {% assign isEmpty = false %}
 {% endif %}
 
+<section is="section">
+  {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p>{{ section.settings.text }}</p>
+  {% endif %}
+
   <div class="site-box box--big lap--box--small-fl box--typo-big box--center-align box--column-flow box__heading box--add-hr {% if collection__count == 1 %} fix-me-with-height-hard {% endif %}" data-order="0">
 
     <div class="site-box-content fix-me-with-margin">
@@ -29,6 +37,8 @@
     </div>
 
   {% endunless %}
+
+</section>
 
 {% schema %}
 {

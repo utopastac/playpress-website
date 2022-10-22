@@ -58,6 +58,11 @@
         "settings": {
         }
       },
+      "collections": {
+        "type": "collections",
+        "settings": {
+        }
+      },
       "16237663901d8f6c9b": {
         "type": "hero",
         "settings": {
