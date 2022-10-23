@@ -1,3 +1,8 @@
+footer[is=footer] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 footer[is=footer] ul:first-of-type > li > a {
   font-weight: 500;
 }
@@ -9,7 +14,6 @@ footer[is=footer] a {
 footer[is=footer] {
   background-color: hsl(230deg, 51.6%, 31.6%);
   color: hsl(0deg, 0%, 97.3%);
-  padding: 1rem 1rem 2rem;
   position: relative;
 }
 footer[is=footer] a {
@@ -87,8 +91,7 @@ footer[is=footer] p:last-of-type > small {
   }
 }
 @media screen and (min-width: 700px) {
-  footer[is=footer] {
-    padding: 3.2rem;
+  footer[is=footer] > div {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }

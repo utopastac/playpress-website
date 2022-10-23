@@ -1,6 +1,7 @@
 {{ 'footer.css' | asset_url | stylesheet_tag }}
 
 <footer is="footer" role="contentinfo">
+  <div>
     <div>
       <ul>
         {% for link in linklists[section.settings.footer_linklist].links %}
@@ -52,6 +53,7 @@
         <small>This eco-friendly Shopify website was carefuly crafted by <a href="https://www.kindly.eco">Kindly</a>.</small>
       </p>
     </div>
+  </div>
 </footer>
 
 {% schema %}

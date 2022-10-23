@@ -3,8 +3,10 @@
 footer[is="footer"] 
   background-color: $complementary
   color: $on-complementary
-  padding: 1rem 1rem 2rem
   position: relative
+
+  > div
+    @extend %main-content
 
   a 
     color: $on-complementary-link
@@ -79,7 +81,7 @@ footer[is="footer"]
   
 
   @include min($screen-m)
-    padding: units(4)
-    display: grid
-    grid-template-columns: 2fr 1fr
+    > div
+      display: grid
+      grid-template-columns: 2fr 1fr
   
