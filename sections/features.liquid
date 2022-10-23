@@ -27,13 +27,7 @@
       </div>
     </div>
 
-    {% if section.settings.show_signpost_link %}
-        <p>
-          <a is="signpost" href="{{ section.settings.link_url }}">
-          {{ section.settings.link_text }}
-          </a>
-        </p>
-    {% endif %}
+    {% include 'signpost', section: section %}
   
 </section>
 

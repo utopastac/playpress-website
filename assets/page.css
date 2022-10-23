@@ -24,91 +24,91 @@ div[is=page] strong, div[is=page] b, div[is=page] .button-text {
 }
 
 div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {
-  font-size: 3.2rem;
+  font-size: 1.6rem;
   line-height: 115%;
   letter-spacing: -0.64px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {
-    font-size: 4.8rem;
+    font-size: 2.4rem;
     line-height: 115%;
     letter-spacing: -0.96px;
   }
 }
 
 div[is=page] h2, div[is=page] .heading-m {
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   line-height: 115%;
   letter-spacing: -0.48px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] h2, div[is=page] .heading-m {
-    font-size: 3.2rem;
+    font-size: 1.6rem;
     line-height: 115%;
     letter-spacing: -0.64px;
   }
 }
 
 div[is=page] h6, div[is=page] h3, div[is=page] .heading-s {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 115%;
   letter-spacing: -0.4px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] h6, div[is=page] h3, div[is=page] .heading-s {
-    font-size: 2.4rem;
+    font-size: 1.2rem;
     line-height: 115%;
     letter-spacing: -0.48px;
   }
 }
 
 div[is=page] h5 {
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   line-height: 115%;
   letter-spacing: -0.36px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] h5 {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 115%;
     letter-spacing: -0.4px;
   }
 }
 
 div[is=page] h4, div[is=page] .body-0 {
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] h4, div[is=page] .body-0 {
-    font-size: 3.2rem;
+    font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
 div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text {
-    font-size: 2.4rem;
+    font-size: 1.2rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
 div[is=page] .body-2 {
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   div[is=page] .body-2 {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }

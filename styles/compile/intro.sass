@@ -3,6 +3,9 @@
 section[is="intro"]
   padding: units(4)
 
+  > div
+    @extend %main-content
+
   &.with-image 
     padding-bottom: 2rem
 
@@ -10,32 +13,35 @@ section[is="intro"]
 
     padding: units(8)
 
-    > div 
-      margin-left: auto
-      margin-right: auto
-      max-width: size(600)
-      text-align: center
+    > div
 
-      h1, p
+      > div 
         margin-left: auto
         margin-right: auto
+        max-width: size(600)
+        text-align: center
 
-    &.with-image 
-      grid-column-gap: 2rem
-      display: grid
-      grid-auto-flow: column
-      grid-row: auto
-      grid-template-columns: repeat(2, 1fr)
-      place-items: center
-    
-      > div 
-        grid-column: 2
-        max-width: 30rem
-        text-align: left
-    
-        > h1 
-          margin-bottom: 0
-          margin-top: 0
-    
-      > img 
-        grid-column: 1
+        h1, p
+          margin-left: auto
+          margin-right: auto
+
+    &.with-image
+      > div
+        grid-column-gap: 2rem
+        display: grid
+        grid-auto-flow: column
+        grid-row: auto
+        grid-template-columns: repeat(2, 1fr)
+        place-items: center
+      
+        > div 
+          grid-column: 2
+          max-width: 30rem
+          text-align: left
+      
+          > h1 
+            margin-bottom: 0
+            margin-top: 0
+      
+        > img 
+          grid-column: 1

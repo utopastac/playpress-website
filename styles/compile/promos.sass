@@ -37,12 +37,13 @@ a[is="promo"]
     color: $text
     margin-top: 0
 
-div[is="promos"] 
-  grid-gap: 1.5rem
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-  margin-bottom: 4rem
-  margin-top: 2rem
-
-  @extend %columns
+div[is="promos"]
+  > div
+    @extend %main-content
+    grid-gap: 1.5rem
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    margin-bottom: 4rem
+    margin-top: 2rem
+    @extend %columns
   

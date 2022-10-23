@@ -11,7 +11,7 @@
   <section>
   <h2>Our best-selling sets</h2>
     <div is="product-promos">
-      <div class="two">
+      <div class="four">
         {% for product in collections['best-sellers'].products limit: 2 %}
             {% include 'product-promo', product: product %}
         {% endfor %}
@@ -21,7 +21,7 @@
   <section>
     <h2>Our other excellent sets</h2>
     <div is="product-promos">
-      <div class="three">
+      <div class="four">
         {% for product in collections['shop-featured'].products %}
             {% include 'product-promo', product: product %}
         {% endfor %}
@@ -32,7 +32,7 @@
     <h2>Bundles</h2>
     <p>Even better value to build a Playpress universe.</p>
     <div is="product-promos" class="two">
-      <div class="two">
+      <div class="four">
         {% for product in collections['bundle-playsets'].products limit: 2 %}
             {% include 'product-promo', product: product %}
         {% endfor %}

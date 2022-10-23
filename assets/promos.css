@@ -1,35 +1,40 @@
-div.two[is=promos] {
+div[is=promos] > div.two {
   grid-template-columns: 1fr;
 }
-div.three[is=promos] {
+div[is=promos] > div.three {
   grid-template-columns: 1fr;
 }
-div.four[is=promos] {
+div[is=promos] > div.four {
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 550px) {
-  div.two[is=promos] {
+  div[is=promos] > div.two {
     grid-template-columns: repeat(2, 1fr);
   }
-  div.three[is=promos] {
+  div[is=promos] > div.three {
     grid-template-columns: repeat(2, 1fr);
   }
-  div.four[is=promos] {
+  div[is=promos] > div.four {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 770px) {
-  div.three[is=promos] {
+  div[is=promos] > div.three {
     grid-template-columns: repeat(3, 1fr);
   }
-  div.four[is=promos] {
+  div[is=promos] > div.four {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 1080px) {
-  div.four[is=promos] {
+  div[is=promos] > div.four {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+div[is=promos] > div {
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 a[is=promo] {
@@ -73,7 +78,7 @@ a[is=promo] > p {
   margin-top: 0;
 }
 
-div[is=promos] {
+div[is=promos] > div {
   grid-gap: 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

@@ -1,3 +1,8 @@
+section[is=intro] > div {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 section[is=intro] {
   padding: 3.2rem;
 }
@@ -8,17 +13,17 @@ section[is=intro].with-image {
   section[is=intro] {
     padding: 6.4rem;
   }
-  section[is=intro] > div {
+  section[is=intro] > div > div {
     margin-left: auto;
     margin-right: auto;
     max-width: 60rem;
     text-align: center;
   }
-  section[is=intro] > div h1, section[is=intro] > div p {
+  section[is=intro] > div > div h1, section[is=intro] > div > div p {
     margin-left: auto;
     margin-right: auto;
   }
-  section[is=intro].with-image {
+  section[is=intro].with-image > div {
     grid-column-gap: 2rem;
     display: grid;
     grid-auto-flow: column;
@@ -26,16 +31,16 @@ section[is=intro].with-image {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
   }
-  section[is=intro].with-image > div {
+  section[is=intro].with-image > div > div {
     grid-column: 2;
     max-width: 30rem;
     text-align: left;
   }
-  section[is=intro].with-image > div > h1 {
+  section[is=intro].with-image > div > div > h1 {
     margin-bottom: 0;
     margin-top: 0;
   }
-  section[is=intro].with-image > img {
+  section[is=intro].with-image > div > img {
     grid-column: 1;
   }
 }

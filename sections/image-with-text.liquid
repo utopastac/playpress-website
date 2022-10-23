@@ -32,6 +32,7 @@
           </a>
         </p>
       {% endif %}
+      {% include 'signpost', section: section %}
     </div>
   </div>
 </section>
@@ -66,6 +67,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signpost_link",
+      "label": "Show 'View more' link",
+      "default": false
     },
     {
       "type": "select",
