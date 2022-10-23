@@ -70,23 +70,19 @@ div[is=product-promos] > div {
   padding-top: 2rem;
 }
 
-div[is=product-promos] > div {
-  max-width: 100rem;
-  margin: 0 auto;
-}
-
 button {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+div[is=product-promos] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 button, label,
 legend {
   font-weight: 500;
-}
-
-form {
-  margin-bottom: 2.4rem;
-  margin-top: 2.4rem;
 }
 
 fieldset {
@@ -442,15 +438,6 @@ td, th {
   padding: 0.75rem 1.5rem 0.75rem 0;
 }
 
-section[is=section] {
-  padding: 3rem 1rem;
-}
-@media screen and (min-width: 700px) {
-  section[is=section] {
-    padding: 3rem 2rem;
-  }
-}
-
 .alternative {
   background-color: hsl(240deg, 25.7%, 93.1%);
 }
@@ -689,6 +676,9 @@ hr {
   margin-right: 0;
 }
 
+.header {
+  padding: 3.2rem 0;
+}
 .header h2, .header h3, .header p {
   margin-left: auto;
   margin-right: auto;

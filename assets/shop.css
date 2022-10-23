@@ -1,6 +1,9 @@
-div[is=shop] {
-  padding: 2.4rem;
+div[is=shop] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
 }
+
 div[is=shop] > div {
   display: grid;
   grid-template-columns: 1fr;

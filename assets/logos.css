@@ -1,20 +1,9 @@
 section[is=logos] > div {
-  max-width: 100rem;
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
-section[is=logos] {
-  padding: 3rem 1rem;
-}
-section[is=logos] > div > :first-child {
-  margin-top: 0;
-}
-section[is=logos] > div > :last-child {
-  margin-bottom: 0;
-}
-section[is=logos] > div > p:last-child {
-  margin-top: 2rem;
-}
 section[is=logos] > div ul {
   grid-gap: 1rem;
   display: grid;
@@ -38,9 +27,6 @@ section[is=logos].no-top-padding {
   padding-top: 0;
 }
 @media screen and (min-width: 400px) {
-  section[is=logos] {
-    padding: 5rem 2rem;
-  }
   section[is=logos] h2,
 section[is=logos] h3,
 section[is=logos] p {

@@ -149,9 +149,6 @@ div[is=page] hr {
   margin: 3.2rem 0 2.4rem 0;
 }
 
-div[is=page] {
-  padding: 3.2rem;
-}
 @media screen and (min-width: 400px) {
   div[is=page] {
     margin-left: auto;

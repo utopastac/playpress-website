@@ -1,19 +1,9 @@
 @import '../assets'
 
 section[is="logos"]
-  padding: 3rem 1rem
 
   > div
     @extend %main-content
-
-    > :first-child 
-      margin-top: 0
-
-    > :last-child 
-      margin-bottom: 0
-
-    > p:last-child 
-      margin-top: 2rem
 
     ul 
       grid-gap: 1rem
@@ -38,7 +28,6 @@ section[is="logos"]
     padding-top: 0
 
   @include min($screen-s)
-    padding: 5rem 2rem
   
     h2,
     h3,

@@ -1,6 +1,7 @@
 footer[is=footer] > div {
-  max-width: 100rem;
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 footer[is=footer] ul:first-of-type > li > a {

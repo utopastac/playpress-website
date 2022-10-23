@@ -2,10 +2,6 @@ div[is=cart] > form > div {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-div[is=cart] {
-  margin-bottom: 5rem;
-  padding: 2.4rem 3.2rem;
-}
 div[is=cart] > p {
   margin-top: 2.5em;
 }

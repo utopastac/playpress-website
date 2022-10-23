@@ -1,11 +1,9 @@
 section[is=intro] > div {
-  max-width: 100rem;
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
-section[is=intro] {
-  padding: 3.2rem;
-}
 section[is=intro].with-image {
   padding-bottom: 2rem;
 }

@@ -7,22 +7,17 @@
 {{ 'collections.css' | asset_url | stylesheet_tag }}
 
 <section is="section">
-  {% if section.settings.title != blank %}
-      <h2>{{ section.settings.title | escape }}</h2>
-  {% endif %}
-  {% if section.settings.text != blank %}
-    <p>{{ section.settings.text }}</p>
-  {% endif %}
+  
+  {% include 'section-header' %}
 
   {% unless section.blocks == empty %}
 
     <div class="collections">
-      <h1>Collections</h1>
       <ul>
-      {% for block in section.blocks %}
-        {% assign collection = collections[block.settings.collection] %}
-        <li>{% include 'collection-promo', collection: collection %}</li>
-      {% endfor %}
+        {% for block in section.blocks %}
+          {% assign collection = collections[block.settings.collection] %}
+          <li>{% include 'collection-promo', collection: collection %}</li>
+        {% endfor %}
       </ul>
     </div>
 

@@ -1,6 +1,7 @@
-.collections {
-  max-width: 100rem;
+.collections ul {
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 .collections ul {

@@ -1,11 +1,9 @@
 section[is=image-with-text] > div {
-  max-width: 100rem;
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
-section[is=image-with-text] {
-  padding: 1.5rem 1rem;
-}
 section[is=image-with-text] > div > div {
   max-width: 40rem;
 }
@@ -21,7 +19,6 @@ section[is=image-with-text].last {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
     place-items: center;
   }
   section[is=image-with-text] > div.swapped > img {

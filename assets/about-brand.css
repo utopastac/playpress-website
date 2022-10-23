@@ -1,10 +1,11 @@
-aside[is=about-brand] > div {
-  max-width: 100rem;
-  margin: 0 auto;
-}
-
 aside[is=about-brand] > div > div {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+aside[is=about-brand] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 aside[is=about-brand] {
@@ -14,7 +15,6 @@ aside[is=about-brand] > div {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  padding: 3rem 1rem 4rem;
 }
 aside[is=about-brand] > div > div {
   grid-gap: 1rem;

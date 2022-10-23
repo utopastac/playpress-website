@@ -1,9 +1,9 @@
 @import '../assets'
 
-div[is="shop"] 
-  padding: units(3)
+div[is="shop"]
 
-  > div 
+  > div
+    @extend %main-content
     display: grid
     grid-template-columns: 1fr
     place-items: flex-start

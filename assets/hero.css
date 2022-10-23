@@ -1,6 +1,7 @@
 section[is=hero] > div {
-  max-width: 100rem;
+  max-width: 140rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 section[is=hero] > div h1 {
@@ -63,7 +64,6 @@ section[is=hero] > div > img {
     grid-column-gap: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 3rem;
     place-items: center;
   }
   section[is=hero] > div img {

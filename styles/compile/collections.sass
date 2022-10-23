@@ -1,11 +1,12 @@
 @import '../assets'
 
 .collections
-  @extend %main-content
 
   ul
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-gap: units(3)
+    @extend %main-content
+    
     li
       list-style: none  

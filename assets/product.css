@@ -5,13 +5,14 @@ main[is=product] > div .description ul li {
   list-style-type: disc;
 }
 
-main[is=product] > div {
-  max-width: 100rem;
-  margin: 0 auto;
-}
-
 main[is=product] > div > form {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+main[is=product] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 main[is=product] > div .description h5, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
@@ -158,9 +159,6 @@ main[is=product] > div .description hr {
   margin: 3.2rem 0 2.4rem 0;
 }
 
-main[is=product] {
-  padding: 3.2rem;
-}
 main[is=product] > div .description {
   margin-bottom: 3.2rem;
 }
