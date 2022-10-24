@@ -4,24 +4,73 @@ footer[is="footer"]
   background-color: $complementary
   color: $on-complementary
   position: relative
+  margin-top: units(8)
 
   > div
     @extend %main-content
 
-  a 
-    color: $on-complementary-link
-    @extend %bold
+  section[is="main-links"]
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    place-items: start
+    grid-gap: units(4)
+    padding: units(4) 0
+
+    div[is="logo"]
+      max-width: units(20)
+      padding: units(1)
+      background: $yolk
+      border-radius: $border-s
     
-  &:visited 
-    color: $on-complementary-visited
-  &:active 
-    color: $on-complementary-active
-  &:focus-visible 
-    color: $on-focus-link
-    &:visited
-      color: $on-focus-visited
-    &:active
-      color: $on-focus-active
+    ul
+      @extend %medium
+      width: 100%
+
+      &[is="main-link-list"]
+        li
+          @extend %body-l
+          a
+            display: inline-block
+            padding: units(0.5) units(1)
+            border-radius: $border-s
+
+            &:hover
+              background: rgba($white, 0.1)
+
+      &:not([is="main-link-list"])
+        li
+          @extend %body-s
+          width: 100%
+
+          a
+            padding: units(0.5) 0
+            opacity: 0.7
+            display: block
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            width: 100%
+
+            &:hover
+              opacity: 1
+
+    h2
+      @extend %heading-m
+      color: white
+      margin-bottom: units(1)
+
+  a 
+    color: white //$on-complementary-link    
+    &:visited 
+      color: white//$on-complementary-visited
+    &:active 
+      color: white//$on-complementary-active
+    &:focus-visible 
+      color: white//$on-focus-link
+      &:visited
+        color: white//$on-focus-visited
+      &:active
+        color: white//$on-focus-active
 
   &:after 
     background-color: $pete
@@ -33,33 +82,31 @@ footer[is="footer"]
     box-shadow: 0 2px 0 $charcoal-14
     content: ""
     display: block
-    height: 4rem
+    height: 8rem
     left: 50%
     position: absolute
-    top: -2rem
+    top: -4rem
     transform: translateX(-50%)
-    width: 4rem
+    width: 8rem
     z-index: 2
 
-  > * 
-    z-index: 2
+  section[is="meta"]
+    padding-top: units(4)
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+    @extend %body-xs
 
-  ul 
-    list-style: none
-    padding-left: 0
+    ul
+      list-style: none
+      padding-left: 0
 
-    li 
-      padding-bottom: 0.75rem
-      padding-top: 0.75rem
+      li 
+        padding-bottom: 0.75rem
 
-    &:first-of-type > li > a 
-      @extend %medium
-
-    &:last-of-type > li > a 
-      align-items: center
-      display: flex
-      > svg
-        margin-right: 0.5rem
+      &:last-of-type > li > a 
+        align-items: center
+        display: flex
+        > svg
+          margin-right: 0.5rem
   
 
   p:last-of-type 
@@ -71,17 +118,18 @@ footer[is="footer"]
 
   @include min($screen-s)
     padding: 2rem
-  
-    ul 
-      display: flex
-  
-      li 
-        margin-bottom: 0.5rem
-        margin-right: 1.5rem
+
+    section[is="meta"]
+      ul
+        display: flex
+    
+        li 
+          margin-bottom: 0.5rem
+          margin-right: 1.5rem
   
 
   @include min($screen-m)
-    > div
+    section[is="meta"]
       display: grid
       grid-template-columns: 2fr 1fr
   

@@ -23,7 +23,7 @@ div[is=promos] > div.four {
     grid-template-columns: repeat(3, 1fr);
   }
   div[is=promos] > div.four {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1080px) {

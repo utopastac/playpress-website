@@ -1,9 +1,11 @@
-{% if section.settings.title != blank %}
-  <header class="header">
-    <h2>{{ section.settings.title | escape }}</h2>
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
 
-    {% if section.settings.text != blank %}
-        <p>{{ section.settings.text | escape }}</p>
+{% if title != blank %}
+  <header is="section-header">
+    <h2>{{ title | escape }}</h2>
+
+    {% if text != blank %}
+        <p>{{ text | escape }}</p>
     {% endif %}
   </header>
 {% endif %}

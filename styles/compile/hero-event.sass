@@ -6,6 +6,24 @@ section[is="hero-event"]
 
   > div
     @extend %main-content
-    padding: units(10)
     min-height: 50vh
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    h1
+      @extend %heading-xl
+      color: white
+
+    p
+      @extend %body-m
+      margin-bottom: units(4)
+
+    div[is="hero-content"]
+      background: $black
+      color: white
+      padding: units(4)
+      border-radius: $border-m
+      flex: 1
+      max-width: size(480)
   

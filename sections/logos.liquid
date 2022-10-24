@@ -2,7 +2,7 @@
 
 <section is="logos" class="{% if section.settings.show_colour == true %}alternative{% endif %}{% if section.settings.no_top_padding == true %} no-top-padding{% endif %}">
   
-  {% include 'section-header' %}
+  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
 
   {% comment %} {% if section.settings.title_secondary != blank %}
     <h3>{{ section.settings.title_secondary | escape }}</h3>

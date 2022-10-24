@@ -4,6 +4,46 @@ section[is=hero-event] > div {
   padding: 0 2.4rem;
 }
 
+section[is=hero-event] > div h1 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+section[is=hero-event] > div p {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+section[is=hero-event] > div p {
+  font-weight: 400;
+}
+
+section[is=hero-event] > div h1 {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=hero-event] > div h1 {
+    font-size: 4.8rem;
+    line-height: 115%;
+    letter-spacing: -0.96px;
+  }
+}
+
+section[is=hero-event] > div p {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=hero-event] > div p {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 section[is=hero-event] {
   position: relative;
   background-size: cover;
@@ -12,6 +52,22 @@ section[is=hero-event] {
   background-position: center center;
 }
 section[is=hero-event] > div {
-  padding: 8rem;
   min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+section[is=hero-event] > div h1 {
+  color: white;
+}
+section[is=hero-event] > div p {
+  margin-bottom: 3.2rem;
+}
+section[is=hero-event] > div div[is=hero-content] {
+  background: #0A122A;
+  color: white;
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  flex: 1;
+  max-width: 48rem;
 }

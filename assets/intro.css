@@ -4,8 +4,51 @@ section[is=intro] > div {
   padding: 0 2.4rem;
 }
 
+section[is=intro] h1 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+section[is=intro] p {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+section[is=intro] p {
+  font-weight: 400;
+}
+
+section[is=intro] h1 {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=intro] h1 {
+    font-size: 4.8rem;
+    line-height: 115%;
+    letter-spacing: -0.96px;
+  }
+}
+
+section[is=intro] p {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=intro] p {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 section[is=intro].with-image {
   padding-bottom: 2rem;
+}
+section[is=intro] p {
+  margin-top: 1.6rem;
 }
 @media screen and (min-width: 400px) {
   section[is=intro] {
@@ -14,7 +57,7 @@ section[is=intro].with-image {
   section[is=intro] > div > div {
     margin-left: auto;
     margin-right: auto;
-    max-width: 60rem;
+    max-width: 48rem;
     text-align: center;
   }
   section[is=intro] > div > div h1, section[is=intro] > div > div p {
@@ -31,12 +74,8 @@ section[is=intro].with-image {
   }
   section[is=intro].with-image > div > div {
     grid-column: 2;
-    max-width: 30rem;
+    max-width: 48rem;
     text-align: left;
-  }
-  section[is=intro].with-image > div > div > h1 {
-    margin-bottom: 0;
-    margin-top: 0;
   }
   section[is=intro].with-image > div > img {
     grid-column: 1;

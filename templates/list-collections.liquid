@@ -9,7 +9,7 @@
     </div>
   </div>
   <section>
-  <h2>Our best-selling sets</h2>
+    <h2>Our best-selling sets</h2>
     <div is="product-promos">
       <div class="four">
         {% for product in collections['best-sellers'].products limit: 2 %}
@@ -18,7 +18,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section is="meta">
     <h2>Our other excellent sets</h2>
     <div is="product-promos">
       <div class="four">

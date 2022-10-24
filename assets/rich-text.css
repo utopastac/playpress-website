@@ -1,23 +1,164 @@
+section[is=rich-text] ul {
+  padding-left: 3.2rem;
+}
+section[is=rich-text] ul li {
+  list-style-type: disc;
+}
+
+section[is=rich-text] h5, section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .heading-s, section[is=rich-text] h2, section[is=rich-text] .heading-m, section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+section[is=rich-text] .body-2, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+section[is=rich-text] .body-2, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+  font-weight: 400;
+}
+
+section[is=rich-text] strong, section[is=rich-text] b, section[is=rich-text] .button-text {
+  font-weight: 700;
+}
+
+section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
+    font-size: 4.8rem;
+    line-height: 115%;
+    letter-spacing: -0.96px;
+  }
+}
+
+section[is=rich-text] h2, section[is=rich-text] .heading-m {
+  font-size: 2.4rem;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] h2, section[is=rich-text] .heading-m {
+    font-size: 2.8rem;
+    line-height: 115%;
+    letter-spacing: -0.56px;
+  }
+}
+
+section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .heading-s {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: -0.34px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .heading-s {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+}
+
+section[is=rich-text] h5 {
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: -0.3px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] h5 {
+    font-size: 1.6rem;
+    line-height: 115%;
+    letter-spacing: -0.32px;
+  }
+}
+
+section[is=rich-text] h4, section[is=rich-text] .body-0 {
+  font-size: 2.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] h4, section[is=rich-text] .body-0 {
+    font-size: 2.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=rich-text] .body-2 {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=rich-text] .body-2 {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=rich-text] a {
+  text-decoration: underline;
+}
+section[is=rich-text] p + h2, section[is=rich-text] p + h3, section[is=rich-text] ul + h2, section[is=rich-text] ul + h3 {
+  margin-top: 3.2rem;
+}
+section[is=rich-text] p + h4, section[is=rich-text] p + h5, section[is=rich-text] ul + h4, section[is=rich-text] ul + h5 {
+  margin-top: 2.4rem;
+}
+section[is=rich-text] blockquote {
+  margin-top: 2.4rem;
+  padding: 2.4rem 0 0 0;
+}
+section[is=rich-text] h1, section[is=rich-text] .heading-l {
+  margin-bottom: 3.2rem;
+}
+section[is=rich-text] h2, section[is=rich-text] .heading-m {
+  margin-bottom: 2.4rem;
+}
+section[is=rich-text] h3, section[is=rich-text] .heading-s {
+  margin-bottom: 0.8rem;
+}
+section[is=rich-text] h4 {
+  margin-bottom: 0.8rem;
+}
+section[is=rich-text] h6 {
+  margin-bottom: 0.8rem;
+}
+section[is=rich-text] hr {
+  height: 1;
+  border: none;
+  background: #DDE2E8;
+  margin: 3.2rem 0 2.4rem 0;
+}
+
 section[is=rich-text] {
-  margin-left: -1rem;
-  margin-right: -1rem;
   padding: 3rem 1rem;
-}
-section[is=rich-text] > :first-child {
-  margin-top: 0;
-}
-section[is=rich-text] > :last-child {
-  margin-bottom: 0;
 }
 section[is=rich-text] h1, section[is=rich-text] h2, section[is=rich-text] h3, section[is=rich-text] ol, section[is=rich-text] p, section[is=rich-text] ul {
   margin-left: auto;
   margin-right: auto;
-  max-width: 40rem;
+  max-width: 48rem;
 }
 @media screen and (min-width: 400px) {
   section[is=rich-text] {
-    margin-left: -2rem;
-    margin-right: -2rem;
     padding: 5rem 2rem;
     text-align: center;
   }

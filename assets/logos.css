@@ -26,15 +26,3 @@ section[is=logos] > div ul li span {
 section[is=logos].no-top-padding {
   padding-top: 0;
 }
-@media screen and (min-width: 400px) {
-  section[is=logos] h2,
-section[is=logos] h3,
-section[is=logos] p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  section[is=logos] P:last-child {
-    margin-top: 3rem;
-  }
-}

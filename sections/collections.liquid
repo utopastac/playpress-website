@@ -8,7 +8,7 @@
 
 <section is="section">
   
-  {% include 'section-header' %}
+  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
 
   {% unless section.blocks == empty %}
 

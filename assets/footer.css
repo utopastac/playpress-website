@@ -4,36 +4,142 @@ footer[is=footer] > div {
   padding: 0 2.4rem;
 }
 
-footer[is=footer] ul:first-of-type > li > a {
+footer[is=footer] section[is=main-links] h2 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+  font-weight: 400;
+}
+
+footer[is=footer] section[is=main-links] ul {
   font-weight: 500;
 }
 
-footer[is=footer] a {
-  font-weight: 700;
+footer[is=footer] section[is=main-links] h2 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: -0.34px;
+}
+@media screen and (min-width: 1200px) {
+  footer[is=footer] section[is=main-links] h2 {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+}
+
+footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+  font-size: 2.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+    font-size: 2.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+footer[is=footer] section[is=meta] {
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  footer[is=footer] section[is=meta] {
+    font-size: 1.4rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
 }
 
 footer[is=footer] {
   background-color: hsl(230deg, 51.6%, 31.6%);
   color: hsl(0deg, 0%, 97.3%);
   position: relative;
+  margin-top: 6.4rem;
+}
+footer[is=footer] section[is=main-links] {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  place-items: start;
+  grid-gap: 3.2rem;
+  padding: 3.2rem 0;
+}
+footer[is=footer] section[is=main-links] div[is=logo] {
+  max-width: 16rem;
+  padding: 0.8rem;
+  background: #FFC700;
+  border-radius: 0.8rem;
+}
+footer[is=footer] section[is=main-links] ul {
+  width: 100%;
+}
+footer[is=footer] section[is=main-links] ul[is=main-link-list] li a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+}
+footer[is=footer] section[is=main-links] ul[is=main-link-list] li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+  width: 100%;
+}
+footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li a {
+  padding: 0.4rem 0;
+  opacity: 0.7;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li a:hover {
+  opacity: 1;
+}
+footer[is=footer] section[is=main-links] h2 {
+  color: white;
+  margin-bottom: 0.8rem;
 }
 footer[is=footer] a {
-  color: hsl(215deg, 83.9%, 75.7%);
+  color: white;
 }
-footer[is=footer]:visited {
-  color: hsl(282deg, 42.9%, 76.7%);
+footer[is=footer] a:visited {
+  color: white;
 }
-footer[is=footer]:active {
-  color: hsl(350deg, 67.6%, 78.2%);
+footer[is=footer] a:active {
+  color: white;
 }
-footer[is=footer]:focus-visible {
-  color: hsl(209deg, 61.2%, 39.4%);
+footer[is=footer] a:focus-visible {
+  color: white;
 }
-footer[is=footer]:focus-visible:visited {
-  color: hsl(281deg, 24.7%, 43.7%);
+footer[is=footer] a:focus-visible:visited {
+  color: white;
 }
-footer[is=footer]:focus-visible:active {
-  color: hsl(340deg, 68.5%, 43.5%);
+footer[is=footer] a:focus-visible:active {
+  color: white;
 }
 footer[is=footer]:after {
   background-color: hsl(236deg, 25.9%, 47.6%);
@@ -45,30 +151,30 @@ footer[is=footer]:after {
   box-shadow: 0 2px 0 0 0% 16.9%;
   content: "";
   display: block;
-  height: 4rem;
+  height: 8rem;
   left: 50%;
   position: absolute;
-  top: -2rem;
+  top: -4rem;
   transform: translateX(-50%);
-  width: 4rem;
+  width: 8rem;
   z-index: 2;
 }
-footer[is=footer] > * {
-  z-index: 2;
+footer[is=footer] section[is=meta] {
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-footer[is=footer] ul {
+footer[is=footer] section[is=meta] ul {
   list-style: none;
   padding-left: 0;
 }
-footer[is=footer] ul li {
+footer[is=footer] section[is=meta] ul li {
   padding-bottom: 0.75rem;
-  padding-top: 0.75rem;
 }
-footer[is=footer] ul:last-of-type > li > a {
+footer[is=footer] section[is=meta] ul:last-of-type > li > a {
   align-items: center;
   display: flex;
 }
-footer[is=footer] ul:last-of-type > li > a > svg {
+footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
   margin-right: 0.5rem;
 }
 footer[is=footer] p:last-of-type {
@@ -83,16 +189,16 @@ footer[is=footer] p:last-of-type > small {
   footer[is=footer] {
     padding: 2rem;
   }
-  footer[is=footer] ul {
+  footer[is=footer] section[is=meta] ul {
     display: flex;
   }
-  footer[is=footer] ul li {
+  footer[is=footer] section[is=meta] ul li {
     margin-bottom: 0.5rem;
     margin-right: 1.5rem;
   }
 }
 @media screen and (min-width: 700px) {
-  footer[is=footer] > div {
+  footer[is=footer] section[is=meta] {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }

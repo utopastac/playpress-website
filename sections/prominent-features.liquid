@@ -2,7 +2,7 @@
 
 <section is="section" class="alternative">
   
-  {% include 'section-header' %}
+  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
 
   {% case section.settings.grid %}
     {% when 2 %}
