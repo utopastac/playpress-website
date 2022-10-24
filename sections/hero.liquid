@@ -14,14 +14,7 @@
       />
     {%- endif -%}
 
-    <div>
-      {%- if section.settings.heading != blank -%}
-        <h1>{{ section.settings.heading | escape }}</h1>
-      {%- endif -%}
-      {%- if section.settings.text != blank -%}
-        <p is="lede">{{ section.settings.text }}</p>
-      {%- endif -%}
-    </div>
+    {% render 'hero-content', section: section %}
   </div>
 </section>
 
@@ -40,6 +33,16 @@
       "type": "text",
       "label": "Text",
       "default": "Add descriptive text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
     },
     {
       "id": "image",

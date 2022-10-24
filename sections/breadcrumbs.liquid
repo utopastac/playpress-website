@@ -6,10 +6,31 @@
     <li>
       <a href="/">Home</a>
     </li>
-    {%- case t -%} {%- when 'product' -%}
-    <li>
-      <a href="/products/" aria-current="page">Shop</a>
-    </li>
+    {%- case t -%}
+      {%- when 'product' -%}
+        <li>
+          <a href="/products/" aria-current="page">Shop</a>
+        </li>
+        <li class="active">
+          <p><span>{{ product.title }}<span></p>
+        </li>
+      {%- when 'collection' and collection.handle -%}
+        {%- if current_tags -%}
+          <li>
+            <a href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+          </li>
+          <li class="active">
+            <p><span>{{ current_tags | join: " + " }}<span></p>
+          </li>
+        {%- else -%}
+          <li class="active">
+            <p><span>{{ collection.title }}<span></p>
+          </li>
+        {%- endif -%}
+      {%- else -%}
+        <li class="active">
+          <p><span>{{ page.title }}<span></p>
+        </li>
     {%- endcase -%}
   </ul>
 {%- endunless -%}

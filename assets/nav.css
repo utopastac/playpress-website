@@ -1,3 +1,25 @@
+nav[is=menu] > ul > li > a {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+nav[is=menu] > ul > li > a {
+  font-weight: 400;
+}
+
+nav[is=menu] > ul > li > a {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  nav[is=menu] > ul > li > a {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 nav[is=menu] {
   height: 100%;
 }
@@ -42,9 +64,6 @@ nav[is=menu] > ul > li.on > a:hover {
   background-color: hsl(230deg, 51.6%, 31.6%);
 }
 @media screen and (min-width: 400px) {
-  nav[is=menu] > ul > li > a {
-    font-size: 110%;
-  }
   nav[is=menu] > ul > li.on {
     margin-left: 1rem;
     margin-right: 1rem;

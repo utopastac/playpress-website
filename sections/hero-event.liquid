@@ -1,12 +1,8 @@
 {{ 'hero-event.css' | asset_url | stylesheet_tag }}
 
-<section is="hero-event">
-  <div style="background-image: {{ section.settings.image | image_url: 'master' }}">
-    <div>
-      <h1>{{ section.settings.heading | escape }}</h1>
-      <p is="lede">{{ section.settings.text }}</p>
-      <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
-    </div>
+<section is="hero-event" style="background-image: url({{ section.settings.image | img_url: 'master' }})">
+  <div>
+    {% render 'hero-content', section: section %}
   </div>
 </section>
 

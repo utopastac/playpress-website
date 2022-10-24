@@ -28,6 +28,7 @@ nav[is="menu"]
         font-weight: 700
         padding: 0.5rem 1rem
         text-decoration: none
+        @extend %body-s
 
         &:hover 
           background-color: $complementary-hover
@@ -46,7 +47,7 @@ nav[is="menu"]
 
   @include min($screen-s)
     > ul > li > a 
-      font-size: 110%
+      // font-size: 110%
     > ul > li.on 
       margin-left: 1rem
       margin-right: 1rem

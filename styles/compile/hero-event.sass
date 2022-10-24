@@ -2,8 +2,10 @@
   
 section[is="hero-event"]
   position: relative
+  @include cover-background(url(../hello.png))
 
   > div
     @extend %main-content
-    @include cover-background(url(../hello.png))
+    padding: units(10)
+    min-height: 50vh
   

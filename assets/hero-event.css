@@ -6,10 +6,12 @@ section[is=hero-event] > div {
 
 section[is=hero-event] {
   position: relative;
-}
-section[is=hero-event] > div {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../hello.png);
   background-position: center center;
+}
+section[is=hero-event] > div {
+  padding: 8rem;
+  min-height: 50vh;
 }

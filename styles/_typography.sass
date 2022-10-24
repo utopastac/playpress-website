@@ -18,16 +18,16 @@ $font-heading-weight: $font-bold-weight
 // TYPOGRAPHY
 //
 $type-size-xl: 48 
-$type-size-l: 32 
-$type-size-m: 24 
-$type-size-s: 20
-$type-size-xs: 18
+$type-size-l: 28 
+$type-size-m: 18 
+$type-size-s: 16
+$type-size-xs: 14
 //
 $type-size-xl-mobile: 32 
 $type-size-l-mobile: 24 
-$type-size-m-mobile: 20
-$type-size-s-mobile: 18
-$type-size-xs-mobile: 16
+$type-size-m-mobile: 17
+$type-size-s-mobile: 15
+$type-size-xs-mobile: 12
 //
 $heading-line-height: 115%
 $body-line-height: 140%
@@ -68,7 +68,7 @@ $all-caps-letter-spacing: 0.1
 //
 //
 @mixin fontSize($size, $line, $spacing)
-  font-size: $size / 20 + rem
+  font-size: $size / 10 + rem
   line-height: $line
   letter-spacing: $size * $spacing + px
 //

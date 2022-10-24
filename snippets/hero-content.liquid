@@ -1,0 +1,7 @@
+<div>
+  <h1>{{ section.settings.heading | escape }}</h1>
+  <p is="lede">{{ section.settings.text }}</p>
+  {%- if section.settings.link_url != blank -%}
+    <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
+  {%- endif -%}
+</div>
