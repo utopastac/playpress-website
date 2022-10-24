@@ -8,7 +8,7 @@ section[is=logos] > div ul {
   grid-gap: 1rem;
   display: grid;
   grid-auto-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   list-style: none;
   margin-top: 2rem;
   padding-left: 0;

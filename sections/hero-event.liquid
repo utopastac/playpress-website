@@ -1,0 +1,51 @@
+{{ 'hero-event.css' | asset_url | stylesheet_tag }}
+
+<section is="hero-event">
+  <div style="background-image: {{ section.settings.image | image_url: 'master' }}">
+    <div>
+      <h1>{{ section.settings.heading | escape }}</h1>
+      <p is="lede">{{ section.settings.text }}</p>
+      <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading",
+    "default": "Add a title"
+    },
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Text",
+      "default": "Add descriptive text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

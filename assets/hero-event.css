@@ -1,0 +1,15 @@
+section[is=hero-event] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+section[is=hero-event] {
+  position: relative;
+}
+section[is=hero-event] > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../hello.png);
+  background-position: center center;
+}
