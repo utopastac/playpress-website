@@ -92,6 +92,7 @@
           "link_text": "Find out more about our playsets",
           "link_url": "shopify:\/\/pages\/about",
           "image": "shopify:\/\/shop_images\/L0005_The_Gruffalo_Pop-out_Playset_Child_Playing_At_Table.jpg",
+          "show_signpost_link": false,
           "layout": "left",
           "show_colour": true,
           "last_on_page": true
@@ -305,9 +306,20 @@
         "settings": {
           "title": ""
         }
+      },
+      "9797ff2b-339d-406b-9af1-f25ccacd1731": {
+        "type": "hero-event",
+        "settings": {
+          "heading": "Add a title",
+          "text": "Add descriptive text",
+          "link_text": "Click here",
+          "link_url": "shopify:\/\/collections\/stocking-fillers",
+          "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg"
+        }
       }
     },
     "content_for_index": [
+      "9797ff2b-339d-406b-9af1-f25ccacd1731",
       "16237663901d8f6c9b",
       "1623767875c4b2fbf3",
       "1627677460135d8c42",
