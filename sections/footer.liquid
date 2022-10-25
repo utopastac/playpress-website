@@ -12,18 +12,35 @@
         {% endfor %}
       </ul>
       <ul>
-        <h2>Our best-selling sets</h2>
-        {% for product in collections['best-sellers'].products limit: 2 %}
-          <li>
-            <a href="{{ product.url }}">{{ product.title }}</a>
-          </li>
+        <h2>Our collections</h2>
+        {% for collection in collections %}
+          {% if collection.products_count > 0 %}
+            <li>
+              <a is="collection-link" href="{{ collection.url }}">
+                <p>{{ collection.title }}</p>
+                <span>{{ collection.products_count }} products</span>
+              </a>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
       <ul>
-        <h2>Our collections</h2>
-        {% for collection in collections %}
+        <h2>Our best-selling sets</h2>
+        {% for product in collections['best-sellers'].products limit: 2 %}
           <li>
-            <a href="{{ collection.url }}">{{ collection.title }}</a>
+            <a is="product-link" href="{{ product.url }}">
+              <img
+                alt="{{ product.featured_image.alt }}"
+                src="{{ product.featured_media | img_url: '400x' }}"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+              <div>
+                <p>{{ product.title }}</p>
+                <span>{{ product.price | money }}</span>
+              </div>
+            </a>
           </li>
         {% endfor %}
       </ul>

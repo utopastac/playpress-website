@@ -9,17 +9,21 @@ footer[is=footer] section[is=main-links] h2 {
   font-weight: 700;
 }
 
-footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   font-weight: 400;
 }
 
-footer[is=footer] section[is=main-links] ul {
+footer[is=footer] section[is=main-links] > ul {
   font-weight: 500;
+}
+
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] p, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] p {
+  font-weight: 700;
 }
 
 footer[is=footer] section[is=main-links] h2 {
@@ -35,39 +39,39 @@ footer[is=footer] section[is=main-links] h2 {
   }
 }
 
-footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   font-size: 2.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  footer[is=footer] section[is=main-links] ul[is=main-link-list] li {
+  footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
     font-size: 2.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+  footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-footer[is=footer] section[is=meta] {
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
   font-size: 1.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  footer[is=footer] section[is=meta] {
+  footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
     font-size: 1.4rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -79,13 +83,14 @@ footer[is=footer] {
   color: hsl(0deg, 0%, 97.3%);
   position: relative;
   margin-top: 6.4rem;
+  border-top: 12px solid #FFC700;
 }
 footer[is=footer] section[is=main-links] {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr repeat(2, minmax(0, 2fr));
   place-items: start;
   grid-gap: 3.2rem;
-  padding: 3.2rem 0;
+  padding: 4.8rem 0;
 }
 footer[is=footer] section[is=main-links] div[is=logo] {
   max-width: 16rem;
@@ -93,31 +98,61 @@ footer[is=footer] section[is=main-links] div[is=logo] {
   background: #FFC700;
   border-radius: 0.8rem;
 }
-footer[is=footer] section[is=main-links] ul {
+footer[is=footer] section[is=main-links] > ul {
   width: 100%;
 }
-footer[is=footer] section[is=main-links] ul[is=main-link-list] li a {
+footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a {
   display: inline-block;
   padding: 0.4rem 0.8rem;
   border-radius: 0.8rem;
 }
-footer[is=footer] section[is=main-links] ul[is=main-link-list] li a:hover {
+footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
   width: 100%;
 }
-footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li a {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a {
   padding: 0.4rem 0;
   opacity: 0.7;
   display: block;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a:hover {
+  opacity: 1;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] p {
+  width: 100%;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
+  display: block;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] img {
+  width: 30%;
+  max-width: 10rem;
+  height: auto;
+  border-radius: 0.8rem;
+  margin-right: 0.8rem;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] {
+  display: flex;
+  justify-content: space-between;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  flex: 1;
 }
-footer[is=footer] section[is=main-links] ul:not([is=main-link-list]) li a:hover {
-  opacity: 1;
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.1);
 }
 footer[is=footer] section[is=main-links] h2 {
   color: white;
@@ -142,13 +177,12 @@ footer[is=footer] a:focus-visible:active {
   color: white;
 }
 footer[is=footer]:after {
-  background-color: hsl(236deg, 25.9%, 47.6%);
+  background-color: #1b2454;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='46' fill='none'%3E%3Cpath d='M22 34h4c.4 0 .2.4.2.4-1 3.8-4.1 3.8-4.1 3.8s-3.3 0-4.2-3.8l.2-.4h4z' fill='%23fff'/%3E%3Cpath d='M33.7 39.2h-.2s-3.1 3.3-11.6 3.3c-8.3 0-11.6-3-11.6-3l-.3-.3s-7.6-5.2-6.8-19c0-.3 0-1.7.6-3.8 3 1 20.1 7.9 25-6.2 0 0 1.8 9.5 11 6.2l.7 3.7c.7 13.7-6.6 19-6.8 19.1zM43 20S42.2.6 22 .6C1.3.6.7 20 .7 20c-1 14.6 6.6 20.8 7.7 21.4.8.6 4.5 3.7 13.5 3.7 8.9 0 12.4-3 13.3-3.7 1-.8 8.7-6.8 7.8-21.4z' fill='%23fff'/%3E%3Cpath d='M15 26.4c-2-2.1-4-.3-4.1 0l-1-1.3c1-1 3.7-2.5 6.2 0l-1 1.3zm18 0c-1.8-2.1-3.7-.3-3.9 0L28 25c1.2-1 4-2.5 6.4 0l-1.2 1.3z' fill='%23fff'/%3E%3C/svg%3E");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 60%;
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 0% 16.9%;
   content: "";
   display: block;
   height: 8rem;
@@ -177,17 +211,9 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a {
 footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
   margin-right: 0.5rem;
 }
-footer[is=footer] p:last-of-type {
-  margin-top: 2em;
-  z-index: 2;
-}
-footer[is=footer] p:last-of-type > small {
-  display: block;
-  margin-top: 1em;
-}
 @media screen and (min-width: 400px) {
   footer[is=footer] {
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
   }
   footer[is=footer] section[is=meta] ul {
     display: flex;
