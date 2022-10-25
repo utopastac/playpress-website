@@ -16,7 +16,7 @@
       <ul>
         {% for block in section.blocks %}
           {% assign collection = collections[block.settings.collection] %}
-          <li>{% include 'collection-promo', collection: collection %}</li>
+          <li>{% render 'collection-promo', collection: collection %}</li>
         {% endfor %}
       </ul>
     </div>

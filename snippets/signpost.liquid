@@ -1,7 +1,10 @@
+{{ 'signpost.css' | asset_url | stylesheet_tag }}
+
 {% if section.settings.show_signpost_link %}
-  <p>
-    <a is="signpost" href="{{ section.settings.link_url }}">
-      {{ section.settings.link_text }}</a>
-  </p>
+  <div is="signpost">
+    <a is="button" href="{{ section.settings.link_url }}">
+        {{ section.settings.link_text }}
+    </a>
+  </div>
 {% endif %}
 {% comment %} aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}" {% endcomment %}

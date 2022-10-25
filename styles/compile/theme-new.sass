@@ -127,45 +127,6 @@ div[is="error"]
       font-weight: 400
       padding: 0 0.5rem
 
-a[is="signpost"] 
-  display: inline-block
-  font-size: 1.17em
-  font-weight: 700
-  padding-left: 2.25rem
-  padding-top: 0.125rem
-  margin-top: units(4)
-  position: relative
-  text-decoration: none
-
-  &:hover 
-    text-decoration: underline
-
-  &:after 
-    border: 2px solid
-    border-radius: 0.25rem
-    content: ""
-    height: 1.25rem
-    left: 0
-    position: absolute
-    top: 0.25rem
-    width: 1.25rem
-
-  &:before 
-    background-color: currentColor
-    border: 1px solid
-    -webkit-clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
-    clip-path: polygon(0 3%, 2% 0, 22% 0, 30% 2%, 100% 48%, 100% 52%, 30% 98%, 22% 100%, 2% 100%, 0 97%, 70% 52%, 70% 48%)
-    content: ""
-    display: inline-block
-    height: 0.75rem
-    left: 0.5rem
-    line-height: 1
-    margin-right: 0.5rem
-    position: absolute
-    text-decoration: none
-    top: calc(0.5rem + 1px)
-    width: 0.5rem
-
 a[is="skip"] 
   color:$on-focus
   display: block
@@ -335,8 +296,16 @@ a[is="button"]
   align-items: center
   justify-content: center
   @extend %button-l
-  border-radius: 500px
+  border-radius: $border-m
   padding: 0 units(4)
   color: white
   background-color: $complementary
   height: units(7)
+  box-shadow: 2px 4px 0 0 $accent
+
+  &:hover
+    background-color: lighten($complementary, 5%)
+
+  &:active
+    box-shadow: 1px 2px 0 0 $accent
+    background-color: darken($complementary, 5%)

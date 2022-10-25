@@ -18,16 +18,16 @@
     <div is="features">
       <div class="{{ grid_row }}">
         {% for block in section.blocks %}
-          {% include 'feature', block: block %}
+          {% render 'feature', block: block %}
         {% endfor %}
 
         {% if section.blocks.size == 0 %}
-          {% include 'no-blocks' %}
+          {% render 'no-blocks' %}
         {% endif %}
       </div>
     </div>
 
-    {% include 'signpost', section: section %}
+    {% render 'signpost', section: section %}
   
 </section>
 

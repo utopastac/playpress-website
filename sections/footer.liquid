@@ -3,7 +3,15 @@
 <footer is="footer" role="contentinfo">
   <div>
     <section is="main-links">
-      <div is="logo"><img src="{{ 'logo-no-r.svg' | asset_url }}"  alt="" /></div>
+      <div is="logo">
+        <img 
+          src="{{ 'logo-no-r.svg' | asset_url }}"
+          alt=""
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+      </div>
       <ul is="main-link-list">
         {% for link in linklists.main-menu.links %}
             <li>
@@ -26,7 +34,7 @@
       </ul>
       <ul>
         <h2>Our best-selling sets</h2>
-        {% for product in collections['best-sellers'].products limit: 2 %}
+        {% for product in collections['best-sellers'].products limit: 5 %}
           <li>
             <a is="product-link" href="{{ product.url }}">
               <img

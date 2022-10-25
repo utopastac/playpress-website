@@ -20,12 +20,12 @@
     <div is="product-promos">
       <div class="{{ grid_row }}">
         {% for product in collection.products limit: product_limit %}
-            {% include 'product-promo', product: product %}
+            {% render 'product-promo', product: product %}
         {% endfor %}
       </div>
     </div>
 
-  {% include 'signpost', section: section %}
+  {% render 'signpost', section: section %}
 
 </section>
 
