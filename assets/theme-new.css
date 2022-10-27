@@ -74,7 +74,7 @@ button {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-div[is=product-promos] > div {
+.main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 2.4rem;
@@ -409,7 +409,7 @@ button {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-div[is=product-promos] > div {
+.main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 2.4rem;

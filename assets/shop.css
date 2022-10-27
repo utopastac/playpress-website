@@ -1,7 +1,7 @@
 div[is=shop] div[is=delivery-container] {
   padding: 0 2.4rem;
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 0 auto 1.6rem auto;
 }
 @media screen and (min-width: 400px) {
   div[is=shop] > section {

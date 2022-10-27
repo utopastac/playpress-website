@@ -3,9 +3,14 @@
 <div is="shop">
   {% render 'section-header',
     title: 'Shop our playsets',
-    text: 'Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!'
+    text: 'Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!',
+    large: true
   %}
-  <div is='delivery-container'>{% render 'delivery' %}</div>
+  
+  <div class="main-content">
+    <div is='delivery-container'>{% render 'delivery' %}</div>
+    {% render 'universal-features' %}
+  </div>
   
   <section>
     {% render 'section-header', title: 'Our best-selling sets' %}

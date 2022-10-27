@@ -21,6 +21,7 @@ div[is="delivery"]
 
       td
         padding: units(1) 0
+        border-color: rgba($white, 0.3)
 
       td:last-child
         text-align: right
@@ -32,10 +33,13 @@ div[is="delivery"]
   h3, h4, h5
     color: white
 
-  p 
+  > p 
     display: flex
     margin-bottom: 0
+    justify-content: center
+    align-items: center
     @extend %body-s
+    user-select: none
 
     svg 
       margin-right: 0.5rem
@@ -47,5 +51,7 @@ div[is="delivery"]
     div[is="delivery-content"]
       visibility: visible
       height: auto
+      border-top: 1px solid rgba($white, 0.3)
+      padding-top: units(2)
       margin-top: units(2)
   

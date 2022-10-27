@@ -1,7 +1,7 @@
 {{ 'section-header.css' | asset_url | stylesheet_tag }}
 
 {% if title != blank %}
-  <header is="section-header">
+  <header is="section-header" class="{% if large == true %}large{% endif %}">
     <h2>{{ title | escape }}</h2>
 
     {% if text != blank %}

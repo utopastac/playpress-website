@@ -10,12 +10,12 @@ div[is=delivery] h5, div[is=delivery] h6, div[is=delivery] h3, div[is=delivery] 
   font-weight: 700;
 }
 
-div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li, div[is=delivery] .body-1, div[is=delivery] .button-text, div[is=delivery] h4, div[is=delivery] .body-0 {
+div[is=delivery] > p, div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li, div[is=delivery] .body-1, div[is=delivery] .button-text, div[is=delivery] h4, div[is=delivery] .body-0 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li, div[is=delivery] .body-1, div[is=delivery] .button-text, div[is=delivery] h4, div[is=delivery] .body-0 {
+div[is=delivery] > p, div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li, div[is=delivery] .body-1, div[is=delivery] .button-text, div[is=delivery] h4, div[is=delivery] .body-0 {
   font-weight: 400;
 }
 
@@ -101,13 +101,13 @@ div[is=delivery] .body-1, div[is=delivery] .button-text {
   }
 }
 
-div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li {
+div[is=delivery] > p, div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li {
+  div[is=delivery] > p, div[is=delivery], div[is=delivery] .body-2, div[is=delivery] p, div[is=delivery] ul li {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -173,6 +173,7 @@ div[is=delivery] div[is=delivery-content] table {
 }
 div[is=delivery] div[is=delivery-content] table td {
   padding: 0.8rem 0;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 div[is=delivery] div[is=delivery-content] table td:last-child {
   text-align: right;
@@ -183,11 +184,14 @@ div[is=delivery] div[is=delivery-content] table tr:last-child td {
 div[is=delivery] h3, div[is=delivery] h4, div[is=delivery] h5 {
   color: white;
 }
-div[is=delivery] p {
+div[is=delivery] > p {
   display: flex;
   margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
-div[is=delivery] p svg {
+div[is=delivery] > p svg {
   margin-right: 0.5rem;
 }
 div[is=delivery].active {
@@ -197,5 +201,7 @@ div[is=delivery].active {
 div[is=delivery].active div[is=delivery-content] {
   visibility: visible;
   height: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.6rem;
   margin-top: 1.6rem;
 }

@@ -11,17 +11,17 @@ main[is=product] > div {
   padding: 0 2.4rem;
 }
 
-main[is=product] > div div[is=universal-features] ul li h4, main[is=product] > div .description h5, main[is=product] > div div[is=product-content] header p, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div div[is=product-content] header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
+main[is=product] > div .description h5, main[is=product] > div div[is=product-content] header p, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div div[is=product-content] header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-main[is=product] > div div[is=universal-features], main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-main[is=product] > div div[is=universal-features], main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
   font-weight: 400;
 }
 
@@ -68,13 +68,13 @@ main[is=product] > div div[is=product-content] header p, main[is=product] > div 
   }
 }
 
-main[is=product] > div div[is=universal-features] ul li h4, main[is=product] > div .description h5 {
+main[is=product] > div .description h5 {
   font-size: 1.5rem;
   line-height: 115%;
   letter-spacing: -0.3px;
 }
 @media screen and (min-width: 1200px) {
-  main[is=product] > div div[is=universal-features] ul li h4, main[is=product] > div .description h5 {
+  main[is=product] > div .description h5 {
     font-size: 1.6rem;
     line-height: 115%;
     letter-spacing: -0.32px;
@@ -107,13 +107,13 @@ main[is=product] > div .description .body-1, main[is=product] > div .description
   }
 }
 
-main[is=product] > div div[is=universal-features], main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li {
+main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  main[is=product] > div div[is=universal-features], main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li {
+  main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -163,20 +163,6 @@ main[is=product] > div .description hr {
 
 main[is=product] {
   margin-top: 3.2rem;
-}
-main[is=product] > div div[is=universal-features] {
-  margin-bottom: 3.2rem;
-}
-main[is=product] > div div[is=universal-features] ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2.4rem;
-}
-main[is=product] > div div[is=universal-features] ul li {
-  list-style: none;
-  background: #FBFAF8;
-  border-radius: 0.8rem;
-  padding: 1.6rem;
 }
 main[is=product] > div div[is=product-content] header {
   margin-bottom: 2.4rem;

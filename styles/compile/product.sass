@@ -6,23 +6,6 @@ main[is="product"]
   > div
     @extend %main-content
 
-    div[is="universal-features"]
-      @extend %body-s
-      margin-bottom: units(4)
-      ul
-        display: grid
-        grid-template-columns: repeat(4, 1fr)
-        grid-gap: units(3)
-
-        li
-          list-style: none
-          background: $grey-100
-          border-radius: $border-s
-          padding: units(2)
-
-          h4
-            @extend %heading-s
-
     div[is="product-content"]
 
       header
