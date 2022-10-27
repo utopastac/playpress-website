@@ -1,26 +1,9 @@
-div[is=shop] > div {
-  max-width: 140rem;
-  margin: 0 auto;
+div[is=shop] div[is=delivery-container] {
   padding: 0 2.4rem;
-}
-
-div[is=shop] > div {
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: flex-start;
-}
-div[is=shop] > section {
-  padding-top: 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 @media screen and (min-width: 400px) {
-  div[is=shop] > div {
-    grid-column-gap: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  div[is=shop] > div > div {
-    justify-self: end;
-  }
   div[is=shop] > section {
     padding-top: 2rem;
   }

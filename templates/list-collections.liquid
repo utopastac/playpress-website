@@ -1,25 +1,24 @@
 {{ 'shop.css' | asset_url | stylesheet_tag }}
 
 <div is="shop">
-  <h1>Shop our playsets</h1>
-  <div>
-    <p is="lede">Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!</p>
-    <div>
-      {% render 'delivery', expanded: 'true' %}
-    </div>
-  </div>
+  {% render 'section-header',
+    title: 'Shop our playsets',
+    text: 'Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!'
+  %}
+  <div is='delivery-container'>{% render 'delivery' %}</div>
+  
   <section>
-    <h2>Our best-selling sets</h2>
+    {% render 'section-header', title: 'Our best-selling sets' %}
     <div is="product-promos">
       <div class="four">
-        {% for product in collections['best-sellers'].products limit: 2 %}
+        {% for product in collections['best-sellers'].products limit: 3 %}
             {% render 'product-promo', product: product %}
         {% endfor %}
       </div>
     </div>
   </section>
   <section is="meta">
-    <h2>Our other excellent sets</h2>
+    {% render 'section-header', title: 'Our other excellent sets' %}
     <div is="product-promos">
       <div class="four">
         {% for product in collections['shop-featured'].products %}
@@ -29,10 +28,12 @@
     </div>
   </section>
   <section>
-    <h2>Bundles</h2>
-    <p>Even better value to build a Playpress universe.</p>
+    {% render 'section-header',
+      title: 'Bundles',
+      text: 'Even better value to build a Playpress universe.'
+    %}
     <div is="product-promos" class="two">
-      <div class="four">
+      <div class="two">
         {% for product in collections['bundle-playsets'].products limit: 2 %}
             {% render 'product-promo', product: product %}
         {% endfor %}

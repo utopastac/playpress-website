@@ -2,24 +2,12 @@
 
 div[is="shop"]
 
-  > div
-    @extend %main-content
-    display: grid
-    grid-template-columns: 1fr
-    place-items: flex-start
-
-  > section 
-    padding-top: 1rem
+  div[is="delivery-container"]
+    padding: 0 units(3)
+    max-width: size(400)
+    margin: 0 auto
 
   @include min($screen-s)
-    > div 
-      grid-column-gap: 2rem
-      display: grid
-      grid-template-columns: 1fr 1fr
-  
-      > div 
-        justify-self: end
-
     > section 
       padding-top: 2rem
   
