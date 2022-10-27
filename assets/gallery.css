@@ -1,14 +1,29 @@
-div[is=gallery] {
-  grid-gap: 1.5rem;
-  display: grid;
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
+@media screen and (max-width: 700px) {
+  div[is=gallery] > div {
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin: 0 -2.4rem;
+    padding: 0 2.4rem;
+  }
+  div[is=gallery] > div * {
+    border-radius: 1.6rem;
+    display: inline-block;
+    margin-right: 1.6rem;
+  }
 }
-div[is=gallery] > img {
-  border-radius: 0.25rem;
-}
-@media screen and (min-width: 400px) {
-  div[is=gallery] {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 700px) {
+  div[is=gallery] > div > div {
+    white-space: nowrap;
+    overflow-x: scroll;
+    height: 20rem;
+  }
+  div[is=gallery] > div > div img {
+    height: 100%;
+    width: auto;
+  }
+  div[is=gallery] > div > div * {
+    border-radius: 1.6rem;
+    display: inline-block;
+    margin-right: 1.6rem;
   }
 }

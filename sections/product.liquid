@@ -1,21 +1,42 @@
+{{ 'product.js' | asset_url | script_tag }}
 {{ 'product.css' | asset_url | stylesheet_tag }}
 {{ 'gallery.css' | asset_url | stylesheet_tag }}
 
 <main id="main" is="product">
   <div>
+    <div is="gallery">
+      <div>
+        <img
+          class="image"
+          srcset="
+            {{ product.featured_image | img_url: '320x' }} 320w,
+            {{ product.featured_image | img_url: '500x' }} 500w,
+            {{ product.featured_image | img_url: '740x' }} 740w,
+            {{ product.featured_image | img_url: '1000x' }} 1000w"
+          src="{{ product.featured_image | img_url: '500x' }}"
+          sizes="calc(100vw - 2rem)"
+          width="1000"
+          loading="lazy"
+          height="750"
+          alt="{{ product.featured_image.alt | escape }}"
+        />
+        <div>
+          {% for media in product.media offset:1 %}
+            <img
+              class="image"
+              src="{{ media | img_url: '800x' }}"
+              alt="{{ media.alt | escape  }}"
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
     <h1>{{ product.title }}</h1>
-    <img
-      srcset="
-        {{ product.featured_image | img_url: '320x' }} 320w,
-        {{ product.featured_image | img_url: '500x' }} 500w,
-        {{ product.featured_image | img_url: '740x' }} 740w,
-        {{ product.featured_image | img_url: '1000x' }} 1000w"
-      src="{{ product.featured_image | img_url: '500x' }}"
-      sizes="calc(100vw - 2rem)"
-      width="1000"
-      height="750"
-      alt="{{ product.featured_image.alt | escape }}"
-    >
+
     {% form 'product', product %}
       <p>{{ product.price | money }}</p>
       <select name="id" hidden>
@@ -35,16 +56,28 @@
       </div>
     {% endform %}
 
-    <div is="gallery">
-      {% for media in product.media offset:1 %}
+    <div id="gallery-lightbox">
+      <div class="container">
+        {% for media in product.media %}
+          <img
+            class="image"
+            src="{{ media | img_url: '800x' }}"
+            alt="{{ media.alt | escape  }}"
+            loading="lazy"
+            width="800"
+            height="600"
+          >
+        {% endfor %}
+      </div>
+      <div class="icon">
         <img
-          src="{{ media | img_url: '800x' }}"
-          alt="{{ media.alt | escape  }}"
+          src="{{ 'close.svg' | asset_url }}"
+          alt=""
           loading="lazy"
-          width="800"
-          height="600"
-        >
-      {% endfor %}
+          width="24"
+          height="24"
+        />
+      </div>
     </div>
 
     <div class="description">{{ product.description }}</div>

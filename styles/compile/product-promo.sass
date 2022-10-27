@@ -1,17 +1,36 @@
 @import '../assets'
 
 [is="product-promo"]
-  display: block
+  display: flex
+  flex-direction: column
   overflow: hidden
-  border-radius: $border-m
   text-decoration: none
-  color: $link
+  min-height: 0
+  height: 100%
 
-  h3
-    @extend %heading-m
+  img
+    border-radius: $border-m
 
-  p
-    @extend %body-m
+  > div
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+    h3
+      @extend %heading-m
+      @extend %medium
+      margin-top: units(1)
+
+    > div
+      margin-top: units(1)
+      display: flex
+      justify-content: space-between
+
+      p
+        @extend %body-m
+        color: $grey-800
+        
 
   &:focus-visible
     background: none

@@ -1,37 +1,41 @@
-[is=product-promo] h3 {
+[is=product-promo] > div h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-[is=product-promo] p {
+[is=product-promo] > div > div p {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-[is=product-promo] p {
+[is=product-promo] > div > div p {
   font-weight: 400;
 }
 
-[is=product-promo] h3 {
+[is=product-promo] > div h3 {
+  font-weight: 500;
+}
+
+[is=product-promo] > div h3 {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: -0.34px;
 }
 @media screen and (min-width: 1200px) {
-  [is=product-promo] h3 {
+  [is=product-promo] > div h3 {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: -0.36px;
   }
 }
 
-[is=product-promo] p {
+[is=product-promo] > div > div p {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  [is=product-promo] p {
+  [is=product-promo] > div > div p {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -39,11 +43,32 @@
 }
 
 [is=product-promo] {
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  border-radius: 1.6rem;
   text-decoration: none;
-  color: hsl(209deg, 61.2%, 39.4%);
+  min-height: 0;
+  height: 100%;
+}
+[is=product-promo] img {
+  border-radius: 1.6rem;
+}
+[is=product-promo] > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+[is=product-promo] > div h3 {
+  margin-top: 0.8rem;
+}
+[is=product-promo] > div > div {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+[is=product-promo] > div > div p {
+  color: #232838;
 }
 [is=product-promo]:focus-visible {
   background: none;

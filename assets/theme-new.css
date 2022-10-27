@@ -362,6 +362,95 @@ a:visited:focus-visible {
   color: hsl(230deg, 49.3%, 28.6%);
 }
 
+div[is=product-promos] > div.two {
+  grid-template-columns: 1fr;
+}
+div[is=product-promos] > div.three {
+  grid-template-columns: 1fr;
+}
+div[is=product-promos] > div.four {
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 550px) {
+  div[is=product-promos] > div.two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div[is=product-promos] > div.three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div[is=product-promos] > div.four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 770px) {
+  div[is=product-promos] > div.three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  div[is=product-promos] > div.four {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1080px) {
+  div[is=product-promos] > div.four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+div[is=product-promos] > div {
+  grid-gap: 2rem;
+  display: grid;
+  grid-column: auto/span 1;
+  grid-row: 3;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding-top: 2rem;
+}
+
+button {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+div[is=product-promos] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+a[is=button] {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+a[is=button] {
+  font-weight: 400;
+}
+
+label,
+legend, button {
+  font-weight: 500;
+}
+
+a[is=button] {
+  font-weight: 700;
+}
+
+a[is=button] {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  a[is=button] {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 code {
   font-family: Sofia Pro, sans-serif;
 }

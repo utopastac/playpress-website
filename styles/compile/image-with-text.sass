@@ -8,8 +8,11 @@ section[is="image-with-text"]
     > div
       max-width: size(400)
 
-      > p:last-child 
-        margin-top: 2em
+  h3
+    @extend %heading-l
+
+  p
+    @extend %body-s
 
   &.last 
     padding-bottom: 4rem

@@ -22,16 +22,6 @@
 
       <p>{{ section.settings.text }}</p>
 
-      {% if section.settings.link_text != blank %}
-        <p>
-          <a
-            href="{{ section.settings.link_url }}"
-            is="signpost"
-          >
-            {{ section.settings.link_text | escape }}
-          </a>
-        </p>
-      {% endif %}
       {% render 'signpost', section: section %}
     </div>
   </div>

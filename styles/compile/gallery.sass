@@ -1,13 +1,31 @@
 @import '../assets'
 
 div[is="gallery"]
-  grid-gap: 1.5rem
-  display: grid
-  margin-bottom: 1.5rem
-  margin-top: 2rem
 
-  > img
-    border-radius: 0.25rem
+  @include max($screen-m)
+    > div
+      white-space: nowrap
+      overflow-x: scroll
+      margin: 0 -units(3)
+      padding: 0 units(3)
 
-  @include min($screen-s)
-    grid-template-columns: repeat(2, 1fr)
+      *
+        border-radius: $border-m
+        display: inline-block
+        margin-right: units(2)
+
+  @include min($screen-m)
+    > div
+      > div
+        white-space: nowrap
+        overflow-x: scroll
+        height: size(200)
+
+        img
+          height: 100%
+          width: auto
+
+        *
+          border-radius: $border-m
+          display: inline-block
+          margin-right: units(2)
