@@ -16,16 +16,33 @@ div[is="gallery"]
 
   @include min($screen-m)
     > div
-      > div
-        white-space: nowrap
-        overflow-x: scroll
-        height: size(200)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: units(3)
 
-        img
-          height: 100%
-          width: auto
+#gallery-lightbox
+  position: fixed
+  background: white
+  overflow-y: scroll
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10000
+  padding: units(8)
+  display: none
 
-        *
-          border-radius: $border-m
-          display: inline-block
-          margin-right: units(2)
+  &.active
+    display: block
+
+  .icon
+    position: fixed
+    top: units(3)
+    right: units(3)
+
+  .container
+    max-width: size(1200)
+    margin: 0 auto
+
+    img
+      margin: units(4) 0

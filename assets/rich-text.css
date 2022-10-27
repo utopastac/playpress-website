@@ -10,12 +10,12 @@ section[is=rich-text] h5, section[is=rich-text] h6, section[is=rich-text] h3, se
   font-weight: 700;
 }
 
-section[is=rich-text] .body-2, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+section[is=rich-text] .body-2, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .body-1, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-section[is=rich-text] .body-2, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+section[is=rich-text] .body-2, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .body-1, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
   font-weight: 400;
 }
 
@@ -88,32 +88,38 @@ section[is=rich-text] h4, section[is=rich-text] .body-0 {
   }
 }
 
-section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
+section[is=rich-text] .body-1, section[is=rich-text] .button-text {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
+  section[is=rich-text] .body-1, section[is=rich-text] .button-text {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-section[is=rich-text] .body-2 {
+section[is=rich-text] .body-2, section[is=rich-text] p, section[is=rich-text] ul li {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=rich-text] .body-2 {
+  section[is=rich-text] .body-2, section[is=rich-text] p, section[is=rich-text] ul li {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
+section[is=rich-text] ul {
+  margin-top: 1.6rem;
+}
+section[is=rich-text] ul li:not(:first-child) {
+  margin-top: 1.6rem;
+}
 section[is=rich-text] a {
   text-decoration: underline;
 }

@@ -158,8 +158,14 @@ $all-caps-letter-spacing: 0.1
 //
 %typography-hierarchy
   p, ul li
-    @extend %body-m
+    @extend %body-s
     @extend %paragraph
+
+  ul
+    margin-top: units(2)
+
+    li:not(:first-child)
+      margin-top: units(2)
     
   a
     text-decoration: underline

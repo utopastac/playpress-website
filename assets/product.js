@@ -17,6 +17,7 @@ window.addEventListener("load", function(){
     galleryLightbox.classList.add("active");
 
     const rect = imageTarget.getBoundingClientRect();
+    galleryLightbox.scrollTo(0, 0);
     galleryLightbox.scrollTo(0, rect.top-40);
     
   }
