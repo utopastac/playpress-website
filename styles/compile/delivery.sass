@@ -1,25 +1,51 @@
 @import '../assets'
 
-p[is="delivery"] 
-  margin-bottom: 0
-  margin-top: 0
+div[is="delivery"] 
+  margin: 0
+  border-radius: $border-s
+  max-width: 100%
+  padding: units(2)
+  color: $complementary  
+  cursor: pointer    
+  @extend %typography-hierarchy
+  @extend %body-s
+  border: 1px solid $complementary
 
-  a 
+  div[is="delivery-content"]
+    visibility: hidden
+    height: 0
+    
+
+    table
+      width: 100%
+
+      td
+        padding: units(1) 0
+
+      td:last-child
+        text-align: right
+
+      tr:last-child
+        td
+          border: none
+  
+  h3, h4, h5
+    color: white
+
+  p 
     display: flex
     margin-bottom: 0
+    @extend %body-s
+
     svg 
       margin-right: 0.5rem
 
-  &.expanded 
-    background-color: $triadic
-    border-radius: 0.5rem
-    max-width: 100%
-    padding: 1.5rem 1rem
-    color: $on-triadic
-    a
-      color: $on-triadic
+  &.active 
+    color: white
+    background: $complementary
 
-  @include min($screen-s)
-    &.expanded 
-      padding: 2rem
+    div[is="delivery-content"]
+      visibility: visible
+      height: auto
+      margin-top: units(2)
   

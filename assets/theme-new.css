@@ -686,7 +686,7 @@ dd {
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 figcaption {

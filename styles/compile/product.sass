@@ -6,6 +6,23 @@ main[is="product"]
   > div
     @extend %main-content
 
+    div[is="universal-features"]
+      @extend %body-s
+      margin-bottom: units(4)
+      ul
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: units(3)
+
+        li
+          list-style: none
+          background: $grey-100
+          border-radius: $border-s
+          padding: units(2)
+
+          h4
+            @extend %heading-s
+
     div[is="product-content"]
 
       header
@@ -34,9 +51,6 @@ main[is="product"]
 
     form 
       grid-gap: 0.75rem
-      background-color: $background-secondary
-      border-radius: 0 0 0.25rem 0.25rem
-      @extend %elevation-1
       display: grid
       grid-template-columns: repeat(2, 1fr)
       left: 0
@@ -70,10 +84,11 @@ main[is="product"]
 
   @include min($screen-s)
     > div
-      grid-column-gap: 3rem
-      align-items: flex-start
-      display: grid
-      grid-template-columns: 1.5fr 1fr
+      section
+        grid-column-gap: units(5)
+        align-items: flex-start
+        display: grid
+        grid-template-columns: 1.5fr 1fr
     
       form 
         grid-column: 2
