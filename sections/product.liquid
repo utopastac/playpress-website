@@ -8,6 +8,7 @@
       <div>
         <img
           class="image"
+          data-index="0"
           srcset="
             {{ product.featured_image | img_url: '320x' }} 320w,
             {{ product.featured_image | img_url: '500x' }} 500w,
@@ -22,8 +23,10 @@
         />
         <div>
           {% for media in product.media offset:1 %}
+            {{ index}}
             <img
               class="image"
+              data-index="{{ forloop.index | plus: 1 }}"
               src="{{ media | img_url: '800x' }}"
               alt="{{ media.alt | escape  }}"
               loading="lazy"
@@ -61,6 +64,7 @@
         {% for media in product.media %}
           <img
             class="image"
+            data-index="{{ forloop.index }}"
             src="{{ media | img_url: '800x' }}"
             alt="{{ media.alt | escape  }}"
             loading="lazy"

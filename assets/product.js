@@ -9,9 +9,16 @@ window.addEventListener("load", function(){
     
   });
 
-  function openGallery(){
+  function openGallery(event){
+    const index = event.target.getAttribute("data-index");
+    const imageTarget = galleryLightbox.querySelector(`[data-index="${index}"]`);
+    
     document.body.classList.add("fixed");
     galleryLightbox.classList.add("active");
+
+    const rect = imageTarget.getBoundingClientRect();
+    galleryLightbox.scrollTo(0, rect.top-40);
+    
   }
 
   function closeGallery(){
