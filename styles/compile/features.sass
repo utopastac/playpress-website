@@ -1,14 +1,14 @@
 @import '../assets'
 
 div[is="features"] 
+  padding-bottom: units(4)
   > div
     @extend %main-content
-    grid-gap: 2rem
+    grid-gap: units(3)
     display: grid
     grid-column: auto/span 1
     grid-row: 3
     margin-bottom: 0
-    margin-top: 3rem
 
   @include min($screen-s)
     > div

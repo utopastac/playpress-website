@@ -4,40 +4,40 @@ div[is=prominent-features] > div {
   padding: 0 2.4rem;
 }
 
-article[is=prominent-feature] h3 {
+article[is=prominent-feature] div h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-article[is=prominent-feature] p {
+article[is=prominent-feature] div p {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-article[is=prominent-feature] p {
+article[is=prominent-feature] div p {
   font-weight: 400;
 }
 
-article[is=prominent-feature] h3 {
-  font-size: 1.7rem;
+article[is=prominent-feature] div h3 {
+  font-size: 2.4rem;
   line-height: 115%;
-  letter-spacing: -0.34px;
+  letter-spacing: -0.48px;
 }
 @media screen and (min-width: 1200px) {
-  article[is=prominent-feature] h3 {
-    font-size: 1.8rem;
+  article[is=prominent-feature] div h3 {
+    font-size: 2.8rem;
     line-height: 115%;
-    letter-spacing: -0.36px;
+    letter-spacing: -0.56px;
   }
 }
 
-article[is=prominent-feature] p {
+article[is=prominent-feature] div p {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  article[is=prominent-feature] p {
+  article[is=prominent-feature] div p {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -45,41 +45,34 @@ article[is=prominent-feature] p {
 }
 
 article[is=prominent-feature] {
-  background-color: hsl(300deg, 33.3%, 99.4%);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
-  text-align: left;
+  background: #FFFFFF;
+  border-radius: 1.6rem;
+  overflow: hidden;
 }
-article[is=prominent-feature] > img {
-  margin-bottom: 1.25rem;
-  width: 100%;
-}
-article[is=prominent-feature] > div {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+@media screen and (max-width: 400px) {
+  article[is=prominent-feature] img {
+    margin-bottom: 1.6rem;
+    border-radius: 1.6rem;
+  }
 }
 @media screen and (min-width: 400px) {
   article[is=prominent-feature] {
-    padding: 1.5rem;
-  }
-}
-
-div[is=prominent-features] > div {
-  grid-gap: 2rem;
-  display: grid;
-}
-@media screen and (min-width: 400px) {
-  div[is=prominent-features] > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
-  div[is=prominent-features] > div.one {
-    grid-template-columns: repeat(1, 1fr);
+  article[is=prominent-feature]:nth-child(2n) img {
+    order: 2;
   }
-  div[is=prominent-features] > div.three {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  div[is=prominent-features] > div.four {
-    grid-template-columns: repeat(4, 1fr);
-  }
+}
+article[is=prominent-feature] img {
+  width: 100%;
+  border-radius: 0;
+}
+div[is=prominent-features] {
+  padding-bottom: 3.2rem;
+}
+div[is=prominent-features] > div {
+  grid-gap: 3.2rem;
+  display: grid;
 }

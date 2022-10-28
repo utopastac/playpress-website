@@ -48,7 +48,7 @@ section[is=intro].with-image {
   padding-bottom: 2rem;
 }
 section[is=intro] p {
-  margin-top: 1.6rem;
+  margin: 1.6rem 0 3.2rem 0;
 }
 @media screen and (min-width: 400px) {
   section[is=intro] {
@@ -65,7 +65,7 @@ section[is=intro] p {
     margin-right: auto;
   }
   section[is=intro].with-image > div {
-    grid-column-gap: 2rem;
+    grid-column-gap: 3.2rem;
     display: grid;
     grid-auto-flow: column;
     grid-row: auto;

@@ -1,44 +1,53 @@
 @import '../assets'
 
 article[is="prominent-feature"]
-  background-color: $elevated
-  border-radius: 0.5rem
-  box-shadow: 0 2px 0 $drop
-  text-align: left
+  background: $white
+  border-radius: $border-m
+  overflow: hidden
 
-  > img 
-    margin-bottom: 1.25rem
-    width: 100%
-
-  > div 
-    padding-left: 0.75rem
-    padding-right: 0.75rem
-
-  h3
-    @extend %heading-m
-  
-  p
-    @extend %body-s
+  @include max($screen-s)
+    img 
+      margin-bottom: units(2)
+      border-radius: $border-m
 
   @include min($screen-s)
-    padding: 1.5rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    place-items: center
+
+    &:nth-child(2n)
+      img
+        order: 2
+
+  img
+    width: 100%
+    border-radius: 0
+
+  div
+
+    h3
+      @extend %heading-l
+    
+    p
+      @extend %body-s
   
 
 div[is="prominent-features"]
+  padding-bottom: units(4)
+  
   > div
     @extend %main-content
-    grid-gap: 2rem
+    grid-gap: units(4)
     display: grid
 
   @include min($screen-s)
-    > div
-      display: grid
-      grid-template-columns: repeat(2, 1fr)
+    // > div
+    //   grid-template-columns: repeat(2, 1fr)
     
-      &.one 
-        grid-template-columns: repeat(1, 1fr)
-      &.three 
-        grid-template-columns: repeat(3, 1fr)
-      &.four 
-        grid-template-columns: repeat(4, 1fr)
+    //   &.one 
+    //     grid-template-columns: repeat(1, 1fr)
+    //   &.three 
+    //     grid-template-columns: repeat(3, 1fr)
+    //   &.four 
+    //     grid-template-columns: repeat(4, 1fr)
   

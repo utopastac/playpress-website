@@ -4,13 +4,15 @@ div[is=features] > div {
   padding: 0 2.4rem;
 }
 
+div[is=features] {
+  padding-bottom: 3.2rem;
+}
 div[is=features] > div {
-  grid-gap: 2rem;
+  grid-gap: 2.4rem;
   display: grid;
   grid-column: auto/span 1;
   grid-row: 3;
   margin-bottom: 0;
-  margin-top: 3rem;
 }
 @media screen and (min-width: 400px) {
   div[is=features] > div {

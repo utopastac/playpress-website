@@ -1,18 +1,20 @@
 @import '../assets'
 
-article[is="feature"] 
-  text-align: center
+article[is="feature"]
 
   .image
-    margin-bottom: 1.25rem
+    margin-bottom: units(2)
     overflow: hidden
-    height: units(10)
+    // height: units(10)
     border-radius: $border-s
 
     img
       height: 100%
 
-  > h3 
-    font-size: 1.5em
-    margin-bottom: 0
-    margin-top: 0
+  h3 
+    @extend %heading-m
+    margin-bottom: units(1)
+
+  p
+    @extend %body-s
+    

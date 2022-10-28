@@ -13,7 +13,7 @@ section[is="intro"]
   
   p
     @extend %body-m
-    margin-top: units(2)
+    margin: units(2) 0 units(4) 0
 
   @include min($screen-s)
 
@@ -33,7 +33,7 @@ section[is="intro"]
 
     &.with-image
       > div
-        grid-column-gap: 2rem
+        grid-column-gap: units(4)
         display: grid
         grid-auto-flow: column
         grid-row: auto
