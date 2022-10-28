@@ -6,13 +6,13 @@ div[is="gallery"]
     > div
       white-space: nowrap
       overflow-x: scroll
-      margin: 0 -units(3)
+      margin: 0 -units(3) units(2) -units(3)
       padding: 0 units(3)
 
       *
         border-radius: $border-m
         display: inline-block
-        margin-right: units(2)
+        margin-right: units(1)
 
   @include min($screen-m)
     > div
@@ -35,7 +35,7 @@ div[is="gallery"]
   right: 0
   bottom: 0
   z-index: 10000
-  padding: units(8)
+  padding: units(2)
   display: none
 
   &.active
@@ -52,3 +52,6 @@ div[is="gallery"]
 
     img
       margin: units(4) 0
+
+  @include min($screen-m)
+    padding: units(8)

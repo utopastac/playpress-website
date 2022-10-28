@@ -43,6 +43,9 @@ div[is=social-sharing] ul {
   padding-left: 0;
   padding-top: 0.8rem;
 }
+div[is=social-sharing] li {
+  margin-bottom: 0.8rem;
+}
 div[is=social-sharing] li > a {
   display: flex;
   align-items: center;
@@ -64,5 +67,8 @@ div[is=social-sharing] li > a > svg {
     grid-gap: 0.75rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  div[is=social-sharing] li {
+    margin: 0;
   }
 }

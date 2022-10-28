@@ -3,20 +3,24 @@
 div[is="universal-features"]
   @extend %body-s
   margin: units(4) 0
+
   ul
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    grid-gap: units(3)
+      display: grid
+      grid-gap: units(3)
 
-    li
-      list-style: none
-      background: $grey-100
-      border-radius: $border-s
-      padding: units(2)
+  li
+    list-style: none
+    background: $grey-100
+    border-radius: $border-s
+    padding: units(2)
 
-      h4
-        @extend %heading-s
-        margin-bottom: units(1)
-      
-      p
-        @extend %body-s
+    h4
+      @extend %heading-s
+      margin-bottom: units(1)
+    
+    p
+      @extend %body-s
+  
+  @include min($screen-m)
+    ul
+      grid-template-columns: repeat(4, 1fr)

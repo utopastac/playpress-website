@@ -2,13 +2,13 @@
   div[is=gallery] > div {
     white-space: nowrap;
     overflow-x: scroll;
-    margin: 0 -2.4rem;
+    margin: 0 -2.4rem 1.6rem -2.4rem;
     padding: 0 2.4rem;
   }
   div[is=gallery] > div * {
     border-radius: 1.6rem;
     display: inline-block;
-    margin-right: 1.6rem;
+    margin-right: 0.8rem;
   }
 }
 @media screen and (min-width: 700px) {
@@ -34,7 +34,7 @@
   right: 0;
   bottom: 0;
   z-index: 10000;
-  padding: 6.4rem;
+  padding: 1.6rem;
   display: none;
 }
 #gallery-lightbox.active {
@@ -51,4 +51,9 @@
 }
 #gallery-lightbox .container img {
   margin: 3.2rem 0;
+}
+@media screen and (min-width: 700px) {
+  #gallery-lightbox {
+    padding: 6.4rem;
+  }
 }
