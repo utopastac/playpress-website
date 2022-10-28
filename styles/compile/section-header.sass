@@ -1,12 +1,12 @@
 @import '../assets'
 
 header[is="section-header"]
-  padding: units(4) 0
+  @extend %main-content
+
+  > div
+    padding: units(10) 0 units(3) 0
 
   h2, h3, p
-    margin-left: auto
-    margin-right: auto
-    text-align: center
 
   h2
     @extend %heading-l

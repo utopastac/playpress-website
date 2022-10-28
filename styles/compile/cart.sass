@@ -12,7 +12,7 @@ div[is="cart"]
 
   > div
     @extend %main-content
-    @extend %body-s
+    @extend %body-m
 
   .quantity
     //text-align: right
@@ -27,13 +27,17 @@ div[is="cart"]
 
     th
       border-top: 2px solid $black
+      background: $yolk-100
+      padding-left: units(1)
+      
 
     td
       padding: units(1) 0
+      padding-left: units(1)
 
     img 
       display: block
-      margin: units(1)
+      margin: units(1) units(1) units(1) 0
 
     label 
       display: none
@@ -41,11 +45,9 @@ div[is="cart"]
     input 
       width: units(10)
 
-  div[is="checkout"] 
-    background-color: $background-secondary
-    border-radius: 0.25rem
-    @extend %elevation-1
-    padding: units(3)
+  div[is="checkout"]
+    border-top: 2px solid $black
+    padding: units(2) 0 0 0
 
     header
       display: flex
@@ -60,11 +62,12 @@ div[is="cart"]
     button 
       margin: units(2) 0
       @extend %button-style
+      border-radius: $border-m
       width: 100%
 
   @include min($screen-s)
     form 
-      grid-column-gap: units(5)
+      grid-column-gap: units(8)
       grid-template-columns: 2fr 1fr
       grid-template-rows: auto
       align-items: flex-start
@@ -75,7 +78,6 @@ div[is="cart"]
       div[is="checkout"]  
         grid-column: 2
         grid-row: 1
-        padding: 2rem
         position: sticky
         top: 1rem
   
@@ -85,14 +87,4 @@ div[is="cart"]
           display: flex
 
 button[is="command"]
-  background-color: $command
-  font-size: 0.83em
-  font-weight: 400
-  padding: 0.25rem 0.5rem
-
-  &:hover
-    background-color: $accent
-
-  &:focus-visible
-    background-color: $focus
-    color: $on-focus
+  @extend %small-button-style

@@ -180,7 +180,7 @@ $bigUnits: 40
   display: block
 
 %elevation-1
-  box-shadow: 0 1px 4px $drop
+  box-shadow: 0 1px 4px rgba($black, 0.05)
 
 %elevation-2
   box-shadow: 0px 40px 50px -40px rgba($black, 0.08)//0px 1px 4px rgba($black, 0.1), 0px 8px 24px rgba($black, 0.12)
@@ -198,13 +198,71 @@ $bigUnits: 40
   border-radius: $border-m
   padding: 0 units(4)
   color: white
-  background-color: $complementary
+  background-color: $blue-1000
   height: units(7)
-  box-shadow: 2px 4px 0 0 $accent
 
   &:hover
-    background-color: lighten($complementary, 5%)
+    background-color: lighten($blue-1000, 5%)
 
   &:active
     box-shadow: 1px 2px 0 0 $accent
-    background-color: darken($complementary, 5%)
+    background-color: darken($blue-1000, 5%)
+
+%small-button-style
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  @extend %button-s
+  border-radius: $border-s
+  padding: 0 units(2)
+  color: $black
+  background-color: $yolk-800
+  height: units(5)
+
+  &:hover
+    background-color: lighten($yolk-1000, 5%)
+
+  &:active
+    background-color: darken($yolk-1000, 5%)
+
+%micro-button-style
+  display: inline-flex
+  align-items: center
+  background: $white
+  justify-content: center
+  border: 1.5px solid $blue-1000
+  cursor: pointer
+  @extend %button-xs
+  border-radius: $border-s
+  padding: 0 units(1.5)
+  color: $blue-1000
+  height: units(4)
+
+  &:hover
+    background-color: $blue-1000
+    color: $white
+
+  &:active
+    background-color: darken($blue-1000, 5%)
+
+%text-button-style
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  @extend %button-l
+  border-radius: $border-m
+  padding: 0 units(4)
+  color: $blue-1000
+  height: units(7)
+
+  span
+    padding-bottom: size(4)
+    border-bottom: size(2) solid $blue-1000
+
+  &:hover
+    background: lighten($blue-1000, 70%)
+    span
+      border-bottom-color: transparent
+
+  &:active

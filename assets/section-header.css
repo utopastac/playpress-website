@@ -1,3 +1,9 @@
+header[is=section-header] {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
 header[is=section-header] h2, header[is=section-header].large h2 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
@@ -51,13 +57,8 @@ header[is=section-header] p {
   }
 }
 
-header[is=section-header] {
-  padding: 3.2rem 0;
-}
-header[is=section-header] h2, header[is=section-header] h3, header[is=section-header] p {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+header[is=section-header] > div {
+  padding: 8rem 0 2.4rem 0;
 }
 header[is=section-header] p {
   margin-top: 0.8rem;

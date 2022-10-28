@@ -64,7 +64,7 @@ section[is=logos] > div ul {
   padding-left: 0;
 }
 section[is=logos] > div ul li {
-  background: hsl(0deg, 0%, 100%);
+  background: #FFFFFF;
   border-radius: 0.5rem;
   display: grid;
   padding: 1rem;

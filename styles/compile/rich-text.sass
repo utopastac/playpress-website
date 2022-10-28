@@ -1,9 +1,11 @@
 @import '../assets'
 
 section[is="rich-text"]
-  padding: 3rem 1rem
-
+  @extend %main-content
   @extend %typography-hierarchy
+
+  > div
+    padding: 3rem 1rem
 
   h1,h2,h3,ol,p,ul 
     margin-left: auto

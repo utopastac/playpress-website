@@ -13,8 +13,8 @@ code
   box-sizing: border-box
 
 html
-  background-color: $sunken
-  color: $text
+  background-color: $white
+  color: $black
   font-size: 62.75%
 
   // @include min($screen-s)
@@ -35,7 +35,7 @@ body
   -webkit-tap-highlight-color: rgba(0,0,0,0)
   -webkit-font-smoothing: antialiased
   font-size: 100%
-  background-color: $background
+  background-color: $white
   margin: 0 auto
   //overflow-x: hidden
 
@@ -92,7 +92,7 @@ caption,td,th
   text-align: left
 
 td,th
-  border-bottom: 1px solid $separator
+  border-bottom: 1px solid $border-color
   padding: 0.75rem 1.5rem 0.75rem 0
 
 section[is="section"]
@@ -107,7 +107,7 @@ div[is="product-promos"]
 div[is="error-summary"]
   background-color: $error
   border-radius: 0.125rem
-  color: $on-error
+  color: $white
   padding: 0.25rem 1rem
 
 div[is="error"] 
@@ -119,13 +119,13 @@ div[is="error"]
     > strong
       background-color: $error
       border-radius: 0.125rem
-      color: $on-error
+      color: $white
       display: inline-block
       font-weight: 400
       padding: 0 0.5rem
 
 a[is="skip"] 
-  color:$on-focus
+  color:$white
   display: block
   left: -100vw
   padding: 0.5rem 2rem
@@ -183,7 +183,7 @@ h3,
 h4,
 h5,
 h6 
-  color: $text-display
+  color: $black
 
 // h1,
 // h2,
@@ -263,12 +263,14 @@ abbr
 
 hr 
   border-style: solid
-  color: $separator
+  color: $border-color
   margin-left: 0
   margin-right: 0
 
 a[is="button"]
   @extend %button-style
+a[is="text-button"]
+  @extend %text-button-style
 
 .main-content
   @extend %main-content

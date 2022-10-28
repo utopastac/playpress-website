@@ -5,6 +5,12 @@ section[is=rich-text] ul li {
   list-style-type: disc;
 }
 
+section[is=rich-text] {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
 section[is=rich-text] h5, section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .heading-s, section[is=rich-text] h2, section[is=rich-text] .heading-m, section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
@@ -155,7 +161,7 @@ section[is=rich-text] hr {
   margin: 3.2rem 0 2.4rem 0;
 }
 
-section[is=rich-text] {
+section[is=rich-text] > div {
   padding: 3rem 1rem;
 }
 section[is=rich-text] h1, section[is=rich-text] h2, section[is=rich-text] h3, section[is=rich-text] ol, section[is=rich-text] p, section[is=rich-text] ul {

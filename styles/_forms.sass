@@ -1,3 +1,11 @@
+$input: $blue-1000
+$input-icon: $blue-1000
+$input-focus: $yolk-1000
+$on-focus: $black
+$on-focus-link: $black
+$on-focus-visited: $black
+$on-focus-active: $black
+  
 form
 
 fieldset
@@ -48,7 +56,7 @@ textarea
 input::placeholder,
 select::placeholder,
 textarea::placeholder
-  color: $text-secondary
+  color: $grey-800
 
 audio:focus,
 input:focus,
@@ -126,7 +134,7 @@ input[type="range"]
   padding: 0
 
 %input-track
-  background: $input
+  background: $blue-1000
   cursor: pointer
   height: 0.125rem
 
@@ -179,14 +187,14 @@ button, input[type="submit"]
   background-color: $accent
   border: none
   border-radius: $border-s
-  color: $on-accent
+  color: $black
   font-family: inherit
   @extend %body-xs
   @extend %medium
   padding: units(0.5) units(1)
 
   &:hover
-    background-color: $accent-hover
+    background-color: $yolk-1000
 
   &:active
     box-shadow: none
@@ -219,13 +227,13 @@ summary:focus-visible
   color: $on-focus
 
 a
-  color: $link
+  color: $blue-1000
 
   &:hover
     text-decoration: none
 
   &:active
-    color: $active
+    color: $blue-1000
     &:focus-visible
       color: $on-focus-active
 
@@ -233,14 +241,14 @@ a
     color: $on-focus-link
 
   &:visited
-    color: $visited
+    color: $blue-1000
     &:focus-visible
       color: $on-focus-visited
 
 ::-moz-selection
   background-color: $accent
-  color: $on-accent
+  color: $black
 
 ::selection
   background-color: $accent
-  color: $on-accent
+  color: $black

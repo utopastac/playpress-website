@@ -45,11 +45,11 @@ section[is=hero] > div p {
 }
 
 section[is=hero] {
-  background-color: hsl(236deg, 25.9%, 47.6%);
+  background-color: #5B5E95;
   position: relative;
 }
 section[is=hero] > div h1, section[is=hero] > div p {
-  color: hsl(0deg, 0%, 100%);
+  color: #FFFFFF;
 }
 section[is=hero] > div > div {
   position: relative;

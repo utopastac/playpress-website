@@ -1,9 +1,29 @@
-[is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] > div input[type=submit] {
+  display: inline-flex;
+  align-items: center;
+  background: #FFFFFF;
+  justify-content: center;
+  border: 1.5px solid #2D3788;
+  cursor: pointer;
+  border-radius: units(1);
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+}
+[is=product-promo] > div input[type=submit]:hover {
+  background-color: #2D3788;
+  color: #FFFFFF;
+}
+[is=product-promo] > div input[type=submit]:active {
+  background-color: #272f75;
+}
+
+[is=product-promo] > div input[type=submit], [is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-[is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] > div input[type=submit], [is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-weight: 400;
 }
 
@@ -11,7 +31,7 @@
   font-weight: 500;
 }
 
-[is=product-promo] > div > div p {
+[is=product-promo] > div > div p, [is=product-promo] > div input[type=submit] {
   font-weight: 700;
 }
 
@@ -23,6 +43,19 @@
 @media screen and (min-width: 1200px) {
   [is=product-promo] > div > div p, [is=product-promo] > div h3 {
     font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+[is=product-promo] > div input[type=submit] {
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  [is=product-promo] > div input[type=submit] {
+    font-size: 1.4rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -62,6 +95,6 @@
   box-shadow: none;
 }
 [is=product-promo]:focus-visible h3 {
-  background-color: hsl(38deg, 100%, 86.9%);
+  background-color: #FAB638;
   box-shadow: 0 0 0 3px focus;
 }
