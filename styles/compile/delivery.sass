@@ -7,23 +7,39 @@ div[is="delivery"]
   padding: units(2)
   color: $complementary  
   cursor: pointer    
-  @extend %typography-hierarchy
   @extend %body-s
   border: 1px solid $complementary
-  @include animate(0.2s) 
+  @include animate(0.2s)
+
+  div[is="delivery-charges"]
+    background: $white
+    color: $black
+    border-radius: $border-s
+    padding: units(3)
+    margin-top: units(3)
 
   div[is="delivery-content"]
     visibility: hidden
     height: 0
     @include animate(0.2s) 
-    
 
+    h3
+      @extend %heading-m
+      margin-bottom: units(1)
+
+    p + h3
+      margin-top: units(4)
+
+    h4
+      @extend %heading-m
+      margin-bottom: units(1)
+    
     table
       width: 100%
 
       td
         padding: units(1) 0
-        border-color: rgba($white, 0.3)
+        border-color: rgba($black, 0.3)
 
       td:last-child
         text-align: right
@@ -32,7 +48,7 @@ div[is="delivery"]
         td
           border: none
   
-  h3, h4, h5
+  h3
     color: white
 
   > p 

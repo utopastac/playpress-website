@@ -89,7 +89,7 @@ footer[is=footer] section[is=main-links] {
   display: grid;
   grid-template-columns: 1fr 1fr repeat(2, minmax(0, 2fr));
   place-items: start;
-  grid-gap: 3.2rem;
+  grid-gap: 5.6rem;
   padding: 4.8rem 0;
 }
 footer[is=footer] section[is=main-links] div[is=logo] {
@@ -213,14 +213,14 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
 }
 @media screen and (min-width: 400px) {
   footer[is=footer] {
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 2.4rem 2.4rem 4rem 2.4rem;
   }
   footer[is=footer] section[is=meta] ul {
     display: flex;
   }
   footer[is=footer] section[is=meta] ul li {
-    margin-bottom: 0.5rem;
-    margin-right: 1.5rem;
+    margin-bottom: 0.8rem;
+    margin-right: 2.4rem;
   }
 }
 @media screen and (min-width: 700px) {

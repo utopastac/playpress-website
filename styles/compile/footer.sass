@@ -14,7 +14,7 @@ footer[is="footer"]
     display: grid
     grid-template-columns: 1fr 1fr repeat(2, minmax(0, 2fr))
     place-items: start
-    grid-gap: units(4)
+    grid-gap: units(7)
     padding: units(6) 0
 
     div[is="logo"]
@@ -147,15 +147,15 @@ footer[is="footer"]
           margin-right: 0.5rem
 
   @include min($screen-s)
-    padding: 2rem 2rem 4rem 2rem
+    padding: units(3) units(3) units(5) units(3)
 
     section[is="meta"]
       ul
         display: flex
     
         li 
-          margin-bottom: 0.5rem
-          margin-right: 1.5rem
+          margin-bottom: units(1)
+          margin-right: units(3)
   
 
   @include min($screen-m)

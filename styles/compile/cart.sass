@@ -1,71 +1,88 @@
 @import '../assets'
 
 div[is="cart"]
+  padding: units(4) 0
 
-  > p 
-    margin-top: 2.5em
+  div[is="signpost"]
+    margin-top: units(4)
 
-  > form 
+  h1
+    @extend %heading-xl
+    margin-bottom: units(2)
+
+  > div
+    @extend %main-content
+    @extend %body-s
+
+  .quantity
+    //text-align: right
+
+  form 
     grid-row-gap: 2rem
     display: grid
     grid-template-columns: 1fr
 
-    > table 
+    table 
       width: 100%
 
-      > tbody > tr > td > a > img 
-        display: block
-        margin-bottom: 1rem
-        margin-right: 1rem
+    th
+      border-top: 2px solid $black
 
-        > tr > td > label 
-          display: none
+    td
+      padding: units(1) 0
 
-        > tr > td > input 
-          width: 2.5rem
+    img 
+      display: block
+      margin: units(1)
 
-    > div 
-      background-color: $background-secondary
-      border-radius: 0.25rem
-      @extend %elevation-1
-      padding: 2rem 1rem
+    label 
+      display: none
 
-      > button 
-        max-width: 100%
-        padding-bottom: 1rem
-        padding-top: 1rem
-        width: 100%
+    input 
+      width: units(10)
 
-      > p 
-        margin-bottom: 0
-        margin-top: 1.25em
+  div[is="checkout"] 
+    background-color: $background-secondary
+    border-radius: 0.25rem
+    @extend %elevation-1
+    padding: units(3)
+
+    header
+      display: flex
+      justify-content: space-between
+
+      h3
+        @extend %heading-l
+
+      p
+        @extend %body-l
+
+    button 
+      margin: units(2) 0
+      @extend %button-style
+      width: 100%
 
   @include min($screen-s)
-    > form 
-      grid-column-gap: 2rem
+    form 
+      grid-column-gap: units(5)
       grid-template-columns: 2fr 1fr
       grid-template-rows: auto
+      align-items: flex-start
   
       > * 
         grid-column: 1
   
-      > div 
-        align-self: flex-start
+      div[is="checkout"]  
         grid-column: 2
         grid-row: 1
         padding: 2rem
         position: sticky
         top: 1rem
   
-      > table > tbody > tr > td > a 
-        align-items: center
-        display: flex
-  
-      > table > tbody > tr > td > a > img 
-        margin-bottom: 0
-  
-      > table > tbody > tr > td > input 
-        width: 1.5rem
+      table
+        a 
+          align-items: center
+          display: flex
 
 button[is="command"]
   background-color: $command
