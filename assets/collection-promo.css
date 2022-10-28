@@ -41,12 +41,12 @@
 .collection-promo {
   display: block;
   text-align: center;
-  background: #FBFAF8;
+  background: #F2F2F2;
   border-radius: 1.6rem;
 }
 .collection-promo img {
   border-radius: 1.6rem;
 }
 .collection-promo > div {
-  padding: 1.6rem;
+  padding: 2.4rem;
 }
