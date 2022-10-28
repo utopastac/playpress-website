@@ -144,27 +144,6 @@ a[is="skip"]
     left: 0
     right: 0
     z-index: 3
-
-
-ul[is="social-sharing"] 
-  list-style: none
-  padding-left: 0
-
-  > li 
-    padding-bottom: 1rem
-    padding-top: 1rem
-
-    > a 
-      align-items: center
-      display: flex
-
-      > svg 
-        margin-right: 0.5rem
-
-  @include min($screen-s)
-    grid-gap: 0.75rem
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
   
 
 div[class="testimonial"]
@@ -293,23 +272,7 @@ hr
   margin-right: 0
 
 a[is="button"]
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  @extend %button-l
-  border-radius: $border-m
-  padding: 0 units(4)
-  color: white
-  background-color: $complementary
-  height: units(7)
-  box-shadow: 2px 4px 0 0 $accent
-
-  &:hover
-    background-color: lighten($complementary, 5%)
-
-  &:active
-    box-shadow: 1px 2px 0 0 $accent
-    background-color: darken($complementary, 5%)
+  @extend %button-style
 
 .main-content
   @extend %main-content

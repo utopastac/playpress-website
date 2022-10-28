@@ -163,10 +163,12 @@ div[is=delivery] {
   color: hsl(230deg, 51.6%, 31.6%);
   cursor: pointer;
   border: 1px solid hsl(230deg, 51.6%, 31.6%);
+  transition: all 0.2s ease-in-out;
 }
 div[is=delivery] div[is=delivery-content] {
   visibility: hidden;
   height: 0;
+  transition: all 0.2s ease-in-out;
 }
 div[is=delivery] div[is=delivery-content] table {
   width: 100%;

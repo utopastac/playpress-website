@@ -6,7 +6,7 @@
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=3"
 >
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
-    <div class="header"><h3>You may also like...</h3></div>
+    {% render 'section-header', title: 'You may also like...' %}
       <div is="product-promos">
         <div class="three">
           {%- for product in recommendations.products -%}

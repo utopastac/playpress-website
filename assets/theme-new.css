@@ -70,10 +70,6 @@ div[is=product-promos] > div {
   padding-top: 2rem;
 }
 
-button {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-}
-
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
@@ -81,15 +77,38 @@ button {
 }
 
 a[is=button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: units(2);
+  padding: 0 3.2rem;
+  color: white;
+  background-color: hsl(230deg, 51.6%, 31.6%);
+  height: 5.6rem;
+  box-shadow: 2px 4px 0 0 hsl(39deg, 95.1%, 59.8%);
+}
+a[is=button]:hover {
+  background-color: #2d3d8d;
+}
+a[is=button]:active {
+  box-shadow: 1px 2px 0 0 hsl(39deg, 95.1%, 59.8%);
+  background-color: #212c67;
+}
+
+button, input[type=submit], input,
+select,
+textarea, a[is=button] {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-a[is=button] {
+button, input[type=submit], input,
+select,
+textarea, a[is=button] {
   font-weight: 400;
 }
 
-button, label,
+button, input[type=submit], label,
 legend {
   font-weight: 500;
 }
@@ -106,6 +125,36 @@ a[is=button] {
 @media screen and (min-width: 1200px) {
   a[is=button] {
     font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+input,
+select,
+textarea {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  input,
+select,
+textarea {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+button, input[type=submit] {
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  button, input[type=submit] {
+    font-size: 1.4rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -151,12 +200,12 @@ select,
 textarea {
   background-color: transparent;
   border: 1px solid rgba(10, 18, 42, 0.12);
-  border-radius: 0.125rem;
+  border-radius: 0.4rem;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   max-width: 100%;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 input::placeholder,
@@ -280,27 +329,24 @@ select {
   background-size: 5px 5px, 5px 5px;
 }
 
-button {
+button, input[type=submit] {
   background-color: hsl(39deg, 95.1%, 59.8%);
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.8rem;
   color: hsl(230deg, 49.3%, 28.6%);
   font-family: inherit;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 0.8rem;
 }
-button:hover {
+button:hover, input[type=submit]:hover {
   background-color: #FFC700;
 }
-button:active {
+button:active, input[type=submit]:active {
   box-shadow: none;
   position: relative;
   top: 2px;
   transition-duration: 0s;
 }
-button:focus-visible {
+button:focus-visible, input[type=submit]:focus-visible {
   background-color: hsl(230deg, 46.6%, 34.5%);
 }
 
@@ -405,10 +451,6 @@ div[is=product-promos] > div {
   padding-top: 2rem;
 }
 
-button {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-}
-
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
@@ -416,16 +458,39 @@ button {
 }
 
 a[is=button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  padding: 0 3.2rem;
+  color: white;
+  background-color: hsl(230deg, 51.6%, 31.6%);
+  height: 5.6rem;
+  box-shadow: 2px 4px 0 0 hsl(39deg, 95.1%, 59.8%);
+}
+a[is=button]:hover {
+  background-color: #2d3d8d;
+}
+a[is=button]:active {
+  box-shadow: 1px 2px 0 0 hsl(39deg, 95.1%, 59.8%);
+  background-color: #212c67;
+}
+
+a[is=button], input,
+select,
+textarea, button, input[type=submit] {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-a[is=button] {
+a[is=button], input,
+select,
+textarea, button, input[type=submit] {
   font-weight: 400;
 }
 
 label,
-legend, button {
+legend, button, input[type=submit] {
   font-weight: 500;
 }
 
@@ -441,6 +506,36 @@ a[is=button] {
 @media screen and (min-width: 1200px) {
   a[is=button] {
     font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+input,
+select,
+textarea {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  input,
+select,
+textarea {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+button, input[type=submit] {
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  button, input[type=submit] {
+    font-size: 1.4rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -604,29 +699,6 @@ a[is=skip]:focus {
   z-index: 3;
 }
 
-ul[is=social-sharing] {
-  list-style: none;
-  padding-left: 0;
-}
-ul[is=social-sharing] > li {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-ul[is=social-sharing] > li > a {
-  align-items: center;
-  display: flex;
-}
-ul[is=social-sharing] > li > a > svg {
-  margin-right: 0.5rem;
-}
-@media screen and (min-width: 400px) {
-  ul[is=social-sharing] {
-    grid-gap: 0.75rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 div[class=testimonial] > img {
   margin-right: 2rem;
 }
@@ -708,23 +780,4 @@ hr {
   color: hsl(240deg, 23.8%, 87.6%);
   margin-left: 0;
   margin-right: 0;
-}
-
-a[is=button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.6rem;
-  padding: 0 3.2rem;
-  color: white;
-  background-color: hsl(230deg, 51.6%, 31.6%);
-  height: 5.6rem;
-  box-shadow: 2px 4px 0 0 hsl(39deg, 95.1%, 59.8%);
-}
-a[is=button]:hover {
-  background-color: #2d3d8d;
-}
-a[is=button]:active {
-  box-shadow: 1px 2px 0 0 hsl(39deg, 95.1%, 59.8%);
-  background-color: #212c67;
 }

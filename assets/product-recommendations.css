@@ -46,3 +46,7 @@ div[is=product-promos] > div {
   margin: 0 auto;
   padding: 0 2.4rem;
 }
+
+div[is=product-promos] {
+  margin: 3.2rem 0;
+}

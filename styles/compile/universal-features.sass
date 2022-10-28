@@ -2,7 +2,7 @@
 
 div[is="universal-features"]
   @extend %body-s
-  margin-bottom: units(4)
+  margin: units(4) 0
   ul
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -16,3 +16,7 @@ div[is="universal-features"]
 
       h4
         @extend %heading-s
+        margin-bottom: units(1)
+      
+      p
+        @extend %body-s

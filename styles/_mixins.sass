@@ -1,3 +1,4 @@
+@import 'sizes'
 //
 $screen-xs: 350px
 $screen-s: 550px
@@ -188,3 +189,22 @@ $bigUnits: 40
   max-width: size(1400)
   margin: 0 auto
   padding: 0 units(3)
+
+%button-style
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  @extend %button-l
+  border-radius: $border-m
+  padding: 0 units(4)
+  color: white
+  background-color: $complementary
+  height: units(7)
+  box-shadow: 2px 4px 0 0 $accent
+
+  &:hover
+    background-color: lighten($complementary, 5%)
+
+  &:active
+    box-shadow: 1px 2px 0 0 $accent
+    background-color: darken($complementary, 5%)

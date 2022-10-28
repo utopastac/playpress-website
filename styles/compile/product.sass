@@ -33,37 +33,24 @@ main[is="product"]
       margin-top: 0
 
     form 
-      grid-gap: 0.75rem
-      display: grid
-      grid-template-columns: repeat(2, 1fr)
-      left: 0
-      margin-bottom: 0
-      margin-top: 0
-      padding: 1.5rem 1rem
-      position: sticky
-      right: 0
-      top: 0
-      z-index: 1
+      display: flex
+      margin-bottom: units(2)
+
+      #quantity
+        width: 20%
+
+      button
+        @extend %button-style
 
       > button, > p 
-        grid-row: 2
-
-      > div 
-        grid-column: 1 / span 2
-        grid-row: 1
-        margin-bottom: 0.5rem
+        flex: 1
+        margin-left: units(1)
 
       > p 
         align-self: center
         font-size: 1.33em
         margin-bottom: 0
         margin-top: 0
-
-      > button 
-        max-width: 100%
-        padding-bottom: 0.5rem
-        padding-top: 0.5rem
-        width: 100%
 
   @include min($screen-s)
     > div
@@ -73,28 +60,13 @@ main[is="product"]
         display: grid
         grid-template-columns: 1.5fr 1fr
     
-      form 
-        grid-column: 2
-        grid-row: 1 / span 2
-        grid-template-rows: repeat(3, auto)
-        margin-left: 0
-        margin-right: 0
-        padding: 2rem
-        top: 1rem
-    
-        > p 
-          grid-row: 1
-          margin-bottom: 0
-          margin-top: 0
-    
-        > button 
-          grid-column: 1 / span 2
-          grid-row: 2
-          padding-bottom: 1rem
-          padding-top: 1rem
-          width: 100%
-    
-        > div 
-          grid-row: 3
-          margin-top: 1rem
+  @include min($screen-m)
+    > div
+      section
+        grid-template-columns: 1.2fr 1fr
+
+  @include min($screen-m)
+    > div
+      section
+        grid-template-columns: 1.8fr 1fr
   

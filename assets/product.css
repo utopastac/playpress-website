@@ -11,21 +11,40 @@ main[is=product] > div {
   padding: 0 2.4rem;
 }
 
+main[is=product] > div form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: units(2);
+  padding: 0 3.2rem;
+  color: white;
+  background-color: hsl(230deg, 51.6%, 31.6%);
+  height: 5.6rem;
+  box-shadow: 2px 4px 0 0 hsl(39deg, 95.1%, 59.8%);
+}
+main[is=product] > div form button:hover {
+  background-color: #2d3d8d;
+}
+main[is=product] > div form button:active {
+  box-shadow: 1px 2px 0 0 hsl(39deg, 95.1%, 59.8%);
+  background-color: #212c67;
+}
+
 main[is=product] > div .description h5, main[is=product] > div div[is=product-content] header p, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div div[is=product-content] header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
+main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
   font-weight: 400;
 }
 
-main[is=product] > div .description strong, main[is=product] > div .description b, main[is=product] > div .description .button-text {
+main[is=product] > div .description strong, main[is=product] > div .description b, main[is=product] > div .description .button-text, main[is=product] > div form button {
   font-weight: 700;
 }
 
@@ -94,13 +113,13 @@ main[is=product] > div .description h4, main[is=product] > div .description .bod
   }
 }
 
-main[is=product] > div .description .body-1, main[is=product] > div .description .button-text {
+main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  main[is=product] > div .description .body-1, main[is=product] > div .description .button-text {
+  main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -185,37 +204,21 @@ main[is=product] > div > h1 {
   margin-top: 0;
 }
 main[is=product] > div form {
-  grid-gap: 0.75rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  left: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 1.5rem 1rem;
-  position: sticky;
-  right: 0;
-  top: 0;
-  z-index: 1;
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+main[is=product] > div form #quantity {
+  width: 20%;
 }
 main[is=product] > div form > button, main[is=product] > div form > p {
-  grid-row: 2;
-}
-main[is=product] > div form > div {
-  grid-column: 1/span 2;
-  grid-row: 1;
-  margin-bottom: 0.5rem;
+  flex: 1;
+  margin-left: 0.8rem;
 }
 main[is=product] > div form > p {
   align-self: center;
   font-size: 1.33em;
   margin-bottom: 0;
   margin-top: 0;
-}
-main[is=product] > div form > button {
-  max-width: 100%;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-  width: 100%;
 }
 @media screen and (min-width: 400px) {
   main[is=product] > div section {
@@ -224,29 +227,14 @@ main[is=product] > div form > button {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
   }
-  main[is=product] > div form {
-    grid-column: 2;
-    grid-row: 1/span 2;
-    grid-template-rows: repeat(3, auto);
-    margin-left: 0;
-    margin-right: 0;
-    padding: 2rem;
-    top: 1rem;
+}
+@media screen and (min-width: 700px) {
+  main[is=product] > div section {
+    grid-template-columns: 1.2fr 1fr;
   }
-  main[is=product] > div form > p {
-    grid-row: 1;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  main[is=product] > div form > button {
-    grid-column: 1/span 2;
-    grid-row: 2;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    width: 100%;
-  }
-  main[is=product] > div form > div {
-    grid-row: 3;
-    margin-top: 1rem;
+}
+@media screen and (min-width: 700px) {
+  main[is=product] > div section {
+    grid-template-columns: 1.8fr 1fr;
   }
 }

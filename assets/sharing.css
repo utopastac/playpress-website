@@ -1,0 +1,68 @@
+div[is=social-sharing] h2 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+div[is=social-sharing] li > a {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+div[is=social-sharing] li > a {
+  font-weight: 400;
+}
+
+div[is=social-sharing] h2 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: -0.34px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=social-sharing] h2 {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+}
+
+div[is=social-sharing] li > a {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=social-sharing] li > a {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=social-sharing] ul {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 0.8rem;
+}
+div[is=social-sharing] li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  background: #FFC700;
+  padding: 0.8rem;
+  color: hsl(230deg, 51.6%, 31.6%);
+}
+div[is=social-sharing] li > a:hover {
+  background: #ffd233;
+}
+div[is=social-sharing] li > a > svg {
+  margin-right: 0.5rem;
+  width: 2.4rem;
+}
+@media screen and (min-width: 400px) {
+  div[is=social-sharing] ul {
+    grid-gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

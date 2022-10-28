@@ -3,12 +3,12 @@ div[is=universal-features] ul li h4 {
   font-weight: 700;
 }
 
-div[is=universal-features] {
+div[is=universal-features] ul li p, div[is=universal-features] {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-div[is=universal-features] {
+div[is=universal-features] ul li p, div[is=universal-features] {
   font-weight: 400;
 }
 
@@ -25,13 +25,13 @@ div[is=universal-features] ul li h4 {
   }
 }
 
-div[is=universal-features] {
+div[is=universal-features] ul li p, div[is=universal-features] {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  div[is=universal-features] {
+  div[is=universal-features] ul li p, div[is=universal-features] {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -39,7 +39,7 @@ div[is=universal-features] {
 }
 
 div[is=universal-features] {
-  margin-bottom: 3.2rem;
+  margin: 3.2rem 0;
 }
 div[is=universal-features] ul {
   display: grid;
@@ -51,4 +51,7 @@ div[is=universal-features] ul li {
   background: #FBFAF8;
   border-radius: 0.8rem;
   padding: 1.6rem;
+}
+div[is=universal-features] ul li h4 {
+  margin-bottom: 0.8rem;
 }

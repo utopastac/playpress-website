@@ -17,6 +17,12 @@ div[is="gallery"]
   @include min($screen-m)
     > div
       display: grid
+      grid-template-columns: repeat(1, 1fr)
+      grid-gap: units(2)
+      
+
+  @include min($screen-l)
+    > div
       grid-template-columns: repeat(2, 1fr)
       grid-gap: units(2)
 

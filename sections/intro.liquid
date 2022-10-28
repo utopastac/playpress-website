@@ -9,15 +9,19 @@
       {%- if section.settings.text != blank -%}
         <p is="lede">{{ section.settings.text }}</p>
       {%- endif -%}
+      {%- if section.settings.link_url != blank -%}
+        <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
+      {%- endif -%}
     </div>
     {%- if section.settings.image != blank -%}
-    <img
-      src="{{ section.settings.image | img_url: '900x' }}"
-      alt=""
-      width="900"
-      height="600"
-      is="in-action"
-    />
+      <img
+        src="{{ section.settings.image | img_url: '900x' }}"
+        alt=""
+        width="900"
+        height="600"
+        is="in-action"
+        loading="lazy"
+      />
     {%- endif -%}
   </div>
 </section>
@@ -37,6 +41,16 @@
     "type": "text",
     "label": "Text",
     "default": "Introduce this page"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
     },
     {
     "id": "image",

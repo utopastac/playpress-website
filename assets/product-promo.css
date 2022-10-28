@@ -1,15 +1,6 @@
-[is=product-promo] > div h3 {
+[is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
-}
-
-[is=product-promo] > div > div p {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
-  font-weight: 400;
-}
-
-[is=product-promo] > div > div p {
-  font-weight: 400;
 }
 
 [is=product-promo] > div h3 {
@@ -30,15 +21,15 @@
 }
 
 [is=product-promo] > div > div p {
-  font-size: 1.7rem;
-  line-height: 140%;
-  letter-spacing: 0px;
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: -0.3px;
 }
 @media screen and (min-width: 1200px) {
   [is=product-promo] > div > div p {
-    font-size: 1.8rem;
-    line-height: 140%;
-    letter-spacing: 0px;
+    font-size: 1.6rem;
+    line-height: 115%;
+    letter-spacing: -0.32px;
   }
 }
 
@@ -65,6 +56,7 @@
 [is=product-promo] > div > div {
   margin-top: 0.8rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 [is=product-promo] > div > div p {

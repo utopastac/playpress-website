@@ -29,7 +29,13 @@
         {%- endif -%}
       {%- else -%}
         <li class="active">
-          <p><span>{{ page.title }}<span></p>
+          <p><span>
+            {% if page.title %}
+              {{ page.title }}
+            {% else %}
+              Shop
+            {% endif %}
+          <span></p>
         </li>
     {%- endcase -%}
   </ul>

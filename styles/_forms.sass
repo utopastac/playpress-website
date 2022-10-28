@@ -37,12 +37,13 @@ select,
 textarea
   background-color: transparent
   border: 1px solid $border-color
-  border-radius: 0.125rem
+  border-radius: $border-xs
   color: inherit
   font-family: inherit
   font-size: inherit
   max-width: 100%
-  padding: 0.5rem
+  padding: units(1)
+  @extend %body-s
 
 input::placeholder,
 select::placeholder,
@@ -174,18 +175,15 @@ select
   background-repeat: no-repeat
   background-size: 5px 5px, 5px 5px
 
-button
+button, input[type="submit"]
   background-color: $accent
   border: none
-  border-radius: 0.25rem
-  @extend %elevation-1
+  border-radius: $border-s
   color: $on-accent
   font-family: inherit
+  @extend %body-xs
   @extend %medium
-  max-width: -webkit-max-content
-  max-width: -moz-max-content
-  max-width: max-content
-  padding: 0.5rem 1.25rem
+  padding: units(0.5) units(1)
 
   &:hover
     background-color: $accent-hover

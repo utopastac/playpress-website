@@ -10,10 +10,12 @@ div[is="delivery"]
   @extend %typography-hierarchy
   @extend %body-s
   border: 1px solid $complementary
+  @include animate(0.2s) 
 
   div[is="delivery-content"]
     visibility: hidden
     height: 0
+    @include animate(0.2s) 
     
 
     table
