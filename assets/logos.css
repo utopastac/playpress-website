@@ -4,11 +4,61 @@ section[is=logos] > div {
   padding: 0 2.4rem;
 }
 
+section[is=logos] > div header h3 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+section[is=logos] > div header p {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+section[is=logos] > div header p {
+  font-weight: 400;
+}
+
+section[is=logos] > div header h3 {
+  font-size: 2.4rem;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=logos] > div header h3 {
+    font-size: 2.8rem;
+    line-height: 115%;
+    letter-spacing: -0.56px;
+  }
+}
+
+section[is=logos] > div header p {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=logos] > div header p {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=logos] > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+section[is=logos] > div header {
+  width: 100%;
+  max-width: 40rem;
+}
 section[is=logos] > div ul {
+  width: 100%;
   grid-gap: 1rem;
   display: grid;
   grid-auto-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   list-style: none;
   margin-top: 2rem;
   padding-left: 0;

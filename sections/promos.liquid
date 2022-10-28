@@ -17,6 +17,18 @@
     <div>
       {% for block in section.blocks %}
         <a is="promo" href="{{ block.settings.link_url }}">
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | img_url: '800x' }}"
+              alt=""
+              is="in-action"
+              loading="lazy"
+              width="800"
+              height="600"
+              />
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
           {% if block.settings.title != blank %}
             <h3>{{ block.settings.title | escape }}</h3>
           {% endif %}
@@ -75,6 +87,11 @@
           "id": "text",
           "label": "Text",
           "default": "Add descriptve text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
         },
         {
           "type": "url",

@@ -32,27 +32,62 @@ div[is=promos] > div.four {
   }
 }
 
-a[is=promo] {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-}
-
 div[is=promos] > div {
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 2.4rem;
 }
 
+a[is=promo] > h3 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+a[is=promo] > p {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+a[is=promo] > p {
+  font-weight: 400;
+}
+
+a[is=promo] > h3 {
+  font-size: 2.4rem;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+@media screen and (min-width: 1200px) {
+  a[is=promo] > h3 {
+    font-size: 2.8rem;
+    line-height: 115%;
+    letter-spacing: -0.56px;
+  }
+}
+
+a[is=promo] > p {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  a[is=promo] > p {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 a[is=promo] {
   background: hsl(240deg, 25.7%, 93.1%);
-  border-radius: 0.5rem;
+  border-radius: 1.6rem;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0.75rem 1.25rem;
+  padding: 3.2rem 2.4rem;
   place-content: flex-start;
   text-decoration: none;
 }
 a[is=promo]:active {
-  box-shadow: none;
   position: relative;
   top: 2px;
 }
@@ -62,27 +97,14 @@ a[is=promo]:hover h3 {
 a[is=promo]:focus-visible {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 4px hsl(38deg, 100%, 86.9%);
 }
-a[is=promo]:visited > h3 {
-  color: hsl(281deg, 24.7%, 43.7%);
-}
 a[is=promo] > img {
   align-self: center;
 }
 a[is=promo] > h3 {
-  color: unset;
-  margin-top: 1rem;
-  text-decoration: underline;
+  margin-bottom: 0.8rem;
 }
-a[is=promo] > p {
-  align-self: flex-start;
-  color: hsl(0deg, 0%, 31%);
-  margin-top: 0;
-}
-
 div[is=promos] > div {
-  grid-gap: 1.5rem;
+  grid-gap: 3.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  margin-bottom: 4rem;
-  margin-top: 2rem;
 }

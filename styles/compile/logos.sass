@@ -4,12 +4,25 @@ section[is="logos"]
 
   > div
     @extend %main-content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    place-items: center
 
-    ul 
+    header
+      width: 100%
+      max-width: size(400)
+      h3
+        @extend %heading-l
+
+      p
+        @extend %body-m
+
+    ul
+      width: 100%
       grid-gap: 1rem
       display: grid
       grid-auto-rows: 1fr
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr))
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
       list-style: none
       margin-top: 2rem
       padding-left: 0

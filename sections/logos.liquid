@@ -1,12 +1,7 @@
 {{ 'logos.css' | asset_url | stylesheet_tag }}
 
 <section is="logos" class="{% if section.settings.show_colour == true %}alternative{% endif %}{% if section.settings.no_top_padding == true %} no-top-padding{% endif %}">
-  
-  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
 
-  {% comment %} {% if section.settings.title_secondary != blank %}
-    <h3>{{ section.settings.title_secondary | escape }}</h3>
-  {% endif %} {% endcomment %}
   <div>
     {% if section.blocks.size > 0 %}
       <ul>
@@ -38,9 +33,15 @@
     {% if section.blocks.size == 0 %}
       {% render 'no-blocks' %}
     {% endif %}
-
-    {% render 'signpost', section: section %}
-  
+    <header>
+      {% if section.settings.title != blank %}
+        <h3>{{ section.settings.title | escape }}</h3>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p>{{ section.settings.text }}</p>
+      {% endif %}
+      {% render 'signpost', section: section %}
+    </header>
   </div>
 </section>
 

@@ -648,10 +648,6 @@ td, th {
   padding: 0.75rem 1.5rem 0.75rem 0;
 }
 
-.alternative {
-  background-color: hsl(240deg, 25.7%, 93.1%);
-}
-
 div[is=error-summary] {
   background-color: hsl(340deg, 68.5%, 43.5%);
   border-radius: 0.125rem;

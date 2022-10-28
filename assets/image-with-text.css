@@ -44,6 +44,9 @@ section[is=image-with-text] p {
   }
 }
 
+section[is=image-with-text] {
+  padding: 3.2rem 0;
+}
 section[is=image-with-text] > div > div {
   max-width: 40rem;
 }
