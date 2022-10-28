@@ -12,7 +12,7 @@
           <a href="/products/" aria-current="page">Shop</a>
         </li>
         <li class="active">
-          <p><span>{{ product.title }}<span></p>
+          <p><span>{{ product.title | remove: "Eco-Friendly Playset" | remove: "Eco Friendly Playset" | remove: "Playset" | remove: "Eco"}}<span></p>
         </li>
       {%- when 'collection' and collection.handle -%}
         {%- if current_tags -%}

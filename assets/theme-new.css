@@ -732,7 +732,7 @@ div[class=testimonial] > img {
 div[class=testimonial] > div > blockquote {
   margin-left: 0;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   div[class=testimonial] {
     display: flex;
   }

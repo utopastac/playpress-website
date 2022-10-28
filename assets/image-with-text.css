@@ -53,7 +53,7 @@ section[is=image-with-text] > div > div {
 section[is=image-with-text].last {
   padding-bottom: 4rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   section[is=image-with-text] > div {
     grid-column-gap: 2rem;
     display: grid;

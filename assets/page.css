@@ -155,7 +155,7 @@ div[is=page] hr {
   margin: 3.2rem 0 2.4rem 0;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   div[is=page] {
     margin-left: auto;
     margin-right: auto;

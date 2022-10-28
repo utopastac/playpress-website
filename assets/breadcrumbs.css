@@ -56,6 +56,10 @@ ul[is=breadcrumbs] li.active p {
 }
 ul[is=breadcrumbs] li.active p span {
   opacity: 0.7;
+  flex: 1 1 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 ul[is=breadcrumbs] li:before {
   background-color: white;
@@ -69,7 +73,7 @@ ul[is=breadcrumbs] li:before {
   transform: rotate(180deg) translateY(-0.125rem);
   width: 0.5rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   ul[is=breadcrumbs] > li:first-of-type:before {
     display: none;
   }

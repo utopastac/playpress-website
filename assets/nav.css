@@ -63,7 +63,7 @@ nav[is=menu] > ul > li.on > a {
 nav[is=menu] > ul > li.on > a:hover {
   background-color: #2D3788;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   nav[is=menu] > ul > li.on {
     margin-left: 1rem;
     margin-right: 1rem;

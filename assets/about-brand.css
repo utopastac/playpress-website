@@ -55,7 +55,7 @@ aside[is=about-brand] > div > div > div {
 aside[is=about-brand] > div > div > div h4 {
   margin-bottom: 0.8rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   aside[is=about-brand] > div {
     grid-template-columns: repeat(3, 1fr);
   }

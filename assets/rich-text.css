@@ -169,7 +169,7 @@ section[is=rich-text] h1, section[is=rich-text] h2, section[is=rich-text] h3, se
   margin-right: auto;
   max-width: 48rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   section[is=rich-text] {
     padding: 5rem 2rem;
     text-align: center;

@@ -210,7 +210,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a {
 footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
   margin-right: 0.5rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   footer[is=footer] {
     padding: 2.4rem 2.4rem 4rem 2.4rem;
   }

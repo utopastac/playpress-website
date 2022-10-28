@@ -49,13 +49,13 @@ article[is=prominent-feature] {
   border-radius: 1.6rem;
   overflow: hidden;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   article[is=prominent-feature] img {
     margin-bottom: 1.6rem;
     border-radius: 1.6rem;
   }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   article[is=prominent-feature] {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

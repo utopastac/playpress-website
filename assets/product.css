@@ -219,7 +219,7 @@ main[is=product] > div form > p {
   margin-bottom: 0;
   margin-top: 0;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   main[is=product] > div section {
     grid-column-gap: 4rem;
     align-items: flex-start;

@@ -3,7 +3,7 @@ div[is=shop] div[is=delivery-container] {
   max-width: 40rem;
   margin: 0 auto 1.6rem auto;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   div[is=shop] > section {
     padding-top: 2rem;
   }

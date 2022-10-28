@@ -2,6 +2,7 @@
   div[is=gallery] > div {
     white-space: nowrap;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     margin: 0 -2.4rem 1.6rem -2.4rem;
     padding: 0 2.4rem;
   }
@@ -29,6 +30,7 @@
   position: fixed;
   background: white;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   top: 0;
   left: 0;
   right: 0;
