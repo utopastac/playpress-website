@@ -4,7 +4,9 @@
       "type": "intro",
       "settings": {
         "heading": "Stocking Playpress",
-        "text": "Stocking our affordable and eco-friendly playsets could not be easier!"
+        "text": "Stocking our affordable and eco-friendly playsets could not be easier!",
+        "link_text": "Email us",
+        "link_url": "mailto:team@playpresstoys.com"
       }
     },
     "1627753525bae19605": {
