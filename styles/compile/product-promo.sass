@@ -13,24 +13,27 @@
 
   > div
     display: flex
-    flex-direction: column
+    flex-direction: row
     justify-content: space-between
     height: 100%
+    padding-top: units(2)
 
     h3
-      @extend %heading-m
+      @extend %body-m
       @extend %medium
-      margin-top: units(1)
 
     > div
-      margin-top: units(1)
+      margin-left: units(3)
       display: flex
-      align-items: center
+      flex-direction: column
+      align-items: flex-end
       justify-content: space-between
 
       p
-        @extend %heading-s
+        @extend %body-m
+        @extend %bold
         color: $grey-800
+        margin-bottom: units(1)
         
 
   &:focus-visible

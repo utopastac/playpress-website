@@ -33,12 +33,12 @@ div[is=product-promos] > div.four {
 }
 
 div[is=product-promos] > div {
-  grid-gap: 2rem;
+  grid-gap: 3.2rem;
   display: grid;
   grid-column: auto/span 1;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  padding-top: 2rem;
+  padding-top: 3.2rem;
 }
 
 div[is=product-promos] > div {

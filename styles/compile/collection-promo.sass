@@ -2,6 +2,18 @@
 
 .collection-promo
   display: block
-  overflow: hidden
-  background: $black
+  text-align: center
+  background: $grey-100
   border-radius: $border-m
+  
+  img
+    border-radius: $border-m
+
+  > div
+    padding: units(2)
+
+  h3
+    @extend %heading-m
+
+  p
+    @extend %body-s

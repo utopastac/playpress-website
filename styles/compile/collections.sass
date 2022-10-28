@@ -4,8 +4,8 @@
 
   ul
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-gap: units(3)
+    grid-template-columns: repeat( auto-fit, minmax(units(20), 1fr) )
+    grid-gap: units(4)
     @extend %main-content
     
     li

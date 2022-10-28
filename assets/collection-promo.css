@@ -1,6 +1,52 @@
+.collection-promo h3 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+.collection-promo p {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+.collection-promo p {
+  font-weight: 400;
+}
+
+.collection-promo h3 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: -0.34px;
+}
+@media screen and (min-width: 1200px) {
+  .collection-promo h3 {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+}
+
+.collection-promo p {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  .collection-promo p {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 .collection-promo {
   display: block;
-  overflow: hidden;
-  background: #0A122A;
+  text-align: center;
+  background: #FBFAF8;
   border-radius: 1.6rem;
+}
+.collection-promo img {
+  border-radius: 1.6rem;
+}
+.collection-promo > div {
+  padding: 1.6rem;
 }
