@@ -44,11 +44,6 @@ section[is=logos] > div header p {
   }
 }
 
-section[is=logos] > div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-}
 section[is=logos] > div header {
   width: 100%;
   max-width: 40rem;
@@ -77,6 +72,12 @@ section[is=logos].no-top-padding {
   padding-top: 0;
 }
 @media screen and (min-width: 500px) {
+  section[is=logos] > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
   section[is=logos].swapped ul {
     grid-column: 2;
   }

@@ -52,26 +52,26 @@ footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   }
 }
 
-footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
+  footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
   font-size: 1.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
+  footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
     font-size: 1.4rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -113,10 +113,12 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
 }
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a {
   padding: 0.4rem 0;
-  opacity: 0.7;
   display: block;
 }
-footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a:hover {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a > *:not(img) {
+  opacity: 0.7;
+}
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a:hover > * {
   opacity: 1;
 }
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] {
@@ -130,12 +132,15 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span {
   display: block;
 }
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] div {
+  max-width: 22rem;
+}
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] img {
-  width: 30%;
-  max-width: 10rem;
+  width: 40%;
+  max-width: 12rem;
   height: auto;
   border-radius: 0.8rem;
-  margin-right: 0.8rem;
+  margin-right: 1.2rem;
 }
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] {
   display: flex;
@@ -231,5 +236,8 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
     padding: 4.8rem 0;
     grid-template-columns: repeat(3, minmax(0, 1fr)) 3fr;
     grid-gap: 5.6rem;
+  }
+  footer[is=footer] section[is=main-links] ul[is=main-link-list] li a {
+    padding: 0.4rem 0.8rem;
   }
 }

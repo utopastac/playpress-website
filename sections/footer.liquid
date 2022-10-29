@@ -44,7 +44,7 @@
       </ul>
       <ul>
         <h2>Our best-selling sets</h2>
-        {% for product in collections['best-sellers'].products limit: 5 %}
+        {% for product in collections['best-sellers'].products limit: 3 %}
           <li>
             <a is="product-link" href="{{ product.url }}">
               <img

@@ -4,9 +4,6 @@ section[is="logos"]
 
   > div
     @extend %main-content
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    place-items: center
 
     header
       width: 100%
@@ -41,6 +38,12 @@ section[is="logos"]
     padding-top: 0
 
   @include min($screen-s)
+
+    > div
+      display: grid
+      grid-auto-flow: column
+      grid-template-columns: repeat(2, 1fr)
+      place-items: center
     
     &.swapped ul 
       grid-column: 2
