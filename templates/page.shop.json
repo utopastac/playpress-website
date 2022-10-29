@@ -8,9 +8,62 @@
         "link_text": "Email us",
         "link_url": "mailto:team@playpresstoys.com"
       }
+    },
+    "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
+      "type": "collections",
+      "blocks": {
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-0": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-1": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-2": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-3": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-0",
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-1",
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-2",
+        "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-3"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
+      "type": "product-promos",
+      "settings": {
+        "title": "Best sellers",
+        "text": "",
+        "collection": "best-sellers",
+        "grid": 3,
+        "rows": 1,
+        "show_signpost_link": true,
+        "link_text": "View all",
+        "link_url": ""
+      }
     }
   },
   "order": [
-    "intro"
+    "intro",
+    "f27d7e12-cdbe-4b45-a78e-84d87711e431",
+    "5f050f65-23f0-40c4-90f9-feb4734e1d9d"
   ]
 }
