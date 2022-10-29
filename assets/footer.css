@@ -85,6 +85,20 @@ footer[is=footer] {
   margin-top: 6.4rem;
   border-top: 12px solid #FAB638;
 }
+footer[is=footer] div[is=playpress-pete] {
+  padding: 0.8rem;
+  background-color: #FAB638;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  height: 9.6rem;
+  width: 9.6rem;
+  left: 50%;
+  position: absolute;
+  top: -5.2rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
 footer[is=footer] section[is=main-links] {
   display: grid;
   place-items: start;
@@ -179,23 +193,6 @@ footer[is=footer] a:focus-visible:visited {
 }
 footer[is=footer] a:focus-visible:active {
   color: white;
-}
-footer[is=footer]:after {
-  background-color: #202862;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='46' fill='none'%3E%3Cpath d='M22 34h4c.4 0 .2.4.2.4-1 3.8-4.1 3.8-4.1 3.8s-3.3 0-4.2-3.8l.2-.4h4z' fill='%23fff'/%3E%3Cpath d='M33.7 39.2h-.2s-3.1 3.3-11.6 3.3c-8.3 0-11.6-3-11.6-3l-.3-.3s-7.6-5.2-6.8-19c0-.3 0-1.7.6-3.8 3 1 20.1 7.9 25-6.2 0 0 1.8 9.5 11 6.2l.7 3.7c.7 13.7-6.6 19-6.8 19.1zM43 20S42.2.6 22 .6C1.3.6.7 20 .7 20c-1 14.6 6.6 20.8 7.7 21.4.8.6 4.5 3.7 13.5 3.7 8.9 0 12.4-3 13.3-3.7 1-.8 8.7-6.8 7.8-21.4z' fill='%23fff'/%3E%3Cpath d='M15 26.4c-2-2.1-4-.3-4.1 0l-1-1.3c1-1 3.7-2.5 6.2 0l-1 1.3zm18 0c-1.8-2.1-3.7-.3-3.9 0L28 25c1.2-1 4-2.5 6.4 0l-1.2 1.3z' fill='%23fff'/%3E%3C/svg%3E");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 8rem;
-  left: 50%;
-  position: absolute;
-  top: -4rem;
-  transform: translateX(-50%);
-  width: 8rem;
-  z-index: 2;
 }
 footer[is=footer] section[is=meta] {
   padding-top: 3.2rem;
