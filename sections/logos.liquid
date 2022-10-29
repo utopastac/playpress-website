@@ -1,6 +1,11 @@
 {{ 'logos.css' | asset_url | stylesheet_tag }}
 
-<section is="logos" class="{% if section.settings.show_colour == true %}alternative{% endif %}{% if section.settings.no_top_padding == true %} no-top-padding{% endif %}">
+<section is="logos"
+  class="
+    {% if section.settings.show_colour == true %}alternative{% endif %}
+    {% if section.settings.no_top_padding == true %} no-top-padding{% endif %}
+    {% if section.settings.layout == 'right' %} swapped{% endif %}
+  ">
 
   <div>
     {% if section.blocks.size > 0 %}
@@ -98,7 +103,23 @@
       "id": "show_colour",
       "label": "Show background colour",
       "default": false
-    }
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Logo alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
   ],
   "blocks": [
     {

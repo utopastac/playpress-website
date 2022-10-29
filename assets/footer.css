@@ -22,7 +22,7 @@ footer[is=footer] section[is=main-links] > ul {
   font-weight: 500;
 }
 
-footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] p, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] p {
+footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] p {
   font-weight: 700;
 }
 
@@ -229,7 +229,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
   }
   footer[is=footer] section[is=main-links] {
     padding: 4.8rem 0;
-    grid-template-columns: 1fr 1fr repeat(2, minmax(0, 2fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) 3fr;
     grid-gap: 5.6rem;
   }
 }

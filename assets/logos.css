@@ -76,3 +76,11 @@ section[is=logos] > div ul li span {
 section[is=logos].no-top-padding {
   padding-top: 0;
 }
+@media screen and (min-width: 500px) {
+  section[is=logos].swapped ul {
+    grid-column: 2;
+  }
+  section[is=logos].swapped header {
+    grid-column: 1;
+  }
+}

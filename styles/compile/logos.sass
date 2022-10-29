@@ -39,4 +39,12 @@ section[is="logos"]
 
   &.no-top-padding 
     padding-top: 0
+
+  @include min($screen-s)
+    
+    &.swapped ul 
+      grid-column: 2
+    
+    &.swapped header 
+      grid-column: 1
   
