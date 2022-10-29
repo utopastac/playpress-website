@@ -16,7 +16,10 @@ header[is="section-header"]
     margin-top: units(1)
 
   &.large
-    padding: units(8) 0
     h2
       @extend %heading-xl
       margin-bottom: units(2)
+
+  @include min($screen-s)
+    &.large
+      padding: units(8) 0

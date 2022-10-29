@@ -31,7 +31,7 @@ header[is=header] {
 }
 header[is=header] > a {
   background-color: #FAB638;
-  padding: 1rem;
+  padding: 0.4rem;
   z-index: 2;
 }
 header[is=header] > a:focus-visible {
@@ -86,6 +86,9 @@ header[is=header] > p > a > strong {
   header[is=header] {
     grid-template-columns: 16rem 1fr 19.2rem;
     grid-template-rows: auto;
+  }
+  header[is=header] > a {
+    padding: 1.6rem;
   }
   header[is=header] > nav {
     grid-column: 2;

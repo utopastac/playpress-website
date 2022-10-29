@@ -1,17 +1,15 @@
 {{ 'shop.css' | asset_url | stylesheet_tag }}
-{{% assign pagetitle = "Shop" }}
+{{ assign pagetitle = "Shop" }}
 
 <div is="shop">
+  
   {% render 'section-header',
     title: 'Shop our playsets',
     text: 'Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!',
     large: true
   %}
-  
-  <div class="main-content">
-    <div is='delivery-container'>{% render 'delivery' %}</div>
-    {% render 'universal-features' %}
-  </div>
+
+  <div is='delivery-container'>{% render 'delivery' %}</div>
   
   <section>
     {% render 'section-header', title: 'Our best-selling sets' %}
@@ -46,5 +44,9 @@
       </div>
     </div>
   </section>
+  <div class="main-content">
+    <div is='delivery-container'>{% render 'delivery' %}</div>
+    {% render 'universal-features' %}
+  </div>
 </div>
 {% section 'about-brand' %}

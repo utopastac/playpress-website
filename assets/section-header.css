@@ -63,9 +63,11 @@ header[is=section-header] > div {
 header[is=section-header] p {
   margin-top: 0.8rem;
 }
-header[is=section-header].large {
-  padding: 6.4rem 0;
-}
 header[is=section-header].large h2 {
   margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 500px) {
+  header[is=section-header].large {
+    padding: 6.4rem 0;
+  }
 }

@@ -70,18 +70,15 @@ ul[is=breadcrumbs] li:before {
   height: 0.75rem;
   margin-right: 0.5rem;
   position: relative;
-  transform: rotate(180deg) translateY(-0.125rem);
+  transform: rotate(0deg);
   width: 0.5rem;
 }
+ul[is=breadcrumbs] li:first-of-type:before {
+  display: none;
+}
 @media screen and (min-width: 500px) {
-  ul[is=breadcrumbs] > li:first-of-type:before {
-    display: none;
-  }
-  ul[is=breadcrumbs] > li:not(:last-of-type) {
-    display: flex;
-  }
-  ul[is=breadcrumbs] > li:not(:first-of-type):before {
-    margin-left: 0.5rem;
-    transform: rotate(0deg) translateY(0.25rem);
+  ul[is=breadcrumbs] li:not(:first-of-type):before {
+    margin-left: 0.4rem;
+    transform: rotate(0deg);
   }
 }

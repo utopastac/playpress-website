@@ -52,20 +52,15 @@ ul[is="breadcrumbs"]
       height: 0.75rem
       margin-right: 0.5rem
       position: relative
-      transform: rotate(180deg) translateY(-0.125rem)
+      transform: rotate(0deg)
       width: 0.5rem
 
-    // &:not(:last-of-type) 
-    //   display: none
+  li:first-of-type:before 
+    display: none
 
-  @include min($screen-s) 
-    > li:first-of-type:before 
-      display: none
+  @include min($screen-s)
   
-    > li:not(:last-of-type) 
-      display: flex
-  
-    > li:not(:first-of-type):before 
-      margin-left: 0.5rem
-      transform: rotate(0deg) translateY(0.25rem)
+    li:not(:first-of-type):before 
+      margin-left: units(0.5)
+      transform: rotate(0deg)
   

@@ -11,7 +11,7 @@ header[is="header"]
 
   > a 
     background-color: $accent
-    padding: 1rem
+    padding: units(0.5)
     z-index: 2
     
     &:focus-visible
@@ -66,6 +66,9 @@ header[is="header"]
   @include min($screen-m)
     grid-template-columns: units(20) 1fr units(24)
     grid-template-rows: auto
+
+    > a 
+      padding: units(2)
   
     > nav 
       grid-column: 2
