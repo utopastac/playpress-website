@@ -6,8 +6,6 @@ header[is="section-header"]
   > div
     padding: units(10) 0 units(3) 0
 
-  h2, h3, p
-
   h2
     @extend %heading-l
 
@@ -19,6 +17,16 @@ header[is="section-header"]
     h2
       @extend %heading-xl
       margin-bottom: units(2)
+
+  &.center
+    > div
+      margin: 0 auto
+      padding-bottom: units(5)
+      
+    h2, h3, p
+      text-align: center
+      margin-left: auto
+      margin-right: auto
 
   @include min($screen-s)
     &.large

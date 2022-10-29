@@ -1,51 +1,20 @@
 {{ 'shop.css' | asset_url | stylesheet_tag }}
+{{ 'collections.css' | asset_url | stylesheet_tag }}
 {{ assign pagetitle = "Shop" }}
 
 <div is="shop">
-  
-  {% render 'section-header',
-    title: 'Shop our playsets',
-    text: 'Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!',
-    large: true
-  %}
-
-  <div is='delivery-container'>{% render 'delivery' %}</div>
-  
-  <section>
-    {% render 'section-header', title: 'Our best-selling sets' %}
-    <div is="product-promos">
-      <div class="four">
-        {% for product in collections['best-sellers'].products limit: 3 %}
-            {% render 'product-promo', product: product %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  <section is="meta">
-    {% render 'section-header', title: 'Our other excellent sets' %}
-    <div is="product-promos">
-      <div class="four">
-        {% for product in collections['shop-featured'].products %}
-            {% render 'product-promo', product: product %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  <section>
-    {% render 'section-header',
-      title: 'Bundles',
-      text: 'Even better value to build a Playpress universe.'
-    %}
-    <div is="product-promos" class="two">
-      <div class="two">
-        {% for product in collections['bundle-playsets'].products limit: 2 %}
-            {% render 'product-promo', product: product %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
   <div class="main-content">
-    <div is='delivery-container'>{% render 'delivery' %}</div>
+
+    <div class="collections">
+      <ul>
+        {% for collection in collections %}
+          <!-- collection info -->
+          <li>{% render 'collection-promo', collection: collection %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  
+    {% comment %} <div is='delivery-container'>{% render 'delivery' %}</div> {% endcomment %}
     {% render 'universal-features' %}
   </div>
 </div>

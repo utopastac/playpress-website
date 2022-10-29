@@ -1,15 +1,8 @@
+div[is=shop] {
+  padding-top: 3.2rem;
+}
 div[is=shop] div[is=delivery-container] {
   padding: 0 2.4rem;
   max-width: 40rem;
   margin: 0 auto 1.6rem auto;
-}
-@media screen and (min-width: 500px) {
-  div[is=shop] > section {
-    padding-top: 2rem;
-  }
-  div[is=shop] > section > h2, div[is=shop] > section > p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
 }

@@ -66,6 +66,15 @@ header[is=section-header] p {
 header[is=section-header].large h2 {
   margin-bottom: 1.6rem;
 }
+header[is=section-header].center > div {
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+header[is=section-header].center h2, header[is=section-header].center h3, header[is=section-header].center p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (min-width: 500px) {
   header[is=section-header].large {
     padding: 6.4rem 0;
