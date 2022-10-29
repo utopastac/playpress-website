@@ -23,6 +23,9 @@
         loading="lazy"
       />
     {%- endif -%}
+    {% if section.settings.show_delivery_info == true %}
+      <div is='delivery-container'>{% render 'delivery' %}</div>
+    {% endif %}
   </div>
 </section>
 
@@ -56,7 +59,13 @@
     "id": "image",
     "type": "image_picker",
     "label": "Image"
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_delivery_info",
+      "label": "Show delivery information",
+      "default": false
+    },
   ],
   "presets": [
     {
