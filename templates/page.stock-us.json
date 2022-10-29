@@ -211,7 +211,8 @@
         "link_text": "View more",
         "link_url": "",
         "no_top_padding": true,
-        "show_colour": true
+        "show_colour": true,
+        "layout": "left"
       }
     },
     "16278501296c950f20": {
@@ -356,7 +357,8 @@
         "link_text": "View more",
         "link_url": "",
         "no_top_padding": true,
-        "show_colour": true
+        "show_colour": true,
+        "layout": "right"
       }
     },
     "16278504013ad231b3": {
@@ -445,7 +447,8 @@
         "link_text": "View more",
         "link_url": "",
         "no_top_padding": true,
-        "show_colour": true
+        "show_colour": true,
+        "layout": "left"
       }
     },
     "1627754912b7ea8724": {
