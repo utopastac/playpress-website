@@ -50,7 +50,7 @@
     "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
       "type": "product-promos",
       "settings": {
-        "title": "Best sellers",
+        "title": "Our best selling sets",
         "text": "",
         "collection": "best-sellers",
         "grid": 3,
@@ -59,11 +59,31 @@
         "link_text": "View all",
         "link_url": ""
       }
+    },
+    "a12f4da8-1300-4739-888c-f63a371dfdb5": {
+      "type": "product-promos",
+      "settings": {
+        "title": "Our other excellent sets",
+        "text": "",
+        "collection": "shop-featured",
+        "grid": 4,
+        "rows": 4,
+        "show_signpost_link": false,
+        "link_text": "View all",
+        "link_url": ""
+      }
+    },
+    "3ed46c05-ce4b-49d2-81fc-75ef7b39e8bb": {
+      "type": "about-brand",
+      "settings": {
+      }
     }
   },
   "order": [
     "intro",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
-    "5f050f65-23f0-40c4-90f9-feb4734e1d9d"
+    "5f050f65-23f0-40c4-90f9-feb4734e1d9d",
+    "a12f4da8-1300-4739-888c-f63a371dfdb5",
+    "3ed46c05-ce4b-49d2-81fc-75ef7b39e8bb"
   ]
 }
