@@ -4,17 +4,21 @@
       "type": "intro",
       "settings": {
         "heading": "A world of creativity that doesn’t cost the earth",
-        "text": ""
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "show_delivery_info": false
       }
     },
     "1627851513e6e2c0af": {
       "type": "image-with-text",
       "settings": {
         "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills.<\/p>",
+        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "show_signpost_link": false,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
@@ -73,6 +77,7 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/Custom_Design_RNLI_Inshore_Lifeboat-01-01.jpg",
+        "show_signpost_link": false,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
@@ -86,6 +91,7 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/PlayPress-Pete.jpg",
+        "show_signpost_link": false,
         "layout": "right",
         "show_colour": true,
         "last_on_page": false
