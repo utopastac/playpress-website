@@ -14,6 +14,9 @@ article[is="prominent-feature"]
     grid-template-columns: repeat(2, 1fr)
     place-items: center
 
+    div
+      padding: 0 units(3)
+
     &:nth-child(2n)
       img
         order: 2
@@ -30,6 +33,7 @@ article[is="prominent-feature"]
     
     p
       @extend %body-s
+  
   
 
 div[is="prominent-features"]

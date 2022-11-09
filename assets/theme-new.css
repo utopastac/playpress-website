@@ -99,7 +99,6 @@ a[is=text-button] {
   align-items: center;
   justify-content: center;
   border-radius: units(2);
-  padding: 0 3.2rem;
   color: #2D3788;
   height: 5.6rem;
 }
@@ -498,7 +497,6 @@ a[is=text-button] {
   align-items: center;
   justify-content: center;
   border-radius: 1.6rem;
-  padding: 0 3.2rem;
   color: #2D3788;
   height: 5.6rem;
 }

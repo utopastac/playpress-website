@@ -16,7 +16,9 @@
       <ul>
         {% for block in section.blocks %}
           {% assign collection = collections[block.settings.collection] %}
-          <li>{% render 'collection-promo', collection: collection %}</li>
+          {% if collection.products_count > 0 %}
+            <li>{% render 'collection-promo', collection: collection %}</li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>

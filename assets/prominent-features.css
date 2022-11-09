@@ -60,6 +60,9 @@ article[is=prominent-feature] {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
   }
+  article[is=prominent-feature] div {
+    padding: 0 2.4rem;
+  }
   article[is=prominent-feature]:nth-child(2n) img {
     order: 2;
   }

@@ -44,8 +44,11 @@ section[is=intro] p {
   }
 }
 
-section[is=intro].with-image {
-  padding-bottom: 2rem;
+section[is=intro] {
+  padding: 3.2rem 0;
+}
+section[is=intro] img {
+  margin-bottom: 2.4rem;
 }
 section[is=intro] p {
   margin: 1.6rem 0 3.2rem 0;

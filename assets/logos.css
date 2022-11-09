@@ -48,24 +48,22 @@ section[is=logos] > div header {
   width: 100%;
   max-width: 40rem;
 }
-section[is=logos] > div ul {
+section[is=logos] ul {
   width: 100%;
-  grid-gap: 1rem;
+  grid-gap: 0.8rem;
   display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  margin-top: 2rem;
   padding-left: 0;
 }
-section[is=logos] > div ul li {
+section[is=logos] li {
   background: #FFFFFF;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   display: grid;
-  padding: 1rem;
+  padding: 0.8rem;
   place-items: center;
 }
-section[is=logos] > div ul li span {
+section[is=logos] li span {
   display: none;
 }
 section[is=logos].no-top-padding {
@@ -76,7 +74,11 @@ section[is=logos].no-top-padding {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.2rem;
     place-items: center;
+  }
+  section[is=logos] li {
+    padding: 2.4rem;
   }
   section[is=logos].swapped ul {
     grid-column: 2;

@@ -1,12 +1,16 @@
 @import '../assets'
 
 section[is="intro"]
+
+  padding: units(4) 0
   
   > div
     @extend %main-content
 
-  &.with-image 
-    padding-bottom: 2rem
+  &.with-image
+
+  img
+    margin-bottom: units(3)
 
   h1
     @extend %heading-xl

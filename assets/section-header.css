@@ -77,6 +77,6 @@ header[is=section-header].center h2, header[is=section-header].center h3, header
 }
 @media screen and (min-width: 500px) {
   header[is=section-header].large {
-    padding: 6.4rem 0;
+    padding: 6.4rem 2.4rem;
   }
 }

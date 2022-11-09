@@ -14,25 +14,26 @@ section[is="logos"]
       p
         @extend %body-m
 
-    ul
-      width: 100%
-      grid-gap: 1rem
-      display: grid
-      grid-auto-rows: 1fr
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
-      list-style: none
-      margin-top: 2rem
-      padding-left: 0
+  ul
+    width: 100%
+    grid-gap: units(1)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)//repeat(auto-fit, minmax(8rem, 1fr))
+    list-style: none
+    padding-left: 0
 
-      li 
-        background: $white
-        border-radius: 0.5rem
-        display: grid
-        padding: 1rem
-        place-items: center
+  li 
+    background: $white
+    border-radius: units(0.5)
+    display: grid
+    padding: units(1)
+    place-items: center
 
-        span
-          display: none
+    img
+      // filter: grayscale(1)
+
+    span
+      display: none
 
   &.no-top-padding 
     padding-top: 0
@@ -43,7 +44,11 @@ section[is="logos"]
       display: grid
       grid-auto-flow: column
       grid-template-columns: repeat(2, 1fr)
+      grid-gap: units(4)
       place-items: center
+
+    li
+      padding: units(3)
     
     &.swapped ul 
       grid-column: 2

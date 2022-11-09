@@ -9,7 +9,9 @@
       <ul>
         {% for collection in collections %}
           <!-- collection info -->
-          <li>{% render 'collection-promo', collection: collection %}</li>
+          {% if collection.products_count > 0 %}
+            <li>{% render 'collection-promo', collection: collection %}</li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>

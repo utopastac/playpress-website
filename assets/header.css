@@ -24,14 +24,14 @@ header[is=header] {
   align-items: center;
   background-color: #2D3788;
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 12rem 1fr;
   grid-template-rows: repeat(2, 1fr);
   position: relative;
   z-index: 1;
 }
 header[is=header] > a {
   background-color: #FAB638;
-  padding: 0.4rem;
+  padding: 0.8rem;
   z-index: 2;
 }
 header[is=header] > a:focus-visible {
