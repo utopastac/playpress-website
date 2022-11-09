@@ -49,30 +49,10 @@ article[is=prominent-feature] {
   border-radius: 1.6rem;
   overflow: hidden;
 }
-@media screen and (max-width: 500px) {
-  article[is=prominent-feature] img {
-    margin-bottom: 1.6rem;
-  }
-}
-@media screen and (min-width: 500px) {
-  article[is=prominent-feature] {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-  }
-  article[is=prominent-feature] div {
-    padding: 0 2.4rem;
-  }
-  article[is=prominent-feature]:nth-child(2n) img {
-    order: 2;
-  }
-}
 article[is=prominent-feature] img {
   width: 100%;
   border-radius: 1.6rem;
-}
-article[is=prominent-feature] div {
-  max-width: 40rem;
+  margin-bottom: 1.6rem;
 }
 div[is=prominent-features] {
   padding-bottom: 3.2rem;
@@ -80,4 +60,12 @@ div[is=prominent-features] {
 div[is=prominent-features] > div {
   grid-gap: 3.2rem;
   display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+@media screen and (min-width: 500px) {
+  div[is=prominent-features] > div {
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+  }
 }

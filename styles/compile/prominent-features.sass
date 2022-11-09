@@ -3,30 +3,14 @@
 article[is="prominent-feature"]
   background: $white
   border-radius: $border-m
-  overflow: hidden
-
-  @include max($screen-s)
-    img 
-      margin-bottom: units(2)
-
-  @include min($screen-s)
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    place-items: center
-
-    div
-      padding: 0 units(3)
-
-    &:nth-child(2n)
-      img
-        order: 2
+  overflow: hidden 
 
   img
     width: 100%
     border-radius: $border-m
+    margin-bottom: units(2)
 
   div
-    max-width: size(400)
 
     h3
       @extend %heading-l
@@ -43,15 +27,21 @@ div[is="prominent-features"]
     @extend %main-content
     grid-gap: units(4)
     display: grid
+    justify-content: center
+    align-content: center
+    justify-items: center
 
-  @include min($screen-s)
-    // > div
-    //   grid-template-columns: repeat(2, 1fr)
+    @include min($screen-s)
+      grid-template-columns: repeat(auto-fit, minmax(size(340), 1fr))
+
+  // @include min($screen-s)
+  //   > div
+  //     grid-template-columns: repeat(2, 1fr) fit-content(20%)
     
-    //   &.one 
-    //     grid-template-columns: repeat(1, 1fr)
-    //   &.three 
-    //     grid-template-columns: repeat(3, 1fr)
-    //   &.four 
-    //     grid-template-columns: repeat(4, 1fr)
+  //     &.one 
+  //       grid-template-columns: repeat(1, 1fr) fit-content(20%)
+  //     &.three 
+  //       grid-template-columns: repeat(3, 1fr) fit-content(20%)
+  //     &.four 
+  //       grid-template-columns: repeat(4, 1fr) fit-content(20%)
   
