@@ -1,11 +1,5 @@
 {
   "current": {
-    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
-    "checkout_logo_size": "large",
-    "checkout_sidebar_background_color": "#e9e9f2",
-    "checkout_accent_color": "#2b68a0",
-    "checkout_button_color": "#f9b42b",
-    "checkout_error_color": "#c4275b",
     "heading_primary": "Hours of hands-on play",
     "text_primary": "Our sets are designed to let children play creatively while helping them develop key motor and cognitive reasoning skills.",
     "image_primary": "shopify:\/\/shop_images\/about-girl.jpg",
@@ -15,6 +9,12 @@
     "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
     "link_url": "shopify:\/\/pages\/about",
     "link_text": "Learn more about Playpress!",
+    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
+    "checkout_logo_size": "large",
+    "checkout_sidebar_background_color": "#e9e9f2",
+    "checkout_accent_color": "#2b68a0",
+    "checkout_button_color": "#f9b42b",
+    "checkout_error_color": "#c4275b",
     "favicon": "shopify:\/\/shop_images\/favicon.png",
     "type_header_font": "helvetica_n7",
     "sections": {
