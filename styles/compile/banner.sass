@@ -18,21 +18,23 @@ section[is="banner"]
     overflow: hidden
     display: block
 
-    h1, p
+    h2, p
         color: $white
 
-    h1
-      @extend %heading-xl
+    h2
+      @extend %heading-l
 
     p
-      @extend %body-l
+      @extend %body-m
     
     img
       position: relative
       border-radius: 0
 
-  @include min($screen-s)
+  @include min($screen-m)
     .banner-content
       display: grid
       grid-template-columns: 1fr 2fr 
+      align-items: center
+      justify-items: center
   
