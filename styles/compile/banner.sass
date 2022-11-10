@@ -1,14 +1,23 @@
 @import '../assets'
   
 section[is="banner"]
-  background-color: $blue-800
   position: relative
+  margin: units(4) 0  
 
-  > div
-    @extend %main-content
+  div[is="hero-content"]
+    padding: units(3)
+
+  > a
+    display: block
+    > div
+      @extend %main-content
+
+  .banner-content
     background: $blue-1000
     border-radius: $border-l
-    
+    overflow: hidden
+    display: block
+
     h1, p
         color: $white
 
@@ -17,13 +26,13 @@ section[is="banner"]
 
     p
       @extend %body-l
-
-    > div 
-      position: relative
     
-    > img
+    img
       position: relative
+      border-radius: 0
 
-  @include min($screen-m)
-    > div
+  @include min($screen-s)
+    .banner-content
+      display: grid
+      grid-template-columns: 1fr 2fr 
   

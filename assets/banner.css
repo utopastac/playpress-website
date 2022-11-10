@@ -1,43 +1,43 @@
-section[is=banner] > div {
+section[is=banner] > a > div {
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 2.4rem;
 }
 
-section[is=banner] > div h1 {
+section[is=banner] .banner-content h1 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-section[is=banner] > div p {
+section[is=banner] .banner-content p {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-section[is=banner] > div p {
+section[is=banner] .banner-content p {
   font-weight: 400;
 }
 
-section[is=banner] > div h1 {
+section[is=banner] .banner-content h1 {
   font-size: 3.2rem;
   line-height: 115%;
   letter-spacing: -0.64px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=banner] > div h1 {
+  section[is=banner] .banner-content h1 {
     font-size: 4.8rem;
     line-height: 115%;
     letter-spacing: -0.96px;
   }
 }
 
-section[is=banner] > div p {
+section[is=banner] .banner-content p {
   font-size: 2.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  section[is=banner] > div p {
+  section[is=banner] .banner-content p {
     font-size: 2.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -45,19 +45,31 @@ section[is=banner] > div p {
 }
 
 section[is=banner] {
-  background-color: #5B5E95;
   position: relative;
+  margin: 3.2rem 0;
 }
-section[is=banner] > div {
+section[is=banner] div[is=hero-content] {
+  padding: 2.4rem;
+}
+section[is=banner] > a {
+  display: block;
+}
+section[is=banner] .banner-content {
   background: #2D3788;
   border-radius: 2.4rem;
+  overflow: hidden;
+  display: block;
 }
-section[is=banner] > div h1, section[is=banner] > div p {
+section[is=banner] .banner-content h1, section[is=banner] .banner-content p {
   color: #FFFFFF;
 }
-section[is=banner] > div > div {
+section[is=banner] .banner-content img {
   position: relative;
+  border-radius: 0;
 }
-section[is=banner] > div > img {
-  position: relative;
+@media screen and (min-width: 500px) {
+  section[is=banner] .banner-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
