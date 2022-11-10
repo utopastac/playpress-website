@@ -2,8 +2,11 @@
 
 div[is="page"]
   @extend %typography-hierarchy
+  margin: units(4) auto units(12) auto
+  padding: 0 units(4)
+  max-width: size(600)
 
   @include min($screen-s)
-    margin-left: auto
-    margin-right: auto
-    max-width: 50rem
+    background: $blue-100
+    border-radius: $border-m
+    padding: units(4) units(4) units(6) units(4)
