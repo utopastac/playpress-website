@@ -329,8 +329,9 @@
         "settings": {
           "heading": "Add a title",
           "text": "Add descriptive text",
-          "link_text": "",
-          "link_url": ""
+          "link_text": "Click here",
+          "link_url": "shopify:\/\/pages\/about",
+          "image": "shopify:\/\/shop_images\/Hero_Shot_1.jpg"
         }
       }
     },
