@@ -1,0 +1,29 @@
+@import '../assets'
+  
+section[is="banner"]
+  background-color: $blue-800
+  position: relative
+
+  > div
+    @extend %main-content
+    background: $blue-1000
+    border-radius: $border-l
+    
+    h1, p
+        color: $white
+
+    h1
+      @extend %heading-xl
+
+    p
+      @extend %body-l
+
+    > div 
+      position: relative
+    
+    > img
+      position: relative
+
+  @include min($screen-m)
+    > div
+  
