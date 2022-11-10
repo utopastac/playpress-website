@@ -68,6 +68,8 @@
         "settings": {
           "heading": "Award-winning, eco-friendly playsets",
           "text": "Playpress are buildable playsets for ages 4 and up, made right here in the UK.",
+          "link_text": "",
+          "link_url": "",
           "image": "shopify:\/\/shop_images\/hero-girl.jpg"
         }
       },
@@ -226,7 +228,8 @@
           "link_text": "Become a Playpress stockist",
           "link_url": "shopify:\/\/pages\/stock-us",
           "no_top_padding": false,
-          "show_colour": false
+          "show_colour": false,
+          "layout": "left"
         }
       },
       "1627677460135d8c42": {
@@ -237,6 +240,8 @@
             "settings": {
               "enable_image": true,
               "image": "shopify:\/\/shop_images\/Custom_Design_RNLI_Inshore_Lifeboat-01-01.jpg",
+              "link_text": "",
+              "link_url": "",
               "title": "Saving plastic and saving lives",
               "text": "<p>We created a unique playset for the RNLI to helping to raise valuable funds.<\/p>"
             }
@@ -246,6 +251,8 @@
             "settings": {
               "enable_image": true,
               "image": "shopify:\/\/shop_images\/Space-Station-Gift-Of-The_Year_Highly-Commended-02.jpg",
+              "link_text": "",
+              "link_url": "",
               "title": "Exploring space one small step at a time",
               "text": "<p>A year later, we made space more hands-on with the Science Museum.<\/p>"
             }
@@ -316,6 +323,15 @@
           "link_url": "shopify:\/\/collections\/stocking-fillers",
           "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg"
         }
+      },
+      "3efbe53c-83b2-44bf-b5e5-17529cced97b": {
+        "type": "banner",
+        "settings": {
+          "heading": "Add a title",
+          "text": "Add descriptive text",
+          "link_text": "",
+          "link_url": ""
+        }
       }
     },
     "content_for_index": [
@@ -325,7 +341,8 @@
       "1627677460135d8c42",
       "1627677335e4bb5de6",
       "1623769262eaeeee9b",
-      "bbd3a91d-9cb3-4462-a206-60dab8f0d316"
+      "bbd3a91d-9cb3-4462-a206-60dab8f0d316",
+      "3efbe53c-83b2-44bf-b5e5-17529cced97b"
     ]
   }
 }
