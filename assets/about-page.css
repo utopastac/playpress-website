@@ -1,0 +1,10 @@
+section[is=about-page] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+section[is=about-page] > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
