@@ -7,8 +7,12 @@
         "text": "Our studio creates bespoke playsets for your brand. We collaborate with brands that share our values - affordable fun that doesn't cost the planet.",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/L0005_The_Gruffalo_Pop-out_Playset_Child_At_Table_Popping_Pieces.jpg",
         "show_delivery_info": false
+      }
+    },
+    "b349da05-3ad3-4975-aac6-abe3a2bddb34": {
+      "type": "about-page",
+      "settings": {
       }
     },
     "16282378513ce79dba": {
@@ -19,6 +23,7 @@
   },
   "order": [
     "intro",
+    "b349da05-3ad3-4975-aac6-abe3a2bddb34",
     "16282378513ce79dba"
   ]
 }
