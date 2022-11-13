@@ -1,0 +1,11 @@
+@import '../assets'
+
+div[is="page-content"]
+  @extend %typography-hierarchy
+  margin: units(4) auto units(12) auto
+  padding: 0 units(4)
+  max-width: size(600)
+
+  @include min($screen-s)
+    border-radius: $border-m
+    padding: units(4) units(4) units(6) units(4)

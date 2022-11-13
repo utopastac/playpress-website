@@ -1,0 +1,168 @@
+div[is=page-content] ul {
+  padding-left: 3.2rem;
+}
+div[is=page-content] ul li {
+  list-style-type: disc;
+}
+
+div[is=page-content] h5, div[is=page-content] h6, div[is=page-content] h3, div[is=page-content] .heading-s, div[is=page-content] h2, div[is=page-content] .heading-m, div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+div[is=page-content] .body-2, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .body-1, div[is=page-content] .button-text, div[is=page-content] h4, div[is=page-content] .body-0 {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 400;
+}
+
+div[is=page-content] .body-2, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .body-1, div[is=page-content] .button-text, div[is=page-content] h4, div[is=page-content] .body-0 {
+  font-weight: 400;
+}
+
+div[is=page-content] strong, div[is=page-content] b, div[is=page-content] .button-text {
+  font-weight: 700;
+}
+
+div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
+    font-size: 4.8rem;
+    line-height: 115%;
+    letter-spacing: -0.96px;
+  }
+}
+
+div[is=page-content] h2, div[is=page-content] .heading-m {
+  font-size: 2.4rem;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] h2, div[is=page-content] .heading-m {
+    font-size: 2.8rem;
+    line-height: 115%;
+    letter-spacing: -0.56px;
+  }
+}
+
+div[is=page-content] h6, div[is=page-content] h3, div[is=page-content] .heading-s {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: -0.34px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] h6, div[is=page-content] h3, div[is=page-content] .heading-s {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+}
+
+div[is=page-content] h5 {
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: -0.3px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] h5 {
+    font-size: 1.6rem;
+    line-height: 115%;
+    letter-spacing: -0.32px;
+  }
+}
+
+div[is=page-content] h4, div[is=page-content] .body-0 {
+  font-size: 2.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] h4, div[is=page-content] .body-0 {
+    font-size: 2.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=page-content] .body-1, div[is=page-content] .button-text {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] .body-1, div[is=page-content] .button-text {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=page-content] .body-2, div[is=page-content] p, div[is=page-content] ul li {
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  div[is=page-content] .body-2, div[is=page-content] p, div[is=page-content] ul li {
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=page-content] ul {
+  margin-top: 1.6rem;
+}
+div[is=page-content] ul li:not(:first-child) {
+  margin-top: 1.6rem;
+}
+div[is=page-content] a {
+  text-decoration: underline;
+}
+div[is=page-content] p + h2, div[is=page-content] p + h3, div[is=page-content] ul + h2, div[is=page-content] ul + h3 {
+  margin-top: 3.2rem;
+}
+div[is=page-content] p + h4, div[is=page-content] p + h5, div[is=page-content] ul + h4, div[is=page-content] ul + h5 {
+  margin-top: 2.4rem;
+}
+div[is=page-content] blockquote {
+  margin-top: 2.4rem;
+  padding: 2.4rem 0 0 0;
+}
+div[is=page-content] h1, div[is=page-content] .heading-l {
+  margin-bottom: 3.2rem;
+}
+div[is=page-content] h2, div[is=page-content] .heading-m {
+  margin-bottom: 2.4rem;
+}
+div[is=page-content] h3, div[is=page-content] .heading-s {
+  margin-bottom: 0.8rem;
+}
+div[is=page-content] h4 {
+  margin-bottom: 0.8rem;
+}
+div[is=page-content] h6 {
+  margin-bottom: 0.8rem;
+}
+div[is=page-content] hr {
+  height: 1;
+  border: none;
+  background: #DDE2E8;
+  margin: 3.2rem 0 2.4rem 0;
+}
+
+div[is=page-content] {
+  margin: 3.2rem auto 9.6rem auto;
+  padding: 0 3.2rem;
+  max-width: 60rem;
+}
+@media screen and (min-width: 500px) {
+  div[is=page-content] {
+    border-radius: 1.6rem;
+    padding: 3.2rem 3.2rem 4.8rem 3.2rem;
+  }
+}

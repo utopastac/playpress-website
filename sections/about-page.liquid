@@ -1,0 +1,19 @@
+{{ 'about-page-content.css' | asset_url | stylesheet_tag }}
+
+<section is="about-page">
+  {% render 'side-nav', nav: linklists.about-nav %}
+  {% render 'page-content', page: page %}
+</section>
+
+{% schema %}
+{
+  "name": "About Page",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "About Page"
+    }
+  ]
+}
+{% endschema %}
