@@ -40,12 +40,12 @@ button[is=command]:active {
 }
 
 div[is=cart] div[is=checkout] header h3, div[is=cart] h1 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 button[is=command], div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] header p {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 

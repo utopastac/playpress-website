@@ -29,12 +29,12 @@ main[is=product] > div form button:active {
 }
 
 main[is=product] > div .description h5, main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s, main[is=product] > div .description h2, main[is=product] > div .description .heading-m, main[is=product] > div div[is=product-content] header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li, main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button, main[is=product] > div div[is=product-content] header p, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
@@ -44,6 +44,10 @@ main[is=product] > div .description .body-2, main[is=product] > div .description
 
 main[is=product] > div .description strong, main[is=product] > div .description b, main[is=product] > div .description .button-text, main[is=product] > div form button {
   font-weight: 700;
+}
+
+main[is=product] > div .description h5 {
+  font-weight: 900;
 }
 
 main[is=product] > div div[is=product-content] header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
@@ -86,16 +90,16 @@ main[is=product] > div .description h6, main[is=product] > div .description h3, 
 }
 
 main[is=product] > div .description h5 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 115%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   main[is=product] > div .description h5 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 115%;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
   }
 }
 

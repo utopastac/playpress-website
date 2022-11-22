@@ -4,17 +4,21 @@ section[is=hero-event] > div {
 }
 
 section[is=hero-event] > div h4, section[is=hero-event] > div h1 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 section[is=hero-event] > div p {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
 section[is=hero-event] > div p {
   font-weight: 400;
+}
+
+section[is=hero-event] > div h4 {
+  font-weight: 900;
 }
 
 section[is=hero-event] > div h1 {
@@ -31,16 +35,16 @@ section[is=hero-event] > div h1 {
 }
 
 section[is=hero-event] > div h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 115%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   section[is=hero-event] > div h4 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 115%;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
   }
 }
 

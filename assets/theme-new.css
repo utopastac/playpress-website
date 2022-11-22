@@ -113,7 +113,7 @@ a[is=text-button]:hover span {
 button, input[type=submit], input,
 select,
 textarea, a[is=button], a[is=text-button] {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
@@ -509,7 +509,7 @@ a[is=text-button]:hover span {
 a[is=button], a[is=text-button], input,
 select,
 textarea, button, input[type=submit] {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 

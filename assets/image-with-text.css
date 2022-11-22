@@ -4,12 +4,12 @@ section[is=image-with-text] > div {
 }
 
 section[is=image-with-text] h3 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 section[is=image-with-text] p {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 

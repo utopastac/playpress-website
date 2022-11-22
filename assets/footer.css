@@ -4,12 +4,12 @@ footer[is=footer] > div {
 }
 
 footer[is=footer] section[is=main-links] h2 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li, footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
@@ -26,16 +26,20 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
 }
 
 footer[is=footer] section[is=main-links] h2 {
-  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+footer[is=footer] section[is=main-links] h2 {
+  font-size: 1.4rem;
   line-height: 115%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   footer[is=footer] section[is=main-links] h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 115%;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
   }
 }
 

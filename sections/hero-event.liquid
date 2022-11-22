@@ -2,17 +2,19 @@
 
 {% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
 <section is="hero-event">
-  <div>
-    <img
-      src="{{ section.settings.image | img_url: 'master' }}"
-      alt=""
-      is="in-action"
-      loading="lazy"
-      width="1200"
-      height="800"
-      />
-    {% render 'hero-content', section: section %}
-  </div>
+  <a href="{{ section.settings.link_url }}">
+    <div>
+      <img
+        src="{{ section.settings.image | img_url: 'master' }}"
+        alt=""
+        is="in-action"
+        loading="lazy"
+        width="1200"
+        height="800"
+        />
+      {% render 'hero-content', section: section %}
+    </div>
+  </a>
 </section>
 
 {% schema %}

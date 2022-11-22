@@ -1,10 +1,10 @@
 .collection-promo h3 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 .collection-promo p {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
@@ -13,16 +13,20 @@
 }
 
 .collection-promo h3 {
-  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.collection-promo h3 {
+  font-size: 1.4rem;
   line-height: 115%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   .collection-promo h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 115%;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
   }
 }
 

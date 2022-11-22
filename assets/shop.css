@@ -1,6 +1,3 @@
-div[is=shop] {
-  padding-top: 3.2rem;
-}
 div[is=shop] div[is=delivery-container] {
   padding: 0 2.4rem;
   max-width: 40rem;

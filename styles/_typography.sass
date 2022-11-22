@@ -2,16 +2,21 @@
 // FONTS //
 //
 //
-$font-heading: Sofia Pro,'NotoSans','NotoSansJP','NotoSansKR',sans-serif
-$font-paragraph: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
-$font-paragraph-bold: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
-$font-paragraph-extra-bold: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
+// $font-heading: Sofia Pro,'NotoSans','NotoSansJP','NotoSansKR',sans-serif
+// $font-paragraph: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
+// $font-paragraph-bold: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
+// $font-paragraph-extra-bold: Sofia Pro, 'NotoSans','NotoSansJP','NotoSansKR',sans-serif
+
+$font-heading: brandon-grotesque, sans-serif
+$font-paragraph: brandon-grotesque, sans-serif
+$font-paragraph-bold: brandon-grotesque, sans-serif
+$font-paragraph-extra-bold: brandon-grotesque, sans-serif
 //
 //
 $font-regular-weight: 400 !default
 $font-medium-weight: 500 !default
 $font-bold-weight: 700 !default
-$font-extra-bold-weight: 700 !default
+$font-extra-bold-weight: 900 !default
 //
 $font-heading-weight: $font-bold-weight
 //
@@ -84,10 +89,11 @@ $all-caps-letter-spacing: 0.1
     
 %overline
   @extend %heading
-  @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
+  @extend %extra-bold
+  @include fontSize(14, $heading-line-height, $all-caps-letter-spacing)
   text-transform: uppercase
   @include min($screen-l)
-    @include fontSize(16, $heading-line-height, $all-caps-letter-spacing)
+    @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
 //
     
 %body-1

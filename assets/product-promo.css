@@ -19,7 +19,7 @@
 }
 
 [is=product-promo] > div input[type=submit], [is=product-promo] > div > div p, [is=product-promo] > div h3 {
-  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
