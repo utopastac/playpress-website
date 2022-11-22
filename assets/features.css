@@ -1,7 +1,6 @@
 div[is=features] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 div[is=features] {

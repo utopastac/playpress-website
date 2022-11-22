@@ -1,0 +1,43 @@
+a[is=delivery-bar] ul li {
+  font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
+  font-weight: 700;
+}
+
+a[is=delivery-bar] ul li {
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  a[is=delivery-bar] ul li {
+    font-size: 1.6rem;
+    line-height: 115%;
+    letter-spacing: 1.6px;
+  }
+}
+
+a[is=delivery-bar] {
+  display: block;
+  height: 5.6rem;
+  border-bottom: 1px solid #F2F2F2;
+}
+a[is=delivery-bar] ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+a[is=delivery-bar] ul > * {
+  margin-right: 2.4rem;
+}
+a[is=delivery-bar] ul .dot {
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #2D3788;
+  border-radius: 500px;
+}
+a[is=delivery-bar] ul li {
+  color: #2D3788;
+}

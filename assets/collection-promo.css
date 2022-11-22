@@ -13,15 +13,16 @@
 }
 
 .collection-promo h3 {
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: -0.54px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   .collection-promo h3 {
-    font-size: 3.4rem;
+    font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: -0.68px;
+    letter-spacing: 1.6px;
   }
 }
 

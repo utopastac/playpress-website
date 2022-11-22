@@ -1,35 +1,21 @@
 {{ 'page-features.css' | asset_url | stylesheet_tag }}
 
 <section is="section" class="alternative">
-  
-  {% case section.settings.grid %}
-    {% when 2 %}
-      {%- assign grid_row = 'two' -%}
-    {% when 3 %}
-      {%- assign grid_row = 'three' -%}
-    {% when 4 %}
-      {%- assign grid_row = 'four' -%}
-  {% endcase %}
 
   <div is="page-features">
-    <div class="{{ grid_row }}">
+    <div>
+
+      
 
       {% for block in section.blocks %}
-        <article is="page-feature">
-          {% if block.settings.enable_image %}
-            {% if block.settings.image != blank %}
-                <img
-                  src="{{ block.settings.image | img_url: '800x' }}"
-                  alt=""
-                  is="in-action"
-                  loading="lazy"
-                  width="800"
-                  height="600"
-                  />
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-            {% endif %}
-          {% endif %}
+
+        {% if block.settings.image != blank %}
+          <article
+            is="page-feature"
+            style="background-image: url({{ block.settings.image | img_url: 'master' }})">
+        {% else %}
+          <article is="page-feature">
+        {% endif %}
           <div>
             {% if block.settings.title != blank %}
               <h4>{{ block.settings.title | escape }}</h4>
@@ -41,7 +27,7 @@
               <p>{{ block.settings.text }}</p>
             {% endif %}
             {% if block.settings.link_text != blank %}
-              <a href="{{ block.settings.link_url }}" is="button">{{ block.settings.link_text }}</a>
+              <a href="{{ block.settings.link_url }}" is="text-button">{{ block.settings.link_text }}</a>
             {% endif %}
           </div>
         </article>

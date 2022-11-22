@@ -15,14 +15,14 @@ div[is=universal-features] li div p, div[is=universal-features] {
 div[is=universal-features] li div h4 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   div[is=universal-features] li div h4 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 

@@ -1,7 +1,6 @@
 section[is=big-banner] > a > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 section[is=big-banner] .banner-content p {
@@ -56,14 +55,14 @@ section[is=big-banner] .banner-content h3 {
 section[is=big-banner] .banner-content h2 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   section[is=big-banner] .banner-content h2 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 

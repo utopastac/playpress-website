@@ -1,7 +1,6 @@
 div[is=prominent-features] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 article[is=prominent-feature] div h4, article[is=prominent-feature] div h3 {
@@ -34,14 +33,14 @@ article[is=prominent-feature] div h3 {
 article[is=prominent-feature] div h4 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   article[is=prominent-feature] div h4 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 

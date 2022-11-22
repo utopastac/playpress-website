@@ -1,7 +1,6 @@
 section[is=hero-event] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 section[is=hero-event] > div h4, section[is=hero-event] > div h1 {
@@ -34,14 +33,14 @@ section[is=hero-event] > div h1 {
 section[is=hero-event] > div h4 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   section[is=hero-event] > div h4 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 
@@ -72,7 +71,7 @@ section[is=hero-event] > div {
   aspect-ratio: 2/1;
   padding: 4rem;
   position: relative;
-  margin: 4rem;
+  margin: 1.6rem 0 3.2rem 0;
   overflow: hidden;
   border-radius: 3.2rem;
 }

@@ -84,10 +84,10 @@ $all-caps-letter-spacing: 0.1
     
 %overline
   @extend %heading
-  @include fontSize(15, $heading-line-height, 10%)
+  @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
   text-transform: uppercase
   @include min($screen-l)
-    @include fontSize(16, $heading-line-height, 10%)
+    @include fontSize(16, $heading-line-height, $all-caps-letter-spacing)
 //
     
 %body-1

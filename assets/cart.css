@@ -1,7 +1,6 @@
 div[is=cart] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 div[is=cart] div[is=checkout] button {

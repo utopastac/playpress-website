@@ -1,7 +1,6 @@
 div[is=page-features] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 article[is=page-feature] div h4, article[is=page-feature] div h3 {
@@ -19,29 +18,29 @@ article[is=page-feature] div p {
 }
 
 article[is=page-feature] div h3 {
-  font-size: 3.2rem;
+  font-size: 2.7rem;
   line-height: 115%;
-  letter-spacing: -0.64px;
+  letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1200px) {
   article[is=page-feature] div h3 {
-    font-size: 4.2rem;
+    font-size: 3.4rem;
     line-height: 115%;
-    letter-spacing: -0.84px;
+    letter-spacing: -0.68px;
   }
 }
 
 article[is=page-feature] div h4 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   article[is=page-feature] div h4 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 
@@ -63,6 +62,32 @@ article[is=page-feature] {
   border-radius: 3.2rem;
   overflow: hidden;
 }
+article[is=page-feature]:nth-child(1) {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: flex-end;
+}
+article[is=page-feature]:nth-child(1) > div {
+  background: white;
+  border-radius: 3.2rem;
+  padding: 4rem;
+  max-width: 80%;
+}
+article[is=page-feature]:nth-child(2), article[is=page-feature]:nth-child(3) {
+  padding: 4rem;
+}
+article[is=page-feature]:nth-child(2) h4, article[is=page-feature]:nth-child(2) h3, article[is=page-feature]:nth-child(2) a, article[is=page-feature]:nth-child(3) h4, article[is=page-feature]:nth-child(3) h3, article[is=page-feature]:nth-child(3) a {
+  color: white;
+}
+article[is=page-feature]:nth-child(2) {
+  background: #0C7489;
+}
+article[is=page-feature]:nth-child(3) {
+  background: #2D3788;
+}
 article[is=page-feature] img {
   width: 100%;
   border-radius: 3.2rem;
@@ -72,23 +97,24 @@ div[is=page-features] {
   padding-bottom: 3.2rem;
 }
 div[is=page-features] > div {
-  grid-gap: 3.2rem;
+  grid-gap: 4rem;
   display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   div[is=page-features] > div {
-    grid-template-columns: repeat(2, minmax(34rem, 48rem));
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
-  div[is=page-features] > div.one {
-    grid-template-columns: repeat(1, minmax(30rem, 48rem));
+  div[is=page-features] > div article[is=page-feature]:first-child {
+    grid-row: span 2;
   }
-  div[is=page-features] > div.three {
-    grid-template-columns: repeat(3, 1fr);
+  div[is=page-features] > div article[is=page-feature]:nth-child(2) {
+    padding: 4rem;
   }
-  div[is=page-features] > div.four {
-    grid-template-columns: repeat(4, 1fr);
+  div[is=page-features] > div article[is=page-feature]:nth-child(3) {
+    background: #2D3788;
   }
 }

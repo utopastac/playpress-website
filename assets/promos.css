@@ -35,7 +35,6 @@ div[is=promos] > div.four {
 div[is=promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 a[is=promo] > h3 {

@@ -8,7 +8,6 @@ main[is=product] > div .description ul li {
 main[is=product] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 main[is=product] > div form button {
@@ -89,14 +88,14 @@ main[is=product] > div .description h6, main[is=product] > div .description h3, 
 main[is=product] > div .description h5 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   main[is=product] > div .description h5 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 

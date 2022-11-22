@@ -8,7 +8,6 @@ section[is=rich-text] ul li {
 section[is=rich-text] {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 section[is=rich-text] h5, section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .heading-s, section[is=rich-text] h2, section[is=rich-text] .heading-m, section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
@@ -71,14 +70,14 @@ section[is=rich-text] h6, section[is=rich-text] h3, section[is=rich-text] .headi
 section[is=rich-text] h5 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: 150%px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   section[is=rich-text] h5 {
     font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: 160%px;
+    letter-spacing: 1.6px;
   }
 }
 

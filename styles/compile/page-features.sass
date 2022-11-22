@@ -5,6 +5,33 @@ article[is="page-feature"]
   border-radius: $border-m
   overflow: hidden 
 
+
+  &:nth-child(1)
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    display: flex
+    align-items: flex-end
+    
+
+    > div
+      background: white
+      border-radius: $border-m
+      padding: units(5)
+      max-width: 80%
+
+  &:nth-child(2), &:nth-child(3)
+    padding: units(5)
+    h4, h3, a
+      color: white
+
+  &:nth-child(2)
+    background: $teal-1000
+
+  &:nth-child(3)
+    background: $blue-1000
+
   img
     width: 100%
     border-radius: $border-m
@@ -13,7 +40,7 @@ article[is="page-feature"]
   div
 
     h3
-      @extend %heading-2
+      @extend %heading-3
 
     h4
       @extend %overline
@@ -28,20 +55,26 @@ div[is="page-features"]
   
   > div
     @extend %main-content
-    grid-gap: units(4)
+    grid-gap: units(5)
     display: grid
     justify-content: center
     align-content: center
     justify-items: center
 
-  @include min($screen-s)
+  @include min($screen-m)
     > div
-      grid-template-columns: repeat(2, minmax(size(340), size(480)))
-    
-      &.one 
-        grid-template-columns: repeat(1, minmax(size(300), size(480)))
-      &.three 
-        grid-template-columns: repeat(3, 1fr)
-      &.four 
-        grid-template-columns: repeat(4, 1fr)
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+
+      article[is="page-feature"]
+        &:first-child
+          grid-row: span 2
+
+        &:nth-child(2)
+          padding: units(5)
+
+        &:nth-child(3)
+          background: $blue-1000
+          
+
   

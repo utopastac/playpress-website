@@ -67,13 +67,11 @@ div[is=product-promos] > div {
   grid-column: auto/span 1;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  padding-top: 3.2rem;
 }
 
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 a[is=button] {
@@ -465,13 +463,11 @@ div[is=product-promos] > div {
   grid-column: auto/span 1;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  padding-top: 3.2rem;
 }
 
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  margin: 0 3.2rem;
 }
 
 a[is=button] {
@@ -619,6 +615,17 @@ body.fixed {
   left: 0;
   overflow: hidden;
   height: 100vh;
+}
+
+#main {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 2.4rem;
+}
+@media screen and (min-width: 700px) {
+  #main {
+    padding: 4rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, li, ul, html, body {

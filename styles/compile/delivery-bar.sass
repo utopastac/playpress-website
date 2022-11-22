@@ -1,0 +1,27 @@
+@import '../assets'
+
+a[is="delivery-bar"]
+  display: block
+  height: units(7)
+  border-bottom: 1px solid $grey-200
+
+  ul
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+
+    > *
+      margin-right: units(3)
+
+    .dot
+      display: block
+      width: size(7)
+      height: size(7)
+      background: $blue-1000
+      border-radius: 500px
+
+    li
+      @extend %overline
+      color: $blue-1000
+      
