@@ -243,6 +243,7 @@
               "link_text": "",
               "link_url": "",
               "title": "Saving plastic and saving lives",
+              "subtitle": "Add a subtitle",
               "text": "<p>We created a unique playset for the RNLI to helping to raise valuable funds.<\/p>"
             }
           },
@@ -254,6 +255,7 @@
               "link_text": "",
               "link_url": "",
               "title": "Exploring space one small step at a time",
+              "subtitle": "Add a subtitle",
               "text": "<p>A year later, we made space more hands-on with the Science Museum.<\/p>"
             }
           }
@@ -317,11 +319,12 @@
       "9797ff2b-339d-406b-9af1-f25ccacd1731": {
         "type": "hero-event",
         "settings": {
-          "heading": "Add a title",
-          "text": "Add descriptive text",
-          "link_text": "Click here",
+          "heading": "Santa's Midnight Sleigh Ride Eco-Friendly Playset",
+          "subtitle": "New set",
+          "text": "",
+          "link_text": "Check it out",
           "link_url": "shopify:\/\/collections\/stocking-fillers",
-          "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg"
+          "image": "shopify:\/\/shop_images\/hero_banner.png"
         }
       },
       "3efbe53c-83b2-44bf-b5e5-17529cced97b": {
