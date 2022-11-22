@@ -1,0 +1,8 @@
+div[is=gap] {
+  height: 6.4rem;
+}
+@includ min($screen-m) {
+  div[is=gap] {
+    height: 8rem;
+  }
+}
