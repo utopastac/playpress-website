@@ -1,7 +1,7 @@
 footer[is=footer] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
 footer[is=footer] section[is=main-links] h2 {
@@ -109,7 +109,7 @@ footer[is=footer] section[is=main-links] div[is=logo] {
   max-width: 16rem;
   padding: 0.8rem;
   background: #FAB638;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
 }
 footer[is=footer] section[is=main-links] > ul {
   width: 100%;
@@ -117,7 +117,7 @@ footer[is=footer] section[is=main-links] > ul {
 footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a {
   display: inline-block;
   padding: 0.4rem 0;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
 }
 footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -153,7 +153,7 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
   width: 40%;
   max-width: 12rem;
   height: auto;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   margin-right: 1.2rem;
 }
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] {

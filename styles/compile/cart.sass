@@ -7,12 +7,12 @@ div[is="cart"]
     margin-top: units(4)
 
   h1
-    @extend %heading-xl
+    @extend %heading-1
     margin-bottom: units(2)
 
   > div
     @extend %main-content
-    @extend %body-m
+    @extend %body-2
 
   .quantity
     //text-align: right
@@ -26,7 +26,7 @@ div[is="cart"]
       width: 100%
 
     th
-      border-top: 2px solid $black
+      border-top: 2px solid $grey-1200
       background: $yolk-100
       padding-left: units(1)
       
@@ -46,7 +46,7 @@ div[is="cart"]
       width: units(10)
 
   div[is="checkout"]
-    border-top: 2px solid $black
+    border-top: 2px solid $grey-1200
     padding: units(2) 0 0 0
 
     header
@@ -54,10 +54,10 @@ div[is="cart"]
       justify-content: space-between
 
       h3
-        @extend %heading-l
+        @extend %heading-2
 
       p
-        @extend %body-l
+        @extend %body-1
 
     button 
       margin: units(2) 0

@@ -6,24 +6,38 @@ section[is="hero-event"]
 
   > div
     @extend %main-content
-    min-height: 50vh
+    // min-height: 50vh
     display: flex
-    align-items: center
+    align-items: flex-end
     justify-content: flex-start
+    aspect-ratio: 2 / 1
+    padding: units(5)
+    position: relative
+    margin: units(5)
+    overflow: hidden
+    border-radius: $border-m
+
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
 
     h1
-      @extend %heading-xl
-      color: white
+      @extend %heading-1
+
+    h4
+      @extend %overline
 
     p
-      @extend %body-m
+      @extend %body-1
       margin-bottom: units(4)
 
     div[is="hero-content"]
-      background: $black
-      color: white
+      position: relative
+      background: $white
       padding: units(4)
       border-radius: $border-m
       flex: 1
-      max-width: size(480)
+      max-width: size(560)
   

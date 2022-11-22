@@ -43,7 +43,7 @@ footer[is="footer"]
 
       &[is="main-link-list"]
         li
-          @extend %body-l
+          @extend %body-1
           a
             display: inline-block
             padding: units(0.5) 0
@@ -54,7 +54,7 @@ footer[is="footer"]
 
       &:not([is="main-link-list"])
         li
-          @extend %body-s
+          @extend %body-3
           width: 100%
 
           a
@@ -82,7 +82,7 @@ footer[is="footer"]
 
               span
                 display: block
-                @extend %body-s
+                @extend %body-3
 
               div
                 max-width: size(220)
@@ -106,13 +106,13 @@ footer[is="footer"]
 
               span
                 display: block
-                @extend %body-xs
+                @extend %body-4
                 padding: units(0.5) units(1)
                 border-radius: 500px
                 background: rgba($white, 0.1)
 
     h2
-      @extend %heading-m
+      @extend %heading-3
       color: white
       margin-bottom: units(1)
 
@@ -132,7 +132,7 @@ footer[is="footer"]
   section[is="meta"]
     padding-top: units(4)
     border-top: 1px solid rgba(255, 255, 255, 0.2)
-    @extend %body-xs
+    @extend %body-4
 
     ul
       list-style: none

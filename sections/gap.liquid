@@ -1,0 +1,22 @@
+{{ 'gap.css' | asset_url | stylesheet_tag }}
+
+<div is="gap">
+</div>
+
+{% schema %}
+{
+  "name": "Gap",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Editing",
+      "info": "You can edit this section within the theme settings"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gap"
+    }
+  ]
+}
+{% endschema %}

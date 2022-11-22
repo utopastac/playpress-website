@@ -96,7 +96,7 @@ header[is=header] > p > a > strong {
   }
   header[is=header] > p {
     border-bottom: none;
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     grid-column: 3;
   }
   header[is=header] > p > a {

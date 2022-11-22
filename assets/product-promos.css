@@ -44,5 +44,5 @@ div[is=product-promos] > div {
 div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }

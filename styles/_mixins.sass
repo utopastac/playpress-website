@@ -26,7 +26,7 @@ $screen-xxl: 1400px
   background-image: $image
   background-position: center center
 
-@mixin icon($icon, $color: $black, $size: contain, $position: center center)
+@mixin icon($icon, $color: $grey-1200, $size: contain, $position: center center)
   background: $color
   mask-image: $icon
   mask-repeat: no-repeat
@@ -78,10 +78,10 @@ $bigUnits: 40
   cursor: pointer
   &:not(.active)
     &:hover
-      color: $black
+      color: $grey-1200
       text-decoration: underline
       &:after
-        background-color: $black
+        background-color: $grey-1200
         
 %links
   position: relative
@@ -107,7 +107,7 @@ $bigUnits: 40
 %standard-list
   padding-left: units(4)
   li
-    @extend %heading-xl
+    @extend %heading-1
     list-style-type: disc
 
 %sub-header
@@ -116,16 +116,16 @@ $bigUnits: 40
     position: relative
 
     h1
-      @extend %heading-m
+      @extend %heading-3
       margin-bottom: units(2)
 
     h2
-      @extend %heading-m
+      @extend %heading-3
       margin-bottom: units(0)
 
       + p
         margin-top: units(1)
-        @extend %heading-xl
+        @extend %heading-1
 
 %content-column
   padding: 0 units(2)
@@ -180,15 +180,15 @@ $bigUnits: 40
   display: block
 
 %elevation-1
-  box-shadow: 0 1px 4px rgba($black, 0.05)
+  box-shadow: 0 1px 4px rgba($grey-1200, 0.05)
 
 %elevation-2
-  box-shadow: 0px 40px 50px -40px rgba($black, 0.08)//0px 1px 4px rgba($black, 0.1), 0px 8px 24px rgba($black, 0.12)
+  box-shadow: 0px 40px 50px -40px rgba($grey-1200, 0.08)//0px 1px 4px rgba($grey-1200, 0.1), 0px 8px 24px rgba($grey-1200, 0.12)
 //
 %main-content
   max-width: size(1400)
   margin: 0 auto
-  padding: 0 units(3)
+  margin: 0 units(4)
 
 %button-style
   display: inline-flex
@@ -216,7 +216,7 @@ $bigUnits: 40
   @extend %button-s
   border-radius: $border-s
   padding: 0 units(2)
-  color: $black
+  color: $grey-1200
   background-color: $yolk-800
   height: units(5)
 

@@ -14,7 +14,7 @@ code
 
 html
   background-color: $white
-  color: $black
+  color: $grey-1200
   font-size: 62.75%
 
   // @include min($screen-s)
@@ -82,7 +82,7 @@ iframe,img,svg,video
 img
   height: auto
   &[is="in-action"]
-    border-radius: 0.5rem
+    border-radius: $border-s
 
 table
   border-collapse: collapse
@@ -154,23 +154,23 @@ div[class="testimonial"]
   
 
 // h1
-//   @extend %heading-xl
+//   @extend %heading-1
 //   @extend %bold
 
 // h2
-//   @extend %heading-l
+//   @extend %heading-2
 //   @extend %bold
 
 // h3
-//   @extend %heading-m
+//   @extend %heading-3
 //   @extend %bold
 
 // h4
-//   @extend %heading-s
+//   @extend %overline
 //   @extend %bold
 
 // p
-//   @extend %body-s
+//   @extend %body-3
 //   @extend %regular
 
 //
@@ -183,7 +183,7 @@ h3,
 h4,
 h5,
 h6 
-  color: $black
+  color: $grey-1200
 
 // h1,
 // h2,

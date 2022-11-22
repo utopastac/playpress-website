@@ -73,14 +73,14 @@ div[is=product-promos] > div {
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
 a[is=button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(2);
+  border-radius: units(4);
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
@@ -98,7 +98,7 @@ a[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(2);
+  border-radius: units(4);
   color: #2D3788;
   height: 5.6rem;
 }
@@ -216,8 +216,8 @@ input,
 select,
 textarea {
   background-color: transparent;
-  border: 1px solid rgba(10, 18, 42, 0.12);
-  border-radius: 0.4rem;
+  border: 1px solid #F2F2F2;
+  border-radius: 0.8rem;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -245,7 +245,7 @@ input[type=radio] {
   position: absolute;
 }
 input[type=radio]:before {
-  border: 1px solid rgba(10, 18, 42, 0.12);
+  border: 1px solid #F2F2F2;
   border-radius: 0.125rem;
   content: "";
   height: 1rem;
@@ -257,10 +257,10 @@ input[type=radio]:before {
 }
 input[type=radio]:after {
   border-bottom-width: 0;
-  border-bottom: 0.25rem solid rgba(10, 18, 42, 0.12);
+  border-bottom: 0.25rem solid #F2F2F2;
   border-left-width: 0;
-  border-left: 0.25rem solid rgba(10, 18, 42, 0.12);
-  border-right: 0 solid rgba(10, 18, 42, 0.12);
+  border-left: 0.25rem solid #F2F2F2;
+  border-right: 0 solid #F2F2F2;
   border-top: 0 solid transparent;
   content: "";
   height: 0.25rem;
@@ -349,7 +349,7 @@ select {
 button, input[type=submit] {
   background-color: #FAB638;
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   color: #0A122A;
   font-family: inherit;
   padding: 0.4rem 0.8rem;
@@ -471,14 +471,14 @@ div[is=product-promos] > div {
 .main-content, div[is=product-promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
 a[is=button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
@@ -496,7 +496,7 @@ a[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
   color: #2D3788;
   height: 5.6rem;
 }
@@ -665,7 +665,7 @@ img {
   height: auto;
 }
 img[is=in-action] {
-  border-radius: 0.5rem;
+  border-radius: 2.4rem;
 }
 
 table {
@@ -678,7 +678,7 @@ caption, td, th {
 }
 
 td, th {
-  border-bottom: 1px solid rgba(10, 18, 42, 0.12);
+  border-bottom: 1px solid #F2F2F2;
   padding: 0.75rem 1.5rem 0.75rem 0;
 }
 
@@ -801,7 +801,7 @@ abbr {
 
 hr {
   border-style: solid;
-  color: rgba(10, 18, 42, 0.12);
+  color: #F2F2F2;
   margin-left: 0;
   margin-right: 0;
 }

@@ -1,37 +1,38 @@
-div[is=universal-features] li h4 {
+div[is=universal-features] li div h4 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
 
-div[is=universal-features] li p, div[is=universal-features] {
+div[is=universal-features] li div p, div[is=universal-features] {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 400;
 }
 
-div[is=universal-features] li p, div[is=universal-features] {
+div[is=universal-features] li div p, div[is=universal-features] {
   font-weight: 400;
 }
 
-div[is=universal-features] li h4 {
+div[is=universal-features] li div h4 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: -0.3px;
+  letter-spacing: 150%px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
-  div[is=universal-features] li h4 {
+  div[is=universal-features] li div h4 {
     font-size: 1.6rem;
     line-height: 115%;
     letter-spacing: -0.32px;
   }
 }
 
-div[is=universal-features] li p, div[is=universal-features] {
+div[is=universal-features] li div p, div[is=universal-features] {
   font-size: 1.5rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  div[is=universal-features] li p, div[is=universal-features] {
+  div[is=universal-features] li div p, div[is=universal-features] {
     font-size: 1.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -48,14 +49,15 @@ div[is=universal-features] ul {
 div[is=universal-features] li {
   list-style: none;
   background: #F2F2F2;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 9.6rem 1fr;
+  grid-gap: 1.6rem;
 }
-div[is=universal-features] li h4 {
-  margin-bottom: 0.8rem;
+div[is=universal-features] li img {
+  border-radius: border-s;
 }
-@media screen and (min-width: 700px) {
-  div[is=universal-features] ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
+div[is=universal-features] li div h4 {
+  margin-bottom: 0.4rem;
 }

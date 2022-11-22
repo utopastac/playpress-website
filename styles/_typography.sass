@@ -75,67 +75,54 @@ $all-caps-letter-spacing: 0.1
 //
 //
 //
-%heading-xl
+%heading-1
   @extend %heading
   @include fontSize($type-size-xl-mobile, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-xl, $heading-line-height, $heading-letter-spacing)
 
-%heading-l
+%heading-2
   @extend %heading
   @include fontSize($type-size-l-mobile, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-l, $heading-line-height, $heading-letter-spacing)
 
-%heading-m
+%heading-3
   @extend %heading
   @include fontSize($type-size-m-mobile, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-m, $heading-line-height, $heading-letter-spacing)
     
-%heading-s
+%overline
   @extend %heading
-  @include fontSize($type-size-s-mobile, $heading-line-height, $heading-letter-spacing)
+  @include fontSize($type-size-s-mobile, $heading-line-height, 10%)
+  text-transform: uppercase
   @include min($screen-l)
     @include fontSize($type-size-s, $heading-line-height, $heading-letter-spacing)
+//
     
-%heading-xs
-  @extend %heading
-  @include fontSize($type-size-xs-mobile, $heading-line-height, $heading-letter-spacing)
-  @include min($screen-l)
-    @include fontSize($type-size-xs, $heading-line-height, $heading-letter-spacing)
-//
-//
-//
-%body-xl
-  @extend %regular
-  @extend %paragraph
-  @include fontSize($type-size-xl-mobile, $body-line-height, $body-letter-spacing)
-  @include min($screen-l)
-    @include fontSize($type-size-xl, $body-line-height, $body-letter-spacing)
-    
-%body-l
+%body-1
   @extend %regular
   @extend %paragraph
   @include fontSize($type-size-l-mobile, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-l, $body-line-height, $body-letter-spacing)
 
-%body-m
+%body-2
   @extend %regular
   @extend %paragraph
   @include fontSize($type-size-m-mobile, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-m, $body-line-height, $body-letter-spacing)
 
-%body-s
+%body-3
   @extend %regular
   @extend %paragraph
   @include fontSize($type-size-s-mobile, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
     @include fontSize($type-size-s, $body-line-height, $body-letter-spacing)
 
-%body-xs
+%body-4
   @extend %regular
   @extend %paragraph
   @include fontSize($type-size-xs-mobile, $body-line-height, $body-letter-spacing)
@@ -145,23 +132,23 @@ $all-caps-letter-spacing: 0.1
 //
 //
 %button-l
-  @extend %body-m
+  @extend %body-2
   @extend %bold
 %button-m
-  @extend %body-s
+  @extend %body-3
   @extend %bold
 %button-s
-  @extend %body-s
+  @extend %body-3
   @extend %bold
 %button-xs
-  @extend %body-xs
+  @extend %body-4
   @extend %bold
 //
 //
 //
 %typography-hierarchy
   p, ul li
-    @extend %body-s
+    @extend %body-3
     @extend %paragraph
 
   ul
@@ -184,11 +171,11 @@ $all-caps-letter-spacing: 0.1
     padding: units(3) 0 0 0
 
   .body-0
-    @extend %body-l
+    @extend %body-1
   .body-1
-    @extend %body-m
+    @extend %body-2
   .body-2
-    @extend %body-s
+    @extend %body-3
   .button-text
     @extend %button-l
     
@@ -197,26 +184,26 @@ $all-caps-letter-spacing: 0.1
 
 
   h1, .heading-l
-    @extend %heading-xl
+    @extend %heading-1
     margin-bottom: units(4)
   h2, .heading-m
-    @extend %heading-l
+    @extend %heading-2
     margin-bottom: units(3)
   h3, .heading-s
-    @extend %heading-m
+    @extend %heading-3
     margin-bottom: units(1)
   h4
-    @extend %body-l
+    @extend %body-1
     margin-bottom: units(1)
   h5
-    @extend %heading-s
+    @extend %overline
   h6
-    @extend %heading-m
+    @extend %heading-3
     margin-bottom: units(1)
   ul
     @extend %standard-list
   hr
     height: 1
     border: none
-    background: $grey-300
+    background: $grey-200
     margin: units(4) 0 units(3) 0

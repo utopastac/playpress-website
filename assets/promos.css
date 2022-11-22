@@ -35,7 +35,7 @@ div[is=promos] > div.four {
 div[is=promos] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
 a[is=promo] > h3 {
@@ -80,7 +80,7 @@ a[is=promo] > p {
 
 a[is=promo] {
   background: #EBEDFA;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
   display: grid;
   grid-template-columns: 1fr;
   padding: 3.2rem 2.4rem;

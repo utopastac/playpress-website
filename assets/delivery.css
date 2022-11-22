@@ -40,7 +40,7 @@ div[is=delivery] > p, div[is=delivery] {
 
 div[is=delivery] {
   margin: 0;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   max-width: 100%;
   padding: 1.6rem;
   color: #2D3788;
@@ -50,7 +50,7 @@ div[is=delivery] {
 div[is=delivery] div[is=delivery-charges] {
   background: #FFFFFF;
   color: #0A122A;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   padding: 2.4rem;
   margin-top: 2.4rem;
 }
@@ -96,7 +96,7 @@ div[is=delivery] > p svg {
 div[is=delivery].active {
   color: white;
   background: #2D3788;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
 }
 div[is=delivery].active div[is=delivery-content] {
   visibility: visible;

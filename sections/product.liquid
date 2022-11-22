@@ -62,11 +62,12 @@
         {% render 'delivery', expanded: true %}
 
         <div class="description">{{ product.description }}</div>
-        {% render 'sharing' %}
+
+        {% render 'universal-features' %}
+
+        {% comment %} {% render 'sharing' %} {% endcomment %}
       </div><!--End product content> -->
     </section>
-
-    {% render 'universal-features' %}
 
     <div id="gallery-lightbox">
       <div class="container">
@@ -84,7 +85,7 @@
       </div>
       <div class="icon">
         <img
-          src="{{ 'close.svg' | asset_url }}"
+          src="{{ 'icon-close.svg' | asset_url }}"
           alt=""
           loading="lazy"
           width="24"

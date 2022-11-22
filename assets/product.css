@@ -8,14 +8,14 @@ main[is=product] > div .description ul li {
 main[is=product] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
 main[is=product] > div form button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(2);
+  border-radius: units(4);
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
@@ -89,7 +89,8 @@ main[is=product] > div .description h6, main[is=product] > div .description h3, 
 main[is=product] > div .description h5 {
   font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: -0.3px;
+  letter-spacing: 150%px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   main[is=product] > div .description h5 {
@@ -175,7 +176,7 @@ main[is=product] > div .description h6 {
 main[is=product] > div .description hr {
   height: 1;
   border: none;
-  background: #DDE2E8;
+  background: #F2F2F2;
   margin: 3.2rem 0 2.4rem 0;
 }
 
@@ -195,7 +196,7 @@ main[is=product] > div .description > div * {
   margin-bottom: 1.6rem;
 }
 main[is=product] > div img {
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   width: 100%;
   cursor: pointer;
 }

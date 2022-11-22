@@ -1,10 +1,10 @@
 $input: $blue-1000
 $input-icon: $blue-1000
 $input-focus: $yolk-1000
-$on-focus: $black
-$on-focus-link: $black
-$on-focus-visited: $black
-$on-focus-active: $black
+$on-focus: $grey-1200
+$on-focus-link: $grey-1200
+$on-focus-visited: $grey-1200
+$on-focus-active: $grey-1200
   
 form
 
@@ -22,7 +22,7 @@ fieldset
       position: relative
 
 legend
-  color: $black
+  color: $grey-1200
   font-size: 1.5em
   margin-bottom: 1rem
 
@@ -51,7 +51,7 @@ textarea
   font-size: inherit
   max-width: 100%
   padding: units(1)
-  @extend %body-s
+  @extend %body-3
 
 input::placeholder,
 select::placeholder,
@@ -187,9 +187,9 @@ button, input[type="submit"]
   background-color: $accent
   border: none
   border-radius: $border-s
-  color: $black
+  color: $grey-1200
   font-family: inherit
-  @extend %body-xs
+  @extend %body-4
   @extend %medium
   padding: units(0.5) units(1)
 
@@ -247,8 +247,8 @@ a
 
 ::-moz-selection
   background-color: $accent
-  color: $black
+  color: $grey-1200
 
 ::selection
   background-color: $accent
-  color: $black
+  color: $grey-1200

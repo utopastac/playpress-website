@@ -1,6 +1,9 @@
 <div is="hero-content">
+  {% if block.settings.subtitle != blank %}
+    <h4>{{ block.settings.subtitle | escape }}</h4>
+  {% endif %}
   <h1>{{ section.settings.heading | escape }}</h1>
-  <p is="lede">{{ section.settings.text }}</p>
+  <p>{{ section.settings.text }}</p>
   {%- if section.settings.link_url != blank -%}
     <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
   {%- endif -%}

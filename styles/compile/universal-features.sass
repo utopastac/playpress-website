@@ -1,7 +1,7 @@
 @import '../assets'
 
 div[is="universal-features"]
-  @extend %body-s
+  @extend %body-3
   margin: units(4) 0
 
   ul
@@ -13,14 +13,22 @@ div[is="universal-features"]
     background: $grey-100
     border-radius: $border-s
     padding: units(2)
+    display: grid
+    grid-template-columns: units(12) 1fr
+    grid-gap: units(2)
 
-    h4
-      @extend %heading-s
-      margin-bottom: units(1)
-    
-    p
-      @extend %body-s
+    img
+      border-radius: border-s
+
+    div
+
+      h4
+        @extend %overline
+        margin-bottom: units(0.5)
+      
+      p
+        @extend %body-3
   
   @include min($screen-m)
     ul
-      grid-template-columns: repeat(4, 1fr)
+      // grid-template-columns: repeat(4, 1fr)

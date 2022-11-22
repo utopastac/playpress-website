@@ -5,7 +5,7 @@
   justify-content: center;
   border: 1.5px solid #2D3788;
   cursor: pointer;
-  border-radius: units(1);
+  border-radius: units(3);
   padding: 0 1.2rem;
   color: #2D3788;
   height: 3.2rem;
@@ -70,7 +70,7 @@
   height: 100%;
 }
 [is=product-promo] img {
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
 }
 [is=product-promo] > div {
   display: flex;

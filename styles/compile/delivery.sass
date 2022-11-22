@@ -7,12 +7,12 @@ div[is="delivery"]
   padding: units(2)
   color: $blue-1000  
   cursor: pointer    
-  @extend %body-s
+  @extend %body-3
   border: 1px solid $blue-1000
 
   div[is="delivery-charges"]
     background: $white
-    color: $black
+    color: $grey-1200
     border-radius: $border-s
     padding: units(3)
     margin-top: units(3)
@@ -22,14 +22,14 @@ div[is="delivery"]
     height: 0
 
     h3
-      @extend %heading-m
+      @extend %heading-3
       margin-bottom: units(1)
 
     p + h3
       margin-top: units(4)
 
     h4
-      @extend %heading-m
+      @extend %heading-3
       margin-bottom: units(1)
     
     table
@@ -37,7 +37,7 @@ div[is="delivery"]
 
       td
         padding: units(1) 0
-        border-color: rgba($black, 0.3)
+        border-color: rgba($grey-1200, 0.3)
 
       td:last-child
         text-align: right
@@ -54,7 +54,7 @@ div[is="delivery"]
     margin-bottom: 0
     justify-content: center
     align-items: center
-    @extend %body-s
+    @extend %body-3
     user-select: none
 
     svg 

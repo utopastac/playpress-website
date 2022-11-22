@@ -1,10 +1,10 @@
 div[is=prominent-features] > div {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  margin: 0 3.2rem;
 }
 
-article[is=prominent-feature] div h3 {
+article[is=prominent-feature] div h4, article[is=prominent-feature] div h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
@@ -31,6 +31,20 @@ article[is=prominent-feature] div h3 {
   }
 }
 
+article[is=prominent-feature] div h4 {
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: 150%px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  article[is=prominent-feature] div h4 {
+    font-size: 1.6rem;
+    line-height: 115%;
+    letter-spacing: -0.32px;
+  }
+}
+
 article[is=prominent-feature] div p {
   font-size: 1.5rem;
   line-height: 140%;
@@ -46,12 +60,12 @@ article[is=prominent-feature] div p {
 
 article[is=prominent-feature] {
   background: #FFFFFF;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
   overflow: hidden;
 }
 article[is=prominent-feature] img {
   width: 100%;
-  border-radius: 1.6rem;
+  border-radius: 3.2rem;
   margin-bottom: 1.6rem;
 }
 div[is=prominent-features] {
