@@ -1,6 +1,6 @@
 <div is="hero-content">
-  {% if block.settings.subtitle != blank %}
-    <h4>{{ block.settings.subtitle | escape }}</h4>
+  {% if section.settings.subtitle != blank %}
+    <h4>{{ section.settings.subtitle | escape }}</h4>
   {% endif %}
   <h1>{{ section.settings.heading | escape }}</h1>
   <p>{{ section.settings.text }}</p>
