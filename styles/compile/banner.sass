@@ -2,10 +2,13 @@
   
 section[is="banner"]
   position: relative
-  margin: units(4) 0  
+  margin: units(5) 0  
 
   div[is="hero-content"]
-    padding: units(3)
+    padding: units(5)
+    background: white
+    position: relative
+    border-radius: $border-m
 
   > a
     display: block
@@ -13,28 +16,30 @@ section[is="banner"]
       @extend %main-content
 
   .banner-content
-    background: $blue-1000
-    border-radius: $border-l
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+    aspect-ratio: 2 / 1
+    padding: units(5)
+    position: relative
     overflow: hidden
-    display: block
+    border-radius: $border-m
 
-    h2, p
-        color: $white
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
 
     h2
+      @extend %overline
+
+    h3
       @extend %heading-2
 
     p
       @extend %body-2
-    
-    img
-      position: relative
-      border-radius: 0
 
   @include min($screen-m)
-    .banner-content
-      display: grid
-      grid-template-columns: 1fr 2fr 
-      align-items: center
-      justify-items: center
+
   

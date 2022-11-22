@@ -17,17 +17,6 @@ $font-heading-weight: $font-bold-weight
 //
 // TYPOGRAPHY
 //
-$type-size-xl: 48 
-$type-size-l: 28 
-$type-size-m: 18 
-$type-size-s: 16
-$type-size-xs: 14
-//
-$type-size-xl-mobile: 32 
-$type-size-l-mobile: 24 
-$type-size-m-mobile: 17
-$type-size-s-mobile: 15
-$type-size-xs-mobile: 12
 //
 $heading-line-height: 115%
 $body-line-height: 140%
@@ -77,57 +66,57 @@ $all-caps-letter-spacing: 0.1
 //
 %heading-1
   @extend %heading
-  @include fontSize($type-size-xl-mobile, $heading-line-height, $heading-letter-spacing)
+  @include fontSize(38, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-xl, $heading-line-height, $heading-letter-spacing)
+    @include fontSize(56, $heading-line-height, $heading-letter-spacing)
 
 %heading-2
   @extend %heading
-  @include fontSize($type-size-l-mobile, $heading-line-height, $heading-letter-spacing)
+  @include fontSize(32, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-l, $heading-line-height, $heading-letter-spacing)
+    @include fontSize(42, $heading-line-height, $heading-letter-spacing)
 
 %heading-3
   @extend %heading
-  @include fontSize($type-size-m-mobile, $heading-line-height, $heading-letter-spacing)
+  @include fontSize(27, $heading-line-height, $heading-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-m, $heading-line-height, $heading-letter-spacing)
+    @include fontSize(34, $heading-line-height, $heading-letter-spacing)
     
 %overline
   @extend %heading
-  @include fontSize($type-size-s-mobile, $heading-line-height, 10%)
+  @include fontSize(15, $heading-line-height, 10%)
   text-transform: uppercase
   @include min($screen-l)
-    @include fontSize($type-size-s, $heading-line-height, $heading-letter-spacing)
+    @include fontSize(16, $heading-line-height, 10%)
 //
     
 %body-1
   @extend %regular
   @extend %paragraph
-  @include fontSize($type-size-l-mobile, $body-line-height, $body-letter-spacing)
+  @include fontSize(22, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-l, $body-line-height, $body-letter-spacing)
+    @include fontSize(26, $body-line-height, $body-letter-spacing)
 
 %body-2
   @extend %regular
   @extend %paragraph
-  @include fontSize($type-size-m-mobile, $body-line-height, $body-letter-spacing)
+  @include fontSize(19, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-m, $body-line-height, $body-letter-spacing)
+    @include fontSize(21, $body-line-height, $body-letter-spacing)
 
 %body-3
   @extend %regular
   @extend %paragraph
-  @include fontSize($type-size-s-mobile, $body-line-height, $body-letter-spacing)
+  @include fontSize(17, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-s, $body-line-height, $body-letter-spacing)
+    @include fontSize(18, $body-line-height, $body-letter-spacing)
 
 %body-4
   @extend %regular
   @extend %paragraph
-  @include fontSize($type-size-xs-mobile, $body-line-height, $body-letter-spacing)
+  @include fontSize(14, $body-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize($type-size-xs, $body-line-height, $body-letter-spacing)
+    @include fontSize(15, $body-line-height, $body-letter-spacing)
 //
 //
 //

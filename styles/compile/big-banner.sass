@@ -6,6 +6,7 @@ section[is="big-banner"]
 
   div[is="hero-content"]
     padding: units(3)
+    max-width: size(480)
 
   > a
     display: block
@@ -13,19 +14,23 @@ section[is="big-banner"]
       @extend %main-content
 
   .banner-content
-    background: $blue-1000
+    background: $green-1000
     border-radius: $border-l
     overflow: hidden
     display: block
 
-    h2, p
+    h2, h3, p
         color: $white
 
     h2
-      @extend %heading-2
+      @extend %overline
+
+    h3
+      @extend %heading-3
 
     p
-      @extend %body-2
+      @extend %button-style
+      margin-top: units(3)
     
     img
       position: relative
@@ -34,7 +39,7 @@ section[is="big-banner"]
   @include min($screen-m)
     .banner-content
       display: grid
-      grid-template-columns: 1fr 2fr 
+      grid-template-columns: 1fr 1fr 
       align-items: center
       justify-items: center
   

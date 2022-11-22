@@ -19,26 +19,26 @@ section[is=logos] > div header p {
 }
 
 section[is=logos] > div header h3 {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   line-height: 115%;
-  letter-spacing: -0.48px;
+  letter-spacing: -0.64px;
 }
 @media screen and (min-width: 1200px) {
   section[is=logos] > div header h3 {
-    font-size: 2.8rem;
+    font-size: 4.2rem;
     line-height: 115%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.84px;
   }
 }
 
 section[is=logos] > div header p {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   section[is=logos] > div header p {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }

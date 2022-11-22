@@ -27,52 +27,52 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
 }
 
 footer[is=footer] section[is=main-links] h2 {
-  font-size: 1.7rem;
+  font-size: 2.7rem;
   line-height: 115%;
-  letter-spacing: -0.34px;
+  letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1200px) {
   footer[is=footer] section[is=main-links] h2 {
-    font-size: 1.8rem;
+    font-size: 3.4rem;
     line-height: 115%;
-    letter-spacing: -0.36px;
+    letter-spacing: -0.68px;
   }
 }
 
 footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
 footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
   }

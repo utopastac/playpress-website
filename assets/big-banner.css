@@ -4,7 +4,25 @@ section[is=big-banner] > a > div {
   margin: 0 3.2rem;
 }
 
-section[is=big-banner] .banner-content h2 {
+section[is=big-banner] .banner-content p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: units(4);
+  padding: 0 3.2rem;
+  color: white;
+  background-color: #2D3788;
+  height: 5.6rem;
+}
+section[is=big-banner] .banner-content p:hover {
+  background-color: #333f9b;
+}
+section[is=big-banner] .banner-content p:active {
+  box-shadow: 1px 2px 0 0 #FAB638;
+  background-color: #272f75;
+}
+
+section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content h3 {
   font-family: Sofia Pro, "NotoSans", "NotoSansJP", "NotoSansKR", sans-serif;
   font-weight: 700;
 }
@@ -18,27 +36,45 @@ section[is=big-banner] .banner-content p {
   font-weight: 400;
 }
 
-section[is=big-banner] .banner-content h2 {
-  font-size: 2.4rem;
+section[is=big-banner] .banner-content p {
+  font-weight: 700;
+}
+
+section[is=big-banner] .banner-content h3 {
+  font-size: 2.7rem;
   line-height: 115%;
-  letter-spacing: -0.48px;
+  letter-spacing: -0.54px;
+}
+@media screen and (min-width: 1200px) {
+  section[is=big-banner] .banner-content h3 {
+    font-size: 3.4rem;
+    line-height: 115%;
+    letter-spacing: -0.68px;
+  }
+}
+
+section[is=big-banner] .banner-content h2 {
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: 150%px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
   section[is=big-banner] .banner-content h2 {
-    font-size: 2.8rem;
+    font-size: 1.6rem;
     line-height: 115%;
-    letter-spacing: -0.56px;
+    letter-spacing: 160%px;
   }
 }
 
 section[is=big-banner] .banner-content p {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   section[is=big-banner] .banner-content p {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -50,18 +86,22 @@ section[is=big-banner] {
 }
 section[is=big-banner] div[is=hero-content] {
   padding: 2.4rem;
+  max-width: 48rem;
 }
 section[is=big-banner] > a {
   display: block;
 }
 section[is=big-banner] .banner-content {
-  background: #2D3788;
+  background: #2D8872;
   border-radius: 4rem;
   overflow: hidden;
   display: block;
 }
-section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content p {
+section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content h3, section[is=big-banner] .banner-content p {
   color: #FFFFFF;
+}
+section[is=big-banner] .banner-content p {
+  margin-top: 2.4rem;
 }
 section[is=big-banner] .banner-content img {
   position: relative;
@@ -70,7 +110,7 @@ section[is=big-banner] .banner-content img {
 @media screen and (min-width: 700px) {
   section[is=big-banner] .banner-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
   }
