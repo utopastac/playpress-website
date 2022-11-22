@@ -86,47 +86,6 @@
         "settings": {
         }
       },
-      "1627677460135d8c42": {
-        "type": "prominent-features",
-        "blocks": {
-          "1627677460135d8c42-0": {
-            "type": "prominent_feature",
-            "settings": {
-              "enable_image": true,
-              "image": "shopify:\/\/shop_images\/Custom_Design_RNLI_Inshore_Lifeboat-01-01.jpg",
-              "link_text": "",
-              "link_url": "",
-              "title": "Saving plastic and saving lives",
-              "subtitle": "Add a subtitle",
-              "text": "<p>We created a unique playset for the RNLI to helping to raise valuable funds.<\/p>"
-            }
-          },
-          "1627677460135d8c42-1": {
-            "type": "prominent_feature",
-            "settings": {
-              "enable_image": true,
-              "image": "shopify:\/\/shop_images\/Space-Station-Gift-Of-The_Year_Highly-Commended-02.jpg",
-              "link_text": "",
-              "link_url": "",
-              "title": "Exploring space one small step at a time",
-              "subtitle": "Add a subtitle",
-              "text": "<p>A year later, we made space more hands-on with the Science Museum.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "1627677460135d8c42-0",
-          "1627677460135d8c42-1"
-        ],
-        "settings": {
-          "title": "Playpress studio",
-          "text": "Looking for a bespoke product that’s a little more… playful? We can work with you to design and produce relatively small, affordable runs of your very own Playpress set.",
-          "grid": 2,
-          "show_signpost_link": true,
-          "link_text": "Learn more about Playpress studio",
-          "link_url": "shopify:\/\/pages\/studio"
-        }
-      },
       "about-brand": {
         "type": "about-brand",
         "settings": {
@@ -241,6 +200,64 @@
           "link_text": "View all",
           "link_url": ""
         }
+      },
+      "596be5df-64e8-4ac6-aa05-eba2affa0b31": {
+        "type": "gap",
+        "settings": {
+        }
+      },
+      "374a1a21-6dd3-4c54-8468-049ad77014ea": {
+        "type": "big-banner",
+        "settings": {
+          "heading": "Sustainability",
+          "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+          "link_text": "Learn more",
+          "link_url": "shopify:\/\/pages\/sustainability",
+          "image": "shopify:\/\/shop_images\/sustainability.jpg"
+        }
+      },
+      "b19a403a-f605-4887-957c-be3ec277c046": {
+        "type": "page-features",
+        "blocks": {
+          "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-0": {
+            "type": "page_feature",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Cover_Image_1920x1080_f73dde4c-84b3-4941-8856-c9308f64f4a7.png",
+              "link_text": "About Playpress",
+              "link_url": "",
+              "title": "Award-winning & eco-friendly",
+              "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
+            }
+          },
+          "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-1": {
+            "type": "page_feature",
+            "settings": {
+              "enable_image": false,
+              "link_text": "Bespoke sets",
+              "link_url": "shopify:\/\/pages\/studio",
+              "title": "Studio",
+              "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
+            }
+          },
+          "437d887c-504f-4cbc-a795-00b31560b553": {
+            "type": "page_feature",
+            "settings": {
+              "enable_image": false,
+              "link_text": "Stock Playpress",
+              "link_url": "shopify:\/\/pages\/stock-us",
+              "title": "Stockists",
+              "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
+            }
+          }
+        },
+        "block_order": [
+          "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-0",
+          "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-1",
+          "437d887c-504f-4cbc-a795-00b31560b553"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -249,8 +266,10 @@
       "1623767875c4b2fbf3",
       "3efbe53c-83b2-44bf-b5e5-17529cced97b",
       "592589cc-23f4-460c-aaa1-a8c5fa26628f",
-      "1627677460135d8c42",
-      "bbd3a91d-9cb3-4462-a206-60dab8f0d316"
+      "596be5df-64e8-4ac6-aa05-eba2affa0b31",
+      "bbd3a91d-9cb3-4462-a206-60dab8f0d316",
+      "374a1a21-6dd3-4c54-8468-049ad77014ea",
+      "b19a403a-f605-4887-957c-be3ec277c046"
     ]
   }
 }
