@@ -1,0 +1,47 @@
+@import '../assets'
+
+article[is="page-feature"]
+  background: $white
+  border-radius: $border-m
+  overflow: hidden 
+
+  img
+    width: 100%
+    border-radius: $border-m
+    margin-bottom: units(2)
+
+  div
+
+    h3
+      @extend %heading-2
+
+    h4
+      @extend %overline
+    
+    p
+      @extend %body-3
+  
+  
+
+div[is="page-features"]
+  padding-bottom: units(4)
+  
+  > div
+    @extend %main-content
+    grid-gap: units(4)
+    display: grid
+    justify-content: center
+    align-content: center
+    justify-items: center
+
+  @include min($screen-s)
+    > div
+      grid-template-columns: repeat(2, minmax(size(340), size(480)))
+    
+      &.one 
+        grid-template-columns: repeat(1, minmax(size(300), size(480)))
+      &.three 
+        grid-template-columns: repeat(3, 1fr)
+      &.four 
+        grid-template-columns: repeat(4, 1fr)
+  
