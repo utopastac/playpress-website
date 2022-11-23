@@ -10,8 +10,9 @@ article[is="accordian-item"]
 
   header
     padding: units(3) 0
-
   
+  div
+    padding: 0 0 units(3) 0
 
   h4
     @extend %body-1
@@ -52,7 +53,6 @@ div[is="accordian"]
     @include min($screen-m)
       display: block
       img
-        border: 1px solid $blue-1000
         display: none
         &.active
           display: block

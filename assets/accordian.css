@@ -53,6 +53,9 @@ article[is=accordian-item] {
 article[is=accordian-item] header {
   padding: 2.4rem 0;
 }
+article[is=accordian-item] div {
+  padding: 0 0 2.4rem 0;
+}
 article[is=accordian-item] p {
   display: none;
 }
@@ -89,7 +92,6 @@ div[is=accordian] #accordian-images {
     display: block;
   }
   div[is=accordian] #accordian-images img {
-    border: 1px solid #2D3788;
     display: none;
   }
   div[is=accordian] #accordian-images img.active {
