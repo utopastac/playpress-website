@@ -60,7 +60,7 @@ button[is=command]:after {
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  margin-left: 0.8rem;
+  margin-left: 0.4rem;
 }
 button[is=command]:hover {
   background-color: #EBEDFA;

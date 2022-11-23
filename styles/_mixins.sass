@@ -171,6 +171,9 @@ $bigUnits: 40
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
 
+    @include min($screen-l)
+      grid-template-columns: repeat(auto-fit, minmax(size(240), 1fr))
+
 %block-link
   display: block
 
@@ -249,7 +252,7 @@ $bigUnits: 40
     -webkit-mask-position: center
     -webkit-mask-repeat: no-repeat
     -webkit-mask-size: contain
-    margin-left: units(1)
+    margin-left: units(0.5)
 
   &:hover
     background-color: $blue-200

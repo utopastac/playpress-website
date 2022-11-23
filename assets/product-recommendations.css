@@ -3,6 +3,11 @@ div[is=product-promos] > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
+@media screen and (min-width: 1080px) {
+  div[is=product-promos] > div {
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  }
+}
 
 div[is=product-promos] > div {
   max-width: 140rem;

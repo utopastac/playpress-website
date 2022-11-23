@@ -21,7 +21,7 @@
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  margin-left: 0.8rem;
+  margin-left: 0.4rem;
 }
 [is=product-promo] > div input[type=submit]:hover, [is=product-promo] button:hover {
   background-color: #EBEDFA;
