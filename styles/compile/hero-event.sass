@@ -4,24 +4,14 @@ section[is="hero-event"]
   position: relative
   @include cover-background(url(../hello.png))
 
-  > div
+  div[is="hero-event-main"]
     @extend %main-content
     // min-height: 50vh
-    display: flex
-    align-items: flex-end
-    justify-content: flex-start
-    aspect-ratio: 2 / 1
-    padding: units(5)
     position: relative
     margin: units(2) 0 units(4) 0
     overflow: hidden
-    border-radius: $border-m
 
     img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
 
     h1
       @extend %heading-1
@@ -33,11 +23,35 @@ section[is="hero-event"]
       @extend %body-1
       margin-bottom: units(4)
 
-    div[is="hero-content"]
-      position: relative
-      background: $white
-      padding: units(4)
+    div[is="button"]
+      margin-top: units(3)
+
+    @include min($screen-l)
       border-radius: $border-m
-      flex: 1
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      aspect-ratio: 2 / 1
+      padding: units(5)
+
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+
+  div[is="hero-content"]
+    position: relative
+    background: $white   
+    padding-top: units(2) 
+
+    @include min($screen-m)
+      display: flex
+
+    @include min($screen-l)
+      display: block
+      width: 50%
+      padding: units(4)
       max-width: size(560)
+      border-radius: $border-m
   

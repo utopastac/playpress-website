@@ -1,4 +1,4 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
   div[is=gallery] > div {
     white-space: nowrap;
     overflow-x: scroll;
@@ -12,14 +12,14 @@
     margin-right: 0.8rem;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   div[is=gallery] > div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1.6rem;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   div[is=gallery] > div {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.6rem;
@@ -57,7 +57,7 @@
 #gallery-lightbox .container img {
   margin: 3.2rem 0;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   #gallery-lightbox {
     padding: 6.4rem;
   }

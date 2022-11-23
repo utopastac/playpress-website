@@ -35,7 +35,7 @@ footer[is=footer] section[is=main-links] h2 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   footer[is=footer] section[is=main-links] h2 {
     font-size: 1.5rem;
     line-height: 115%;
@@ -48,7 +48,7 @@ footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
     font-size: 2.6rem;
     line-height: 140%;
@@ -61,7 +61,7 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
     font-size: 1.8rem;
     line-height: 140%;
@@ -74,7 +74,7 @@ footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > u
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
     font-size: 1.5rem;
     line-height: 140%;
@@ -88,6 +88,9 @@ footer[is=footer] {
   position: relative;
   margin-top: 6.4rem;
   border-top: 12px solid #FAB638;
+}
+footer[is=footer] > div {
+  padding: 0 2.4rem;
 }
 footer[is=footer] div[is=playpress-pete] {
   padding: 0.8rem;
@@ -219,7 +222,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a {
 footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
   margin-right: 0.5rem;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   footer[is=footer] {
     padding: 2.4rem 2.4rem 4rem 2.4rem;
   }
@@ -231,7 +234,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
     margin-right: 2.4rem;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   footer[is=footer] section[is=meta] {
     display: grid;
     grid-template-columns: 2fr 1fr;

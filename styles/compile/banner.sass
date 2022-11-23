@@ -5,10 +5,20 @@ section[is="banner"]
   margin: units(5) 0  
 
   div[is="hero-content"]
-    padding: units(5)
-    background: white
     position: relative
-    border-radius: $border-m
+    background: $white   
+    padding-top: units(2) 
+
+    @include min($screen-m)
+      display: flex
+      justify-content: space-between
+
+    @include min($screen-l)
+      display: block
+      width: 50%
+      padding: units(4)
+      max-width: size(560)
+      border-radius: $border-m
 
   > a
     display: block
@@ -16,20 +26,11 @@ section[is="banner"]
       @extend %main-content
 
   .banner-content
-    display: flex
-    align-items: flex-end
-    justify-content: flex-start
-    aspect-ratio: 2 / 1
-    padding: units(5)
     position: relative
+    margin: units(2) 0 units(4) 0
     overflow: hidden
-    border-radius: $border-m
 
     img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
 
     h2
       @extend %overline
@@ -37,8 +38,22 @@ section[is="banner"]
     h3
       @extend %heading-2
 
-    p
-      @extend %body-2
+    div[is="button"]
+      margin-top: units(3)
+
+    @include min($screen-l)
+      border-radius: $border-m
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      aspect-ratio: 2 / 1
+      padding: units(5)
+
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
 
   @include min($screen-m)
 

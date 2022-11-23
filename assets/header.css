@@ -12,7 +12,7 @@ header[is=header] > p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   header[is=header] > p {
     font-size: 1.8rem;
     line-height: 140%;
@@ -82,7 +82,7 @@ header[is=header] > p > a > strong {
   margin-right: 0.5rem;
   width: 2rem;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   header[is=header] {
     grid-template-columns: 16rem 1fr 19.2rem;
     grid-template-rows: auto;

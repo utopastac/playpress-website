@@ -1,27 +1,26 @@
-div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+div[is=delivery] header, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+div[is=delivery] header, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+  font-weight: 400;
+}
+
+div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-weight: 700;
 }
 
-div[is=delivery] header, div[is=delivery] {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-div[is=delivery] header, div[is=delivery] {
-  font-weight: 400;
-}
-
 div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
+  font-size: 2.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
+    font-size: 2.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 }
 
@@ -30,7 +29,7 @@ div[is=delivery] header, div[is=delivery] {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   div[is=delivery] header, div[is=delivery] {
     font-size: 1.8rem;
     line-height: 140%;

@@ -8,29 +8,41 @@
   min-height: 0
   height: 100%
 
+  button
+    @extend %micro-button-style
+    display: none
+
+    @include min($screen-l)
+      display: flex
+
   img
     border-radius: $border-m
 
   > div
-    display: flex
     flex-direction: row
     justify-content: space-between
     height: 100%
     padding-top: units(2)
+
+    @include min($screen-l)
+      display: flex
 
     input[type="submit"]
       @extend %micro-button-style
 
     h3
       @extend %body-2
-      @extend %medium
 
     > div
-      margin-left: units(3)
       display: flex
       flex-direction: column
-      align-items: flex-end
-      justify-content: space-between
+
+      @include max($screen-l)
+        margin-top: units(0.5)
+
+      @include min($screen-l)
+        align-items: flex-end
+        margin-left: units(3)
 
       p
         @extend %body-2
@@ -46,6 +58,3 @@
     h3
       background-color: $focus
       box-shadow: 0 0 0 3px focus
-
-  &:active
-  &:hover

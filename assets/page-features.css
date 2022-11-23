@@ -26,7 +26,7 @@ article[is=page-feature] div h3 {
   line-height: 115%;
   letter-spacing: -0.54px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   article[is=page-feature] div h3 {
     font-size: 3.4rem;
     line-height: 115%;
@@ -40,7 +40,7 @@ article[is=page-feature] div h4 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   article[is=page-feature] div h4 {
     font-size: 1.5rem;
     line-height: 115%;
@@ -53,7 +53,7 @@ article[is=page-feature] div p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   article[is=page-feature] div p {
     font-size: 1.8rem;
     line-height: 140%;
@@ -73,6 +73,15 @@ article[is=page-feature]:nth-child(1) {
   background-position: center center;
   display: flex;
   align-items: flex-end;
+}
+article[is=page-feature]:nth-child(1) a {
+  color: #2D3788;
+}
+article[is=page-feature]:nth-child(1) a:after {
+  background: #2D3788;
+}
+article[is=page-feature]:nth-child(1) a:hover {
+  border-bottom-color: #2D3788;
 }
 article[is=page-feature]:nth-child(1) > div {
   background: white;
@@ -97,6 +106,9 @@ article[is=page-feature] img {
   border-radius: 3.2rem;
   margin-bottom: 1.6rem;
 }
+article[is=page-feature] div h4 {
+  margin-bottom: 0.4rem;
+}
 div[is=page-features] {
   padding-bottom: 3.2rem;
 }
@@ -107,7 +119,7 @@ div[is=page-features] > div {
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   div[is=page-features] > div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

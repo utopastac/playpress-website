@@ -273,10 +273,14 @@ hr
   margin-left: 0
   margin-right: 0
 
-a[is="button"]
+a[is="button"], p[is="button"], div[is="button"]
   @extend %button-style
-a[is="text-button"]
+  
+a[is="text-button"], p[is="text-button"], div[is="text-button"]
   @extend %text-button-style
 
 .main-content
   @extend %main-content
+
+button, input[type="submit"]
+  @extend %button-style

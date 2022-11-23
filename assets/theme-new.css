@@ -26,46 +26,10 @@
   font-weight: 700;
   src: url(sofia-pro-bold-italic.woff2) format("woff2");
 }
-div[is=product-promos] > div.two {
-  grid-template-columns: 1fr;
-}
-div[is=product-promos] > div.three {
-  grid-template-columns: 1fr;
-}
-div[is=product-promos] > div.four {
-  grid-template-columns: 1fr;
-}
-@media screen and (min-width: 550px) {
-  div[is=product-promos] > div.two {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div[is=product-promos] > div.three {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 770px) {
-  div[is=product-promos] > div.three {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 1080px) {
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 div[is=product-promos] > div {
   grid-gap: 3.2rem;
   display: grid;
-  grid-column: auto/span 1;
-  grid-row: 3;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
 .main-content, div[is=product-promos] > div {
@@ -73,7 +37,7 @@ div[is=product-promos] > div {
   margin: 0 auto;
 }
 
-a[is=button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -82,62 +46,89 @@ a[is=button] {
   color: white;
   background-color: #2D3788;
   height: 5.6rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
 }
-a[is=button]:hover {
+button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #FFFFFF;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
+}
+button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
   background-color: #333f9b;
 }
-a[is=button]:active {
+button:active, input[type=submit]:active, a[is=button]:active, p[is=button]:active, div[is=button]:active {
   box-shadow: 1px 2px 0 0 #FAB638;
   background-color: #272f75;
 }
 
-a[is=text-button] {
+a[is=text-button], p[is=text-button], div[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(4);
   color: #2D3788;
   height: 5.6rem;
 }
-a[is=text-button] span {
-  padding-bottom: 0.4rem;
-  border-bottom: 0.2rem solid #2D3788;
+a.white[is=text-button], p.white[is=text-button], div.white[is=text-button] {
+  color: white;
 }
-a[is=text-button]:hover {
-  background: white;
+a.white[is=text-button]:after, p.white[is=text-button]:after, div.white[is=text-button]:after {
+  background: #FFFFFF;
 }
-a[is=text-button]:hover span {
-  border-bottom-color: transparent;
+a[is=text-button]:after, p[is=text-button]:after, div[is=text-button]:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #2D3788;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
 }
-button, input[type=submit], input,
+a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
+  text-decoration: underline;
+}
+input,
 select,
-textarea, a[is=button], a[is=text-button] {
+textarea, button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-button, input[type=submit], input,
+input,
 select,
-textarea, a[is=button], a[is=text-button] {
+textarea, button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 400;
 }
 
-button, input[type=submit], label,
+label,
 legend {
   font-weight: 500;
 }
 
-a[is=button], a[is=text-button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 700;
 }
 
-a[is=button], a[is=text-button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
-  a[is=button], a[is=text-button] {
+@media screen and (min-width: 1080px) {
+  button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -151,24 +142,11 @@ textarea {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   input,
 select,
 textarea {
     font-size: 1.8rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-button, input[type=submit] {
-  font-size: 1.4rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1200px) {
-  button, input[type=submit] {
-    font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -343,27 +321,6 @@ select {
   background-size: 5px 5px, 5px 5px;
 }
 
-button, input[type=submit] {
-  background-color: #FAB638;
-  border: none;
-  border-radius: 2.4rem;
-  color: #0A122A;
-  font-family: inherit;
-  padding: 0.4rem 0.8rem;
-}
-button:hover, input[type=submit]:hover {
-  background-color: #FAB638;
-}
-button:active, input[type=submit]:active {
-  box-shadow: none;
-  position: relative;
-  top: 2px;
-  transition-duration: 0s;
-}
-button:focus-visible, input[type=submit]:focus-visible {
-  background-color: #0A122A;
-}
-
 a,
 button,
 summary {
@@ -422,46 +379,10 @@ a:visited:focus-visible {
   color: #0A122A;
 }
 
-div[is=product-promos] > div.two {
-  grid-template-columns: 1fr;
-}
-div[is=product-promos] > div.three {
-  grid-template-columns: 1fr;
-}
-div[is=product-promos] > div.four {
-  grid-template-columns: 1fr;
-}
-@media screen and (min-width: 550px) {
-  div[is=product-promos] > div.two {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div[is=product-promos] > div.three {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 770px) {
-  div[is=product-promos] > div.three {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 1080px) {
-  div[is=product-promos] > div.four {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 div[is=product-promos] > div {
   grid-gap: 3.2rem;
   display: grid;
-  grid-column: auto/span 1;
-  grid-row: 3;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
 .main-content, div[is=product-promos] > div {
@@ -469,7 +390,7 @@ div[is=product-promos] > div {
   margin: 0 auto;
 }
 
-a[is=button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -478,62 +399,89 @@ a[is=button] {
   color: white;
   background-color: #2D3788;
   height: 5.6rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
 }
-a[is=button]:hover {
+button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #FFFFFF;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
+}
+button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
   background-color: #333f9b;
 }
-a[is=button]:active {
+button:active, input[type=submit]:active, a[is=button]:active, p[is=button]:active, div[is=button]:active {
   box-shadow: 1px 2px 0 0 #FAB638;
   background-color: #272f75;
 }
 
-a[is=text-button] {
+a[is=text-button], p[is=text-button], div[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3.2rem;
   color: #2D3788;
   height: 5.6rem;
 }
-a[is=text-button] span {
-  padding-bottom: 0.4rem;
-  border-bottom: 0.2rem solid #2D3788;
+a.white[is=text-button], p.white[is=text-button], div.white[is=text-button] {
+  color: white;
 }
-a[is=text-button]:hover {
-  background: white;
+a.white[is=text-button]:after, p.white[is=text-button]:after, div.white[is=text-button]:after {
+  background: #FFFFFF;
 }
-a[is=text-button]:hover span {
-  border-bottom-color: transparent;
+a[is=text-button]:after, p[is=text-button]:after, div[is=text-button]:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #2D3788;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
 }
-a[is=button], a[is=text-button], input,
+a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
+  text-decoration: underline;
+}
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button], input,
 select,
-textarea, button, input[type=submit] {
+textarea {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=button], a[is=text-button], input,
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button], input,
 select,
-textarea, button, input[type=submit] {
+textarea {
   font-weight: 400;
 }
 
 label,
-legend, button, input[type=submit] {
+legend {
   font-weight: 500;
 }
 
-a[is=button], a[is=text-button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 700;
 }
 
-a[is=button], a[is=text-button] {
+button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
-  a[is=button], a[is=text-button] {
+@media screen and (min-width: 1080px) {
+  button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -547,24 +495,11 @@ textarea {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   input,
 select,
 textarea {
     font-size: 1.8rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-button, input[type=submit] {
-  font-size: 1.4rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1200px) {
-  button, input[type=submit] {
-    font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -648,7 +583,7 @@ body.fixed {
   margin: 0 auto;
   padding: 2.4rem;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   #main {
     padding: 4rem;
   }
@@ -763,7 +698,7 @@ div[class=testimonial] > img {
 div[class=testimonial] > div > blockquote {
   margin-left: 0;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   div[class=testimonial] {
     display: flex;
   }

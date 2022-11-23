@@ -19,6 +19,22 @@ main[is=product] > div form button {
   color: white;
   background-color: #2D3788;
   height: 5.6rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+}
+main[is=product] > div form button:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #FFFFFF;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
 }
 main[is=product] > div form button:hover {
   background-color: #333f9b;
@@ -55,7 +71,7 @@ main[is=product] > div div[is=product-content] > header h1, main[is=product] > d
   line-height: 115%;
   letter-spacing: -0.76px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div div[is=product-content] > header h1, main[is=product] > div .description h1, main[is=product] > div .description .heading-l, main[is=product] > div .description ul li {
     font-size: 5.6rem;
     line-height: 115%;
@@ -68,7 +84,7 @@ main[is=product] > div .description h2, main[is=product] > div .description .hea
   line-height: 115%;
   letter-spacing: -0.64px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div .description h2, main[is=product] > div .description .heading-m {
     font-size: 4.2rem;
     line-height: 115%;
@@ -81,7 +97,7 @@ main[is=product] > div .description h6, main[is=product] > div .description h3, 
   line-height: 115%;
   letter-spacing: -0.54px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div .description h6, main[is=product] > div .description h3, main[is=product] > div .description .heading-s {
     font-size: 3.4rem;
     line-height: 115%;
@@ -95,7 +111,7 @@ main[is=product] > div .description h5 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div .description h5 {
     font-size: 1.5rem;
     line-height: 115%;
@@ -108,7 +124,7 @@ main[is=product] > div div[is=product-content] > header p, main[is=product] > di
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div div[is=product-content] > header p, main[is=product] > div .description h4, main[is=product] > div .description .body-0 {
     font-size: 2.6rem;
     line-height: 140%;
@@ -121,7 +137,7 @@ main[is=product] > div .description .body-1, main[is=product] > div .description
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div .description .body-1, main[is=product] > div .description .button-text, main[is=product] > div form button {
     font-size: 2.1rem;
     line-height: 140%;
@@ -134,7 +150,7 @@ main[is=product] > div .description .body-2, main[is=product] > div .description
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   main[is=product] > div .description .body-2, main[is=product] > div .description p, main[is=product] > div .description ul li {
     font-size: 1.8rem;
     line-height: 140%;
@@ -223,7 +239,7 @@ main[is=product] > div form > p {
   margin-bottom: 0;
   margin-top: 0;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   main[is=product] > div section {
     grid-column-gap: 4rem;
     align-items: flex-start;
@@ -231,12 +247,12 @@ main[is=product] > div form > p {
     grid-template-columns: 1.5fr 1fr;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   main[is=product] > div section {
     grid-template-columns: 1.2fr 1fr;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   main[is=product] > div section {
     grid-template-columns: 1.8fr 1fr;
   }

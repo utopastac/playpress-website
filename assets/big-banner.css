@@ -3,39 +3,8 @@ section[is=big-banner] > a > div {
   margin: 0 auto;
 }
 
-section[is=big-banner] .banner-content p {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: units(4);
-  padding: 0 3.2rem;
-  color: white;
-  background-color: #2D3788;
-  height: 5.6rem;
-}
-section[is=big-banner] .banner-content p:hover {
-  background-color: #333f9b;
-}
-section[is=big-banner] .banner-content p:active {
-  box-shadow: 1px 2px 0 0 #FAB638;
-  background-color: #272f75;
-}
-
 section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content h3 {
   font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-section[is=big-banner] .banner-content p {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-section[is=big-banner] .banner-content p {
-  font-weight: 400;
-}
-
-section[is=big-banner] .banner-content p {
   font-weight: 700;
 }
 
@@ -48,7 +17,7 @@ section[is=big-banner] .banner-content h3 {
   line-height: 115%;
   letter-spacing: -0.54px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=big-banner] .banner-content h3 {
     font-size: 3.4rem;
     line-height: 115%;
@@ -62,24 +31,11 @@ section[is=big-banner] .banner-content h2 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=big-banner] .banner-content h2 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
-  }
-}
-
-section[is=big-banner] .banner-content p {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1200px) {
-  section[is=big-banner] .banner-content p {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
   }
 }
 
@@ -103,14 +59,14 @@ section[is=big-banner] .banner-content {
 section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content h3, section[is=big-banner] .banner-content p {
   color: #FFFFFF;
 }
-section[is=big-banner] .banner-content p {
+section[is=big-banner] .banner-content div[is=button] {
   margin-top: 2.4rem;
 }
 section[is=big-banner] .banner-content img {
   position: relative;
   border-radius: 0;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   section[is=big-banner] .banner-content {
     display: grid;
     grid-template-columns: 1fr 1fr;

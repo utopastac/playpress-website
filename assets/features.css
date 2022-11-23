@@ -13,7 +13,7 @@ div[is=features] > div {
   grid-row: 3;
   margin-bottom: 0;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   div[is=features] > div {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -30,7 +30,7 @@ div[is=features] > div {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   div[is=features] > div.four {
     grid-template-columns: repeat(4, 1fr);
   }

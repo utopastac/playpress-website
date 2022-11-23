@@ -3,6 +3,6 @@ div[is=gap] {
 }
 @includ min($screen-m) {
   div[is=gap] {
-    height: 8rem;
+    height: 9.6rem;
   }
 }

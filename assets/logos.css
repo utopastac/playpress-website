@@ -22,7 +22,7 @@ section[is=logos] > div header h3 {
   line-height: 115%;
   letter-spacing: -0.64px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=logos] > div header h3 {
     font-size: 4.2rem;
     line-height: 115%;
@@ -35,7 +35,7 @@ section[is=logos] > div header p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=logos] > div header p {
     font-size: 2.1rem;
     line-height: 140%;
@@ -68,7 +68,7 @@ section[is=logos] li span {
 section[is=logos].no-top-padding {
   padding-top: 0;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   section[is=logos] > div {
     display: grid;
     grid-auto-flow: column;

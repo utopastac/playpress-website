@@ -13,6 +13,13 @@ article[is="page-feature"]
     background-position: center center
     display: flex
     align-items: flex-end
+
+    a
+      color: $blue-1000
+      &:after
+        background: $blue-1000
+      &:hover
+        border-bottom-color: $blue-1000
     
 
     > div
@@ -44,6 +51,7 @@ article[is="page-feature"]
 
     h4
       @extend %overline
+      margin-bottom: units(0.5)
     
     p
       @extend %body-3

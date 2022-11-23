@@ -16,7 +16,7 @@ a[is=delivery-bar] ul li {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   a[is=delivery-bar] ul li {
     font-size: 1.8rem;
     line-height: 140%;
@@ -30,7 +30,7 @@ a[is=delivery-bar] {
   border-bottom: 1px solid #F2F2F2;
   padding: 0 1.6rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1080px) {
   a[is=delivery-bar] .not-mobile {
     display: none !important;
   }
@@ -44,7 +44,7 @@ a[is=delivery-bar] ul {
 a[is=delivery-bar] ul > * {
   margin-right: 1.6rem;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   a[is=delivery-bar] ul > * {
     margin-right: 2.4rem;
   }
@@ -60,7 +60,7 @@ a[is=delivery-bar] ul li {
   color: #2D3788;
   white-space: nowrap;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   a[is=delivery-bar] ul li {
     font-weight: 900;
     text-transform: uppercase;

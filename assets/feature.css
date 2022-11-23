@@ -17,7 +17,7 @@ article[is=feature] h3 {
   line-height: 115%;
   letter-spacing: -0.54px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   article[is=feature] h3 {
     font-size: 3.4rem;
     line-height: 115%;
@@ -30,7 +30,7 @@ article[is=feature] p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   article[is=feature] p {
     font-size: 1.8rem;
     line-height: 140%;

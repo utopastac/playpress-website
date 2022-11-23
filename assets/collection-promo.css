@@ -22,7 +22,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   .collection-promo h3 {
     font-size: 1.5rem;
     line-height: 115%;
@@ -35,7 +35,7 @@
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   .collection-promo p {
     font-size: 1.8rem;
     line-height: 140%;
@@ -55,4 +55,9 @@
 }
 .collection-promo > div {
   padding: 2.4rem;
+}
+.collection-promo h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

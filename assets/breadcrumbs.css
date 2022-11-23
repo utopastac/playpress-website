@@ -12,7 +12,7 @@ ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
     font-size: 1.5rem;
     line-height: 140%;
@@ -76,7 +76,7 @@ ul[is=breadcrumbs] li:before {
 ul[is=breadcrumbs] li:first-of-type:before {
   display: none;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   ul[is=breadcrumbs] li:not(:first-of-type):before {
     margin-left: 0.4rem;
     transform: rotate(0deg);

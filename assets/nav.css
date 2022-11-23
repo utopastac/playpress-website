@@ -12,7 +12,7 @@ nav[is=menu] > ul > li > a {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   nav[is=menu] > ul > li > a {
     font-size: 1.8rem;
     line-height: 140%;
@@ -63,13 +63,13 @@ nav[is=menu] > ul > li.on > a {
 nav[is=menu] > ul > li.on > a:hover {
   background-color: #2D3788;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   nav[is=menu] > ul > li.on {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
   nav[is=menu] > ul > li > a {
     padding-left: 1.25rem;
     padding-right: 1.25rem;

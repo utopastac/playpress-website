@@ -22,7 +22,7 @@ header[is=section-header].large h2 {
   line-height: 115%;
   letter-spacing: -0.76px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   header[is=section-header].large h2 {
     font-size: 5.6rem;
     line-height: 115%;
@@ -35,7 +35,7 @@ header[is=section-header] h2 {
   line-height: 115%;
   letter-spacing: -0.64px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   header[is=section-header] h2 {
     font-size: 4.2rem;
     line-height: 115%;
@@ -48,7 +48,7 @@ header[is=section-header] p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   header[is=section-header] p {
     font-size: 2.1rem;
     line-height: 140%;
@@ -57,7 +57,7 @@ header[is=section-header] p {
 }
 
 header[is=section-header] > div {
-  padding: 8rem 0 2.4rem 0;
+  padding: 9.6rem 0 2.4rem 0;
 }
 header[is=section-header] p {
   margin-top: 0.8rem;
@@ -74,7 +74,7 @@ header[is=section-header].center h2, header[is=section-header].center h3, header
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   header[is=section-header].large {
     padding: 6.4rem 2.4rem;
   }

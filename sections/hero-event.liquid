@@ -3,7 +3,7 @@
 {% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
 <section is="hero-event">
   <a href="{{ section.settings.link_url }}">
-    <div>
+    <div is="hero-event-main">
       <img
         src="{{ section.settings.image | img_url: 'master' }}"
         alt=""

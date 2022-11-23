@@ -49,15 +49,16 @@ div[is="cart"]
     border-top: 2px solid $grey-1200
     padding: units(2) 0 0 0
 
-    header
+    > header
       display: flex
       justify-content: space-between
+      align-items: flex-end
 
       h3
-        @extend %heading-2
+        @extend %heading-3
 
       p
-        @extend %body-1
+        @extend %body-2
 
     button 
       margin: units(2) 0
@@ -65,7 +66,7 @@ div[is="cart"]
       border-radius: $border-m
       width: 100%
 
-  @include min($screen-s)
+  @include min($screen-m)
     form 
       grid-column-gap: units(8)
       grid-template-columns: 2fr 1fr
@@ -87,4 +88,4 @@ div[is="cart"]
           display: flex
 
 button[is="command"]
-  @extend %small-button-style
+  @extend %micro-button-style

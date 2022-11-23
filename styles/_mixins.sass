@@ -169,11 +169,7 @@ $bigUnits: 40
     @extend %main-content
     grid-gap: units(4)
     display: grid
-    grid-column: auto/span 1
-    grid-row: 3
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-
-    @extend %columns
+    grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
 
 %block-link
   display: block
@@ -199,6 +195,22 @@ $bigUnits: 40
   color: white
   background-color: $blue-1000
   height: units(7)
+  white-space: nowrap
+  outline: none
+  border: none
+
+  &:after
+    content: ""
+    display: block
+    width: units(3)
+    height: units(3)
+    position: relative
+    background: $white
+    -webkit-mask-image: url(icon-arrow-right.svg)
+    -webkit-mask-position: center
+    -webkit-mask-repeat: no-repeat
+    -webkit-mask-size: contain
+    margin-left: units(1)
 
   &:hover
     background-color: lighten($blue-1000, 5%)
@@ -208,59 +220,74 @@ $bigUnits: 40
     background-color: darken($blue-1000, 5%)
 
 %small-button-style
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  cursor: pointer
-  @extend %button-s
-  border-radius: $border-s
-  padding: 0 units(2)
-  color: $grey-1200
-  background-color: $yolk-800
+  @extend %button-style
   height: units(5)
-
-  &:hover
-    background-color: lighten($yolk-1000, 5%)
-
-  &:active
-    background-color: darken($yolk-1000, 5%)
+  padding: 0 units(2)
+  @extend %button-m
 
 %micro-button-style
   display: inline-flex
   align-items: center
-  background: $white
+  background: $blue-100
   justify-content: center
-  border: 1.5px solid $blue-1000
   cursor: pointer
   @extend %button-xs
   border-radius: $border-s
   padding: 0 units(1.5)
   color: $blue-1000
   height: units(4)
+  white-space: nowrap
+
+  &:after
+    content: ""
+    display: block
+    width: units(2)
+    height: units(2)
+    position: relative
+    background: $blue-1000
+    -webkit-mask-image: url(icon-arrow-right.svg)
+    -webkit-mask-position: center
+    -webkit-mask-repeat: no-repeat
+    -webkit-mask-size: contain
+    margin-left: units(1)
 
   &:hover
-    background-color: $blue-1000
-    color: $white
+    background-color: $blue-200
 
   &:active
-    background-color: darken($blue-1000, 5%)
+    background-color: darken($blue-200, 5%)
 
 %text-button-style
   display: inline-flex
   align-items: center
   justify-content: center
   @extend %button-l
-  border-radius: $border-m
   color: $blue-1000
   height: units(7)
 
-  span
-    padding-bottom: size(4)
-    border-bottom: size(2) solid $blue-1000
+  &.white
+    color: white
+
+    &:after
+      background: $white
+
+    &:hover
+      
+
+  &:after
+    content: ""
+    display: block
+    width: units(3)
+    height: units(3)
+    position: relative
+    background: $blue-1000
+    -webkit-mask-image: url(icon-arrow-right.svg)
+    -webkit-mask-position: center
+    -webkit-mask-repeat: no-repeat
+    -webkit-mask-size: contain
+    margin-left: units(1)
 
   &:hover
-    background: lighten($blue-1000, 70%)
-    span
-      border-bottom-color: transparent
+    text-decoration: underline
 
   &:active

@@ -22,7 +22,7 @@ section[is=intro] h1 {
   line-height: 115%;
   letter-spacing: -0.76px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=intro] h1 {
     font-size: 5.6rem;
     line-height: 115%;
@@ -35,7 +35,7 @@ section[is=intro] p {
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   section[is=intro] p {
     font-size: 2.1rem;
     line-height: 140%;
@@ -52,7 +52,7 @@ section[is=intro] img {
 section[is=intro] p {
   margin: 1.6rem 0 3.2rem 0;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   section[is=intro] {
     padding: 6.4rem;
   }

@@ -12,6 +12,22 @@ div[is=cart] div[is=checkout] button {
   color: white;
   background-color: #2D3788;
   height: 5.6rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+}
+div[is=cart] div[is=checkout] button:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #FFFFFF;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
 }
 div[is=cart] div[is=checkout] button:hover {
   background-color: #333f9b;
@@ -24,32 +40,46 @@ div[is=cart] div[is=checkout] button:active {
 button[is=command] {
   display: inline-flex;
   align-items: center;
+  background: #EBEDFA;
   justify-content: center;
   cursor: pointer;
   border-radius: units(3);
-  padding: 0 1.6rem;
-  color: #0A122A;
-  background-color: #F6D18A;
-  height: 4rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+}
+button[is=command]:after {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: relative;
+  background: #2D3788;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
 }
 button[is=command]:hover {
-  background-color: #fbbf51;
+  background-color: #EBEDFA;
 }
 button[is=command]:active {
-  background-color: #f9ad1f;
+  background-color: #d7dbf5;
 }
 
-div[is=cart] div[is=checkout] header h3, div[is=cart] h1 {
+div[is=cart] div[is=checkout] > header h3, div[is=cart] h1 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-button[is=command], div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] header p {
+button[is=command], div[is=cart] div[is=checkout] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-button[is=command], div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] header p {
+button[is=command], div[is=cart] div[is=checkout] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button {
   font-weight: 400;
 }
 
@@ -62,7 +92,7 @@ div[is=cart] h1 {
   line-height: 115%;
   letter-spacing: -0.76px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   div[is=cart] h1 {
     font-size: 5.6rem;
     line-height: 115%;
@@ -70,39 +100,26 @@ div[is=cart] h1 {
   }
 }
 
-div[is=cart] div[is=checkout] header h3 {
-  font-size: 3.2rem;
+div[is=cart] div[is=checkout] > header h3 {
+  font-size: 2.7rem;
   line-height: 115%;
-  letter-spacing: -0.64px;
+  letter-spacing: -0.54px;
 }
-@media screen and (min-width: 1200px) {
-  div[is=cart] div[is=checkout] header h3 {
-    font-size: 4.2rem;
+@media screen and (min-width: 1080px) {
+  div[is=cart] div[is=checkout] > header h3 {
+    font-size: 3.4rem;
     line-height: 115%;
-    letter-spacing: -0.84px;
+    letter-spacing: -0.68px;
   }
 }
 
-div[is=cart] div[is=checkout] header p {
-  font-size: 2.2rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1200px) {
-  div[is=cart] div[is=checkout] header p {
-    font-size: 2.6rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-div[is=cart] > div, div[is=cart] div[is=checkout] button {
+div[is=cart] div[is=checkout] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
-  div[is=cart] > div, div[is=cart] div[is=checkout] button {
+@media screen and (min-width: 1080px) {
+  div[is=cart] div[is=checkout] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -110,13 +127,13 @@ div[is=cart] > div, div[is=cart] div[is=checkout] button {
 }
 
 button[is=command] {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
   button[is=command] {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -162,16 +179,17 @@ div[is=cart] div[is=checkout] {
   border-top: 2px solid #0A122A;
   padding: 1.6rem 0 0 0;
 }
-div[is=cart] div[is=checkout] header {
+div[is=cart] div[is=checkout] > header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 div[is=cart] div[is=checkout] button {
   margin: 1.6rem 0;
   border-radius: 3.2rem;
   width: 100%;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 770px) {
   div[is=cart] form {
     grid-column-gap: 6.4rem;
     grid-template-columns: 2fr 1fr;
