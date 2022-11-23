@@ -3,23 +3,31 @@
 article[is="content-block-highlight"]
   background: $blue-1000
   border-radius: $border-m
-  overflow: hidden 
+  overflow: hidden
+  display: grid
+  width: 100%
+  justify-content: center
+  align-items: center
+  max-width: size(280)
+
+  &:nth-child(2n)
+    img
+      grid-row: 2
 
   img
-    width: 100%
-    border-radius: $border-m
-    margin-bottom: units(2)
+    border-radius: 0
 
   div
+    padding: units(3)
 
-    h3, p
+    h4, p
       color: white
 
-    h3
-      @extend %heading-2
+    h4
+      @extend %overline
     
     p
-      @extend %body-3
+      @extend %body-2
   
   
 
@@ -36,5 +44,9 @@ div[is="content-blocks-highlight"]
 
   @include min($screen-s)
     > div
-      grid-template-columns: repeat(2, minmax(size(340), size(480)))
+      grid-template-columns: repeat(2, 1fr)
+
+  @include min($screen-m)
+    > div
+      grid-template-columns: repeat(4, 1fr)
   

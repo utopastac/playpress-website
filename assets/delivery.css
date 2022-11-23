@@ -3,12 +3,12 @@ div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-c
   font-weight: 700;
 }
 
-div[is=delivery] > p, div[is=delivery] {
+div[is=delivery] header, div[is=delivery] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=delivery] > p, div[is=delivery] {
+div[is=delivery] header, div[is=delivery] {
   font-weight: 400;
 }
 
@@ -25,13 +25,13 @@ div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-c
   }
 }
 
-div[is=delivery] > p, div[is=delivery] {
+div[is=delivery] header, div[is=delivery] {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  div[is=delivery] > p, div[is=delivery] {
+  div[is=delivery] header, div[is=delivery] {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -46,6 +46,12 @@ div[is=delivery] {
   color: #2D3788;
   cursor: pointer;
   border: 1px solid #2D3788;
+}
+div[is=delivery] header {
+  display: flex;
+}
+div[is=delivery] header span {
+  margin-left: 0.8rem;
 }
 div[is=delivery] div[is=delivery-charges] {
   background: #FFFFFF;
@@ -83,20 +89,23 @@ div[is=delivery] div[is=delivery-content] table tr:last-child td {
 div[is=delivery] h3 {
   color: white;
 }
-div[is=delivery] > p {
+div[is=delivery] header {
   display: flex;
   margin-bottom: 0;
   justify-content: center;
   align-items: center;
   user-select: none;
 }
-div[is=delivery] > p svg {
-  margin-right: 0.5rem;
+div[is=delivery] header span {
+  margin-left: 0.8rem;
 }
 div[is=delivery].active {
   color: white;
   background: #2D3788;
   border-radius: 3.2rem;
+}
+div[is=delivery].active .icon {
+  background: white;
 }
 div[is=delivery].active div[is=delivery-content] {
   visibility: visible;

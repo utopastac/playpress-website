@@ -4,3 +4,30 @@
 .icon
   width: units(3)
   height: units(3)
+  position: relative
+  -webkit-mask-image: url(icon-plus.svg)
+  -webkit-mask-position: center
+  -webkit-mask-repeat: no-repeat
+  -webkit-mask-size: contain
+  background: $blue-1000
+
+  &.plus
+    -webkit-mask-image: url(icon-plus.svg)
+  
+  &.minus
+    -webkit-mask-image: url(icon-minus.svg)
+  
+  &.delivery
+    -webkit-mask-image: url(icon-delivery.svg)
+
+  &.chevron
+    -webkit-mask-image: url(icon-chevron.svg)
+
+  &.close
+    -webkit-mask-image: url(icon-close.svg)
+
+  &.arrow-right
+    -webkit-mask-image: url(icon-arrow-right.svg)
+    -webkit-mask-position: center
+    -webkit-mask-repeat: no-repeat
+    -webkit-mask-size: contain

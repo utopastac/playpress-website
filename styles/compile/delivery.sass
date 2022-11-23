@@ -10,6 +10,11 @@ div[is="delivery"]
   @extend %body-3
   border: 1px solid $blue-1000
 
+  header
+    display: flex
+    span
+      margin-left: units(1)
+
   div[is="delivery-charges"]
     background: $white
     color: $grey-1200
@@ -49,7 +54,7 @@ div[is="delivery"]
   h3
     color: white
 
-  > p 
+  header
     display: flex
     margin-bottom: 0
     justify-content: center
@@ -57,13 +62,16 @@ div[is="delivery"]
     @extend %body-3
     user-select: none
 
-    svg 
-      margin-right: 0.5rem
+    span
+      margin-left: units(1)
 
   &.active 
     color: white
     background: $blue-1000
     border-radius: $border-m
+
+    .icon
+      background: white
 
     div[is="delivery-content"]
       visibility: visible

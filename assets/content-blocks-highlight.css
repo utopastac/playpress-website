@@ -3,7 +3,7 @@ div[is=content-blocks-highlight] > div {
   margin: 0 auto;
 }
 
-article[is=content-block-highlight] div h3 {
+article[is=content-block-highlight] div h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
@@ -17,27 +17,32 @@ article[is=content-block-highlight] div p {
   font-weight: 400;
 }
 
-article[is=content-block-highlight] div h3 {
-  font-size: 3.2rem;
+article[is=content-block-highlight] div h4 {
+  font-weight: 900;
+}
+
+article[is=content-block-highlight] div h4 {
+  font-size: 1.4rem;
   line-height: 115%;
-  letter-spacing: -0.64px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
-  article[is=content-block-highlight] div h3 {
-    font-size: 4.2rem;
+  article[is=content-block-highlight] div h4 {
+    font-size: 1.5rem;
     line-height: 115%;
-    letter-spacing: -0.84px;
+    letter-spacing: 1.5px;
   }
 }
 
 article[is=content-block-highlight] div p {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   article[is=content-block-highlight] div p {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -47,13 +52,22 @@ article[is=content-block-highlight] {
   background: #2D3788;
   border-radius: 3.2rem;
   overflow: hidden;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 28rem;
+}
+article[is=content-block-highlight]:nth-child(2n) img {
+  grid-row: 2;
 }
 article[is=content-block-highlight] img {
-  width: 100%;
-  border-radius: 3.2rem;
-  margin-bottom: 1.6rem;
+  border-radius: 0;
 }
-article[is=content-block-highlight] div h3, article[is=content-block-highlight] div p {
+article[is=content-block-highlight] div {
+  padding: 2.4rem;
+}
+article[is=content-block-highlight] div h4, article[is=content-block-highlight] div p {
   color: white;
 }
 div[is=content-blocks-highlight] {
@@ -68,6 +82,11 @@ div[is=content-blocks-highlight] > div {
 }
 @media screen and (min-width: 500px) {
   div[is=content-blocks-highlight] > div {
-    grid-template-columns: repeat(2, minmax(34rem, 48rem));
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 700px) {
+  div[is=content-blocks-highlight] > div {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

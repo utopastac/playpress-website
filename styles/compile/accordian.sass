@@ -10,26 +10,38 @@ article[is="accordian-item"]
 
   header
     padding: units(3) 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .minus
+    display: none
+    background: white !important
+  .plus
+    display: block
   
-  div
+  > div
     padding: 0 0 units(3) 0
+    display: none
+    @extend %body-2
 
   h4
     @extend %body-1
-  
-  p
-    @extend %body-3
-    display: none
+    color: $blue-1000
 
   &.active
     background: $blue-1000
 
-    h4, p
+    h4, p, div
       color: white
     h4
       @extend %bold
-    p
+    div
       display: block
+    .minus
+      display: block
+    .plus
+      display: none
   
   
 
@@ -41,8 +53,8 @@ div[is="accordian"]
   align-content: center
   justify-items: center
 
-  @include min($screen-s)
-    grid-template-columns: 1fr 1fr
+  @include min($screen-m)
+    grid-template-columns: minmax(16rem, 1fr) 1fr
 
   #accordian-content
     width: 100%

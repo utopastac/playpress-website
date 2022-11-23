@@ -12,8 +12,12 @@
           <article is="accordian-item" class="accordian-item">
             <header>
                 <h4>{{ block.settings.title | escape }}</h4>
+                <div class="icons">
+                  <div class="icon plus"></div>
+                  <div class="icon minus"></div>
+                </div>
             </header>
-            <div><p>{{ block.settings.text }}</p></div>
+            <div>{{ block.settings.text }}</div>
           </article>
         {% endfor %}
 

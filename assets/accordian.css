@@ -3,12 +3,12 @@ div[is=accordian] {
   margin: 0 auto;
 }
 
-article[is=accordian-item] p, article[is=accordian-item] h4 {
+article[is=accordian-item] > div, article[is=accordian-item] h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-article[is=accordian-item] p, article[is=accordian-item] h4 {
+article[is=accordian-item] > div, article[is=accordian-item] h4 {
   font-weight: 400;
 }
 
@@ -29,14 +29,14 @@ article[is=accordian-item] h4 {
   }
 }
 
-article[is=accordian-item] p {
-  font-size: 1.7rem;
+article[is=accordian-item] > div {
+  font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  article[is=accordian-item] p {
-    font-size: 1.8rem;
+  article[is=accordian-item] > div {
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -52,21 +52,38 @@ article[is=accordian-item] {
 }
 article[is=accordian-item] header {
   padding: 2.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-article[is=accordian-item] div {
-  padding: 0 0 2.4rem 0;
-}
-article[is=accordian-item] p {
+article[is=accordian-item] .minus {
   display: none;
+  background: white !important;
+}
+article[is=accordian-item] .plus {
+  display: block;
+}
+article[is=accordian-item] > div {
+  padding: 0 0 2.4rem 0;
+  display: none;
+}
+article[is=accordian-item] h4 {
+  color: #2D3788;
 }
 article[is=accordian-item].active {
   background: #2D3788;
 }
-article[is=accordian-item].active h4, article[is=accordian-item].active p {
+article[is=accordian-item].active h4, article[is=accordian-item].active p, article[is=accordian-item].active div {
   color: white;
 }
-article[is=accordian-item].active p {
+article[is=accordian-item].active div {
   display: block;
+}
+article[is=accordian-item].active .minus {
+  display: block;
+}
+article[is=accordian-item].active .plus {
+  display: none;
 }
 
 div[is=accordian] {
@@ -76,9 +93,9 @@ div[is=accordian] {
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   div[is=accordian] {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(16rem, 1fr) 1fr;
   }
 }
 div[is=accordian] #accordian-content {
