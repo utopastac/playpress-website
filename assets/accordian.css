@@ -1,0 +1,73 @@
+div[is=accordian] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+article[is=accordian-item] div h3 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+}
+
+article[is=accordian-item] div p {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+article[is=accordian-item] div p {
+  font-weight: 400;
+}
+
+article[is=accordian-item] div h3 {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1200px) {
+  article[is=accordian-item] div h3 {
+    font-size: 4.2rem;
+    line-height: 115%;
+    letter-spacing: -0.84px;
+  }
+}
+
+article[is=accordian-item] div p {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1200px) {
+  article[is=accordian-item] div p {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+article[is=accordian-item] {
+  background: #2D3788;
+  border-radius: 3.2rem;
+  overflow: hidden;
+}
+article[is=accordian-item] img {
+  width: 100%;
+  border-radius: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+article[is=accordian-item] div h3, article[is=accordian-item] div p {
+  color: white;
+}
+div[is=accordian] {
+  padding-bottom: 3.2rem;
+}
+div[is=accordian] > div {
+  grid-gap: 3.2rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+@media screen and (min-width: 500px) {
+  div[is=accordian] > div {
+    grid-template-columns: repeat(2, minmax(34rem, 48rem));
+  }
+}

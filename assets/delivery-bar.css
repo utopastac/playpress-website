@@ -1,23 +1,26 @@
 a[is=delivery-bar] ul li {
   font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+a[is=delivery-bar] ul li {
+  font-weight: 400;
+}
+
+a[is=delivery-bar] ul li {
   font-weight: 700;
 }
 
 a[is=delivery-bar] ul li {
-  font-weight: 900;
-}
-
-a[is=delivery-bar] ul li {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
   a[is=delivery-bar] ul li {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 }
 
@@ -25,6 +28,12 @@ a[is=delivery-bar] {
   display: block;
   height: 5.6rem;
   border-bottom: 1px solid #F2F2F2;
+  padding: 0 1.6rem;
+}
+@media screen and (max-width: 1200px) {
+  a[is=delivery-bar] .not-mobile {
+    display: none !important;
+  }
 }
 a[is=delivery-bar] ul {
   display: flex;
@@ -33,7 +42,12 @@ a[is=delivery-bar] ul {
   height: 100%;
 }
 a[is=delivery-bar] ul > * {
-  margin-right: 2.4rem;
+  margin-right: 1.6rem;
+}
+@media screen and (min-width: 700px) {
+  a[is=delivery-bar] ul > * {
+    margin-right: 2.4rem;
+  }
 }
 a[is=delivery-bar] ul .dot {
   display: block;
@@ -44,4 +58,14 @@ a[is=delivery-bar] ul .dot {
 }
 a[is=delivery-bar] ul li {
   color: #2D3788;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1200px) {
+  a[is=delivery-bar] ul li {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 1.5px;
+  }
 }

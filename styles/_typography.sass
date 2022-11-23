@@ -95,6 +95,11 @@ $all-caps-letter-spacing: 0.1
   @include min($screen-l)
     @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
 //
+@mixin overline()
+  @extend %heading
+  @extend %extra-bold
+  @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
+  text-transform: uppercase
     
 %body-1
   @extend %regular

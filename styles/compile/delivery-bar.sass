@@ -4,6 +4,11 @@ a[is="delivery-bar"]
   display: block
   height: units(7)
   border-bottom: 1px solid $grey-200
+  padding: 0 units(2)
+
+  @include max($screen-l)
+    .not-mobile
+      display: none !important
 
   ul
     display: flex
@@ -12,7 +17,10 @@ a[is="delivery-bar"]
     height: 100%
 
     > *
-      margin-right: units(3)
+      margin-right: units(2)
+
+      @include min($screen-m)
+        margin-right: units(3)
 
     .dot
       display: block
@@ -22,6 +30,13 @@ a[is="delivery-bar"]
       border-radius: 500px
 
     li
-      @extend %overline
+      @extend %body-3
+      @extend %bold
       color: $blue-1000
+      white-space: nowrap
+
+      @include min($screen-l)
+        font-weight: $font-extra-bold-weight
+        text-transform: uppercase
+        @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
       

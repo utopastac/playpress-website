@@ -1,0 +1,104 @@
+{{ 'accordian.css' | asset_url | stylesheet_tag }}
+
+<section is="section">
+
+  {% render 'section-header', title: section.settings.title, text: section.settings.text, center: false %}
+
+  <div is="accordian">
+    <div>
+      {% for block in section.blocks %}
+        <article is="accordian-item">
+          {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt=""
+                is="in-action"
+                loading="lazy"
+                width="800"
+                height="600"
+                />
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+          <div>
+            {% if block.settings.title != blank %}
+              <h4>{{ block.settings.title | escape }}</h4>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        {% render 'no-blocks' %}
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Accordian",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "accordian_item",
+      "name": "accordian item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Add a title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add descriptve text</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordian",
+      "blocks": [
+        {
+          "type": "accordian_item"
+        },
+        {
+          "type": "accordian_item"
+        },
+        {
+          "type": "accordian_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,40 @@
+@import '../assets'
+
+article[is="content-block-highlight"]
+  background: $blue-1000
+  border-radius: $border-m
+  overflow: hidden 
+
+  img
+    width: 100%
+    border-radius: $border-m
+    margin-bottom: units(2)
+
+  div
+
+    h3, p
+      color: white
+
+    h3
+      @extend %heading-2
+    
+    p
+      @extend %body-3
+  
+  
+
+div[is="content-blocks-highlight"]
+  padding-bottom: units(4)
+  
+  > div
+    @extend %main-content
+    grid-gap: units(4)
+    display: grid
+    justify-content: center
+    align-content: center
+    justify-items: center
+
+  @include min($screen-s)
+    > div
+      grid-template-columns: repeat(2, minmax(size(340), size(480)))
+  
