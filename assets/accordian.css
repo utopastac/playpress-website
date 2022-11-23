@@ -1,42 +1,41 @@
-div[is=accordian] > div {
+div[is=accordian] {
   max-width: 140rem;
   margin: 0 auto;
 }
 
-article[is=accordian-item] div h3 {
+article[is=accordian-item] p, article[is=accordian-item] h4 {
   font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+article[is=accordian-item] p, article[is=accordian-item] h4 {
+  font-weight: 400;
+}
+
+article[is=accordian-item].active h4 {
   font-weight: 700;
 }
 
-article[is=accordian-item] div p {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-article[is=accordian-item] div p {
-  font-weight: 400;
-}
-
-article[is=accordian-item] div h3 {
-  font-size: 3.2rem;
-  line-height: 115%;
-  letter-spacing: -0.64px;
+article[is=accordian-item] h4 {
+  font-size: 2.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  article[is=accordian-item] div h3 {
-    font-size: 4.2rem;
-    line-height: 115%;
-    letter-spacing: -0.84px;
+  article[is=accordian-item] h4 {
+    font-size: 2.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 }
 
-article[is=accordian-item] div p {
+article[is=accordian-item] p {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1200px) {
-  article[is=accordian-item] div p {
+  article[is=accordian-item] p {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -44,22 +43,30 @@ article[is=accordian-item] div p {
 }
 
 article[is=accordian-item] {
-  background: #2D3788;
+  background: #F2F2F2;
   border-radius: 3.2rem;
   overflow: hidden;
+  cursor: pointer;
+  padding: 0 2.4rem;
+  margin-bottom: 0.8rem;
 }
-article[is=accordian-item] img {
-  width: 100%;
-  border-radius: 3.2rem;
-  margin-bottom: 1.6rem;
+article[is=accordian-item] header {
+  padding: 2.4rem 0;
 }
-article[is=accordian-item] div h3, article[is=accordian-item] div p {
+article[is=accordian-item] p {
+  display: none;
+}
+article[is=accordian-item].active {
+  background: #2D3788;
+}
+article[is=accordian-item].active h4, article[is=accordian-item].active p {
   color: white;
 }
-div[is=accordian] {
-  padding-bottom: 3.2rem;
+article[is=accordian-item].active p {
+  display: block;
 }
-div[is=accordian] > div {
+
+div[is=accordian] {
   grid-gap: 3.2rem;
   display: grid;
   justify-content: center;
@@ -67,7 +74,25 @@ div[is=accordian] > div {
   justify-items: center;
 }
 @media screen and (min-width: 500px) {
-  div[is=accordian] > div {
-    grid-template-columns: repeat(2, minmax(34rem, 48rem));
+  div[is=accordian] {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+div[is=accordian] #accordian-content {
+  width: 100%;
+}
+div[is=accordian] #accordian-images {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  div[is=accordian] #accordian-images {
+    display: block;
+  }
+  div[is=accordian] #accordian-images img {
+    border: 1px solid #2D3788;
+    display: none;
+  }
+  div[is=accordian] #accordian-images img.active {
+    display: block;
   }
 }

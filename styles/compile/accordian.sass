@@ -1,40 +1,59 @@
 @import '../assets'
 
 article[is="accordian-item"]
-  background: $blue-1000
+  background: $grey-100
   border-radius: $border-m
-  overflow: hidden 
+  overflow: hidden
+  cursor: pointer
+  padding: 0 units(3)
+  margin-bottom: units(1)
 
-  img
-    width: 100%
-    border-radius: $border-m
-    margin-bottom: units(2)
+  header
+    padding: units(3) 0
 
-  div
+  
 
-    h3, p
+  h4
+    @extend %body-1
+  
+  p
+    @extend %body-3
+    display: none
+
+  &.active
+    background: $blue-1000
+
+    h4, p
       color: white
-
-    h3
-      @extend %heading-2
-    
+    h4
+      @extend %bold
     p
-      @extend %body-3
+      display: block
   
   
 
 div[is="accordian"]
-  padding-bottom: units(4)
-  
-  > div
-    @extend %main-content
-    grid-gap: units(4)
-    display: grid
-    justify-content: center
-    align-content: center
-    justify-items: center
+  @extend %main-content
+  grid-gap: units(4)
+  display: grid
+  justify-content: center
+  align-content: center
+  justify-items: center
 
   @include min($screen-s)
-    > div
-      grid-template-columns: repeat(2, minmax(size(340), size(480)))
+    grid-template-columns: 1fr 1fr
+
+  #accordian-content
+    width: 100%
+
+  #accordian-images
+    display: none
+
+    @include min($screen-m)
+      display: block
+      img
+        border: 1px solid $blue-1000
+        display: none
+        &.active
+          display: block
   
