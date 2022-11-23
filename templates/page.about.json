@@ -299,25 +299,28 @@
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
             "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Make it fun",
+            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
           }
         },
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/inks.jpg",
             "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Make it for everyone",
+            "text": "<p>We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can.Add descriptve text<\/p>"
           }
         },
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/sustainability.jpg",
             "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Make it sustainably",
+            "text": "<p>Add descriptWe don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text<\/p>"
           }
         }
       },
