@@ -32,7 +32,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/inks.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Printing & binding",
+            "subtitle": "Add a subtitle",
             "text": "<p>We use vegetable-based inks and water-based glues that are vegan, biodegradable and ocean-friendly.<\/p>"
           }
         },
@@ -41,7 +44,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/board.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Board & paper",
+            "subtitle": "Add a subtitle",
             "text": "<p>The fibres for our Playboard are bleach-free and sourced from sustainably managed forests in Finland.<\/p>"
           }
         },
@@ -50,7 +56,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/transport.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Manufacturing & transport",
+            "subtitle": "Add a subtitle",
             "text": "<p>Our toys confirm to European standards and are locally manufactured in the UK to minimise air miles.<\/p>"
           }
         }
@@ -160,7 +169,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/Matthew.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Matthew - the fearless founder",
+            "subtitle": "Add a subtitle",
             "text": "<p>Matthew is our fearless founder and the beating heart of our business. He brings his passion for quality, clever design and craftsmanship to every single Playpress pack.<\/p>"
           }
         },
@@ -169,7 +181,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/PlayPress-Melvin.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Melvin - the business brains",
+            "subtitle": "Add a subtitle",
             "text": "<p>Dad and business brain Melvin has helped us to grow Playpress from a humble market stall to an international stockist with a range of products and partners.<\/p>"
           }
         },
@@ -178,7 +193,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/PlayPress-Peter.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Peter - the creative powerhouse",
+            "subtitle": "Add a subtitle",
             "text": "<p>Peter helped brother Matthew to design, develop and launch the very first Playpress sets. He’s still lending his creative skills to help bring new ideas for the brand to life.<\/p>"
           }
         },
@@ -187,7 +205,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/mikey_482293c3-3a17-45ec-b7ca-df7a9a0b337d.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Mike - the artist",
+            "subtitle": "Add a subtitle",
             "text": "<p>Mike, best friends with Matthew since School, brought his amazing artistic talents to help found PlayPress, launch the brand and shape the designs. Mike left the company in 2019 to work on new artist projects.<\/p>"
           }
         },
@@ -196,7 +217,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/Karen1-01.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Karen - master of many trades",
+            "subtitle": "Add a subtitle",
             "text": "<p>Mum and a constant support to the running of the business as well as an expert wordsmith. Karen helps with everything from keeping accounts to writing product descriptions.<\/p>"
           }
         },
@@ -205,7 +229,10 @@
           "settings": {
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/Kingsley-01.jpg",
+            "link_text": "",
+            "link_url": "",
             "title": "Kingsley - People person extraordinaire",
+            "subtitle": "Add a subtitle",
             "text": "<p>Kingsley, also a brother, is our brilliant sales person and operations manager. Helping the business grow and an excellant person to deal with.<\/p>"
           }
         }
@@ -265,6 +292,89 @@
         "text": "",
         "grid": 3
       }
+    },
+    "3b41803c-8040-4774-b0f7-9dfed59a656a": {
+      "type": "accordian",
+      "blocks": {
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        },
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        },
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0",
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1",
+        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2"
+      ],
+      "settings": {
+        "title": "Our values",
+        "text": ""
+      }
+    },
+    "7479a0b8-11e1-497a-9d3d-357057ba89e2": {
+      "type": "content-blocks-highlight",
+      "blocks": {
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-0": {
+          "type": "content_block_highlight",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        },
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-1": {
+          "type": "content_block_highlight",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        },
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-2": {
+          "type": "content_block_highlight",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        },
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-3": {
+          "type": "content_block_highlight",
+          "settings": {
+            "link_url": "",
+            "title": "Add a title",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-0",
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-1",
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-2",
+        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-3"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -275,6 +385,8 @@
     "16278518348af94fc5",
     "1627851925d01952d2",
     "16278519919130b139",
-    "16278904348453009f"
+    "16278904348453009f",
+    "3b41803c-8040-4774-b0f7-9dfed59a656a",
+    "7479a0b8-11e1-497a-9d3d-357057ba89e2"
   ]
 }
