@@ -320,7 +320,7 @@
             "image": "shopify:\/\/shop_images\/sustainability.jpg",
             "link_url": "",
             "title": "Make it sustainably",
-            "text": "<p>Add descriptWe don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text<\/p>"
+            "text": "Add descriptWe don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text"
           }
         }
       },
@@ -340,6 +340,7 @@
         "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-0": {
           "type": "content_block_highlight",
           "settings": {
+            "image": "shopify:\/\/shop_images\/features-age.png",
             "link_url": "",
             "title": "Add a title",
             "text": "<p>Add descriptve text<\/p>"
@@ -348,6 +349,7 @@
         "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-1": {
           "type": "content_block_highlight",
           "settings": {
+            "image": "shopify:\/\/shop_images\/features-waste.png",
             "link_url": "",
             "title": "Add a title",
             "text": "<p>Add descriptve text<\/p>"
@@ -356,6 +358,7 @@
         "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-2": {
           "type": "content_block_highlight",
           "settings": {
+            "image": "shopify:\/\/shop_images\/features-creative.png",
             "link_url": "",
             "title": "Add a title",
             "text": "<p>Add descriptve text<\/p>"
@@ -364,6 +367,7 @@
         "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-3": {
           "type": "content_block_highlight",
           "settings": {
+            "image": "shopify:\/\/shop_images\/features-eco.png",
             "link_url": "",
             "title": "Add a title",
             "text": "<p>Add descriptve text<\/p>"
