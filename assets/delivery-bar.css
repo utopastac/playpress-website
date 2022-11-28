@@ -27,7 +27,7 @@ a[is=delivery-bar] ul li {
 a[is=delivery-bar] {
   display: block;
   height: 5.6rem;
-  border-bottom: 1px solid #F2F2F2;
+  border-bottom: 1px solid #E7E9EF;
   padding: 0 1.6rem;
 }
 @media screen and (max-width: 1080px) {

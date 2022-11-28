@@ -197,7 +197,7 @@ input,
 select,
 textarea {
   background-color: transparent;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #E7E9EF;
   border-radius: 0.8rem;
   color: inherit;
   font-family: inherit;
@@ -209,7 +209,7 @@ textarea {
 input::placeholder,
 select::placeholder,
 textarea::placeholder {
-  color: #232838;
+  color: #41495E;
 }
 
 audio:focus,
@@ -226,7 +226,7 @@ input[type=radio] {
   position: absolute;
 }
 input[type=radio]:before {
-  border: 1px solid #F2F2F2;
+  border: 1px solid #E7E9EF;
   border-radius: 0.125rem;
   content: "";
   height: 1rem;
@@ -238,10 +238,10 @@ input[type=radio]:before {
 }
 input[type=radio]:after {
   border-bottom-width: 0;
-  border-bottom: 0.25rem solid #F2F2F2;
+  border-bottom: 0.25rem solid #E7E9EF;
   border-left-width: 0;
-  border-left: 0.25rem solid #F2F2F2;
-  border-right: 0 solid #F2F2F2;
+  border-left: 0.25rem solid #E7E9EF;
+  border-right: 0 solid #E7E9EF;
   border-top: 0 solid transparent;
   content: "";
   height: 0.25rem;
@@ -658,7 +658,7 @@ caption, td, th {
 }
 
 td, th {
-  border-bottom: 1px solid #F2F2F2;
+  border-bottom: 1px solid #E7E9EF;
   padding: 0.75rem 1.5rem 0.75rem 0;
 }
 
@@ -781,7 +781,7 @@ abbr {
 
 hr {
   border-style: solid;
-  color: #F2F2F2;
+  color: #E7E9EF;
   margin-left: 0;
   margin-right: 0;
 }

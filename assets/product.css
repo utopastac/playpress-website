@@ -195,7 +195,7 @@ main[is=product] > div .description h6 {
 main[is=product] > div .description hr {
   height: 1;
   border: none;
-  background: #F2F2F2;
+  background: #E7E9EF;
   margin: 3.2rem 0 2.4rem 0;
 }
 
