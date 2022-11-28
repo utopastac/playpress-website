@@ -22,21 +22,21 @@ nav[is="menu"]
       min-width: max-content
 
       > a 
-        border-radius: 0.5rem
+        border-radius: units(0.5)
         color: $white
         display: block
-        font-weight: 700
-        padding: 0.5rem 1rem
+        padding: units(0.5) units(1)
         text-decoration: none
-        @extend %body-3
+        @extend %body-2
+        @extend %bold
 
         &:hover 
           background-color: $blue-1200
 
       &.on 
         box-shadow: inset 0 -6px 0 0 $accent
-        margin-left: 1rem
-        margin-right: 1rem
+        margin-left: units(1)
+        margin-right: units(1)
 
         > a 
           padding-left: 0
@@ -49,16 +49,16 @@ nav[is="menu"]
     > ul > li > a 
       // font-size: 110%
     > ul > li.on 
-      margin-left: 1rem
-      margin-right: 1rem
+      margin-left: units(1)
+      margin-right: units(1)
   
 
   @include min($screen-m)
     > ul > li > a 
-      padding-left: 1.25rem
-      padding-right: 1.25rem
+      padding-left: units(2)
+      padding-right: units(2)
 
     > ul > li.on 
-      margin-left: 1.25rem
-      margin-right: 1.25rem
+      margin-left: units(2)
+      margin-right: units(2)
   

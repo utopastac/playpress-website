@@ -7,7 +7,7 @@ div[is=cart] div[is=checkout] button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(4);
+  border-radius: units(2);
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
@@ -43,7 +43,7 @@ button[is=command] {
   background: #EBEDFA;
   justify-content: center;
   cursor: pointer;
-  border-radius: units(3);
+  border-radius: 0.8rem;
   padding: 0 1.2rem;
   color: #2D3788;
   height: 3.2rem;

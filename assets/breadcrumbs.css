@@ -1,20 +1,20 @@
-ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
+ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
+ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
   font-weight: 400;
 }
 
-ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
-  font-size: 1.4rem;
+ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
+  font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  ul[is=breadcrumbs] a, ul[is=breadcrumbs] p, ul[is=breadcrumbs] {
-    font-size: 1.5rem;
+  ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
+    font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }

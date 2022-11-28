@@ -28,7 +28,7 @@ div[is="prominent-features"]
   
   > div
     @extend %main-content
-    grid-gap: units(4)
+    grid-gap: units(5)
     display: grid
     justify-content: center
     align-content: center
@@ -37,7 +37,7 @@ div[is="prominent-features"]
     @include min($screen-s)
       //grid-template-columns: repeat(auto-fill, minmax(size(340), 1fr), 1fr))
 
-  @include min($screen-s)
+  @include min($screen-m)
     > div
       grid-template-columns: repeat(2, minmax(size(340), size(480)))
     

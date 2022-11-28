@@ -75,13 +75,13 @@ div[is=prominent-features] {
   padding-bottom: 3.2rem;
 }
 div[is=prominent-features] > div {
-  grid-gap: 3.2rem;
+  grid-gap: 4rem;
   display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 770px) {
   div[is=prominent-features] > div {
     grid-template-columns: repeat(2, minmax(34rem, 48rem));
   }

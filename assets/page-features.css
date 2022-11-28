@@ -3,112 +3,143 @@ div[is=page-features] > div {
   margin: 0 auto;
 }
 
-article[is=page-feature] div h4, article[is=page-feature] div h3 {
+a[is=page-feature] h4, a[is=page-feature] h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-article[is=page-feature] div p {
+a[is=page-feature] p, a[is=page-feature] p[is=text-button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-article[is=page-feature] div p {
+a[is=page-feature] p, a[is=page-feature] p[is=text-button] {
   font-weight: 400;
 }
 
-article[is=page-feature] div h4 {
+a[is=page-feature] p[is=text-button], a[is=page-feature] p[is=text-button] {
+  font-weight: 700;
+}
+
+a[is=page-feature] h4 {
   font-weight: 900;
 }
 
-article[is=page-feature] div h3 {
+a[is=page-feature] h3 {
   font-size: 2.7rem;
   line-height: 115%;
   letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
-  article[is=page-feature] div h3 {
+  a[is=page-feature] h3 {
     font-size: 3.4rem;
     line-height: 115%;
     letter-spacing: -0.68px;
   }
 }
 
-article[is=page-feature] div h4 {
+a[is=page-feature] h4 {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1080px) {
-  article[is=page-feature] div h4 {
+  a[is=page-feature] h4 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
   }
 }
 
-article[is=page-feature] div p {
+a[is=page-feature] p[is=text-button] {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=page-feature] p[is=text-button] {
+    font-size: 2.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=page-feature] p {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  article[is=page-feature] div p {
+  a[is=page-feature] p {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-article[is=page-feature] {
+a[is=page-feature] {
   background: #FFFFFF;
   border-radius: 3.2rem;
   overflow: hidden;
 }
-article[is=page-feature]:nth-child(1) {
-  position: relative;
+a[is=page-feature] h4 {
+  margin-bottom: 0.4rem;
+}
+a[is=page-feature] p[is=text-button] {
+  margin-top: 0.8rem;
+}
+a[is=page-feature] div[is=image] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  display: flex;
-  align-items: flex-end;
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 2.4rem;
+  border-radius: 1.6rem;
 }
-article[is=page-feature]:nth-child(1) a {
-  color: #2D3788;
+a[is=page-feature]:nth-child(1) p[is=text-button] {
+  color: #232838;
 }
-article[is=page-feature]:nth-child(1) a:after {
-  background: #2D3788;
+a[is=page-feature]:nth-child(1) p[is=text-button]:after {
+  background: #232838;
 }
-article[is=page-feature]:nth-child(1) a:hover {
-  border-bottom-color: #2D3788;
+@media screen and (min-width: 770px) {
+  a[is=page-feature]:nth-child(1) article {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  a[is=page-feature]:nth-child(1) div[is=image] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  a[is=page-feature]:nth-child(1) div[is=content] {
+    background: white;
+    position: relative;
+    border-radius: 3.2rem;
+    padding: 4rem;
+    max-width: 80%;
+  }
 }
-article[is=page-feature]:nth-child(1) > div {
-  background: white;
-  border-radius: 3.2rem;
+a[is=page-feature]:nth-child(2), a[is=page-feature]:nth-child(3) {
   padding: 4rem;
-  max-width: 80%;
 }
-article[is=page-feature]:nth-child(2), article[is=page-feature]:nth-child(3) {
-  padding: 4rem;
-}
-article[is=page-feature]:nth-child(2) h4, article[is=page-feature]:nth-child(2) h3, article[is=page-feature]:nth-child(2) a, article[is=page-feature]:nth-child(3) h4, article[is=page-feature]:nth-child(3) h3, article[is=page-feature]:nth-child(3) a {
+a[is=page-feature]:nth-child(2) h4, a[is=page-feature]:nth-child(2) h3, a[is=page-feature]:nth-child(2) a, a[is=page-feature]:nth-child(3) h4, a[is=page-feature]:nth-child(3) h3, a[is=page-feature]:nth-child(3) a {
   color: white;
 }
-article[is=page-feature]:nth-child(2) {
+a[is=page-feature]:nth-child(2) {
   background: #0C7489;
 }
-article[is=page-feature]:nth-child(3) {
+a[is=page-feature]:nth-child(3) {
   background: #2D3788;
 }
-article[is=page-feature] img {
-  width: 100%;
-  border-radius: 3.2rem;
-  margin-bottom: 1.6rem;
-}
-article[is=page-feature] div h4 {
-  margin-bottom: 0.4rem;
-}
+
 div[is=page-features] {
   padding-bottom: 3.2rem;
 }
@@ -124,13 +155,13 @@ div[is=page-features] > div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  div[is=page-features] > div article[is=page-feature]:first-child {
+  div[is=page-features] > div a[is=page-feature]:first-child {
     grid-row: span 2;
   }
-  div[is=page-features] > div article[is=page-feature]:nth-child(2) {
+  div[is=page-features] > div a[is=page-feature]:nth-child(2) {
     padding: 4rem;
   }
-  div[is=page-features] > div article[is=page-feature]:nth-child(3) {
+  div[is=page-features] > div a[is=page-feature]:nth-child(3) {
     background: #2D3788;
   }
 }

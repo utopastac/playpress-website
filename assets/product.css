@@ -14,7 +14,7 @@ main[is=product] > div form button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: units(4);
+  border-radius: units(2);
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
@@ -215,7 +215,7 @@ main[is=product] > div .description > div * {
   margin-bottom: 1.6rem;
 }
 main[is=product] > div img {
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
   width: 100%;
   cursor: pointer;
 }

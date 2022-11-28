@@ -43,15 +43,13 @@ section[is=image-with-text] p {
   }
 }
 
-section[is=image-with-text] {
-  padding: 3.2rem 0;
-}
 section[is=image-with-text] > div {
   background: #EBEDFA;
   border-radius: 3.2rem;
 }
 section[is=image-with-text] > div > div {
   max-width: 40rem;
+  padding: 3.2rem;
 }
 section[is=image-with-text].last {
   padding-bottom: 4rem;

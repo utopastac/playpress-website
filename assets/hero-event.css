@@ -70,7 +70,7 @@ section[is=hero-event] {
 }
 section[is=hero-event] div[is=hero-event-main] {
   position: relative;
-  margin: 1.6rem 0 3.2rem 0;
+  margin: 0 0 3.2rem 0;
   overflow: hidden;
 }
 section[is=hero-event] div[is=hero-event-main] p {

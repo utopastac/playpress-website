@@ -41,7 +41,7 @@ article[is=feature] p {
 article[is=feature] .image {
   margin-bottom: 1.6rem;
   overflow: hidden;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
 }
 article[is=feature] .image img {
   height: 100%;

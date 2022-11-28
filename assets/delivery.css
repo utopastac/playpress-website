@@ -39,7 +39,7 @@ div[is=delivery] header, div[is=delivery] {
 
 div[is=delivery] {
   margin: 0;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
   max-width: 100%;
   padding: 1.6rem;
   color: #2D3788;
@@ -55,7 +55,7 @@ div[is=delivery] header span {
 div[is=delivery] div[is=delivery-charges] {
   background: #FFFFFF;
   color: #0A122A;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
   padding: 2.4rem;
   margin-top: 2.4rem;
 }

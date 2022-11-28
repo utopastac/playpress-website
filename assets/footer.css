@@ -56,27 +56,14 @@ footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
   }
 }
 
-footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
+footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
+  footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=product-link] span, footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li {
     font-size: 1.8rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
-  font-size: 1.4rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  footer[is=footer] section[is=meta], footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] span {
-    font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -116,7 +103,7 @@ footer[is=footer] section[is=main-links] div[is=logo] {
   max-width: 16rem;
   padding: 0.8rem;
   background: #FAB638;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
 }
 footer[is=footer] section[is=main-links] > ul {
   width: 100%;
@@ -127,7 +114,7 @@ footer[is=footer] section[is=main-links] > ul[is=main-link-list] li {
 footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a {
   display: inline-block;
   padding: 0.4rem 0;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
 }
 footer[is=footer] section[is=main-links] > ul[is=main-link-list] li a:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -163,7 +150,7 @@ footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=p
   width: 40%;
   max-width: 12rem;
   height: auto;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
   margin-right: 1.2rem;
 }
 footer[is=footer] section[is=main-links] > ul:not([is=main-link-list]) li a[is=collection-link] {

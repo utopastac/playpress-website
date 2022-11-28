@@ -1,32 +1,63 @@
 @import '../assets'
 
-article[is="page-feature"]
+a[is="page-feature"]
   background: $white
   border-radius: $border-m
-  overflow: hidden 
+  overflow: hidden
 
+  h3
+    @extend %heading-3
 
-  &:nth-child(1)
-    position: relative
+  h4
+    @extend %overline
+    margin-bottom: units(0.5)
+  
+  p
+    @extend %body-3
+
+  p[is="text-button"]
+    margin-top: units(1)
+    @extend %bold
+    @extend %button-l
+
+  div[is="image"]
     background-size: cover
     background-repeat: no-repeat
     background-position: center center
-    display: flex
-    align-items: flex-end
+    width: 100%
+    height: size(200)
+    margin-bottom: units(3)
+    border-radius: $border-s
 
-    a
-      color: $blue-1000
+  &:nth-child(1)
+
+    p[is="text-button"]
+      color: $grey-1000
       &:after
-        background: $blue-1000
-      &:hover
-        border-bottom-color: $blue-1000
-    
+        background: $grey-1000
 
-    > div
-      background: white
-      border-radius: $border-m
-      padding: units(5)
-      max-width: 80%
+    @include min($screen-m)
+
+      article
+        position: relative
+        height: 100%
+        display: flex
+        align-items: flex-end
+
+      div[is="image"]
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 100%
+
+      div[is="content"]
+        background: white
+        position: relative
+        border-radius: $border-m
+        padding: units(5)
+        max-width: 80%
 
   &:nth-child(2), &:nth-child(3)
     padding: units(5)
@@ -38,23 +69,6 @@ article[is="page-feature"]
 
   &:nth-child(3)
     background: $blue-1000
-
-  img
-    width: 100%
-    border-radius: $border-m
-    margin-bottom: units(2)
-
-  div
-
-    h3
-      @extend %heading-3
-
-    h4
-      @extend %overline
-      margin-bottom: units(0.5)
-    
-    p
-      @extend %body-3
   
   
 
@@ -74,7 +88,7 @@ div[is="page-features"]
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 1fr
 
-      article[is="page-feature"]
+      a[is="page-feature"]
         &:first-child
           grid-row: span 2
 

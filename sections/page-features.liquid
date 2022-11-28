@@ -8,29 +8,29 @@
       
 
       {% for block in section.blocks %}
-
-        {% if block.settings.image != blank %}
-          <article
-            is="page-feature"
-            style="background-image: url({{ block.settings.image | img_url: 'master' }})">
-        {% else %}
-          <article is="page-feature">
-        {% endif %}
-          <div>
-            {% if block.settings.title != blank %}
-              <h4>{{ block.settings.title | escape }}</h4>
+        <a href="{{ block.settings.link_url }}" is="page-feature">
+          <article>
+            {% if block.settings.image != blank %}
+              <div
+                is="image"
+                style="background-image: url({{ block.settings.image | img_url: 'master' }})"></div>       
             {% endif %}
-            {% if block.settings.subtitle != blank %}
-              <h3>{{ block.settings.subtitle | escape }}</h3>
-            {% endif %}
-            {% if block.settings.text != blank %}
-              <p>{{ block.settings.text }}</p>
-            {% endif %}
-            {% if block.settings.link_text != blank %}
-              <a href="{{ block.settings.link_url }}" is="text-button" class="white">{{ block.settings.link_text }}</a>
-            {% endif %}
-          </div>
-        </article>
+            <div is="content">
+              {% if block.settings.title != blank %}
+                <h4>{{ block.settings.title | escape }}</h4>
+              {% endif %}
+              {% if block.settings.subtitle != blank %}
+                <h3>{{ block.settings.subtitle | escape }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p>{{ block.settings.text }}</p>
+              {% endif %}
+              {% if block.settings.link_text != blank %}
+                <p is="text-button" class="white">{{ block.settings.link_text }}</p>
+              {% endif %}
+            </div>
+          </article>
+        </a>
       {% endfor %}
 
       {% if section.blocks.size == 0 %}

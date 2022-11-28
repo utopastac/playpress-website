@@ -167,11 +167,12 @@ $bigUnits: 40
 %product-list
   > div
     @extend %main-content
-    grid-gap: units(4)
+    grid-gap: units(3)
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
 
     @include min($screen-l)
+      grid-gap: units(5)
       grid-template-columns: repeat(auto-fit, minmax(size(240), 1fr))
 
 %block-link
@@ -193,7 +194,7 @@ $bigUnits: 40
   align-items: center
   justify-content: center
   @extend %button-l
-  border-radius: $border-m
+  border-radius: $border-s
   padding: 0 units(4)
   color: white
   background-color: $blue-1000
@@ -235,7 +236,7 @@ $bigUnits: 40
   justify-content: center
   cursor: pointer
   @extend %button-xs
-  border-radius: $border-s
+  border-radius: units(1)
   padding: 0 units(1.5)
   color: $blue-1000
   height: units(4)

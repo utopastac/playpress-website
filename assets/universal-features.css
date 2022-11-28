@@ -53,7 +53,7 @@ div[is=universal-features] ul {
 div[is=universal-features] li {
   list-style: none;
   background: #F2F2F2;
-  border-radius: 2.4rem;
+  border-radius: 1.6rem;
   padding: 1.6rem;
   display: grid;
   grid-template-columns: 9.6rem 1fr;
