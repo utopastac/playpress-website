@@ -110,6 +110,7 @@ a[is=page-feature]:nth-child(1) p[is=text-button]:after {
     height: 100%;
     display: flex;
     align-items: flex-end;
+    padding: 4rem;
   }
   a[is=page-feature]:nth-child(1) div[is=image] {
     position: absolute;

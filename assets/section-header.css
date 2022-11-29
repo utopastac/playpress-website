@@ -58,6 +58,7 @@ header[is=section-header] p {
 
 header[is=section-header] > div {
   padding: 0 0 2.4rem 0;
+  max-width: 60rem;
 }
 header[is=section-header] p {
   margin-top: 0.8rem;

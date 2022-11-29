@@ -25,8 +25,11 @@ section[is="image-with-text"]
       grid-column-gap: 2rem
       display: grid
       grid-auto-flow: column
-      grid-template-columns: repeat(2, 1fr)
+      grid-template-columns: 1.5fr 1fr
       place-items: center
+
+      &.swapped
+        grid-template-columns: 1fr 1.5fr
     
       &.swapped > img 
         grid-column: 2

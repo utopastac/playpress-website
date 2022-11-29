@@ -18,20 +18,15 @@ article[is=content-block-highlight] div p {
 }
 
 article[is=content-block-highlight] div h4 {
-  font-weight: 900;
-}
-
-article[is=content-block-highlight] div h4 {
-  font-size: 1.4rem;
+  font-size: 2.7rem;
   line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+  letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
   article[is=content-block-highlight] div h4 {
-    font-size: 1.5rem;
+    font-size: 3.4rem;
     line-height: 115%;
-    letter-spacing: 1.5px;
+    letter-spacing: -0.68px;
   }
 }
 
