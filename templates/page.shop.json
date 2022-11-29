@@ -3,8 +3,8 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "Shop our playsets",
-        "text": "Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!",
+        "heading": "Our best selling sets",
+        "text": "",
         "link_text": "",
         "link_url": "",
         "show_delivery_info": false
@@ -13,7 +13,7 @@
     "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
       "type": "product-promos",
       "settings": {
-        "title": "Our best selling sets",
+        "title": "",
         "text": "",
         "collection": "best-sellers",
         "grid": 4,
