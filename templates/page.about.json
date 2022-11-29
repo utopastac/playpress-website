@@ -4,10 +4,20 @@
       "type": "intro",
       "settings": {
         "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "",
+        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
         "link_text": "",
         "link_url": "",
         "show_delivery_info": false
+      }
+    },
+    "69daff38-49c3-40ba-87fd-5594871992a9": {
+      "type": "big-banner",
+      "settings": {
+        "heading": "Sustainability",
+        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+        "link_text": "Learn more",
+        "link_url": "shopify:\/\/pages\/sustainability",
+        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
       }
     },
     "1627851513e6e2c0af": {
@@ -382,20 +392,11 @@
       ],
       "settings": {
       }
-    },
-    "69daff38-49c3-40ba-87fd-5594871992a9": {
-      "type": "big-banner",
-      "settings": {
-        "heading": "Sustainability",
-        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
-        "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
-      }
     }
   },
   "order": [
     "intro",
+    "69daff38-49c3-40ba-87fd-5594871992a9",
     "1627851513e6e2c0af",
     "162785160093d2365d",
     "1627851648bbbb1c7c",
@@ -404,7 +405,6 @@
     "16278519919130b139",
     "16278904348453009f",
     "3b41803c-8040-4774-b0f7-9dfed59a656a",
-    "7479a0b8-11e1-497a-9d3d-357057ba89e2",
-    "69daff38-49c3-40ba-87fd-5594871992a9"
+    "7479a0b8-11e1-497a-9d3d-357057ba89e2"
   ]
 }
