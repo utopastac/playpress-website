@@ -3,90 +3,132 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
+        "heading": "Design",
+        "text": "We work hard to make our Playsets as much as possible for as many people as possible.",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
         "show_delivery_info": false
-      }
-    },
-    "69daff38-49c3-40ba-87fd-5594871992a9": {
-      "type": "big-banner",
-      "settings": {
-        "heading": "Sustainability",
-        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
-        "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
-      }
-    },
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "3b41803c-8040-4774-b0f7-9dfed59a656a": {
-      "type": "accordian",
-      "blocks": {
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
-            "link_url": "",
-            "title": "Make it fun",
-            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
-          }
-        },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/inks.jpg",
-            "link_url": "",
-            "title": "Make it for everyone",
-            "text": "<p>We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can.Add descriptve text<\/p>"
-          }
-        },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
-            "link_url": "",
-            "title": "Make it sustainably",
-            "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text"
-          }
-        }
-      },
-      "block_order": [
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2"
-      ],
-      "settings": {
-        "title": "Our values",
-        "text": ""
-      }
-    },
-    "45d04aa8-a964-4c41-8e41-d9551b182f17": {
-      "type": "gap",
-      "settings": {
       }
     },
     "1627851513e6e2c0af": {
       "type": "image-with-text",
       "settings": {
-        "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
+        "title": "We love making playsets",
+        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.<\/p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "image": "shopify:\/\/shop_images\/design-main.jpg",
         "show_signpost_link": false,
-        "layout": "left",
+        "layout": "right",
         "show_colour": false,
         "last_on_page": false
       }
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
+      "type": "gap",
+      "settings": {
+      }
+    },
+    "8793f623-3546-4bf0-ba8a-6695eb40e923": {
+      "type": "content-blocks-highlight",
+      "blocks": {
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-0": {
+          "type": "content_block_highlight",
+          "settings": {
+            "link_url": "",
+            "title": "Fine MotorSkills",
+            "text": "<p>Playpress is designed to help young people develop fine motor skills.<\/p>"
+          }
+        },
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-1": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/features-eco.png",
+            "link_url": "",
+            "title": "Eco-friendly Playtime",
+            "text": "<p>Children enjoy themselves without the family worrying about the imapct to the planet.<\/p>"
+          }
+        },
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-2": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/features-age.png",
+            "link_url": "",
+            "title": "Imagination & Creativity",
+            "text": "<p>Our playsets encourage children to remix and make their own fun.<\/p>"
+          }
+        },
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-3": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/features-waste.png",
+            "link_url": "",
+            "title": "Storytelling & Vocabulary",
+            "text": "<p>Children can make up their own worlds using our playsets.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-0",
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-1",
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-2",
+        "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-3"
+      ],
+      "settings": {
+      }
+    },
+    "681efef0-ffc5-4f6c-a9ef-0f87ed3a0c2e": {
+      "type": "gap",
+      "settings": {
+      }
+    },
+    "5888284e-830b-42e6-97ad-711d0a0cc200": {
+      "type": "collections",
+      "blocks": {
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "under-10"
+          }
+        },
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "collaborations"
+          }
+        },
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-3": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "play-people-playsets"
+          }
+        },
+        "b0dd29f3-d0ac-4fae-b9fc-d931ba3cc7fb": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-playsets"
+          }
+        }
+      },
+      "block_order": [
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-0",
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-1",
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-2",
+        "template--15752535376064__5888284e-830b-42e6-97ad-711d0a0cc200-1669725057d2112c71-3",
+        "b0dd29f3-d0ac-4fae-b9fc-d931ba3cc7fb"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "d79bd5ae-00a9-49d1-98d3-ee9fabe248c3": {
       "type": "gap",
       "settings": {
       }
@@ -98,31 +140,31 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
-            "link_text": "Get in touch",
-            "link_url": "shopify:\/\/pages\/contact",
-            "title": "Contact",
-            "subtitle": "We are based in East Sussex and always welcome visitors into our design studio!"
+            "image": "shopify:\/\/shop_images\/page-features-award.jpg",
+            "link_text": "About Playpress",
+            "link_url": "shopify:\/\/pages\/about",
+            "title": "Award-winning & eco-friendly",
+            "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
           }
         },
         "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1": {
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "link_text": "Meet the team",
-            "link_url": "shopify:\/\/pages\/team",
-            "title": "Team",
-            "subtitle": "We are a true family business with loads of experience."
+            "link_text": "Bespoke sets",
+            "link_url": "shopify:\/\/pages\/studio",
+            "title": "Studio",
+            "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
           }
         },
         "6241c0d0-1536-40b2-8692-6481323613ee": {
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "link_text": "Our design process",
+            "link_text": "Stock Playpress",
             "link_url": "shopify:\/\/pages\/studio",
-            "title": "Design",
-            "subtitle": "Our products win awards. Design is everything at Playpress."
+            "title": "Stockists",
+            "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
           }
         }
       },
@@ -137,12 +179,12 @@
   },
   "order": [
     "intro",
-    "69daff38-49c3-40ba-87fd-5594871992a9",
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
-    "3b41803c-8040-4774-b0f7-9dfed59a656a",
-    "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "1627851513e6e2c0af",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
+    "8793f623-3546-4bf0-ba8a-6695eb40e923",
+    "681efef0-ffc5-4f6c-a9ef-0f87ed3a0c2e",
+    "5888284e-830b-42e6-97ad-711d0a0cc200",
+    "d79bd5ae-00a9-49d1-98d3-ee9fabe248c3",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
