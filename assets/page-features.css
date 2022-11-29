@@ -99,10 +99,10 @@ a[is=page-feature] div[is=image] {
   border-radius: 1.6rem;
 }
 a[is=page-feature]:nth-child(1) p[is=text-button] {
-  color: #FAB638;
+  color: #1D203F;
 }
 a[is=page-feature]:nth-child(1) p[is=text-button]:after {
-  background: #FAB638;
+  background: #1D203F;
 }
 @media screen and (min-width: 770px) {
   a[is=page-feature]:nth-child(1) article {

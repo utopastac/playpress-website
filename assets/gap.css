@@ -10,7 +10,7 @@ div[is=gap].medium {
 div[is=gap].large {
   height: 9.6rem;
 }
-@includ min($screen-m) {
+@media screen and (min-width: 770px) {
   div[is=gap] {
     height: 9.6rem;
   }
