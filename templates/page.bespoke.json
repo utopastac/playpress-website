@@ -104,6 +104,59 @@
         "link_text": "",
         "link_url": ""
       }
+    },
+    "c8c55d77-17af-4f2c-b19f-e0c8731e605b": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "c9cf4777-b9cd-445b-940e-b2417a3d9630": {
+      "type": "accordian",
+      "blocks": {
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-0": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Bespoke design",
+            "text": "We can design almost anything. We work closely with clients to get the product just right."
+          }
+        },
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-1": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Product prototypes",
+            "text": "We provide prototypes of the play sets so you can get a hands-on experience."
+          }
+        },
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-2": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Your brand",
+            "text": "We can brand the packaging and product however you like."
+          }
+        },
+        "4b0d6989-b130-4287-9348-9e999052082e": {
+          "type": "accordian_item",
+          "settings": {
+            "link_url": "",
+            "title": "Quick manufacture",
+            "text": "We make all our products in the UK. This lets us provide quick turn around and a high-quality product that is CE certified."
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-0",
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-1",
+        "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-2",
+        "4b0d6989-b130-4287-9348-9e999052082e"
+      ],
+      "settings": {
+        "title": "Add a heading",
+        "text": ""
+      }
     }
   },
   "order": [
@@ -111,6 +164,8 @@
     "16277530953a8433e6",
     "c4cf0f2c-ba8c-4d76-8127-85095842da25",
     "162775330702ef7b43",
-    "9b58a03a-9d23-40a1-ad93-0c601ff4b503"
+    "9b58a03a-9d23-40a1-ad93-0c601ff4b503",
+    "c8c55d77-17af-4f2c-b19f-e0c8731e605b",
+    "c9cf4777-b9cd-445b-940e-b2417a3d9630"
   ]
 }
