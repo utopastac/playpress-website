@@ -27,9 +27,19 @@
   src: url(sofia-pro-bold-italic.woff2) format("woff2");
 }
 div[is=product-promos] > div {
-  grid-gap: 2.4rem;
+  grid-gap: 1.6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+@media screen and (min-width: 550px) {
+  div[is=product-promos] > div {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+}
+@media screen and (min-width: 770px) {
+  div[is=product-promos] > div {
+    grid-gap: 2.4rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   div[is=product-promos] > div {
@@ -386,9 +396,19 @@ a:visited:focus-visible {
 }
 
 div[is=product-promos] > div {
-  grid-gap: 2.4rem;
+  grid-gap: 1.6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+@media screen and (min-width: 550px) {
+  div[is=product-promos] > div {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+}
+@media screen and (min-width: 770px) {
+  div[is=product-promos] > div {
+    grid-gap: 2.4rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   div[is=product-promos] > div {
@@ -593,7 +613,7 @@ body.fixed {
 #main {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 2.4rem;
+  padding: 1.6rem;
 }
 @media screen and (min-width: 770px) {
   #main {

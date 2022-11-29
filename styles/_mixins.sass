@@ -167,9 +167,15 @@ $bigUnits: 40
 %product-list
   > div
     @extend %main-content
-    grid-gap: units(3)
+    grid-gap: units(2)
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(size(150), 1fr))
+
+    @include min($screen-s)
+      grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
+
+    @include min($screen-m)
+      grid-gap: units(3)
 
     @include min($screen-l)
       grid-gap: units(5)

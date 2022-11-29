@@ -86,13 +86,18 @@
   }
 }
 [is=product-promo] img {
-  border-radius: 3.2rem;
+  border-radius: 1.6rem;
 }
 [is=product-promo] > div {
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  padding-top: 1.6rem;
+  padding-top: 0.8rem;
+}
+@media screen and (min-width: 770px) {
+  [is=product-promo] > div {
+    padding-top: 1.6rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   [is=product-promo] > div {

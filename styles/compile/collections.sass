@@ -4,9 +4,14 @@
 
   ul
     display: grid
-    grid-template-columns: repeat( auto-fit, minmax(units(20), 1fr) )
     grid-gap: units(2)
     @extend %main-content
+
+    @include min($screen-s)
+      grid-template-columns: repeat( auto-fit, minmax(units(20), 1fr) )
+
+    @include min($screen-m)
+      grid-gap: units(3)
 
     @include min($screen-m)
       grid-gap: units(5)

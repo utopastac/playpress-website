@@ -68,7 +68,7 @@ section[is=hero-event] div[is=hero-event-main] {
   position: relative;
   margin: 0 0 3.2rem 0;
   overflow: hidden;
-  background: #F3F3F7;
+  background: #EBEDFA;
   border-radius: 3.2rem;
 }
 section[is=hero-event] div[is=hero-event-main] p {

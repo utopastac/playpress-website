@@ -5,8 +5,17 @@
 
 .collections ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-gap: 1.6rem;
+}
+@media screen and (min-width: 550px) {
+  .collections ul {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+@media screen and (min-width: 770px) {
+  .collections ul {
+    grid-gap: 2.4rem;
+  }
 }
 @media screen and (min-width: 770px) {
   .collections ul {

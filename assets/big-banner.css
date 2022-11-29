@@ -59,6 +59,9 @@ section[is=big-banner] .banner-content {
 section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-content h3, section[is=big-banner] .banner-content p {
   color: #FFFFFF;
 }
+section[is=big-banner] .banner-content h2 {
+  margin-bottom: 0.4rem;
+}
 section[is=big-banner] .banner-content div[is=button] {
   margin-top: 2.4rem;
 }

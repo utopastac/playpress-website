@@ -1,7 +1,17 @@
 div[is=product-promos] > div {
-  grid-gap: 2.4rem;
+  grid-gap: 1.6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+@media screen and (min-width: 550px) {
+  div[is=product-promos] > div {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+}
+@media screen and (min-width: 770px) {
+  div[is=product-promos] > div {
+    grid-gap: 2.4rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   div[is=product-promos] > div {
