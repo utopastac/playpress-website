@@ -78,6 +78,65 @@
       "settings": {
       }
     },
+    "0a7098d8-9ba9-41cb-9219-b6f6a58046ac": {
+      "type": "gap",
+      "settings": {
+      }
+    },
+    "9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d": {
+      "type": "prominent-features",
+      "blocks": {
+        "template--15752535376064__9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d-166972570239aa7aa6-0": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/design-details.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Details",
+            "subtitle": "Down to the last millimetre",
+            "text": "<p>We obsess over the details, and work tirelessly with our manufacturers to push the boundaries of what is possible. Every piece is a reflection of the careful thought process.<\/p>"
+          }
+        },
+        "template--15752535376064__9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d-166972570239aa7aa6-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/design-play.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Designed for play",
+            "subtitle": "The wheels go round and round",
+            "text": "<p>Playpress sets are not models - they’re designed to be played with. If there is a door, it will open. If there is a hinge, it will work.<\/p>"
+          }
+        },
+        "e319b889-5c41-41ec-9865-6516f87c638d": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/design-award.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Award winning",
+            "subtitle": "Recognised by our industry",
+            "text": "<p>Our sets have been entered into and won awards for their design.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15752535376064__9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d-166972570239aa7aa6-0",
+        "template--15752535376064__9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d-166972570239aa7aa6-1",
+        "e319b889-5c41-41ec-9865-6516f87c638d"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "",
+        "link_url": ""
+      }
+    },
     "681efef0-ffc5-4f6c-a9ef-0f87ed3a0c2e": {
       "type": "gap",
       "settings": {
@@ -183,6 +242,8 @@
     "1627851513e6e2c0af",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "8793f623-3546-4bf0-ba8a-6695eb40e923",
+    "0a7098d8-9ba9-41cb-9219-b6f6a58046ac",
+    "9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d",
     "681efef0-ffc5-4f6c-a9ef-0f87ed3a0c2e",
     "5888284e-830b-42e6-97ad-711d0a0cc200",
     "d79bd5ae-00a9-49d1-98d3-ee9fabe248c3",
