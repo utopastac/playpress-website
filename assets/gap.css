@@ -1,8 +1,26 @@
 div[is=gap] {
   height: 6.4rem;
 }
+div[is=gap].small {
+  height: 4rem;
+}
+div[is=gap].medium {
+  height: 6.4rem;
+}
+div[is=gap].large {
+  height: 9.6rem;
+}
 @includ min($screen-m) {
   div[is=gap] {
     height: 9.6rem;
+  }
+  div[is=gap].small {
+    height: 6.4rem;
+  }
+  div[is=gap].medium {
+    height: 9.6rem;
+  }
+  div[is=gap].large {
+    height: 14.4rem;
   }
 }

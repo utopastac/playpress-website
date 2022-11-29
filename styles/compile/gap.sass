@@ -3,5 +3,23 @@
 div[is="gap"]
   height: units(8)
 
+  &.small
+    height: units(5)
+  
+  &.medium
+    height: units(8)
+
+  &.large
+    height: units(12)
+
   @includ min($screen-m)
     height: units(12)
+
+    &.small
+      height: units(8)
+    
+    &.medium
+      height: units(12)
+
+    &.large
+      height: units(18)

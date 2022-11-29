@@ -1,6 +1,15 @@
 {{ 'gap.css' | asset_url | stylesheet_tag }}
 
-<div is="gap">
+{% case section.settings.size %}
+  {% when 1 %}
+    {%- assign gap_size = 'small' -%}
+  {% when 2 %}
+    {%- assign gap_size = 'medium' -%}
+  {% when 3 %}
+    {%- assign gap_size = 'large' -%}
+{% endcase %}
+
+<div is="gap" class="{{ gap_size }}">
 </div>
 
 {% schema %}
@@ -8,19 +17,14 @@
   "name": "Gap",
   "settings": [
     {
-      "type": "header",
-      "content": "Editing",
-      "info": "You can edit this section within the theme settings"
-    },
-    {
       "type": "range",
       "id": "size",
       "label": "Gap size",
-      "min": 2,
+      "min": 1,
       "max": 3,
       "step": 1,
       "default": 2
-    },
+    }
   ],
   "presets": [
     {
