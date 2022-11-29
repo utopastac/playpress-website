@@ -49,6 +49,10 @@
   background: #EBEDFA;
   border-radius: 1.6rem;
   height: 100%;
+  transition: scale 0.5s;
+}
+.collection-promo:hover {
+  scale: 1.05;
 }
 .collection-promo img {
   border-radius: 3.2rem;

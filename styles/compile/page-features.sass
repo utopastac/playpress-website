@@ -4,6 +4,7 @@ a[is="page-feature"]
   background: $white
   border-radius: $border-m
   overflow: hidden
+  transition: all 0.5s
 
   h3
     @extend %heading-3
@@ -19,6 +20,9 @@ a[is="page-feature"]
     margin-top: units(1)
     @extend %bold
     @extend %button-l
+
+  &:hover
+    scale: 1.03
 
   div[is="image"]
     background-size: cover

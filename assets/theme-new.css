@@ -65,6 +65,10 @@ button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   white-space: nowrap;
   outline: none;
   border: none;
+  transition: scale 0.5s;
+}
+button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+  scale: 1.05;
 }
 button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
   content: "";
@@ -434,6 +438,10 @@ button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   white-space: nowrap;
   outline: none;
   border: none;
+  transition: scale 0.5s;
+}
+button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+  scale: 1.05;
 }
 button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
   content: "";

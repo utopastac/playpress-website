@@ -22,6 +22,10 @@ div[is=product] > div form button {
   white-space: nowrap;
   outline: none;
   border: none;
+  transition: scale 0.5s;
+}
+div[is=product] > div form button:hover {
+  scale: 1.05;
 }
 div[is=product] > div form button:after {
   content: "";

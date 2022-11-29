@@ -42,6 +42,10 @@ section[is=big-banner] .banner-content h2 {
 section[is=big-banner] {
   position: relative;
   margin: 3.2rem 0;
+  transition: scale 0.5s;
+}
+section[is=big-banner]:hover {
+  scale: 1.02;
 }
 section[is=big-banner] div[is=hero-content] {
   padding: 2.4rem;

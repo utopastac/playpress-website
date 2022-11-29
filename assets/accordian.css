@@ -49,6 +49,10 @@ article[is=accordian-item] {
   cursor: pointer;
   padding: 0 2.4rem;
   margin-bottom: 0.8rem;
+  transition: scale 0.5s;
+}
+article[is=accordian-item]:hover {
+  scale: 1.03;
 }
 @media screen and (min-width: 770px) {
   article[is=accordian-item] {
@@ -77,6 +81,7 @@ article[is=accordian-item] h4 {
 }
 article[is=accordian-item].active {
   background: #2D3788;
+  scale: 1.03;
 }
 article[is=accordian-item].active h4, article[is=accordian-item].active p, article[is=accordian-item].active div {
   color: white;

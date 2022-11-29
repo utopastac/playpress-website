@@ -7,6 +7,10 @@ article[is="accordian-item"]
   cursor: pointer
   padding: 0 units(3)
   margin-bottom: units(1)
+  transition: scale 0.5s
+
+  &:hover
+    scale: 1.03
 
   @include min($screen-m)
     padding: 0 units(4)
@@ -34,6 +38,7 @@ article[is="accordian-item"]
 
   &.active
     background: $blue-1000
+    scale: 1.03
 
     h4, p, div
       color: white

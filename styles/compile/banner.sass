@@ -2,10 +2,15 @@
   
 section[is="banner"]
   position: relative
+  transition: scale 0.5s
+
+  &:hover
+    scale: 1.02
 
   div[is="hero-content"]
     position: relative
     padding: units(3)
+    
 
     @include min($screen-m)
       display: flex

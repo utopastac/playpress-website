@@ -82,12 +82,16 @@ a[is=page-feature] {
   background: #FFFFFF;
   border-radius: 3.2rem;
   overflow: hidden;
+  transition: all 0.5s;
 }
 a[is=page-feature] h4 {
   margin-bottom: 0.4rem;
 }
 a[is=page-feature] p[is=text-button] {
   margin-top: 0.8rem;
+}
+a[is=page-feature]:hover {
+  scale: 1.03;
 }
 a[is=page-feature] div[is=image] {
   background-size: cover;

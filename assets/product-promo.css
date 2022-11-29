@@ -76,6 +76,10 @@
   text-decoration: none;
   min-height: 0;
   height: 100%;
+  transition: scale 0.5s;
+}
+[is=product-promo]:hover {
+  scale: 1.03;
 }
 [is=product-promo] button {
   display: none;

@@ -70,6 +70,10 @@ section[is=hero-event] div[is=hero-event-main] {
   overflow: hidden;
   background: #EBEDFA;
   border-radius: 3.2rem;
+  transition: scale 0.5s;
+}
+section[is=hero-event] div[is=hero-event-main]:hover {
+  scale: 1.02;
 }
 section[is=hero-event] div[is=hero-event-main] p {
   margin-bottom: 3.2rem;

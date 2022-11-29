@@ -41,6 +41,10 @@ section[is=banner] .banner-content h2 {
 
 section[is=banner] {
   position: relative;
+  transition: scale 0.5s;
+}
+section[is=banner]:hover {
+  scale: 1.02;
 }
 section[is=banner] div[is=hero-content] {
   position: relative;
