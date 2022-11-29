@@ -9,9 +9,61 @@
         "link_url": "",
         "show_delivery_info": false
       }
+    },
+    "d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e": {
+      "type": "prominent-features",
+      "blocks": {
+        "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-0": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "",
+            "link_url": "",
+            "title": "Visit us",
+            "subtitle": "Our studio",
+            "text": "<p>Our design studio is based in Sussex. Come and visit and find out how we work!<\/p>"
+          }
+        },
+        "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "",
+            "link_url": "",
+            "title": "Business enquiries",
+            "subtitle": "Stocking & manufature",
+            "text": "<p>If you are interested in business partnerships with Playpress, email us here!<\/p>"
+          }
+        },
+        "8544452b-8b5c-42a5-a57f-04593e9b604f": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "",
+            "link_url": "",
+            "title": "Customer service",
+            "subtitle": "Feedback and issues",
+            "text": "<p>If you want to give us feedback, or get in touch for any other reason, email us here.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-0",
+        "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-1",
+        "8544452b-8b5c-42a5-a57f-04593e9b604f"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
     }
   },
   "order": [
-    "intro"
+    "intro",
+    "d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e"
   ]
 }
