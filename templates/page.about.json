@@ -138,6 +138,49 @@
       ],
       "settings": {
       }
+    },
+    "06ec3cff-61fe-4690-94f1-f255248aab07": {
+      "type": "page-features",
+      "blocks": {
+        "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-0": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+            "link_text": "Get in touch",
+            "link_url": "shopify:\/\/pages\/contact",
+            "title": "Contact",
+            "subtitle": "We are based in East Sussex and always welcome visitors into our design studio!"
+          }
+        },
+        "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Meet the team",
+            "link_url": "shopify:\/\/pages\/team",
+            "title": "Team",
+            "subtitle": "We are a true family business with loads of experience."
+          }
+        },
+        "6241c0d0-1536-40b2-8692-6481323613ee": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Our design process",
+            "link_url": "shopify:\/\/pages\/studio",
+            "title": "Design",
+            "subtitle": "Our products win awards. Design is everything at Playpress."
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-0",
+        "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1",
+        "6241c0d0-1536-40b2-8692-6481323613ee"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -148,6 +191,7 @@
     "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "1627851513e6e2c0af",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
-    "7479a0b8-11e1-497a-9d3d-357057ba89e2"
+    "7479a0b8-11e1-497a-9d3d-357057ba89e2",
+    "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
