@@ -30,14 +30,6 @@
         "size": 2
       }
     },
-    "162775330702ef7b43": {
-      "type": "rich-text",
-      "settings": {
-        "heading": "Start a collaboration with us!",
-        "text": "<p>Get in touch by emailing us at <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com<\/a><\/p>",
-        "show_colour": false
-      }
-    },
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503": {
       "type": "prominent-features",
       "blocks": {
@@ -157,15 +149,38 @@
         "title": "Add a heading",
         "text": ""
       }
+    },
+    "949c3f03-8eef-4953-bd48-d885a2c6bd15": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Every project will have a budget!",
+        "text": "<p>The design, set up, and machinery set up involved generally means that most projects need to have a volume of between 1000 and 5000 units - the larger the number the lower the ‘per unit’ cost is.<br\/><br\/>Depending on the project required, the initial budget expectation would be between £6000 and £12,000, but this would deliver a delightful and unique addition to your brand.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/bespoke-budget.jpg",
+        "show_signpost_link": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "162775330702ef7b43": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Start a collaboration with us!",
+        "text": "<p>Get in touch by emailing us at <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com<\/a><\/p>",
+        "show_colour": false
+      }
     }
   },
   "order": [
     "intro",
     "16277530953a8433e6",
     "c4cf0f2c-ba8c-4d76-8127-85095842da25",
-    "162775330702ef7b43",
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503",
     "c8c55d77-17af-4f2c-b19f-e0c8731e605b",
-    "c9cf4777-b9cd-445b-940e-b2417a3d9630"
+    "c9cf4777-b9cd-445b-940e-b2417a3d9630",
+    "949c3f03-8eef-4953-bd48-d885a2c6bd15",
+    "162775330702ef7b43"
   ]
 }
