@@ -25,11 +25,12 @@ div[is="cart"]
     table 
       width: 100%
 
+    tr
+      border-radius: $border-xs
+
     th
-      border-top: 2px solid $grey-1200
       background: $yolk-100
-      padding-left: units(1)
-      
+      padding-left: units(2)
 
     td
       padding: units(1) 0
@@ -37,7 +38,8 @@ div[is="cart"]
 
     img 
       display: block
-      margin: units(1) units(1) units(1) 0
+      margin: units(1) units(2) units(1) 0
+      border-radius: $border-s
 
     label 
       display: none
@@ -46,8 +48,11 @@ div[is="cart"]
       width: units(10)
 
   div[is="checkout"]
-    border-top: 2px solid $grey-1200
-    padding: units(2) 0 0 0
+
+    div[is="checkout-wrapper"]
+      background: $blue-100
+      padding: units(3)
+      border-radius: $border-m
 
     > header
       display: flex

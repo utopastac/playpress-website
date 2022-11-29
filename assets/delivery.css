@@ -44,7 +44,7 @@ div[is=delivery] {
   padding: 1.6rem;
   color: #2D3788;
   cursor: pointer;
-  border: 1px solid #2D3788;
+  background: #FFFFFF;
 }
 div[is=delivery] header {
   display: flex;

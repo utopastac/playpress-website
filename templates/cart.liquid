@@ -49,17 +49,20 @@
             </tr>
           </tfoot>
         </table>
-        <div is="signpost">
-          <a is="text-button" href="/products">Continue shopping</a>
-        </div>
+        
       </div>
         <div is="checkout">
-          <header>
-            <h3>Total:</h3>
-            <p>{{cart.total_price | money }}</p>
-          </header>
-          <button type="submit" name="checkout">Proceed to checkout</button>
-          {% render 'delivery' %}
+          <div is="checkout-wrapper">
+            <header>
+              <h3>Total:</h3>
+              <p>{{cart.total_price | money }}</p>
+            </header>
+            <button type="submit" name="checkout">Proceed to checkout</button>
+            {% render 'delivery' %}
+          </div>
+          <div is="signpost">
+            <a is="text-button" href="/products">Continue shopping</a>
+          </div>
         </div>
       {%- endif -%}
     </form>
