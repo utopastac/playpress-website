@@ -3,85 +3,24 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
+        "heading": "Sustainability",
+        "text": "The environment is at the heart of everything we do, and is our core reason for existing.",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+        "image": "shopify:\/\/shop_images\/sustainability-main.jpg",
         "show_delivery_info": false
-      }
-    },
-    "69daff38-49c3-40ba-87fd-5594871992a9": {
-      "type": "big-banner",
-      "settings": {
-        "heading": "Sustainability",
-        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
-        "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
-      }
-    },
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "3b41803c-8040-4774-b0f7-9dfed59a656a": {
-      "type": "accordian",
-      "blocks": {
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
-            "link_url": "",
-            "title": "Make it fun",
-            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
-          }
-        },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/inks.jpg",
-            "link_url": "",
-            "title": "Make it for everyone",
-            "text": "<p>We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can.Add descriptve text<\/p>"
-          }
-        },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
-          "type": "accordian_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
-            "link_url": "",
-            "title": "Make it sustainably",
-            "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text"
-          }
-        }
-      },
-      "block_order": [
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2"
-      ],
-      "settings": {
-        "title": "Our values",
-        "text": ""
-      }
-    },
-    "45d04aa8-a964-4c41-8e41-d9551b182f17": {
-      "type": "gap",
-      "settings": {
       }
     },
     "1627851513e6e2c0af": {
       "type": "image-with-text",
       "settings": {
-        "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
+        "title": "Earth at the core",
+        "text": "<p>We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.<\/p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "image": "shopify:\/\/shop_images\/sustainability-header.jpg",
         "show_signpost_link": false,
-        "layout": "left",
+        "layout": "right",
         "show_colour": false,
         "last_on_page": false
       }
@@ -89,6 +28,62 @@
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
       "type": "gap",
       "settings": {
+        "size": 2
+      }
+    },
+    "b5dd8467-9e57-4b9f-982c-b108a87b87cd": {
+      "type": "content-blocks-highlight",
+      "blocks": {
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-0": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/type_eco.jpg",
+            "link_url": "",
+            "title": "Sustainably Sourced Board",
+            "text": "<p>The fibres for our playboard are bleach- free and sourced from sustainably managed forests in Finland.<\/p>"
+          }
+        },
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-1": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/type_plant.jpg",
+            "link_url": "",
+            "title": "Plant-based inks",
+            "text": "<p>We use food safe water-based inks and glue that are vegan, biodegradable and ocean friendly.<\/p>"
+          }
+        },
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-2": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/type_recycle.jpg",
+            "link_url": "",
+            "title": "Recyclable",
+            "text": "<p>We use materials that are fully recyclable, 100% biodegradable, whilst also being robust for play.<\/p>"
+          }
+        },
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-3": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/type_UK.jpg",
+            "link_url": "",
+            "title": "Locally made",
+            "text": "<p>Our toys conform to European standards and are locally manufactured in the UK to minimise air miles.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-0",
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-1",
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-2",
+        "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-3"
+      ],
+      "settings": {
+      }
+    },
+    "fe29a3f4-3733-4e27-9120-71d6a995add7": {
+      "type": "gap",
+      "settings": {
+        "size": 2
       }
     },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
@@ -137,12 +132,10 @@
   },
   "order": [
     "intro",
-    "69daff38-49c3-40ba-87fd-5594871992a9",
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
-    "3b41803c-8040-4774-b0f7-9dfed59a656a",
-    "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "1627851513e6e2c0af",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
+    "b5dd8467-9e57-4b9f-982c-b108a87b87cd",
+    "fe29a3f4-3733-4e27-9120-71d6a995add7",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
