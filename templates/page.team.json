@@ -3,92 +3,110 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
+        "heading": "The team",
+        "text": "Playpress is made of it’s people, and it is a true family business.",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
         "show_delivery_info": false
       }
     },
-    "69daff38-49c3-40ba-87fd-5594871992a9": {
-      "type": "big-banner",
-      "settings": {
-        "heading": "Sustainability",
-        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
-        "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
-      }
-    },
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "3b41803c-8040-4774-b0f7-9dfed59a656a": {
-      "type": "accordian",
+    "398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04": {
+      "type": "prominent-features",
       "blocks": {
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
-          "type": "accordian_item",
+        "template--15752535343296__398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04-1669740937fd81563a-0": {
+          "type": "prominent_feature",
           "settings": {
-            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-matthew.jpg",
+            "link_text": "",
             "link_url": "",
-            "title": "Make it fun",
-            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
+            "title": "the fearless founder",
+            "subtitle": "Matthew",
+            "text": "<p>Matthew is our fearless founder and the beating heart of our business. He brings his passion for quality, clever design and craftsmanship to every single Playpress pack.<\/p>"
           }
         },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
-          "type": "accordian_item",
+        "template--15752535343296__398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04-1669740937fd81563a-1": {
+          "type": "prominent_feature",
           "settings": {
-            "image": "shopify:\/\/shop_images\/inks.jpg",
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-melvin.jpg",
+            "link_text": "",
             "link_url": "",
-            "title": "Make it for everyone",
-            "text": "<p>We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can.Add descriptve text<\/p>"
+            "title": "the business brains",
+            "subtitle": "Melvin",
+            "text": "<p>Dad and business brain Melvin has helped us to grow Playpress from a humble market stall to an international stockist with a range of products and partners.<\/p>"
           }
         },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
-          "type": "accordian_item",
+        "fcd9ad99-c8f8-4c7e-8316-70a3b9ef7738": {
+          "type": "prominent_feature",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-karen.jpg",
+            "link_text": "",
             "link_url": "",
-            "title": "Make it sustainably",
-            "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text"
+            "title": "Master of many trades",
+            "subtitle": "Karen",
+            "text": "<p>Mum and a constant support to the running of the business as well as an expert wordsmith. Karen helps with everything from keeping accounts to writing product descriptions.<\/p>"
+          }
+        },
+        "4f8cc26b-0aba-4f6a-9579-ad62cdb1d474": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-kingsley.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "People person extraordinaire",
+            "subtitle": "Kingsley",
+            "text": "<p>Kingsley, also a brother, is our brilliant sales person and operations manager. Helping the business grow and an excellant person to deal with.<\/p>"
+          }
+        },
+        "7e931224-1b05-488d-a1ed-caf4da98d99e": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-mike.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "The artist",
+            "subtitle": "Mike",
+            "text": "<p>Mike, best friends with Matthew since School, brought his amazing artistic talents to help found PlayPress, launch the brand and shape the designs. Mike left the company in 2019 to work on new artist projects.<\/p>"
+          }
+        },
+        "c3371e69-f660-4ee6-b536-bc9e95b0f74e": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-peter.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Creative powerhouse",
+            "subtitle": "Peter",
+            "text": "<p>Peter helped brother Matthew to design, develop and launch the very first Playpress sets. He’s still lending his creative skills to help bring new ideas for the brand to life.<\/p>"
           }
         }
       },
       "block_order": [
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2"
+        "template--15752535343296__398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04-1669740937fd81563a-0",
+        "template--15752535343296__398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04-1669740937fd81563a-1",
+        "fcd9ad99-c8f8-4c7e-8316-70a3b9ef7738",
+        "4f8cc26b-0aba-4f6a-9579-ad62cdb1d474",
+        "7e931224-1b05-488d-a1ed-caf4da98d99e",
+        "c3371e69-f660-4ee6-b536-bc9e95b0f74e"
       ],
       "settings": {
-        "title": "Our values",
-        "text": ""
-      }
-    },
-    "45d04aa8-a964-4c41-8e41-d9551b182f17": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "1627851513e6e2c0af": {
-      "type": "image-with-text",
-      "settings": {
-        "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "title": "",
+        "text": "",
+        "grid": 3,
         "show_signpost_link": false,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
+        "link_text": "View more",
+        "link_url": ""
       }
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
       "type": "gap",
       "settings": {
+        "size": 2
       }
     },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
@@ -137,11 +155,7 @@
   },
   "order": [
     "intro",
-    "69daff38-49c3-40ba-87fd-5594871992a9",
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
-    "3b41803c-8040-4774-b0f7-9dfed59a656a",
-    "45d04aa8-a964-4c41-8e41-d9551b182f17",
-    "1627851513e6e2c0af",
+    "398e3b4f-9735-4dd0-9cc7-e5b1e0e7db04",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
