@@ -4,21 +4,25 @@ article[is="content-block-highlight"]
   background: $blue-1000
   border-radius: $border-m
   overflow: hidden
-  display: grid
+  display: flex
+  flex-direction: column
   width: 100%
-  justify-content: center
+  justify-content: space-between
   align-items: center
   max-width: size(280)
 
   &:nth-child(2n)
-    img
-      grid-row: 2
+    flex-direction: column-reverse
 
   img
     border-radius: 0
 
   div
     padding: units(3)
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
 
     h4, p
       color: white
