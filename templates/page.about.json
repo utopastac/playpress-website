@@ -90,55 +90,6 @@
       "settings": {
       }
     },
-    "7479a0b8-11e1-497a-9d3d-357057ba89e2": {
-      "type": "content-blocks-highlight",
-      "blocks": {
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-0": {
-          "type": "content_block_highlight",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/features-age.png",
-            "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
-          }
-        },
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-1": {
-          "type": "content_block_highlight",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/features-waste.png",
-            "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
-          }
-        },
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-2": {
-          "type": "content_block_highlight",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/features-creative.png",
-            "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
-          }
-        },
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-3": {
-          "type": "content_block_highlight",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/features-eco.png",
-            "link_url": "",
-            "title": "Add a title",
-            "text": "<p>Add descriptve text<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-0",
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-1",
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-2",
-        "template--15723518853312__7479a0b8-11e1-497a-9d3d-357057ba89e2-16692064211a418660-3"
-      ],
-      "settings": {
-      }
-    },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
       "type": "page-features",
       "blocks": {
@@ -191,7 +142,6 @@
     "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "1627851513e6e2c0af",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
-    "7479a0b8-11e1-497a-9d3d-357057ba89e2",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
