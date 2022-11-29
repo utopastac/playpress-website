@@ -57,33 +57,36 @@
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/bespoke-science.jpg",
             "link_text": "",
             "link_url": "",
-            "title": "Add a title",
-            "subtitle": "Add a subtitle",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Science Museum",
+            "subtitle": "",
+            "text": "<p>We made a Science Museum branded Playpress science range, plus we jointly developed the Soyuz landing craft that is a unique product to the museum.<\/p>"
           }
         },
         "960a8161-6c62-4013-bd35-1bc0095737f1": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/bespoke-jojo.jpg",
             "link_text": "",
             "link_url": "",
-            "title": "Add a title",
-            "subtitle": "Add a subtitle",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Jojo Maman Bébé",
+            "subtitle": "",
+            "text": "<p>We jointly developed the Christmas ‘give away’ gift, making a huge number of products in a short time frame.<\/p>"
           }
         },
         "aab97110-9eda-4a98-99ca-dd28d1e4922c": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "link_text": "",
+            "image": "shopify:\/\/shop_images\/bespoke-square-mile.jpg",
+            "link_text": "Learn more",
             "link_url": "",
-            "title": "Add a title",
-            "subtitle": "Add a subtitle",
-            "text": "<p>Add descriptve text<\/p>"
+            "title": "Square Mile Coffee",
+            "subtitle": "",
+            "text": "<p>In rapid time we made 20,000 delightful logo coasters for use in the world’s largest coffee tasting event.<\/p>"
           }
         }
       },
@@ -94,11 +97,11 @@
         "aab97110-9eda-4a98-99ca-dd28d1e4922c"
       ],
       "settings": {
-        "title": "Add a heading",
+        "title": "",
         "text": "",
-        "grid": 2,
+        "grid": 4,
         "show_signpost_link": false,
-        "link_text": "View more",
+        "link_text": "",
         "link_url": ""
       }
     }
