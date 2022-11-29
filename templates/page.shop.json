@@ -33,11 +33,6 @@
         "image": "shopify:\/\/shop_images\/hero_banner.png"
       }
     },
-    "39b2a25f-bef9-4d58-ac18-34f86ccb3b16": {
-      "type": "gap",
-      "settings": {
-      }
-    },
     "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
       "type": "collections",
       "blocks": {
@@ -114,7 +109,6 @@
     "intro",
     "5f050f65-23f0-40c4-90f9-feb4734e1d9d",
     "d2a8dab2-7399-4ae4-902b-e3220f0d5498",
-    "39b2a25f-bef9-4d58-ac18-34f86ccb3b16",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
