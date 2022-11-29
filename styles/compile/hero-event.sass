@@ -2,7 +2,6 @@
   
 section[is="hero-event"]
   position: relative
-  @include cover-background(url(../hello.png))
 
   div[is="hero-event-main"]
     @extend %main-content
@@ -10,6 +9,9 @@ section[is="hero-event"]
     position: relative
     margin: 0 0 units(4) 0
     overflow: hidden
+
+    background: $grey-100
+    border-radius: $border-m
 
     img
 
@@ -27,6 +29,7 @@ section[is="hero-event"]
       margin-top: units(3)
 
     @include min($screen-l)
+      background: none
       border-radius: $border-m
       display: flex
       align-items: flex-end
@@ -42,14 +45,14 @@ section[is="hero-event"]
 
   div[is="hero-content"]
     position: relative
-    background: $white   
-    padding-top: units(2) 
+    padding: units(3) 
 
     @include min($screen-m)
       display: flex
 
     @include min($screen-l)
       display: block
+      background: $white
       width: 50%
       padding: units(4)
       max-width: size(560)

@@ -41,12 +41,10 @@ section[is=banner] .banner-content h2 {
 
 section[is=banner] {
   position: relative;
-  margin: 4rem 0;
 }
 section[is=banner] div[is=hero-content] {
   position: relative;
-  background: #FFFFFF;
-  padding-top: 1.6rem;
+  padding: 2.4rem;
 }
 @media screen and (min-width: 770px) {
   section[is=banner] div[is=hero-content] {
@@ -56,6 +54,7 @@ section[is=banner] div[is=hero-content] {
 }
 @media screen and (min-width: 1080px) {
   section[is=banner] div[is=hero-content] {
+    background: #FFFFFF;
     display: block;
     width: 50%;
     padding: 3.2rem;
@@ -68,14 +67,16 @@ section[is=banner] > a {
 }
 section[is=banner] .banner-content {
   position: relative;
-  margin: 1.6rem 0 3.2rem 0;
   overflow: hidden;
+  background: #F3F3F7;
+  border-radius: 3.2rem;
 }
 section[is=banner] .banner-content div[is=button] {
   margin-top: 2.4rem;
 }
 @media screen and (min-width: 1080px) {
   section[is=banner] .banner-content {
+    background: none;
     border-radius: 3.2rem;
     display: flex;
     align-items: flex-end;
