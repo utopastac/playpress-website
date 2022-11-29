@@ -10,8 +10,96 @@
       "settings": {
       }
     },
-    "162823772699f88715": {
-      "type": "about-brand",
+    "5c2acd23-9ab2-4c7c-a39d-3ea2357647fc": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "93963ba8-9584-466d-a651-b88c93601f03": {
+      "type": "collections",
+      "blocks": {
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-playsets"
+          }
+        },
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "under-10"
+          }
+        },
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "julia-donaldson"
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-0",
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-1",
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-2",
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-3"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "92f62ae7-0038-4918-996d-3f5f645a44a2": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "334be8c7-6a16-4436-94de-726d965fdfe7": {
+      "type": "page-features",
+      "blocks": {
+        "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-0": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/page-features-award.jpg",
+            "link_text": "About Playpress",
+            "link_url": "shopify:\/\/pages\/about",
+            "title": "Award-winning & eco-friendly",
+            "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
+          }
+        },
+        "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-1": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Bespoke sets",
+            "link_url": "shopify:\/\/pages\/studio",
+            "title": "Studio",
+            "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
+          }
+        },
+        "88846a79-f549-4ac4-b4fd-6aba0b07a010": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Stock Playpress",
+            "link_url": "shopify:\/\/pages\/stock-us",
+            "title": "Stockists",
+            "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-0",
+        "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-1",
+        "88846a79-f549-4ac4-b4fd-6aba0b07a010"
+      ],
       "settings": {
       }
     }
@@ -19,6 +107,9 @@
   "order": [
     "main",
     "recommendations",
-    "162823772699f88715"
+    "5c2acd23-9ab2-4c7c-a39d-3ea2357647fc",
+    "93963ba8-9584-466d-a651-b88c93601f03",
+    "92f62ae7-0038-4918-996d-3f5f645a44a2",
+    "334be8c7-6a16-4436-94de-726d965fdfe7"
   ]
 }
