@@ -6,7 +6,36 @@
         "heading": "Shop our playsets",
         "text": "Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!",
         "link_text": "",
+        "link_url": "",
+        "show_delivery_info": false
+      }
+    },
+    "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
+      "type": "product-promos",
+      "settings": {
+        "title": "Our best selling sets",
+        "text": "",
+        "collection": "best-sellers",
+        "grid": 4,
+        "rows": 1,
+        "show_signpost_link": true,
+        "link_text": "View all",
         "link_url": ""
+      }
+    },
+    "d2a8dab2-7399-4ae4-902b-e3220f0d5498": {
+      "type": "banner",
+      "settings": {
+        "heading": "SAVannah set",
+        "text": "Get in the Christmas spirit with our gift ideas under £10",
+        "link_text": "Buy now",
+        "link_url": "shopify:\/\/products\/savannah-animals-playset",
+        "image": "shopify:\/\/shop_images\/hero_banner.png"
+      }
+    },
+    "39b2a25f-bef9-4d58-ac18-34f86ccb3b16": {
+      "type": "gap",
+      "settings": {
       }
     },
     "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
@@ -15,25 +44,25 @@
         "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "best-sellers"
           }
         },
         "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "under-10"
           }
         },
         "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-2": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "stocking-fillers"
           }
         },
         "template--15728635805888__f27d7e12-cdbe-4b45-a78e-84d87711e431-1667047949152eb25d-3": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "collaborations"
           }
         }
       },
@@ -47,17 +76,9 @@
         "title": ""
       }
     },
-    "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
-      "type": "product-promos",
+    "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691": {
+      "type": "gap",
       "settings": {
-        "title": "Our best selling sets",
-        "text": "",
-        "collection": "best-sellers",
-        "grid": 3,
-        "rows": 1,
-        "show_signpost_link": true,
-        "link_text": "View all",
-        "link_url": ""
       }
     },
     "a12f4da8-1300-4739-888c-f63a371dfdb5": {
@@ -73,17 +94,31 @@
         "link_url": ""
       }
     },
-    "3ed46c05-ce4b-49d2-81fc-75ef7b39e8bb": {
-      "type": "about-brand",
+    "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8": {
+      "type": "gap",
       "settings": {
+      }
+    },
+    "3763d930-8449-428e-8345-451975526916": {
+      "type": "big-banner",
+      "settings": {
+        "heading": "Sustainability",
+        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+        "link_text": "Learn more",
+        "link_url": "shopify:\/\/pages\/sustainability",
+        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
       }
     }
   },
   "order": [
     "intro",
-    "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "5f050f65-23f0-40c4-90f9-feb4734e1d9d",
+    "d2a8dab2-7399-4ae4-902b-e3220f0d5498",
+    "39b2a25f-bef9-4d58-ac18-34f86ccb3b16",
+    "f27d7e12-cdbe-4b45-a78e-84d87711e431",
+    "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
-    "3ed46c05-ce4b-49d2-81fc-75ef7b39e8bb"
+    "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8",
+    "3763d930-8449-428e-8345-451975526916"
   ]
 }
