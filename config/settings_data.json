@@ -226,7 +226,7 @@
               "enable_image": true,
               "image": "shopify:\/\/shop_images\/Cover_Image_1920x1080_f73dde4c-84b3-4941-8856-c9308f64f4a7.png",
               "link_text": "About Playpress",
-              "link_url": "",
+              "link_url": "shopify:\/\/pages\/about",
               "title": "Award-winning & eco-friendly",
               "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
             }
