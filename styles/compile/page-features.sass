@@ -26,7 +26,6 @@ a[is="page-feature"]
     background-position: center center
     width: 100%
     height: size(200)
-    margin-bottom: units(3)
     border-radius: $border-s
 
   &:nth-child(1)
@@ -36,10 +35,18 @@ a[is="page-feature"]
       &:after
         background: $grey-1000
 
+    article
+      background: $blue-100
+
+    div[is="content"]
+      padding: units(3)
+
+
     @include min($screen-m)
 
       article
         position: relative
+        background: none
         height: 100%
         display: flex
         align-items: flex-end
@@ -61,9 +68,12 @@ a[is="page-feature"]
         max-width: 80%
 
   &:nth-child(2), &:nth-child(3)
-    padding: units(5)
+    padding: units(3)
     h4, h3, a
       color: white
+
+    @include min($screen-m)
+      padding: units(5)
 
   &:nth-child(2)
     background: $teal-1000

@@ -95,7 +95,6 @@ a[is=page-feature] div[is=image] {
   background-position: center center;
   width: 100%;
   height: 20rem;
-  margin-bottom: 2.4rem;
   border-radius: 1.6rem;
 }
 a[is=page-feature]:nth-child(1) p[is=text-button] {
@@ -104,9 +103,16 @@ a[is=page-feature]:nth-child(1) p[is=text-button] {
 a[is=page-feature]:nth-child(1) p[is=text-button]:after {
   background: #1D203F;
 }
+a[is=page-feature]:nth-child(1) article {
+  background: #EBEDFA;
+}
+a[is=page-feature]:nth-child(1) div[is=content] {
+  padding: 2.4rem;
+}
 @media screen and (min-width: 770px) {
   a[is=page-feature]:nth-child(1) article {
     position: relative;
+    background: none;
     height: 100%;
     display: flex;
     align-items: flex-end;
@@ -129,10 +135,15 @@ a[is=page-feature]:nth-child(1) p[is=text-button]:after {
   }
 }
 a[is=page-feature]:nth-child(2), a[is=page-feature]:nth-child(3) {
-  padding: 4rem;
+  padding: 2.4rem;
 }
 a[is=page-feature]:nth-child(2) h4, a[is=page-feature]:nth-child(2) h3, a[is=page-feature]:nth-child(2) a, a[is=page-feature]:nth-child(3) h4, a[is=page-feature]:nth-child(3) h3, a[is=page-feature]:nth-child(3) a {
   color: white;
+}
+@media screen and (min-width: 770px) {
+  a[is=page-feature]:nth-child(2), a[is=page-feature]:nth-child(3) {
+    padding: 4rem;
+  }
 }
 a[is=page-feature]:nth-child(2) {
   background: #0C7489;
