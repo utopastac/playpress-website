@@ -1,0 +1,64 @@
+{{ 'page-gallery.css' | asset_url | stylesheet_tag }}
+
+<section is="section">
+
+  <div is="page-gallery">
+    <div>
+      {% for block in section.blocks %}
+        <img
+          src="{{ block.settings.image | img_url: '400x400' }}"
+          alt="{{ block.settings.image_alt }}"
+          loading="lazy"
+          width="400"
+          height="400"
+          />
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Page gallery",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "page_gallery_image",
+      "name": "Page gallery image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image description"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page gallery",
+      "blocks": [
+        {
+          "type": "page_gallery_image"
+        },
+        {
+          "type": "page_gallery_image"
+        },
+        {
+          "type": "page_gallery_image"
+        },
+        {
+          "type": "page_gallery_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

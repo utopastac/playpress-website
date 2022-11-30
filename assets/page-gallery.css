@@ -1,0 +1,9 @@
+div[is=page-gallery] {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+div[is=page-gallery] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
