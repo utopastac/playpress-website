@@ -7,10 +7,14 @@ section[is="banner"]
   &:hover
     scale: 1.02
 
+    div[is="hero-content"]
+      scale: 1.05
+      drop-shadow: $elevation-1
+
   div[is="hero-content"]
     position: relative
     padding: units(3)
-    
+    transition: all 0.5s
 
     @include min($screen-m)
       display: flex

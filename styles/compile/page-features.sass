@@ -24,6 +24,10 @@ a[is="page-feature"]
   &:hover
     scale: 1.03
 
+    &:nth-child(1)
+      div[is="content"]
+        scale: 1.05
+
   div[is="image"]
     background-size: cover
     background-repeat: no-repeat
@@ -44,6 +48,7 @@ a[is="page-feature"]
 
     div[is="content"]
       padding: units(3)
+      transition: all 0.5s
 
 
     @include min($screen-m)
@@ -88,7 +93,6 @@ a[is="page-feature"]
   
 
 div[is="page-features"]
-  padding-bottom: units(4)
   
   > div
     @extend %main-content

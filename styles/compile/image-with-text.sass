@@ -6,6 +6,7 @@ section[is="image-with-text"]
     @extend %main-content
     background: $blue-100
     border-radius: $border-m
+    overflow: hidden
 
     > div
       max-width: size(400)
@@ -19,6 +20,9 @@ section[is="image-with-text"]
 
   &.last 
     padding-bottom: 4rem
+
+  img
+    width: 100%
 
   @include min($screen-s)
     > div 

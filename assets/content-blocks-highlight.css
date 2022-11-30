@@ -52,7 +52,7 @@ article[is=content-block-highlight] {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  max-width: 28rem;
+  max-width: 32rem;
 }
 article[is=content-block-highlight]:nth-child(2n) {
   flex-direction: column-reverse;
@@ -85,7 +85,7 @@ div[is=content-blocks-highlight] > div {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1080px) {
   div[is=content-blocks-highlight] > div {
     grid-template-columns: repeat(4, 1fr);
   }

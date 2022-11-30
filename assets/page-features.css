@@ -93,6 +93,9 @@ a[is=page-feature] p[is=text-button] {
 a[is=page-feature]:hover {
   scale: 1.03;
 }
+a[is=page-feature]:hover:nth-child(1) div[is=content] {
+  scale: 1.05;
+}
 a[is=page-feature] div[is=image] {
   background-size: cover;
   background-repeat: no-repeat;
@@ -112,6 +115,7 @@ a[is=page-feature]:nth-child(1) article {
 }
 a[is=page-feature]:nth-child(1) div[is=content] {
   padding: 2.4rem;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 770px) {
   a[is=page-feature]:nth-child(1) article {
@@ -156,9 +160,6 @@ a[is=page-feature]:nth-child(3) {
   background: #2D3788;
 }
 
-div[is=page-features] {
-  padding-bottom: 3.2rem;
-}
 div[is=page-features] > div {
   grid-gap: 4rem;
   display: grid;

@@ -46,6 +46,7 @@ section[is=image-with-text] p {
 section[is=image-with-text] > div {
   background: #EBEDFA;
   border-radius: 3.2rem;
+  overflow: hidden;
 }
 section[is=image-with-text] > div > div {
   max-width: 40rem;
@@ -53,6 +54,9 @@ section[is=image-with-text] > div > div {
 }
 section[is=image-with-text].last {
   padding-bottom: 4rem;
+}
+section[is=image-with-text] img {
+  width: 100%;
 }
 @media screen and (min-width: 550px) {
   section[is=image-with-text] > div {

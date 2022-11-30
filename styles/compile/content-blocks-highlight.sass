@@ -9,7 +9,7 @@ article[is="content-block-highlight"]
   width: 100%
   justify-content: space-between
   align-items: center
-  max-width: size(280)
+  max-width: size(320)
 
   &:nth-child(2n)
     flex-direction: column-reverse
@@ -50,7 +50,7 @@ div[is="content-blocks-highlight"]
     > div
       grid-template-columns: repeat(2, 1fr)
 
-  @include min($screen-m)
+  @include min($screen-l)
     > div
       grid-template-columns: repeat(4, 1fr)
   

@@ -95,7 +95,7 @@ a[is=text-button], p[is=text-button], div[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #2D3788;
+  color: #1D203F;
   height: 5.6rem;
 }
 a.white[is=text-button], p.white[is=text-button], div.white[is=text-button] {
@@ -110,7 +110,7 @@ a[is=text-button]:after, p[is=text-button]:after, div[is=text-button]:after {
   width: 2.4rem;
   height: 2.4rem;
   position: relative;
-  background: #2D3788;
+  background: #1D203F;
   -webkit-mask-image: url(icon-arrow-right.svg);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -468,7 +468,7 @@ a[is=text-button], p[is=text-button], div[is=text-button] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #2D3788;
+  color: #1D203F;
   height: 5.6rem;
 }
 a.white[is=text-button], p.white[is=text-button], div.white[is=text-button] {
@@ -483,7 +483,7 @@ a[is=text-button]:after, p[is=text-button]:after, div[is=text-button]:after {
   width: 2.4rem;
   height: 2.4rem;
   position: relative;
-  background: #2D3788;
+  background: #1D203F;
   -webkit-mask-image: url(icon-arrow-right.svg);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
