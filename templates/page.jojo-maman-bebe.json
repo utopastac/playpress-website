@@ -51,10 +51,15 @@
       "settings": {
       }
     },
-    "59cce298-8b39-466b-8f09-324feb207e54": {
+    "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e": {
       "type": "gap",
       "settings": {
         "size": 2
+      }
+    },
+    "92e808e5-4ccc-4d44-8a92-c9274c658ddc": {
+      "type": "page-content",
+      "settings": {
       }
     },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
@@ -104,7 +109,8 @@
   "order": [
     "intro",
     "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed",
-    "59cce298-8b39-466b-8f09-324feb207e54",
+    "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e",
+    "92e808e5-4ccc-4d44-8a92-c9274c658ddc",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
