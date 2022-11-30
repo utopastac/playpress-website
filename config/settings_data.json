@@ -91,44 +91,6 @@
         "settings": {
         }
       },
-      "bbd3a91d-9cb3-4462-a206-60dab8f0d316": {
-        "type": "collections",
-        "blocks": {
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-0": {
-            "type": "collection",
-            "settings": {
-              "collection": "stocking-fillers"
-            }
-          },
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-1": {
-            "type": "collection",
-            "settings": {
-              "collection": "under-10"
-            }
-          },
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-2": {
-            "type": "collection",
-            "settings": {
-              "collection": "julia-donaldson"
-            }
-          },
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-3": {
-            "type": "collection",
-            "settings": {
-              "collection": "collaborations"
-            }
-          }
-        },
-        "block_order": [
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-0",
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-1",
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-2",
-          "bbd3a91d-9cb3-4462-a206-60dab8f0d316-16664357062fab67b6-3"
-        ],
-        "settings": {
-          "title": ""
-        }
-      },
       "9797ff2b-339d-406b-9af1-f25ccacd1731": {
         "type": "hero-event",
         "settings": {
@@ -271,12 +233,6 @@
           "size": 2
         }
       },
-      "502b9f44-12f9-41f5-8695-bf5f769b3ef9": {
-        "type": "gap",
-        "settings": {
-          "size": 1
-        }
-      },
       "56c1881e-74fa-4d3c-b478-b7a396e70ffb": {
         "type": "gap",
         "settings": {
@@ -306,11 +262,9 @@
       "56c1881e-74fa-4d3c-b478-b7a396e70ffb",
       "592589cc-23f4-460c-aaa1-a8c5fa26628f",
       "596be5df-64e8-4ac6-aa05-eba2affa0b31",
-      "bbd3a91d-9cb3-4462-a206-60dab8f0d316",
-      "502b9f44-12f9-41f5-8695-bf5f769b3ef9",
-      "374a1a21-6dd3-4c54-8468-049ad77014ea",
+      "b19a403a-f605-4887-957c-be3ec277c046",
       "86a408b2-bbfa-45b7-ab15-aab87f741cb3",
-      "b19a403a-f605-4887-957c-be3ec277c046"
+      "374a1a21-6dd3-4c54-8468-049ad77014ea"
     ]
   }
 }
