@@ -20,7 +20,7 @@
         <p is="lede">{{ section.settings.text }}</p>
       {%- endif -%}
       {%- if section.settings.link_url != blank -%}
-        <a href="{{ section.settings.link_url }}" is="button">{{ section.settings.link_text }}</a>
+        <a href="{{ section.settings.link_url }}" is="text-button">{{ section.settings.link_text }}</a>
       {%- endif -%}
     </div>
     {% if section.settings.show_delivery_info == true %}
