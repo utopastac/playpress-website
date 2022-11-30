@@ -51,14 +51,6 @@
       "settings": {
       }
     },
-    "ea07dc6c-80d8-4207-bc0e-e3693be24315": {
-      "type": "rich-text",
-      "settings": {
-        "heading": "Add a title",
-        "text": "<p>Add rich text to the page.<\/p>",
-        "show_colour": false
-      }
-    },
     "59cce298-8b39-466b-8f09-324feb207e54": {
       "type": "gap",
       "settings": {
@@ -112,7 +104,6 @@
   "order": [
     "intro",
     "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed",
-    "ea07dc6c-80d8-4207-bc0e-e3693be24315",
     "59cce298-8b39-466b-8f09-324feb207e54",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
