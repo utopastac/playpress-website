@@ -1,5 +1,46 @@
 {
   "sections": {
+    "3956a8be-d3d6-4a98-9c49-5c7f59ab729f": {
+      "type": "page-gallery",
+      "blocks": {
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-0": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-good-looking.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-1": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-compact.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-2": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-free-delivery.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-3": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-eco-friendly.jpg",
+            "image_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-0",
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-1",
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-2",
+        "template--15723518787776__3956a8be-d3d6-4a98-9c49-5c7f59ab729f-16698288911bee823a-3"
+      ],
+      "settings": {
+      }
+    },
     "intro": {
       "type": "intro",
       "settings": {
@@ -54,7 +95,7 @@
             "link_url": "",
             "title": "",
             "subtitle": "Museums and galleries",
-            "text": "<p>We have partnered with [museums] [galleries] and our products are extremely popular in giftshops.<\/p>"
+            "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.<\/p>"
           }
         },
         "9061019f-6cbd-4ec2-8995-eeee6dea2a4f": {
@@ -161,6 +202,7 @@
     }
   },
   "order": [
+    "3956a8be-d3d6-4a98-9c49-5c7f59ab729f",
     "intro",
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
