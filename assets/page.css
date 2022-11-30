@@ -167,8 +167,6 @@ div[is=page] {
 }
 @media screen and (min-width: 550px) {
   div[is=page] {
-    background: #EBEDFA;
-    border-radius: 3.2rem;
     padding: 3.2rem 3.2rem 4.8rem 3.2rem;
   }
 }
