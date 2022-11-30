@@ -3,91 +3,62 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+        "heading": "Science Museum",
+        "text": "We made a Science Museum branded Playpress science range, plus we jointly developed the Soyuz landing craft that is a unique product to the museum.",
+        "link_text": "See the Space range",
+        "link_url": "shopify:\/\/collections\/space-playsets",
         "show_delivery_info": false
       }
     },
-    "69daff38-49c3-40ba-87fd-5594871992a9": {
-      "type": "big-banner",
-      "settings": {
-        "heading": "Sustainability",
-        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
-        "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
-      }
-    },
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "3b41803c-8040-4774-b0f7-9dfed59a656a": {
-      "type": "accordian",
+    "b59b1c1b-0b72-4700-bce6-78a91a31b613": {
+      "type": "page-gallery",
       "blocks": {
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
-          "type": "accordian_item",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-0": {
+          "type": "page_gallery_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
-            "link_url": "",
-            "title": "Make it fun",
-            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
+            "image": "shopify:\/\/shop_images\/science-musuem-page-1.jpg",
+            "image_alt": ""
           }
         },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
-          "type": "accordian_item",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-1": {
+          "type": "page_gallery_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/inks.jpg",
-            "link_url": "",
-            "title": "Make it for everyone",
-            "text": "<p>We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can.Add descriptve text<\/p>"
+            "image": "shopify:\/\/shop_images\/science-musuem-page-2.jpg",
+            "image_alt": ""
           }
         },
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
-          "type": "accordian_item",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-2": {
+          "type": "page_gallery_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
-            "link_url": "",
-            "title": "Make it sustainably",
-            "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.ve text"
+            "image": "shopify:\/\/shop_images\/science-musuem-page-3.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-3": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/science-musuem-page-4.jpg",
+            "image_alt": ""
           }
         }
       },
       "block_order": [
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1",
-        "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2"
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-0",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-1",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-2",
+        "template--15752580169920__b59b1c1b-0b72-4700-bce6-78a91a31b613-16698450080166d033-3"
       ],
       "settings": {
-        "title": "Our values",
-        "text": ""
-      }
-    },
-    "45d04aa8-a964-4c41-8e41-d9551b182f17": {
-      "type": "gap",
-      "settings": {
-      }
-    },
-    "1627851513e6e2c0af": {
-      "type": "image-with-text",
-      "settings": {
-        "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
-        "show_signpost_link": false,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
       }
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
       "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "c990b60d-4543-4a15-a64b-38dc5e74c585": {
+      "type": "page-content",
       "settings": {
       }
     },
@@ -137,12 +108,9 @@
   },
   "order": [
     "intro",
-    "69daff38-49c3-40ba-87fd-5594871992a9",
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
-    "3b41803c-8040-4774-b0f7-9dfed59a656a",
-    "45d04aa8-a964-4c41-8e41-d9551b182f17",
-    "1627851513e6e2c0af",
+    "b59b1c1b-0b72-4700-bce6-78a91a31b613",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
+    "c990b60d-4543-4a15-a64b-38dc5e74c585",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
