@@ -10,6 +10,61 @@
         "show_delivery_info": false
       }
     },
+    "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed": {
+      "type": "page-gallery",
+      "blocks": {
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-0": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-good-looking.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-1": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-main.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-2": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-compact.jpg",
+            "image_alt": ""
+          }
+        },
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-3": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stock-us-free-delivery.jpg",
+            "image_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-0",
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-1",
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-2",
+        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-3"
+      ],
+      "settings": {
+      }
+    },
+    "ea07dc6c-80d8-4207-bc0e-e3693be24315": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Add a title",
+        "text": "<p>Add rich text to the page.<\/p>",
+        "show_colour": false
+      }
+    },
+    "59cce298-8b39-466b-8f09-324feb207e54": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
       "type": "page-features",
       "blocks": {
@@ -56,6 +111,9 @@
   },
   "order": [
     "intro",
+    "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed",
+    "ea07dc6c-80d8-4207-bc0e-e3693be24315",
+    "59cce298-8b39-466b-8f09-324feb207e54",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
