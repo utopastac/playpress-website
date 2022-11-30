@@ -5,5 +5,31 @@ div[is=page-gallery] {
 
 div[is=page-gallery] {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+div[is=page-gallery] > div {
+  width: 100%;
+  overflow: hidden;
+  height: 20rem;
+  border-radius: 1.6rem;
+  border: 1px solid #E7E9EF;
+}
+div[is=page-gallery] img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 770px) {
+  div[is=page-gallery] {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+  div[is=page-gallery] > div {
+    height: 34rem;
+    border-radius: 3.2rem;
+  }
+  div[is=page-gallery] > div:nth-child(2), div[is=page-gallery] > div:nth-child(3) {
+    grid-column: span 2;
+  }
 }

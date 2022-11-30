@@ -3,17 +3,17 @@
 <section is="section">
 
   <div is="page-gallery">
-    <div>
       {% for block in section.blocks %}
-        <img
-          src="{{ block.settings.image | img_url: '400x400' }}"
-          alt="{{ block.settings.image_alt }}"
-          loading="lazy"
-          width="400"
-          height="400"
+        <div>
+          <img
+            src="{{ block.settings.image | img_url: '400x400' }}"
+            alt="{{ block.settings.image_alt }}"
+            loading="lazy"
+            width="400"
+            height="400"
           />
+        </div>
       {% endfor %}
-    </div>
   </div>
 
 </section>
