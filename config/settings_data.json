@@ -260,7 +260,9 @@
           "link_text": "Check it out",
           "link_url": "shopify:\/\/products\/santas-midnight-sleigh-rode-eco-friendly-playset",
           "image": "shopify:\/\/shop_images\/hero-savanah.png",
-          "bg_color": "#f9b42b"
+          "bg_color": "#098e81",
+          "is_large": true,
+          "is_dark": true
         }
       }
     },
