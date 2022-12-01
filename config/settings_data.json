@@ -255,7 +255,8 @@
           "image": "shopify:\/\/shop_images\/hero-savanah.png",
           "bg_color": "#ffda8f",
           "is_large": false,
-          "is_dark": false
+          "is_dark": false,
+          "background_image": "shopify:\/\/shop_images\/type_plant.jpg"
         }
       }
     },
