@@ -80,6 +80,9 @@ section[is=hero] {
 section[is=hero] div[is=hero-background] {
   border-radius: 3.2rem;
   background: #FAB638;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: absolute;
   top: 4rem;
   left: 0;
