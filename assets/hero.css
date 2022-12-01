@@ -107,7 +107,7 @@ section[is=hero] div[is=hero-main] {
   margin: 0 0 3.2rem 0;
   overflow: hidden;
   border-radius: 3.2rem;
-  transition: scale 0.5s;
+  transition: scale 0.4s;
 }
 section[is=hero] div[is=hero-main]:hover {
   scale: 1.02;
@@ -116,8 +116,12 @@ section[is=hero] div[is=hero-main]:hover div[is=hero-content] {
   scale: 1.05;
   drop-shadow: 0px 1px 4px rgba(10, 18, 42, 0.1), 0px 8px 24px rgba(10, 18, 42, 0.12);
 }
+section[is=hero] div[is=hero-main]:hover img {
+  scale: 1.02;
+}
 section[is=hero] div[is=hero-main] img {
   position: relative;
+  transition: scale 0.7s;
 }
 section[is=hero] div[is=hero-main] p {
   margin-bottom: 3.2rem;
@@ -147,7 +151,7 @@ section[is=hero] div[is=hero-content] {
   align-self: flex-end;
   position: relative;
   padding: 2.4rem;
-  transition: all 0.5s;
+  transition: all 0.8s;
   background: #FFFFFF;
   border-radius: 1.6rem;
   margin: 0 2.4rem 2.4rem 2.4rem;

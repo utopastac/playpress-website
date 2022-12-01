@@ -26,7 +26,7 @@ section[is="hero"]
     margin: 0 0 units(4) 0
     overflow: hidden
     border-radius: $border-m
-    transition: scale 0.5s
+    transition: scale 0.4s
 
     &.large
       h1
@@ -39,8 +39,12 @@ section[is="hero"]
         scale: 1.05
         drop-shadow: $elevation-1
 
+      img
+        scale: 1.02
+
     img
       position: relative
+      transition: scale 0.7s
 
     h1
       @extend %heading-2
@@ -73,7 +77,7 @@ section[is="hero"]
     align-self: flex-end
     position: relative
     padding: units(3) 
-    transition: all 0.5s
+    transition: all 0.8s
     background: $white
     border-radius: $border-s
     margin: 0 units(3) units(3) units(3)
