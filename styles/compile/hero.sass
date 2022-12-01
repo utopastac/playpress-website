@@ -82,6 +82,19 @@ section[is="hero"]
     border-radius: $border-s
     margin: 0 units(3) units(3) units(3)
 
+    &.dark
+      background: none
+
+      div[is="button"]
+        background: $white
+        color: $blue-1000
+
+        &:after
+          background: $blue-1000
+
+      h1, h4, p
+        color: $white
+
     @include min($screen-m)
       display: flex
 

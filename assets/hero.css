@@ -156,6 +156,19 @@ section[is=hero] div[is=hero-content] {
   border-radius: 1.6rem;
   margin: 0 2.4rem 2.4rem 2.4rem;
 }
+section[is=hero] div[is=hero-content].dark {
+  background: none;
+}
+section[is=hero] div[is=hero-content].dark div[is=button] {
+  background: #FFFFFF;
+  color: #2D3788;
+}
+section[is=hero] div[is=hero-content].dark div[is=button]:after {
+  background: #2D3788;
+}
+section[is=hero] div[is=hero-content].dark h1, section[is=hero] div[is=hero-content].dark h4, section[is=hero] div[is=hero-content].dark p {
+  color: #FFFFFF;
+}
 @media screen and (min-width: 770px) {
   section[is=hero] div[is=hero-content] {
     display: flex;
