@@ -84,13 +84,17 @@ section[is="hero"]
 
     &.dark
       background: none
+      padding: 0
+
+      @include min($screen-l)
+        padding: units(1) units(2)
 
       div[is="button"]
         background: $white
-        color: $blue-1000
+        color: $grey-1000
 
         &:after
-          background: $blue-1000
+          background: $grey-1000
 
       h1, h4, p
         color: $white

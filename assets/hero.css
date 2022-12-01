@@ -158,13 +158,19 @@ section[is=hero] div[is=hero-content] {
 }
 section[is=hero] div[is=hero-content].dark {
   background: none;
+  padding: 0;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-content].dark {
+    padding: 0.8rem 1.6rem;
+  }
 }
 section[is=hero] div[is=hero-content].dark div[is=button] {
   background: #FFFFFF;
-  color: #2D3788;
+  color: #1D203F;
 }
 section[is=hero] div[is=hero-content].dark div[is=button]:after {
-  background: #2D3788;
+  background: #1D203F;
 }
 section[is=hero] div[is=hero-content].dark h1, section[is=hero] div[is=hero-content].dark h4, section[is=hero] div[is=hero-content].dark p {
   color: #FFFFFF;
