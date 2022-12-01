@@ -3,18 +3,16 @@
 {% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
 <section is="hero">
   <a href="{{ section.settings.link_url }}">
-    <div is="hero-main">
-      <div is="hero-image">
-        <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
-        <img
-          src="{{ section.settings.image | img_url: 'master' }}"
-          alt=""
-          is="in-action"
-          loading="lazy"
-          width="1200"
-          height="800"
-          />
-      </div>
+    <div is="hero-main" class="{% if section.settings.is_large %}large{% endif %}">
+      <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
+      <img
+        src="{{ section.settings.image | img_url: 'master' }}"
+        alt=""
+        is="in-action"
+        loading="lazy"
+        width="1200"
+        height="800"
+        />
       {% render 'hero-content', section: section %}
     </div>
   </a>
@@ -62,6 +60,12 @@
       "id": "bg_color",
       "label": "Background color",
       "default": "#EBEDFA"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_large",
+      "label": "Use largest text",
+      "default": true
     }
     
   ],

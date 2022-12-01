@@ -7,11 +7,18 @@ section[is="hero"]
     border-radius: $border-m
     background: $yolk-1000
     position: absolute
-    top: units(10)
+    top: units(5)
     left: 0
     right: 0
     bottom: 0
     z-index: 0
+
+    @include min($screen-s)
+      top: units(10)
+    @include min($screen-l)
+      top: 0
+    @include min($screen-xl)
+      top: units(8)
 
   div[is="hero-main"]
     @extend %main-content
@@ -20,6 +27,10 @@ section[is="hero"]
     overflow: hidden
     border-radius: $border-m
     transition: scale 0.5s
+
+    &.large
+      h1
+        @extend %heading-1
 
     &:hover
       scale: 1.02
@@ -32,7 +43,7 @@ section[is="hero"]
       position: relative
 
     h1
-      @extend %heading-1
+      @extend %heading-2
 
     h4
       @extend %overline
@@ -46,22 +57,20 @@ section[is="hero"]
 
     @include min($screen-l)
       border-radius: $border-m
-      display: flex
-      align-items: flex-end
-      justify-content: flex-start
-      aspect-ratio: 2.5 / 1
-      padding: units(5)
-
-      div[is="hero-background"]
-        top: units(5)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      justify-content: center
+      grid-auto-flow: column
 
       img
-        position: absolute
-        top: 0
-        left: 40%
-        width: 60%
+        grid-column: 2
+    
+    @include min($screen-xl)
+      grid-template-columns: 1fr 1.3fr
 
   div[is="hero-content"]
+    align-self: flex-end
     position: relative
     padding: units(3) 
     transition: all 0.5s
@@ -74,8 +83,7 @@ section[is="hero"]
 
     @include min($screen-l)
       display: block
-      width: 50%
       padding: units(4)
-      max-width: size(480)
       border-radius: $border-m
+      margin: units(5)
   

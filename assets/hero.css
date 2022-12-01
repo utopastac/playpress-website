@@ -3,7 +3,7 @@ section[is=hero] div[is=hero-main] {
   margin: 0 auto;
 }
 
-section[is=hero] div[is=hero-main] h4, section[is=hero] div[is=hero-main] h1 {
+section[is=hero] div[is=hero-main] h4, section[is=hero] div[is=hero-main] h1, section[is=hero] div[is=hero-main].large h1 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
@@ -21,16 +21,29 @@ section[is=hero] div[is=hero-main] h4 {
   font-weight: 900;
 }
 
-section[is=hero] div[is=hero-main] h1 {
+section[is=hero] div[is=hero-main].large h1 {
   font-size: 3.8rem;
   line-height: 115%;
   letter-spacing: -0.76px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=hero] div[is=hero-main] h1 {
+  section[is=hero] div[is=hero-main].large h1 {
     font-size: 5.6rem;
     line-height: 115%;
     letter-spacing: -1.12px;
+  }
+}
+
+section[is=hero] div[is=hero-main] h1 {
+  font-size: 3.2rem;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-main] h1 {
+    font-size: 4.2rem;
+    line-height: 115%;
+    letter-spacing: -0.84px;
   }
 }
 
@@ -68,11 +81,26 @@ section[is=hero] div[is=hero-background] {
   border-radius: 3.2rem;
   background: #FAB638;
   position: absolute;
-  top: 8rem;
+  top: 4rem;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 0;
+}
+@media screen and (min-width: 550px) {
+  section[is=hero] div[is=hero-background] {
+    top: 8rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-background] {
+    top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section[is=hero] div[is=hero-background] {
+    top: 6.4rem;
+  }
 }
 section[is=hero] div[is=hero-main] {
   position: relative;
@@ -100,23 +128,23 @@ section[is=hero] div[is=hero-main] div[is=button] {
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-main] {
     border-radius: 3.2rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    aspect-ratio: 2.5/1;
-    padding: 4rem;
-  }
-  section[is=hero] div[is=hero-main] div[is=hero-background] {
-    top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
   }
   section[is=hero] div[is=hero-main] img {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    width: 60%;
+    grid-column: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section[is=hero] div[is=hero-main] {
+    grid-template-columns: 1fr 1.3fr;
   }
 }
 section[is=hero] div[is=hero-content] {
+  align-self: flex-end;
   position: relative;
   padding: 2.4rem;
   transition: all 0.5s;
@@ -132,9 +160,8 @@ section[is=hero] div[is=hero-content] {
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-content] {
     display: block;
-    width: 50%;
     padding: 3.2rem;
-    max-width: 48rem;
     border-radius: 3.2rem;
+    margin: 4rem;
   }
 }
