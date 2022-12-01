@@ -4,7 +4,13 @@
 <section is="hero">
   <a href="{{ section.settings.link_url }}">
     <div is="hero-main" class="{% if section.settings.is_large %}large{% endif %}">
-      <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
+      
+      {%- if section.settings.background_image == blank -%}
+        <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
+      {%- else -%}
+        <div is="hero-background" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})"></div>
+      {%- endif -%}
+      
       <img
         src="{{ section.settings.image | img_url: 'master' }}"
         alt=""
@@ -72,6 +78,11 @@
       "id": "is_dark",
       "label": "Use dark mode",
       "default": true
+    },
+    {
+      "id": "background_image",
+      "type": "image_picker",
+      "label": "Background Image"
     }
     
   ],
