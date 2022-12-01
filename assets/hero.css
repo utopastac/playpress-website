@@ -1,42 +1,60 @@
-section[is=hero] > div {
+section[is=hero] div[is=hero-main] {
   max-width: 140rem;
   margin: 0 auto;
 }
 
-section[is=hero] > div h1 {
+section[is=hero] div[is=hero-main] h4, section[is=hero] div[is=hero-main] h1 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-section[is=hero] > div p {
+section[is=hero] div[is=hero-main] p {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-section[is=hero] > div p {
+section[is=hero] div[is=hero-main] p {
   font-weight: 400;
 }
 
-section[is=hero] > div h1 {
+section[is=hero] div[is=hero-main] h4 {
+  font-weight: 900;
+}
+
+section[is=hero] div[is=hero-main] h1 {
   font-size: 3.8rem;
   line-height: 115%;
   letter-spacing: -0.76px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=hero] > div h1 {
+  section[is=hero] div[is=hero-main] h1 {
     font-size: 5.6rem;
     line-height: 115%;
     letter-spacing: -1.12px;
   }
 }
 
-section[is=hero] > div p {
+section[is=hero] div[is=hero-main] h4 {
+  font-size: 1.4rem;
+  line-height: 115%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-main] h4 {
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 1.5px;
+  }
+}
+
+section[is=hero] div[is=hero-main] p {
   font-size: 2.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=hero] > div p {
+  section[is=hero] div[is=hero-main] p {
     font-size: 2.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -44,37 +62,74 @@ section[is=hero] > div p {
 }
 
 section[is=hero] {
-  background-color: #5B5E95;
   position: relative;
 }
-section[is=hero] > div h1, section[is=hero] > div p {
-  color: #FFFFFF;
+section[is=hero] div[is=hero-background] {
+  border-radius: 3.2rem;
+  background: #FAB638;
 }
-section[is=hero] > div > div {
+section[is=hero] div[is=hero-main] {
   position: relative;
-  z-index: 2;
+  margin: 0 0 3.2rem 0;
+  overflow: hidden;
+  background: #EBEDFA;
+  border-radius: 3.2rem;
+  transition: scale 0.5s;
 }
-section[is=hero] > div > img {
+section[is=hero] div[is=hero-main]:hover {
+  scale: 1.02;
+}
+section[is=hero] div[is=hero-main]:hover div[is=hero-content] {
+  scale: 1.05;
+  drop-shadow: 0px 1px 4px rgba(10, 18, 42, 0.1), 0px 8px 24px rgba(10, 18, 42, 0.12);
+}
+section[is=hero] div[is=hero-main] p {
+  margin-bottom: 3.2rem;
+}
+section[is=hero] div[is=hero-main] div[is=button] {
+  margin-top: 2.4rem;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-main] {
+    background: none;
+    border-radius: 3.2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    aspect-ratio: 2/1;
+    padding: 4rem;
+  }
+  section[is=hero] div[is=hero-main] div[is=hero-background] {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  section[is=hero] div[is=hero-main] img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+  }
+}
+section[is=hero] div[is=hero-content] {
   position: relative;
-  z-index: 2;
+  padding: 2.4rem;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 770px) {
-  section[is=hero] > div {
-    grid-column-gap: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
+  section[is=hero] div[is=hero-content] {
+    display: flex;
   }
-  section[is=hero] > div img {
-    order: 2;
-  }
-  section[is=hero] > div div {
-    order: 1;
-  }
-  section[is=hero] > div h1 {
-    margin-top: 0;
-  }
-  section[is=hero] > div p {
-    margin-bottom: 0;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-content] {
+    display: block;
+    background: #FFFFFF;
+    width: 50%;
+    padding: 3.2rem;
+    max-width: 56rem;
+    border-radius: 3.2rem;
   }
 }

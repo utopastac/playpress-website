@@ -1,0 +1,67 @@
+{{ 'hero.css' | asset_url | stylesheet_tag }}
+
+{% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
+<section is="hero">
+  <a href="{{ section.settings.link_url }}">
+    <div is="hero-main">
+      <div is="hero-image">
+        <div is="hero-background"></div>
+        <img
+          src="{{ section.settings.image | img_url: 'master' }}"
+          alt=""
+          is="in-action"
+          loading="lazy"
+          width="1200"
+          height="800"
+          />
+      </div>
+      {% render 'hero-content', section: section %}
+    </div>
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading",
+    "default": "Add a title"
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "label": "Subtitle",
+      "default": "Add a subtitle"
+      },
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Text",
+      "default": "Add descriptive text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

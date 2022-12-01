@@ -1,0 +1,78 @@
+@import '../assets'
+  
+section[is="hero"]
+  position: relative
+
+  div[is="hero-background"]
+    border-radius: $border-m
+    background: $yolk-1000
+
+  div[is="hero-main"]
+    @extend %main-content
+    position: relative
+    margin: 0 0 units(4) 0
+    overflow: hidden
+    background: $blue-100
+    border-radius: $border-m
+    transition: scale 0.5s
+
+    &:hover
+      scale: 1.02
+
+      div[is="hero-content"]
+        scale: 1.05
+        drop-shadow: $elevation-1
+
+    img
+
+    h1
+      @extend %heading-1
+
+    h4
+      @extend %overline
+
+    p
+      @extend %body-1
+      margin-bottom: units(4)
+
+    div[is="button"]
+      margin-top: units(3)
+
+    @include min($screen-l)
+      background: none
+      border-radius: $border-m
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      aspect-ratio: 2 / 1
+      padding: units(5)
+
+      div[is="hero-background"]
+        position: absolute
+        top: units(5)
+        left: 0
+        right: 0
+        bottom: 0
+
+      img
+        position: absolute
+        top: 0
+        left: 50%
+        width: 100%
+
+  div[is="hero-content"]
+    position: relative
+    padding: units(3) 
+    transition: all 0.5s
+
+    @include min($screen-m)
+      display: flex
+
+    @include min($screen-l)
+      display: block
+      background: $white
+      width: 50%
+      padding: units(4)
+      max-width: size(560)
+      border-radius: $border-m
+  
