@@ -254,11 +254,11 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "Add a title",
-          "subtitle": "Add a subtitle",
-          "text": "Add descriptive text",
-          "link_text": "",
-          "link_url": "",
+          "heading": "Santa's Midnight Sleigh Ride Eco-Friendly Playset",
+          "subtitle": "New set",
+          "text": "",
+          "link_text": "Check it out",
+          "link_url": "shopify:\/\/products\/santas-midnight-sleigh-rode-eco-friendly-playset",
           "image": "shopify:\/\/shop_images\/hero-savanah.png"
         }
       }
