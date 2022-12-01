@@ -6,13 +6,18 @@ section[is="hero"]
   div[is="hero-background"]
     border-radius: $border-m
     background: $yolk-1000
+    position: absolute
+    top: units(10)
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 0
 
   div[is="hero-main"]
     @extend %main-content
     position: relative
     margin: 0 0 units(4) 0
     overflow: hidden
-    background: $blue-100
     border-radius: $border-m
     transition: scale 0.5s
 
@@ -24,6 +29,7 @@ section[is="hero"]
         drop-shadow: $elevation-1
 
     img
+      position: relative
 
     h1
       @extend %heading-1
@@ -39,7 +45,6 @@ section[is="hero"]
       margin-top: units(3)
 
     @include min($screen-l)
-      background: none !important
       border-radius: $border-m
       display: flex
       align-items: flex-end
@@ -48,11 +53,7 @@ section[is="hero"]
       padding: units(5)
 
       div[is="hero-background"]
-        position: absolute
         top: units(5)
-        left: 0
-        right: 0
-        bottom: 0
 
       img
         position: absolute
@@ -64,13 +65,15 @@ section[is="hero"]
     position: relative
     padding: units(3) 
     transition: all 0.5s
+    background: $white
+    border-radius: $border-s
+    margin: 0 units(3) units(3) units(3)
 
     @include min($screen-m)
       display: flex
 
     @include min($screen-l)
       display: block
-      background: $white
       width: 50%
       padding: units(4)
       max-width: size(480)
