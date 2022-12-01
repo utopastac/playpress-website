@@ -1,5 +1,12 @@
 {{ 'collection-promo.css' | asset_url | stylesheet_tag }}
 
+{% case collection.products_count %}
+  {% when 1 %}
+    {%- assign product_label = 'product' -%}
+  {% else %}
+    {%- assign product_label = 'products' -%}
+{% endcase %}
+
 <a class="collection-promo" href="{{ collection.url }}">
   {% if collection.featured_media != blank %}
     <img
@@ -12,6 +19,6 @@
   {% endif %}
   <div>
     <h3>{{ collection.title }}</h3>
-    <p>{{ collection.products_count }} products</p>
+    <p>{{ collection.products_count }} {{ product_label }}</p>
   </div>
 </a>
