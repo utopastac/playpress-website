@@ -3,9 +3,9 @@
 {% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
 <section is="hero">
   <a href="{{ section.settings.link_url }}">
-    <div is="hero-main">
+    <div is="hero-main" style="background: {{ section.settings.bg_color }}">
       <div is="hero-image">
-        <div is="hero-background"></div>
+        <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
         <img
           src="{{ section.settings.image | img_url: 'master' }}"
           alt=""
@@ -56,7 +56,14 @@
       "id": "image",
       "type": "image_picker",
       "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#EBEDFA"
     }
+    
   ],
   "presets": [
     {

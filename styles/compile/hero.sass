@@ -39,12 +39,12 @@ section[is="hero"]
       margin-top: units(3)
 
     @include min($screen-l)
-      background: none
+      background: none !important
       border-radius: $border-m
       display: flex
       align-items: flex-end
       justify-content: flex-start
-      aspect-ratio: 2 / 1
+      aspect-ratio: 2.5 / 1
       padding: units(5)
 
       div[is="hero-background"]
@@ -57,8 +57,8 @@ section[is="hero"]
       img
         position: absolute
         top: 0
-        left: 50%
-        width: 100%
+        left: 40%
+        width: 60%
 
   div[is="hero-content"]
     position: relative
@@ -73,6 +73,6 @@ section[is="hero"]
       background: $white
       width: 50%
       padding: units(4)
-      max-width: size(560)
+      max-width: size(480)
       border-radius: $border-m
   

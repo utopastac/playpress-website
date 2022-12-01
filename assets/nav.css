@@ -48,7 +48,7 @@ nav[is=menu] > ul > li > a {
   border-radius: 0.4rem;
   color: #FFFFFF;
   display: block;
-  padding: 0.4rem 0.8rem;
+  padding: 0.8rem 1.6rem;
   text-decoration: none;
 }
 nav[is=menu] > ul > li > a:hover {

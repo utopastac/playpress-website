@@ -91,12 +91,12 @@ section[is=hero] div[is=hero-main] div[is=button] {
 }
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-main] {
-    background: none;
+    background: none !important;
     border-radius: 3.2rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    aspect-ratio: 2/1;
+    aspect-ratio: 2.5/1;
     padding: 4rem;
   }
   section[is=hero] div[is=hero-main] div[is=hero-background] {
@@ -109,8 +109,8 @@ section[is=hero] div[is=hero-main] div[is=button] {
   section[is=hero] div[is=hero-main] img {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 100%;
+    left: 40%;
+    width: 60%;
   }
 }
 section[is=hero] div[is=hero-content] {
@@ -129,7 +129,7 @@ section[is=hero] div[is=hero-content] {
     background: #FFFFFF;
     width: 50%;
     padding: 3.2rem;
-    max-width: 56rem;
+    max-width: 48rem;
     border-radius: 3.2rem;
   }
 }
