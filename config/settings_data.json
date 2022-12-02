@@ -252,11 +252,10 @@
           "text": "",
           "link_text": "See the collection",
           "link_url": "shopify:\/\/collections\/under-10",
-          "image": "shopify:\/\/shop_images\/hero-savanah.png",
-          "bg_color": "#ffda8f",
+          "image": "shopify:\/\/shop_images\/hero-stocking-fillers.png",
+          "bg_color": "#2d1f74",
           "is_large": false,
-          "is_dark": false,
-          "background_image": "shopify:\/\/shop_images\/sky.jpg"
+          "is_dark": true
         }
       }
     },
