@@ -125,6 +125,7 @@ section[is=hero] div[is=hero-main]:hover img {
 section[is=hero] div[is=hero-main] img {
   position: relative;
   transition: scale 0.7s;
+  border-radius: 3.2rem;
 }
 section[is=hero] div[is=hero-main] p {
   margin-bottom: 3.2rem;
