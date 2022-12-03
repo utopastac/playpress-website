@@ -9,7 +9,7 @@
           {% if block.settings.image != blank %}
               <img
                 src="{{ block.settings.image | img_url: '800x' }}"
-                alt=""
+                alt="{{ block.settings.image.alt }}"
                 is="in-action"
                 loading="lazy"
                 width="800"

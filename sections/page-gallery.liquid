@@ -7,7 +7,7 @@
         <div>
           <img
             src="{{ block.settings.image | img_url: '400x400' }}"
-            alt="{{ block.settings.image_alt }}"
+            alt="{{ block.settings.image.alt }}"
             loading="lazy"
             width="400"
             height="400"
@@ -32,11 +32,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "image_alt",
-          "label": "Image description"
         }
       ]
     }

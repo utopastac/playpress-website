@@ -5,7 +5,7 @@
     {%- if section.settings.image != blank -%}
       <img
         src="{{ section.settings.image | img_url: '900x' }}"
-        alt=""
+        alt="{{ section.settings.image.alt }}"
         width="900"
         height="600"
         is="in-action"

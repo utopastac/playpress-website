@@ -10,7 +10,7 @@
         {%- else -%}
           <img
             src="{{ section.settings.image | img_url: 'master' }}"
-            alt=""
+            alt="{{ section.settings.image.alt }}"
             width="900"
             height="600"
             is="in-action"
