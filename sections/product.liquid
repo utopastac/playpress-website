@@ -3,6 +3,7 @@
 {{ 'gallery.css' | asset_url | stylesheet_tag }}
 
 <div is="product">
+  
   <div>
     <section>
       <div is="gallery">
@@ -62,6 +63,19 @@
         {% render 'delivery', expanded: true %}
 
         <div class="description">{{ product.description }}</div>
+
+        {%- if product.metafields.product.pieces != blank -%}
+          <div class="meta">
+            <div>
+              <h4>Age range</h4>
+              <h3>{{ product.metafields.product.age_range }}</h3>
+            </div>
+            <div>
+              <h4>Pieces</h4>
+              <h3>{{ product.metafields.product.pieces }}</h3>
+            </div>
+          </div>
+        {%- endif -%}
 
         {% render 'universal-features' %}
 

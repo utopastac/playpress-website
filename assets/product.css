@@ -48,7 +48,7 @@ div[is=product] > div form button:active {
   background-color: #272f75;
 }
 
-div[is=product] > div .description h5, div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s, div[is=product] > div .description h2, div[is=product] > div .description .heading-m, div[is=product] > div div[is=product-content] > header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
+div[is=product] > div .meta h4, div[is=product] > div .description h5, div[is=product] > div .meta h3, div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s, div[is=product] > div .description h2, div[is=product] > div .description .heading-m, div[is=product] > div div[is=product-content] > header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
@@ -66,7 +66,7 @@ div[is=product] > div .description strong, div[is=product] > div .description b,
   font-weight: 700;
 }
 
-div[is=product] > div .description h5 {
+div[is=product] > div .meta h4, div[is=product] > div .description h5 {
   font-weight: 900;
 }
 
@@ -96,27 +96,27 @@ div[is=product] > div .description h2, div[is=product] > div .description .headi
   }
 }
 
-div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+div[is=product] > div .meta h3, div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
   font-size: 2.7rem;
   line-height: 115%;
   letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+  div[is=product] > div .meta h3, div[is=product] > div .description h6, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
     font-size: 3.4rem;
     line-height: 115%;
     letter-spacing: -0.68px;
   }
 }
 
-div[is=product] > div .description h5 {
+div[is=product] > div .meta h4, div[is=product] > div .description h5 {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description h5 {
+  div[is=product] > div .meta h4, div[is=product] > div .description h5 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
@@ -214,6 +214,24 @@ div[is=product] > div .description {
 }
 div[is=product] > div .description > div * {
   margin-bottom: 1.6rem;
+}
+div[is=product] > div .meta {
+  border: 2px solid #E7E9EF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 1.6rem;
+}
+div[is=product] > div .meta h4 {
+  color: #41495E;
+}
+div[is=product] > div .meta h3 {
+  color: #2D3788;
+}
+div[is=product] > div .meta > div {
+  padding: 1.6rem 2.4rem;
+}
+div[is=product] > div .meta > div:first-child {
+  border-right: 2px solid #E7E9EF;
 }
 div[is=product] > div img {
   border-radius: 1.6rem;
