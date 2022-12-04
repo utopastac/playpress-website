@@ -44,13 +44,13 @@
 }
 
 [is=product-promo] > div > div p, [is=product-promo] > div h3 {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   [is=product-promo] > div > div p, [is=product-promo] > div h3 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -100,7 +100,7 @@
 }
 @media screen and (min-width: 770px) {
   [is=product-promo] > div {
-    padding-top: 1.6rem;
+    padding-top: 1.2rem;
   }
 }
 @media screen and (min-width: 1080px) {

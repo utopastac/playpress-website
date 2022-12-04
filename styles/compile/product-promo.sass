@@ -29,7 +29,7 @@
     padding-top: units(1)
 
     @include min($screen-m)
-      padding-top: units(2)
+      padding-top: units(1.5)
 
     @include min($screen-l)
       display: flex
@@ -38,7 +38,8 @@
       @extend %micro-button-style
 
     h3
-      @extend %body-2
+      @extend %body-3
+        
 
     > div
       display: flex
@@ -52,10 +53,11 @@
         margin-left: units(3)
 
       p
-        @extend %body-2
+        @extend %body-3
         @extend %bold
         color: $grey-800
         margin-bottom: units(1)
+          
         
 
   &:focus-visible
