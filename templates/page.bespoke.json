@@ -109,6 +109,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-0": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/studio-design.jpg",
             "link_url": "",
             "title": "Bespoke design",
             "text": "We can design almost anything. We work closely with clients to get the product just right."
@@ -146,7 +147,7 @@
         "4b0d6989-b130-4287-9348-9e999052082e"
       ],
       "settings": {
-        "title": "Add a heading",
+        "title": "Services",
         "text": ""
       }
     },
