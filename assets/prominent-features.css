@@ -71,9 +71,6 @@ article[is=prominent-feature] img {
   border-radius: 3.2rem;
   margin-bottom: 1.6rem;
 }
-div[is=prominent-features] {
-  padding-bottom: 3.2rem;
-}
 div[is=prominent-features] > div {
   grid-gap: 4rem;
   display: grid;
