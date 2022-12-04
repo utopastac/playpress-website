@@ -132,6 +132,15 @@ footer[is="footer"]
       &:active
         color: white
 
+  div[is="footer-feedback"]
+    @include max($screen-m)
+      margin-top: units(2)
+      padding-bottom: units(4)
+
+  ul[is="footer-social-links"]
+    @include max($screen-m)
+      margin-top: units(2)
+
   section[is="meta"]
     padding-top: units(4)
     border-top: 1px solid rgba(255, 255, 255, 0.2)
@@ -151,7 +160,7 @@ footer[is="footer"]
           margin-right: 0.5rem
 
   @include min($screen-s)
-    padding: units(3) units(3) units(5) units(3)
+    padding: units(3) units(3) units(7) units(3)
 
     section[is="meta"]
       ul

@@ -191,6 +191,17 @@ footer[is=footer] a:focus-visible:visited {
 footer[is=footer] a:focus-visible:active {
   color: white;
 }
+@media screen and (max-width: 770px) {
+  footer[is=footer] div[is=footer-feedback] {
+    margin-top: 1.6rem;
+    padding-bottom: 3.2rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  footer[is=footer] ul[is=footer-social-links] {
+    margin-top: 1.6rem;
+  }
+}
 footer[is=footer] section[is=meta] {
   padding-top: 3.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -211,7 +222,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
 }
 @media screen and (min-width: 550px) {
   footer[is=footer] {
-    padding: 2.4rem 2.4rem 4rem 2.4rem;
+    padding: 2.4rem 2.4rem 5.6rem 2.4rem;
   }
   footer[is=footer] section[is=meta] ul {
     display: flex;

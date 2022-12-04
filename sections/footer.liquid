@@ -85,7 +85,7 @@
         </ul>
         {% comment %} <dark-mode-toggle id="dark-mode-toggle" label="Dark mode"></dark-mode-toggle> {% endcomment %}
         {%- if section.blocks.size > 0 -%}
-          <ul>
+          <ul is="footer-social-links">
             {%- for block in section.blocks -%}
               <li {{ block.shopify_attributes }}>
                 {%- if block.settings.link_text != blank -%}
@@ -118,7 +118,7 @@
           </ul>
         {%- endif -%}
       </div>
-      <div>
+      <div is="footer-feedback">
         {{ section.settings.feedback_text }}
         <p>
           <small>This eco-friendly Shopify website was carefuly crafted by <a href="https://www.kindly.eco">Kindly</a>.</small>
