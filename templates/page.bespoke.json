@@ -154,6 +154,12 @@
         "text": ""
       }
     },
+    "3b694ed6-420d-41aa-9586-6d7649cf9883": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "949c3f03-8eef-4953-bd48-d885a2c6bd15": {
       "type": "image-with-text",
       "settings": {
@@ -184,6 +190,7 @@
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503",
     "c8c55d77-17af-4f2c-b19f-e0c8731e605b",
     "c9cf4777-b9cd-445b-940e-b2417a3d9630",
+    "3b694ed6-420d-41aa-9586-6d7649cf9883",
     "949c3f03-8eef-4953-bd48-d885a2c6bd15",
     "162775330702ef7b43"
   ]
