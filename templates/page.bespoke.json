@@ -118,6 +118,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-1": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/studio-prototypes.jpg",
             "link_url": "",
             "title": "Product prototypes",
             "text": "We provide prototypes of the play sets so you can get a hands-on experience."
@@ -126,6 +127,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-2": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/studio-brand.jpg",
             "link_url": "",
             "title": "Your brand",
             "text": "We can brand the packaging and product however you like."
@@ -134,6 +136,7 @@
         "4b0d6989-b130-4287-9348-9e999052082e": {
           "type": "accordian_item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/studio-manufacture.jpg",
             "link_url": "",
             "title": "Quick manufacture",
             "text": "We make all our products in the UK. This lets us provide quick turn around and a high-quality product that is CE certified."
