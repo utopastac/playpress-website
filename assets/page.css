@@ -5,21 +5,21 @@ div[is=page] ul li {
   list-style-type: disc;
 }
 
-div[is=page] h5, div[is=page] h6, div[is=page] h3, div[is=page] .heading-s, div[is=page] h2, div[is=page] .heading-m, div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {
+div[is=page] h5, div[is=page] h3, div[is=page] .heading-s, div[is=page] h2, div[is=page] .heading-m, div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-div[is=page] .body-2, div[is=page] p, div[is=page] ul li, div[is=page] .body-1, div[is=page] .button-text, div[is=page] h4, div[is=page] .body-0 {
+div[is=page] .body-2, div[is=page] h6, div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text, div[is=page] h4, div[is=page] .body-0 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=page] .body-2, div[is=page] p, div[is=page] ul li, div[is=page] .body-1, div[is=page] .button-text, div[is=page] h4, div[is=page] .body-0 {
+div[is=page] .body-2, div[is=page] h6, div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text, div[is=page] h4, div[is=page] .body-0 {
   font-weight: 400;
 }
 
-div[is=page] strong, div[is=page] b, div[is=page] .button-text {
+div[is=page] h6, div[is=page] h4, div[is=page] strong, div[is=page] b, div[is=page] .button-text {
   font-weight: 700;
 }
 
@@ -53,13 +53,13 @@ div[is=page] h2, div[is=page] .heading-m {
   }
 }
 
-div[is=page] h6, div[is=page] h3, div[is=page] .heading-s {
+div[is=page] h3, div[is=page] .heading-s {
   font-size: 2.7rem;
   line-height: 115%;
   letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=page] h6, div[is=page] h3, div[is=page] .heading-s {
+  div[is=page] h3, div[is=page] .heading-s {
     font-size: 3.4rem;
     line-height: 115%;
     letter-spacing: -0.68px;
@@ -93,26 +93,26 @@ div[is=page] h4, div[is=page] .body-0 {
   }
 }
 
-div[is=page] .body-1, div[is=page] .button-text {
+div[is=page] h6, div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=page] .body-1, div[is=page] .button-text {
+  div[is=page] h6, div[is=page] .body-1, div[is=page] p, div[is=page] ul li, div[is=page] .button-text {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-div[is=page] .body-2, div[is=page] p, div[is=page] ul li {
+div[is=page] .body-2 {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=page] .body-2, div[is=page] p, div[is=page] ul li {
+  div[is=page] .body-2 {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
