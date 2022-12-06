@@ -162,8 +162,22 @@ div[is=page] hr {
 
 div[is=page] {
   margin: 3.2rem auto 9.6rem auto;
-  padding: 0 3.2rem;
   max-width: 60rem;
+}
+div[is=page] img {
+  border: 1px solid #E7E9EF;
+  margin: 4rem -2.4rem;
+  width: calc(100% + 48px);
+  max-width: calc(100% + 48px);
+}
+@media screen and (min-width: 550px) {
+  div[is=page] img {
+    border-radius: 3.2rem;
+    margin: 4rem -4rem;
+    border-radius: 3.2rem;
+    width: calc(100% + 80px);
+    max-width: calc(100% + 80px);
+  }
 }
 @media screen and (min-width: 550px) {
   div[is=page] {

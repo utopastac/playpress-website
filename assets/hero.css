@@ -148,7 +148,7 @@ section[is=hero] div[is=hero-main] div[is=button] {
 }
 @media screen and (min-width: 1200px) {
   section[is=hero] div[is=hero-main] {
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1.5fr;
   }
 }
 section[is=hero] div[is=hero-content] {

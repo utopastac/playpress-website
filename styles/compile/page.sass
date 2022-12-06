@@ -3,8 +3,20 @@
 div[is="page"]
   @extend %typography-hierarchy
   margin: units(4) auto units(12) auto
-  padding: 0 units(4)
   max-width: size(600)
+
+  img
+    border: 1px solid $grey-200
+    margin: units(5) units(-3)
+    width: calc(100% + 48px)
+    max-width: calc(100% + 48px)
+
+    @include min($screen-s)
+      border-radius: $border-m
+      margin: units(5) units(-5)
+      border-radius: $border-m
+      width: calc(100% + 80px)
+      max-width: calc(100% + 80px)
 
   @include min($screen-s)
     padding: units(4) units(4) units(6) units(4)
