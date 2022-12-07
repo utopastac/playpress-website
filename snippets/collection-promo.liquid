@@ -2,9 +2,9 @@
 
 {% case collection.products_count %}
   {% when 1 %}
-    {%- assign product_label = 'product' -%}
+    {%- assign product_label = 'playset' -%}
   {% else %}
-    {%- assign product_label = 'products' -%}
+    {%- assign product_label = 'playsets' -%}
 {% endcase %}
 
 <a class="collection-promo" href="{{ collection.url }}">
