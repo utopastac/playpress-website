@@ -63,8 +63,6 @@ article[is=prominent-feature] div p {
 
 article[is=prominent-feature] {
   background: #FFFFFF;
-  border-radius: 3.2rem;
-  overflow: hidden;
 }
 article[is=prominent-feature] img {
   width: 100%;
