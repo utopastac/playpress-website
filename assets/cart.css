@@ -186,6 +186,7 @@ div[is=cart] div[is=checkout] div[is=checkout-wrapper] {
   background: #EBEDFA;
   padding: 2.4rem;
   border-radius: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 div[is=cart] div[is=checkout] > header {
   display: flex;

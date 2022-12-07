@@ -1,3 +1,10 @@
 @import '../assets'
 
 div[is="signpost"]
+  margin: units(3) auto 0 auto
+  display: flex
+  justify-content: center
+  align-content: center
+
+  @include min($screen-m)
+    margin: units(5) auto 0 auto

@@ -1,0 +1,11 @@
+div[is=signpost] {
+  margin: 2.4rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+@media screen and (min-width: 770px) {
+  div[is=signpost] {
+    margin: 4rem auto 0 auto;
+  }
+}
