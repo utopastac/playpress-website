@@ -7,7 +7,7 @@
 {% endif %}
 
 {% if section.settings.show_signpost_link %}
-  <div is="signpost">
+  <div is="signpost" class="{% if center == true %}center{% endif %}">
     <a is="{{ button_style }}" href="{{ section.settings.link_url }}">
         {{ section.settings.link_text }}
     </a>
