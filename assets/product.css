@@ -203,6 +203,9 @@ div[is=product] > div .description hr {
   margin: 3.2rem 0 2.4rem 0;
 }
 
+div[is=product] {
+  padding-bottom: 6.4rem;
+}
 div[is=product] > div div[is=product-content] > header {
   margin-bottom: 2.4rem;
 }

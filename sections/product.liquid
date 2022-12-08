@@ -77,6 +77,19 @@
           </div>
         {%- endif -%}
 
+        {%- if product.metafields.product.width != blank -%}
+          <div class="meta-dimensions">
+            <div>
+              <h4>Dimensions</h4>
+              <h3>L:{{ product.metafields.product.pack_length }} W:{{ product.metafields.product.pack_width }} D:{{ product.metafields.product.pack_depth }}</h3>
+            </div>
+            <div>
+              <h4>Weight</h4>
+              <h3>{{ product.metafields.product.pack_weight }}</h3>
+            </div>
+          </div>
+        {%- endif -%}
+
         {% render 'universal-features' %}
 
         {% comment %} {% render 'sharing' %} {% endcomment %}

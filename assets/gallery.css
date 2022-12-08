@@ -9,6 +9,7 @@
   div[is=gallery] > div * {
     border-radius: 3.2rem;
     display: inline-block;
+    max-width: 80vw;
     margin-right: 0.8rem;
   }
 }
