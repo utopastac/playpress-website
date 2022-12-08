@@ -12,12 +12,12 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   .collections ul {
     grid-gap: 2.4rem;
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   .collections ul {
     grid-gap: 4rem;
   }

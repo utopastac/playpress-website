@@ -191,13 +191,13 @@ footer[is=footer] a:focus-visible:visited {
 footer[is=footer] a:focus-visible:active {
   color: white;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 740px) {
   footer[is=footer] div[is=footer-feedback] {
     margin-top: 1.6rem;
     padding-bottom: 3.2rem;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 740px) {
   footer[is=footer] ul[is=footer-social-links] {
     margin-top: 1.6rem;
   }
@@ -232,7 +232,7 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
     margin-right: 2.4rem;
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   footer[is=footer] section[is=meta] {
     display: grid;
     grid-template-columns: 2fr 1fr;

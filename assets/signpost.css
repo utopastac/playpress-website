@@ -6,7 +6,7 @@ div[is=signpost].center {
   justify-content: center;
   align-content: center;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=signpost] {
     margin: 4rem auto 0 auto;
   }

@@ -117,7 +117,7 @@ a[is=page-feature]:nth-child(1) div[is=content] {
   padding: 2.4rem;
   transition: all 0.5s;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   a[is=page-feature]:nth-child(1) article {
     position: relative;
     background: none;
@@ -148,7 +148,7 @@ a[is=page-feature]:nth-child(2), a[is=page-feature]:nth-child(3) {
 a[is=page-feature]:nth-child(2) h4, a[is=page-feature]:nth-child(2) h3, a[is=page-feature]:nth-child(2) a, a[is=page-feature]:nth-child(3) h4, a[is=page-feature]:nth-child(3) h3, a[is=page-feature]:nth-child(3) a {
   color: white;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   a[is=page-feature]:nth-child(2), a[is=page-feature]:nth-child(3) {
     padding: 4rem;
   }
@@ -167,7 +167,7 @@ div[is=page-features] > div {
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=page-features] > div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

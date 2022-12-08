@@ -44,7 +44,7 @@ a[is=delivery-bar] ul {
 a[is=delivery-bar] ul > * {
   margin-right: 1.6rem;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   a[is=delivery-bar] ul > * {
     margin-right: 2.4rem;
   }

@@ -198,7 +198,7 @@ div[is=cart] div[is=checkout] button {
   border-radius: 3.2rem;
   width: 100%;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=cart] form {
     grid-column-gap: 6.4rem;
     grid-template-columns: 2fr 1fr;

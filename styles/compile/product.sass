@@ -71,20 +71,20 @@ div[is="product"]
         margin-bottom: 0
         margin-top: 0
 
-  @include min($screen-s)
+  @include min($screen-m)
     > div
       section
         grid-column-gap: units(5)
         align-items: flex-start
         display: grid
-        grid-template-columns: 1.5fr 1fr
-    
-  @include min($screen-m)
-    > div
-      section
         grid-template-columns: 1.2fr 1fr
+    
+  // @include min($screen-m)
+  //   > div
+  //     section
+  //       grid-template-columns: 1fr 1fr
 
-  @include min($screen-m)
+  @include min($screen-l)
     > div
       section
         grid-template-columns: 1.8fr 1fr

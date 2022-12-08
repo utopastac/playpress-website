@@ -261,20 +261,15 @@ div[is=product] > div form > p {
   margin-bottom: 0;
   margin-top: 0;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 740px) {
   div[is=product] > div section {
     grid-column-gap: 4rem;
     align-items: flex-start;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-  }
-}
-@media screen and (min-width: 770px) {
-  div[is=product] > div section {
     grid-template-columns: 1.2fr 1fr;
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1080px) {
   div[is=product] > div section {
     grid-template-columns: 1.8fr 1fr;
   }

@@ -79,7 +79,7 @@ div[is=prominent-features] > div {
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=prominent-features] > div {
     grid-template-columns: repeat(2, minmax(34rem, 48rem));
   }

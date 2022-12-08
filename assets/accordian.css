@@ -54,7 +54,7 @@ article[is=accordian-item] {
 article[is=accordian-item]:hover {
   scale: 1.03;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   article[is=accordian-item] {
     padding: 0 3.2rem;
   }
@@ -103,7 +103,7 @@ div[is=accordian] {
   align-content: center;
   justify-items: center;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=accordian] {
     grid-template-columns: minmax(16rem, 1fr) 1fr;
   }
@@ -114,7 +114,7 @@ div[is=accordian] #accordian-content {
 div[is=accordian] #accordian-images {
   display: none;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=accordian] #accordian-images {
     display: block;
   }

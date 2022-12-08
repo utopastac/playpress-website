@@ -72,7 +72,7 @@ section[is=big-banner] .banner-content img {
   position: relative;
   border-radius: 0;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   section[is=big-banner] .banner-content {
     display: grid;
     grid-template-columns: 1fr 1fr;

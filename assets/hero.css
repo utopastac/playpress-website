@@ -179,7 +179,7 @@ section[is=hero] div[is=hero-content].dark div[is=button]:after {
 section[is=hero] div[is=hero-content].dark h1, section[is=hero] div[is=hero-content].dark h4, section[is=hero] div[is=hero-content].dark p {
   color: #FFFFFF;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   section[is=hero] div[is=hero-content] {
     display: flex;
   }

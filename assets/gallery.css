@@ -1,4 +1,4 @@
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 740px) {
   div[is=gallery] > div {
     white-space: nowrap;
     overflow-x: scroll;
@@ -13,7 +13,7 @@
     margin-right: 0.8rem;
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   div[is=gallery] > div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -58,7 +58,7 @@
 #gallery-lightbox .container img {
   margin: 3.2rem 0;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 740px) {
   #gallery-lightbox {
     padding: 6.4rem;
   }
