@@ -1,13 +1,13 @@
-div[is=delivery] header, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+div[is=delivery] header, div[is=delivery] header span, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=delivery] header, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+div[is=delivery] header, div[is=delivery] header span, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-weight: 400;
 }
 
-div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3, div[is=delivery] header span {
   font-weight: 700;
 }
 
@@ -24,13 +24,13 @@ div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-c
   }
 }
 
-div[is=delivery] header, div[is=delivery] {
+div[is=delivery] header, div[is=delivery] header span, div[is=delivery] {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=delivery] header, div[is=delivery] {
+  div[is=delivery] header, div[is=delivery] header span, div[is=delivery] {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -44,8 +44,10 @@ div[is=delivery] {
   padding: 1.6rem;
   color: #2D3788;
   cursor: pointer;
-  background: #FFFFFF;
   border: 1px solid #EBEDFA;
+}
+div[is=delivery]:hover:not(.active) {
+  border-color: #2D3788;
 }
 div[is=delivery] header {
   display: flex;
@@ -97,7 +99,7 @@ div[is=delivery] header {
   user-select: none;
 }
 div[is=delivery] header span {
-  margin-left: 0.8rem;
+  margin: 0 0.8rem;
 }
 div[is=delivery].active {
   color: white;

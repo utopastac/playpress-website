@@ -53,16 +53,16 @@ div[is=product] > div .meta h4, div[is=product] > div .description h5, div[is=pr
   font-weight: 700;
 }
 
-div[is=product] > div .description .body-2, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] > header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] > header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=product] > div .description .body-2, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] > header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] > header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
   font-weight: 400;
 }
 
-div[is=product] > div .description h6, div[is=product] > div .description h4, div[is=product] > div .description strong, div[is=product] > div .description b, div[is=product] > div .description .button-text, div[is=product] > div form button {
+div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .description h6, div[is=product] > div .description h4, div[is=product] > div .description strong, div[is=product] > div .description b, div[is=product] > div .description .button-text, div[is=product] > div form button {
   font-weight: 700;
 }
 
@@ -136,26 +136,26 @@ div[is=product] > div div[is=product-content] > header p, div[is=product] > div 
   }
 }
 
-div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
+div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
+  div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-div[is=product] > div .description .body-2 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description .body-2 {
+  div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -219,10 +219,11 @@ div[is=product] > div .description > div * {
   margin-bottom: 1.6rem;
 }
 div[is=product] > div .meta {
-  border: 2px solid #E7E9EF;
+  border: 1px solid #E7E9EF;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 1.6rem;
+  margin-top: 2.4rem;
 }
 div[is=product] > div .meta h4 {
   color: #41495E;
@@ -234,7 +235,25 @@ div[is=product] > div .meta > div {
   padding: 1.6rem 2.4rem;
 }
 div[is=product] > div .meta > div:first-child {
-  border-right: 2px solid #E7E9EF;
+  border-right: 1px solid #E7E9EF;
+}
+div[is=product] > div .meta-dimensions {
+  border: 1px solid #E7E9EF;
+  border-radius: 0.8rem;
+}
+div[is=product] > div .meta-dimensions h5 {
+  color: #41495E;
+}
+div[is=product] > div .meta-dimensions p {
+  color: #2D3788;
+}
+div[is=product] > div .meta-dimensions > div {
+  padding: 1.2rem 1.6rem;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+div[is=product] > div .meta-dimensions > div:first-child {
+  border-bottom: 1px solid #E7E9EF;
 }
 div[is=product] > div img {
   border-radius: 1.6rem;

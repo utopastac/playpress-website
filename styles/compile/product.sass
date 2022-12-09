@@ -25,10 +25,11 @@ div[is="product"]
         margin-bottom: units(2)
     
     .meta
-      border: 2px solid $grey-200
+      border: 1px solid $grey-200
       display: grid
       grid-template-columns: 1fr 1fr
       border-radius: $border-s
+      margin-top: units(3)
 
       h4
         @extend %overline
@@ -41,7 +42,28 @@ div[is="product"]
       > div
         padding: units(2) units(3)
         &:first-child
-          border-right: 2px solid $grey-200
+          border-right: 1px solid $grey-200
+    
+    .meta-dimensions
+      border: 1px solid $grey-200
+      border-radius: $border-xs
+
+      h5
+        @extend %body-3
+        @extend %bold
+        color: $grey-800
+      
+      p
+        @extend %body-2
+        @extend %bold
+        color: $blue-1000
+
+      > div
+        padding: units(1.5) units(2)
+        display: grid
+        grid-template-columns: 0.5fr 1fr 
+        &:first-child
+          border-bottom: 1px solid $grey-200
 
     img
       border-radius: $border-s

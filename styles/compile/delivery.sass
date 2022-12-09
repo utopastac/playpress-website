@@ -8,13 +8,18 @@ div[is="delivery"]
   color: $blue-1000  
   cursor: pointer    
   @extend %body-3
-  background: $white
   border: 1px solid $blue-100
+
+  &:hover
+    &:not(.active)
+      border-color: $blue-1000
 
   header
     display: flex
     span
       margin-left: units(1)
+      @extend %body-3
+      @extend %bold
 
   div[is="delivery-charges"]
     background: $white
@@ -66,7 +71,7 @@ div[is="delivery"]
     user-select: none
 
     span
-      margin-left: units(1)
+      margin: 0 units(1)
 
   &.active 
     color: white

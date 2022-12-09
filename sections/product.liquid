@@ -62,8 +62,6 @@
 
         {% render 'delivery', expanded: true %}
 
-        <div class="description">{{ product.description }}</div>
-
         {%- if product.metafields.product.pieces != blank -%}
           <div class="meta">
             <div>
@@ -77,20 +75,28 @@
           </div>
         {%- endif -%}
 
-        {%- if product.metafields.product.width != blank -%}
+        <div class="description">{{ product.description }}</div>
+
+        {%- if product.metafields.product.pack_length != blank -%}
           <div class="meta-dimensions">
             <div>
-              <h4>Dimensions</h4>
-              <h3>L:{{ product.metafields.product.pack_length }} W:{{ product.metafields.product.pack_width }} D:{{ product.metafields.product.pack_depth }}</h3>
+              <h5>Dimensions</h5>
+              <p>L{{product.metafields.product.pack_length.value}}{{product.metafields.product.pack_length.unit}} W{{product.metafields.product.pack_width.value}}{{product.metafields.product.pack_width.unit}} D{{product.metafields.product.pack_depth.value}}{{product.metafields.product.pack_depth.unit}}</p>
             </div>
-            <div>
-              <h4>Weight</h4>
-              <h3>{{ product.metafields.product.pack_weight }}</h3>
-            </div>
+            {%- if product.metafields.product.pack_weight != blank -%}
+              <div>
+                <h5>Weight</h5>
+                <p>{{product.metafields.product.pack_weight.value}}{{product.metafields.product.pack_weight.unit}}</p>
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
 
+        
+
         {% render 'universal-features' %}
+
+        
 
         {% comment %} {% render 'sharing' %} {% endcomment %}
       </div><!--End product content> -->
