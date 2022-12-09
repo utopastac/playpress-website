@@ -81,12 +81,16 @@
           <div class="meta-dimensions">
             <div>
               <h5>Dimensions</h5>
-              <p>L{{product.metafields.product.pack_length.value}}{{product.metafields.product.pack_length.unit}} W{{product.metafields.product.pack_width.value}}{{product.metafields.product.pack_width.unit}} D{{product.metafields.product.pack_depth.value}}{{product.metafields.product.pack_depth.unit}}</p>
+              <p>
+                <span>{{product.metafields.product.pack_length.value | remove: " "}}</span>
+                <span>x {{product.metafields.product.pack_width.value | remove: " "}}</span>
+                <span>x {{product.metafields.product.pack_depth.value | remove: " "}}</span>
+              </p>
             </div>
             {%- if product.metafields.product.pack_weight != blank -%}
               <div>
                 <h5>Weight</h5>
-                <p>{{product.metafields.product.pack_weight.value}}{{product.metafields.product.pack_weight.unit}}</p>
+                <p>{{product.metafields.product.pack_weight.value | remove: " "}}</p>
               </div>
             {%- endif -%}
           </div>
