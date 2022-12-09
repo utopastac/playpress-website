@@ -39,26 +39,28 @@
       </div><!--End gallery> -->
 
       <div is="product-content">
-        <header>
-          <h1>{{ product.title }}</h1>
-          <p>{{ product.price | money }}</p>
-        </header>
+        <div is="product-info">
+          <header>
+            <h1>{{ product.title }}</h1>
+            <p>{{ product.price | money }}</p>
+          </header>
 
-        {% form 'product', product %}
-          <select name="id" hidden>
-            {%- for variant in product.variants -%}
-              <option selected="selected" value="{{ variant.id }}"></option>
-            {%- endfor -%}
-          </select>
-          {%- if product.available -%}
-            <input min="1" type="number" id="quantity" name="quantity" value="1"/>
-            <button type="submit">
-              Add to Cart
-            </button>
-          {%- else -%}
-            <p>Sold Out</p>
-          {%- endif -%}
-        {% endform %}
+          {% form 'product', product %}
+            <select name="id" hidden>
+              {%- for variant in product.variants -%}
+                <option selected="selected" value="{{ variant.id }}"></option>
+              {%- endfor -%}
+            </select>
+            {%- if product.available -%}
+              <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+              <button type="submit">
+                Add to Cart
+              </button>
+            {%- else -%}
+              <p>Sold Out</p>
+            {%- endif -%}
+          {% endform %}
+        </div>
 
         {% render 'delivery', expanded: true %}
 

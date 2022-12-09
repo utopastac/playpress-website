@@ -587,10 +587,6 @@ code {
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 html {
   background-color: #FFFFFF;
   color: #0A122A;

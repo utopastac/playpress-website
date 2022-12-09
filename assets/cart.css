@@ -212,7 +212,7 @@ div[is=cart] div[is=checkout] button {
     grid-column: 2;
     grid-row: 1;
     position: sticky;
-    top: 1rem;
+    top: 0.8rem;
   }
   div[is=cart] form table a {
     align-items: center;

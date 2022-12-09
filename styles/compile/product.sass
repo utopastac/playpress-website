@@ -7,15 +7,21 @@ div[is="product"]
     @extend %main-content
 
     div[is="product-content"]
+      position: relative
 
-      > header
-        margin-bottom: units(3)
-        h1
-          @extend %heading-1
-          margin-bottom: units(2)
+      div[is="product-info"]
+        // position: sticky
+        // top: 0px
+        // left: 0px
 
-        p
-          @extend %body-1
+        header
+          margin-bottom: units(3)
+          h1
+            @extend %heading-1
+            margin-bottom: units(2)
+
+          p
+            @extend %body-1
 
     .description
       @extend %typography-hierarchy
