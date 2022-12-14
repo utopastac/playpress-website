@@ -176,10 +176,16 @@ $bigUnits: 40
 
     @include min($screen-m)
       grid-gap: units(3)
+      grid-template-columns: repeat(3, 1fr)
 
     @include min($screen-l)
+      grid-gap: units(4)
+      grid-template-columns: repeat(3, 1fr)
+    
+    @include min($screen-xl)
       grid-gap: units(5)
-      grid-template-columns: repeat(auto-fit, minmax(size(240), 1fr))
+      grid-template-columns: repeat(4, 1fr)
+      // grid-template-columns: repeat(auto-fit, minmax(size(240), 1fr))
 
 %block-link
   display: block

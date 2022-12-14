@@ -11,12 +11,19 @@ div[is=product-promos] > div {
 @media screen and (min-width: 770px) {
   div[is=product-promos] > div {
     grid-gap: 2.4rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1080px) {
   div[is=product-promos] > div {
+    grid-gap: 3.2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  div[is=product-promos] > div {
     grid-gap: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
