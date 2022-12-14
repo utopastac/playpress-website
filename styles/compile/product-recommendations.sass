@@ -2,3 +2,8 @@
 
 div[is="product-promos"]
   @extend %product-list
+
+  > div
+    @include min($screen-xl)
+      grid-gap: units(5)
+      grid-template-columns: repeat(3, 1fr)
