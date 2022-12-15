@@ -1,6 +1,9 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 
+
+
 <div is="cart">
+  {% section 'warning-banner' %}
   <div>
     <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
     <form action="/cart" method="post">
