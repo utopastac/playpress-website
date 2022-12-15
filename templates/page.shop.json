@@ -14,6 +14,38 @@
         "is_dark": false
       }
     },
+    "fd5f2d05-6048-421d-b816-943ca49626f9": {
+      "type": "product-promos-individual",
+      "blocks": {
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-0": {
+          "type": "product",
+          "settings": {
+            "product": "mini-musuem-play-set"
+          }
+        },
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1": {
+          "type": "product",
+          "settings": {
+            "product": "mini-vets-play-set"
+          }
+        },
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
+          "type": "product",
+          "settings": {
+            "product": "mini-refill-cafe"
+          }
+        }
+      },
+      "block_order": [
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-0",
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1",
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2"
+      ],
+      "settings": {
+        "title": "",
+        "text": ""
+      }
+    },
     "79d35488-96a4-4333-8e48-117ea264ecc8": {
       "type": "gap",
       "settings": {
@@ -143,6 +175,7 @@
   },
   "order": [
     "7504f886-e145-4c65-bce0-03930b2ca39a",
+    "fd5f2d05-6048-421d-b816-943ca49626f9",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
     "5f050f65-23f0-40c4-90f9-feb4734e1d9d",
     "d1410691-b609-4e33-b565-6d990c848800",
