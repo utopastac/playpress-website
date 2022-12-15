@@ -103,7 +103,7 @@
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1": {
             "type": "collection",
             "settings": {
-              "collection": "bundle-playsets"
+              "collection": "mini-sets"
             }
           },
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2": {
@@ -265,7 +265,8 @@
           "heading": "Christmas Delivery",
           "text": "Because of ongoing action in the UK, we cannot guarantee Christmas Delivery using our standard Royal Mail service. Orders over £20 will be sent via DHL express.",
           "link_text": "More",
-          "link_url": "shopify:\/\/pages\/delivery"
+          "link_url": "shopify:\/\/pages\/delivery",
+          "show_banner": true
         }
       },
       "warning-banner": {
