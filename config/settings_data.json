@@ -258,9 +258,19 @@
           "is_large": false,
           "is_dark": true
         }
+      },
+      "896052e9-7468-470d-89eb-22991a6f0e2c": {
+        "type": "warning-banner",
+        "settings": {
+          "heading": "Christmas Delivery",
+          "text": "Because of ongoing action in the UK, we cannot guarantee Christmas Delivery using our standard Royal Mail service.",
+          "link_text": "More",
+          "link_url": "shopify:\/\/pages\/delivery"
+        }
       }
     },
     "content_for_index": [
+      "896052e9-7468-470d-89eb-22991a6f0e2c",
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935",
       "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
