@@ -267,6 +267,15 @@
           "link_text": "More",
           "link_url": "shopify:\/\/pages\/delivery"
         }
+      },
+      "warning-banner": {
+        "type": "warning-banner",
+        "settings": {
+          "heading": "Christmas Delivery",
+          "text": "Because of ongoing action in the UK, we cannot guarantee Christmas Delivery using our standard Royal Mail service. Orders over £20 will be sent via DHL express.",
+          "link_text": "More",
+          "link_url": ""
+        }
       }
     },
     "content_for_index": [
