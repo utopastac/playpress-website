@@ -1,0 +1,65 @@
+{{ 'product-promos.css' | asset_url | stylesheet_tag }}
+
+<section is="section">
+  
+  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
+
+    <div is="product-promos">
+      <div>
+        {% for block in section.blocks %}
+          {% assign product = block.settings.product %}
+          {% render 'product-promo', product: product %}
+        {% endfor %}
+      </div>
+    </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Product promos individual",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "label": "Product",
+          "id": "product",
+          "type": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product promos individual",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
