@@ -2,14 +2,16 @@
 
 <section is="warning-banner">
   <div>
-    {% if section.settings.heading != blank %}
-      <h4>{{ section.settings.heading | escape }}</h4>
-    {% endif %}
-    {% if section.settings.text != blank %}
-      <p>{{ section.settings.text | escape }}</p>
-    {% endif %}
+    <div>
+      {% if section.settings.heading != blank %}
+        <h4>{{ section.settings.heading | escape }}</h4>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p>{{ section.settings.text | escape }}</p>
+      {% endif %}
+    </div>
     {%- if section.settings.link_url != blank -%}
-      <a href="{{ section.settings.link_url }}" is="text-button">{{ section.settings.link_text }}</a>
+      <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
     {%- endif -%}
   </div>
 </section>

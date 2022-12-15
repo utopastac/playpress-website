@@ -285,6 +285,15 @@ $bigUnits: 40
   color: $grey-1000
   height: units(7)
 
+  &.small
+    @extend %button-m
+    height: units(4)
+
+    &:after
+      width: units(2.5)
+      height: units(2.5)
+      margin-left: units(0.5)
+
   &.white
     color: white
 

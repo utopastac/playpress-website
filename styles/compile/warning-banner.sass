@@ -1,16 +1,32 @@
 @import '../assets'
 
-div[is="warning-banner"]
+section[is="warning-banner"]
+  margin-bottom: units(2)
+  
+  @include min($screen-m)
+    margin-top: -units(3)
+
   > div
     @extend %main-content
     background: lighten($magenta-1000, 50%)
     border-radius: $border-xs
     padding: units(2)
 
+    @include min($screen-s)
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      > div
+        padding-right: units(2)
+
     h4
-      @extend %body-2
+      @extend %body-3
       @extend %bold
+      display: inline
+      padding-right: units(0.5)
 
     p
-      @extend %body-2
+      @extend %body-3
+      display: inline
     

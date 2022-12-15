@@ -1,36 +1,61 @@
-div[is=warning-banner] > div {
+section[is=warning-banner] > div {
   max-width: 140rem;
   margin: 0 auto;
 }
 
-div[is=warning-banner] > div p, div[is=warning-banner] > div h4 {
+section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=warning-banner] > div p, div[is=warning-banner] > div h4 {
+section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
   font-weight: 400;
 }
 
-div[is=warning-banner] > div h4 {
+section[is=warning-banner] > div h4 {
   font-weight: 700;
 }
 
-div[is=warning-banner] > div p, div[is=warning-banner] > div h4 {
-  font-size: 1.9rem;
+section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+  font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=warning-banner] > div p, div[is=warning-banner] > div h4 {
-    font-size: 2.1rem;
+  section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+    font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-div[is=warning-banner] > div {
+section[is=warning-banner] {
+  margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 740px) {
+  section[is=warning-banner] {
+    margin-top: -2.4rem;
+  }
+}
+section[is=warning-banner] > div {
   background: #fceff3;
   border-radius: 0.8rem;
   padding: 1.6rem;
+}
+@media screen and (min-width: 550px) {
+  section[is=warning-banner] > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section[is=warning-banner] > div > div {
+    padding-right: 1.6rem;
+  }
+}
+section[is=warning-banner] > div h4 {
+  display: inline;
+  padding-right: 0.4rem;
+}
+section[is=warning-banner] > div p {
+  display: inline;
 }
