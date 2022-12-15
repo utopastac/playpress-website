@@ -49,7 +49,7 @@ section[is=warning-banner] > div {
     align-items: center;
   }
   section[is=warning-banner] > div > div {
-    padding-right: 1.6rem;
+    padding-right: 4rem;
   }
 }
 section[is=warning-banner] > div h4 {
@@ -58,4 +58,5 @@ section[is=warning-banner] > div h4 {
 }
 section[is=warning-banner] > div p {
   display: inline;
+  max-width: 75ch;
 }

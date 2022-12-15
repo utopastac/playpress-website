@@ -15,7 +15,7 @@
     border-radius: $border-m
 
   > div
-    padding: units(3)
+    padding: units(2.5)
 
   h3
     @extend %overline
@@ -24,4 +24,11 @@
     text-overflow: ellipsis
 
   p
-    @extend %body-3
+    @extend %body-4
+
+  @include max($screen-s)
+
+    > div
+      display: flex
+      align-items: center
+      justify-content: space-between
