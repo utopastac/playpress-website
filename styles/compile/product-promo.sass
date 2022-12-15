@@ -3,11 +3,23 @@
 [is="product-promo"]
   display: flex
   flex-direction: column
-  overflow: hidden
   text-decoration: none
   min-height: 0
   height: 100%
   transition: scale 0.5s
+  position: relative
+
+  .new
+    position: absolute
+    top: -units(1)
+    left: units(2)
+    height: auto
+    padding: size(2) size(8)
+    @extend %body-4
+    @extend %bold
+    background: $blue-1000
+    color: $white
+    border-radius: size(4)
 
   &:hover
     scale: 1.03

@@ -19,4 +19,7 @@
       </form>
     </div>
   </div>
+  {%- if product.metafields.product.is_new == true -%}
+    <div class="new">New</div>
+  {%- endif -%}
 </a>

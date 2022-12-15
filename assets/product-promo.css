@@ -30,16 +30,16 @@
   background-color: #d7dbf5;
 }
 
-[is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] .new, [is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-[is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] .new, [is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-weight: 400;
 }
 
-[is=product-promo] > div > div p, [is=product-promo] > div input[type=submit], [is=product-promo] button {
+[is=product-promo] > div > div p, [is=product-promo] .new, [is=product-promo] > div input[type=submit], [is=product-promo] button {
   font-weight: 700;
 }
 
@@ -56,13 +56,13 @@
   }
 }
 
-[is=product-promo] > div input[type=submit], [is=product-promo] button {
+[is=product-promo] .new, [is=product-promo] > div input[type=submit], [is=product-promo] button {
   font-size: 1.4rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] > div input[type=submit], [is=product-promo] button {
+  [is=product-promo] .new, [is=product-promo] > div input[type=submit], [is=product-promo] button {
     font-size: 1.5rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -72,11 +72,21 @@
 [is=product-promo] {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   text-decoration: none;
   min-height: 0;
   height: 100%;
   transition: scale 0.5s;
+  position: relative;
+}
+[is=product-promo] .new {
+  position: absolute;
+  top: -0.8rem;
+  left: 1.6rem;
+  height: auto;
+  padding: 0.2rem 0.8rem;
+  background: #2D3788;
+  color: #FFFFFF;
+  border-radius: 0.4rem;
 }
 [is=product-promo]:hover {
   scale: 1.03;
