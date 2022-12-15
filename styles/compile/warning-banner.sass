@@ -1,0 +1,16 @@
+@import '../assets'
+
+div[is="warning-banner"]
+  > div
+    @extend %main-content
+    background: lighten($magenta-1000, 50%)
+    border-radius: $border-xs
+    padding: units(2)
+
+    h4
+      @extend %body-2
+      @extend %bold
+
+    p
+      @extend %body-2
+    

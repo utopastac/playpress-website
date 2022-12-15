@@ -10,6 +10,12 @@ a[is="delivery-bar"]
     .not-mobile
       display: none !important
 
+  div[is="delivery_warning"]
+    background: lighten($magenta-1000, 50%)
+    @extend %body-2
+    border-radius: $border-xs
+    padding: units(1)
+
   ul
     display: flex
     align-items: center

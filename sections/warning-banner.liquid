@@ -1,0 +1,50 @@
+{{ 'warning-banner.css' | asset_url | stylesheet_tag }}
+
+<section is="warning-banner">
+  <div>
+    {% if section.settings.warning_header != blank %}
+      <h4>{{ section.settings.warning_header | escape }}</h4>
+    {% endif %}
+    {% if section.settings.warning_text != blank %}
+      <p>{{ section.settings.warning_text | escape }}</p>
+    {% endif %}
+    {%- if section.settings.link_url != blank -%}
+      <a href="{{ section.settings.link_url }}" is="text-button">{{ section.settings.link_text }}</a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Warning banner",
+    "settings": [
+      {
+        "id": "warning_header",
+        "type": "text",
+        "label": "Warning header",
+        "default": "Header"
+      },
+      {
+        "id": "warning_text",
+        "type": "text",
+        "label": "Warning text",
+        "default": "Text"
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link URL"
+      },
+      {
+        "id": "link_text",
+        "type": "text",
+        "label": "Link text",
+      },
+    ]
+  },
+  "presets": [
+    {
+      "name": "Warning Banner"
+    }
+  ]
+{% endschema %}
