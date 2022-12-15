@@ -2,11 +2,11 @@
 
 <section is="warning-banner">
   <div>
-    {% if section.settings.warning_header != blank %}
-      <h4>{{ section.settings.warning_header | escape }}</h4>
+    {% if section.settings.heading != blank %}
+      <h4>{{ section.settings.heading | escape }}</h4>
     {% endif %}
-    {% if section.settings.warning_text != blank %}
-      <p>{{ section.settings.warning_text | escape }}</p>
+    {% if section.settings.text != blank %}
+      <p>{{ section.settings.text | escape }}</p>
     {% endif %}
     {%- if section.settings.link_url != blank -%}
       <a href="{{ section.settings.link_url }}" is="text-button">{{ section.settings.link_text }}</a>
@@ -15,36 +15,34 @@
 </section>
 
 {% schema %}
-  {
-    "name": "Warning banner",
-    "settings": [
-      {
-        "id": "warning_header",
-        "type": "text",
-        "label": "Warning header",
-        "default": "Header"
-      },
-      {
-        "id": "warning_text",
-        "type": "text",
-        "label": "Warning text",
-        "default": "Text"
-      },
-      {
-        "type": "url",
-        "id": "link_url",
-        "label": "Link URL"
-      },
-      {
-        "id": "link_text",
-        "type": "text",
-        "label": "Link text",
-      },
-    ]
-  },
+{
+  "name": "Warning banner",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
   "presets": [
     {
-      "name": "Warning Banner"
+      "name": "Warning banner"
     }
   ]
+}
 {% endschema %}
