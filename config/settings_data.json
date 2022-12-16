@@ -272,10 +272,11 @@
       "warning-banner": {
         "type": "warning-banner",
         "settings": {
-          "heading": "Christmas Delivery",
-          "text": "Because of ongoing action in the UK, we cannot guarantee Christmas Delivery using our standard Royal Mail service. Orders over £20 will be sent via DHL express.",
+          "heading": "Free UK delivery",
+          "text": "Orders under £15 are sent first class Royal Mail, orders over £15 are sent via DHL express.",
           "link_text": "More",
-          "link_url": ""
+          "link_url": "",
+          "show_banner": true
         }
       }
     },
