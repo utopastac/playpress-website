@@ -10,10 +10,10 @@
         {% if section.settings.text != blank %}
           <p>{{ section.settings.text | escape }}</p>
         {% endif %}
+        {%- if section.settings.link_url != blank -%}
+          <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
+        {%- endif -%}
       </div>
-      {%- if section.settings.link_url != blank -%}
-        <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
-      {%- endif -%}
     </div>
   </section>
 {% endif %}

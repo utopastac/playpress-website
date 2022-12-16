@@ -41,16 +41,9 @@ section[is=warning-banner] > div {
   background: #EBEDFA;
   border-radius: 0.8rem;
   padding: 1.6rem;
-}
-@media screen and (min-width: 550px) {
-  section[is=warning-banner] > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  section[is=warning-banner] > div > div {
-    padding-right: 4rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section[is=warning-banner] > div h4 {
   display: inline;
@@ -59,4 +52,7 @@ section[is=warning-banner] > div h4 {
 section[is=warning-banner] > div p {
   display: inline;
   max-width: 75ch;
+}
+section[is=warning-banner] > div a {
+  margin-left: 0.8rem;
 }
