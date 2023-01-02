@@ -108,6 +108,7 @@
           },
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "collection": "stocking-fillers"
             }
