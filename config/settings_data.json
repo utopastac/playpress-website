@@ -276,7 +276,7 @@
           "text": "Orders under £15 are sent first class Royal Mail, orders over £15 are sent via DHL express.",
           "link_text": "More",
           "link_url": "",
-          "show_banner": true
+          "show_banner": false
         }
       }
     },
