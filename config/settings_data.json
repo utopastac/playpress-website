@@ -234,15 +234,15 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "PlayPress Mini Vets Set",
+          "heading": "Check out our new mini vet playset!",
           "subtitle": "New set",
           "text": "",
-          "link_text": "Check it out",
+          "link_text": "See the set",
           "link_url": "shopify:\/\/products\/mini-vets-play-set",
           "image": "shopify:\/\/shop_images\/vet.png",
           "bg_color": "#2b68a0",
           "is_large": true,
-          "is_dark": true
+          "is_dark": false
         }
       },
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
