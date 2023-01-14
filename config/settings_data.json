@@ -266,7 +266,7 @@
           "text": "",
           "link_text": "More",
           "link_url": "shopify:\/\/pages\/delivery",
-          "show_banner": true
+          "show_banner": false
         }
       },
       "warning-banner": {
