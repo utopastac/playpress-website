@@ -133,9 +133,9 @@
       "592589cc-23f4-460c-aaa1-a8c5fa26628f": {
         "type": "product-promos",
         "settings": {
-          "title": "Stocking fillers",
+          "title": "Collaborations",
           "text": "",
-          "collection": "stocking-fillers",
+          "collection": "collaborations",
           "grid": 4,
           "rows": 1,
           "show_signpost_link": true,
