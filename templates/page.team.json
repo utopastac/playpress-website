@@ -84,6 +84,18 @@
             "subtitle": "Peter",
             "text": "<p>Peter helped brother Matthew to design, develop and launch the very first Playpress sets. He’s still lending his creative skills to help bring new ideas for the brand to life.<\/p>"
           }
+        },
+        "8c57707f-772e-4611-bddd-33b6f9194154": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/team-bec.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Design partner",
+            "subtitle": "Bec",
+            "text": "<p>Bec has been involved in our design since 2017, bringing a wealth of experience from a background in childrenswer design and illustration.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -92,7 +104,8 @@
         "fcd9ad99-c8f8-4c7e-8316-70a3b9ef7738",
         "4f8cc26b-0aba-4f6a-9579-ad62cdb1d474",
         "7e931224-1b05-488d-a1ed-caf4da98d99e",
-        "c3371e69-f660-4ee6-b536-bc9e95b0f74e"
+        "c3371e69-f660-4ee6-b536-bc9e95b0f74e",
+        "8c57707f-772e-4611-bddd-33b6f9194154"
       ],
       "settings": {
         "title": "",
