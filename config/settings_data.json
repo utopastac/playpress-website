@@ -145,7 +145,7 @@
           "text": "",
           "collection": "collaborations",
           "grid": 4,
-          "rows": 1,
+          "rows": 2,
           "show_signpost_link": true,
           "link_text": "View all products",
           "link_url": "shopify:\/\/pages\/shop"
