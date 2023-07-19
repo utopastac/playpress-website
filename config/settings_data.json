@@ -96,6 +96,7 @@
         "blocks": {
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "collection": "best-sellers"
             }
@@ -118,13 +119,20 @@
             "settings": {
               "collection": "under-10"
             }
+          },
+          "9a5a200c-99bc-4fb3-be02-d09091f1e20d": {
+            "type": "collection",
+            "settings": {
+              "collection": "julia-donaldson"
+            }
           }
         },
         "block_order": [
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0",
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1",
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2",
-          "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3"
+          "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3",
+          "9a5a200c-99bc-4fb3-be02-d09091f1e20d"
         ],
         "settings": {
           "title": ""
