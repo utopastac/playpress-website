@@ -10,7 +10,7 @@
         "link_url": "shopify:\/\/collections\/mini-sets",
         "image": "shopify:\/\/shop_images\/mini-sets.jpg",
         "bg_color": "#3512a0",
-        "is_large": false,
+        "is_large": true,
         "is_dark": true,
         "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
       }
