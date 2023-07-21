@@ -265,7 +265,8 @@
           "image": "shopify:\/\/shop_images\/C0006_Dinosuar_Roar_Child_Pushing_Out_Piece_1.jpg",
           "bg_color": "#2d1f74",
           "is_large": false,
-          "is_dark": true
+          "is_dark": true,
+          "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
         }
       },
       "896052e9-7468-470d-89eb-22991a6f0e2c": {
