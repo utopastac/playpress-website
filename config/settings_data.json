@@ -242,15 +242,16 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "Check out our new mini vet playset!",
+          "heading": "Check out our new Room on the Broom set!",
           "subtitle": "New set",
           "text": "",
           "link_text": "See the set",
           "link_url": "shopify:\/\/products\/mini-vets-play-set",
-          "image": "shopify:\/\/shop_images\/vet.png",
+          "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png",
           "bg_color": "#2b68a0",
           "is_large": true,
-          "is_dark": false
+          "is_dark": true,
+          "background_image": "shopify:\/\/shop_images\/rotb-bg_b0e2bda4-d869-4dc0-9486-41f7699557fb.jpg"
         }
       },
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
