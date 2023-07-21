@@ -9,10 +9,9 @@
         "link_text": "Check them out",
         "link_url": "shopify:\/\/collections\/mini-sets",
         "image": "shopify:\/\/shop_images\/mini-sets.jpg",
-        "bg_color": "#3512a0",
-        "is_large": true,
-        "is_dark": true,
-        "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
+        "bg_color": "#9bedf2",
+        "is_large": false,
+        "is_dark": false
       }
     },
     "fd5f2d05-6048-421d-b816-943ca49626f9": {
