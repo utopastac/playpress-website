@@ -96,6 +96,7 @@
         "blocks": {
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "collection": "best-sellers"
             }
@@ -108,6 +109,7 @@
           },
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "collection": "stocking-fillers"
             }
@@ -117,13 +119,20 @@
             "settings": {
               "collection": "under-10"
             }
+          },
+          "9a5a200c-99bc-4fb3-be02-d09091f1e20d": {
+            "type": "collection",
+            "settings": {
+              "collection": "julia-donaldson"
+            }
           }
         },
         "block_order": [
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0",
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1",
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2",
-          "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3"
+          "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3",
+          "9a5a200c-99bc-4fb3-be02-d09091f1e20d"
         ],
         "settings": {
           "title": ""
@@ -132,11 +141,11 @@
       "592589cc-23f4-460c-aaa1-a8c5fa26628f": {
         "type": "product-promos",
         "settings": {
-          "title": "Stocking fillers",
+          "title": "Collaborations",
           "text": "",
-          "collection": "stocking-fillers",
+          "collection": "collaborations",
           "grid": 4,
-          "rows": 1,
+          "rows": 2,
           "show_signpost_link": true,
           "link_text": "View all products",
           "link_url": "shopify:\/\/pages\/shop"
@@ -233,23 +242,22 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "Santa's Midnight Sleigh Ride Eco-Friendly Playset",
+          "heading": "Check out our new mini vet playset!",
           "subtitle": "New set",
           "text": "",
-          "link_text": "Check it out",
-          "link_url": "shopify:\/\/products\/santas-midnight-sleigh-rode-eco-friendly-playset",
-          "image": "shopify:\/\/shop_images\/hero-christmas.png",
-          "bg_color": "#1e227a",
+          "link_text": "See the set",
+          "link_url": "shopify:\/\/products\/mini-vets-play-set",
+          "image": "shopify:\/\/shop_images\/vet.png",
+          "bg_color": "#2b68a0",
           "is_large": true,
-          "is_dark": true,
-          "background_image": "shopify:\/\/shop_images\/christmas-bg-alt.jpg"
+          "is_dark": false
         }
       },
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
         "type": "hero",
         "settings": {
-          "heading": "Get in the Christmas spirit with our gift ideas under £10",
-          "subtitle": "🎄 Christmas 🎄",
+          "heading": "Amazing playsets, all under £10",
+          "subtitle": "Gifts under £10",
           "text": "",
           "link_text": "See the collection",
           "link_url": "shopify:\/\/collections\/under-10",
@@ -263,10 +271,10 @@
         "type": "warning-banner",
         "settings": {
           "heading": "Free UK delivery",
-          "text": "Orders under £15 are sent first class Royal Mail, orders over £15 are sent via DHL express.",
+          "text": "",
           "link_text": "More",
           "link_url": "shopify:\/\/pages\/delivery",
-          "show_banner": true
+          "show_banner": false
         }
       },
       "warning-banner": {
@@ -276,7 +284,7 @@
           "text": "Orders under £15 are sent first class Royal Mail, orders over £15 are sent via DHL express.",
           "link_text": "More",
           "link_url": "",
-          "show_banner": true
+          "show_banner": false
         }
       }
     },
