@@ -11,7 +11,8 @@
         "image": "shopify:\/\/shop_images\/mini-set-banner.jpg",
         "bg_color": "#3512a0",
         "is_large": true,
-        "is_dark": true
+        "is_dark": true,
+        "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
       }
     },
     "fd5f2d05-6048-421d-b816-943ca49626f9": {
