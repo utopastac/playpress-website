@@ -1,42 +1,42 @@
-div[is=universal-features] li div h4 {
+div[is=universal-features] li div.content h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-div[is=universal-features] li div p, div[is=universal-features] {
+div[is=universal-features] li div.content p, div[is=universal-features] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=universal-features] li div p, div[is=universal-features] {
+div[is=universal-features] li div.content p, div[is=universal-features] {
   font-weight: 400;
 }
 
-div[is=universal-features] li div h4 {
+div[is=universal-features] li div.content h4 {
   font-weight: 900;
 }
 
-div[is=universal-features] li div h4 {
+div[is=universal-features] li div.content h4 {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1080px) {
-  div[is=universal-features] li div h4 {
+  div[is=universal-features] li div.content h4 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
   }
 }
 
-div[is=universal-features] li div p, div[is=universal-features] {
+div[is=universal-features] li div.content p, div[is=universal-features] {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=universal-features] li div p, div[is=universal-features] {
+  div[is=universal-features] li div.content p, div[is=universal-features] {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -54,14 +54,19 @@ div[is=universal-features] li {
   list-style: none;
   background: #F3F3F7;
   border-radius: 1.6rem;
+  overflow: hidden;
+  display: flex;
+}
+div[is=universal-features] li div.image {
+  flex: 0.4;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1.6rem;
+}
+div[is=universal-features] li div.content {
+  flex: 1;
   padding: 1.6rem;
-  display: grid;
-  grid-template-columns: 9.6rem 1fr;
-  grid-gap: 1.6rem;
 }
-div[is=universal-features] li img {
-  border-radius: border-s;
-}
-div[is=universal-features] li div h4 {
+div[is=universal-features] li div.content h4 {
   margin-bottom: 0.4rem;
 }

@@ -5,22 +5,25 @@ div[is="universal-features"]
   margin: units(4) 0
 
   ul
-      display: grid
-      grid-gap: units(3)
+    display: grid
+    grid-gap: units(3)
 
   li
     list-style: none
     background: $grey-100
     border-radius: $border-s
-    padding: units(2)
-    display: grid
-    grid-template-columns: units(12) 1fr
-    grid-gap: units(2)
+    overflow: hidden
+    display: flex
 
-    img
-      border-radius: border-s
+    div.image
+      flex: 0.4
+      background-size: cover
+      background-position: center center
+      border-radius: $border-s
 
-    div
+    div.content
+      flex: 1
+      padding: units(2)
 
       h4
         @extend %overline
