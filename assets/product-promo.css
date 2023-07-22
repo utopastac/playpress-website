@@ -84,9 +84,9 @@
   left: 1.6rem;
   height: auto;
   padding: 0.2rem 0.8rem;
-  background: #2D3788;
+  background: #2D8872;
   color: #FFFFFF;
-  border-radius: 0.4rem;
+  border-radius: 1.2rem;
 }
 [is=product-promo]:hover {
   scale: 1.03;
