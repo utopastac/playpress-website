@@ -7,6 +7,9 @@
   <div>
     <section>
       <div is="gallery">
+        {%- if product.metafields.product.is_new == true -%}
+          <div class="new">New!</div>
+        {%- endif -%}
         <div>
           <img
             class="image"
@@ -41,11 +44,8 @@
       <div is="product-content">
         <div is="product-info">
           <header>
-            {%- if product.metafields.product.is_new == true -%}
-              <div class="new">New!</div>
-            {%- endif -%}
             <h1>{{ product.title }}</h1>
-            <p>{{ product.price | money }}</p>
+            <p is="product-price">{{ product.price | money }}</p>
           </header>
 
           {% form 'product', product %}

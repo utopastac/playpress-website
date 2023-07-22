@@ -1,3 +1,43 @@
+div[is=gallery] .new {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+div[is=gallery] .new {
+  font-weight: 400;
+}
+
+div[is=gallery] .new {
+  font-weight: 700;
+}
+
+div[is=gallery] .new {
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=gallery] .new {
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=gallery] {
+  position: relative;
+}
+div[is=gallery] .new {
+  padding: 0rem 0.8rem;
+  border-radius: 1.6rem;
+  display: inline-block;
+  background: #2D8872;
+  color: white;
+  position: absolute;
+  top: -0.8rem;
+  left: 1.6rem;
+  z-index: 1000;
+}
 @media screen and (max-width: 740px) {
   div[is=gallery] > div {
     white-space: nowrap;

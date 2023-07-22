@@ -48,21 +48,21 @@ div[is=product] > div form button:active {
   background-color: #272f75;
 }
 
-div[is=product] > div .meta h4, div[is=product] > div .description h5, div[is=product] > div .meta h3, div[is=product] > div .description h3, div[is=product] > div .description .heading-s, div[is=product] > div .description h2, div[is=product] > div .description .heading-m, div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
+div[is=product] > div .meta h4, div[is=product] > div .description h5, div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s, div[is=product] > div .description h2, div[is=product] > div .description .heading-m, div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-div[is=product] > div .meta-dimensions h5, div[is=product] > div div[is=product-content] div[is=product-info] header .new, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] div[is=product-info] header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=product] > div .meta-dimensions h5, div[is=product] > div div[is=product-content] div[is=product-info] header .new, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div div[is=product-content] div[is=product-info] header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
   font-weight: 400;
 }
 
-div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div div[is=product-content] div[is=product-info] header .new, div[is=product] > div .description h6, div[is=product] > div .description h4, div[is=product] > div .description strong, div[is=product] > div .description b, div[is=product] > div .description .button-text, div[is=product] > div form button {
+div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .description h6, div[is=product] > div .description h4, div[is=product] > div .description strong, div[is=product] > div .description b, div[is=product] > div .description .button-text, div[is=product] > div form button {
   font-weight: 700;
 }
 
@@ -96,13 +96,13 @@ div[is=product] > div .description h2, div[is=product] > div .description .headi
   }
 }
 
-div[is=product] > div .meta h3, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
   font-size: 2.7rem;
   line-height: 115%;
   letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta h3, div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+  div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
     font-size: 3.4rem;
     line-height: 115%;
     letter-spacing: -0.68px;
@@ -123,13 +123,13 @@ div[is=product] > div .meta h4, div[is=product] > div .description h5 {
   }
 }
 
-div[is=product] > div div[is=product-content] div[is=product-info] header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
   font-size: 2.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div div[is=product-content] div[is=product-info] header p, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+  div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
     font-size: 2.6rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -149,13 +149,13 @@ div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6,
   }
 }
 
-div[is=product] > div .meta-dimensions h5, div[is=product] > div div[is=product-content] div[is=product-info] header .new, div[is=product] > div .description .body-2 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta-dimensions h5, div[is=product] > div div[is=product-content] div[is=product-info] header .new, div[is=product] > div .description .body-2 {
+  div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -209,15 +209,12 @@ div[is=product] {
 div[is=product] > div div[is=product-content] {
   position: relative;
 }
+div[is=product] > div div[is=product-content] p[is=product-price] {
+  flex: 0;
+  padding-right: 0.8rem;
+}
 div[is=product] > div div[is=product-content] div[is=product-info] header {
   margin-bottom: 2.4rem;
-}
-div[is=product] > div div[is=product-content] div[is=product-info] header .new {
-  padding: 0.2rem 1.2rem;
-  border-radius: 1.6rem;
-  display: inline-block;
-  background: #2D8872;
-  color: white;
 }
 div[is=product] > div div[is=product-content] div[is=product-info] header h1 {
   margin-bottom: 1.6rem;
@@ -278,7 +275,7 @@ div[is=product] > div form {
   margin-bottom: 1.6rem;
 }
 div[is=product] > div form #quantity {
-  width: 20%;
+  width: 6.4rem;
 }
 div[is=product] > div form > button, div[is=product] > div form > p {
   flex: 1;

@@ -9,6 +9,12 @@ div[is="product"]
     div[is="product-content"]
       position: relative
 
+      p[is="product-price"]
+        @extend %heading-3
+        @extend %regular
+        flex: 0
+        padding-right: units(1)
+
       div[is="product-info"]
         // position: sticky
         // top: 0px
@@ -17,21 +23,9 @@ div[is="product"]
         header
           margin-bottom: units(3)
 
-          .new
-            @extend %body-3
-            @extend %bold
-            padding: size(2) size(12)
-            border-radius: $border-s
-            display: inline-block
-            background: $green-1000
-            color: white
-
           h1
             @extend %heading-1
             margin-bottom: units(2)
-
-          p
-            @extend %body-1
 
     .description
       @extend %typography-hierarchy
@@ -94,7 +88,7 @@ div[is="product"]
       margin-bottom: units(2)
 
       #quantity
-        width: 20%
+        width: units(8)
 
       button
         @extend %button-style
