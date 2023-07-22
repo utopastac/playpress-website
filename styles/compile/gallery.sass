@@ -12,9 +12,13 @@ div[is="gallery"]
     background: $green-1000
     color: white
     position: absolute
-    top: -units(1)
-    left: units(2)
+    top: units(1)
+    left: units(4)
     z-index: 1000
+
+    @include min($screen-m)
+      top: -units(1)
+      left: units(2)
 
   @include max($screen-m)
     > div
