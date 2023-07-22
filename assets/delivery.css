@@ -104,7 +104,7 @@ div[is=delivery] header span {
 div[is=delivery].active {
   color: white;
   background: #2D3788;
-  border-radius: 3.2rem;
+  border-radius: 1.6rem;
 }
 div[is=delivery].active .icon {
   background: white;
