@@ -209,3 +209,20 @@ $all-caps-letter-spacing: 0.1
     border: none
     background: $grey-200
     margin: units(4) 0 units(3) 0
+
+a[is="outline-button"]
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  @extend %button-xs
+  border-radius: units(1)
+  padding: 0 units(1.5)
+  color: $blue-1000
+  height: units(4)
+  white-space: nowrap
+  border: 1px solid $blue-200
+
+  &:hover
+    background: $blue-100
+    

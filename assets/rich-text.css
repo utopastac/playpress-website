@@ -15,16 +15,16 @@ section[is=rich-text] h5, section[is=rich-text] h3, section[is=rich-text] .headi
   font-weight: 700;
 }
 
-section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+a[is=outline-button], section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
+a[is=outline-button], section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
   font-weight: 400;
 }
 
-section[is=rich-text] h6, section[is=rich-text] h4, section[is=rich-text] strong, section[is=rich-text] b, section[is=rich-text] .button-text {
+section[is=rich-text] h6, section[is=rich-text] h4, section[is=rich-text] strong, section[is=rich-text] b, a[is=outline-button], section[is=rich-text] .button-text {
   font-weight: 700;
 }
 
@@ -124,6 +124,19 @@ section[is=rich-text] .body-2 {
   }
 }
 
+a[is=outline-button] {
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=outline-button] {
+    font-size: 1.5rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
 section[is=rich-text] ul {
   margin-top: 1.6rem;
 }
@@ -163,6 +176,22 @@ section[is=rich-text] hr {
   border: none;
   background: #E7E9EF;
   margin: 3.2rem 0 2.4rem 0;
+}
+
+a[is=outline-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+  border: 1px solid #EBEDFA;
+}
+a[is=outline-button]:hover {
+  background: #EBEDFA;
 }
 
 section[is=rich-text] > div {

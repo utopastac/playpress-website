@@ -3,13 +3,17 @@ div[is=universal-features] li div.content h4 {
   font-weight: 700;
 }
 
-div[is=universal-features] li div.content p, div[is=universal-features] {
+a[is=outline-button], div[is=universal-features] li div.content p, div[is=universal-features] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=universal-features] li div.content p, div[is=universal-features] {
+a[is=outline-button], div[is=universal-features] li div.content p, div[is=universal-features] {
   font-weight: 400;
+}
+
+a[is=outline-button] {
+  font-weight: 700;
 }
 
 div[is=universal-features] li div.content h4 {
@@ -41,6 +45,35 @@ div[is=universal-features] li div.content p, div[is=universal-features] {
     line-height: 140%;
     letter-spacing: 0px;
   }
+}
+
+a[is=outline-button] {
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=outline-button] {
+    font-size: 1.5rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+  border: 1px solid #EBEDFA;
+}
+a[is=outline-button]:hover {
+  background: #EBEDFA;
 }
 
 div[is=universal-features] {

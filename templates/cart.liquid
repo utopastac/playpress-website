@@ -4,11 +4,14 @@
 {% section 'warning-banner' %}
 <div is="cart">
   <div>
-    <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
     <form action="/cart" method="post">
       <div>
       {%- if cart.item_count > 0 -%}
         <table>
+          <header>
+            <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
+            <a is="outline-button" href="/shop">Continue shopping</a>
+          </header>
           <thead>
             <tr>
               <th>Product</th>
@@ -62,7 +65,6 @@
             <button type="submit" name="checkout">Proceed to checkout</button>
           </div>
           {% render 'delivery' %}
-          <a is="text-button" href="/products">Continue shopping</a>
         </div>
       {%- endif -%}
     </form>
