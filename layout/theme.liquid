@@ -26,6 +26,7 @@
     {%- endif -%}
 
     <link type="image/svg+xml" href="{{ 'favicon.svg' | asset_url }}" rel="icon" />
+    <link rel="apple-touch-icon" href="{{ 'favicon.png' | asset_url }}">
 
     {%- capture seo_title -%}
       {%- if request.page_type == 'search' and search.performed == true -%}
