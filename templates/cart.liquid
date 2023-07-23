@@ -1,17 +1,16 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 
-
 {% section 'warning-banner' %}
 <div is="cart">
   <div>
     <form action="/cart" method="post">
       <div>
+      <header>
+        <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
+        <a is="outline-button" href="/shop">Continue shopping</a>
+      </header>
       {%- if cart.item_count > 0 -%}
         <table>
-          <header>
-            <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
-            <a is="outline-button" href="/shop">Continue shopping</a>
-          </header>
           <thead>
             <tr>
               <th>Product</th>
@@ -59,7 +58,7 @@
         <div is="checkout">
           <div is="checkout-wrapper">
             <header>
-              <h3>Total:</h3>
+              <h3>Total</h3>
               <p>{{cart.total_price | money }}</p>
             </header>
             <button type="submit" name="checkout">Proceed to checkout</button>

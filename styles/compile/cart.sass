@@ -57,16 +57,18 @@ div[is="cart"]
     div[is="checkout-wrapper"]
       background: $blue-100
       padding: units(3)
-      border-radius: $border-m
+      border-radius: $border-s
       margin-bottom: units(2)
 
       > header
         display: flex
         justify-content: space-between
         align-items: flex-end
+        margin: 0
 
         h3
-          @extend %heading-3
+          @extend %body-1
+          @extend %bold
 
         p
           @extend %body-2
