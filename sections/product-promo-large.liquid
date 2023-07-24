@@ -26,7 +26,7 @@
 
 {% schema %}
 {
-  "name": "Product promos individual",
+  "name": "Product promo large",
   "settings": [
     {
       "type": "text",
@@ -39,26 +39,41 @@
       "id": "text",
       "label": "Text",
       "info": "Optional"
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "label": "Product",
+      "id": "product",
+      "type": "product"
     }
   ],
   "blocks": [
     {
-      "type": "product",
-      "name": "Product",
-      "settings": {
-        "label": "Product",
-        "id": "product",
-        "type": "product"
-      }
+      "type": "page_gallery_image",
+      "name": "Page gallery image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Product promos individual",
+      "name": "Product promo large",
       "blocks": [
         {
-          "type": "product"
+          "type": "page_gallery_image"
         },
+        {
+          "type": "page_gallery_image"
+        },
+        {
+          "type": "page_gallery_image"
+        }
       ]
     }
   ]
