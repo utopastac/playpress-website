@@ -39,13 +39,98 @@
       ],
       "settings": {
         "title": "Product Promo",
-        "text": "Large",
-        "product": "savannah-animals-playset"
+        "text": "The playset includes everything your child needs to build their own mini vets surgery with a variety of animals and medical equipment.",
+        "product": "mini-vets-play-set",
+        "layout": "left"
+      }
+    },
+    "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "e9bbee40-d7c2-473b-8d33-c1a15608c11b": {
+      "type": "product-promo-large",
+      "blocks": {
+        "ec7a11f3-6270-4c27-a25a-50746b8748ae": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png"
+          }
+        },
+        "015cfadc-a602-4886-959a-eabc2611390c": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mini-sets.jpg"
+          }
+        },
+        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FM0014SavannahV2PackFront.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "ec7a11f3-6270-4c27-a25a-50746b8748ae",
+        "015cfadc-a602-4886-959a-eabc2611390c",
+        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65"
+      ],
+      "settings": {
+        "title": "Product Promo",
+        "text": "The play set includes everything your child needs to build their own mini Cafe with a variety of accessories, such as miniature food items, a coffee machine, and cash.",
+        "product": "mini-refill-cafe",
+        "layout": "left"
+      }
+    },
+    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "61c188e3-d846-4f48-b6c9-6dc6485ec953": {
+      "type": "product-promo-large",
+      "blocks": {
+        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png"
+          }
+        },
+        "3845e81f-7814-44bb-92f6-19ae3488f197": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mini-sets.jpg"
+          }
+        },
+        "959388b3-b98d-41da-9d87-e20baf539bb1": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FM0014SavannahV2PackFront.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d",
+        "3845e81f-7814-44bb-92f6-19ae3488f197",
+        "959388b3-b98d-41da-9d87-e20baf539bb1"
+      ],
+      "settings": {
+        "title": "Product Promo",
+        "text": "The playset includes everything your child needs to build their own mini museum with exhibits from around the world, including ancient artefacts, cultural treasures, and natural wonders.",
+        "product": "mini-musuem-play-set",
+        "layout": "left"
       }
     }
   },
   "order": [
     "intro",
-    "b2ea100a-0977-4755-80c8-4d3b83b27afd"
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd",
+    "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
+    "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
+    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b",
+    "61c188e3-d846-4f48-b6c9-6dc6485ec953"
   ]
 }
