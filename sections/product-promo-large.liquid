@@ -1,0 +1,66 @@
+{{ 'product-promo-large.css' | asset_url | stylesheet_tag }}
+
+<a is="product-promo-large" href="{{ product.url }}">
+  <img
+    alt="{{ product.featured_image.alt }}"
+    src="{{ product.featured_media | img_url: '600x' }}"
+    loading="lazy"
+    width="600"
+    height="400"
+  />
+  <div>
+    <h3>{{ product.title }}</h3>
+    <div>
+      <p>{{ product.price | money }}</p>
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <button type="submit" value="Add">Add</button>
+      </form>
+    </div>
+  </div>
+  {%- if product.metafields.product.is_new == true -%}
+    <div class="new">New</div>
+  {%- endif -%}
+</a>
+
+{% schema %}
+{
+  "name": "Product promos individual",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": {
+        "label": "Product",
+        "id": "product",
+        "type": "product"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product promos individual",
+      "blocks": [
+        {
+          "type": "product"
+        },
+      ]
+    }
+  ]
+}
+{% endschema %}
