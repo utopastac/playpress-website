@@ -12,6 +12,38 @@
     },
     "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
       "type": "product-promo-large",
+      "blocks": {
+        "1db4e450-515c-4030-b14f-c056305e7034": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png"
+          }
+        },
+        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mini-sets.jpg"
+          }
+        },
+        "dcbfdb26-6272-4553-959d-e70c86d0c8b4": {
+          "type": "gallery_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FM0014SavannahV2PackFront.jpg"
+          }
+        },
+        "f8f64625-5300-4b51-9eaf-f834a9d39804": {
+          "type": "product",
+          "settings": {
+            "product": "rnli-lifeboat-eco-friendly-playset"
+          }
+        }
+      },
+      "block_order": [
+        "1db4e450-515c-4030-b14f-c056305e7034",
+        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead",
+        "dcbfdb26-6272-4553-959d-e70c86d0c8b4",
+        "f8f64625-5300-4b51-9eaf-f834a9d39804"
+      ],
       "settings": {
         "title": "Product Promo",
         "text": "Large"
