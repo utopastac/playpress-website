@@ -1,81 +1,93 @@
 @import '../assets'
 
-[is="product-promo-large"]
-  display: flex
-  flex-direction: column
-  text-decoration: none
-  min-height: 0
-  height: 100%
-  transition: scale 0.5s
-  position: relative
+section[is="product-promo-large"]
+  display: grid
+  grid-gap: $space-xs
 
-  .new
-    position: absolute
-    top: -units(1)
-    left: units(2)
-    height: auto
-    padding: size(2) size(8)
-    @extend %body-4
-    @extend %bold
-    background: $green-1000
-    color: $white
-    border-radius: size(12)
+  @include min($screen-m)
+    grid-template-columns: 1.75fr 1fr
+    grid-gap: $space-s
 
-  &:hover
-    scale: 1.03
+    &.swapped > div[is="gallery"] 
+      grid-column: 2
+      
+    &.swapped > div[is="content"] 
+      grid-column: 1
 
   button
-    @extend %micro-button-style
-    display: none
-
-    @include min($screen-l)
-      display: flex
+    @extend %button-style
 
   img
     border-radius: $border-s
 
-  > div
-    flex-direction: row
-    justify-content: space-between
-    height: 100%
-    padding-top: units(1)
-
-    @include min($screen-m)
-      padding-top: units(1.5)
-
-    @include min($screen-l)
-      display: flex
-
-    input[type="submit"]
-      @extend %micro-button-style
-
-    h3
-      @extend %body-3
-        
+  div[is="gallery"]
+    display: grid
+    grid-gap: units(3)
+    grid-template-columns: 1.5fr 1fr
+    grid-template-rows: 1fr 1fr
 
     > div
-      display: flex
-      flex-direction: column
+      overflow: hidden
+      border-radius: $border-s
+      border: 1px solid $grey-200
 
-      @include max($screen-l)
-        margin-top: units(0.5)
+      &:first-child
+        grid-row: 1 / span 2
 
-      @include min($screen-l)
-        align-items: flex-end
-        margin-left: units(3)
+      img
+        object-fit: cover
+        width: 100%
+        height: 100%
 
+  div[is="content"]
+
+    .description
       p
+        @extend %body-2
+
+    input[type="submit"]
+      @extend %button-style
+
+    h1
+      @extend %heading-2
+
+    div[is="call-to-action"]
+      display: flex
+      align-items: center
+      margin-top: units(2)
+    
+    p[is="product-price"]
+      @extend %heading-3
+      @extend %regular
+      flex: 0
+      padding-right: units(2)
+
+    .meta
+      margin: units(2) 0 units(3) 0
+      display: flex
+
+      > div
+        padding: 0 units(2)
+        border-radius: $border-xs
+        background: $green-1000
+        flex: 0
+        display: flex
+        align-items: center
+        margin-right: units(1)
+        height: units(5)
+
+        &:last-child
+          background: $blue-1000
+
+      h4
         @extend %body-3
         @extend %bold
-        color: $grey-800
-        margin-bottom: units(1)
-          
-        
+        color: $white
+      
+      h3
+        @extend %body-2
+        @extend %bold
+        color: $white
+        margin-right: units(1)
 
-  &:focus-visible
-    background: none
-    box-shadow: none
-
-    h3
-      background-color: $focus
-      box-shadow: 0 0 0 3px focus
+      

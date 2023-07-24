@@ -1,28 +1,45 @@
 {{ 'product-promo-large.css' | asset_url | stylesheet_tag }}
 
-<a is="product-promo-large" href="{{ product.url }}">
-  <img
-    alt="{{ product.featured_image.alt }}"
-    src="{{ product.featured_media | img_url: '600x' }}"
-    loading="lazy"
-    width="600"
-    height="400"
-  />
-  <div>
-    <h3>{{ product.title }}</h3>
-    <div>
-      <p>{{ product.price | money }}</p>
+<section is="product-promo-large" class="{% if section.settings.layout == 'right' %}swapped{% endif %}">
+  <div is="gallery">
+    {% for media in section.settings.product.media limit:3 %}
+      <div>
+        <img
+          src="{{ media | img_url: '800x' }}"
+          alt="{{ media.alt }}"
+          loading="lazy"
+        />
+      </div>
+    {% endfor %}
+  </div>
+  <div is="content">
+    {%- if section.settings.product.metafields.product.is_new == true -%}
+      <div class="new">New</div>
+    {%- endif -%}
+    <h1>{{ section.settings.product.title }}</h1>
+    {%- if section.settings.product.metafields.product.pieces != blank -%}
+      <div class="meta">
+        <div>
+          <h3>{{ section.settings.product.metafields.product.age_range }}</h3>
+          <h4>age</h4>
+        </div>
+        <div>
+          <h3>{{ section.settings.product.metafields.product.pieces }}</h3>
+          <h4>pcs</h4>
+        </div>
+      </div>
+    {%- endif -%}
+    <div class="description">{{ section.settings.product.description }}</div>
+    <div is="call-to-action">
+      <p is="product-price">{{ section.settings.product.price | money }}</p>
       <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input type="hidden" name="id" value="{{ section.settings.product.variants.first.id }}" />
         <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-        <button type="submit" value="Add">Add</button>
+        <button type="submit" value="Add">Add to cart</button>
       </form>
     </div>
   </div>
-  {%- if product.metafields.product.is_new == true -%}
-    <div class="new">New</div>
-  {%- endif -%}
-</a>
+</section>
 
 {% schema %}
 {
@@ -44,6 +61,22 @@
       "type": "product",
       "id": "product",
       "label": "Product"      
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
     }
   ],
   "blocks": [
