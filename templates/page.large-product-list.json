@@ -10,6 +10,13 @@
         "show_delivery_info": false
       }
     },
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
+      "type": "product-promo-large",
+      "settings": {
+        "title": "Product Promo",
+        "text": "Large"
+      }
+    },
     "0bec2d23-e720-4a26-a8d9-66ad58fa9faf": {
       "type": "product-promos-individual",
       "blocks": {
@@ -51,6 +58,7 @@
   },
   "order": [
     "intro",
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd",
     "0bec2d23-e720-4a26-a8d9-66ad58fa9faf",
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754"
   ]
