@@ -79,7 +79,6 @@ section[is="product-promo-large"]
         padding: 0 units(2)
         border-radius: $border-xs
         background: $green-1000
-        flex: 0
         display: flex
         align-items: center
         margin-right: units(1)
@@ -87,16 +86,11 @@ section[is="product-promo-large"]
 
         &:last-child
           background: $blue-1000
-
-      h4
-        @extend %body-3
-        @extend %bold
-        color: $white
       
       h3
         @extend %body-2
         @extend %bold
         color: $white
-        margin-right: units(1)
+        flex-shrink: 0
 
       
