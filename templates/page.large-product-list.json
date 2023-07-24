@@ -3,8 +3,8 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "A world of creativity that doesn’t cost the earth",
-        "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
+        "heading": "Playpress Minis",
+        "text": "Out mini set range is designed to be interconnectable, collectable, and amazing fun for kids.",
         "link_text": "",
         "link_url": "",
         "show_delivery_info": false
@@ -30,68 +30,22 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/FM0014SavannahV2PackFront.jpg"
           }
-        },
-        "f8f64625-5300-4b51-9eaf-f834a9d39804": {
-          "type": "product",
-          "settings": {
-            "product": "rnli-lifeboat-eco-friendly-playset"
-          }
         }
       },
       "block_order": [
         "1db4e450-515c-4030-b14f-c056305e7034",
         "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead",
-        "dcbfdb26-6272-4553-959d-e70c86d0c8b4",
-        "f8f64625-5300-4b51-9eaf-f834a9d39804"
+        "dcbfdb26-6272-4553-959d-e70c86d0c8b4"
       ],
       "settings": {
         "title": "Product Promo",
-        "text": "Large"
-      }
-    },
-    "0bec2d23-e720-4a26-a8d9-66ad58fa9faf": {
-      "type": "product-promos-individual",
-      "blocks": {
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-1": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-2": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-3": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-1",
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-2",
-        "template--15894205366464__0bec2d23-e720-4a26-a8d9-66ad58fa9faf-product-3"
-      ],
-      "settings": {
-        "title": "Add a title",
-        "text": ""
-      }
-    },
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
-      "type": "gap",
-      "settings": {
-        "size": 2
+        "text": "Large",
+        "product": "savannah-animals-playset"
       }
     }
   },
   "order": [
     "intro",
-    "b2ea100a-0977-4755-80c8-4d3b83b27afd",
-    "0bec2d23-e720-4a26-a8d9-66ad58fa9faf",
-    "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754"
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd"
   ]
 }
