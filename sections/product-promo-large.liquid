@@ -39,9 +39,20 @@
       "id": "text",
       "label": "Text",
       "info": "Optional"
-    },
+    }
   ],
   "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "label": "Product",
+          "id": "product",
+          "type": "product"
+        }
+      ]
+    },
     {
       "type": "gallery_image",
       "name": "Gallery image",
@@ -59,7 +70,7 @@
       "name": "Product promo large",
       "blocks": [
         {
-          "type": "gallery_image"
+          "type": "product"
         },
         {
           "type": "gallery_image"
@@ -67,6 +78,9 @@
         {
           "type": "gallery_image"
         },
+        {
+          "type": "gallery_image"
+        }
       ]
     }
   ]
