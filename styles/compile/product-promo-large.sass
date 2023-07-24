@@ -2,7 +2,8 @@
 
 section[is="product-promo-large"]
   display: grid
-  grid-gap: $space-xs
+  grid-gap: units(2)
+  position: relative
 
   @include min($screen-m)
     grid-template-columns: 1.75fr 1fr
@@ -22,18 +23,37 @@ section[is="product-promo-large"]
     display: inline-block
     background: $green-1000
     color: white
+    position: absolute
+    top: units(1)
+    left: units(1)
+
+    @include min($screen-m)
+      position: static
+      top: 0
+      left: 0
+      margin-bottom: units(0.5)
 
   button
     @extend %button-style
 
-  img
-    border-radius: $border-s
-
   div[is="gallery"]
-    display: grid
-    grid-gap: units(3)
-    grid-template-columns: 1.5fr 1fr
-    grid-template-rows: 1fr 1fr
+    @include max($screen-m)
+      white-space: nowrap
+      overflow-x: scroll
+      -webkit-overflow-scrolling: touch
+      margin: 0 -units(2) 0 -units(2)
+      padding: 0 units(1)
+
+      *
+        display: inline-block
+        max-width: 80vw
+        margin-right: units(1)
+
+    @include min($screen-m)
+      display: grid
+      grid-gap: units(2)
+      grid-template-columns: 1.5fr 1fr
+      grid-template-rows: 1fr 1fr
 
     > div
       overflow: hidden
@@ -72,25 +92,11 @@ section[is="product-promo-large"]
       padding-right: units(2)
 
     .meta
-      margin: units(2) 0 units(3) 0
-      display: flex
-
-      > div
-        padding: 0 units(2)
-        border-radius: $border-xs
-        background: $green-1000
-        display: flex
-        align-items: center
-        margin-right: units(1)
-        height: units(5)
-
-        &:last-child
-          background: $blue-1000
+      margin: units(0.5) 0 units(1) 0
       
       h3
-        @extend %body-2
+        @extend %body-1
         @extend %bold
-        color: $white
         flex-shrink: 0
 
       

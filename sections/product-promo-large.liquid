@@ -14,17 +14,12 @@
   </div>
   <div is="content">
     {%- if section.settings.product.metafields.product.is_new == true -%}
-      <div class="new">New</div>
+      <div class="new">✨New✨</div>
     {%- endif -%}
     <h1>{{ section.settings.product.title }}</h1>
     {%- if section.settings.product.metafields.product.pieces != blank -%}
       <div class="meta">
-        <div>
-          <h3>{{ section.settings.product.metafields.product.age_range }} age</h3>
-        </div>
-        <div>
-          <h3>{{ section.settings.product.metafields.product.pieces }} pcs</h3>
-        </div>
+        <h3>{{ section.settings.product.metafields.product.age_range }} age, {{ section.settings.product.metafields.product.pieces }} pieces</h3>
       </div>
     {%- endif -%}
     <div class="description"><p>{{ section.settings.text }}<p></div>
