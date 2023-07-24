@@ -231,5 +231,5 @@ section[is=product-promo-large] div[is=content] .meta {
   margin: 0.4rem 0 0.8rem 0;
 }
 section[is=product-promo-large] div[is=content] .meta h3 {
-  flex-shrink: 0;
+  color: #41495E;
 }
