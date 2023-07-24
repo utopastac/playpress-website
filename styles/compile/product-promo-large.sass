@@ -1,0 +1,81 @@
+@import '../assets'
+
+[is="product-promo-large"]
+  display: flex
+  flex-direction: column
+  text-decoration: none
+  min-height: 0
+  height: 100%
+  transition: scale 0.5s
+  position: relative
+
+  .new
+    position: absolute
+    top: -units(1)
+    left: units(2)
+    height: auto
+    padding: size(2) size(8)
+    @extend %body-4
+    @extend %bold
+    background: $green-1000
+    color: $white
+    border-radius: size(12)
+
+  &:hover
+    scale: 1.03
+
+  button
+    @extend %micro-button-style
+    display: none
+
+    @include min($screen-l)
+      display: flex
+
+  img
+    border-radius: $border-s
+
+  > div
+    flex-direction: row
+    justify-content: space-between
+    height: 100%
+    padding-top: units(1)
+
+    @include min($screen-m)
+      padding-top: units(1.5)
+
+    @include min($screen-l)
+      display: flex
+
+    input[type="submit"]
+      @extend %micro-button-style
+
+    h3
+      @extend %body-3
+        
+
+    > div
+      display: flex
+      flex-direction: column
+
+      @include max($screen-l)
+        margin-top: units(0.5)
+
+      @include min($screen-l)
+        align-items: flex-end
+        margin-left: units(3)
+
+      p
+        @extend %body-3
+        @extend %bold
+        color: $grey-800
+        margin-bottom: units(1)
+          
+        
+
+  &:focus-visible
+    background: none
+    box-shadow: none
+
+    h3
+      background-color: $focus
+      box-shadow: 0 0 0 3px focus
