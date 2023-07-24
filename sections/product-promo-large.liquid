@@ -29,7 +29,7 @@
         </div>
       </div>
     {%- endif -%}
-    <div class="description">{{ section.settings.product.description }}</div>
+    <div class="description"><p>{{ section.settings.text }}<p></div>
     <div is="call-to-action">
       <p is="product-price">{{ section.settings.product.price | money }}</p>
       <form method="post" action="/cart/add">

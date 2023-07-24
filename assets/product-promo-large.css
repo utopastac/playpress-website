@@ -41,16 +41,16 @@ section[is=product-promo-large] div[is=content] p[is=product-price], section[is=
   font-weight: 700;
 }
 
-a[is=outline-button], section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .description p, section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
+a[is=outline-button], section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] .new, section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .description p, section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-section[is=product-promo-large] div[is=content] p[is=product-price], a[is=outline-button], section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .description p, section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
+section[is=product-promo-large] div[is=content] p[is=product-price], a[is=outline-button], section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] .new, section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .description p, section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
   font-weight: 400;
 }
 
-section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .meta h4, a[is=outline-button], section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
+section[is=product-promo-large] div[is=content] .meta h3, section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] .new, a[is=outline-button], section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
   font-weight: 700;
 }
 
@@ -93,13 +93,13 @@ section[is=product-promo-large] div[is=content] .meta h3, section[is=product-pro
   }
 }
 
-section[is=product-promo-large] div[is=content] .meta h4 {
+section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] .new {
   font-size: 1.7rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=product-promo-large] div[is=content] .meta h4 {
+  section[is=product-promo-large] div[is=content] .meta h4, section[is=product-promo-large] .new {
     font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -150,6 +150,13 @@ section[is=product-promo-large] {
   section[is=product-promo-large].swapped > div[is=content] {
     grid-column: 1;
   }
+}
+section[is=product-promo-large] .new {
+  padding: 0rem 0.8rem;
+  border-radius: 1.6rem;
+  display: inline-block;
+  background: #2D8872;
+  color: white;
 }
 section[is=product-promo-large] img {
   border-radius: 1.6rem;
