@@ -165,6 +165,9 @@ section[is=product-promo-large] {
     grid-column: 1;
   }
 }
+section[is=product-promo-large] a:hover h1 {
+  text-decoration: underline;
+}
 section[is=product-promo-large] .new {
   padding: 0rem 0.8rem;
   border-radius: 1.6rem;
