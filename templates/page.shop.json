@@ -129,6 +129,12 @@
           "settings": {
             "collection": "space-playsets"
           }
+        },
+        "7bdad9ed-e677-45fc-9c36-f69be2a260bb": {
+          "type": "collection",
+          "settings": {
+            "collection": "charity-sets"
+          }
         }
       },
       "block_order": [
@@ -139,7 +145,8 @@
         "1784da9d-d995-4cfb-9d1d-bb8e5f0ea4e8",
         "2906203a-fa72-4942-a30b-23cd4fc8d246",
         "2df92755-5fd8-420e-b585-1722e96b6f69",
-        "7aa7d536-b4b6-4e10-a68a-7bcd40a1e7af"
+        "7aa7d536-b4b6-4e10-a68a-7bcd40a1e7af",
+        "7bdad9ed-e677-45fc-9c36-f69be2a260bb"
       ],
       "settings": {
         "title": ""
