@@ -260,6 +260,9 @@ footer[is=footer] section[is=meta] ul:last-of-type > li > a > svg {
     margin-bottom: 0.8rem;
     margin-right: 2.4rem;
   }
+  footer[is=footer] section[is=meta] ul a:hover {
+    text-decoration: underline;
+  }
 }
 @media screen and (min-width: 740px) {
   footer[is=footer] section[is=meta] {
