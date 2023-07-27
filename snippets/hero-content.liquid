@@ -1,11 +1,11 @@
 <div is="hero-content" class="{% if section.settings.is_dark %}dark{% endif %}">
-  <div style="{% if section.settings.is_text_color %}color: {{ section.settings.text_color }} !important{% endif %}">
+  <div>
     {% if section.settings.subtitle != blank %}
-      <h4>{{ section.settings.subtitle | escape }}</h4>
+      <h4 style="{% if section.settings.is_text_color %}color: {{ section.settings.text_color }} !important{% endif %}">{{ section.settings.subtitle | escape }}</h4>
     {% endif %}
-    <h1>{{ section.settings.heading | escape }}</h1>
+    <h1 style="{% if section.settings.is_text_color %}color: {{ section.settings.text_color }} !important{% endif %}">{{ section.settings.heading | escape }}</h1>
     {%- if section.settings.text != blank -%}
-      <p>{{ section.settings.text }}</p>
+      <p style="{% if section.settings.is_text_color %}color: {{ section.settings.text_color }} !important{% endif %}">{{ section.settings.text }}</p>
     {%- endif -%}
   </div>
   {%- if section.settings.link_url != blank -%}
