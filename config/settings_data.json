@@ -250,7 +250,7 @@
           "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png",
           "bg_color": "#2b68a0",
           "is_text_color": false,
-          "text_color": "#0A122A",
+          "text_color": "#0a122a",
           "is_large": true,
           "is_dark": true,
           "background_image": "shopify:\/\/shop_images\/rotb-bg_0636ea7f-dc0c-438d-b810-fb6dd9c2ffab.jpg"
@@ -267,7 +267,7 @@
           "image": "shopify:\/\/shop_images\/C0006_Dinosuar_Roar_Child_Pushing_Out_Piece_1.jpg",
           "bg_color": "#2d1f74",
           "is_text_color": false,
-          "text_color": "#0A122A",
+          "text_color": "#0a122a",
           "is_large": false,
           "is_dark": true,
           "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
@@ -304,7 +304,7 @@
           "image": "shopify:\/\/shop_images\/egypt.png",
           "bg_color": "#ebedfa",
           "is_text_color": true,
-          "text_color": "#2d1f74",
+          "text_color": "#0a122a",
           "is_large": true,
           "is_dark": true,
           "background_image": "shopify:\/\/shop_images\/sand.jpg"
