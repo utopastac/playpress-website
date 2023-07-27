@@ -221,6 +221,10 @@ section[is=product-promo-large] div[is=gallery] > div img {
   width: 100%;
   height: 100%;
 }
+section[is=product-promo-large] div[is=content] {
+  display: flex;
+  align-items: center;
+}
 section[is=product-promo-large] div[is=content] div[is=call-to-action] {
   display: flex;
   align-items: center;

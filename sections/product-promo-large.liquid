@@ -2,34 +2,50 @@
 
 <section is="product-promo-large" class="{% if section.settings.layout == 'right' %}swapped{% endif %}">
   <div is="gallery">
-    {% for media in section.settings.product.media limit:3 %}
-      <div>
-        <img
-          src="{{ media | img_url: '800x' }}"
-          alt="{{ media.alt }}"
-          loading="lazy"
-        />
-      </div>
-    {% endfor %}
+    {%- if section.blocks[0].settings.image == blank -%}
+      {% for media in section.settings.product.media limit:3 %}
+        <div>
+          <img
+            src="{{ media | img_url: '800x' }}"
+            alt="{{ media.alt }}"
+            loading="lazy"
+          />
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for block in section.blocks %}
+        <div>
+          <img
+            src="{{ block.settings.image | img_url: '400x400' }}"
+            alt="{{ block.settings.image.alt }}"
+            loading="lazy"
+            width="400"
+            height="400"
+          />
+        </div>
+      {% endfor %}
+    {%- endif -%}
   </div>
   <div is="content">
-    {%- if section.settings.product.metafields.product.is_new == true -%}
-      <div class="new">✨New✨</div>
-    {%- endif -%}
-    <a is="product-promo" href="{{ section.settings.product.url }}"><h1>{{ section.settings.product.title }}</h1></a>
-    {%- if section.settings.product.metafields.product.pieces != blank -%}
-      <div class="meta">
-        <h3>Age {{ section.settings.product.metafields.product.age_range }}, {{ section.settings.product.metafields.product.pieces }} pieces</h3>
+    <div>
+      {%- if section.settings.product.metafields.product.is_new == true -%}
+        <div class="new">✨New✨</div>
+      {%- endif -%}
+      <a is="product-promo" href="{{ section.settings.product.url }}"><h1>{{ section.settings.product.title }}</h1></a>
+      {%- if section.settings.product.metafields.product.pieces != blank -%}
+        <div class="meta">
+          <h3>Age {{ section.settings.product.metafields.product.age_range }}, {{ section.settings.product.metafields.product.pieces }} pieces</h3>
+        </div>
+      {%- endif -%}
+      <div class="description"><p>{{ section.settings.text }}<p></div>
+      <div is="call-to-action">
+        <p is="product-price">{{ section.settings.product.price | money }}</p>
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ section.settings.product.variants.first.id }}" />
+          <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+          <button type="submit" value="Add">Add to cart</button>
+        </form>
       </div>
-    {%- endif -%}
-    <div class="description"><p>{{ section.settings.text }}<p></div>
-    <div is="call-to-action">
-      <p is="product-price">{{ section.settings.product.price | money }}</p>
-      <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ section.settings.product.variants.first.id }}" />
-        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-        <button type="submit" value="Add">Add to cart</button>
-      </form>
     </div>
   </div>
 </section>

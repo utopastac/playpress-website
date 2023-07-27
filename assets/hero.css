@@ -141,7 +141,6 @@ section[is=hero] div[is=hero-background] {
 section[is=hero] div[is=hero-main] {
   position: relative;
   margin: 0 0 3.2rem 0;
-  overflow: hidden;
   border-radius: 3.2rem;
   transition: scale 0.4s;
 }
