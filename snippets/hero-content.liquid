@@ -1,5 +1,5 @@
 <div is="hero-content" class="{% if section.settings.is_dark %}dark{% endif %}">
-  <div style="color: {{ section.settings.text_color }}">
+  <div style="{% if section.settings.is_text_color %}color: {{ section.settings.text_color }} !important{% endif %}">
     {% if section.settings.subtitle != blank %}
       <h4>{{ section.settings.subtitle | escape }}</h4>
     {% endif %}
