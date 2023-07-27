@@ -304,9 +304,9 @@
           "image": "shopify:\/\/shop_images\/egypt.png",
           "bg_color": "#ebedfa",
           "is_text_color": true,
-          "text_color": "#0845ff",
+          "text_color": "#2d1f74",
           "is_large": true,
-          "is_dark": false,
+          "is_dark": true,
           "background_image": "shopify:\/\/shop_images\/sand.jpg"
         }
       },
