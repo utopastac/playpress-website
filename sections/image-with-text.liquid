@@ -15,7 +15,7 @@
       {{ "image" | placeholder_svg_tag: "placeholder-svg" }}
     {% endif %}
 
-    <div>
+    <div style="color: {{ section.settings.text_color }} !important">
       {% if section.settings.title != blank %}
         <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.title | escape }}</h3>
       {% endif %}
