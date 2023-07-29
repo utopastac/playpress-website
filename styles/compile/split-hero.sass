@@ -3,6 +3,11 @@
 section[is="split-hero"]
   position: relative
 
+  img
+    object-fit: cover
+    width: 100%
+    height: 100%
+
   @include min($screen-m)
     display: flex
     align-items: stretch
@@ -13,7 +18,6 @@ section[is="split-hero"]
     height: 100%
 
   div[is="main-promo"], div[is="sub-promo"]
-    height: units(50)
     border-radius: $border-s
     overflow: hidden
     flex: 1
@@ -31,13 +35,15 @@ section[is="split-hero"]
 
   div[is="main-promo"]
     margin-bottom: units(3)
+    a > div
+      flex-direction: column-reverse
 
     @include min($screen-m)
       margin-bottom: 0
       margin-right: units(3)
 
       div[is="split-hero-content"]
-        margin-left: -$border-s
+        margin-right: -$border-s
         margin-top: 0
         max-width: units(45)
 
@@ -72,6 +78,4 @@ section[is="split-hero"]
 
   div[is="split-hero-image"]
     flex: 1
-    background-size: cover
-    background-position: center center
   

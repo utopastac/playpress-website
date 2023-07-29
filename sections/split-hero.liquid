@@ -12,14 +12,29 @@
             </div>
             <div is="button">{{ section.settings.link_text_a }}</div>
         </div>
+        <div is="split-hero-image">
+          <img
+            src="{{ section.settings.image_a | img_url: 'master' }}"
+            alt="{{ section.settings.image_a.alt }}"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+        </div>
       </div>
-      <div is="split-hero-image" style="background-image: url({{ section.settings.image_a | img_url: 'master' }})"></div>
     </a>
   </div>
   <div is="sub-promo">
     <a href="{{ section.settings.link_url_b }}">
       <div>
-        <div is="split-hero-image" style="background-image: url({{ section.settings.image_b | img_url: 'master' }})">
+        <div is="split-hero-image">
+          <img
+            src="{{ section.settings.image_b | img_url: 'master' }}"
+            alt="{{ section.settings.image_b.alt }}"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
         </div>
         <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}">
           <div>

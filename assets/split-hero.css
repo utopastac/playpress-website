@@ -92,6 +92,11 @@ a[is=outline-button]:hover {
 section[is=split-hero] {
   position: relative;
 }
+section[is=split-hero] img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 @media screen and (min-width: 740px) {
   section[is=split-hero] {
     display: flex;
@@ -104,7 +109,6 @@ section[is=split-hero] > div a {
   height: 100%;
 }
 section[is=split-hero] div[is=main-promo], section[is=split-hero] div[is=sub-promo] {
-  height: 40rem;
   border-radius: 1.6rem;
   overflow: hidden;
   flex: 1;
@@ -124,13 +128,16 @@ section[is=split-hero] div[is=main-promo] a > div, section[is=split-hero] div[is
 section[is=split-hero] div[is=main-promo] {
   margin-bottom: 2.4rem;
 }
+section[is=split-hero] div[is=main-promo] a > div {
+  flex-direction: column-reverse;
+}
 @media screen and (min-width: 740px) {
   section[is=split-hero] div[is=main-promo] {
     margin-bottom: 0;
     margin-right: 2.4rem;
   }
   section[is=split-hero] div[is=main-promo] div[is=split-hero-content] {
-    margin-left: -1.6rem;
+    margin-right: -1.6rem;
     margin-top: 0;
     max-width: 36rem;
   }
@@ -155,6 +162,4 @@ section[is=split-hero] div[is=split-hero-content] > div:first-child {
 }
 section[is=split-hero] div[is=split-hero-image] {
   flex: 1;
-  background-size: cover;
-  background-position: center center;
 }
