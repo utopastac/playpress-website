@@ -53,6 +53,25 @@
         "size": 2
       }
     },
+    "dc2d95c0-e4f4-4323-a41e-4e72469a03b5": {
+      "type": "split-hero",
+      "settings": {
+        "heading_a": "This is a product",
+        "subtitle_a": "This is a subtitle",
+        "link_text_a": "Link text",
+        "link_url_a": "shopify:\/\/pages\/design",
+        "image_a": "shopify:\/\/shop_images\/mini-set_4550abdd-bd6f-45e1-9cca-9ff77e7df295.jpg",
+        "bg_color_a": "#1c37e2",
+        "text_color_a": "#fff",
+        "heading_b": "Title B",
+        "subtitle_b": "Lol lol lol",
+        "link_text_b": "Hi link",
+        "link_url_b": "shopify:\/\/pages\/shop",
+        "image_b": "shopify:\/\/shop_images\/sand-sky_0b89927b-4018-491f-b69d-995fb0e83883.jpg",
+        "bg_color_b": "#77f437",
+        "text_color_b": "#1c37e2"
+      }
+    },
     "92e808e5-4ccc-4d44-8a92-c9274c658ddc": {
       "type": "page-content",
       "settings": {
@@ -106,6 +125,7 @@
     "intro",
     "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed",
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e",
+    "dc2d95c0-e4f4-4323-a41e-4e72469a03b5",
     "92e808e5-4ccc-4d44-8a92-c9274c658ddc",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
