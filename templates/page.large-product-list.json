@@ -163,12 +163,12 @@
       "settings": {
         "title": "Small sets, even smaller impact",
         "text": "<p>Our smaller sets for designed for big imaginations. Our Mini range is designed for pocket-money pricing, and shares all of the same sustainability benefits as our larger sets.<\/p>",
-        "link_text": "",
-        "link_url": "",
+        "link_text": "Sustainability at Playpress",
+        "link_url": "shopify:\/\/pages\/sustainability",
         "image": "shopify:\/\/shop_images\/mini-set_88b87650-8b7c-469c-bfb6-140070ac0344.jpg",
         "bg_color": "#10c182",
         "text_color": "#ffffff",
-        "show_signpost_link": false,
+        "show_signpost_link": true,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
