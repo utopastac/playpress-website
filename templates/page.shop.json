@@ -179,6 +179,25 @@
         "size": 2
       }
     },
+    "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842": {
+      "type": "split-hero",
+      "settings": {
+        "heading_a": "A world of wonderful wildlife awaits!",
+        "subtitle_a": "Savannah Animals ",
+        "link_text_a": "View",
+        "link_url_a": "shopify:\/\/products\/savannah-animals-playset",
+        "image_a": "shopify:\/\/shop_images\/savannah.jpg",
+        "bg_color_a": "#EBEDFA",
+        "text_color_a": "#0A122A",
+        "heading_b": "Ancient Egypt playset",
+        "subtitle_b": "New set",
+        "link_text_b": "View",
+        "link_url_b": "shopify:\/\/products\/ancient-egypt-playset",
+        "image_b": "shopify:\/\/shop_images\/egypt.jpg",
+        "bg_color_b": "#EBEDFA",
+        "text_color_b": "#0A122A"
+      }
+    },
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8": {
       "type": "gap",
       "settings": {
@@ -206,6 +225,7 @@
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
     "265795d3-24f1-4483-9b2c-442aa5f6ffbc",
+    "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842",
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8",
     "3763d930-8449-428e-8345-451975526916"
   ]
