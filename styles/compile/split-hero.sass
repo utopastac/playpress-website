@@ -3,52 +3,63 @@
 section[is="split-hero"]
   position: relative
 
-  div[is="hero-background"]
-    border-radius: $border-m
-    background: $yolk-1000
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
-    position: absolute
-    top: units(5)
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 0
+  @include min($screen-m)
+    display: flex
+    align-items: stretch
 
-    @include min($screen-s)
-      top: units(10)
-    @include min($screen-l)
-      top: 0
-    @include min($screen-xl)
-      top: units(8)
+  > div a
+    display: block
+    width: 100%
+    height: 100%
 
-  div[is="hero-main"]
-    @extend %main-content
-    position: relative
-    margin: 0 0 units(4) 0
+  div[is="main-promo"], div[is="sub-promo"]
+    height: units(50)
+    border-radius: $border-s
     overflow: hidden
-    border-radius: $border-m
-    transition: scale 0.4s
+    flex: 1
 
-    &.large
+    a
+      > div
+        display: flex
+        align-items: stretch
+        flex-direction: column
+        width: 100%
+        height: 100%
+
+    @include min($screen-m)
+      height: units(60)
+
+  div[is="main-promo"]
+    margin-bottom: units(3)
+
+    @include min($screen-m)
+      margin-bottom: 0
+      margin-right: units(3)
+
+      div[is="split-hero-content"]
+        margin-left: -$border-s
+        margin-top: 0
+        max-width: units(45)
+
+      a
+        > div
+          flex-direction: row
+
+  div[is="sub-promo"]
+    @include min($screen-m)
+      max-width: units(45)
+
+    div[is="split-hero-content"]
+
       h1
-        @extend %heading-1
+        @extend %heading-3
 
-    &:hover
-      scale: 1.02
-
-      div[is="hero-content"]
-        scale: 1.05
-        drop-shadow: $elevation-1
-
-      img
-        scale: 1.02
-
-    img
-      position: relative
-      transition: scale 0.7s
-      border-radius: $border-m
+  div[is="split-hero-content"]
+    padding: $space-s
+    border-radius: $border-s
+    margin-top: -$border-s
+    position: relative
+    z-index: 1000
 
     h1
       @extend %heading-2
@@ -56,59 +67,11 @@ section[is="split-hero"]
     h4
       @extend %overline
 
-    p
-      @extend %body-1
-      margin-bottom: units(4)
+    > div:first-child
+      margin-bottom: $space-xs
 
-    div[is="button"]
-      margin-top: units(3)
-
-    @include min($screen-l)
-      border-radius: $border-m
-      display: grid
-      grid-template-columns: 1fr 1fr
-      align-items: center
-      justify-content: center
-      grid-auto-flow: column
-
-      img
-        grid-column: 2
-    
-    @include min($screen-xl)
-      grid-template-columns: 1fr 1.5fr
-
-  div[is="hero-content"]
-    align-self: flex-end
-    position: relative
-    padding: units(3) 
-    transition: all 0.8s
-    background: $white
-    border-radius: $border-s
-    margin: units(3) units(3) units(3) units(3)
-
-    &.dark
-      background: none
-      padding: 0
-
-      @include min($screen-l)
-        padding: units(1) units(2)
-
-      div[is="button"]
-        background: $white
-        color: $grey-1000
-
-        &:after
-          background: $grey-1000
-
-      h1, h4, p
-        color: $white
-
-    @include min($screen-m)
-      display: flex
-
-    @include min($screen-l)
-      display: block
-      padding: units(4)
-      border-radius: $border-m
-      margin: units(5)
+  div[is="split-hero-image"]
+    flex: 1
+    background-size: cover
+    background-position: center center
   

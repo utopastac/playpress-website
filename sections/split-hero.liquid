@@ -4,43 +4,31 @@
 <section is="split-hero">
   <div is="main-promo">
     <a href="{{ section.settings.link_url_a }}">
-      <div>        
-        <img
-          src="{{ section.settings.image_a | img_url: 'master' }}"
-          alt="{{ section.settings.image_a.alt }}"
-          is="in-action"
-          loading="lazy"
-          width="1200"
-          height="800"
-          />
-          <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}">
+      <div>
+        <div is="split-hero-image" style="background-image: url({{ section.settings.image_a | img_url: 'master' }})">
+        </div>
+        <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}">
             <div>
               <h4 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.subtitle_a | escape }}</h4>
               <h1 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.heading_a | escape }}</h1>
             </div>
             <div is="button">{{ section.settings.link_text_a }}</div>
-          </div>
+        </div>
       </div>
     </a>
   </div>
   <div is="sub-promo">
     <a href="{{ section.settings.link_url_b }}">
-      <div>        
-        <img
-          src="{{ section.settings.image_b | img_url: 'master' }}"
-          alt="{{ section.settings.image_b.alt }}"
-          is="in-action"
-          loading="lazy"
-          width="800"
-          height="500"
-          />
-          <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}">
-            <div>
-              <h4 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.subtitle_b | escape }}</h4>
-              <h1 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.heading_b | escape }}</h1>
-            </div>
-            <div is="button">{{ section.settings.link_text_b }}</div>
+      <div>
+        <div is="split-hero-image" style="background-image: url({{ section.settings.image_b | img_url: 'master' }})">
+        </div>
+        <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}">
+          <div>
+            <h4 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.subtitle_b | escape }}</h4>
+            <h1 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.heading_b | escape }}</h1>
           </div>
+          <div is="button">{{ section.settings.link_text_b }}</div>
+        </div>
       </div>
     </a>
   </div>
