@@ -10,6 +10,8 @@
         "link_url": "shopify:\/\/pages\/playpress-minis",
         "image": "shopify:\/\/shop_images\/mini-sets.jpg",
         "bg_color": "#9bedf2",
+        "is_text_color": false,
+        "text_color": "#0A122A",
         "is_large": false,
         "is_dark": false
       }
@@ -171,6 +173,12 @@
         "link_url": ""
       }
     },
+    "265795d3-24f1-4483-9b2c-442aa5f6ffbc": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8": {
       "type": "gap",
       "settings": {
@@ -197,6 +205,7 @@
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
+    "265795d3-24f1-4483-9b2c-442aa5f6ffbc",
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8",
     "3763d930-8449-428e-8345-451975526916"
   ]
