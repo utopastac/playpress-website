@@ -151,6 +151,26 @@
         "product": "ancient-egypt-playset",
         "layout": "left"
       }
+    },
+    "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
+      "type": "gap",
+      "settings": {
+        "size": 3
+      }
+    },
+    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Playpress Minis",
+        "text": "<p>Smaller sets for big imaginations. Our Mini range is designed for pocket-money pricing, and shares all of the same sustainability benefits as our larger sets.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/mini-set_6e4ade39-3298-4db0-b574-5b500ca542b2.jpg",
+        "show_signpost_link": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
     }
   },
   "order": [
@@ -161,6 +181,8 @@
     "20c8b915-a3f3-4c52-a187-9ac91b99cf1b",
     "61c188e3-d846-4f48-b6c9-6dc6485ec953",
     "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74",
-    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e"
+    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e",
+    "89ea955f-faa3-4b8a-ad59-096ce47bb67b",
+    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4"
   ]
 }
