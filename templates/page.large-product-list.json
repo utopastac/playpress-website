@@ -166,6 +166,8 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/mini-set_6e4ade39-3298-4db0-b574-5b500ca542b2.jpg",
+        "bg_color": "#10c182",
+        "text_color": "#fff",
         "show_signpost_link": false,
         "layout": "left",
         "show_colour": false,
