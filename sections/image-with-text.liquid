@@ -1,7 +1,7 @@
 {{ 'image-with-text.css' | asset_url | stylesheet_tag }}
 
-<section is="image-with-text" class="{% if section.settings.show_colour == true %} alternative{% endif %}">
-  <div  class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}">
+<section is="image-with-text" class="{% if section.settings.show_colour == true %} alternative{% endif %}" >
+  <div  class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}" style="background: {{ section.settings.bg_color }}">
     {% if section.settings.image != blank %}
       <img
         src="{{ section.settings.image | img_url: '800x' }}"
@@ -17,10 +17,10 @@
 
     <div>
       {% if section.settings.title != blank %}
-        <h3>{{ section.settings.title | escape }}</h3>
+        <h3 style="background: {{ section.settings.text_color }}">{{ section.settings.title | escape }}</h3>
       {% endif %}
 
-      <p>{{ section.settings.text }}</p>
+      <p style="background: {{ section.settings.text_color }}">{{ section.settings.text }}</p>
 
       {% render 'signpost', section: section %}
     </div>
@@ -57,6 +57,18 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#EBEDFA"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#0A122A"
     },
     {
       "type": "checkbox",
