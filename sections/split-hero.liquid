@@ -5,8 +5,6 @@
   <div is="main-promo">
     <a href="{{ section.settings.link_url_a }}">
       <div>
-        <div is="split-hero-image" style="background-image: url({{ section.settings.image_a | img_url: 'master' }})">
-        </div>
         <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}">
             <div>
               <h4 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.subtitle_a | escape }}</h4>
@@ -15,6 +13,7 @@
             <div is="button">{{ section.settings.link_text_a }}</div>
         </div>
       </div>
+      <div is="split-hero-image" style="background-image: url({{ section.settings.image_a | img_url: 'master' }})"></div>
     </a>
   </div>
   <div is="sub-promo">
