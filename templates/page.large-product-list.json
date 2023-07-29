@@ -169,6 +169,7 @@
         "bg_color": "#10c182",
         "text_color": "#ffffff",
         "show_signpost_link": true,
+        "use_button": true,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
