@@ -13,7 +13,7 @@
     "9fb32536-3c70-4a94-84db-a717079ad057": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
       }
     },
     "d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e": {
@@ -22,7 +22,8 @@
         "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-0": {
           "type": "prominent_feature",
           "settings": {
-            "enable_image": false,
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/contact-place.png",
             "link_text": "Come visit",
             "link_url": "https:\/\/goo.gl\/maps\/ULwqC4KRPB12vddb8",
             "title": "Visit us",
@@ -33,7 +34,8 @@
         "template--15744750256320__d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e-1669741650e0f8012e-1": {
           "type": "prominent_feature",
           "settings": {
-            "enable_image": false,
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/contact-business.png",
             "link_text": "Get in touch",
             "link_url": "mailto:team@playpresstoys.com",
             "title": "Business enquiries",
@@ -44,7 +46,8 @@
         "8544452b-8b5c-42a5-a57f-04593e9b604f": {
           "type": "prominent_feature",
           "settings": {
-            "enable_image": false,
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/contact-feedback.png",
             "link_text": "Contact us",
             "link_url": "mailto:team@playpresstoys.com",
             "title": "Customer service",
