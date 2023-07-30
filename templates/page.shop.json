@@ -11,7 +11,7 @@
         "image": "shopify:\/\/shop_images\/mini-sets.jpg",
         "bg_color": "#9bedf2",
         "is_text_color": false,
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "is_large": false,
         "is_dark": false
       }
@@ -182,20 +182,20 @@
     "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842": {
       "type": "split-hero",
       "settings": {
-        "heading_a": "A world of wonderful wildlife awaits!",
-        "subtitle_a": "Savannah Animals ",
+        "heading_a": "Take a trip to see these magnificent birds!",
+        "subtitle_a": "RSPB collection",
         "link_text_a": "View",
-        "link_url_a": "shopify:\/\/products\/savannah-animals-playset",
-        "image_a": "shopify:\/\/shop_images\/savannah.jpg",
-        "bg_color_a": "#f6d18a",
-        "text_color_a": "#0A122A",
+        "link_url_a": "shopify:\/\/collections\/charity-sets",
+        "image_a": "shopify:\/\/shop_images\/RSPB-2.jpg",
+        "bg_color_a": "#296b4f",
+        "text_color_a": "#ffffff",
         "heading_b": "Award-winning RNLI Inshore Lifeboat Playset",
         "subtitle_b": "RNLI",
         "link_text_b": "View",
         "link_url_b": "shopify:\/\/products\/rnli-lifeboat-eco-friendly-playset",
         "image_b": "shopify:\/\/shop_images\/rnli.jpg",
         "bg_color_b": "#8cddf8",
-        "text_color_b": "#0A122A"
+        "text_color_b": "#0a122a"
       }
     },
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8": {
