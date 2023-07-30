@@ -139,7 +139,7 @@ section[is=split-hero] div[is=main-promo] a > div {
   section[is=split-hero] div[is=main-promo] div[is=split-hero-content] {
     margin-right: -1.6rem;
     margin-top: 0;
-    max-width: 36rem;
+    max-width: 28rem;
   }
   section[is=split-hero] div[is=main-promo] a > div {
     flex-direction: row;
