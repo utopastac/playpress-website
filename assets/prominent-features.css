@@ -3,26 +3,26 @@ div[is=prominent-features] > div {
   margin: 0 auto;
 }
 
-article[is=prominent-feature] div h4, article[is=prominent-feature] div h3 {
+article[is=prominent-feature] div h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-a[is=outline-button], article[is=prominent-feature] div p {
+a[is=outline-button], article[is=prominent-feature] div p, article[is=prominent-feature] div h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], article[is=prominent-feature] div p {
+a[is=outline-button], article[is=prominent-feature] div p, article[is=prominent-feature] div h4 {
   font-weight: 400;
+}
+
+article[is=prominent-feature] div h4 {
+  font-weight: 500;
 }
 
 a[is=outline-button] {
   font-weight: 700;
-}
-
-article[is=prominent-feature] div h4 {
-  font-weight: 900;
 }
 
 article[is=prominent-feature] div h3 {
@@ -39,16 +39,15 @@ article[is=prominent-feature] div h3 {
 }
 
 article[is=prominent-feature] div h4 {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   article[is=prominent-feature] div h4 {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
+    font-size: 2.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 }
 
@@ -102,9 +101,10 @@ article[is=prominent-feature] img {
   border-radius: 3.2rem;
   margin-bottom: 1.6rem;
 }
-article[is=prominent-feature] div h3 {
-  margin-bottom: 0.8rem;
+article[is=prominent-feature] div p {
+  margin-top: 0.8rem;
 }
+
 div[is=prominent-features] > div {
   grid-gap: 4rem;
   display: grid;
