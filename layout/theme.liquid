@@ -96,7 +96,13 @@
       {%- assign og_url = shop.url -%}
     {% endif %}
 
-    <title>{{ seo_title | strip }}</title>
+    
+
+  <!-- Air Reviews Script -->
+ {% include 'air-reviews-setting' %}
+  <!-- /Air Reviews Script -->
+
+<title>{{ seo_title | strip }}</title>
 
     {%- if page_description -%}
     <meta name="description" content="{{ page_description | escape }}" />
