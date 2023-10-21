@@ -1,12 +1,14 @@
 @import '../assets'
 
 .collection-promo
-  display: block
+  flex: 1
+  min-width: 0
   text-align: center
   background: $blue-100
   border-radius: $border-s
   height: 100%
   transition: scale 0.5s
+  
 
   &:hover
     scale: 1.05
@@ -18,7 +20,8 @@
     padding: units(2.5)
 
   h3
-    @extend %overline
+    @extend %body-3
+    @extend %medium
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
@@ -31,4 +34,4 @@
     > div
       display: flex
       align-items: center
-      justify-content: space-between
+      justify-content: center

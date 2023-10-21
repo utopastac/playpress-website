@@ -46,19 +46,19 @@ a[is=outline-button]:hover {
 }
 
 .collections ul {
-  display: grid;
-  grid-gap: 1.6rem;
-}
-@media screen and (min-width: 550px) {
-  .collections ul {
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  }
-}
-@media screen and (min-width: 740px) {
-  .collections ul {
-    grid-gap: 2.4rem;
-  }
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
 }
 .collections ul li {
   list-style: none;
+  width: 16rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }

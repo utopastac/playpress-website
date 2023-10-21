@@ -3,15 +3,26 @@
 .collections
 
   ul
-    display: grid
-    grid-gap: units(2)
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: center
+    flex-wrap: wrap
+    column-gap: units(2)
+    row-gap: units(2)
+    // grid-gap: units(2)
     @extend %main-content
 
     @include min($screen-s)
-      grid-template-columns: repeat( auto-fit, minmax(size(240), 1fr) )
+      // grid-template-columns: repeat( auto-fit, minmax(size(100), 1fr) )
 
     @include min($screen-m)
-      grid-gap: units(3)
+      // grid-gap: units(3)
     
     li
-      list-style: none  
+      list-style: none
+      width: units(20)
+      display: flex
+      align-content: center
+      align-items: center
+      justify-content: center
