@@ -18,7 +18,10 @@
         "link_text": "Get a catalogue",
         "link_url": "mailto:team@playpresstoys.com",
         "image": "shopify:\/\/shop_images\/stocking-main.jpg",
+        "bg_color": "#EBEDFA",
+        "text_color": "#0A122A",
         "show_signpost_link": true,
+        "use_button": false,
         "layout": "right",
         "show_colour": false,
         "last_on_page": false
@@ -117,7 +120,7 @@
             "image": "shopify:\/\/shop_images\/stock-us-eco-friendly.jpg",
             "link_url": "",
             "title": "Eco-friendly",
-            "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC certified.<\/p>"
+            "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC® certified (FSC®-C004309).<\/p>"
           }
         },
         "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-3": {
@@ -153,7 +156,10 @@
         "link_text": "Email us",
         "link_url": "mailto:team@playpresstoys.com",
         "image": "shopify:\/\/shop_images\/stocking-contact.jpg",
+        "bg_color": "#EBEDFA",
+        "text_color": "#0A122A",
         "show_signpost_link": true,
+        "use_button": false,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
