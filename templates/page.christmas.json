@@ -150,12 +150,19 @@
           "settings": {
             "product": "shaun-the-sheep-eco-friendly-playset"
           }
+        },
+        "f54a203e-a195-4838-bf8c-abd86916d6e1": {
+          "type": "product",
+          "settings": {
+            "product": "dinosaur-roar-pop-out-eco-friendly-playset"
+          }
         }
       },
       "block_order": [
         "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-1",
         "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-2",
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3"
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3",
+        "f54a203e-a195-4838-bf8c-abd86916d6e1"
       ],
       "settings": {
         "title": "",
