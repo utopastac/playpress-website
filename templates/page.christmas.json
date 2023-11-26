@@ -68,12 +68,19 @@
           "settings": {
             "product": "rspb-woodland-birds-playset"
           }
+        },
+        "83131f91-47bb-45be-9e02-655e8ee0b867": {
+          "type": "product",
+          "settings": {
+            "product": "mini-vets-play-set"
+          }
         }
       },
       "block_order": [
         "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-1",
         "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-2",
-        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-3"
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-3",
+        "83131f91-47bb-45be-9e02-655e8ee0b867"
       ],
       "settings": {
         "title": "Under £10",
