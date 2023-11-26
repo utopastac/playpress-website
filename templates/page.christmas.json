@@ -3,11 +3,87 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "Playpress Minis",
-        "text": "Out mini set range is designed to be interconnectable, collectable, and amazing fun for kids.",
+        "heading": "A Playpress Christmas",
+        "text": "Step into a winter wonderland of joy! Explore our curated collection of festive treasures for any budget and discover the perfect gifts that will make spirits bright.",
         "link_text": "",
         "link_url": "",
+        "image": "shopify:\/\/shop_images\/christmas.png",
         "show_delivery_info": false
+      }
+    },
+    "b5d902f0-6059-468a-95fd-8e71cf9c61dd": {
+      "type": "product-promo-large",
+      "blocks": {
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-1": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        },
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-2": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        },
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-3": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-1",
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-2",
+        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-3"
+      ],
+      "settings": {
+        "title": "Add a title",
+        "text": "",
+        "product": "santas-midnight-sleigh-ride-playset",
+        "layout": "left"
+      }
+    },
+    "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78": {
+      "type": "product-promos-individual",
+      "blocks": {
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-1": {
+          "type": "product",
+          "settings": {
+            "product": "farmyard-eco-friendly-toy-playset"
+          }
+        },
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-2": {
+          "type": "product",
+          "settings": {
+            "product": "rnli-lifeboat-eco-friendly-playset"
+          }
+        },
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-3": {
+          "type": "product",
+          "settings": {
+            "product": "rspb-woodland-birds-playset"
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-1",
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-2",
+        "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-3"
+      ],
+      "settings": {
+        "title": "",
+        "text": ""
+      }
+    },
+    "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3": {
+      "type": "gap",
+      "settings": {
+        "size": 2
       }
     },
     "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
@@ -37,7 +113,7 @@
       "settings": {
         "title": "Product Promo",
         "text": "The playset includes everything your child needs to build their own mini vets surgery with a variety of animals and medical equipment.",
-        "product": "mini-vets-play-set",
+        "product": "the-gruffalo-pop-out-playset",
         "layout": "left"
       }
     },
@@ -111,7 +187,7 @@
       "settings": {
         "title": "Product Promo",
         "text": "The playset includes everything your child needs to build their own mini museum with exhibits from around the world, including ancient artefacts, cultural treasures, and natural wonders.",
-        "product": "mini-musuem-play-set",
+        "product": "tower-bridge",
         "layout": "left"
       }
     },
@@ -157,27 +233,14 @@
       "settings": {
         "size": 3
       }
-    },
-    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4": {
-      "type": "image-with-text",
-      "settings": {
-        "title": "Small sets, even smaller impact",
-        "text": "<p>Our smaller sets for designed for big imaginations. Our Mini range is designed for pocket-money pricing, and shares all of the same sustainability benefits as our larger sets.<\/p>",
-        "link_text": "Sustainability at Playpress",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/mini-set_88b87650-8b7c-469c-bfb6-140070ac0344.jpg",
-        "bg_color": "#10c182",
-        "text_color": "#ffffff",
-        "show_signpost_link": true,
-        "use_button": true,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
-      }
     }
   },
   "order": [
     "intro",
+    "b5d902f0-6059-468a-95fd-8e71cf9c61dd",
+    "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
+    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
+    "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
     "b2ea100a-0977-4755-80c8-4d3b83b27afd",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
     "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
@@ -185,7 +248,6 @@
     "61c188e3-d846-4f48-b6c9-6dc6485ec953",
     "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74",
     "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e",
-    "89ea955f-faa3-4b8a-ad59-096ce47bb67b",
-    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4"
+    "89ea955f-faa3-4b8a-ad59-096ce47bb67b"
   ]
 }
