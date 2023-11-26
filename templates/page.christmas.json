@@ -117,6 +117,44 @@
         "layout": "left"
       }
     },
+    "5453eac9-8273-4dd8-8bf0-1aeac1478eeb": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "6fc1fa54-cda6-42e7-b6e6-480c40c4162f": {
+      "type": "product-promos-individual",
+      "blocks": {
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-1": {
+          "type": "product",
+          "settings": {
+            "product": "room-on-the-broom-pop-out-playset"
+          }
+        },
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-2": {
+          "type": "product",
+          "settings": {
+            "product": "zog-pop-out-eco-friendly-playset"
+          }
+        },
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3": {
+          "type": "product",
+          "settings": {
+            "product": "shaun-the-sheep-eco-friendly-playset"
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-1",
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-2",
+        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3"
+      ],
+      "settings": {
+        "title": "",
+        "text": ""
+      }
+    },
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
       "type": "gap",
       "settings": {
@@ -242,6 +280,8 @@
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
     "b2ea100a-0977-4755-80c8-4d3b83b27afd",
+    "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
+    "6fc1fa54-cda6-42e7-b6e6-480c40c4162f",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
     "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
     "20c8b915-a3f3-4c52-a187-9ac91b99cf1b",
