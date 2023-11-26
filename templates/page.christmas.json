@@ -37,7 +37,7 @@
       ],
       "settings": {
         "title": "Add a title",
-        "text": "",
+        "text": "Join Santa and friends for a magical sleigh ride. Build and play with this 42 pop-out piece playset which is made from sturdy and sustainable Playboard.",
         "product": "santas-midnight-sleigh-ride-playset",
         "layout": "left"
       }
@@ -175,43 +175,6 @@
         "size": 3
       }
     },
-    "e9bbee40-d7c2-473b-8d33-c1a15608c11b": {
-      "type": "product-promo-large",
-      "blocks": {
-        "ec7a11f3-6270-4c27-a25a-50746b8748ae": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "015cfadc-a602-4886-959a-eabc2611390c": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "ec7a11f3-6270-4c27-a25a-50746b8748ae",
-        "015cfadc-a602-4886-959a-eabc2611390c",
-        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65"
-      ],
-      "settings": {
-        "title": "Product Promo",
-        "text": "The play set includes everything your child needs to build their own mini Cafe with a variety of accessories, such as miniature food items, a coffee machine, and cash.",
-        "product": "mini-refill-cafe",
-        "layout": "left"
-      }
-    },
-    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b": {
-      "type": "gap",
-      "settings": {
-        "size": 3
-      }
-    },
     "61c188e3-d846-4f48-b6c9-6dc6485ec953": {
       "type": "product-promo-large",
       "blocks": {
@@ -243,43 +206,6 @@
         "layout": "left"
       }
     },
-    "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74": {
-      "type": "gap",
-      "settings": {
-        "size": 3
-      }
-    },
-    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e": {
-      "type": "product-promo-large",
-      "blocks": {
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-1": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-2": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-3": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-1",
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-2",
-        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-3"
-      ],
-      "settings": {
-        "title": "Add a title",
-        "text": "Bring the world of Ancient Egypt to life with this playset. Inside you’ll find two archaeologists, tools, a sarcophagus and artefacts including poetry and a mummy.",
-        "product": "ancient-egypt-playset",
-        "layout": "left"
-      }
-    },
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
       "type": "gap",
       "settings": {
@@ -297,11 +223,7 @@
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
     "6fc1fa54-cda6-42e7-b6e6-480c40c4162f",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
-    "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
-    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b",
     "61c188e3-d846-4f48-b6c9-6dc6485ec953",
-    "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74",
-    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e",
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b"
   ]
 }
