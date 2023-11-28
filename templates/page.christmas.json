@@ -40,14 +40,16 @@
         "subtitle_a": "Add a subtitle",
         "link_text_a": "",
         "link_url_a": "",
-        "bg_color_a": "#EBEDFA",
-        "text_color_a": "#0A122A",
+        "image_a": "shopify:\/\/shop_images\/gruffalo-christmas_f9587f91-4137-4b34-a81d-14b9f491b9f9.jpg",
+        "bg_color_a": "#318696",
+        "text_color_a": "#ffffff",
         "heading_b": "Add a title",
         "subtitle_b": "Add a subtitle",
         "link_text_b": "",
         "link_url_b": "",
-        "bg_color_b": "#EBEDFA",
-        "text_color_b": "#0A122A"
+        "image_b": "shopify:\/\/shop_images\/boat-chrtismas_753d4d18-e07a-4a78-8dd1-8445c80468be.jpg",
+        "bg_color_b": "#318696",
+        "text_color_b": "#0a122a"
       }
     },
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78": {
