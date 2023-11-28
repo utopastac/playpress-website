@@ -11,35 +11,13 @@
         "show_delivery_info": false
       }
     },
-    "b5d902f0-6059-468a-95fd-8e71cf9c61dd": {
-      "type": "product-promo-large",
-      "blocks": {
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-1": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-2": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-3": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-1",
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-2",
-        "template--16135600701632__b5d902f0-6059-468a-95fd-8e71cf9c61dd-gallery_image-3"
-      ],
+    "8aecb327-ef43-460c-a9d9-477233a6cc5e": {
+      "type": "big-banner",
       "settings": {
-        "title": "Add a title",
-        "text": "Join Santa and friends for a magical sleigh ride. Build and play with this 42 pop-out piece playset which is made from sturdy and sustainable Playboard.",
-        "product": "santas-midnight-sleigh-ride-playset",
-        "layout": "left"
+        "heading": "Santa's Midnight Sleigh Ride",
+        "text": "Join Santa and friends for a magical sleigh ride!",
+        "link_text": "Shop",
+        "link_url": "shopify:\/\/products\/santas-midnight-sleigh-ride-playset"
       }
     },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
@@ -83,7 +61,7 @@
         "83131f91-47bb-45be-9e02-655e8ee0b867"
       ],
       "settings": {
-        "title": "Under £10",
+        "title": "Perfect stocking fillers",
         "text": ""
       }
     },
@@ -91,37 +69,6 @@
       "type": "gap",
       "settings": {
         "size": 2
-      }
-    },
-    "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
-      "type": "product-promo-large",
-      "blocks": {
-        "1db4e450-515c-4030-b14f-c056305e7034": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "dcbfdb26-6272-4553-959d-e70c86d0c8b4": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "1db4e450-515c-4030-b14f-c056305e7034",
-        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead",
-        "dcbfdb26-6272-4553-959d-e70c86d0c8b4"
-      ],
-      "settings": {
-        "title": "Product Promo",
-        "text": "The playset includes everything your child needs to build their own mini vets surgery with a variety of animals and medical equipment.",
-        "product": "the-gruffalo-pop-out-playset",
-        "layout": "left"
       }
     },
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb": {
@@ -175,37 +122,6 @@
         "size": 3
       }
     },
-    "61c188e3-d846-4f48-b6c9-6dc6485ec953": {
-      "type": "product-promo-large",
-      "blocks": {
-        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "3845e81f-7814-44bb-92f6-19ae3488f197": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        },
-        "959388b3-b98d-41da-9d87-e20baf539bb1": {
-          "type": "gallery_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d",
-        "3845e81f-7814-44bb-92f6-19ae3488f197",
-        "959388b3-b98d-41da-9d87-e20baf539bb1"
-      ],
-      "settings": {
-        "title": "Product Promo",
-        "text": "The playset includes everything your child needs to build their own mini museum with exhibits from around the world, including ancient artefacts, cultural treasures, and natural wonders.",
-        "product": "tower-bridge",
-        "layout": "left"
-      }
-    },
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
       "type": "gap",
       "settings": {
@@ -215,15 +131,13 @@
   },
   "order": [
     "intro",
-    "b5d902f0-6059-468a-95fd-8e71cf9c61dd",
+    "8aecb327-ef43-460c-a9d9-477233a6cc5e",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
-    "b2ea100a-0977-4755-80c8-4d3b83b27afd",
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
     "6fc1fa54-cda6-42e7-b6e6-480c40c4162f",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
-    "61c188e3-d846-4f48-b6c9-6dc6485ec953",
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b"
   ]
 }
