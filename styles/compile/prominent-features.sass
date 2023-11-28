@@ -3,6 +3,17 @@
 article[is="prominent-feature"]
   background: $white
 
+  a.bigLink
+    cursor: pointer
+
+    img
+      @include animate(0.3s)
+
+    &:hover
+      img
+        transform: scale(1.04)
+
+
   img
     width: 100%
     border-radius: $border-m
