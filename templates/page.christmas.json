@@ -40,6 +40,7 @@
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/mini-christmas.jpg",
             "link_text": "Shop",
             "link_url": "shopify:\/\/pages\/playpress-minis",
             "title": "",
@@ -51,6 +52,7 @@
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/boat-chrtismas_6eb607c6-93c9-42c3-9631-1dcfbf725cb6.jpg",
             "link_text": "Shop",
             "link_url": "shopify:\/\/collections\/charity-sets",
             "title": "",
@@ -97,25 +99,25 @@
         "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-1": {
           "type": "product",
           "settings": {
-            "product": "mini-musuem-play-set"
+            "product": "farmyard-eco-friendly-toy-playset"
           }
         },
         "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-2": {
           "type": "product",
           "settings": {
-            "product": "rnli-lifeboat-eco-friendly-playset"
+            "product": "space-ranger-eco-friendly-playset"
           }
         },
         "template--16135600701632__a7f0879b-05e0-4a0a-b970-8cddcb3bff78-product-3": {
           "type": "product",
           "settings": {
-            "product": "rspb-woodland-birds-playset"
+            "product": "tower-bridge"
           }
         },
         "83131f91-47bb-45be-9e02-655e8ee0b867": {
           "type": "product",
           "settings": {
-            "product": "mini-vets-play-set"
+            "product": "knights-castle-eco-friendly-playset"
           }
         }
       },
