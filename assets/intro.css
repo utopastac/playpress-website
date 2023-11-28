@@ -77,6 +77,7 @@ a[is=outline-button]:hover {
 }
 
 section[is=intro] {
+  position: relative;
   padding: 3.2rem 0;
 }
 section[is=intro] img {

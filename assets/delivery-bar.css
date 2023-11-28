@@ -78,6 +78,8 @@ a[is=delivery-bar].christmas:after {
   height: 80px;
   left: 0;
   background: url("pattern-bg-2.jpg");
+  pointer-events: none;
+  z-index: 0;
   position: absolute;
   width: 100%;
   top: 4.8rem;
