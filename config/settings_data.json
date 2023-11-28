@@ -242,18 +242,18 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "Room on the Broom available now!",
-          "subtitle": "✨ New set ✨",
+          "heading": "Perfect gifts for Christmas!",
+          "subtitle": "🎄 Christmas 🎄",
           "text": "",
-          "link_text": "See the set",
+          "link_text": "Shop",
           "link_url": "shopify:\/\/products\/room-on-the-broom-pop-out-playset",
           "image": "shopify:\/\/shop_images\/rotb_df588dd9-21c2-414a-89d1-57d90ea618bc.png",
           "bg_color": "#2b68a0",
-          "is_text_color": false,
-          "text_color": "#0a122a",
+          "is_text_color": true,
+          "text_color": "#0a202a",
           "is_large": true,
           "is_dark": true,
-          "background_image": "shopify:\/\/shop_images\/rotb-bg_0636ea7f-dc0c-438d-b810-fb6dd9c2ffab.jpg"
+          "background_image": "shopify:\/\/shop_images\/snow-field.jpg"
         }
       },
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
