@@ -4,10 +4,9 @@
       "type": "intro",
       "settings": {
         "heading": "A Playpress Christmas",
-        "text": "Step into a winter wonderland of joy! Explore our curated collection of festive treasures for any budget and discover the perfect gifts that will make spirits bright.",
+        "text": "Explore our curated collection of festive treasures and discover the perfect gifts that will make spirits bright!",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/christmas.png",
         "show_delivery_info": false
       }
     },
@@ -26,6 +25,47 @@
         "is_large": false,
         "is_dark": true,
         "background_image": "shopify:\/\/shop_images\/snow-field.jpg"
+      }
+    },
+    "87a1378a-cbcf-4596-9285-14036c9d857e": {
+      "type": "prominent-features",
+      "blocks": {
+        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/snow-field.jpg",
+            "link_text": "Collaborations",
+            "link_url": "shopify:\/\/collections\/collaborations",
+            "title": "",
+            "subtitle": "Collaborations",
+            "text": "<p>Playsets featuring your favourite characters from beloved children stories.<\/p>"
+          }
+        },
+        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-2": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/snow-bg.jpg",
+            "link_text": "",
+            "link_url": "",
+            "title": "Add a title",
+            "subtitle": "Add a subtitle",
+            "text": "<p>Add descriptve text<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-1",
+        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-2"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "grid": 2,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
       }
     },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
@@ -140,6 +180,7 @@
   "order": [
     "intro",
     "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780",
+    "87a1378a-cbcf-4596-9285-14036c9d857e",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
