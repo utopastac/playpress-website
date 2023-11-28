@@ -71,6 +71,16 @@ a[is=delivery-bar] {
   height: 4.8rem;
   border-bottom: 1px solid #E7E9EF;
   padding: 0 1.6rem;
+  position: relative;
+}
+a[is=delivery-bar].christmas:after {
+  content: "";
+  height: 80px;
+  left: 0;
+  background: url("pattern-bg.jpg");
+  position: absolute;
+  width: 100%;
+  top: 4.8rem;
 }
 @media screen and (max-width: 1080px) {
   a[is=delivery-bar] .not-mobile {

@@ -17,6 +17,9 @@
     <div class="{{ grid_row }}">
       {% for block in section.blocks %}
         <article is="prominent-feature">
+          {% if block.settings.link_text != blank %}
+            <a href="{{ block.settings.link_url }}">
+          {% endif %}
           {% if block.settings.enable_image %}
             {% if block.settings.image != blank %}
                 <img
@@ -45,6 +48,9 @@
               <a href="{{ block.settings.link_url }}" is="text-button">{{ block.settings.link_text }}</a>
             {% endif %}
           </div>
+          {% if block.settings.link_text != blank %}
+            </a>
+          {% endif %}
         </article>
       {% endfor %}
       {% if section.blocks.size == 0 %}

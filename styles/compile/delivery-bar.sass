@@ -5,6 +5,16 @@ a[is="delivery-bar"]
   height: units(6)
   border-bottom: 1px solid $grey-200
   padding: 0 units(2)
+  position: relative
+
+  &.christmas:after
+    content: ""
+    height: 80px
+    left: 0
+    background: url('pattern-bg.jpg')
+    position: absolute
+    width: 100%
+    top: units(6)
 
   @include max($screen-l)
     .not-mobile

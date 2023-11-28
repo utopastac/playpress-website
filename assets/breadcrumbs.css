@@ -59,6 +59,7 @@ ul[is=breadcrumbs] {
   height: 6.4rem;
   background: #202862;
   color: white;
+  position: relative;
   overflow: hidden;
 }
 ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
