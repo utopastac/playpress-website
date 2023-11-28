@@ -19,7 +19,7 @@
         "link_text": "Shop",
         "link_url": "shopify:\/\/products\/santas-midnight-sleigh-ride-playset",
         "image": "shopify:\/\/shop_images\/santa2_9ed035b3-b119-4cfa-a4d9-3a4a7b2885ea.png",
-        "bg_color": "#EBEDFA",
+        "bg_color": "#ebedfa",
         "is_text_color": true,
         "text_color": "#00454d",
         "is_large": false,
@@ -27,51 +27,27 @@
         "background_image": "shopify:\/\/shop_images\/snow-field.jpg"
       }
     },
-    "87a1378a-cbcf-4596-9285-14036c9d857e": {
-      "type": "prominent-features",
-      "blocks": {
-        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-1": {
-          "type": "prominent_feature",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify:\/\/shop_images\/snow-field.jpg",
-            "link_text": "Collaborations",
-            "link_url": "shopify:\/\/collections\/collaborations",
-            "title": "",
-            "subtitle": "Collaborations",
-            "text": "<p>Playsets featuring your favourite characters from beloved children stories.<\/p>"
-          }
-        },
-        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-2": {
-          "type": "prominent_feature",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify:\/\/shop_images\/snow-bg.jpg",
-            "link_text": "",
-            "link_url": "",
-            "title": "Add a title",
-            "subtitle": "Add a subtitle",
-            "text": "<p>Add descriptve text<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-1",
-        "template--16135600701632__87a1378a-cbcf-4596-9285-14036c9d857e-prominent_feature-2"
-      ],
-      "settings": {
-        "title": "",
-        "text": "",
-        "grid": 2,
-        "show_signpost_link": false,
-        "link_text": "View more",
-        "link_url": ""
-      }
-    },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
       "type": "gap",
       "settings": {
         "size": 2
+      }
+    },
+    "ba248956-d3c1-48e1-be05-fc57cf6fcaaf": {
+      "type": "split-hero",
+      "settings": {
+        "heading_a": "Add a title",
+        "subtitle_a": "Add a subtitle",
+        "link_text_a": "",
+        "link_url_a": "",
+        "bg_color_a": "#EBEDFA",
+        "text_color_a": "#0A122A",
+        "heading_b": "Add a title",
+        "subtitle_b": "Add a subtitle",
+        "link_text_b": "",
+        "link_url_b": "",
+        "bg_color_b": "#EBEDFA",
+        "text_color_b": "#0A122A"
       }
     },
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78": {
@@ -180,8 +156,8 @@
   "order": [
     "intro",
     "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780",
-    "87a1378a-cbcf-4596-9285-14036c9d857e",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
+    "ba248956-d3c1-48e1-be05-fc57cf6fcaaf",
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
