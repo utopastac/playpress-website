@@ -30,26 +30,65 @@
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
       }
     },
-    "ba248956-d3c1-48e1-be05-fc57cf6fcaaf": {
-      "type": "split-hero",
+    "1f4f2a30-863f-4a71-b742-2ca54d7962fe": {
+      "type": "prominent-features",
+      "blocks": {
+        "template--16135600701632__1f4f2a30-863f-4a71-b742-2ca54d7962fe-prominent_feature-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Shop",
+            "link_url": "shopify:\/\/pages\/playpress-minis",
+            "title": "",
+            "subtitle": "Mini sets",
+            "text": "<p>Perfect stocking fillers, and great fun for hours.<\/p>"
+          }
+        },
+        "template--16135600701632__1f4f2a30-863f-4a71-b742-2ca54d7962fe-prominent_feature-2": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "link_text": "Shop",
+            "link_url": "shopify:\/\/collections\/charity-sets",
+            "title": "",
+            "subtitle": "Charity sets",
+            "text": "<p>Spread Christmas cheer with a donation for each set bought.<\/p>"
+          }
+        },
+        "9faa344a-e65a-4360-8033-c04743fec7ea": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/gruffalo-christmas_f9587f91-4137-4b34-a81d-14b9f491b9f9.jpg",
+            "link_text": "Shop",
+            "link_url": "shopify:\/\/collections\/collaborations",
+            "title": "",
+            "subtitle": "Collaborations",
+            "text": "<p>Playsets featuring your favourite characters from beloved children stories.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__1f4f2a30-863f-4a71-b742-2ca54d7962fe-prominent_feature-1",
+        "template--16135600701632__1f4f2a30-863f-4a71-b742-2ca54d7962fe-prominent_feature-2",
+        "9faa344a-e65a-4360-8033-c04743fec7ea"
+      ],
       "settings": {
-        "heading_a": "Add a title",
-        "subtitle_a": "Add a subtitle",
-        "link_text_a": "",
-        "link_url_a": "",
-        "image_a": "shopify:\/\/shop_images\/gruffalo-christmas_f9587f91-4137-4b34-a81d-14b9f491b9f9.jpg",
-        "bg_color_a": "#318696",
-        "text_color_a": "#ffffff",
-        "heading_b": "Add a title",
-        "subtitle_b": "Add a subtitle",
-        "link_text_b": "",
-        "link_url_b": "",
-        "image_b": "shopify:\/\/shop_images\/boat-chrtismas_753d4d18-e07a-4a78-8dd1-8445c80468be.jpg",
-        "bg_color_b": "#318696",
-        "text_color_b": "#0a122a"
+        "title": "",
+        "text": "",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
+    },
+    "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3": {
+      "type": "gap",
+      "settings": {
+        "size": 2
       }
     },
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78": {
@@ -87,59 +126,14 @@
         "83131f91-47bb-45be-9e02-655e8ee0b867"
       ],
       "settings": {
-        "title": "Perfect stocking fillers",
+        "title": "More great gifts",
         "text": ""
-      }
-    },
-    "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3": {
-      "type": "gap",
-      "settings": {
-        "size": 2
       }
     },
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb": {
       "type": "gap",
       "settings": {
         "size": 2
-      }
-    },
-    "6fc1fa54-cda6-42e7-b6e6-480c40c4162f": {
-      "type": "product-promos-individual",
-      "blocks": {
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-1": {
-          "type": "product",
-          "settings": {
-            "product": "room-on-the-broom-pop-out-playset"
-          }
-        },
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-2": {
-          "type": "product",
-          "settings": {
-            "product": "zog-pop-out-eco-friendly-playset"
-          }
-        },
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3": {
-          "type": "product",
-          "settings": {
-            "product": "shaun-the-sheep-eco-friendly-playset"
-          }
-        },
-        "f54a203e-a195-4838-bf8c-abd86916d6e1": {
-          "type": "product",
-          "settings": {
-            "product": "dinosaur-roar-pop-out-eco-friendly-playset"
-          }
-        }
-      },
-      "block_order": [
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-1",
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-2",
-        "template--16135600701632__6fc1fa54-cda6-42e7-b6e6-480c40c4162f-product-3",
-        "f54a203e-a195-4838-bf8c-abd86916d6e1"
-      ],
-      "settings": {
-        "title": "",
-        "text": ""
       }
     },
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
@@ -159,11 +153,10 @@
     "intro",
     "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
-    "ba248956-d3c1-48e1-be05-fc57cf6fcaaf",
-    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
+    "1f4f2a30-863f-4a71-b742-2ca54d7962fe",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
+    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
-    "6fc1fa54-cda6-42e7-b6e6-480c40c4162f",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b"
   ]
