@@ -11,13 +11,21 @@
         "show_delivery_info": false
       }
     },
-    "8aecb327-ef43-460c-a9d9-477233a6cc5e": {
-      "type": "big-banner",
+    "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780": {
+      "type": "hero",
       "settings": {
-        "heading": "Santa's Midnight Sleigh Ride",
-        "text": "Join Santa and friends for a magical sleigh ride!",
+        "heading": "Join Santa and friends for a magial sleigh ride!",
+        "subtitle": "Santa's Midnight Sleigh Ride",
+        "text": "",
         "link_text": "Shop",
-        "link_url": "shopify:\/\/products\/santas-midnight-sleigh-ride-playset"
+        "link_url": "shopify:\/\/products\/santas-midnight-sleigh-ride-playset",
+        "image": "shopify:\/\/shop_images\/santa2_9ed035b3-b119-4cfa-a4d9-3a4a7b2885ea.png",
+        "bg_color": "#EBEDFA",
+        "is_text_color": true,
+        "text_color": "#00454d",
+        "is_large": false,
+        "is_dark": true,
+        "background_image": "shopify:\/\/shop_images\/snow-field.jpg"
       }
     },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
@@ -131,7 +139,7 @@
   },
   "order": [
     "intro",
-    "8aecb327-ef43-460c-a9d9-477233a6cc5e",
+    "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
     "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
