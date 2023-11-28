@@ -5,7 +5,11 @@
   <div is="main-promo">
     <a href="{{ section.settings.link_url_a }}">
       <div>
-        <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}">
+        {%- if section.settings.background_image_a == blank -%}
+          <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}"></div>
+        {%- else -%}
+          <div is="split-hero-content" style="background-image: url({{ section.settings.background_image_a | img_url: 'master' }})"></div>
+        {%- endif -%}
             <div>
               <h4 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.subtitle_a | escape }}</h4>
               <h1 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.heading_a | escape }}</h1>
@@ -36,7 +40,11 @@
             height="800"
           />
         </div>
-        <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}">
+        {%- if section.settings.background_image_b == blank -%}
+          <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}"></div>
+        {%- else -%}
+          <div is="split-hero-content" style="background-image: url({{ section.settings.background_image_b | img_url: 'master' }})"></div>
+        {%- endif -%}
           <div>
             <h4 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.subtitle_b | escape }}</h4>
             <h1 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.heading_b | escape }}</h1>
@@ -80,6 +88,11 @@
       "label": "Main promo Image"
     },
     {
+      "id": "background_image_a",
+      "type": "image_picker",
+      "label": "Main bg Image"
+    },
+    {
       "type": "color",
       "id": "bg_color_a",
       "label": "Main promo background color",
@@ -117,6 +130,11 @@
       "id": "image_b",
       "type": "image_picker",
       "label": "Sub promo image"
+    },
+    {
+      "id": "background_image_b",
+      "type": "image_picker",
+      "label": "Sub bg Image"
     },
     {
       "type": "color",
