@@ -21,10 +21,10 @@
         "image": "shopify:\/\/shop_images\/santa2_9ed035b3-b119-4cfa-a4d9-3a4a7b2885ea.png",
         "bg_color": "#ebedfa",
         "is_text_color": true,
-        "text_color": "#00454d",
+        "text_color": "#ffffff",
         "is_large": false,
         "is_dark": true,
-        "background_image": "shopify:\/\/shop_images\/snow-field.jpg"
+        "background_image": "shopify:\/\/shop_images\/christmas-bg-3.jpg"
       }
     },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
