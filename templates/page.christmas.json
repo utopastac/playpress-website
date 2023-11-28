@@ -131,24 +131,6 @@
         "title": "More great gifts",
         "text": ""
       }
-    },
-    "5453eac9-8273-4dd8-8bf0-1aeac1478eeb": {
-      "type": "gap",
-      "settings": {
-        "size": 2
-      }
-    },
-    "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
-      "type": "gap",
-      "settings": {
-        "size": 3
-      }
-    },
-    "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
-      "type": "gap",
-      "settings": {
-        "size": 3
-      }
     }
   },
   "order": [
@@ -157,9 +139,6 @@
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
     "1f4f2a30-863f-4a71-b742-2ca54d7962fe",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
-    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78",
-    "5453eac9-8273-4dd8-8bf0-1aeac1478eeb",
-    "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
-    "89ea955f-faa3-4b8a-ad59-096ce47bb67b"
+    "a7f0879b-05e0-4a0a-b970-8cddcb3bff78"
   ]
 }
