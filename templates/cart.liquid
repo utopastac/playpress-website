@@ -6,7 +6,7 @@
     <form action="/cart" method="post">
       <div>
       <header>
-        <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
+        <h1>Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
         <a is="outline-button" href="/shop">Continue shopping</a>
       </header>
       {%- if cart.item_count > 0 -%}
