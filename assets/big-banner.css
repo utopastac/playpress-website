@@ -90,6 +90,11 @@ section[is=big-banner]:hover {
 }
 section[is=big-banner] div[is=hero-content] {
   padding: 2.4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section[is=big-banner] div[is=hero-content] > div {
   max-width: 48rem;
 }
 section[is=big-banner] > a {
