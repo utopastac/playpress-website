@@ -3,18 +3,16 @@
 section[is="big-banner"]
   position: relative
   transition: scale 0.5s
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
 
   &:hover
     scale: 1.02
 
   div[is="hero-content"]
     padding: units(3)
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
-
-    > div
-      max-width: size(480)
+    max-width: size(480)
 
   > a
     display: block

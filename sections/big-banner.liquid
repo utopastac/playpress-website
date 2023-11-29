@@ -1,6 +1,10 @@
 {{ 'big-banner.css' | asset_url | stylesheet_tag }}
 
-<section is="big-banner">
+{%- if section.settings.background_image == blank -%}
+  <section is="big-banner">
+{%- else -%}
+  <section is="big-banner" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
+{%- endif -%}
   <a href="{{ section.settings.link_url }}">
     <div>
       <div class="banner-content">
@@ -18,16 +22,10 @@
           />
         {%- endif -%}
 
-        {%- if section.settings.background_image == blank -%}
-          <div is="hero-content">
-        {%- else -%}
-          <div is="hero-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
-        {%- endif -%}
-          <div>
-            <h2>{{ section.settings.heading | escape }}</h2>
-            <h3>{{ section.settings.text }}</h3>
-            <div is="button">{{ section.settings.link_text }}</div>
-          </div>
+        <div is="hero-content">
+          <h2>{{ section.settings.heading | escape }}</h2>
+          <h3>{{ section.settings.text }}</h3>
+          <div is="button">{{ section.settings.link_text }}</div>
         </div>
 
         

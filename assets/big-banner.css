@@ -84,17 +84,15 @@ a[is=outline-button]:hover {
 section[is=big-banner] {
   position: relative;
   transition: scale 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 section[is=big-banner]:hover {
   scale: 1.02;
 }
 section[is=big-banner] div[is=hero-content] {
   padding: 2.4rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-section[is=big-banner] div[is=hero-content] > div {
   max-width: 48rem;
 }
 section[is=big-banner] > a {
