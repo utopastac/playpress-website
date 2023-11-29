@@ -4,9 +4,9 @@
   <a href="{{ section.settings.link_url }}">
     <div>
       {%- if section.settings.background_image == blank -%}
-        <section is="banner-content">
+        <div class="banner-content">
       {%- else -%}
-        <section is="banner-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
+        <div class="banner-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
       {%- endif -%}
 
         {%- if section.settings.image == blank -%}
