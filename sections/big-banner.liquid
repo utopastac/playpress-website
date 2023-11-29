@@ -18,7 +18,11 @@
           />
         {%- endif -%}
 
-        <div is="hero-content">
+        {%- if section.settings.background_image == blank -%}
+          <div is="hero-content">
+        {%- else -%}
+          <div is="hero-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
+        {%- endif -%}
           <h2>{{ section.settings.heading | escape }}</h2>
           <h3>{{ section.settings.text }}</h3>
           <div is="button">{{ section.settings.link_text }}</div>
@@ -60,6 +64,11 @@
       "id": "image",
       "type": "image_picker",
       "label": "Image"
+    },
+    {
+      "id": "background_image",
+      "type": "image_picker",
+      "label": "Background Image"
     }
   ],
   "presets": [
