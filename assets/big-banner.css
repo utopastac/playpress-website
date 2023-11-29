@@ -84,9 +84,6 @@ a[is=outline-button]:hover {
 section[is=big-banner] {
   position: relative;
   transition: scale 0.5s;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 section[is=big-banner]:hover {
   scale: 1.02;
@@ -101,6 +98,9 @@ section[is=big-banner] > a {
 section[is=big-banner] .banner-content {
   background: #2D8872;
   border-radius: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   overflow: hidden;
   display: block;
 }
