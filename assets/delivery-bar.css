@@ -68,22 +68,29 @@ a[is=outline-button]:hover {
 
 a[is=delivery-bar] {
   display: block;
-  height: 4.8rem;
+  height: 3.6rem;
   border-bottom: 1px solid #E7E9EF;
   padding: 0 1.6rem;
   position: relative;
+  background: white;
 }
-a[is=delivery-bar].christmas:after {
+@media screen and (min-width: 740px) {
+  a[is=delivery-bar] {
+    height: 4.8rem;
+  }
+}
+a[is=delivery-bar].christmas:before {
   content: "";
-  height: 80px;
+  bottom: 0;
   left: 0;
+  opacity: 0.35;
   background: url("pattern-bg-4.jpg");
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 0;
   position: absolute;
   width: 100%;
-  top: 4.8rem;
+  top: 0;
 }
 @media screen and (max-width: 1080px) {
   a[is=delivery-bar] .not-mobile {

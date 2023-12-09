@@ -3,11 +3,14 @@
 ul[is="breadcrumbs"] 
   display: flex
   padding: 0 units(2)
-  height: units(8)
+  height: units(6)
   background: darken($blue-1000, 10%)
   color: white
   position: relative
   overflow: hidden
+
+  @include min($screen-m)
+    height: units(8)
 
   a, p
     color: white

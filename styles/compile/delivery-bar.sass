@@ -2,22 +2,27 @@
 
 a[is="delivery-bar"]
   display: block
-  height: units(6)
+  height: units(4.5)
   border-bottom: 1px solid $grey-200
   padding: 0 units(2)
   position: relative
+  background: white
 
-  &.christmas:after
+  @include min($screen-m)
+    height: units(6)
+
+  &.christmas:before
     content: ""
-    height: 80px
+    bottom: 0
     left: 0
+    opacity: 0.35
     background: url('pattern-bg-4.jpg')
     mix-blend-mode: multiply
     pointer-events: none
     z-index: 0
     position: absolute
     width: 100%
-    top: units(6)
+    top: 0
 
   @include max($screen-l)
     .not-mobile
