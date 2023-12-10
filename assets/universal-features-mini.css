@@ -1,0 +1,78 @@
+a[is=outline-button], div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+a[is=outline-button], div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+  font-weight: 400;
+}
+
+a[is=outline-button] {
+  font-weight: 700;
+}
+
+div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  font-size: 1.4rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=outline-button] {
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+  border: 1px solid #EBEDFA;
+}
+a[is=outline-button]:hover {
+  background: #EBEDFA;
+}
+
+div[is=universal-features-mini] {
+  margin: 3.2rem 0;
+}
+div[is=universal-features-mini] ul {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+div[is=universal-features-mini] li {
+  list-style: none;
+}
+div[is=universal-features-mini] li img {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+div[is=universal-features-mini] li h4 {
+  text-align: center;
+}
+@media screen and (min-width: 740px) {
+  div[is=universal-features-mini] ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

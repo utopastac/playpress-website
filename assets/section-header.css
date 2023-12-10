@@ -62,13 +62,13 @@ header[is=section-header] p {
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

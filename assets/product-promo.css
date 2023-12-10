@@ -45,26 +45,26 @@
 
 [is=product-promo] > div > div p, [is=product-promo] > div h3 {
   font-size: 1.7rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   [is=product-promo] > div > div p, [is=product-promo] > div h3 {
     font-size: 1.8rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
 [is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   [is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

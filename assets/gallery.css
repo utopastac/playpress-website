@@ -13,26 +13,26 @@ div[is=gallery] .new, a[is=outline-button] {
 
 div[is=gallery] .new {
   font-size: 1.7rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   div[is=gallery] .new {
     font-size: 1.8rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

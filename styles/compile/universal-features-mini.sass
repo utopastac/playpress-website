@@ -1,0 +1,25 @@
+@import '../assets'
+
+div[is="universal-features-mini"]
+  @extend %body-3
+  margin: units(4) 0
+
+  ul
+    display: grid
+    grid-gap: units(2)
+    grid-template-columns: repeat(3, 1fr)
+
+  li
+    list-style: none
+
+    img
+      width: 100%
+      margin-bottom: units(0.5)
+
+    h4
+      @extend %body-3
+      text-align: center
+
+  @include min($screen-m)
+    ul
+      grid-template-columns: repeat(4, 1fr)

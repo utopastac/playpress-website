@@ -113,26 +113,26 @@ section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p
 
 section[is=rich-text] .body-2 {
   font-size: 1.7rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   section[is=rich-text] .body-2 {
     font-size: 1.8rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

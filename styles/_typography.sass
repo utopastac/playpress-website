@@ -25,6 +25,7 @@ $font-heading-weight: $font-bold-weight
 //
 $heading-line-height: 115%
 $body-line-height: 140%
+$body-sm-line-height: 115%
 //
 $heading-letter-spacing: -0.02
 $body-letter-spacing: 0
@@ -118,16 +119,16 @@ $all-caps-letter-spacing: 0.1
 %body-3
   @extend %regular
   @extend %paragraph
-  @include fontSize(17, $body-line-height, $body-letter-spacing)
+  @include fontSize(17, $body-sm-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize(18, $body-line-height, $body-letter-spacing)
+    @include fontSize(18, $body-sm-line-height, $body-letter-spacing)
 
 %body-4
   @extend %regular
   @extend %paragraph
-  @include fontSize(14, $body-line-height, $body-letter-spacing)
+  @include fontSize(14, $body-sm-line-height, $body-letter-spacing)
   @include min($screen-l)
-    @include fontSize(15, $body-line-height, $body-letter-spacing)
+    @include fontSize(15, $body-sm-line-height, $body-letter-spacing)
 //
 //
 //

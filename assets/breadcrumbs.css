@@ -13,26 +13,26 @@ a[is=outline-button] {
 
 ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
   font-size: 1.7rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   ul[is=breadcrumbs] a, ul[is=breadcrumbs] p {
     font-size: 1.8rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

@@ -108,26 +108,26 @@ div[is=page-content] h6, div[is=page-content] .body-1, div[is=page-content] p, d
 
 div[is=page-content] .body-2 {
   font-size: 1.7rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   div[is=page-content] .body-2 {
     font-size: 1.8rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 140%;
+  line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 140%;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }

@@ -36,26 +36,26 @@ div[is=universal-features] li div.content h4 {
 
 div[is=universal-features] li div.content p, div[is=universal-features] {
   font-size: 1.7rem;
-  line-height: 115%;
+  line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   div[is=universal-features] li div.content p, div[is=universal-features] {
     font-size: 1.8rem;
-    line-height: 115%;
+    line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
 a[is=outline-button] {
   font-size: 1.4rem;
-  line-height: 115%;
+  line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   a[is=outline-button] {
     font-size: 1.5rem;
-    line-height: 115%;
+    line-height: 140%;
     letter-spacing: 0px;
   }
 }
