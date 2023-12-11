@@ -23,9 +23,11 @@
       {% endfor %}
     </ul>
   </nav>
-  <p>
+  <p id="cart">
     <a href="/cart">
-      <strong>{{ cart.item_count }}</strong> Cart {{ cart.total_price | money }}
+      <span class="icon cart"></span>
+      <strong id="header-cart-item-count">{{ cart.item_count }}</strong>
+      <span id="header-cart-total">{{ cart.total_price | money }}</span>
     </a>
   </p>
 </header>

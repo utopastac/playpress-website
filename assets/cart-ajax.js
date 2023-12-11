@@ -25,7 +25,8 @@ window.addEventListener("load", function(){
       const item = res.data.items.find(item => item.key===key);
       const itemPrice = formatMoney(item.final_line_price, format);
       document.querySelector(`[data-key="${key}"] .price`).textContent = itemPrice;
-      resetPrices(totalPrice);
+      const totalCount = res.data.item_count;
+      resetPrices(totalPrice, totalCount);
     });
   }
 
@@ -48,17 +49,20 @@ window.addEventListener("load", function(){
         } else {
           const totalPrice = formatMoney(res.data.total_price, format);
           item.remove();
-          resetPrices(totalPrice);
+          const totalCount = res.data.item_count;
+          resetPrices(totalPrice, totalCount);
         }
       });
     })
   });
 
-  function resetPrices(totalPrice){
+  function resetPrices(totalPrice, totalCount){
     const totalElements = document.querySelectorAll('.total-price');
     for(let i=0; i<totalElements.length; i++){
       totalElements[i].textContent = totalPrice;
     }
+    document.querySelector('#header-cart-total').textContent = totalPrice;
+    document.querySelector('#header-cart-item-count').textContent = totalCount;
   }
 
   function formatMoney(cents, format) {

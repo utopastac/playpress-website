@@ -92,6 +92,8 @@ header[is=header] > p {
   white-space: nowrap;
 }
 header[is=header] > p > a {
+  display: flex;
+  align-items: center;
   border-radius: 0.5rem;
   color: #FFFFFF;
   display: flex;
@@ -102,6 +104,10 @@ header[is=header] > p > a {
 }
 header[is=header] > p > a:hover {
   background-color: #19226B;
+}
+header[is=header] > p > a .icon {
+  background-color: white;
+  margin-right: 0.5rem;
 }
 header[is=header] > p > a > strong {
   align-items: center;
