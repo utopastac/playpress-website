@@ -8,11 +8,11 @@
     <form action="/cart" method="post">
       <div>
       <header>
-        <h1>Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
+        <h1 id="main-title">Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
         <a is="outline-button" href="/shop">Continue shopping</a>
       </header>
       {%- if cart.item_count > 0 -%}
-        <section is="cart-table">
+        <section id="cart-table">
           <ul>
             {%- for item in cart.items -%}
               <li class="cart-item" data-key="{{ item.key }}">
@@ -64,7 +64,7 @@
               <h3>Total</h3>
               <p class="total-price">{{cart.total_price | money }}</p>
             </header>
-            <button type="submit" name="checkout">Proceed to checkout</button>
+            <button type="submit" name="checkout" id="checkout-button">Proceed to checkout</button>
           </div>
           {% render 'delivery' %}
         </div>

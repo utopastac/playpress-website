@@ -23,7 +23,6 @@ window.addEventListener("load", function(){
       const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
       const totalPrice = formatMoney(res.data.total_price, format);
       const item = res.data.items.find(item => item.key===key);
-      console.log(item)
       const itemPrice = formatMoney(item.final_line_price, format);
       document.querySelector(`[data-key="${key}"] .price`).textContent = itemPrice;
       resetPrices(totalPrice);
@@ -35,15 +34,18 @@ window.addEventListener("load", function(){
       e.preventDefault();
       const item = button.closest(".cart-item");
       const key = item.getAttribute("data-key");
+      const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
 
       axios.post('/cart/change.js', {
         id: key,
         quantity: 0
       }).then((res) => {
         if(res.data.items.length === 0){
-          //this.alert(GONE)
+          document.querySelector('#cart-table').remove();
+          document.querySelector('#checkout-button').remove();
+          document.querySelector('#main-title').textContent = "Your cart is empty";
+          resetPrices(formatMoney(0, format));
         } else {
-          const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
           const totalPrice = formatMoney(res.data.total_price, format);
           item.remove();
           resetPrices(totalPrice);
