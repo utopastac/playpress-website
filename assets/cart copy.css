@@ -165,16 +165,66 @@ div[is=cart] {
 div[is=cart] div[is=signpost] {
   margin-top: 3.2rem;
 }
+div[is=cart] .item-button {
+  background: none;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div[is=cart] .item-button .icon {
+  width: 2rem;
+  height: 2rem;
+}
+div[is=cart] .plus, div[is=cart] .minus {
+  border: 1px solid #E7E9EF;
+  border-radius: 0.8rem;
+}
+div[is=cart] .plus {
+  border-radius: 0 0.8rem 0.8rem 0;
+  border-left: none;
+}
+div[is=cart] .minus {
+  border-radius: 0.8rem 0 0 0.8rem;
+  border-right: none;
+}
 div[is=cart] header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 1.6rem;
 }
+div[is=cart] .quantity {
+  display: flex;
+}
+div[is=cart] .quantity input {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  pointer-events: none;
+  text-align: center;
+  border-radius: 0;
+}
 div[is=cart] form {
   grid-row-gap: 2rem;
   display: grid;
   grid-template-columns: 1fr;
+}
+div[is=cart] form section[is=cart-table] ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+div[is=cart] form .product img {
+  display: inline;
+  margin: 0.8rem 1.6rem 0.8rem 0;
+  border-radius: 1.6rem;
+}
+div[is=cart] form .product a {
+  display: inline;
+}
+div[is=cart] form label {
+  display: none;
 }
 div[is=cart] div[is=checkout] div[is=checkout-wrapper] {
   background: #EBEDFA;

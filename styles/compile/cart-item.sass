@@ -1,0 +1,80 @@
+@import '../assets'
+
+.cart-item
+  display: flex
+  align-items: center
+  border-bottom: 1px solid $border-color
+
+  .image
+    margin: units(1) units(1) units(1) 0
+    
+    img 
+      border-radius: $border-s
+
+  .info
+    flex: 1
+
+    @include min($screen-m)
+      display: flex
+      align-items: center
+
+  .title
+    flex: 1
+
+  .meta
+    display: flex
+    align-items: center
+
+    @include min($screen-m)
+      flex: 0.7
+
+  .price
+    text-align: left
+    flex: 1
+    padding: units(1)
+
+    @include min($screen-m)
+      padding: units(2)
+
+  .quantity
+    display: flex      
+
+  .actions
+  label 
+    display: none
+
+  .item-button
+    background: none
+    width: units(4)
+    height: units(4)
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .icon
+      width: size(20)
+      height: size(20)
+      background-color: $grey-1000
+
+  .remove-item
+  
+  .plus, .minus
+    border: 1px solid $border-color
+    border-radius: $border-xs
+
+  .plus
+    border-radius: 0 $border-xs $border-xs 0
+    border-left: none
+  
+  .minus
+    border-radius: $border-xs 0 0 $border-xs
+    border-right: none
+
+  input
+    width: units(4)
+    height: units(4)
+    padding: 0
+    pointer-events: none
+    text-align: center
+    border-radius: 0
+  

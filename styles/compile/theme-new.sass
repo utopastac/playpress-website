@@ -275,7 +275,12 @@ hr
   margin-left: 0
   margin-right: 0
 
-a[is="button"], p[is="button"], div[is="button"]
+button
+  white-space: nowrap
+  outline: none
+  border: none
+
+a[is="button"], p[is="button"], div[is="button"], input[type="submit"], button[type="submit"]
   @extend %button-style
   
 a[is="text-button"], p[is="text-button"], div[is="text-button"]
@@ -283,6 +288,3 @@ a[is="text-button"], p[is="text-button"], div[is="text-button"]
 
 .main-content
   @extend %main-content
-
-button, input[type="submit"]
-  @extend %button-style

@@ -12,6 +12,7 @@ div[is="cart"]
     align-items: flex-end
     margin-bottom: units(2)
 
+
   h1
     @extend %heading-1
 
@@ -19,38 +20,12 @@ div[is="cart"]
     @extend %main-content
     @extend %body-2
 
-  .quantity
-    //text-align: right
-
   form 
     grid-row-gap: 2rem
     display: grid
     grid-template-columns: 1fr
 
-    table 
-      width: 100%
-
-    tr
-      border-radius: $border-xs
-
-    th
-      background: $yolk-100
-      padding-left: units(2)
-
-    td
-      padding: units(1) 0
-      padding-left: units(1)
-
-    img 
-      display: block
-      margin: units(1) units(2) units(1) 0
-      border-radius: $border-s
-
-    label 
-      display: none
-
-    input 
-      width: units(10)
+    section[is="cart-table"]
 
   div[is="checkout"]
 

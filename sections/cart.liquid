@@ -1,7 +1,9 @@
-{{ 'cart.js' | asset_url | script_tag }}
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{{ 'cart-ajax.js' | asset_url | script_tag }}
 {{ 'cart.css' | asset_url | stylesheet_tag }}
+{{ 'cart-item.css' | asset_url | stylesheet_tag }}
 
-<div is="cart">
+<div is="cart" data-money-format='{{ shop.money_format }}'>
   <div>
     <form action="/cart" method="post">
       <div>
@@ -10,18 +12,11 @@
         <a is="outline-button" href="/shop">Continue shopping</a>
       </header>
       {%- if cart.item_count > 0 -%}
-        <table>
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th class="quantity">Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
+        <section is="cart-table">
+          <ul>
             {%- for item in cart.items -%}
-              <tr>
-                <td>
+              <li class="cart-item" data-key="{{ item.key }}">
+                <div class="image">
                   <a href="{{ item.url | within: collections.all }}">
                     <img
                       src="{{ item | img_url: '200x200' }}"
@@ -30,33 +25,44 @@
                       height="100"
                       loading="lazy"
                     />
-                      {{ item.product.title }}
                   </a>
-                </td>
-                <td>{{ item.price | money }}</td>
-                <td class="quantity">
-                  <div class="minus-button">Minus</div>
-                  <p>item.quantity</p>
-                  <div class="plus-button">Plus</div>
-                </td>
-              </tr>
+                </div>
+                <div class="info">
+                  <div class="title">
+                    <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
+                  </div>
+                  <div class="meta">
+                    <div class="quantity">
+                      <button class="minus item-button "><div class = "icon minus"></div></button>
+                      <input
+                        name="updates[]"
+                        size="2"
+                        id="updates_{{ item.id }}"
+                        value="{{ item.quantity }}" />
+                      <button class="plus item-button"><div class = "icon plus"></div></button>
+                    </div>
+                    <div class="price">{{ item.final_line_price | money }}</div>
+                    <div class="actions">
+                      <button class="remove-item item-button"><div class = "icon trash"></div></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
             {%- endfor -%}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td scope="row">Total</td>
-              <td>{{cart.total_price | money }}</td>
-              <td colspan="2"><button is="command" type="submit">Update</button></td>
-            </tr>
-          </tfoot>
-        </table>
+          </ul>
+          {% comment %} <footer>
+            <div scope="row">Total</div>
+            <div class="total-price">{{cart.total_price | money }}</div>
+            {% comment %} <div><button is="command" type="submit">Update</button></div> {% endcomment %}
+          </footer> {% endcomment %}
+        </section>
         
       </div>
         <div is="checkout">
           <div is="checkout-wrapper">
             <header>
               <h3>Total</h3>
-              <p>{{cart.total_price | money }}</p>
+              <p class="total-price">{{cart.total_price | money }}</p>
             </header>
             <button type="submit" name="checkout">Proceed to checkout</button>
           </div>

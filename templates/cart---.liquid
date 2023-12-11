@@ -1,0 +1,72 @@
+{{ 'cart-ajax.js' | asset_url | script_tag }}
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+
+{% section 'warning-banner' %}
+<div is="cart">
+  <div>
+    <form action="/cart" method="post">
+      <div>
+      <header>
+        <h1>Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
+        <a is="outline-button" href="/shop">Continue shopping</a>
+      </header>
+      {%- if cart.item_count > 0 -%}
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th class="quantity">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for item in cart.items -%}
+              <tr>
+                <td>
+                  <a href="{{ item.url | within: collections.all }}">
+                    <img
+                      src="{{ item | img_url: '200x200' }}"
+                      alt="{{ item.image.alt | escape }}"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                    />
+                      {{ item.product.title }}
+                  </a>
+                </td>
+                <td>{{ item.price | money }}</td>
+                <td class="quantity">
+                  <label for="updates_{{ item.id }}">Quantity</label>
+                  <input type="number"
+                    name="updates[]"
+                    size="2"
+                    id="updates_{{ item.id }}"
+                    value="{{ item.quantity }}" />
+                </td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td scope="row">Total</td>
+              <td>{{cart.total_price | money }}</td>
+              <td colspan="2"><button is="command" type="submit">Update</button></td>
+            </tr>
+          </tfoot>
+        </table>
+        
+      </div>
+        <div is="checkout">
+          <div is="checkout-wrapper">
+            <header>
+              <h3>Total</h3>
+              <p>{{cart.total_price | money }}</p>
+            </header>
+            <button type="submit" name="checkout">Proceed to checkout</button>
+          </div>
+          {% render 'delivery' %}
+        </div>
+      {%- endif -%}
+    </form>
+  </div>
+</div>

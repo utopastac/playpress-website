@@ -60,7 +60,7 @@ div[is=product-promos] > div {
   margin: 0 auto;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button] {
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,10 +74,10 @@ button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   border: none;
   transition: scale 0.5s;
 }
-button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+a[is=button]:hover, p[is=button]:hover, div[is=button]:hover, input[type=submit]:hover, button[type=submit]:hover {
   scale: 1.05;
 }
-button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
+a[is=button]:after, p[is=button]:after, div[is=button]:after, input[type=submit]:after, button[type=submit]:after {
   content: "";
   display: block;
   width: 2.4rem;
@@ -90,10 +90,10 @@ button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, 
   -webkit-mask-size: contain;
   margin-left: 0.8rem;
 }
-button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+a[is=button]:hover, p[is=button]:hover, div[is=button]:hover, input[type=submit]:hover, button[type=submit]:hover {
   background-color: #333f9b;
 }
-button:active, input[type=submit]:active, a[is=button]:active, p[is=button]:active, div[is=button]:active {
+a[is=button]:active, p[is=button]:active, div[is=button]:active, input[type=submit]:active, button[type=submit]:active {
   box-shadow: 1px 2px 0 0 #FAB638;
   background-color: #272f75;
 }
@@ -137,14 +137,14 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
 }
 a[is=outline-button], input,
 select,
-textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
 a[is=outline-button], input,
 select,
-textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 400;
 }
 
@@ -153,17 +153,17 @@ legend {
   font-weight: 500;
 }
 
-a[is=outline-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+a[is=outline-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 700;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+  a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -477,7 +477,7 @@ div[is=product-promos] > div {
   margin: 0 auto;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button] {
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -491,10 +491,10 @@ button, input[type=submit], a[is=button], p[is=button], div[is=button] {
   border: none;
   transition: scale 0.5s;
 }
-button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+a[is=button]:hover, p[is=button]:hover, div[is=button]:hover, input[type=submit]:hover, button[type=submit]:hover {
   scale: 1.05;
 }
-button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, div[is=button]:after {
+a[is=button]:after, p[is=button]:after, div[is=button]:after, input[type=submit]:after, button[type=submit]:after {
   content: "";
   display: block;
   width: 2.4rem;
@@ -507,10 +507,10 @@ button:after, input[type=submit]:after, a[is=button]:after, p[is=button]:after, 
   -webkit-mask-size: contain;
   margin-left: 0.8rem;
 }
-button:hover, input[type=submit]:hover, a[is=button]:hover, p[is=button]:hover, div[is=button]:hover {
+a[is=button]:hover, p[is=button]:hover, div[is=button]:hover, input[type=submit]:hover, button[type=submit]:hover {
   background-color: #333f9b;
 }
-button:active, input[type=submit]:active, a[is=button]:active, p[is=button]:active, div[is=button]:active {
+a[is=button]:active, p[is=button]:active, div[is=button]:active, input[type=submit]:active, button[type=submit]:active {
   box-shadow: 1px 2px 0 0 #FAB638;
   background-color: #272f75;
 }
@@ -552,14 +552,14 @@ a[is=text-button]:after, p[is=text-button]:after, div[is=text-button]:after {
 a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   text-decoration: underline;
 }
-button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
 select,
 textarea {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
 select,
 textarea {
   font-weight: 400;
@@ -570,17 +570,17 @@ legend {
   font-weight: 500;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button] {
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button] {
   font-weight: 700;
 }
 
-button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  button, input[type=submit], a[is=button], p[is=button], div[is=button], a[is=text-button], p[is=text-button], div[is=text-button] {
+  a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
@@ -657,6 +657,9 @@ a[is=outline-button]:hover {
 }
 .icon.close {
   -webkit-mask-image: url(icon-close.svg);
+}
+.icon.trash {
+  -webkit-mask-image: url(icon-trash.svg);
 }
 .icon.arrow-right {
   -webkit-mask-image: url(icon-arrow-right.svg);
@@ -900,4 +903,10 @@ hr {
   color: #E7E9EF;
   margin-left: 0;
   margin-right: 0;
+}
+
+button {
+  white-space: nowrap;
+  outline: none;
+  border: none;
 }
