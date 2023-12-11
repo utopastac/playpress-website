@@ -5,6 +5,9 @@
   align-items: center
   border-bottom: 1px solid $border-color
 
+  .inactive
+    opacity: 0.4
+
   .image
     margin: units(1) units(1) units(1) 0
     
@@ -14,7 +17,7 @@
   .info
     flex: 1
 
-    @include min($screen-m)
+    @include min($screen-l)
       display: flex
       align-items: center
 
@@ -53,8 +56,6 @@
 
     .icon
       display: block
-      width: size(20)
-      height: size(20)
       mask-size: contain
       -webkit-mask-size: contain
       background-color: $grey-1000

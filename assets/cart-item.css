@@ -45,6 +45,9 @@ a[is=outline-button]:hover {
   align-items: center;
   border-bottom: 1px solid #E7E9EF;
 }
+.cart-item .inactive {
+  opacity: 0.4;
+}
 .cart-item .image {
   margin: 0.8rem 0.8rem 0.8rem 0;
 }
@@ -54,7 +57,7 @@ a[is=outline-button]:hover {
 .cart-item .info {
   flex: 1;
 }
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 1080px) {
   .cart-item .info {
     display: flex;
     align-items: center;
@@ -98,8 +101,6 @@ a[is=outline-button]:hover {
 }
 .cart-item .item-button .icon {
   display: block;
-  width: 2rem;
-  height: 2rem;
   mask-size: contain;
   -webkit-mask-size: contain;
   background-color: #1D203F;

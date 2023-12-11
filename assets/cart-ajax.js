@@ -3,6 +3,7 @@ window.addEventListener("load", function(){
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const plus = button.classList.contains('plus');
+      const minus = button.classList.contains('minus');
       const input = button.parentElement.querySelector('input');
       const value = Number(input.value);
       const key = button.closest(".cart-item").getAttribute("data-key");
