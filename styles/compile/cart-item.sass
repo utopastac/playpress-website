@@ -52,7 +52,11 @@
     justify-content: center
 
     .icon
-      -webkit-mask-size: 20px 20px
+      display: block
+      width: size(20)
+      height: size(20)
+      mask-size: contain
+      -webkit-mask-size: contain
       background-color: $grey-1000
 
   .remove-item

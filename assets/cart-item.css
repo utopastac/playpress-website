@@ -97,7 +97,11 @@ a[is=outline-button]:hover {
   justify-content: center;
 }
 .cart-item .item-button .icon {
-  -webkit-mask-size: 20px 20px;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  mask-size: contain;
+  -webkit-mask-size: contain;
   background-color: #1D203F;
 }
 .cart-item .plus, .cart-item .minus {
