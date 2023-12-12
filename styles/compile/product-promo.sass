@@ -8,6 +8,9 @@
   height: 100%
   position: relative
 
+  .image
+    @include animate(0.3s)
+
   .new
     position: absolute
     top: -units(1)
@@ -37,6 +40,9 @@
       right: 0
 
   &:hover
+
+    .image
+      scale: 1.05
 
     img
       &.image-1

@@ -205,6 +205,7 @@ $bigUnits: 40
   // margin: 0 units(4)
 
 %button-style
+  flex-direction: row-reverse
   display: inline-flex
   align-items: center
   justify-content: center
@@ -218,11 +219,13 @@ $bigUnits: 40
   outline: none
   border: none
   transition: scale 0.5s
+  position: relative
+  overflow: hidden
 
   &:hover
     scale: 1.05
 
-  &:after
+  &:before
     content: ""
     display: block
     width: units(3)
@@ -250,6 +253,7 @@ $bigUnits: 40
 
 %micro-button-style
   display: inline-flex
+  flex-direction: row-reverse
   align-items: center
   background: $blue-100
   justify-content: center
@@ -260,8 +264,10 @@ $bigUnits: 40
   color: $blue-1000
   height: units(4)
   white-space: nowrap
+  position: relative
+  overflow: hidden
 
-  &:after
+  &:before
     content: ""
     display: block
     width: units(2)
@@ -275,7 +281,11 @@ $bigUnits: 40
     margin-left: units(0.5)
 
   &:hover
-    background-color: $blue-200
+    background-color: $blue-1000
+    color: white
+
+    &:before
+      background: white
 
   &:active
     background-color: darken($blue-200, 5%)
@@ -323,3 +333,14 @@ $bigUnits: 40
     text-decoration: underline
 
   &:active
+
+.button-loading
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $blue-1000 url(loading.gif) no-repeat center center

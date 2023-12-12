@@ -1,3 +1,14 @@
+.button-loading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2D3788 url(loading.gif) no-repeat center center;
+}
+
 a[is=outline-button], div[is=delivery] header, div[is=delivery] header span, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;

@@ -10,6 +10,17 @@ section[is=rich-text] {
   margin: 0 auto;
 }
 
+.button-loading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2D3788 url(loading.gif) no-repeat center center;
+}
+
 section[is=rich-text] h5, section[is=rich-text] h3, section[is=rich-text] .heading-s, section[is=rich-text] h2, section[is=rich-text] .heading-m, section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;

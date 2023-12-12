@@ -1,6 +1,7 @@
 window.addEventListener("load", function(){
 
   let timeout = null;
+  let addButton = null;
 
   document.querySelector('#cart-modal-close').addEventListener('click', (e) => {
     hideModal();
@@ -9,9 +10,11 @@ window.addEventListener("load", function(){
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
+      addButton = button;
       const id = button.closest(".product-item").getAttribute("data-id");
       const mainProduct = button.closest(".product-item").getAttribute("data-main-product");
       let quantity = 1;
+      addButton.classList.add("button-loading");
       if(mainProduct === "true"){
         const input = document.querySelector('#quantity');
         quantity = Number(input.value);
@@ -41,6 +44,7 @@ window.addEventListener("load", function(){
   }
 
   function showModal(item, quantity){
+    addButton.classList.remove("button-loading");
     const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
     const title = quantity > 1 ? `${quantity} x ${item.product_title}` : item.product_title;
     document.querySelector('#cart-modal-image').src = '';
