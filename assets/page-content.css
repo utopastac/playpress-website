@@ -13,7 +13,7 @@ div[is=page-content] ul li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2D3788 url(loading.gif) no-repeat center center;
+  background: #2D3788 url(loading-b.gif) no-repeat center center;
   background-size: 24px 24px;
 }
 

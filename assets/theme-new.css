@@ -146,7 +146,7 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2D3788 url(loading.gif) no-repeat center center;
+  background: #2D3788 url(loading-b.gif) no-repeat center center;
   background-size: 24px 24px;
 }
 
@@ -578,7 +578,7 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2D3788 url(loading.gif) no-repeat center center;
+  background: #2D3788 url(loading-b.gif) no-repeat center center;
   background-size: 24px 24px;
 }
 
