@@ -1,5 +1,7 @@
 window.addEventListener("load", function(){
 
+  let timeout = null;
+
   document.querySelector('#cart-modal-close').addEventListener('click', (e) => {
     hideModal();
   });
@@ -46,7 +48,8 @@ window.addEventListener("load", function(){
     document.querySelector('#cart-modal-title').textContent = title;
     document.querySelector('#cart-modal-price').textContent = formatMoney(item.final_price, format);
     gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
-    setTimeout(hideModal, 4500);
+    clearTimeout(timeout);
+    timeout = setTimeout(hideModal, 4500);
   }
 
   function hideModal(){
