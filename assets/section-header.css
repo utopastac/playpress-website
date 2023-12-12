@@ -12,6 +12,7 @@ header[is=section-header] {
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 header[is=section-header] h2, header[is=section-header].large h2 {

@@ -48,6 +48,7 @@ section[is=product-promo-large] div[is=content] input[type=submit]:active, secti
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 section[is=product-promo-large] div[is=content] p[is=product-price], section[is=product-promo-large] div[is=content] h1 {

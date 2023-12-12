@@ -12,6 +12,7 @@ div[is=page-gallery] {
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 a[is=outline-button] {

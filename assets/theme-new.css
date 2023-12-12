@@ -147,6 +147,7 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 a[is=outline-button], input,
@@ -578,6 +579,7 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 a[is=button], p[is=button], div[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,

@@ -14,6 +14,7 @@ div[is=page] ul li {
   width: 100%;
   height: 100%;
   background: #2D3788 url(loading.gif) no-repeat center center;
+  background-size: 24px 24px;
 }
 
 div[is=page] h5, div[is=page] h3, div[is=page] .heading-s, div[is=page] h2, div[is=page] .heading-m, div[is=page] h1, div[is=page] .heading-l, div[is=page] ul li {
