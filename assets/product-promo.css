@@ -147,10 +147,6 @@ a[is=outline-button]:hover {
 @media screen and (min-width: 740px) {
   [is=product-promo] .content {
     padding-top: 1.2rem;
-  }
-}
-@media screen and (min-width: 1080px) {
-  [is=product-promo] .content {
     padding-bottom: 1.6rem;
   }
 }
