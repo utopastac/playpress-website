@@ -8,7 +8,12 @@ window.addEventListener("load", function(){
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const id = button.closest(".product-item").getAttribute("data-id");
-      const quantity = 1;
+      const mainProduct = button.closest(".product-item").getAttribute("data-main-product");
+      let quantity = 1;
+      if(mainProduct === "true"){
+        const input = document.querySelector('#quantity');
+        quantity = Number(input.value);
+      };
       addToCart(id, quantity);
     })
   });
@@ -21,8 +26,7 @@ window.addEventListener("load", function(){
         }]
     }).then((res) => {
       const item = res.data.items[0];
-      console.log(item)
-      showModal(item);
+      showModal(item, quantity);
       
       axios.get('/cart.js', {}).then((res) => {
         const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
@@ -34,11 +38,12 @@ window.addEventListener("load", function(){
     });
   }
 
-  function showModal(item){
+  function showModal(item, quantity){
     const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
+    const title = quantity > 1 ? `${quantity} x ${item.product_title}` : item.product_title;
     document.querySelector('#cart-modal-image').src = '';
     document.querySelector('#cart-modal-image').src = item.image;
-    document.querySelector('#cart-modal-title').textContent = item.product_title;
+    document.querySelector('#cart-modal-title').textContent = title;
     document.querySelector('#cart-modal-price').textContent = formatMoney(item.final_price, format);
     gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
     setTimeout(hideModal, 4500);

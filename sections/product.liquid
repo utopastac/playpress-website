@@ -5,7 +5,7 @@
 
 <div is="product">
   
-  <div class="product-item" data-id="{{ product.variants.first.id }}">
+  <div class="product-item" data-id="{{ product.variants.first.id }}" data-main-product="true">
     <section>
       <div is="gallery">
         {%- if product.metafields.product.is_new == true -%}
