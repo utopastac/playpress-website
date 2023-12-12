@@ -8,7 +8,9 @@
       <div>
         {% for block in section.blocks %}
           {% assign product = block.settings.product %}
-          {% render 'product-promo', product: product %}
+          {%- if product.available -%}
+            {% render 'product-promo', product: product %}
+          {%- endif -%}
         {% endfor %}
       </div>
     </div>

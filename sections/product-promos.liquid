@@ -11,7 +11,9 @@
     <div is="product-promos">
       <div>
         {% for product in collection.products limit: product_limit %}
+          {%- if product.available -%}
             {% render 'product-promo', product: product %}
+          {%- endif -%}
         {% endfor %}
       </div>
     </div>
