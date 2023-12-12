@@ -14,6 +14,9 @@
       type="module"
     ></script>
     <script src="{{ 'main.js' | asset_url }}" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="{{ 'add-to-cart.js' | asset_url }}" type="module"></script>
   
     <link
       rel="stylesheet"
@@ -144,9 +147,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% section 'header' %}
     {% section 'breadcrumbs' %}
     {% section 'delivery-bar' %}
-    <main id="main">
+    <main id="main" data-money-format='{{ shop.money_format }}'>
       {{ content_for_layout }}
     </main>
     {% section 'footer' %}
+    {% section 'cart-modal' %}
   </body>
 </html>

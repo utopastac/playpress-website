@@ -6,7 +6,6 @@
   text-decoration: none
   min-height: 0
   height: 100%
-  transition: scale 0.5s
   position: relative
 
   .new
@@ -21,9 +20,6 @@
     color: $white
     border-radius: size(12)
 
-  &:hover
-    scale: 1.03
-
   button
     @extend %micro-button-style
     display: none
@@ -33,6 +29,10 @@
 
   img
     border-radius: $border-s
+
+  a:hover
+    h3
+      text-decoration: underline
 
   > div
     flex-direction: row

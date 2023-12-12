@@ -91,7 +91,6 @@ a[is=outline-button]:hover {
   text-decoration: none;
   min-height: 0;
   height: 100%;
-  transition: scale 0.5s;
   position: relative;
 }
 [is=product-promo] .new {
@@ -104,9 +103,6 @@ a[is=outline-button]:hover {
   color: #FFFFFF;
   border-radius: 1.2rem;
 }
-[is=product-promo]:hover {
-  scale: 1.03;
-}
 [is=product-promo] button {
   display: none;
 }
@@ -117,6 +113,9 @@ a[is=outline-button]:hover {
 }
 [is=product-promo] img {
   border-radius: 1.6rem;
+}
+[is=product-promo] a:hover h3 {
+  text-decoration: underline;
 }
 [is=product-promo] > div {
   flex-direction: row;

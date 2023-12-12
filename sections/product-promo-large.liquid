@@ -1,6 +1,6 @@
 {{ 'product-promo-large.css' | asset_url | stylesheet_tag }}
 
-<section is="product-promo-large" class="{% if section.settings.layout == 'right' %}swapped{% endif %}">
+<section is="product-promo-large" class="{% if section.settings.layout == 'right' %}swapped{% endif %} product-item" data-id="{{ section.settings.product.variants.first.id }}">
   <div is="gallery">
     {%- if section.blocks[0].settings.image == blank -%}
       {% for media in section.settings.product.media limit:3 %}
@@ -43,7 +43,7 @@
         <form method="post" action="/cart/add">
           <input type="hidden" name="id" value="{{ section.settings.product.variants.first.id }}" />
           <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-          <button type="submit" value="Add">Add to cart</button>
+          <button type="submit" value="Add" class="add-to-cart">Add to cart</button>
         </form>
       </div>
     </div>

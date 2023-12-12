@@ -5,7 +5,7 @@
 
 <div is="product">
   
-  <div>
+  <div class="product-item" data-id="{{ product.variants.first.id }}">
     <section>
       <div is="gallery">
         {%- if product.metafields.product.is_new == true -%}
@@ -57,7 +57,7 @@
             </select>
             {%- if product.available -%}
               <input min="1" type="number" id="quantity" name="quantity" value="1"/>
-              <button type="submit">
+              <button type="submit" class="add-to-cart">
                 Add to Cart
               </button>
             {%- else -%}

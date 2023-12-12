@@ -1,0 +1,91 @@
+@import '../assets'
+
+#cart-modal
+  width: 100%
+  background: white
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1000000
+  padding: units(2) units(3) units(5) units(3)
+  @extend %elevation-3
+  visibility: hidden
+  opacity: 0
+
+  @include min($screen-m)
+    width: units(50)
+    border-radius: $border-s
+    padding-bottom: units(3)
+    top: units(2)
+    left: auto
+    bottom: auto
+    right: units(2)
+
+  header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: units(1)
+
+    #cart-modal-close
+      width: units(4)
+      height: units(4)
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+
+    .icon
+      width: units(2)
+      height: units(2)
+
+    h2
+      @extend %overline
+
+  .product
+    display: flex
+
+    .image
+      width: units(12)
+      margin-right: units(1)
+      background: $grey-200
+      border-radius: $border-xs
+
+      img
+        border-radius: $border-xs
+        width: 100%
+      
+
+    h3
+      @extend %body-2
+
+    p
+      @extend %body-3
+      @extend %bold
+
+  footer
+    padding-top: units(3)
+    display: flex
+
+    a
+      flex: 1
+      text-align: center
+
+      &:after
+        display: none !important
+
+    #cart-modal-cart-link
+      @extend %button-style
+      border-radius: $border-s
+      background: white
+      border: 2px solid $blue-1000
+      color: $blue-1000
+      margin-right: units(1)
+
+      &:hover
+        color: white
+
+    #cart-modal-checkout-link
+      @extend %button-style
+      border-radius: $border-s

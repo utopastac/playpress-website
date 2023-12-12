@@ -1,0 +1,24 @@
+{{ 'cart-modal.css' | asset_url | stylesheet_tag }}
+
+
+<div id="cart-modal">
+  <header>
+    <h2>Added to cart</h2>
+    <div id="cart-modal-close">
+      <div class="icon close"></div>
+    </div>
+  </header>
+  <div class="product">
+    <div class="image">
+      <img id="cart-modal-image" src="{{ 'storytelling.png' | asset_url }})"  alt="A photo of the product" />
+    </div>
+    <div>
+      <h3 id="cart-modal-title">Product title</h3>
+      <p id="cart-modal-price">Product price</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/cart" id="cart-modal-cart-link">View cart</a>
+    <a href="/checkout" id="cart-modal-checkout-link">Checkout</a>
+  </footer>
+</div>

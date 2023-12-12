@@ -1,9 +1,8 @@
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 {{ 'cart-ajax.js' | asset_url | script_tag }}
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {{ 'cart-item.css' | asset_url | stylesheet_tag }}
 
-<div is="cart" data-money-format='{{ shop.money_format }}'>
+<div is="cart">
   <div>
     <form action="/cart" method="post">
       <div>
