@@ -208,7 +208,7 @@ a[is=outline-button]:hover {
   flex: 1;
   text-align: center;
 }
-#cart-modal footer a:after {
+#cart-modal footer a:before {
   display: none !important;
 }
 #cart-modal footer #cart-modal-cart-link {
