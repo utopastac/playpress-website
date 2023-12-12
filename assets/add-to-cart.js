@@ -46,6 +46,7 @@ window.addEventListener("load", function(){
   function showModal(item, quantity){
     addButton.classList.remove("button-loading");
     const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
+    const cartModal = document.querySelector('#cart-modal');
     const title = quantity > 1 ? `${quantity} x ${item.product_title}` : item.product_title;
     document.querySelector('#cart-modal-image').src = '';
     document.querySelector('#cart-modal-image').src = item.image;
@@ -54,6 +55,12 @@ window.addEventListener("load", function(){
     gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
     clearTimeout(timeout);
     timeout = setTimeout(hideModal, 4500);
+    cartModal.addEventListener('mouseenter', (e) => {
+      clearTimeout(timeout);
+    });
+    cartModal.addEventListener('mouseleave', (e) => {
+      timeout = setTimeout(hideModal, 2000);
+    });
   }
 
   function hideModal(){
