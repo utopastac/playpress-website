@@ -7,7 +7,9 @@
   <div is="product-promos">
     <div class="four">
       {%- for product in collection.products -%}
-        {% render 'product-promo', product: product %}
+        {%- if product.available -%}
+          {% render 'product-promo', product: product %}
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </div>
