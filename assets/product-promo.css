@@ -1,4 +1,4 @@
-[is=product-promo] > div input[type=submit], [is=product-promo] button {
+[is=product-promo] form button {
   display: inline-flex;
   align-items: center;
   background: #EBEDFA;
@@ -10,7 +10,7 @@
   height: 3.2rem;
   white-space: nowrap;
 }
-[is=product-promo] > div input[type=submit]:after, [is=product-promo] button:after {
+[is=product-promo] form button:after {
   content: "";
   display: block;
   width: 1.6rem;
@@ -23,46 +23,46 @@
   -webkit-mask-size: contain;
   margin-left: 0.4rem;
 }
-[is=product-promo] > div input[type=submit]:hover, [is=product-promo] button:hover {
+[is=product-promo] form button:hover {
   background-color: #EBEDFA;
 }
-[is=product-promo] > div input[type=submit]:active, [is=product-promo] button:active {
+[is=product-promo] form button:active {
   background-color: #d7dbf5;
 }
 
-[is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] .new, a[is=outline-button], [is=product-promo] form button, [is=product-promo] .content p, [is=product-promo] .content h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-[is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button, [is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] .new, a[is=outline-button], [is=product-promo] form button, [is=product-promo] .content p, [is=product-promo] .content h3 {
   font-weight: 400;
 }
 
-[is=product-promo] > div > div p, [is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button {
+[is=product-promo] .content p, [is=product-promo] .new, a[is=outline-button], [is=product-promo] form button {
   font-weight: 700;
 }
 
-[is=product-promo] > div > div p, [is=product-promo] > div h3 {
+[is=product-promo] .content p, [is=product-promo] .content h3 {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] > div > div p, [is=product-promo] > div h3 {
+  [is=product-promo] .content p, [is=product-promo] .content h3 {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
-[is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button {
+[is=product-promo] .new, a[is=outline-button], [is=product-promo] form button {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] .new, a[is=outline-button], [is=product-promo] > div input[type=submit], [is=product-promo] button {
+  [is=product-promo] .new, a[is=outline-button], [is=product-promo] form button {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -103,57 +103,68 @@ a[is=outline-button]:hover {
   color: #FFFFFF;
   border-radius: 1.2rem;
 }
-[is=product-promo] button {
+[is=product-promo] form {
   display: none;
 }
-[is=product-promo] button:after {
+[is=product-promo] form button:after {
+  display: none;
   -webkit-mask-image: url(icon-plus.svg);
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] button {
-    display: flex;
+  [is=product-promo] form {
+    display: block;
+    position: absolute;
+    bottom: 2.8rem;
+    right: 0;
   }
+}
+[is=product-promo]:hover img.image-1 {
+  display: none;
+}
+[is=product-promo]:hover img.image-2 {
+  visibility: visible;
+  position: relative;
 }
 [is=product-promo] img {
   border-radius: 1.6rem;
 }
-[is=product-promo] a:hover h3 {
+[is=product-promo] img.image-1 {
+  display: block;
+}
+[is=product-promo] img.image-2 {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[is=product-promo] a:hover {
   text-decoration: underline;
 }
-[is=product-promo] > div {
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
+[is=product-promo] .content {
+  position: relative;
   padding-top: 0.8rem;
 }
 @media screen and (min-width: 740px) {
-  [is=product-promo] > div {
+  [is=product-promo] .content {
     padding-top: 1.2rem;
   }
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] > div {
-    display: flex;
-  }
-}
-[is=product-promo] > div > div {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 1080px) {
-  [is=product-promo] > div > div {
-    margin-top: 0.4rem;
+  [is=product-promo] .content {
+    padding-bottom: 1.6rem;
   }
 }
 @media screen and (min-width: 1080px) {
-  [is=product-promo] > div > div {
-    align-items: flex-end;
-    margin-left: 2.4rem;
+  [is=product-promo] .content h3 {
+    overflow: hidden;
+    width: calc(100% - 60px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
-[is=product-promo] > div > div p {
+[is=product-promo] .content p {
   color: #41495E;
-  margin-bottom: 0.8rem;
+  margin-top: 0.4rem;
 }
 [is=product-promo]:focus-visible {
   background: none;

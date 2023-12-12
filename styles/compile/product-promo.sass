@@ -20,58 +20,71 @@
     color: $white
     border-radius: size(12)
 
-  button
-    @extend %micro-button-style
+  form
     display: none
 
-    &:after
-      -webkit-mask-image: url(icon-plus.svg)
+    button
+      @extend %micro-button-style
+
+      &:after
+        display: none
+        -webkit-mask-image: url(icon-plus.svg)
 
     @include min($screen-l)
-      display: flex
+      display: block
+      position: absolute
+      bottom: units(3.5)
+      right: 0
+
+  &:hover
+
+    img
+      &.image-1
+        display: none
+
+      &.image-2
+        visibility: visible
+        position: relative
+    
 
   img
     border-radius: $border-s
 
-  a:hover
-    h3
-      text-decoration: underline
+    &.image-1
+      display: block
 
-  > div
-    flex-direction: row
-    justify-content: space-between
-    height: 100%
+    &.image-2
+      visibility: hidden
+      position: absolute
+      top: 0
+      left: 0 
+
+  a:hover
+    text-decoration: underline
+
+  .content
+    position: relative
     padding-top: units(1)
 
     @include min($screen-m)
       padding-top: units(1.5)
 
     @include min($screen-l)
-      display: flex
-
-    input[type="submit"]
-      @extend %micro-button-style
+      padding-bottom: units(2)
 
     h3
       @extend %body-3
-        
-
-    > div
-      display: flex
-      flex-direction: column
-
-      @include max($screen-l)
-        margin-top: units(0.5)
-
       @include min($screen-l)
-        align-items: flex-end
-        margin-left: units(3)
-
-      p
-        @extend %body-3
-        @extend %bold
-        color: $grey-800
-        margin-bottom: units(1)
+        overflow: hidden
+        width: calc(100% - 60px)
+        white-space: nowrap
+        text-overflow: ellipsis
+        
+    p
+      @extend %body-3
+      @extend %bold
+      color: $grey-800
+      margin-top: units(0.5)
           
         
 

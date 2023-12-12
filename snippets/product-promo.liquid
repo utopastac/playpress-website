@@ -2,27 +2,38 @@
 
 <div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}">
   <a href="{{ product.url }}" >
-    <img
-      alt="{{ product.featured_image.alt }}"
-      src="{{ product.featured_media | img_url: '600x' }}"
-      loading="lazy"
-      width="600"
-      height="400"
-    />
-  </a>
-  <div>
-    <a href="{{ product.url }}" >
-      <h3>{{ product.title }}</h3>
-    </a>
-    <div>
-      <p>{{ product.price | money }}</p>
-      <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-        <button type="submit" value="Add" class="add-to-cart">Add</button>
-      </form>
+    <div class="image">
+      <img
+        alt="{{ product.featured_image.alt }}"
+        src="{{ product.featured_media | img_url: '600x' }}"
+        class="image-1"
+        loading="lazy"
+        width="600"
+        height="400"
+      />
+      {% for media in product.media offset:2 limit: 1%}
+        <img
+          src="{{ media | img_url: '600x' }}"
+          alt="{{ media.alt | escape  }}"
+          class="image-2"
+          loading="lazy"
+          width="600"
+          height="400"
+        >
+      {% endfor %}
     </div>
-  </div>
+    <div class="content">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.price | money }}</p>
+    </div>
+  </a>
+
+  <form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+    <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+    <button type="submit" value="Add" class="add-to-cart">Add</button>
+  </form>
+  
   {%- if product.metafields.product.is_new == true -%}
     <div class="new">New</div>
   {%- endif -%}
