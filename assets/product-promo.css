@@ -106,6 +106,9 @@ a[is=outline-button]:hover {
 [is=product-promo] button {
   display: none;
 }
+[is=product-promo] button:after {
+  -webkit-mask-image: url(icon-plus.svg);
+}
 @media screen and (min-width: 1080px) {
   [is=product-promo] button {
     display: flex;

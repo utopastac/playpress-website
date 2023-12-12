@@ -24,6 +24,9 @@
     @extend %micro-button-style
     display: none
 
+    &:after
+      -webkit-mask-image: url(icon-plus.svg)
+
     @include min($screen-l)
       display: flex
 
