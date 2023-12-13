@@ -13,13 +13,18 @@ window.addEventListener("load", function(){
     const index = event.target.getAttribute("data-index");
     const imageTarget = galleryLightbox.querySelector(`[data-index="${index}"]`);
     
-    document.body.classList.add("fixed");
+    const currentScroll = document.body.scrollTop;
+    //document.body.classList.add("fixed");
+    //document.body.scrollTo(0, currentScroll);
     //galleryLightbox.classList.add("active");
+
     gsap.to(galleryLightbox, {autoAlpha: 1, duration: 0.25});
 
     const rect = imageTarget.getBoundingClientRect();
     galleryLightbox.scrollTo(0, 0);
     galleryLightbox.scrollTo(0, rect.top-40);
+
+    
     
   }
 
