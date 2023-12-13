@@ -29,7 +29,8 @@ section[is="hero"]
     margin: 0 0 units(4) 0
     overflow: hidden
     border-radius: $border-m
-    transition: scale 0.4s
+    @include animate(0.3s)
+    // transition: scale 0.4s
 
     &.large
       h1
@@ -37,6 +38,7 @@ section[is="hero"]
 
     &:hover
       scale: 1.02
+      transform: rotate(-1deg)
 
       div[is="hero-content"]
         scale: 1.05
@@ -44,10 +46,12 @@ section[is="hero"]
 
       img
         scale: 1.02
+        transform: rotate(2deg)
 
     img
       position: relative
-      transition: scale 0.7s
+      //transition: scale 0.7s
+      @include animate(0.5s)
       border-radius: $border-m
 
     h1
@@ -78,7 +82,7 @@ section[is="hero"]
     align-self: flex-end
     position: relative
     padding: units(3) 
-    transition: all 0.8s
+    @include animate(0.7s)
     background: $white
     border-radius: $border-s
     margin: units(3) units(3) units(3) units(3)

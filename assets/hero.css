@@ -155,10 +155,11 @@ section[is=hero] div[is=hero-main] {
   margin: 0 0 3.2rem 0;
   overflow: hidden;
   border-radius: 3.2rem;
-  transition: scale 0.4s;
+  transition: all 0.3s ease-in-out;
 }
 section[is=hero] div[is=hero-main]:hover {
   scale: 1.02;
+  transform: rotate(-1deg);
 }
 section[is=hero] div[is=hero-main]:hover div[is=hero-content] {
   scale: 1.05;
@@ -166,10 +167,11 @@ section[is=hero] div[is=hero-main]:hover div[is=hero-content] {
 }
 section[is=hero] div[is=hero-main]:hover img {
   scale: 1.02;
+  transform: rotate(2deg);
 }
 section[is=hero] div[is=hero-main] img {
   position: relative;
-  transition: scale 0.7s;
+  transition: all 0.5s ease-in-out;
   border-radius: 3.2rem;
 }
 section[is=hero] div[is=hero-main] p {
@@ -197,7 +199,7 @@ section[is=hero] div[is=hero-content] {
   align-self: flex-end;
   position: relative;
   padding: 2.4rem;
-  transition: all 0.8s;
+  transition: all 0.7s ease-in-out;
   background: #FFFFFF;
   border-radius: 1.6rem;
   margin: 2.4rem 2.4rem 2.4rem 2.4rem;
