@@ -128,15 +128,13 @@ div[is=gallery] .new {
   bottom: 0;
   z-index: 10000;
   padding: 1.6rem;
-  display: none;
-}
-#gallery-lightbox.active {
-  display: block;
+  visibility: hidden;
 }
 #gallery-lightbox .icon {
   position: fixed;
   top: 2.4rem;
   right: 2.4rem;
+  cursor: pointer;
 }
 #gallery-lightbox .container {
   max-width: 120rem;

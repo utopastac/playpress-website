@@ -60,15 +60,16 @@ div[is="gallery"]
   bottom: 0
   z-index: 10000
   padding: units(2)
-  display: none
+  visibility: hidden
 
-  &.active
-    display: block
+  // &.active
+  //   display: block
 
   .icon
     position: fixed
     top: units(3)
     right: units(3)
+    cursor: pointer
 
   .container
     max-width: size(1200)
