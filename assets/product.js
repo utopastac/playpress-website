@@ -1,6 +1,6 @@
 
 window.addEventListener("load", function(){
-  const images = document.querySelectorAll('.image');
+  const images = document.querySelectorAll('.page-image');
   const galleryLightbox = document.querySelector('#gallery-lightbox');
   galleryLightbox.addEventListener('click', closeGallery);
 
