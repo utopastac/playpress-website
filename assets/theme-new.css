@@ -694,6 +694,9 @@ a[is=outline-button]:hover {
 .icon.cart {
   -webkit-mask-image: url(icon-cart.svg);
 }
+.icon.check {
+  -webkit-mask-image: url(icon-check.svg);
+}
 .icon.arrow-right {
   -webkit-mask-image: url(icon-arrow-right.svg);
   -webkit-mask-position: center;

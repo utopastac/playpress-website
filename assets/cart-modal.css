@@ -150,19 +150,19 @@ a[is=outline-button]:hover {
   width: 100%;
   background: white;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1000000;
-  padding: 1.6rem 2.4rem 4rem 2.4rem;
+  padding: 3.2rem 2.4rem 2.4rem 2.4rem;
   visibility: hidden;
   opacity: 0;
+  border-radius: 0 0 1.6rem 1.6rem;
 }
 @media screen and (min-width: 740px) {
   #cart-modal {
     width: 40rem;
     border-radius: 1.6rem;
-    padding-bottom: 2.4rem;
     top: 1.6rem;
     left: auto;
     bottom: auto;
@@ -173,7 +173,16 @@ a[is=outline-button]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.8rem;
+  padding-bottom: 1.2rem;
+}
+#cart-modal header .header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cart-modal header .header-title .icon {
+  background: #1D203F;
+  margin-right: 0.4rem;
 }
 #cart-modal header #cart-modal-close {
   width: 3.2rem;
@@ -183,7 +192,7 @@ a[is=outline-button]:hover {
   justify-content: center;
   cursor: pointer;
 }
-#cart-modal header .icon {
+#cart-modal header .icon.close {
   width: 1.6rem;
   height: 1.6rem;
 }

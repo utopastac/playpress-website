@@ -4,19 +4,19 @@
   width: 100%
   background: white
   position: fixed
-  bottom: 0
+  top: 0
   left: 0
   right: 0
   z-index: 1000000
-  padding: units(2) units(3) units(5) units(3)
+  padding: units(4) units(3) units(3) units(3)
   @extend %elevation-3
   visibility: hidden
   opacity: 0
+  border-radius: 0 0 $border-s $border-s
 
   @include min($screen-m)
     width: units(50)
     border-radius: $border-s
-    padding-bottom: units(3)
     top: units(2)
     left: auto
     bottom: auto
@@ -26,7 +26,16 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-bottom: units(1)
+    padding-bottom: units(1.5)
+
+    .header-title
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .icon
+        background: $grey-1000
+        margin-right: units(0.5)
 
     #cart-modal-close
       width: units(4)
@@ -36,7 +45,7 @@
       justify-content: center
       cursor: pointer
 
-    .icon
+    .icon.close
       width: units(2)
       height: units(2)
 
