@@ -14,7 +14,8 @@ window.addEventListener("load", function(){
     const imageTarget = galleryLightbox.querySelector(`[data-index="${index}"]`);
     
     const currentScroll = document.body.scrollTop;
-    //document.body.classList.add("fixed");
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.classList.add("fixed");
     //document.body.scrollTo(0, currentScroll);
     //galleryLightbox.classList.add("active");
 
@@ -23,14 +24,15 @@ window.addEventListener("load", function(){
     const rect = imageTarget.getBoundingClientRect();
     galleryLightbox.scrollTo(0, 0);
     galleryLightbox.scrollTo(0, rect.top-40);
-
-    
     
   }
 
   function closeGallery(){
     document.body.classList.remove("fixed");
-    //galleryLightbox.classList.remove("active");
+    const scrollY = document.body.style.top;
+    galleryLightbox.classList.remove("active");
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     gsap.to(galleryLightbox, {autoAlpha: 0, duration: 0.2});
   }
 });
