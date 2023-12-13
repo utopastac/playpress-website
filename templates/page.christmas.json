@@ -10,21 +10,35 @@
         "show_delivery_info": false
       }
     },
-    "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780": {
-      "type": "hero",
+    "22a59a63-5a74-47a0-8f03-eec5e802c120": {
+      "type": "product-promo-large",
+      "blocks": {
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-1": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        },
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-2": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        },
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-3": {
+          "type": "gallery_image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-1",
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-2",
+        "template--16135600701632__22a59a63-5a74-47a0-8f03-eec5e802c120-gallery_image-3"
+      ],
       "settings": {
-        "heading": "Join Santa and friends for a magial sleigh ride!",
-        "subtitle": "Santa's Midnight Sleigh Ride",
-        "text": "",
-        "link_text": "Shop",
-        "link_url": "shopify:\/\/products\/santas-midnight-sleigh-ride-playset",
-        "image": "shopify:\/\/shop_images\/santa2_98aef1fa-6127-43ed-87b2-43321e79ba14.png",
-        "bg_color": "#ebedfa",
-        "is_text_color": true,
-        "text_color": "#ffffff",
-        "is_large": false,
-        "is_dark": true,
-        "background_image": "shopify:\/\/shop_images\/christmas-bg-3.jpg"
+        "title": "Add a title",
+        "text": "Join Santa and friends for a magical sleigh ride. Build and play with this 42 pop-out piece playset which is made from sturdy and sustainable Playboard.",
+        "product": "santas-midnight-sleigh-ride-playset",
+        "layout": "left"
       }
     },
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba": {
@@ -135,7 +149,7 @@
   },
   "order": [
     "intro",
-    "c8b17aef-3102-4e1f-bd9b-ee1d1b80e780",
+    "22a59a63-5a74-47a0-8f03-eec5e802c120",
     "68c0bc06-dba5-4ffa-b01a-72ed9611d7ba",
     "1f4f2a30-863f-4a71-b742-2ca54d7962fe",
     "a355abff-5c8f-43b0-ad9b-3a81fb94f3a3",
