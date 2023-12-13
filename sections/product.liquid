@@ -30,7 +30,7 @@
           {% for media in product.media offset:1 %}
             {{ index}}
             <img
-              class="image"
+              class="page-image"
               data-index="{{ forloop.index | plus: 1 }}"
               src="{{ media | img_url: '800x' }}"
               alt="{{ media.alt | escape  }}"
