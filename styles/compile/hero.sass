@@ -60,9 +60,6 @@ section[is="hero"]
       @extend %body-1
       margin-bottom: units(4)
 
-    div[is="button"]
-      margin-top: units(3)
-
     @include min($screen-l)
       border-radius: $border-m
       display: grid
@@ -86,9 +83,20 @@ section[is="hero"]
     border-radius: $border-s
     margin: units(3) units(3) units(3) units(3)
 
+    div[is="button"]
+
+      @include max($screen-m)
+        margin-top: units(2)
+
+      @include min($screen-l)
+        margin-top: units(3)
+
     &.dark
       background: none
       padding: 0
+
+      @include min($screen-l)
+        padding: units(2)
 
       @include min($screen-l)
         padding: units(1) units(2)
@@ -105,6 +113,9 @@ section[is="hero"]
 
     @include min($screen-m)
       display: flex
+      padding: units(3)
+      margin: units(3)
+      justify-content: space-between
 
     @include min($screen-l)
       display: block

@@ -175,9 +175,6 @@ section[is=hero] div[is=hero-main] img {
 section[is=hero] div[is=hero-main] p {
   margin-bottom: 3.2rem;
 }
-section[is=hero] div[is=hero-main] div[is=button] {
-  margin-top: 2.4rem;
-}
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-main] {
     border-radius: 3.2rem;
@@ -205,9 +202,24 @@ section[is=hero] div[is=hero-content] {
   border-radius: 1.6rem;
   margin: 2.4rem 2.4rem 2.4rem 2.4rem;
 }
+@media screen and (max-width: 740px) {
+  section[is=hero] div[is=hero-content] div[is=button] {
+    margin-top: 1.6rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-content] div[is=button] {
+    margin-top: 2.4rem;
+  }
+}
 section[is=hero] div[is=hero-content].dark {
   background: none;
   padding: 0;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-content].dark {
+    padding: 1.6rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-content].dark {
@@ -227,6 +239,9 @@ section[is=hero] div[is=hero-content].dark h1, section[is=hero] div[is=hero-cont
 @media screen and (min-width: 740px) {
   section[is=hero] div[is=hero-content] {
     display: flex;
+    padding: 2.4rem;
+    margin: 2.4rem;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1080px) {
