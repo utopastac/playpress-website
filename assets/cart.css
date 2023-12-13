@@ -12,6 +12,8 @@ div[is=cart] div[is=checkout] button {
   padding: 0 3.2rem;
   color: white;
   background-color: #2D3788;
+  background-image: linear-gradient(-180deg, #2D3788, #19226B);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px, rgba(0, 0, 0, 0.12) 0 5px 12px;
   height: 5.6rem;
   white-space: nowrap;
   outline: none;
@@ -58,6 +60,7 @@ button[is=command] {
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  box-shadow: none;
 }
 button[is=command]:before {
   content: "";

@@ -12,6 +12,7 @@
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  box-shadow: none;
 }
 [is=product-promo] form button:before {
   content: "";
