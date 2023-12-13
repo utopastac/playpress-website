@@ -124,14 +124,14 @@ header[is=header] > p > a .icon {
 header[is=header] > p > a > strong {
   align-items: center;
   background-color: #FAB638;
-  border-radius: 50%;
-  color: #0A122A;
+  border-radius: 1rem;
+  color: #2D3788;
   display: flex;
   font-style: normal;
   height: 2rem;
   justify-content: center;
   margin-right: 0.5rem;
-  width: 2rem;
+  padding: 0 0.5rem;
 }
 @media screen and (min-width: 740px) {
   header[is=header] {

@@ -1,3 +1,7 @@
+#gallery-lightbox #close-button {
+  box-shadow: 0 1px 4px rgba(10, 18, 42, 0.05);
+}
+
 .button-loading:after {
   content: "";
   display: block;
@@ -130,18 +134,30 @@ div[is=gallery] .new {
   padding: 1.6rem;
   visibility: hidden;
 }
-#gallery-lightbox .icon {
+#gallery-lightbox #close-button {
   position: fixed;
   top: 2.4rem;
   right: 2.4rem;
   cursor: pointer;
+  background: white;
+  border-radius: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#gallery-lightbox #close-button .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #1D203F;
 }
 #gallery-lightbox .container {
   max-width: 120rem;
   margin: 0 auto;
 }
 #gallery-lightbox .container img {
-  margin: 3.2rem 0;
+  margin: 0 0 3.2rem 0;
 }
 @media screen and (min-width: 740px) {
   #gallery-lightbox {
