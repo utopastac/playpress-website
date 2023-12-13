@@ -54,7 +54,7 @@ window.addEventListener("load", function(){
     document.querySelector('#cart-modal-price').textContent = formatMoney(item.final_price, format);
     gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
     clearTimeout(timeout);
-    timeout = setTimeout(hideModal, 4500);
+    timeout = setTimeout(hideModal, 5000);
     cartModal.addEventListener('mouseenter', (e) => {
       clearTimeout(timeout);
     });
