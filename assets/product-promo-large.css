@@ -209,10 +209,13 @@ section[is=product-promo-large] .new {
     margin: 0 -1.6rem 0 -1.6rem;
     padding: 0 0.8rem;
   }
-  section[is=product-promo-large] div[is=gallery] * {
+  section[is=product-promo-large] div[is=gallery] > * {
     display: inline-block;
     max-width: 80vw;
     margin-right: 0.8rem;
+  }
+  section[is=product-promo-large] div[is=gallery] > * img {
+    display: block;
   }
 }
 @media screen and (min-width: 740px) {
@@ -226,7 +229,6 @@ section[is=product-promo-large] .new {
 section[is=product-promo-large] div[is=gallery] > div {
   overflow: hidden;
   border-radius: 1.6rem;
-  border: 1px solid #E7E9EF;
 }
 section[is=product-promo-large] div[is=gallery] > div:first-child {
   grid-row: 1/span 2;

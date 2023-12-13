@@ -47,10 +47,13 @@ section[is="product-promo-large"]
       margin: 0 -units(2) 0 -units(2)
       padding: 0 units(1)
 
-      *
+      > *
         display: inline-block
         max-width: 80vw
         margin-right: units(1)
+
+        img
+          display: block
 
     @include min($screen-m)
       display: grid
@@ -61,7 +64,7 @@ section[is="product-promo-large"]
     > div
       overflow: hidden
       border-radius: $border-s
-      border: 1px solid $grey-200
+      //border: 1px solid $grey-200
 
       &:first-child
         grid-row: 1 / span 2
