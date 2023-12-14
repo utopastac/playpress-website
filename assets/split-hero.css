@@ -1,3 +1,44 @@
+section[is=split-hero] div[is=button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  padding: 0 2.4rem;
+  color: white;
+  background-color: #2D3788;
+  background: linear-gradient(186deg, #3D51F5 4.97%, #3645BF 19.29%, #2D3788 85.82%);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.18), 0px 6px 12px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset;
+  height: 4.8rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  transition: scale 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+section[is=split-hero] div[is=button] .icon {
+  background-color: white;
+  margin-left: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+section[is=split-hero] div[is=button]:hover {
+  scale: 1.03;
+}
+section[is=split-hero] div[is=button]:hover .icon {
+  transform: translateX(0.4rem);
+}
+section[is=split-hero] div[is=button]:hover {
+  background-color: #333f9b;
+}
+section[is=split-hero] div[is=button]:active {
+  box-shadow: 1px 2px 0 0 #FAB638;
+  background-color: #272f75;
+}
+
 .button-loading:after {
   content: "";
   display: block;
@@ -15,16 +56,16 @@ section[is=split-hero] div[is=split-hero-content] h4, section[is=split-hero] div
   font-weight: 700;
 }
 
-a[is=outline-button] {
+a[is=outline-button], section[is=split-hero] div[is=button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button] {
+a[is=outline-button], section[is=split-hero] div[is=button] {
   font-weight: 400;
 }
 
-a[is=outline-button] {
+a[is=outline-button], section[is=split-hero] div[is=button] {
   font-weight: 700;
 }
 
@@ -69,6 +110,19 @@ section[is=split-hero] div[is=split-hero-content] h4 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
+  }
+}
+
+section[is=split-hero] div[is=button] {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  section[is=split-hero] div[is=button] {
+    font-size: 2.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 }
 
