@@ -1,5 +1,15 @@
 {
   "sections": {
+    "7d532024-0332-4e65-9fb1-09b4d717e598": {
+      "type": "warning-banner",
+      "settings": {
+        "heading": "",
+        "text": "Order by December 20th for Christmas delivery",
+        "link_text": "Find out more",
+        "link_url": "shopify:\/\/pages\/delivery",
+        "show_banner": true
+      }
+    },
     "7504f886-e145-4c65-bce0-03930b2ca39a": {
       "type": "hero",
       "settings": {
@@ -216,6 +226,7 @@
     }
   },
   "order": [
+    "7d532024-0332-4e65-9fb1-09b4d717e598",
     "7504f886-e145-4c65-bce0-03930b2ca39a",
     "fd5f2d05-6048-421d-b816-943ca49626f9",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
