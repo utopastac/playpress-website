@@ -315,10 +315,26 @@
         "settings": {
           "size": 2
         }
+      },
+      "cart-modal": {
+        "type": "cart-modal",
+        "settings": {
+        }
+      },
+      "1a973377-743b-4619-9d37-be532cd53e06": {
+        "type": "warning-banner",
+        "settings": {
+          "heading": "",
+          "text": "Order by December the 20th for Christmas delivery",
+          "link_text": "Find out more",
+          "link_url": "shopify:\/\/pages\/delivery",
+          "show_banner": true
+        }
       }
     },
     "content_for_index": [
       "896052e9-7468-470d-89eb-22991a6f0e2c",
+      "1a973377-743b-4619-9d37-be532cd53e06",
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935",
       "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
