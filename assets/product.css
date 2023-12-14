@@ -328,6 +328,9 @@ div[is=product] > div form {
 div[is=product] > div form #quantity {
   width: 6.4rem;
 }
+div[is=product] > div form button {
+  height: 5.6rem;
+}
 div[is=product] > div form > button, div[is=product] > div form > p {
   flex: 1;
   margin-left: 0.8rem;
