@@ -30,6 +30,7 @@ section[is="hero"]
     overflow: hidden
     border-radius: $border-m
     @include animate(0.3s)
+    transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8)
     // transition: scale 0.4s
 
     &.large
@@ -51,7 +52,8 @@ section[is="hero"]
     img
       position: relative
       //transition: scale 0.7s
-      @include animate(0.5s)
+      @include animate(0.4s)
+      transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8)
       border-radius: $border-m
 
     h1
@@ -82,12 +84,14 @@ section[is="hero"]
     align-self: flex-end
     position: relative
     padding: units(3) 
-    @include animate(0.7s)
+    @include animate(0.55s)
+    transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8)
     background: $white
     border-radius: $border-s
     margin: units(3) units(3) units(3) units(3)
 
     div[is="button"]
+      @extend %button-style
 
       @include max($screen-m)
         margin-top: units(2)
@@ -109,7 +113,7 @@ section[is="hero"]
         background: $white
         color: $grey-1000
 
-        &:before
+        .icon
           background: $grey-1000
 
       h1, h4, p

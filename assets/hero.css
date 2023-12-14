@@ -3,6 +3,47 @@ section[is=hero] div[is=hero-main] {
   margin: 0 auto;
 }
 
+section[is=hero] div[is=hero-content] div[is=button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  padding: 0 2.4rem;
+  color: white;
+  background-color: #2D3788;
+  background: linear-gradient(186deg, #3D51F5 4.97%, #3645BF 19.29%, #2D3788 85.82%);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.18), 0px 6px 12px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset;
+  height: 4.8rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  transition: scale 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+section[is=hero] div[is=hero-content] div[is=button] .icon {
+  background-color: white;
+  margin-left: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+section[is=hero] div[is=hero-content] div[is=button]:hover {
+  scale: 1.03;
+}
+section[is=hero] div[is=hero-content] div[is=button]:hover .icon {
+  transform: translateX(0.4rem);
+}
+section[is=hero] div[is=hero-content] div[is=button]:hover {
+  background-color: #333f9b;
+}
+section[is=hero] div[is=hero-content] div[is=button]:active {
+  box-shadow: 1px 2px 0 0 #FAB638;
+  background-color: #272f75;
+}
+
 .button-loading:after {
   content: "";
   display: block;
@@ -20,16 +61,16 @@ section[is=hero] div[is=hero-main] h4, section[is=hero] div[is=hero-main] h1, se
   font-weight: 700;
 }
 
-a[is=outline-button], section[is=hero] div[is=hero-main] p {
+a[is=outline-button], section[is=hero] div[is=hero-content] div[is=button], section[is=hero] div[is=hero-main] p {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], section[is=hero] div[is=hero-main] p {
+a[is=outline-button], section[is=hero] div[is=hero-content] div[is=button], section[is=hero] div[is=hero-main] p {
   font-weight: 400;
 }
 
-a[is=outline-button] {
+a[is=outline-button], section[is=hero] div[is=hero-content] div[is=button] {
   font-weight: 700;
 }
 
@@ -85,6 +126,19 @@ section[is=hero] div[is=hero-main] p {
 @media screen and (min-width: 1080px) {
   section[is=hero] div[is=hero-main] p {
     font-size: 2.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=hero] div[is=hero-content] div[is=button] {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  section[is=hero] div[is=hero-content] div[is=button] {
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -156,6 +210,7 @@ section[is=hero] div[is=hero-main] {
   overflow: hidden;
   border-radius: 3.2rem;
   transition: all 0.3s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8);
 }
 section[is=hero] div[is=hero-main]:hover {
   scale: 1.02;
@@ -171,7 +226,8 @@ section[is=hero] div[is=hero-main]:hover img {
 }
 section[is=hero] div[is=hero-main] img {
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8);
   border-radius: 3.2rem;
 }
 section[is=hero] div[is=hero-main] p {
@@ -199,7 +255,8 @@ section[is=hero] div[is=hero-content] {
   align-self: flex-end;
   position: relative;
   padding: 2.4rem;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.55s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8);
   background: #FFFFFF;
   border-radius: 1.6rem;
   margin: 2.4rem 2.4rem 2.4rem 2.4rem;
@@ -232,7 +289,7 @@ section[is=hero] div[is=hero-content].dark div[is=button] {
   background: #FFFFFF;
   color: #1D203F;
 }
-section[is=hero] div[is=hero-content].dark div[is=button]:before {
+section[is=hero] div[is=hero-content].dark div[is=button] .icon {
   background: #1D203F;
 }
 section[is=hero] div[is=hero-content].dark h1, section[is=hero] div[is=hero-content].dark h4, section[is=hero] div[is=hero-content].dark p {

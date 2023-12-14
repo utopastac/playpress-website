@@ -14,24 +14,11 @@
   overflow: hidden;
   box-shadow: none;
 }
-[is=product-promo] form button:before {
-  content: "";
-  display: block;
-  width: 1.6rem;
-  height: 1.6rem;
-  position: relative;
-  background: #2D3788;
-  -webkit-mask-image: url(icon-arrow-right.svg);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  margin-left: 0.4rem;
-}
 [is=product-promo] form button:hover {
   background-color: #2D3788;
   color: white;
 }
-[is=product-promo] form button:hover:before {
+[is=product-promo] form button:hover .icon {
   background: white;
 }
 [is=product-promo] form button:active {
