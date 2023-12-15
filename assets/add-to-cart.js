@@ -51,7 +51,7 @@ window.addEventListener("load", function(){
     document.querySelector('#cart-modal-image').src = '';
     document.querySelector('#cart-modal-image').src = item.image;
     document.querySelector('#cart-modal-title').textContent = title;
-    document.querySelector('#cart-modal-price').textContent = formatMoney(item.final_price, format);
+    document.querySelector('#cart-modal-price').textContent = formatMoney(item.price, format);
     gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
     clearTimeout(timeout);
     timeout = setTimeout(hideModal, 5000);

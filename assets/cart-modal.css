@@ -210,9 +210,6 @@ a[is=outline-button]:hover {
   border-radius: 0.8rem;
   width: 100%;
 }
-#cart-modal .product p {
-  visibility: hidden;
-}
 #cart-modal footer {
   padding-top: 2.4rem;
   display: flex;
