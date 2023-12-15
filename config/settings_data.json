@@ -325,7 +325,7 @@
         "type": "warning-banner",
         "settings": {
           "heading": "",
-          "text": "Order by December the 20th for Christmas delivery",
+          "text": "Order by December the 20th for Christmas delivery in the UK",
           "link_text": "Find out more",
           "link_url": "shopify:\/\/pages\/delivery",
           "show_banner": true
