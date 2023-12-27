@@ -242,18 +242,17 @@
       "c6f9abd2-2511-4cd0-a07b-60035eb3d935": {
         "type": "hero",
         "settings": {
-          "heading": "Perfect gifts for Christmas!",
-          "subtitle": "🎄 Christmas 🎄",
+          "heading": "Stay entertained on the move",
+          "subtitle": "Perfect travel companions",
           "text": "",
           "link_text": "Shop",
-          "link_url": "shopify:\/\/pages\/christmas",
-          "image": "shopify:\/\/shop_images\/santa2_98aef1fa-6127-43ed-87b2-43321e79ba14.png",
-          "bg_color": "#2b68a0",
-          "is_text_color": true,
+          "link_url": "shopify:\/\/collections\/under-10",
+          "image": "shopify:\/\/shop_images\/travel.jpg",
+          "bg_color": "#a29bf2",
+          "is_text_color": false,
           "text_color": "#ffffff",
           "is_large": true,
-          "is_dark": true,
-          "background_image": "shopify:\/\/shop_images\/christmas-bg-3.jpg"
+          "is_dark": false
         }
       },
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
