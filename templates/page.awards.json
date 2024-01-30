@@ -21,12 +21,6 @@
         "layout": "left"
       }
     },
-    "gap_M4eDpB": {
-      "type": "gap",
-      "settings": {
-        "size": 1
-      }
-    },
     "content_with_product_DrYbw8": {
       "type": "content-with-product",
       "settings": {
@@ -35,6 +29,16 @@
         "text": "Highly Commended",
         "product": "mini-vets-play-set",
         "image": "shopify:\/\/shop_images\/logos-attractions.png",
+        "layout": "left"
+      }
+    },
+    "content_with_product_zJRcJB": {
+      "type": "content-with-product",
+      "settings": {
+        "title": "The Licensing Awards Best Sustainable Licensed Product",
+        "date": "2021, 2022, 2023",
+        "text": "Finalist",
+        "product": "",
         "layout": "left"
       }
     },
@@ -91,8 +95,8 @@
   "order": [
     "intro",
     "content_with_product_7bPTC7",
-    "gap_M4eDpB",
     "content_with_product_DrYbw8",
+    "content_with_product_zJRcJB",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
