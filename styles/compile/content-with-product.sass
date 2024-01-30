@@ -1,9 +1,10 @@
 @import '../assets'
 
 section[is="content-with-product"]
-  display: flex
-  position: relative
-  align-items: flex-start
+  @include min($screen-m)
+    display: flex
+    position: relative
+    align-items: flex-start
 
   @include min($screen-m)
     &.swapped
@@ -12,13 +13,17 @@ section[is="content-with-product"]
   div[is="gallery"]
     img
       display: block
-      max-width: units(40)
+      @include min($screen-m)
+        max-width: units(40)
 
   div[is="content"]
-    display: flex
-    align-items: flex-start
+    @include min($screen-m)
+      display: flex
+      align-items: flex-start
 
     div[is="main-content"]
+      @include max($screen-m)
+        padding: units(4) 0
       @include min($screen-m)
         padding: 0 units(8) 0 units(4)
 
@@ -32,5 +37,6 @@ section[is="content-with-product"]
         @extend %body-2
 
   div[is="product"]
-    max-width: units(30)
+    @include min($screen-m)
+      max-width: units(30)
       

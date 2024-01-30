@@ -101,10 +101,12 @@ a[is=outline-button]:hover {
   background: #EBEDFA;
 }
 
-section[is=content-with-product] {
-  display: flex;
-  position: relative;
-  align-items: flex-start;
+@media screen and (min-width: 740px) {
+  section[is=content-with-product] {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+  }
 }
 @media screen and (min-width: 740px) {
   section[is=content-with-product].swapped {
@@ -113,17 +115,30 @@ section[is=content-with-product] {
 }
 section[is=content-with-product] div[is=gallery] img {
   display: block;
-  max-width: 32rem;
 }
-section[is=content-with-product] div[is=content] {
-  display: flex;
-  align-items: flex-start;
+@media screen and (min-width: 740px) {
+  section[is=content-with-product] div[is=gallery] img {
+    max-width: 32rem;
+  }
+}
+@media screen and (min-width: 740px) {
+  section[is=content-with-product] div[is=content] {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 740px) {
+  section[is=content-with-product] div[is=content] div[is=main-content] {
+    padding: 3.2rem 0;
+  }
 }
 @media screen and (min-width: 740px) {
   section[is=content-with-product] div[is=content] div[is=main-content] {
     padding: 0 6.4rem 0 3.2rem;
   }
 }
-section[is=content-with-product] div[is=product] {
-  max-width: 24rem;
+@media screen and (min-width: 740px) {
+  section[is=content-with-product] div[is=product] {
+    max-width: 24rem;
+  }
 }
