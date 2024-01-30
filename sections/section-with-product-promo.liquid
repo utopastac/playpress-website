@@ -1,0 +1,83 @@
+{{ 'section-with-product-promo.css' | asset_url | stylesheet_tag }}
+
+<section is="section-with-product-promo" class="{% if section.settings.layout == 'right' %}swapped{% endif %} product-item" data-id="{{ section.settings.product.variants.first.id }}">
+  {%- if section.settings.image == blank -%}
+    {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
+  {%- else -%}
+    <img
+      src="{{ section.settings.image | img_url: 'master' }}"
+      alt="{{ section.settings.image.alt }}"
+      width="900"
+      height="600"
+      is="in-action"
+      loading="lazy"
+    />
+  {%- endif -%}
+  <div is="main-content">
+    <h2>{{ section.settings.heading | escape }}</h2>
+    <h3>{{ section.settings.text }}</h3>
+  </div>
+  <div is="content">
+    <div>
+      <div is="product">
+        {% render 'product-promo', product: section.settings.product %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product promo large",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"      
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Section with product promo",
+      "blocks": [
+        {
+          "type": "gallery_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

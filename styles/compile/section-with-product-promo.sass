@@ -1,0 +1,110 @@
+@import '../assets'
+
+section[is="section-with-product-promo"]
+  display: grid
+  grid-gap: units(2)
+  position: relative
+
+  @include min($screen-m)
+    grid-template-columns: 1.75fr 1fr
+    grid-gap: $space-s
+
+    &.swapped > div[is="gallery"] 
+      grid-column: 2
+      
+    &.swapped > div[is="content"] 
+      grid-column: 1
+
+  a:hover h1
+    text-decoration: underline
+
+  .new
+    @extend %body-3
+    @extend %bold
+    padding: size(0) size(8)
+    border-radius: $border-s
+    display: inline-block
+    background: $green-1000
+    color: white
+    position: absolute
+    top: units(1)
+    left: units(1)
+
+    @include min($screen-m)
+      position: static
+      top: 0
+      left: 0
+      margin-bottom: units(0.5)
+
+  button
+    @extend %button-style
+
+  div[is="gallery"]
+    @include max($screen-m)
+      white-space: nowrap
+      overflow-x: scroll
+      -webkit-overflow-scrolling: touch
+      margin: 0 -units(2) 0 -units(2)
+      padding: 0 units(1)
+
+      > *
+        display: inline-block
+        max-width: 80vw
+        margin-right: units(1)
+
+        img
+          display: block
+
+    @include min($screen-m)
+      display: grid
+      grid-gap: units(2)
+      grid-template-columns: 1.5fr 1fr
+      grid-template-rows: 1fr 1fr
+
+    > div
+      overflow: hidden
+      border-radius: $border-s
+      //border: 1px solid $grey-200
+
+      &:first-child
+        grid-row: 1 / span 2
+
+      img
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+  div[is="content"]
+    display: flex
+    align-items: center
+
+    .description
+      p
+        @extend %body-2
+
+    input[type="submit"]
+      @extend %button-style
+
+    h1
+      @extend %heading-2
+
+    div[is="call-to-action"]
+      display: flex
+      align-items: center
+      margin-top: units(2)
+    
+    p[is="product-price"]
+      @extend %heading-3
+      @extend %regular
+      flex: 0
+      padding-right: units(2)
+
+    .meta
+      margin: units(0.5) 0 units(1) 0
+      
+      h3
+        @extend %body-1
+        @extend %bold
+        color: $grey-800
+
+      
