@@ -1,6 +1,6 @@
-{{ 'content-with-product-promo.css' | asset_url | stylesheet_tag }}
+{{ 'content-with-product.css' | asset_url | stylesheet_tag }}
 
-<section is="content-with-product-promo" class="{% if section.settings.layout == 'right' %}swapped{% endif %} product-item" data-id="{{ section.settings.product.variants.first.id }}">
+<section is="content-with-product" class="{% if section.settings.layout == 'right' %}swapped{% endif %} product-item" data-id="{{ section.settings.product.variants.first.id }}">
   {%- if section.settings.image == blank -%}
     {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
   {%- else -%}
@@ -28,7 +28,7 @@
 
 {% schema %}
 {
-  "name": "Content with product promo",
+  "name": "Content with product",
   "settings": [
     {
       "type": "text",
@@ -71,7 +71,7 @@
   ],
   "presets": [
     {
-      "name": "Content with product promo"
+      "name": "Content with product"
     }
   ]
 }
