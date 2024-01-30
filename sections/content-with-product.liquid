@@ -18,6 +18,7 @@
   <div is="content">
     <div is="main-content">
       <h4>{{ section.settings.date | escape }}</h4>
+      <h3>{{ section.settings.award | escape }}</h3>
       <h2>{{ section.settings.title | escape }}</h2>
       <p>{{ section.settings.text }}</p>
     </div>
@@ -31,6 +32,18 @@
 {
   "name": "Content with product",
   "settings": [
+    {
+      "type": "text",
+      "id": "date",
+      "label": "Date",
+      "default": "Add a date"
+    },
+    {
+      "type": "text",
+      "id": "award",
+      "label": "Award",
+      "default": "Add an award body"
+    },
     {
       "type": "text",
       "id": "title",
