@@ -1,27 +1,28 @@
 {{ 'content-with-product.css' | asset_url | stylesheet_tag }}
 
 <section is="content-with-product" class="{% if section.settings.layout == 'right' %}swapped{% endif %} product-item" data-id="{{ section.settings.product.variants.first.id }}">
-  {%- if section.settings.image == blank -%}
-    {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
-  {%- else -%}
-    <img
-      src="{{ section.settings.image | img_url: 'master' }}"
-      alt="{{ section.settings.image.alt }}"
-      width="900"
-      height="600"
-      is="in-action"
-      loading="lazy"
-    />
-  {%- endif -%}
-  <div is="main-content">
-    <h2>{{ section.settings.heading | escape }}</h2>
-    <h3>{{ section.settings.text }}</h3>
+  <div is="gallery">
+    {%- if section.settings.image == blank -%}
+      {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
+    {%- else -%}
+      <img
+        src="{{ section.settings.image | img_url: 'master' }}"
+        alt="{{ section.settings.image.alt }}"
+        width="900"
+        height="600"
+        is="in-action"
+        loading="lazy"
+      />
+    {%- endif -%}
   </div>
   <div is="content">
-    <div>
-      <div is="product">
-        {% render 'product-promo', product: section.settings.product %}
-      </div>
+    <div is="main-content">
+      <h4>{{ section.settings.date | escape }}</h4>
+      <h2>{{ section.settings.title | escape }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+    <div is="product">
+      {% render 'product-promo', product: section.settings.product %}
     </div>
   </div>
 </section>
@@ -35,6 +36,12 @@
       "id": "title",
       "label": "Heading",
       "default": "Add a title"
+    },
+    {
+      "type": "text",
+      "id": "date",
+      "label": "Date",
+      "default": "Add a date"
     },
     {
       "type": "textarea",
