@@ -1,0 +1,21 @@
+
+{% render 'section-header', title: section.settings.title, text: section.settings.text, center: false %}
+
+{% schema %}
+{
+  "name": "Section header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+}
+{% endschema %}
