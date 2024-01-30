@@ -10,6 +10,15 @@
         "show_delivery_info": false
       }
     },
+    "content_with_product_7bPTC7": {
+      "type": "content-with-product",
+      "settings": {
+        "title": "Award name",
+        "text": "The company strives for excellence in all aspects, aiming to deliver exceptional quality and value to its customers.",
+        "product": "rnli-lifeboat-eco-friendly-playset",
+        "layout": "left"
+      }
+    },
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
       "type": "gap",
       "settings": {
@@ -74,6 +83,7 @@
   },
   "order": [
     "intro",
+    "content_with_product_7bPTC7",
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
     "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
