@@ -13,8 +13,9 @@
     "content_with_product_7bPTC7": {
       "type": "content-with-product",
       "settings": {
-        "title": "Play Creator Awards - Toy designer of the year (licensed product)",
         "date": "2019",
+        "award": "Play Creator Awards",
+        "title": "Toy designer of the year (licensed product)",
         "text": "Winner",
         "product": "rnli-lifeboat-eco-friendly-playset",
         "image": "shopify:\/\/shop_images\/logos-museums.png",
@@ -24,8 +25,9 @@
     "content_with_product_DrYbw8": {
       "type": "content-with-product",
       "settings": {
-        "title": "Ethical and Sustainable Gift Gift of the year",
         "date": "2020",
+        "award": "Gift of the year",
+        "title": "Ethical and Sustainable Gift",
         "text": "Highly Commended",
         "product": "mini-vets-play-set",
         "image": "shopify:\/\/shop_images\/logos-attractions.png",
@@ -35,8 +37,42 @@
     "content_with_product_zJRcJB": {
       "type": "content-with-product",
       "settings": {
-        "title": "The Licensing Awards Best Sustainable Licensed Product",
         "date": "2021, 2022, 2023",
+        "award": "The Licensing Awards",
+        "title": "Best Sustainable Licensed Product",
+        "text": "Finalist",
+        "product": "",
+        "layout": "left"
+      }
+    },
+    "content_with_product_9BXmQd": {
+      "type": "content-with-product",
+      "settings": {
+        "date": "2023",
+        "award": "Glee, New Product Awards",
+        "title": "Gifts, Body & Bath, Christmas, Greeting Cards, Toys and Games",
+        "text": "Winner",
+        "product": "",
+        "layout": "left"
+      }
+    },
+    "content_with_product_LrYiLq": {
+      "type": "content-with-product",
+      "settings": {
+        "date": "2024",
+        "award": "Gift of the Year",
+        "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
+        "text": "Finalist",
+        "product": "",
+        "layout": "left"
+      }
+    },
+    "content_with_product_mip3k7": {
+      "type": "content-with-product",
+      "settings": {
+        "date": "2024",
+        "award": "Cultural Enterprises Awards",
+        "title": "Best Supplier",
         "text": "Finalist",
         "product": "",
         "layout": "left"
@@ -97,6 +133,9 @@
     "content_with_product_7bPTC7",
     "content_with_product_DrYbw8",
     "content_with_product_zJRcJB",
+    "content_with_product_9BXmQd",
+    "content_with_product_LrYiLq",
+    "content_with_product_mip3k7",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
