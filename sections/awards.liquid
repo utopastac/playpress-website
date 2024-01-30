@@ -1,0 +1,102 @@
+{{ 'awards.css' | asset_url | stylesheet_tag }}
+
+<section is="awards">
+  {% for block in section.blocks %}
+    <article is="award">
+      <div is="gallery">
+        {%- if block.settings.image == blank -%}
+          {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
+        {%- else -%}
+          <img
+            src="{{ block.settings.image | img_url: 'master' }}"
+            alt="{{ block.settings.image.alt }}"
+            width="900"
+            height="600"
+            is="in-action"
+            loading="lazy"
+          />
+        {%- endif -%}
+      </div>
+      <div is="content">
+        <div is="main-content">
+          <h4>{{ block.settings.date | escape }}</h4>
+          <h3>{{ block.settings.award | escape }}</h3>
+          <h2>{{ block.settings.title | escape }}</h2>
+          <p>{{ block.settings.text }}</p>
+        </div>
+        <div is="product">
+          {% render 'product-promo', product: block.settings.product %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Awards",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "award",
+      "name": "Award",
+      "settings": [
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "Add a date"
+        },
+        {
+          "type": "text",
+          "id": "award",
+          "label": "Award Body",
+          "default": "Add an award body"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Award title",
+          "default": "Add a title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Placing",
+          "info": "Optional"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"      
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Awards",
+      "blocks": [
+        {
+          "type": "award"
+        },
+        {
+          "type": "award"
+        },
+        {
+          "type": "award"
+        },
+        {
+          "type": "award"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
