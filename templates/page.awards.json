@@ -10,76 +10,47 @@
         "show_delivery_info": false
       }
     },
-    "content_with_product_7bPTC7": {
-      "type": "content-with-product",
+    "awards_9fa3BX": {
+      "type": "awards",
+      "blocks": {
+        "award_block_PnJVUQ": {
+          "type": "award_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/play-creators-awards.png",
+            "date": "2019",
+            "award": "Play Creator Awards",
+            "title": "Toy Designer of the Year (Licensed Product)",
+            "placing": "Winner",
+            "product": "rnli-lifeboat-eco-friendly-playset"
+          }
+        },
+        "award_block_J4xynr": {
+          "type": "award_block",
+          "settings": {
+            "date": "Add a date",
+            "award": "Add an award body",
+            "title": "Add a title",
+            "placing": "",
+            "product": ""
+          }
+        },
+        "award_block_KbGRq9": {
+          "type": "award_block",
+          "settings": {
+            "date": "Add a date",
+            "award": "Add an award body",
+            "title": "Add a title",
+            "placing": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "award_block_PnJVUQ",
+        "award_block_J4xynr",
+        "award_block_KbGRq9"
+      ],
       "settings": {
-        "date": "2019",
-        "award": "Play Creator Awards",
-        "title": "Toy designer of the year (licensed product)",
-        "text": "Winner",
-        "product": "rnli-lifeboat-eco-friendly-playset",
-        "image": "shopify:\/\/shop_images\/play-creators-awards.png",
-        "layout": "left"
-      }
-    },
-    "content_with_product_DrYbw8": {
-      "type": "content-with-product",
-      "settings": {
-        "date": "2020",
-        "award": "Gift of the year",
-        "title": "Ethical and Sustainable Gift",
-        "text": "Highly Commended",
-        "product": "mini-vets-play-set",
-        "image": "shopify:\/\/shop_images\/gift-of-the-year.png",
-        "layout": "left"
-      }
-    },
-    "content_with_product_zJRcJB": {
-      "type": "content-with-product",
-      "settings": {
-        "date": "2021, 2022, 2023",
-        "award": "The Licensing Awards",
-        "title": "Best Sustainable Licensed Product",
-        "text": "Finalist",
-        "product": "",
-        "image": "shopify:\/\/shop_images\/the-licensing-awards.png",
-        "layout": "left"
-      }
-    },
-    "content_with_product_9BXmQd": {
-      "type": "content-with-product",
-      "settings": {
-        "date": "2023",
-        "award": "Glee, New Product Awards",
-        "title": "Gifts, Body & Bath, Christmas, Greeting Cards, Toys and Games",
-        "text": "Winner",
-        "product": "",
-        "image": "shopify:\/\/shop_images\/image_77.png",
-        "layout": "left"
-      }
-    },
-    "content_with_product_LrYiLq": {
-      "type": "content-with-product",
-      "settings": {
-        "date": "2024",
-        "award": "Gift of the Year",
-        "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
-        "text": "Finalist",
-        "product": "",
-        "image": "shopify:\/\/shop_images\/gift-of-the-year.png",
-        "layout": "left"
-      }
-    },
-    "content_with_product_mip3k7": {
-      "type": "content-with-product",
-      "settings": {
-        "date": "2024",
-        "award": "Cultural Enterprises Awards",
-        "title": "Best Supplier",
-        "text": "Finalist",
-        "product": "",
-        "image": "shopify:\/\/shop_images\/cultural-enterprise-awards.png",
-        "layout": "left"
       }
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
@@ -134,12 +105,7 @@
   },
   "order": [
     "intro",
-    "content_with_product_7bPTC7",
-    "content_with_product_DrYbw8",
-    "content_with_product_zJRcJB",
-    "content_with_product_9BXmQd",
-    "content_with_product_LrYiLq",
-    "content_with_product_mip3k7",
+    "awards_9fa3BX",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
