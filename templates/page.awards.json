@@ -13,9 +13,9 @@
     "content_with_product_7bPTC7": {
       "type": "content-with-product",
       "settings": {
-        "title": "Award name",
-        "date": "Add a date",
-        "text": "The company strives for excellence in all aspects, aiming to deliver exceptional quality and value to its customers.",
+        "title": "Play Creator Awards - Toy designer of the year (licensed product)",
+        "date": "2019",
+        "text": "Winner",
         "product": "rnli-lifeboat-eco-friendly-playset",
         "image": "shopify:\/\/shop_images\/logos-museums.png",
         "layout": "left"
@@ -30,9 +30,9 @@
     "content_with_product_DrYbw8": {
       "type": "content-with-product",
       "settings": {
-        "title": "Add a title",
-        "date": "Add a date",
-        "text": "",
+        "title": "Ethical and Sustainable Gift Gift of the year",
+        "date": "2020",
+        "text": "Highly Commended",
         "product": "mini-vets-play-set",
         "image": "shopify:\/\/shop_images\/logos-attractions.png",
         "layout": "left"
