@@ -10,75 +10,43 @@
   background-size: 24px 24px;
 }
 
-section[is=awards] article[is=award] div[is=content] div[is=main-content] h4, section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], section[is=awards] article[is=award] div[is=product] a[is=product-link] span, section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
+a[is=outline-button], section[is=awards] article[is=award] a[is=product-link] span, section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] h4, section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], section[is=awards] article[is=award] div[is=product] a[is=product-link] span, section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
+a[is=outline-button], section[is=awards] article[is=award] a[is=product-link] span, section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] h4, section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
   font-weight: 400;
 }
 
-section[is=awards] article[is=award] div[is=product] a[is=product-link] p, a[is=outline-button] {
-  font-weight: 700;
+section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
+  font-weight: 500;
 }
 
-section[is=awards] article[is=award] div[is=content] div[is=main-content] h4 {
-  font-weight: 900;
+section[is=awards] article[is=award] div[is=content] div[is=main-content] h2, a[is=outline-button] {
+  font-weight: 700;
 }
 
 section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
-  }
-}
-
-section[is=awards] article[is=award] div[is=content] div[is=main-content] h4 {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1080px) {
-  section[is=awards] article[is=award] div[is=content] div[is=main-content] h4 {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
-  }
-}
-
-section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
-    font-size: 2.1rem;
+  section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
+    font-size: 2.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-section[is=awards] article[is=award] div[is=product] a[is=product-link] span {
+section[is=awards] article[is=award] a[is=product-link] span, section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] h4 {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=awards] article[is=award] div[is=product] a[is=product-link] span {
+  section[is=awards] article[is=award] a[is=product-link] span, section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] p, section[is=awards] article[is=award] div[is=content] div[is=main-content] h4 {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -114,56 +82,82 @@ a[is=outline-button]:hover {
   background: #EBEDFA;
 }
 
-@media screen and (min-width: 740px) {
-  section[is=awards] article[is=award] {
-    display: flex;
-    position: relative;
-    align-items: flex-start;
+section[is=awards] {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 550px) {
+  section[is=awards] {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 740px) {
-  section[is=awards] article[is=award].swapped {
-    flex-direction: column-reverse;
+  section[is=awards] {
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
+}
+@media screen and (min-width: 1080px) {
+  section[is=awards] {
+    grid-gap: 6.4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+section[is=awards] article[is=award] {
+  position: relative;
 }
 section[is=awards] article[is=award] div[is=gallery] img {
   display: block;
-}
-@media screen and (min-width: 740px) {
-  section[is=awards] article[is=award] div[is=gallery] img {
-    max-width: 32rem;
-  }
-}
-@media screen and (min-width: 740px) {
-  section[is=awards] article[is=award] div[is=content] {
-    display: flex;
-    align-items: flex-start;
-  }
+  border: 1px solid #E7E9EF;
 }
 @media screen and (max-width: 740px) {
   section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 3.2rem 0;
+    padding: 2.4rem 0;
   }
 }
 @media screen and (min-width: 740px) {
   section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 0 6.4rem 0 3.2rem;
+    padding: 2.4rem 0;
   }
 }
-section[is=awards] article[is=award] div[is=product] a[is=product-link] {
-  padding: 0.4rem 0;
-  display: block;
+section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
+  line-height: 115%;
+  margin: 0.8rem 0 1.6rem 0;
+}
+section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  padding: 0rem 1.6rem;
+  border-radius: 500px;
+  background-color: #EBEDFA;
+  display: inline;
+}
+section[is=awards] article[is=award] div[is=content] div[is=main-content] p.winner {
+  background-color: #2D8872;
+  color: #FFFFFF;
+}
+section[is=awards] article[is=award] a[is=product-link] {
+  cursor: pointer !important;
+  padding: 0.8rem 0.8rem;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
+  border: 1px solid #E7E9EF;
+  border-radius: 1.6rem;
 }
-section[is=awards] article[is=award] div[is=product] a[is=product-link] p {
+section[is=awards] article[is=award] a[is=product-link]:hover {
+  border: 1px solid #2D3788;
+}
+section[is=awards] article[is=award] a[is=product-link] p {
+  margin-bottom: 0.4rem;
   width: 100%;
 }
-section[is=awards] article[is=award] div[is=product] a[is=product-link] span {
+section[is=awards] article[is=award] a[is=product-link] span {
   display: block;
 }
-section[is=awards] article[is=award] div[is=product] a[is=product-link] img {
+section[is=awards] article[is=award] a[is=product-link] img {
   width: 40%;
   max-width: 12rem;
   height: auto;

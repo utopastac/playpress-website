@@ -1,63 +1,88 @@
 @import '../assets'
 
 section[is="awards"]
-  article[is="award"]
-    @include min($screen-m)
-      display: flex
-      position: relative
-      align-items: flex-start
+  display: grid
+  grid-gap: $space-s
+  grid-template-columns: 1fr
 
-    @include min($screen-m)
-      &.swapped
-        flex-direction: column-reverse
+  @include min($screen-s)
+    grid-template-columns: 1fr 1fr
+
+  @include min($screen-m)
+    grid-gap: $space-s
+    grid-template-columns: 1fr 1fr 1fr
+
+  @include min($screen-l)
+    grid-gap: $space-sm
+    grid-template-columns: 1fr 1fr 1fr 1fr
+
+  article[is="award"]
+    position: relative
 
     div[is="gallery"]
       img
         display: block
-        @include min($screen-m)
-          max-width: units(40)
+        border: 1px solid $border-color
 
     div[is="content"]
-      @include min($screen-m)
-        display: flex
-        align-items: flex-start
 
       div[is="main-content"]
         @include max($screen-m)
-          padding: units(4) 0
+          padding: units(3) 0
         @include min($screen-m)
-          padding: 0 units(8) 0 units(4)
+          padding: units(3) 0
 
         h4
-          @extend %overline
-
-        h2
-          @extend %heading-3
-
-        p
-          @extend %body-2
-
-    div[is="product"]
-      
-      a[is="product-link"]
-        padding: units(0.5) 0
-        display: block
-        display: flex
-        align-items: flex-start
-        align-content: flex-start
-
-        p
-          @extend %bold
-          width: 100%
-
-        span
-          display: block
           @extend %body-3
 
-        img
-          width: 40%
-          max-width: size(120)
-          height: auto
-          border-radius: $border-s
-          margin-right: units(1.5)
+        h2
+          @extend %body-1
+          @extend %bold
+          line-height: $heading-line-height
+          margin: units(1) 0 units(2) 0
+
+        p
+          position: absolute
+          top: units(1.5)
+          left: units(1.5)
+          @extend %body-3
+          @extend %medium
+          padding: units(0) units(2)
+          border-radius: 500px
+          background-color: $blue-200
+          display: inline
+
+          &.winner
+            background-color: $green-1000
+            color: $white
+
+
+    a[is="product-link"]
+      cursor: pointer !important
+      padding: units(1) units(1)
+      display: flex
+      align-items: flex-start
+      align-content: flex-start
+      border: 1px solid $border-color
+      border-radius: $border-s
+
+      &:hover
+        border: 1px solid $blue-1000
+
+      p
+        @extend %medium
+        @extend %body-3
+        margin-bottom: units(0.5)
+        width: 100%
+
+      span
+        display: block
+        @extend %body-3
+
+      img
+        width: 40%
+        max-width: size(120)
+        height: auto
+        border-radius: $border-s
+        margin-right: units(1.5)
       
