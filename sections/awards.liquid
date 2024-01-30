@@ -22,7 +22,7 @@
           <h4>{{ block.settings.date | escape }}</h4>
           <h3>{{ block.settings.award | escape }}</h3>
           <h2>{{ block.settings.title | escape }}</h2>
-          <p>{{ block.settings.text }}</p>
+          <p>{{ block.settings.placing }}</p>
         </div>
         {%- if block.settings.image == blank -%}
           <div is="product">
@@ -53,9 +53,14 @@
   ],
   "blocks": [
     {
-      "type": "award",
+      "type": "award_block",
       "name": "Award",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
         {
           "type": "text",
           "id": "date",
@@ -75,8 +80,8 @@
           "default": "Add a title"
         },
         {
-          "type": "textarea",
-          "id": "text",
+          "type": "text",
+          "id": "placing",
           "label": "Placing",
           "info": "Optional"
         },
@@ -84,11 +89,6 @@
           "type": "product",
           "id": "product",
           "label": "Product"      
-        },
-        {
-          "id": "image",
-          "type": "image_picker",
-          "label": "Image"
         }
       ]
     }
@@ -98,13 +98,13 @@
       "name": "Awards",
       "blocks": [
         {
-          "type": "award"
+          "type": "award_block"
         },
         {
-          "type": "award"
+          "type": "award_block"
         },
         {
-          "type": "award"
+          "type": "award_block"
         }
       ]
     }
