@@ -27,21 +27,23 @@
         "award_block_J4xynr": {
           "type": "award_block",
           "settings": {
-            "date": "Add a date",
-            "award": "Add an award body",
-            "title": "Add a title",
-            "placing": "",
+            "image": "shopify:\/\/shop_images\/gift-of-the-year.png",
+            "date": "2020",
+            "award": "Gift of the year",
+            "title": "Ethical and Sustainable Gift Gift of the year",
+            "placing": "Highly Commended",
             "product": ""
           }
         },
         "award_block_KbGRq9": {
           "type": "award_block",
           "settings": {
-            "date": "Add a date",
-            "award": "Add an award body",
-            "title": "Add a title",
-            "placing": "",
-            "product": ""
+            "image": "shopify:\/\/shop_images\/the-licensing-awards.png",
+            "date": "2021",
+            "award": "The Licensing Awards",
+            "title": "Best Sustainable Licensed Product",
+            "placing": "Finalist",
+            "product": "the-gruffalo-pop-out-playset"
           }
         }
       },
