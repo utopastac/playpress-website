@@ -24,9 +24,23 @@
           <h2>{{ block.settings.title | escape }}</h2>
           <p>{{ block.settings.text }}</p>
         </div>
-        <div is="product">
-          {% render 'product-promo', product: block.settings.product %}
-        </div>
+        {%- if block.settings.image == blank -%}
+          <div is="product">
+            <a is="product-link" href="{{ product.url }}">
+              <img
+                alt="{{ block.product.featured_image.alt }}"
+                src="{{ block.product.featured_media | img_url: '400x' }}"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+              <div>
+                <p>{{ block.product.title }}</p>
+                <span>{{ block.product.price | money }}</span>
+              </div>
+            </a>
+          </div>
+        {%- endif -%}
       </div>
     </article>
   {% endfor %}

@@ -38,6 +38,26 @@ section[is="awards"]
           @extend %body-2
 
     div[is="product"]
-      @include min($screen-m)
-        max-width: units(30)
+      
+      a[is="product-link"]
+        padding: units(0.5) 0
+        display: block
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+
+        p
+          @extend %bold
+          width: 100%
+
+        span
+          display: block
+          @extend %body-3
+
+        img
+          width: 40%
+          max-width: size(120)
+          height: auto
+          border-radius: $border-s
+          margin-right: units(1.5)
       
