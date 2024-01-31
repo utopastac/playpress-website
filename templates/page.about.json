@@ -34,10 +34,10 @@
         "text": "Our sets have been nominated for many awards, and we have been fortunate enough to win on several occassions.",
         "link_text": "Learn more",
         "link_url": "shopify:\/\/pages\/awards",
-        "image": "shopify:\/\/shop_images\/awards.png",
+        "image": "shopify:\/\/shop_images\/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
         "bg_color": "#19226b",
         "is_text_color": false,
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "is_large": true,
         "is_dark": true
       }
@@ -103,8 +103,8 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
+        "bg_color": "#ebedfa",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "left",
