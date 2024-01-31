@@ -42,6 +42,12 @@
         "is_dark": true
       }
     },
+    "gap_Vy9q4r": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "3b41803c-8040-4774-b0f7-9dfed59a656a": {
       "type": "accordian",
       "blocks": {
@@ -161,6 +167,7 @@
     "69daff38-49c3-40ba-87fd-5594871992a9",
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
     "hero_7BbWfW",
+    "gap_Vy9q4r",
     "3b41803c-8040-4774-b0f7-9dfed59a656a",
     "45d04aa8-a964-4c41-8e41-d9551b182f17",
     "1627851513e6e2c0af",
