@@ -27,19 +27,17 @@ section[is="awards"]
     div[is="content"]
 
       div[is="main-content"]
-        @include max($screen-m)
-          padding: units(2) 0 units(1) 0
-        @include min($screen-m)
-          padding: units(2) 0
+        padding: units(1.5) 0 units(1)
 
         h4
           @extend %body-3
+          @extend %bold
 
         h2
           @extend %body-1
-          @extend %bold
+          // @extend %bold
           line-height: $heading-line-height
-          margin: units(1) 0 units(2) 0
+          margin: units(1) 0 units(1) 0
 
         p
           position: absolute
@@ -53,8 +51,9 @@ section[is="awards"]
           display: inline
 
           &.winner
-            background-color: $green-1000
+            background-color: $blue-1000
             color: $white
+            border: 3px solid $yolk-1000
 
 
     a[is="product-link"]

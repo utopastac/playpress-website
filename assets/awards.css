@@ -23,7 +23,7 @@ section[is=awards] article[is=award] a[is=product-link] p, section[is=awards] ar
   font-weight: 500;
 }
 
-section[is=awards] article[is=award] div[is=content] div[is=main-content] h2, a[is=outline-button] {
+section[is=awards] article[is=award] div[is=content] div[is=main-content] h4, a[is=outline-button] {
   font-weight: 700;
 }
 
@@ -111,19 +111,12 @@ section[is=awards] article[is=award] div[is=gallery] img {
   display: block;
   border: 1px solid #E7E9EF;
 }
-@media screen and (max-width: 740px) {
-  section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 1.6rem 0 0.8rem 0;
-  }
-}
-@media screen and (min-width: 740px) {
-  section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 1.6rem 0;
-  }
+section[is=awards] article[is=award] div[is=content] div[is=main-content] {
+  padding: 1.2rem 0 0.8rem;
 }
 section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
   line-height: 115%;
-  margin: 0.8rem 0 1.6rem 0;
+  margin: 0.8rem 0 0.8rem 0;
 }
 section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
   position: absolute;
@@ -135,8 +128,9 @@ section[is=awards] article[is=award] div[is=content] div[is=main-content] p {
   display: inline;
 }
 section[is=awards] article[is=award] div[is=content] div[is=main-content] p.winner {
-  background-color: #2D8872;
+  background-color: #2D3788;
   color: #FFFFFF;
+  border: 3px solid #FAB638;
 }
 section[is=awards] article[is=award] a[is=product-link] {
   cursor: pointer !important;
