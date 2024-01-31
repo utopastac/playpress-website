@@ -113,12 +113,12 @@ section[is=awards] article[is=award] div[is=gallery] img {
 }
 @media screen and (max-width: 740px) {
   section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 2.4rem 0;
+    padding: 1.6rem 0 0.8rem 0;
   }
 }
 @media screen and (min-width: 740px) {
   section[is=awards] article[is=award] div[is=content] div[is=main-content] {
-    padding: 2.4rem 0;
+    padding: 1.6rem 0;
   }
 }
 section[is=awards] article[is=award] div[is=content] div[is=main-content] h2 {
