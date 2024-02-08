@@ -258,18 +258,18 @@
       "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
         "type": "hero",
         "settings": {
-          "heading": "Amazing playsets, all under £10",
-          "subtitle": "Gifts under £10",
+          "heading": "Celebrate 200 years of saving lives at sea",
+          "subtitle": "⭐️ NEW ⭐️ RNLI anniversary playset",
           "text": "",
-          "link_text": "See the collection",
-          "link_url": "shopify:\/\/collections\/under-10",
-          "image": "shopify:\/\/shop_images\/C0006_Dinosuar_Roar_Child_Pushing_Out_Piece_1.jpg",
+          "link_text": "Check it out",
+          "link_url": "shopify:\/\/products\/rnli-lifeboat-house",
+          "image": "shopify:\/\/shop_images\/transparent_bd68e209-1a87-42cf-a7e1-42f79da44815.png",
           "bg_color": "#2d1f74",
           "is_text_color": false,
           "text_color": "#0a122a",
-          "is_large": false,
-          "is_dark": true,
-          "background_image": "shopify:\/\/shop_images\/pp-bg.jpg"
+          "is_large": true,
+          "is_dark": false,
+          "background_image": "shopify:\/\/shop_images\/bg.jpg"
         }
       },
       "896052e9-7468-470d-89eb-22991a6f0e2c": {
@@ -331,7 +331,7 @@
           "image": "shopify:\/\/shop_images\/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
           "bg_color": "#2d3788",
           "is_text_color": false,
-          "text_color": "#0A122A",
+          "text_color": "#0a122a",
           "is_large": true,
           "is_dark": true
         }
