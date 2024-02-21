@@ -260,14 +260,14 @@
         "settings": {
           "heading": "Celebrate 200 years of saving lives at sea",
           "subtitle": "⭐️NEW⭐️ RNLI playset",
-          "text": "",
-          "link_text": "Check it out",
+          "text": "Gift of the Year 2024 finalist!",
+          "link_text": "Shop now",
           "link_url": "shopify:\/\/products\/rnli-lifeboat-house",
           "image": "shopify:\/\/shop_images\/transparent_bd68e209-1a87-42cf-a7e1-42f79da44815.png",
           "bg_color": "#2d1f74",
           "is_text_color": false,
           "text_color": "#0a122a",
-          "is_large": true,
+          "is_large": false,
           "is_dark": false,
           "background_image": "shopify:\/\/shop_images\/bg.jpg"
         }
