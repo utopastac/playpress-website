@@ -329,15 +329,15 @@
       "hero_HBCyiY": {
         "type": "hero",
         "settings": {
-          "heading": "Play the story with The Gruffalo playset",
-          "subtitle": "World book day",
+          "heading": "Perfect travel companions £10 and under",
+          "subtitle": "Holiday ready",
           "text": "",
           "link_text": "Shop",
-          "link_url": "shopify:\/\/products\/the-gruffalo-pop-out-playset",
-          "image": "shopify:\/\/shop_images\/world-book_ada89875-9df1-4737-8da8-d306b00c4c4e.jpg",
-          "bg_color": "#c8ecff",
+          "link_url": "shopify:\/\/collections\/under-10",
+          "image": "shopify:\/\/shop_images\/travel.jpg",
+          "bg_color": "#5d27f9",
           "is_text_color": true,
-          "text_color": "#2d3788",
+          "text_color": "#fff",
           "is_large": false,
           "is_dark": true
         }
