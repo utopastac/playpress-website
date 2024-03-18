@@ -10,6 +10,29 @@
         "show_delivery_info": false
       }
     },
+    "image_with_text_iM3G8B": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Best supplier 2024",
+        "text": "<p>We are so proud to have won Best Supplier at the Cultural Enterprise Awards. The judges said:<br\/><br\/>\"Exactly the sort of supplier and product the sector needs, with excellent quality and design created in a thoughtful and sustainable way\"<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/Cultural_Enterprises_Awards_Winner.png",
+        "bg_color": "#EBEDFA",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "gap_6mHzQP": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "awards_9fa3BX": {
       "type": "awards",
       "blocks": {
@@ -167,6 +190,8 @@
   },
   "order": [
     "intro",
+    "image_with_text_iM3G8B",
+    "gap_6mHzQP",
     "awards_9fa3BX",
     "9eda9169-756a-48c2-b50b-ae18ad7b469f",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
