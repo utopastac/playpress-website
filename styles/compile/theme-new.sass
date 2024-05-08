@@ -288,3 +288,27 @@ a[is="text-button"], p[is="text-button"], div[is="text-button"]
 
 .main-content
   @extend %main-content
+
+.copy-text
+  padding: size(2) size(8)
+  margin-left: size(4)
+  @extend %body-4
+  @extend %bold
+  background: $green-1000
+  color: $white
+  border-radius: size(12)
+  cursor: pointer
+  display: inline-flex
+  align-items: center
+
+  &.copied:after
+    content: ""
+    display: inline-flex
+    width: units(2.5)
+    height: units(2.5)
+    position: relative
+    background: white
+    -webkit-mask-image: url(icon-check.svg)
+    -webkit-mask-position: center
+    -webkit-mask-repeat: no-repeat
+    -webkit-mask-size: contain

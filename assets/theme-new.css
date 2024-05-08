@@ -150,14 +150,14 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   background-size: 24px 24px;
 }
 
-a[is=outline-button], input,
+.copy-text, a[is=outline-button], input,
 select,
 textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], input,
+.copy-text, a[is=outline-button], input,
 select,
 textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 400;
@@ -168,7 +168,7 @@ legend {
   font-weight: 500;
 }
 
-a[is=outline-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
+.copy-text, a[is=outline-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button] {
   font-weight: 700;
 }
 
@@ -202,13 +202,13 @@ textarea, a.small[is=text-button], p.small[is=text-button], div.small[is=text-bu
   }
 }
 
-a[is=outline-button] {
+.copy-text, a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  a[is=outline-button] {
+  .copy-text, a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -582,14 +582,14 @@ a[is=text-button]:hover, p[is=text-button]:hover, div[is=text-button]:hover {
   background-size: 24px 24px;
 }
 
-a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
+.copy-text, a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
 select,
 textarea {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
+.copy-text, a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button], input,
 select,
 textarea {
   font-weight: 400;
@@ -600,7 +600,7 @@ legend {
   font-weight: 500;
 }
 
-a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button] {
+.copy-text, a[is=button], p[is=button], input[type=submit], button[type=submit], a[is=text-button], p[is=text-button], div[is=text-button], a.small[is=text-button], p.small[is=text-button], div.small[is=text-button], a[is=outline-button] {
   font-weight: 700;
 }
 
@@ -634,13 +634,13 @@ textarea {
   }
 }
 
-a[is=outline-button] {
+.copy-text, a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  a[is=outline-button] {
+  .copy-text, a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -945,4 +945,27 @@ button {
   white-space: nowrap;
   outline: none;
   border: none;
+}
+
+.copy-text {
+  padding: 0.2rem 0.8rem;
+  margin-left: 0.4rem;
+  background: #2D8872;
+  color: #FFFFFF;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.copy-text.copied:after {
+  content: "";
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  background: white;
+  -webkit-mask-image: url(icon-check.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
 }
