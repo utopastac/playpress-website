@@ -400,7 +400,10 @@ select {
   background-size: 5px 5px, 5px 5px;
 }
 
-a,
+a {
+  cursor: pointer;
+}
+
 button,
 summary {
   cursor: pointer;
@@ -408,12 +411,10 @@ summary {
   -moz-user-select: none;
   user-select: none;
 }
-a:focus,
 button:focus,
 summary:focus {
   outline: none;
 }
-a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
   background-color: #FAB638;
