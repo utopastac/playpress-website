@@ -16,6 +16,17 @@
         "size": 1
       }
     },
+    "contact_rPh7Bk": {
+      "type": "contact",
+      "settings": {
+      }
+    },
+    "gap_YczVQi": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e": {
       "type": "prominent-features",
       "blocks": {
@@ -74,6 +85,8 @@
   "order": [
     "intro",
     "9fb32536-3c70-4a94-84db-a717079ad057",
+    "contact_rPh7Bk",
+    "gap_YczVQi",
     "d90cfe8a-3f07-494f-8fc9-ed3e77c0de1e"
   ]
 }
