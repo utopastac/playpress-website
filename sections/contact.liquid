@@ -1,24 +1,52 @@
 {{ 'contact.css' | asset_url | stylesheet_tag }}
 
 <div is="contact">
-  {% form 'contact' %}
-    {{ form.errors | default_errors }}
-    <div class="first-name">
-      <label for="first-name">Name</label>
-      <input type="text" name="contact[first_name]" id="first-name" />
+  <div class="contact-intro">
+    <div>
+      <h3>Stocking & manufature</h3>
+      <p>If you are interested in business partnerships with Playpress, email us: <a class="text-to-copy" href="mailto:team@playpresstoys.com">team@playpresstoys.com</a><span class="copy-text">Copy</span></p>
     </div>
-    <div class="email">
-      <label for="email">Email</label>
-      <input type="email" name="contact[email]" id="email" />
+    <div>
+      <h3>Feedback, orders and issues</h3>
+      <p>If you want to give us feedback, speak to customer service, or get in touch for any issue relating to an order, email us: <a class="text-to-copy" href="mailto:team@playpresstoys.com">team@playpresstoys.com</a><span class="copy-text">Copy</span></p>
     </div>
-    <div class="message">
-      <label for="message">Message</label>
-      <textarea name="contact[body]" id="message"></textarea>
+    <div>
+      <h3>General enquires</h3>
+      <p>
+        If you have any questions, feel free to our email our studio: <a class="text-to-copy" href="mailto:team@playpresstoys.com">team@playpresstoys.com</a><span class="copy-text">Copy</span>
+      </p>
+  </div>
+  </div>
+  <div class="contact-main">
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+      <div class="intro">
+        <h2>Send us a message</h2>
+        <p>Contact us with this form and we will get back to you as soon as possible!</p>
+      </div>
+      <div class="first-name">
+        <label for="first-name">Name</label>
+        <input type="text" name="contact[first_name]" id="first-name" />
+      </div>
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="contact[email]" id="email" />
+      </div>
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea name="contact[body]" id="message"></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Send" />
+      </div>
+    {% endform %}
+    <div class="studio">
+      <img src="{{ 'contact.jpg' | asset_url }})"  alt="A child playing with the Zog playset" />
+      <h2>Our studio</h2>
+      <p>Our design studio is based in Sussex. Come and visit and find out how we work!</p>
+      <a href="https://goo.gl/maps/ULwqC4KRPB12vddb8">View on Google</a>
     </div>
-    <div class="submit">
-      <input type="submit" value="Send" />
-    </div>
-  {% endform %}
+  </div>
 </div>
 
 {% schema %}

@@ -1,3 +1,76 @@
 @import '../assets'
 
 div[is="contact"]
+ 
+
+  .contact-intro
+    @include min($screen-m)
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: units(5)
+
+    @include max($screen-m)
+      div
+        margin-bottom: units(5)
+
+    h2
+      @extend %heading-3
+      margin-bottom: units(2)
+
+    h3
+      @extend %body-1
+      @extend %medium
+
+    p
+      @extend %body-2
+
+
+  .contact-main
+    margin-top: units(8)
+
+    .contact-form
+      padding: units(5) units(5)
+      background: $blue-100
+      border-radius: $radius
+
+    .studio
+      img
+        width: 100%
+        margin-bottom: units(2)
+        border-radius: $radius
+
+    @include min($screen-m)
+      display: grid
+      grid-template-columns: 1.5fr 1fr
+      grid-gap: units(5)
+
+    @include max($screen-m)
+      .studio
+        margin-top: units(5)
+
+    .intro
+      margin-bottom: units(3)
+
+    h2
+      @extend %heading-3
+      margin-bottom: units(2)
+
+    p
+      @extend %body-2
+
+    a
+      @extend %text-button-style
+
+    label
+      @extend %body-3
+      @extend %medium
+
+    input
+      margin-bottom: units(1)
+
+    input[type="text"], input[type="email"], textarea
+      width: 100%
+      background: white
+
+    input[type="submit"]
+      margin-top: units(2)

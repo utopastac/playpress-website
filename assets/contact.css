@@ -1,3 +1,40 @@
+div[is=contact] .contact-main a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1D203F;
+  height: 5.6rem;
+}
+div[is=contact] .contact-main a.small {
+  height: 3.2rem;
+}
+div[is=contact] .contact-main a.small:after {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.4rem;
+}
+div[is=contact] .contact-main a.white {
+  color: white;
+}
+div[is=contact] .contact-main a.white:after {
+  background: #FFFFFF;
+}
+div[is=contact] .contact-main a:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #1D203F;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
+}
+div[is=contact] .contact-main a:hover {
+  text-decoration: underline;
+}
 .button-loading:after {
   content: "";
   display: block;
@@ -10,17 +47,78 @@
   background-size: 24px 24px;
 }
 
-a[is=outline-button] {
+div[is=contact] .contact-main h2, div[is=contact] .contact-intro h2 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+}
+
+a[is=outline-button], div[is=contact] .contact-main label, div[is=contact] .contact-main p, div[is=contact] .contact-intro p, div[is=contact] .contact-main a, div[is=contact] .contact-intro h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button] {
+a[is=outline-button], div[is=contact] .contact-main label, div[is=contact] .contact-main p, div[is=contact] .contact-intro p, div[is=contact] .contact-main a, div[is=contact] .contact-intro h3 {
   font-weight: 400;
 }
 
-a[is=outline-button] {
+div[is=contact] .contact-main label, div[is=contact] .contact-intro h3 {
+  font-weight: 500;
+}
+
+a[is=outline-button], div[is=contact] .contact-main a {
   font-weight: 700;
+}
+
+div[is=contact] .contact-main h2, div[is=contact] .contact-intro h2 {
+  font-size: 2.7rem;
+  line-height: 115%;
+  letter-spacing: -0.54px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=contact] .contact-main h2, div[is=contact] .contact-intro h2 {
+    font-size: 3.4rem;
+    line-height: 115%;
+    letter-spacing: -0.68px;
+  }
+}
+
+div[is=contact] .contact-intro h3 {
+  font-size: 2.2rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=contact] .contact-intro h3 {
+    font-size: 2.6rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=contact] .contact-main p, div[is=contact] .contact-intro p, div[is=contact] .contact-main a {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=contact] .contact-main p, div[is=contact] .contact-intro p, div[is=contact] .contact-main a {
+    font-size: 2.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=contact] .contact-main label, div[is=contact] .contact-main a.small {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=contact] .contact-main label, div[is=contact] .contact-main a.small {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
 }
 
 a[is=outline-button] {
@@ -50,4 +148,61 @@ a[is=outline-button] {
 }
 a[is=outline-button]:hover {
   background: #EBEDFA;
+}
+
+@media screen and (min-width: 740px) {
+  div[is=contact] .contact-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  div[is=contact] .contact-intro div {
+    margin-bottom: 4rem;
+  }
+}
+div[is=contact] .contact-intro h2 {
+  margin-bottom: 1.6rem;
+}
+div[is=contact] .contact-main {
+  margin-top: 6.4rem;
+}
+div[is=contact] .contact-main .contact-form {
+  padding: 4rem 4rem;
+  background: #EBEDFA;
+  border-radius: 1.2rem;
+}
+div[is=contact] .contact-main .studio img {
+  width: 100%;
+  margin-bottom: 1.6rem;
+  border-radius: 1.2rem;
+}
+@media screen and (min-width: 740px) {
+  div[is=contact] .contact-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 4rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  div[is=contact] .contact-main .studio {
+    margin-top: 4rem;
+  }
+}
+div[is=contact] .contact-main .intro {
+  margin-bottom: 2.4rem;
+}
+div[is=contact] .contact-main h2 {
+  margin-bottom: 1.6rem;
+}
+div[is=contact] .contact-main input {
+  margin-bottom: 0.8rem;
+}
+div[is=contact] .contact-main input[type=text], div[is=contact] .contact-main input[type=email], div[is=contact] .contact-main textarea {
+  width: 100%;
+  background: white;
+}
+div[is=contact] .contact-main input[type=submit] {
+  margin-top: 1.6rem;
 }
