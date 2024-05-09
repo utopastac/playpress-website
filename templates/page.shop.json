@@ -58,26 +58,7 @@
     "79d35488-96a4-4333-8e48-117ea264ecc8": {
       "type": "gap",
       "settings": {
-        "size": 2
-      }
-    },
-    "5f050f65-23f0-40c4-90f9-feb4734e1d9d": {
-      "type": "product-promos",
-      "settings": {
-        "title": "Our best selling sets",
-        "text": "",
-        "collection": "best-sellers",
-        "grid": 4,
-        "rows": 4,
-        "show_signpost_link": false,
-        "link_text": "View all",
-        "link_url": ""
-      }
-    },
-    "d1410691-b609-4e33-b565-6d990c848800": {
-      "type": "gap",
-      "settings": {
-        "size": 2
+        "size": 1
       }
     },
     "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
@@ -219,8 +200,6 @@
     "7504f886-e145-4c65-bce0-03930b2ca39a",
     "fd5f2d05-6048-421d-b816-943ca49626f9",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
-    "5f050f65-23f0-40c4-90f9-feb4734e1d9d",
-    "d1410691-b609-4e33-b565-6d990c848800",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
