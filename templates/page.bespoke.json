@@ -6,7 +6,7 @@
         "heading": "Playpress Studio",
         "text": "Our studio creates bespoke playsets for your brand. We collaborate with brands that share our values - affordable fun that doesn't cost the planet.",
         "link_text": "Contact us",
-        "link_url": "mailto:team@playpresstoys.com",
+        "link_url": "shopify:\/\/pages\/contact",
         "show_delivery_info": false
       }
     },
@@ -18,7 +18,10 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/XL0001_Space_Station_Child_Playing_On_Floor.jpg",
+        "bg_color": "#EBEDFA",
+        "text_color": "#0A122A",
         "show_signpost_link": false,
+        "use_button": false,
         "layout": "right",
         "show_colour": true,
         "last_on_page": false
@@ -168,7 +171,10 @@
         "link_text": "",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/bespoke-budget.jpg",
+        "bg_color": "#EBEDFA",
+        "text_color": "#0A122A",
         "show_signpost_link": false,
+        "use_button": false,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
