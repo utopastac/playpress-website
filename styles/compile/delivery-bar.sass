@@ -41,7 +41,10 @@ a[is="delivery-bar"]
     justify-content: center
     height: 100%
 
-    > *
+    .delivery
+      margin-right: units(1)
+
+    > *:not(.delivery)
       margin-right: units(2)
 
       @include min($screen-m)

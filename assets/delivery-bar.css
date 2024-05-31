@@ -121,11 +121,14 @@ a[is=delivery-bar] ul {
   justify-content: center;
   height: 100%;
 }
-a[is=delivery-bar] ul > * {
+a[is=delivery-bar] ul .delivery {
+  margin-right: 0.8rem;
+}
+a[is=delivery-bar] ul > *:not(.delivery) {
   margin-right: 1.6rem;
 }
 @media screen and (min-width: 740px) {
-  a[is=delivery-bar] ul > * {
+  a[is=delivery-bar] ul > *:not(.delivery) {
     margin-right: 2.4rem;
   }
 }
