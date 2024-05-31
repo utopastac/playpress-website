@@ -92,9 +92,13 @@ div[is=delivery]:hover:not(.active) {
 }
 div[is=delivery] header {
   display: flex;
+  justify-content: space-between;
 }
 div[is=delivery] header span {
-  margin-left: 0.8rem;
+  display: flex;
+}
+div[is=delivery] header span .icon {
+  margin-right: 0.8rem;
 }
 div[is=delivery] div[is=delivery-charges] {
   background: #FFFFFF;
@@ -135,7 +139,6 @@ div[is=delivery] h3 {
 div[is=delivery] header {
   display: flex;
   margin-bottom: 0;
-  justify-content: center;
   align-items: center;
   user-select: none;
 }

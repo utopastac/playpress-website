@@ -16,10 +16,15 @@ div[is="delivery"]
 
   header
     display: flex
+    justify-content: space-between
+
     span
-      margin-left: units(1)
+      display: flex
       @extend %body-3
       @extend %bold
+
+      .icon
+        margin-right: units(1)
 
   div[is="delivery-charges"]
     background: $white
@@ -65,7 +70,6 @@ div[is="delivery"]
   header
     display: flex
     margin-bottom: 0
-    justify-content: center
     align-items: center
     @extend %body-3
     user-select: none
