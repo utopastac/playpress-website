@@ -88,12 +88,12 @@ div[is=cart] h1 {
   font-weight: 700;
 }
 
-a[is=outline-button], button[is=command], div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header h3 {
+a[is=outline-button], button[is=command], div[is=cart] div[is=checkout] .meta, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], button[is=command], div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header h3 {
+a[is=outline-button], button[is=command], div[is=cart] div[is=checkout] .meta, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button, div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header h3 {
   font-weight: 400;
 }
 
@@ -136,6 +136,19 @@ div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] 
   div[is=cart] div[is=checkout] div[is=checkout-wrapper] > header p, div[is=cart] > div, div[is=cart] div[is=checkout] button {
     font-size: 2.1rem;
     line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+div[is=cart] div[is=checkout] .meta {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  div[is=cart] div[is=checkout] .meta {
+    font-size: 1.8rem;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
@@ -185,6 +198,10 @@ div[is=cart] form {
   grid-row-gap: 2rem;
   display: grid;
   grid-template-columns: 1fr;
+}
+div[is=cart] div[is=checkout] .meta {
+  opacity: 0.7;
+  margin-top: 0.4rem;
 }
 div[is=cart] div[is=checkout] div[is=checkout-wrapper] {
   background: #EBEDFA;
