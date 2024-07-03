@@ -347,7 +347,8 @@
           "is_text_color": true,
           "text_color": "#ffffff",
           "is_large": false,
-          "is_dark": true
+          "is_dark": true,
+          "background_image": "shopify:\/\/shop_images\/london-bg.jpg"
         }
       }
     },
