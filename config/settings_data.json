@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "heading_primary": "Hours of hands-on play",
@@ -328,12 +337,12 @@
       "hero_HBCyiY": {
         "type": "hero",
         "settings": {
-          "heading": "Perfect travel companions £10 and under",
-          "subtitle": "Holiday ready",
+          "heading": "Explore the capital city with our new London Landmarks set",
+          "subtitle": "New Set",
           "text": "",
           "link_text": "Shop",
-          "link_url": "shopify:\/\/collections\/under-10",
-          "image": "shopify:\/\/shop_images\/travel_cd3122d8-1beb-4dbc-a673-ebdbc4d27e0d.jpg",
+          "link_url": "shopify:\/\/products\/london-landmarks-pop-out-playset",
+          "image": "shopify:\/\/shop_images\/london.png",
           "bg_color": "#5d27f9",
           "is_text_color": true,
           "text_color": "#ffffff",
