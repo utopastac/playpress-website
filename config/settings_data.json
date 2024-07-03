@@ -343,12 +343,11 @@
           "link_text": "Shop",
           "link_url": "shopify:\/\/products\/london-landmarks-pop-out-playset",
           "image": "shopify:\/\/shop_images\/london.png",
-          "bg_color": "#5d27f9",
-          "is_text_color": false,
-          "text_color": "#ffffff",
+          "bg_color": "#d7e2ff",
+          "is_text_color": true,
+          "text_color": "#2d3788",
           "is_large": false,
-          "is_dark": false,
-          "background_image": "shopify:\/\/shop_images\/london-bg_48a703ed-e0bf-4b66-8e06-7cd42d93527f.jpg"
+          "is_dark": true
         }
       }
     },
