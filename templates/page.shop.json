@@ -28,6 +28,12 @@
     "fd5f2d05-6048-421d-b816-943ca49626f9": {
       "type": "product-promos-individual",
       "blocks": {
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
+          "type": "product",
+          "settings": {
+            "product": "moomins-house-playset"
+          }
+        },
         "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1": {
           "type": "product",
           "settings": {
@@ -45,19 +51,13 @@
           "settings": {
             "product": "rnli-lifeboat-house"
           }
-        },
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
-          "type": "product",
-          "settings": {
-            "product": "rspb-coastal-birds-playset"
-          }
         }
       },
       "block_order": [
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2",
         "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1",
         "product_D4yVLN",
-        "e99a6004-dcfc-459f-9304-dc94d0677c35",
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2"
+        "e99a6004-dcfc-459f-9304-dc94d0677c35"
       ],
       "settings": {
         "title": "New sets",
