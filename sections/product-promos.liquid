@@ -1,3 +1,4 @@
+{% comment %} {{ 'sort_collections.js' | asset_url | script_tag }} {% endcomment %}
 {{ 'product-promos.css' | asset_url | stylesheet_tag }}
 
 <section is="section">
@@ -6,11 +7,26 @@
 
   {%- assign collection = collections[section.settings.collection] -%}
 
+  {% comment %} <select id="sort-by">
+    {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}>
+    {% for option in collection.sort_options %}
+      {% unless option.value contains 'title-ascending' or option.value contains 'title-descending' %}
+        <option value="{{ option.value }}"{% if sort_by == option.value %} selected="selected"{% endif %}>{{ option.name }}</option>
+      {% endunless %}
+    {% endfor %}
+  </select>
+
+  <h1>LOL {{ sort_by }} </h1>
+
+  {% assign products = collection.products | sort: 'created-ascending' %}  {% endcomment %}
+
+  {% assign products = collection.products %}
+
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
     <div is="product-promos">
       <div>
-        {% for product in collection.products limit: product_limit %}
+        {% for product in products limit: product_limit %}
           {%- if product.available -%}
             {% render 'product-promo', product: product %}
           {%- endif -%}
