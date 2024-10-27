@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "7504f886-e145-4c65-bce0-03930b2ca39a": {
@@ -16,8 +16,8 @@
         "subtitle": "⭐️ Playpress Minis ⭐️",
         "text": "",
         "link_text": "Check them out",
-        "link_url": "shopify:\/\/pages\/playpress-minis",
-        "image": "shopify:\/\/shop_images\/mini-sets.jpg",
+        "link_url": "shopify://pages/playpress-minis",
+        "image": "shopify://shop_images/mini-sets.jpg",
         "bg_color": "#9bedf2",
         "is_text_color": false,
         "text_color": "#0a122a",
@@ -28,36 +28,36 @@
     "fd5f2d05-6048-421d-b816-943ca49626f9": {
       "type": "product-promos-individual",
       "blocks": {
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
+        "product_FxYHq7": {
           "type": "product",
           "settings": {
-            "product": "moomins-house-playset"
+            "product": "mini-refill-cafe-playset-copy"
           }
         },
         "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1": {
           "type": "product",
           "settings": {
-            "product": "london-landmarks-pop-out-playset"
+            "product": "dino-dig-playset"
           }
         },
         "product_D4yVLN": {
           "type": "product",
           "settings": {
-            "product": "zog-playset-play-the-story"
+            "product": "book-shop-playset"
           }
         },
-        "e99a6004-dcfc-459f-9304-dc94d0677c35": {
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
           "type": "product",
           "settings": {
-            "product": "rnli-lifeboat-house"
+            "product": "moomins-house-playset"
           }
         }
       },
       "block_order": [
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2",
+        "product_FxYHq7",
         "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1",
         "product_D4yVLN",
-        "e99a6004-dcfc-459f-9304-dc94d0677c35"
+        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2"
       ],
       "settings": {
         "title": "New sets",
@@ -175,15 +175,15 @@
         "heading_a": "Take a trip to see these magnificent birds!",
         "subtitle_a": "RSPB collection",
         "link_text_a": "View",
-        "link_url_a": "shopify:\/\/collections\/charity-sets",
-        "image_a": "shopify:\/\/shop_images\/RSPB-2.jpg",
+        "link_url_a": "shopify://collections/charity-sets",
+        "image_a": "shopify://shop_images/RSPB-2.jpg",
         "bg_color_a": "#296b4f",
         "text_color_a": "#ffffff",
         "heading_b": "Award-winning RNLI Inshore Lifeboat",
         "subtitle_b": "RNLI",
         "link_text_b": "View",
-        "link_url_b": "shopify:\/\/products\/rnli-lifeboat-eco-friendly-playset",
-        "image_b": "shopify:\/\/shop_images\/rnli.jpg",
+        "link_url_b": "shopify://products/rnli-lifeboat-eco-friendly-playset",
+        "image_b": "shopify://shop_images/rnli.jpg",
         "bg_color_b": "#8cddf8",
         "text_color_b": "#0a122a"
       }
@@ -200,8 +200,8 @@
         "heading": "Sustainability",
         "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
         "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
+        "link_url": "shopify://pages/sustainability",
+        "image": "shopify://shop_images/about-sustainability.jpg"
       }
     }
   },

@@ -1,30 +1,30 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "heading_primary": "Hours of hands-on play",
     "text_primary": "Our sets are designed to let children play creatively while helping them develop key motor and cognitive reasoning skills.",
-    "image_primary": "shopify:\/\/shop_images\/about-girl.jpg",
+    "image_primary": "shopify://shop_images/about-girl.jpg",
     "heading_secondary": "Eco-friendly",
     "text_secondary": "Our materials are sustainably sourced and 100% recyclable and biodegradable.",
     "heading_tertiary": "Affordable",
     "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
-    "link_url": "shopify:\/\/pages\/about",
+    "link_url": "shopify://pages/about",
     "link_text": "Learn more about Playpress!",
-    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
+    "checkout_logo_image": "shopify://shop_images/PP_Logo_1.3R_HR-01_512.png",
     "checkout_logo_size": "large",
     "checkout_sidebar_background_color": "#e9e9f2",
     "checkout_accent_color": "#2b68a0",
     "checkout_button_color": "#f9b42b",
     "checkout_error_color": "#c4275b",
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "type_header_font": "helvetica_n7",
     "sections": {
       "header": {
@@ -40,7 +40,7 @@
             "type": "text",
             "settings": {
               "link_text": "Playpress on Facebook",
-              "link_url": "https:\/\/www.facebook.com\/playpresstoys",
+              "link_url": "https://www.facebook.com/playpresstoys",
               "link_icon": "facebook"
             }
           },
@@ -48,7 +48,7 @@
             "type": "text",
             "settings": {
               "link_text": "Playpress on Instagram",
-              "link_url": "https:\/\/instagram.com\/playpresstoys",
+              "link_url": "https://instagram.com/playpresstoys",
               "link_icon": "instagram"
             }
           }
@@ -81,7 +81,7 @@
           "rows": 1,
           "show_signpost_link": false,
           "link_text": "Shop our other playsets",
-          "link_url": "\/products"
+          "link_url": "/products"
         }
       },
       "skip": {
@@ -156,7 +156,7 @@
           "rows": 2,
           "show_signpost_link": true,
           "link_text": "View all products",
-          "link_url": "shopify:\/\/pages\/shop"
+          "link_url": "shopify://pages/shop"
         }
       },
       "596be5df-64e8-4ac6-aa05-eba2affa0b31": {
@@ -171,8 +171,8 @@
           "heading": "Sustainability",
           "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
           "link_text": "Learn more",
-          "link_url": "shopify:\/\/pages\/sustainability",
-          "image": "shopify:\/\/shop_images\/sustainability.jpg"
+          "link_url": "shopify://pages/sustainability",
+          "image": "shopify://shop_images/sustainability.jpg"
         }
       },
       "b19a403a-f605-4887-957c-be3ec277c046": {
@@ -182,9 +182,9 @@
             "type": "page_feature",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/Cover_Image_1920x1080_f73dde4c-84b3-4941-8856-c9308f64f4a7.png",
+              "image": "shopify://shop_images/Cover_Image_1920x1080_f73dde4c-84b3-4941-8856-c9308f64f4a7.png",
               "link_text": "About Playpress",
-              "link_url": "shopify:\/\/pages\/about",
+              "link_url": "shopify://pages/about",
               "title": "Award-winning & eco-friendly",
               "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
             }
@@ -194,7 +194,7 @@
             "settings": {
               "enable_image": false,
               "link_text": "Bespoke sets",
-              "link_url": "shopify:\/\/pages\/studio",
+              "link_url": "shopify://pages/studio",
               "title": "Studio",
               "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
             }
@@ -204,7 +204,7 @@
             "settings": {
               "enable_image": false,
               "link_text": "Stock Playpress",
-              "link_url": "shopify:\/\/pages\/stock-us",
+              "link_url": "shopify://pages/stock-us",
               "title": "Stockists",
               "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
             }
@@ -254,14 +254,14 @@
           "subtitle": "NEW RNLI playset",
           "text": "The RNLI 200 Anniversary Lifeboat House is now a Gift of the Year 2024 finalist!",
           "link_text": "Shop now",
-          "link_url": "shopify:\/\/products\/rnli-lifeboat-house",
-          "image": "shopify:\/\/shop_images\/transparent_bd68e209-1a87-42cf-a7e1-42f79da44815.png",
+          "link_url": "shopify://products/rnli-lifeboat-house",
+          "image": "shopify://shop_images/transparent_bd68e209-1a87-42cf-a7e1-42f79da44815.png",
           "bg_color": "#2d1f74",
           "is_text_color": false,
           "text_color": "#0a122a",
           "is_large": false,
           "is_dark": false,
-          "background_image": "shopify:\/\/shop_images\/bg.jpg"
+          "background_image": "shopify://shop_images/bg.jpg"
         }
       },
       "896052e9-7468-470d-89eb-22991a6f0e2c": {
@@ -270,7 +270,7 @@
           "heading": "Free UK delivery",
           "text": "",
           "link_text": "More",
-          "link_url": "shopify:\/\/pages\/delivery",
+          "link_url": "shopify://pages/delivery",
           "show_banner": false
         }
       },
@@ -291,14 +291,14 @@
           "subtitle": "MINI set",
           "text": "",
           "link_text": "Get the set",
-          "link_url": "shopify:\/\/products\/ancient-egypt-playset",
-          "image": "shopify:\/\/shop_images\/egypt.png",
+          "link_url": "shopify://products/ancient-egypt-playset",
+          "image": "shopify://shop_images/egypt.png",
           "bg_color": "#ebedfa",
           "is_text_color": true,
           "text_color": "#0a122a",
           "is_large": true,
           "is_dark": true,
-          "background_image": "shopify:\/\/shop_images\/sand-sky_0b89927b-4018-491f-b69d-995fb0e83883.jpg"
+          "background_image": "shopify://shop_images/sand-sky_0b89927b-4018-491f-b69d-995fb0e83883.jpg"
         }
       },
       "44372dd3-96f6-4cbd-ad4b-4ab46c744fba": {
@@ -319,8 +319,8 @@
           "subtitle": "Awards",
           "text": "Our sets have been nominated for many awards, and we have been fortunate enough to win on several occassions.",
           "link_text": "View awards",
-          "link_url": "shopify:\/\/pages\/awards",
-          "image": "shopify:\/\/shop_images\/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
+          "link_url": "shopify://pages/awards",
+          "image": "shopify://shop_images/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
           "bg_color": "#2d3788",
           "is_text_color": false,
           "text_color": "#0a122a",
@@ -341,8 +341,8 @@
           "subtitle": "New Set",
           "text": "",
           "link_text": "Shop",
-          "link_url": "shopify:\/\/products\/london-landmarks-pop-out-playset",
-          "image": "shopify:\/\/shop_images\/london_d3c9af5b-1471-455d-a5bb-eab102d03b6c.png",
+          "link_url": "shopify://products/london-landmarks-pop-out-playset",
+          "image": "shopify://shop_images/london_d3c9af5b-1471-455d-a5bb-eab102d03b6c.png",
           "bg_color": "#d7e2ff",
           "is_text_color": true,
           "text_color": "#2d3788",
@@ -357,14 +357,14 @@
           "subtitle": "New set!",
           "text": "",
           "link_text": "Buy now",
-          "link_url": "shopify:\/\/products\/moomins-house-playset",
-          "image": "shopify:\/\/shop_images\/moomins-fg_c039fcff-35a4-408e-9ddd-c438055ee63c.png",
-          "bg_color": "#EBEDFA",
+          "link_url": "shopify://products/moomins-house-playset",
+          "image": "shopify://shop_images/moomins-fg_c039fcff-35a4-408e-9ddd-c438055ee63c.png",
+          "bg_color": "#ebedfa",
           "is_text_color": false,
-          "text_color": "#0A122A",
+          "text_color": "#0a122a",
           "is_large": false,
           "is_dark": false,
-          "background_image": "shopify:\/\/shop_images\/moomin-bg_1602bb51-84e0-45ec-9447-4ca1cdef86c5.png"
+          "background_image": "shopify://shop_images/moomin-bg_1602bb51-84e0-45ec-9447-4ca1cdef86c5.png"
         }
       }
     },
@@ -390,7 +390,7 @@
     ],
     "blocks": {
       "4804304946286255945": {
-        "type": "shopify:\/\/apps\/avada-cookie-consent\/blocks\/app-embed\/deacc407-65bc-4a4e-84d9-f90e9e492cf3",
+        "type": "shopify://apps/avada-cookie-consent/blocks/app-embed/deacc407-65bc-4a4e-84d9-f90e9e492cf3",
         "disabled": false,
         "settings": {
         }
