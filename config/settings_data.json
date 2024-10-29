@@ -353,18 +353,17 @@
       "hero_GPmdV6": {
         "type": "hero",
         "settings": {
-          "heading": "The Moomins House Playset has arrived!",
-          "subtitle": "New set!",
+          "heading": "Explore our Dino Dig, Hospital, Bookshop, and more!",
+          "subtitle": "New mini sets!",
           "text": "",
           "link_text": "Buy now",
-          "link_url": "shopify://products/moomins-house-playset",
-          "image": "shopify://shop_images/moomins-fg_c039fcff-35a4-408e-9ddd-c438055ee63c.png",
-          "bg_color": "#ebedfa",
-          "is_text_color": false,
+          "link_url": "shopify://collections/new-sets",
+          "image": "shopify://shop_images/mini-sets-new.png",
+          "bg_color": "#ffd760",
+          "is_text_color": true,
           "text_color": "#0a122a",
           "is_large": false,
-          "is_dark": false,
-          "background_image": "shopify://shop_images/moomin-bg_1602bb51-84e0-45ec-9447-4ca1cdef86c5.png"
+          "is_dark": true
         }
       }
     },
