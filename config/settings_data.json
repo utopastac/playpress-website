@@ -74,11 +74,11 @@
       "1623767875c4b2fbf3": {
         "type": "product-promos",
         "settings": {
-          "title": "Our best-selling playsets",
+          "title": "Mini sets!",
           "text": "",
-          "collection": "best-sellers",
+          "collection": "mini-sets",
           "grid": 4,
-          "rows": 1,
+          "rows": 2,
           "show_signpost_link": false,
           "link_text": "Shop our other playsets",
           "link_url": "/products"
