@@ -140,12 +140,3 @@ a[is=delivery-bar] ul .dot {
 a[is=delivery-bar] ul li {
   color: #2D3788;
 }
-@media screen and (min-width: 1080px) {
-  a[is=delivery-bar] ul li {
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
-  }
-}
