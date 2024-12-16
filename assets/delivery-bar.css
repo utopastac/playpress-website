@@ -80,16 +80,10 @@ a[is=outline-button]:hover {
 
 a[is=delivery-bar] {
   display: block;
-  height: 3.6rem;
   border-bottom: 1px solid #E7E9EF;
-  padding: 0 1.6rem;
+  padding: 0.8rem 1.6rem;
   position: relative;
   background: white;
-}
-@media screen and (min-width: 740px) {
-  a[is=delivery-bar] {
-    height: 4rem;
-  }
 }
 a[is=delivery-bar].christmas:before {
   content: "";
@@ -105,8 +99,13 @@ a[is=delivery-bar].christmas:before {
   top: 100%;
   height: 80px;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 740px) {
   a[is=delivery-bar] .not-mobile {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1080px) {
+  a[is=delivery-bar] .not-mobile-tablet {
     display: none !important;
   }
 }
@@ -119,7 +118,6 @@ a[is=delivery-bar] ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 a[is=delivery-bar] ul .delivery {
   margin-right: 0.8rem;
@@ -141,7 +139,6 @@ a[is=delivery-bar] ul .dot {
 }
 a[is=delivery-bar] ul li {
   color: #2D3788;
-  white-space: nowrap;
 }
 @media screen and (min-width: 1080px) {
   a[is=delivery-bar] ul li {
