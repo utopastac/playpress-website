@@ -63,13 +63,11 @@
       },
       "breadcrumbs": {
         "type": "breadcrumbs",
-        "settings": {
-        }
+        "settings": {}
       },
       "collections": {
         "type": "collections",
-        "settings": {
-        }
+        "settings": {}
       },
       "1623767875c4b2fbf3": {
         "type": "product-promos",
@@ -86,18 +84,15 @@
       },
       "skip": {
         "type": "skip",
-        "settings": {
-        }
+        "settings": {}
       },
       "product-recommendations": {
         "type": "product-recommendations",
-        "settings": {
-        }
+        "settings": {}
       },
       "about-brand": {
         "type": "about-brand",
-        "settings": {
-        }
+        "settings": {}
       },
       "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a": {
         "type": "collections",
@@ -215,13 +210,11 @@
           "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-1",
           "437d887c-504f-4cbc-a795-00b31560b553"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "delivery-bar": {
         "type": "delivery-bar",
-        "settings": {
-        }
+        "settings": {}
       },
       "86a408b2-bbfa-45b7-ab15-aab87f741cb3": {
         "type": "gap",
@@ -309,8 +302,7 @@
       },
       "cart-modal": {
         "type": "cart-modal",
-        "settings": {
-        }
+        "settings": {}
       },
       "hero_tmWthP": {
         "type": "hero",
@@ -336,6 +328,7 @@
       },
       "hero_HBCyiY": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "heading": "Explore the capital city with our new London Landmarks set",
           "subtitle": "New Set",
@@ -391,8 +384,7 @@
       "4804304946286255945": {
         "type": "shopify://apps/avada-cookie-consent/blocks/app-embed/deacc407-65bc-4a4e-84d9-f90e9e492cf3",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   }
