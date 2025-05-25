@@ -1,13 +1,14 @@
 @import '../assets'
 
 div[is="product-carousel"]
-  white-space: nowrap
-  overflow-x: scroll
-  -webkit-overflow-scrolling: touch
-  margin: 0 -units(2) 0 -units(2)
-  padding: 0 units(1)
+  > div
+    white-space: nowrap
+    overflow-x: scroll
+    -webkit-overflow-scrolling: touch
+    margin: 0 -units(2) 0 -units(2)
+    padding: 0 units(1)
 
-  > *
-    display: inline-block
-    max-width: 80vw
-    margin-right: units(1)
+    > *
+      display: inline-block
+      max-width: 80vw
+      margin-right: units(1)

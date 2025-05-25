@@ -7,14 +7,22 @@
   min-height: 0
   height: 100%
   position: relative
+  width: 60%
+  background: $yolk-1000
+  border-radius: $border-s
+  overflow: hidden
+
+  @include min($screen-m)
+    width: size(340)
 
   .image
     @include animate(0.3s)
+    padding: units(1)
 
   .new
     position: absolute
-    top: -units(1)
-    left: units(2)
+    top: units(1)
+    left: units(1)
     height: auto
     padding: size(2) size(8)
     @extend %body-4
@@ -26,34 +34,34 @@
   &:hover
 
     .image
-      scale: 1.05    
+      scale: 1.05
 
-  img
-    border-radius: $border-s
+      img
+        border-radius: 8px
 
   a:hover
     text-decoration: underline
 
   .content
     position: relative
-    padding-top: units(1)
-    padding-bottom: units(2)
+    padding: units(1) units(2) units(2) units(2)
 
     @include min($screen-m)
-      padding-top: units(1.5)
+      padding-top: units(2)
       
     h3
       @extend %body-3
-      @include min($screen-l)
-        overflow: hidden
-        width: calc(100% - 60px)
-        white-space: nowrap
-        text-overflow: ellipsis
+      overflow: hidden
+      width: 100%
+      white-space: nowrap
+      text-overflow: ellipsis
+      color: $black
+        
         
     p
       @extend %body-3
       @extend %bold
-      color: $grey-800
+      color: $black
       margin-top: units(0.5)
           
         

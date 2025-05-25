@@ -1,6 +1,6 @@
 {{ 'product-carousel-item.css' | asset_url | stylesheet_tag }}
 
-<div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}">
+<div is="product-carousel-item" class="product-item" data-id="{{ product.variants.first.id }}">
   <a href="{{ product.url }}" >
     <div class="image">
       <img

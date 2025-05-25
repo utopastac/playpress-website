@@ -72,14 +72,24 @@ a[is=outline-button]:hover {
   min-height: 0;
   height: 100%;
   position: relative;
+  width: 60%;
+  background: #FAB638;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 740px) {
+  [is=product-carousel-item] {
+    width: 32rem;
+  }
 }
 [is=product-carousel-item] .image {
   transition: all 0.3s ease-in-out;
+  padding: 0.8rem;
 }
 [is=product-carousel-item] .new {
   position: absolute;
-  top: -0.8rem;
-  left: 1.6rem;
+  top: 0.8rem;
+  left: 0.8rem;
   height: auto;
   padding: 0.2rem 0.8rem;
   background: #2D8872;
@@ -88,8 +98,6 @@ a[is=outline-button]:hover {
 }
 [is=product-carousel-item]:hover .image {
   scale: 1.05;
-}
-[is=product-carousel-item] img {
   border-radius: 1.6rem;
 }
 [is=product-carousel-item] a:hover {
@@ -97,21 +105,18 @@ a[is=outline-button]:hover {
 }
 [is=product-carousel-item] .content {
   position: relative;
-  padding-top: 0.8rem;
-  padding-bottom: 1.6rem;
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
 }
 @media screen and (min-width: 740px) {
   [is=product-carousel-item] .content {
-    padding-top: 1.2rem;
+    padding-top: 1.6rem;
   }
 }
-@media screen and (min-width: 1080px) {
-  [is=product-carousel-item] .content h3 {
-    overflow: hidden;
-    width: calc(100% - 60px);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+[is=product-carousel-item] .content h3 {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 [is=product-carousel-item] .content p {
   color: #41495E;
