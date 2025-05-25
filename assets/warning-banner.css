@@ -79,12 +79,13 @@ section[is=warning-banner] {
   }
 }
 section[is=warning-banner] > div {
-  background: #F6D18A;
+  background: #F0E6D3;
   border-radius: 500px;
   padding: 1.6rem 3.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2.4rem;
 }
 section[is=warning-banner] > div h4 {
   display: inline;
