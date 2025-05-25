@@ -11,12 +11,12 @@
   background: $blue-1200
   border-radius: $border-s
   overflow: hidden
-  @include animate(0.3s)
 
   @include min($screen-m)
     width: size(340)
 
   .image
+    @include animate(0.3s)
     padding: units(1)
 
     img
@@ -36,7 +36,7 @@
 
   &:hover
     .image
-      scale: 1.05 
+      scale: 1.07 
 
   a:hover
     text-decoration: underline
