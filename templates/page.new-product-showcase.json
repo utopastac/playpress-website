@@ -61,49 +61,37 @@
         "last_on_page": false
       }
     },
+    "gap_JThUTT": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "image_with_text_HkXmYy": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "The Globe Theatre",
+        "text": "<p>Take to the stage with a Playpress recreation of one of the most iconic theatre venues in the world. The the theatre and host a play, including the figure of Shakespeare!</p>",
+        "link_text": "Try it out",
+        "link_url": "shopify://products/discover-stonehenge-copy",
+        "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
+        "bg_color": "#ffd760",
+        "text_color": "#0a122a",
+        "show_signpost_link": true,
+        "use_button": true,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
     "gap_EPJCth": {
       "type": "gap",
       "name": "Gap",
       "settings": {
         "size": 2
       }
-    },
-    "page_gallery_GbRfXP": {
-      "type": "page-gallery",
-      "blocks": {
-        "page_gallery_image_9VwUKX": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/Aussie_d62738b5-3acc-448c-9467-7146d854f545.jpg"
-          }
-        },
-        "page_gallery_image_rbTJA7": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/big-nz_bb12bcfd-7b6f-42db-a95a-9f6e9d2903d6.jpg"
-          }
-        },
-        "page_gallery_image_Ufi46f": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/big-castle_68a4c91a-9cb2-48b6-8a1e-ee788aeae1be.jpg"
-          }
-        },
-        "page_gallery_image_TwbtPN": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/big-globe_e2da9afc-7027-483b-96bd-29f6f93cb124.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "page_gallery_image_9VwUKX",
-        "page_gallery_image_rbTJA7",
-        "page_gallery_image_Ufi46f",
-        "page_gallery_image_TwbtPN"
-      ],
-      "name": "Page gallery",
-      "settings": {}
     }
   },
   "order": [
@@ -112,7 +100,8 @@
     "big_banner_K9mjqr",
     "gap_wNRCVk",
     "image_with_text_mqa6Gp",
-    "gap_EPJCth",
-    "page_gallery_GbRfXP"
+    "gap_JThUTT",
+    "image_with_text_HkXmYy",
+    "gap_EPJCth"
   ]
 }
