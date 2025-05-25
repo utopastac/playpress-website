@@ -80,12 +80,17 @@ section[is=warning-banner] {
 }
 section[is=warning-banner] > div {
   background: #EBEDFA;
-  border-radius: 500px;
+  border-radius: 1.6rem;
   padding: 1.6rem 3.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 2.4rem;
+}
+@media screen and (min-width: 550px) {
+  section[is=warning-banner] > div {
+    border-radius: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 section[is=warning-banner] > div h4 {
   display: inline;
