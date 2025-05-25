@@ -3,16 +3,16 @@
 {% if section.settings.show_banner == true %}
   <section is="warning-banner">
     <a href="{{ section.settings.link_url }}">
-      <div>
+      <div style="background: {{ section.settings.bg_color }}">
         <div>
           {% if section.settings.heading != blank %}
-            <h4>{{ section.settings.heading | escape }}</h4>
+            <h4 style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h4>
           {% endif %}
           {% if section.settings.text != blank %}
-            <p>{{ section.settings.text | escape }}</p>
+            <p style="color: {{ section.settings.text_color }} !important">{{ section.settings.text | escape }}</p>
           {% endif %}
         </div>
-        <h5 href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</h5>
+        <h5 style="color: {{ section.settings.text_color }} !important" href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</h5>
       </div>
     </a>
   </section>
@@ -41,6 +41,18 @@
       "type": "url",
       "id": "link_url",
       "label": "Link URL"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#2D8872"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
     },
     {
       "type": "checkbox",
