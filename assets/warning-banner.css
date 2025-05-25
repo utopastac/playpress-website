@@ -79,9 +79,9 @@ section[is=warning-banner] {
   }
 }
 section[is=warning-banner] > div {
-  background: #FAB638;
-  border-radius: 0.8rem;
-  padding: 1.6rem;
+  background: #F6D18A;
+  border-radius: 500px;
+  padding: 1.6rem 3.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
