@@ -31,9 +31,12 @@
       "settings": {
         "heading": "Animal sets",
         "text": "Exciting new animal sets from all over the globe!",
+        "subtext": "From garden insects to big mammals to birds",
         "link_text": "Check them out",
         "link_url": "shopify://collections/animal-sets",
-        "image": "shopify://shop_images/Animal.jpg"
+        "image": "shopify://shop_images/Animal.jpg",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff"
       }
     },
     "gap_wNRCVk": {
