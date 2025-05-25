@@ -390,8 +390,8 @@
         "name": "Warning banner",
         "settings": {
           "heading": "",
-          "text": "Check out our new sets for Summer 2025!",
-          "link_text": "See the new sets",
+          "text": "New sets for Summer 2025!",
+          "link_text": "Check them out",
           "link_url": "shopify://pages/new-products",
           "show_banner": true
         }
