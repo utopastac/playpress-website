@@ -1,6 +1,6 @@
 {{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
-{%- unless template == 'index' -%} {%- assign t = template | split: '.' | first
+{%- if template == 'product' -%} {%- assign t = template | split: '.' | first
 -%}
   <ul is="breadcrumbs" class="christmas">
     <li>
