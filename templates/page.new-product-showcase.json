@@ -51,8 +51,8 @@
         "link_text": "Set the scene",
         "link_url": "shopify://collections/animal-sets",
         "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
-        "bg_color": "#ffd760",
-        "text_color": "#0a122a",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff",
         "layout": "right"
       }
     },
