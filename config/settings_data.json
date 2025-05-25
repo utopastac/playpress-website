@@ -164,9 +164,12 @@
         "settings": {
           "heading": "Sustainability",
           "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+          "subtext": "",
           "link_text": "Learn more",
           "link_url": "shopify://pages/sustainability",
-          "image": "shopify://shop_images/sustainability.jpg"
+          "image": "shopify://shop_images/sustainability.jpg",
+          "bg_color": "#2d8872",
+          "text_color": "#ffffff"
         }
       },
       "b19a403a-f605-4887-957c-be3ec277c046": {
@@ -381,10 +384,22 @@
         "settings": {
           "size": 2
         }
+      },
+      "warning_banner_PwTHFj": {
+        "type": "warning-banner",
+        "name": "Warning banner",
+        "settings": {
+          "heading": "",
+          "text": "Check out our new sets for Summer 2025!",
+          "link_text": "See the new sets",
+          "link_url": "shopify://pages/new-products",
+          "show_banner": true
+        }
       }
     },
     "content_for_index": [
       "896052e9-7468-470d-89eb-22991a6f0e2c",
+      "warning_banner_PwTHFj",
       "hero_pd3q7n",
       "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
