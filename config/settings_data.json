@@ -169,7 +169,8 @@
           "link_url": "shopify://pages/sustainability",
           "image": "shopify://shop_images/sustainability.jpg",
           "bg_color": "#2d8872",
-          "text_color": "#ffffff"
+          "text_color": "#ffffff",
+          "layout": "left"
         }
       },
       "b19a403a-f605-4887-957c-be3ec277c046": {
@@ -266,6 +267,8 @@
           "text": "",
           "link_text": "More",
           "link_url": "shopify://pages/delivery",
+          "bg_color": "#2d8872",
+          "text_color": "#ffffff",
           "show_banner": false
         }
       },
@@ -389,10 +392,12 @@
         "type": "warning-banner",
         "name": "Warning banner",
         "settings": {
-          "heading": "",
-          "text": "New sets for Summer 2025!",
+          "heading": "New sets for Summer 2025!",
+          "text": "",
           "link_text": "Check them out",
           "link_url": "shopify://pages/new-products",
+          "bg_color": "#ffd760",
+          "text_color": "#0a122a",
           "show_banner": true
         }
       }
