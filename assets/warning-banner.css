@@ -88,7 +88,7 @@ section[is=warning-banner] > div {
   section[is=warning-banner] > div {
     border-radius: 500px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -99,7 +99,4 @@ section[is=warning-banner] > div h4 {
 section[is=warning-banner] > div p {
   display: inline;
   max-width: 75ch;
-}
-section[is=warning-banner] > div a {
-  margin-left: 0.8rem;
 }
