@@ -36,6 +36,13 @@
         "image": "shopify://shop_images/Animal.jpg"
       }
     },
+    "gap_EPJCth": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "page_gallery_GbRfXP": {
       "type": "page-gallery",
       "blocks": {
@@ -78,6 +85,7 @@
     "intro",
     "9fb32536-3c70-4a94-84db-a717079ad057",
     "big_banner_K9mjqr",
+    "gap_EPJCth",
     "page_gallery_GbRfXP"
   ]
 }
