@@ -25,6 +25,9 @@
         <div is="hero-content">
           <h2 style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h2>
           <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.text }}</h3>
+          {%- if section.settings.subtext != blank -%}
+            <p style="color: {{ section.settings.text_color }} !important">{{ section.settings.subtext }}</p>
+          {%- endif -%}
           <div is="button">{{ section.settings.link_text }}<div class="icon arrow-right"></div></div>
         </div>
 
@@ -49,6 +52,12 @@
       "type": "text",
       "label": "Text",
       "default": "Add descriptive text"
+    },
+    {
+      "id": "subtext",
+      "type": "text",
+      "label": "Sub text",
+      "default": ""
     },
     {
       "type": "text",
