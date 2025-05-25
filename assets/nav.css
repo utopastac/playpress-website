@@ -10,12 +10,12 @@
   background-size: 24px 24px;
 }
 
-a[is=outline-button], nav[is=menu] > ul > li > a {
+a[is=outline-button], nav[is=menu] > ul > li .dropdown li, nav[is=menu] > ul > li > a {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], nav[is=menu] > ul > li > a {
+a[is=outline-button], nav[is=menu] > ul > li .dropdown li, nav[is=menu] > ul > li > a {
   font-weight: 400;
 }
 
@@ -32,6 +32,19 @@ nav[is=menu] > ul > li > a {
   nav[is=menu] > ul > li > a {
     font-size: 2.1rem;
     line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+nav[is=menu] > ul > li .dropdown li {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  nav[is=menu] > ul > li .dropdown li {
+    font-size: 1.8rem;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
@@ -84,6 +97,30 @@ nav[is=menu] > ul > li {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+  position: relative;
+}
+nav[is=menu] > ul > li .dropdown {
+  display: none;
+  position: absolute;
+  top: 6.4rem;
+  background: white;
+  padding: 2rem 2.4rem;
+  border-radius: 1.6rem;
+  box-shadow: 0px 1px 4px rgba(10, 18, 42, 0.1), 0px 8px 24px rgba(10, 18, 42, 0.12);
+}
+nav[is=menu] > ul > li .dropdown li {
+  width: 20rem;
+  padding: 0.4rem 0;
+  color: #19226B;
+  opacity: 0.7;
+}
+nav[is=menu] > ul > li .dropdown li:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 740px) {
+  nav[is=menu] > ul > li:hover .dropdown {
+    display: block;
+  }
 }
 nav[is=menu] > ul > li > a {
   border-radius: 0.4rem;
@@ -94,6 +131,9 @@ nav[is=menu] > ul > li > a {
 }
 nav[is=menu] > ul > li > a:hover {
   background-color: #19226B;
+}
+nav[is=menu] > ul > li > a .dropdown {
+  display: none;
 }
 nav[is=menu] > ul > li.on {
   box-shadow: inset 0 -6px 0 0 #FAB638;
