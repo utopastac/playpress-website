@@ -176,6 +176,9 @@ section[is=big-banner] .banner-content h2, section[is=big-banner] .banner-conten
 section[is=big-banner] .banner-content h2 {
   margin-bottom: 0.4rem;
 }
+section[is=big-banner] .banner-content p {
+  margin-top: 0.8rem;
+}
 section[is=big-banner] .banner-content div[is=button] {
   margin-top: 2.4rem;
 }
