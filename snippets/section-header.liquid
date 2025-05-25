@@ -6,7 +6,7 @@
       <h2>{{ title | escape }}</h2>
       
       {% if text != blank %}
-          <p>{{ text | escape }}</p>
+          {{ text | escape }}
       {% endif %}
     </div>
   </header>
