@@ -1,4 +1,4 @@
-section[is=warning-banner] > a > div {
+section[is=warning-banner] > a {
   max-width: 140rem;
   margin: 0 auto;
 }
@@ -124,10 +124,14 @@ section[is=warning-banner] {
 }
 section[is=warning-banner] > a {
   display: block;
+  text-align: center;
   transition: all 0.2s ease-in-out;
 }
 section[is=warning-banner] > a:hover {
   scale: 1.03;
+}
+section[is=warning-banner] > a h5 {
+  margin-top: 0.8rem;
 }
 section[is=warning-banner] > a > div {
   background: #EBEDFA;
@@ -137,10 +141,14 @@ section[is=warning-banner] > a > div {
 }
 @media screen and (min-width: 550px) {
   section[is=warning-banner] > a > div {
-    border-radius: 500px;
-    display: flex;
+    border-radius: 1.6rem;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding-right: 1.6rem;
+  }
+  section[is=warning-banner] > a > div h5 {
+    margin-top: 0;
   }
 }
 section[is=warning-banner] > a > div h4 {
