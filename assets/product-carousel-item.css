@@ -109,11 +109,6 @@ a[is=outline-button]:hover {
   position: relative;
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;
 }
-@media screen and (min-width: 740px) {
-  [is=product-carousel-item] .content {
-    padding-top: 1.6rem;
-  }
-}
 [is=product-carousel-item] .content h3 {
   overflow: hidden;
   width: 100%;
