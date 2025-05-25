@@ -366,11 +366,11 @@
           "subtitle": "Discover Stonehenge",
           "text": "",
           "link_text": "Buy now",
-          "link_url": "shopify://products/legends-castle-copy",
+          "link_url": "shopify://pages/english-heritage",
           "image": "shopify://shop_images/stonehenge_1cdf2f4f-6ae7-4596-8ee3-f10fa03e2b5f.png",
           "bg_color": "#ed2a51",
           "is_text_color": false,
-          "text_color": "#0A122A",
+          "text_color": "#0a122a",
           "is_large": true,
           "is_dark": true
         }
