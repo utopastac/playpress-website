@@ -1,12 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "warning_banner_99E7wH": {
+      "type": "warning-banner",
+      "name": "Warning banner",
+      "settings": {
+        "heading": "New sets for Summer 2025!",
+        "text": "",
+        "link_text": "Check them out",
+        "link_url": "shopify://pages/new-products",
+        "bg_color": "#31ff86",
+        "text_color": "#2d1f74",
+        "show_banner": true
+      }
+    },
     "intro": {
       "type": "intro",
       "settings": {
         "heading": "Playpress Studio",
         "text": "Our studio creates bespoke playsets for your brand. We collaborate with brands that share our values - affordable fun that doesn't cost the planet.",
         "link_text": "Contact us",
-        "link_url": "shopify:\/\/pages\/contact",
+        "link_url": "shopify://pages/contact",
         "show_delivery_info": false
       }
     },
@@ -14,12 +36,12 @@
       "type": "image-with-text",
       "settings": {
         "title": "We love making playsets",
-        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.<\/p>",
+        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/XL0001_Space_Station_Child_Playing_On_Floor.jpg",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
+        "image": "shopify://shop_images/XL0001_Space_Station_Child_Playing_On_Floor.jpg",
+        "bg_color": "#ebedfa",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "right",
@@ -40,48 +62,48 @@
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/bespoke-rlni.jpg",
+            "image": "shopify://shop_images/bespoke-rlni.jpg",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/rnli",
+            "link_url": "shopify://pages/rnli",
             "title": "",
             "subtitle": "RNLI",
-            "text": "<p>Our collaboration with the RNLI won ‘Licensed Toy of the Year’ at the Play Creators Awards 2019.<\/p>"
+            "text": "<p>Our collaboration with the RNLI won ‘Licensed Toy of the Year’ at the Play Creators Awards 2019.</p>"
           }
         },
         "template--15723518918848__9b58a03a-9d23-40a1-ad93-0c601ff4b503-16697321112d756c98-1": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/bespoke-science.jpg",
+            "image": "shopify://shop_images/bespoke-science.jpg",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/science-museum",
+            "link_url": "shopify://pages/science-museum",
             "title": "",
             "subtitle": "Science Museum",
-            "text": "<p>We made a Science Museum branded Playpress science range, plus we jointly developed the Soyuz landing craft that is a unique product to the museum.<\/p>"
+            "text": "<p>We made a Science Museum branded Playpress science range, plus we jointly developed the Soyuz landing craft that is a unique product to the museum.</p>"
           }
         },
         "960a8161-6c62-4013-bd35-1bc0095737f1": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/bespoke-jojo.jpg",
+            "image": "shopify://shop_images/bespoke-jojo.jpg",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/jojo-maman-bebe",
+            "link_url": "shopify://pages/jojo-maman-bebe",
             "title": "",
             "subtitle": "Jojo Maman Bébé",
-            "text": "<p>We jointly developed the Christmas ‘give away’ gift, making a huge number of products in a short time frame.<\/p>"
+            "text": "<p>We jointly developed the Christmas ‘give away’ gift, making a huge number of products in a short time frame.</p>"
           }
         },
         "aab97110-9eda-4a98-99ca-dd28d1e4922c": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/bespoke-square-mile.jpg",
+            "image": "shopify://shop_images/bespoke-square-mile.jpg",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/square-mile-coffee",
+            "link_url": "shopify://pages/square-mile-coffee",
             "title": "",
             "subtitle": "Square Mile Coffee",
-            "text": "<p>In rapid time we made 20,000 delightful logo coasters for use in the world’s largest coffee tasting event.<\/p>"
+            "text": "<p>In rapid time we made 20,000 delightful logo coasters for use in the world’s largest coffee tasting event.</p>"
           }
         }
       },
@@ -112,7 +134,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-0": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/studio-design.jpg",
+            "image": "shopify://shop_images/studio-design.jpg",
             "link_url": "",
             "title": "Bespoke design",
             "text": "We can design almost anything. We work closely with clients to get the product just right."
@@ -121,7 +143,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-1": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/studio-prototypes.jpg",
+            "image": "shopify://shop_images/studio-prototypes.jpg",
             "link_url": "",
             "title": "Product prototypes",
             "text": "We provide prototypes of the play sets so you can get a hands-on experience."
@@ -130,7 +152,7 @@
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-2": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/studio-brand.jpg",
+            "image": "shopify://shop_images/studio-brand.jpg",
             "link_url": "",
             "title": "Your brand",
             "text": "We can brand the packaging and product however you like."
@@ -139,7 +161,7 @@
         "4b0d6989-b130-4287-9348-9e999052082e": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/studio-manufacture.jpg",
+            "image": "shopify://shop_images/studio-manufacture.jpg",
             "link_url": "",
             "title": "Quick manufacture",
             "text": "We make all our products in the UK. This lets us provide quick turn around and a high-quality product that is CE certified."
@@ -167,12 +189,12 @@
       "type": "image-with-text",
       "settings": {
         "title": "Every project will have a budget!",
-        "text": "<p>The design, set up, and machinery set up involved generally means that most projects need to have a volume of between 1000 and 5000 units - the larger the number the lower the ‘per unit’ cost is.<br\/><br\/>Depending on the project required, the initial budget expectation would be between £6000 and £12,000, but this would deliver a delightful and unique addition to your brand.<\/p>",
+        "text": "<p>The design, set up, and machinery set up involved generally means that most projects need to have a volume of between 1000 and 5000 units - the larger the number the lower the ‘per unit’ cost is.<br/><br/>Depending on the project required, the initial budget expectation would be between £6000 and £12,000, but this would deliver a delightful and unique addition to your brand.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/bespoke-budget.jpg",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
+        "image": "shopify://shop_images/bespoke-budget.jpg",
+        "bg_color": "#ebedfa",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "left",
@@ -184,12 +206,13 @@
       "type": "rich-text",
       "settings": {
         "heading": "Start a collaboration with us!",
-        "text": "<p>Get in touch by emailing us at <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com<\/a><\/p>",
+        "text": "<p>Get in touch by emailing us at <a href=\"mailto:team@playpresstoys.com\" title=\"mailto:team@playpresstoys.com\">team@playpresstoys.com</a></p>",
         "show_colour": false
       }
     }
   },
   "order": [
+    "warning_banner_99E7wH",
     "intro",
     "16277530953a8433e6",
     "c4cf0f2c-ba8c-4d76-8127-85095842da25",
