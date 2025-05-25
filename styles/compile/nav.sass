@@ -32,7 +32,7 @@ nav[is="menu"]
         box-shadow: $elevation-1
 
         li
-          width: size(200)
+          width: size(240)
           padding: size(4) 0
           @extend %body-3
           color: $blue-1200
@@ -40,6 +40,16 @@ nav[is="menu"]
 
           &:hover
             opacity: 1
+
+        .divider
+          margin: units(1) 0
+          height: size(1)
+          background: $border-color
+
+        h4
+          @extend %overline
+          color: $grey-800
+          margin: units(2) 0 units(1) 0
 
       @include min($screen-m)
         &:hover

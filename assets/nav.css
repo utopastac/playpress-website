@@ -10,6 +10,11 @@
   background-size: 24px 24px;
 }
 
+nav[is=menu] > ul > li .dropdown h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+}
+
 a[is=outline-button], nav[is=menu] > ul > li .dropdown li, nav[is=menu] > ul > li > a {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
@@ -21,6 +26,24 @@ a[is=outline-button], nav[is=menu] > ul > li .dropdown li, nav[is=menu] > ul > l
 
 nav[is=menu] > ul > li > a, a[is=outline-button] {
   font-weight: 700;
+}
+
+nav[is=menu] > ul > li .dropdown h4 {
+  font-weight: 900;
+}
+
+nav[is=menu] > ul > li .dropdown h4 {
+  font-size: 1.4rem;
+  line-height: 115%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1080px) {
+  nav[is=menu] > ul > li .dropdown h4 {
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 1.5px;
+  }
 }
 
 nav[is=menu] > ul > li > a {
@@ -109,13 +132,22 @@ nav[is=menu] > ul > li .dropdown {
   box-shadow: 0px 1px 4px rgba(10, 18, 42, 0.1), 0px 8px 24px rgba(10, 18, 42, 0.12);
 }
 nav[is=menu] > ul > li .dropdown li {
-  width: 20rem;
+  width: 24rem;
   padding: 0.4rem 0;
   color: #19226B;
   opacity: 0.7;
 }
 nav[is=menu] > ul > li .dropdown li:hover {
   opacity: 1;
+}
+nav[is=menu] > ul > li .dropdown .divider {
+  margin: 0.8rem 0;
+  height: 0.1rem;
+  background: #E7E9EF;
+}
+nav[is=menu] > ul > li .dropdown h4 {
+  color: #41495E;
+  margin: 1.6rem 0 0.8rem 0;
 }
 @media screen and (min-width: 740px) {
   nav[is=menu] > ul > li:hover .dropdown {
