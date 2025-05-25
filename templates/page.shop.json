@@ -15,9 +15,9 @@
       "settings": {
         "title": "",
         "text": "",
-        "text_color": "#ffffff",
-        "bg_color_1": "#00be65",
-        "bg_color_2": "#2d3788",
+        "text_color": "#2d3788",
+        "bg_color_1": "#a7e5a3",
+        "bg_color_2": "#cafac7",
         "collection": "new-sets"
       }
     },
