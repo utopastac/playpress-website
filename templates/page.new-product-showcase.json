@@ -12,7 +12,7 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "Contact",
+        "heading": "New for Summer 2025",
         "text": "",
         "link_text": "",
         "link_url": "",
@@ -25,14 +25,59 @@
         "size": 1
       }
     },
-    "contact_rPh7Bk": {
-      "type": "contact",
+    "big_banner_K9mjqr": {
+      "type": "big-banner",
+      "name": "Big Banner",
+      "settings": {
+        "heading": "Animal sets",
+        "text": "Exciting new animal sets from all over the globe!",
+        "link_text": "Check them out",
+        "link_url": "shopify://collections/animal-sets",
+        "image": "shopify://shop_images/Animal.jpg"
+      }
+    },
+    "page_gallery_GbRfXP": {
+      "type": "page-gallery",
+      "blocks": {
+        "page_gallery_image_9VwUKX": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/Aussie_d62738b5-3acc-448c-9467-7146d854f545.jpg"
+          }
+        },
+        "page_gallery_image_rbTJA7": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/big-nz.jpg"
+          }
+        },
+        "page_gallery_image_Ufi46f": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/big-castle.jpg"
+          }
+        },
+        "page_gallery_image_TwbtPN": {
+          "type": "page_gallery_image",
+          "settings": {
+            "image": "shopify://shop_images/big-globe.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "page_gallery_image_9VwUKX",
+        "page_gallery_image_rbTJA7",
+        "page_gallery_image_Ufi46f",
+        "page_gallery_image_TwbtPN"
+      ],
+      "name": "Page gallery",
       "settings": {}
     }
   },
   "order": [
     "intro",
     "9fb32536-3c70-4a94-84db-a717079ad057",
-    "contact_rPh7Bk"
+    "big_banner_K9mjqr",
+    "page_gallery_GbRfXP"
   ]
 }
