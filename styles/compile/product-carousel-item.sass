@@ -8,7 +8,7 @@
   height: 100%
   position: relative
   width: 60%
-  background: $blue-1200
+  background: $blue-1000
   border-radius: $border-s
   overflow: hidden
 
@@ -17,10 +17,10 @@
 
   .image
     background: $yolk-1000
-    @include animate(0.3s)
     padding: size(6)
 
     img
+      @include animate(0.3s)
       border-radius: 10px
 
   .new
@@ -36,7 +36,7 @@
     border-radius: size(12)
 
   &:hover
-    .image
+    img
       scale: 1.05 
 
   a:hover

@@ -73,7 +73,7 @@ a[is=outline-button]:hover {
   height: 100%;
   position: relative;
   width: 60%;
-  background: #19226B;
+  background: #2D3788;
   border-radius: 1.6rem;
   overflow: hidden;
 }
@@ -84,10 +84,10 @@ a[is=outline-button]:hover {
 }
 [is=product-carousel-item] .image {
   background: #FAB638;
-  transition: all 0.3s ease-in-out;
   padding: 0.6rem;
 }
 [is=product-carousel-item] .image img {
+  transition: all 0.3s ease-in-out;
   border-radius: 10px;
 }
 [is=product-carousel-item] .new {
@@ -100,7 +100,7 @@ a[is=outline-button]:hover {
   color: #FFFFFF;
   border-radius: 1.2rem;
 }
-[is=product-carousel-item]:hover .image {
+[is=product-carousel-item]:hover img {
   scale: 1.05;
 }
 [is=product-carousel-item] a:hover {
