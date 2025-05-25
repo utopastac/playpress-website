@@ -52,12 +52,32 @@ a[is=outline-button]:hover {
   background: #EBEDFA;
 }
 
+@media screen and (min-width: 1080px) {
+  .carousel {
+    height: 34rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  div[is=product-carousel] {
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 div[is=product-carousel] > div {
   white-space: nowrap;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   margin: -1.6rem -1.6rem;
-  padding: 1.6rem 0.8rem;
+  padding: 1.6rem 1.6rem;
+}
+@media screen and (min-width: 1080px) {
+  div[is=product-carousel] > div {
+    margin: -1.6rem 0;
+    padding: 1.6rem 8rem;
+  }
 }
 div[is=product-carousel] > div > * {
   display: inline-block;

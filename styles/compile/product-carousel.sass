@@ -1,12 +1,27 @@
 @import '../assets'
 
+.carousel
+  @include min($screen-l)
+    height: size(340)
+
 div[is="product-carousel"]
+
+  @include min($screen-l)
+    width: 100vw
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+  
   > div
     white-space: nowrap
     overflow-x: scroll
     -webkit-overflow-scrolling: touch
     margin: -units(2) -units(2)
-    padding: units(2) units(1)
+    padding: units(2) units(2)
+
+    @include min($screen-l)
+      margin: -units(2) 0
+      padding: units(2) units(10)
 
     > *
       display: inline-block
