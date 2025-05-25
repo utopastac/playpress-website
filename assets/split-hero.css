@@ -226,6 +226,11 @@ section[is=split-hero] div[is=split-hero-content] {
 section[is=split-hero] div[is=split-hero-content] > div:first-child {
   margin-bottom: 2.4rem;
 }
+@media screen and (min-width: 1080px) {
+  section[is=split-hero] div[is=split-hero-content] {
+    border-radius: 1.6rem 0 0 1.6rem;
+  }
+}
 section[is=split-hero] div[is=split-hero-image] {
   flex: 1;
 }
