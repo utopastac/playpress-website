@@ -224,7 +224,7 @@
       "56c1881e-74fa-4d3c-b478-b7a396e70ffb": {
         "type": "gap",
         "settings": {
-          "size": 2
+          "size": 1
         }
       },
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f": {
@@ -374,6 +374,13 @@
           "is_large": true,
           "is_dark": true
         }
+      },
+      "gap_Tij7bb": {
+        "type": "gap",
+        "name": "Gap",
+        "settings": {
+          "size": 2
+        }
       }
     },
     "content_for_index": [
@@ -384,10 +391,11 @@
       "1623767875c4b2fbf3",
       "3da560ad-006d-4360-a1f1-5d809bde06ad",
       "hero_GPmdV6",
-      "0f90aaf7-9415-44a5-98d5-18b88d507cde",
       "hero_HBCyiY",
       "44372dd3-96f6-4cbd-ad4b-4ab46c744fba",
       "592589cc-23f4-460c-aaa1-a8c5fa26628f",
+      "gap_Tij7bb",
+      "0f90aaf7-9415-44a5-98d5-18b88d507cde",
       "56c1881e-74fa-4d3c-b478-b7a396e70ffb",
       "c860a1ac-4102-41a9-b21f-0a0a5b16ed80",
       "596be5df-64e8-4ac6-aa05-eba2affa0b31",
