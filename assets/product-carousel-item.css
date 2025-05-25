@@ -73,7 +73,6 @@ a[is=outline-button]:hover {
   height: 100%;
   position: relative;
   width: 60%;
-  background: #2D3788;
   border-radius: 1.6rem;
   overflow: hidden;
   transition: all 0.15s ease-in-out;
