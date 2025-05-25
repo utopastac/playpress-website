@@ -1,6 +1,6 @@
 {{ 'big-banner.css' | asset_url | stylesheet_tag }}
 
-<section is="big-banner">
+<section is="big-banner" style="background: {{ section.settings.bg_color }}">
   <a href="{{ section.settings.link_url }}">
     <div>
       {%- if section.settings.background_image == blank -%}
@@ -22,7 +22,7 @@
           />
         {%- endif -%}
 
-        <div is="hero-content" style="background: {{ section.settings.bg_color }}">
+        <div is="hero-content">
           <h2 style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h2>
           <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.text }}</h3>
           <div is="button">{{ section.settings.link_text }}<div class="icon arrow-right"></div></div>
