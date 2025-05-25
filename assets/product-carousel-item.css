@@ -76,15 +76,18 @@ a[is=outline-button]:hover {
   background: #FAB638;
   border-radius: 1.6rem;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 740px) {
   [is=product-carousel-item] {
-    width: 32rem;
+    width: 34rem;
   }
 }
 [is=product-carousel-item] .image {
-  transition: all 0.3s ease-in-out;
   padding: 0.8rem;
+}
+[is=product-carousel-item] .image img {
+  border-radius: 8px;
 }
 [is=product-carousel-item] .new {
   position: absolute;
@@ -96,9 +99,8 @@ a[is=outline-button]:hover {
   color: #FFFFFF;
   border-radius: 1.2rem;
 }
-[is=product-carousel-item]:hover .image {
+[is=product-carousel-item]:hover {
   scale: 1.05;
-  border-radius: 1.6rem;
 }
 [is=product-carousel-item] a:hover {
   text-decoration: underline;
@@ -117,9 +119,10 @@ a[is=outline-button]:hover {
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #0A122A;
 }
 [is=product-carousel-item] .content p {
-  color: #41495E;
+  color: #0A122A;
   margin-top: 0.4rem;
 }
 [is=product-carousel-item]:focus-visible {

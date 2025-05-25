@@ -11,13 +11,16 @@
   background: $yolk-1000
   border-radius: $border-s
   overflow: hidden
+  @include animate(0.3s)
 
   @include min($screen-m)
     width: size(340)
 
   .image
-    @include animate(0.3s)
     padding: units(1)
+
+    img
+      border-radius: 8px
 
   .new
     position: absolute
@@ -32,12 +35,7 @@
     border-radius: size(12)
 
   &:hover
-
-    .image
-      scale: 1.05
-
-      img
-        border-radius: 8px
+    scale: 1.05 
 
   a:hover
     text-decoration: underline
@@ -55,13 +53,13 @@
       width: 100%
       white-space: nowrap
       text-overflow: ellipsis
-      color: $black
+      color: $grey-1200
         
         
     p
       @extend %body-3
       @extend %bold
-      color: $black
+      color: $grey-1200
       margin-top: units(0.5)
           
         
