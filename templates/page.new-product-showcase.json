@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "intro",
+      "settings": {
+        "heading": "Contact",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "show_delivery_info": false
+      }
+    },
+    "9fb32536-3c70-4a94-84db-a717079ad057": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "contact_rPh7Bk": {
+      "type": "contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "intro",
+    "9fb32536-3c70-4a94-84db-a717079ad057",
+    "contact_rPh7Bk"
+  ]
+}
