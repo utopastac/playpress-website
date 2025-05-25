@@ -153,7 +153,7 @@ section[is=big-banner] {
 }
 @media screen and (min-width: 740px) {
   section[is=big-banner].swapped div[is=hero-content] {
-    order: 0;
+    order: -1;
   }
 }
 section[is=big-banner]:hover {
