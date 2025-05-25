@@ -21,24 +21,24 @@
         <div class="dropdown">
           <ul>
             {% for link in linklists.collections.links %}
-              {% unless link.title == "shop" %}
-                <li>
-                  <a is="collection-link" href="{{ link.url }}">
-                    <p>{{ link.title }}</p>
-                  </a>
-                </li>
-              {% endunless %}
+              <li>
+                <a is="collection-link" href="{{ link.url }}">
+                  <p>{{ link.title }}</p>
+                </a>
+              </li>
             {% endfor %}
           </ul>
         </div>
       </li>
       {% for link in linklists.main-menu.links %}
+        {% unless link.title == "Shop" %}
           <li {% if link.active %} class="on"{% endif %}>
             <a href="{{ link.url }}"
               {% if link.current %} aria-current="page"{% endif %}
             >{{ link.title }}
             </a>
           </li>
+        {% endunless %}
       {% endfor %}
     </ul>
   </nav>
