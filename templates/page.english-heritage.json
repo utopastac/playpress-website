@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "intro",
+      "settings": {
+        "heading": "Playpress Minis",
+        "text": "Out mini set range is designed to be interconnectable, collectable, and amazing fun for kids.",
+        "link_text": "",
+        "link_url": "",
+        "show_delivery_info": false
+      }
+    },
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
+      "type": "product-promo-large",
+      "blocks": {
+        "1db4e450-515c-4030-b14f-c056305e7034": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "dcbfdb26-6272-4553-959d-e70c86d0c8b4": {
+          "type": "gallery_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "1db4e450-515c-4030-b14f-c056305e7034",
+        "cd8956b7-a7b7-4e34-92f6-9f0f6b003ead",
+        "dcbfdb26-6272-4553-959d-e70c86d0c8b4"
+      ],
+      "settings": {
+        "title": "Product Promo",
+        "text": "The playset includes everything your child needs to build their own mini vets surgery with a variety of animals and medical equipment.",
+        "product": "mini-vets-play-set",
+        "layout": "left"
+      }
+    },
+    "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
+      "type": "gap",
+      "settings": {
+        "size": 3
+      }
+    },
+    "e9bbee40-d7c2-473b-8d33-c1a15608c11b": {
+      "type": "product-promo-large",
+      "blocks": {
+        "ec7a11f3-6270-4c27-a25a-50746b8748ae": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "015cfadc-a602-4886-959a-eabc2611390c": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65": {
+          "type": "gallery_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ec7a11f3-6270-4c27-a25a-50746b8748ae",
+        "015cfadc-a602-4886-959a-eabc2611390c",
+        "a8e9a7bb-a862-4b4f-b705-82c15fff7d65"
+      ],
+      "settings": {
+        "title": "Product Promo",
+        "text": "The play set includes everything your child needs to build their own mini Cafe with a variety of accessories, such as miniature food items, a coffee machine, and cash.",
+        "product": "mini-refill-cafe",
+        "layout": "left"
+      }
+    },
+    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b": {
+      "type": "gap",
+      "settings": {
+        "size": 3
+      }
+    },
+    "61c188e3-d846-4f48-b6c9-6dc6485ec953": {
+      "type": "product-promo-large",
+      "blocks": {
+        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "3845e81f-7814-44bb-92f6-19ae3488f197": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "959388b3-b98d-41da-9d87-e20baf539bb1": {
+          "type": "gallery_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "46b17ef0-d2e4-4f12-bf90-bcb07991cc9d",
+        "3845e81f-7814-44bb-92f6-19ae3488f197",
+        "959388b3-b98d-41da-9d87-e20baf539bb1"
+      ],
+      "settings": {
+        "title": "Product Promo",
+        "text": "The playset includes everything your child needs to build their own mini museum with exhibits from around the world, including ancient artefacts, cultural treasures, and natural wonders.",
+        "product": "mini-musuem-play-set",
+        "layout": "left"
+      }
+    },
+    "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74": {
+      "type": "gap",
+      "settings": {
+        "size": 3
+      }
+    },
+    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e": {
+      "type": "product-promo-large",
+      "blocks": {
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-1": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-2": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-3": {
+          "type": "gallery_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-1",
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-2",
+        "template--15894205366464__dfa1f75d-a84e-4d3d-86b7-c831a7c5414e-gallery_image-3"
+      ],
+      "settings": {
+        "title": "Add a title",
+        "text": "Bring the world of Ancient Egypt to life with this playset. Inside you’ll find two archaeologists, tools, a sarcophagus and artefacts including poetry and a mummy.",
+        "product": "ancient-egypt-playset",
+        "layout": "left"
+      }
+    },
+    "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
+      "type": "gap",
+      "settings": {
+        "size": 3
+      }
+    },
+    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Small sets, even smaller impact",
+        "text": "<p>Our smaller sets for designed for big imaginations. Our Mini range is designed for pocket-money pricing, and shares all of the same sustainability benefits as our larger sets.</p>",
+        "link_text": "Sustainability at Playpress",
+        "link_url": "shopify://pages/sustainability",
+        "image": "shopify://shop_images/mini-set_88b87650-8b7c-469c-bfb6-140070ac0344.jpg",
+        "bg_color": "#10c182",
+        "text_color": "#ffffff",
+        "show_signpost_link": true,
+        "use_button": true,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "b2ea100a-0977-4755-80c8-4d3b83b27afd",
+    "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
+    "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
+    "20c8b915-a3f3-4c52-a187-9ac91b99cf1b",
+    "61c188e3-d846-4f48-b6c9-6dc6485ec953",
+    "8e3bdb9f-0a99-4ff7-836b-22c01bdd2f74",
+    "dfa1f75d-a84e-4d3d-86b7-c831a7c5414e",
+    "89ea955f-faa3-4b8a-ad59-096ce47bb67b",
+    "5c8211e7-17c4-4e4d-9f33-3de91c889ef4"
+  ]
+}
