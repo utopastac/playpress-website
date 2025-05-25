@@ -36,7 +36,8 @@
         "link_url": "shopify://collections/animal-sets",
         "image": "shopify://shop_images/Animal.jpg",
         "bg_color": "#2d8872",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "layout": "left"
       }
     },
     "gap_wNRCVk": {
@@ -57,7 +58,8 @@
         "link_url": "shopify://collections/animal-sets",
         "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
         "bg_color": "#ffd760",
-        "text_color": "#0a122a"
+        "text_color": "#0a122a",
+        "layout": "right"
       }
     },
     "gap_JThUTT": {
@@ -78,7 +80,8 @@
         "link_url": "shopify://collections/animal-sets",
         "image": "shopify://shop_images/english-heritage.jpg",
         "bg_color": "#152f69",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "layout": "left"
       }
     },
     "gap_EPJCth": {
