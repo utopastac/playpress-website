@@ -142,13 +142,13 @@
     "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842": {
       "type": "split-hero",
       "settings": {
-        "heading_a": "Take a trip to see these magnificent birds!",
-        "subtitle_a": "RSPB collection",
+        "heading_a": "Go down under with these Aussie Animals!",
+        "subtitle_a": "Australian animals",
         "link_text_a": "View",
         "link_url_a": "shopify://collections/charity-sets",
-        "image_a": "shopify://shop_images/RSPB-2.jpg",
-        "bg_color_a": "#296b4f",
-        "text_color_a": "#ffffff",
+        "image_a": "shopify://shop_images/Aussie_d62738b5-3acc-448c-9467-7146d854f545.jpg",
+        "bg_color_a": "#ff9aa8",
+        "text_color_a": "#2d3788",
         "heading_b": "Award-winning RNLI Inshore Lifeboat",
         "subtitle_b": "RNLI",
         "link_text_b": "View",
