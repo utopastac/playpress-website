@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "product_carousel_hNeEET": {
+      "type": "product-carousel",
+      "name": "Product carousel",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "new-sets"
+      }
+    },
+    "79d35488-96a4-4333-8e48-117ea264ecc8": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "7504f886-e145-4c65-bce0-03930b2ca39a": {
       "type": "hero",
       "settings": {
@@ -23,21 +38,6 @@
         "text_color": "#0a122a",
         "is_large": false,
         "is_dark": false
-      }
-    },
-    "product_carousel_hNeEET": {
-      "type": "product-carousel",
-      "name": "Product carousel",
-      "settings": {
-        "title": "New sets",
-        "text": "",
-        "collection": "new-sets"
-      }
-    },
-    "79d35488-96a4-4333-8e48-117ea264ecc8": {
-      "type": "gap",
-      "settings": {
-        "size": 1
       }
     },
     "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
@@ -176,9 +176,9 @@
     }
   },
   "order": [
-    "7504f886-e145-4c65-bce0-03930b2ca39a",
     "product_carousel_hNeEET",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
+    "7504f886-e145-4c65-bce0-03930b2ca39a",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
