@@ -99,9 +99,8 @@
         "blocks": {
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0": {
             "type": "collection",
-            "disabled": true,
             "settings": {
-              "collection": "best-sellers"
+              "collection": "new-sets"
             }
           },
           "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1": {
