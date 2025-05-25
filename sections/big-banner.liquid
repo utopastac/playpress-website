@@ -22,9 +22,9 @@
           />
         {%- endif -%}
 
-        <div is="hero-content">
-          <h2>{{ section.settings.heading | escape }}</h2>
-          <h3>{{ section.settings.text }}</h3>
+        <div is="hero-content" style="background: {{ section.settings.bg_color }}">
+          <h2 style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h2>
+          <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.text }}</h3>
           <div is="button">{{ section.settings.link_text }}<div class="icon arrow-right"></div></div>
         </div>
 
@@ -69,6 +69,18 @@
       "id": "background_image",
       "type": "image_picker",
       "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#EBEDFA"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#0A122A"
     }
   ],
   "presets": [
