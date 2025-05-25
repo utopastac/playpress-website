@@ -64,6 +64,9 @@ button.blue[is=command] {
   background: #2D3788;
   color: white;
 }
+button.blue[is=command]:active {
+  background-color: #272f75;
+}
 button.blue[is=command]:before {
   content: "";
   display: block;

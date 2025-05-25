@@ -18,6 +18,9 @@
   background: #2D3788;
   color: white;
 }
+[is=product-promo] form button.blue:active {
+  background-color: #272f75;
+}
 [is=product-promo] form button.blue:before {
   content: "";
   display: block;

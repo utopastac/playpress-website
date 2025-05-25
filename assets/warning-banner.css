@@ -23,6 +23,9 @@ section[is=warning-banner] > a h5.blue {
   background: #2D3788;
   color: white;
 }
+section[is=warning-banner] > a h5.blue:active {
+  background-color: #272f75;
+}
 section[is=warning-banner] > a h5.blue:before {
   content: "";
   display: block;
