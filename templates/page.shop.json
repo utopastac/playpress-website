@@ -25,13 +25,6 @@
         "is_dark": false
       }
     },
-    "gap_aPwcGe": {
-      "type": "gap",
-      "name": "Gap",
-      "settings": {
-        "size": 1
-      }
-    },
     "product_carousel_hNeEET": {
       "type": "product-carousel",
       "name": "Product carousel",
@@ -39,45 +32,6 @@
         "title": "New sets",
         "text": "",
         "collection": "new-sets"
-      }
-    },
-    "fd5f2d05-6048-421d-b816-943ca49626f9": {
-      "type": "product-promos-individual",
-      "blocks": {
-        "product_FxYHq7": {
-          "type": "product",
-          "settings": {
-            "product": "mini-refill-cafe-playset-copy"
-          }
-        },
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1": {
-          "type": "product",
-          "settings": {
-            "product": "dino-dig-playset"
-          }
-        },
-        "product_D4yVLN": {
-          "type": "product",
-          "settings": {
-            "product": "book-shop-playset"
-          }
-        },
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2": {
-          "type": "product",
-          "settings": {
-            "product": "moomins-house-playset"
-          }
-        }
-      },
-      "block_order": [
-        "product_FxYHq7",
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-1",
-        "product_D4yVLN",
-        "template--15728635805888__fd5f2d05-6048-421d-b816-943ca49626f9-16711441936b418994-2"
-      ],
-      "settings": {
-        "title": "New sets",
-        "text": ""
       }
     },
     "79d35488-96a4-4333-8e48-117ea264ecc8": {
@@ -223,9 +177,7 @@
   },
   "order": [
     "7504f886-e145-4c65-bce0-03930b2ca39a",
-    "gap_aPwcGe",
     "product_carousel_hNeEET",
-    "fd5f2d05-6048-421d-b816-943ca49626f9",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
