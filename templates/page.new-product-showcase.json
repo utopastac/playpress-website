@@ -46,22 +46,18 @@
         "size": 1
       }
     },
-    "image_with_text_mqa6Gp": {
-      "type": "image-with-text",
-      "name": "Image with text",
+    "big_banner_awHtWh": {
+      "type": "big-banner",
+      "name": "Big Banner",
       "settings": {
-        "title": "English heritage",
-        "text": "<p>We've partnered with English Heritage to bring two wonderful new sets to life, exploring Stonehenge and a medieval fantasy castle.</p>",
-        "link_text": "Explore history",
-        "link_url": "shopify://pages/english-heritage",
-        "image": "shopify://shop_images/english-heritage.jpg",
-        "bg_color": "#152f69",
-        "text_color": "#ffffff",
-        "show_signpost_link": true,
-        "use_button": true,
-        "layout": "right",
-        "show_colour": true,
-        "last_on_page": false
+        "heading": "The Globe Theatre",
+        "text": "Shakespeare's play house",
+        "subtext": "Take to the stage with a Playpress recreation of one of the most iconic theatre venues in the world. The the theatre and host a play, including the figure of Shakespeare!",
+        "link_text": "Set the scene",
+        "link_url": "shopify://collections/animal-sets",
+        "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
+        "bg_color": "#ffd760",
+        "text_color": "#0a122a"
       }
     },
     "gap_JThUTT": {
@@ -71,22 +67,18 @@
         "size": 1
       }
     },
-    "image_with_text_HkXmYy": {
-      "type": "image-with-text",
-      "name": "Image with text",
+    "big_banner_BCLAR4": {
+      "type": "big-banner",
+      "name": "Big Banner",
       "settings": {
-        "title": "The Globe Theatre",
-        "text": "<p>Take to the stage with a Playpress recreation of one of the most iconic theatre venues in the world. The the theatre and host a play, including the figure of Shakespeare!</p>",
-        "link_text": "Try it out",
-        "link_url": "shopify://products/discover-stonehenge-copy",
-        "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
-        "bg_color": "#ffd760",
-        "text_color": "#0a122a",
-        "show_signpost_link": true,
-        "use_button": true,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
+        "heading": "English heritage",
+        "text": "Stonehenge and a Mythical Castle",
+        "subtext": "We've partnered with English Heritage to bring two wonderful new sets to life, exploring Stonehenge and a medieval fantasy castle.",
+        "link_text": "Explore",
+        "link_url": "shopify://collections/animal-sets",
+        "image": "shopify://shop_images/english-heritage.jpg",
+        "bg_color": "#152f69",
+        "text_color": "#ffffff"
       }
     },
     "gap_EPJCth": {
@@ -102,9 +94,9 @@
     "9fb32536-3c70-4a94-84db-a717079ad057",
     "big_banner_K9mjqr",
     "gap_wNRCVk",
-    "image_with_text_mqa6Gp",
+    "big_banner_awHtWh",
     "gap_JThUTT",
-    "image_with_text_HkXmYy",
+    "big_banner_BCLAR4",
     "gap_EPJCth"
   ]
 }
