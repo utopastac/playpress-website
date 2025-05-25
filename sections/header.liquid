@@ -15,17 +15,19 @@
   <nav is="menu">
     <ul>
       <li>
-        <a href="/products">
+        <a href="/pages/shop">
           Shop
         </a>
         <div class="dropdown">
           <ul>
             {% for link in linklists.collections.links %}
-              <li>
-                <a is="collection-link" href="{{ link.url }}">
-                  <p>{{ link.title }}</p>
-                </a>
-              </li>
+              {% unless link.title == "shop" %}
+                <li>
+                  <a is="collection-link" href="{{ link.url }}">
+                    <p>{{ link.title }}</p>
+                  </a>
+                </li>
+              {% endunless %}
             {% endfor %}
           </ul>
         </div>
