@@ -7,39 +7,48 @@ section[is=warning-banner] > a h5 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #1D203F;
-  height: 5.6rem;
+  border-radius: 1.6rem;
+  padding: 0 2.4rem;
+  color: white;
+  background-color: #2D3788;
+  background: linear-gradient(186deg, #3D51F5 4.97%, #3645BF 19.29%, #2D3788 85.82%);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.18), 0px 6px 12px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset;
+  height: 4.8rem;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  transition: scale 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
 }
-section[is=warning-banner] > a h5.small {
-  height: 3.2rem;
-}
-section[is=warning-banner] > a h5.small:after {
+section[is=warning-banner] > a h5 .icon {
+  background-color: white;
+  margin-left: 0.8rem;
   width: 2rem;
   height: 2rem;
-  margin-left: 0.4rem;
-}
-section[is=warning-banner] > a h5.white {
-  color: white;
-}
-section[is=warning-banner] > a h5.white:after {
-  background: #FFFFFF;
-}
-section[is=warning-banner] > a h5:after {
-  content: "";
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  position: relative;
-  background: #1D203F;
-  -webkit-mask-image: url(icon-arrow-right.svg);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  margin-left: 0.8rem;
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 section[is=warning-banner] > a h5:hover {
-  text-decoration: underline;
+  scale: 1.03;
 }
+section[is=warning-banner] > a h5:hover .icon {
+  transform: translateX(0.4rem);
+}
+section[is=warning-banner] > a h5:hover {
+  background-color: #333f9b;
+}
+section[is=warning-banner] > a h5:active {
+  box-shadow: 1px 2px 0 0 #FAB638;
+  background-color: #272f75;
+}
+
+section[is=warning-banner] > a h5 {
+  height: 4rem;
+  padding: 0 1.6rem;
+}
+
 .button-loading:after {
   content: "";
   display: block;
@@ -52,16 +61,16 @@ section[is=warning-banner] > a h5:hover {
   background-size: 24px 24px;
 }
 
-a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
+a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
+a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5 {
   font-weight: 400;
 }
 
-section[is=warning-banner] > a > div h4, a[is=outline-button], section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
+section[is=warning-banner] > a > div h4, a[is=outline-button], section[is=warning-banner] > a h5 {
   font-weight: 700;
 }
 
@@ -78,13 +87,13 @@ section[is=warning-banner] > a h5 {
   }
 }
 
-section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small {
+section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5 {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small {
+  section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5 {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
