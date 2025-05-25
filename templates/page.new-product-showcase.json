@@ -19,12 +19,6 @@
         "show_delivery_info": false
       }
     },
-    "9fb32536-3c70-4a94-84db-a717079ad057": {
-      "type": "gap",
-      "settings": {
-        "size": 1
-      }
-    },
     "big_banner_K9mjqr": {
       "type": "big-banner",
       "name": "Big Banner",
@@ -94,7 +88,6 @@
   },
   "order": [
     "intro",
-    "9fb32536-3c70-4a94-84db-a717079ad057",
     "big_banner_K9mjqr",
     "gap_wNRCVk",
     "big_banner_awHtWh",
