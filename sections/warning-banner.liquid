@@ -12,9 +12,7 @@
             <p>{{ section.settings.text | escape }}</p>
           {% endif %}
         </div>
-        {%- if section.settings.link_url != blank -%}
-          <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
-        {%- endif -%}
+        <h5 href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</h5>
       </div>
     </a>
   </section>

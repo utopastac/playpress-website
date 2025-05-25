@@ -1,8 +1,45 @@
-section[is=warning-banner] > div {
+section[is=warning-banner] > a > div {
   max-width: 140rem;
   margin: 0 auto;
 }
 
+section[is=warning-banner] > a h5 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1D203F;
+  height: 5.6rem;
+}
+section[is=warning-banner] > a h5.small {
+  height: 3.2rem;
+}
+section[is=warning-banner] > a h5.small:after {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.4rem;
+}
+section[is=warning-banner] > a h5.white {
+  color: white;
+}
+section[is=warning-banner] > a h5.white:after {
+  background: #FFFFFF;
+}
+section[is=warning-banner] > a h5:after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: #1D203F;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
+}
+section[is=warning-banner] > a h5:hover {
+  text-decoration: underline;
+}
 .button-loading:after {
   content: "";
   display: block;
@@ -15,26 +52,39 @@ section[is=warning-banner] > div {
   background-size: 24px 24px;
 }
 
-a[is=outline-button], section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+a[is=outline-button], section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
   font-weight: 400;
 }
 
-section[is=warning-banner] > div h4, a[is=outline-button] {
+section[is=warning-banner] > a > div h4, a[is=outline-button], section[is=warning-banner] > a h5.small, section[is=warning-banner] > a h5 {
   font-weight: 700;
 }
 
-section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+section[is=warning-banner] > a h5 {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  section[is=warning-banner] > a h5 {
+    font-size: 2.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  section[is=warning-banner] > div p, section[is=warning-banner] > div h4 {
+  section[is=warning-banner] > a > div p, section[is=warning-banner] > a > div h4, section[is=warning-banner] > a h5.small {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -78,25 +128,32 @@ section[is=warning-banner] {
     margin-top: -2.4rem;
   }
 }
-section[is=warning-banner] > div {
+section[is=warning-banner] > a {
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+section[is=warning-banner] > a:hover {
+  scale: 1.03;
+}
+section[is=warning-banner] > a > div {
   background: #EBEDFA;
   border-radius: 1.6rem;
   padding: 1.6rem 3.2rem;
   gap: 2.4rem;
 }
 @media screen and (min-width: 550px) {
-  section[is=warning-banner] > div {
+  section[is=warning-banner] > a > div {
     border-radius: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-section[is=warning-banner] > div h4 {
+section[is=warning-banner] > a > div h4 {
   display: inline;
   padding-right: 0.4rem;
 }
-section[is=warning-banner] > div p {
+section[is=warning-banner] > a > div p {
   display: inline;
   max-width: 75ch;
 }

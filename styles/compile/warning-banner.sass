@@ -6,27 +6,37 @@ section[is="warning-banner"]
   @include min($screen-m)
     margin-top: -units(3)
 
-  > div
-    @extend %main-content
-    background: $blue-200
-    border-radius: $border-s
-    padding: units(2) units(4)
-    gap: units(3)
+  > a
+    display: block
+    @include animate(0.2s)
 
-    @include min($screen-s)
-      border-radius: 500px
-      display: flex
-      justify-content: center
-      align-items: center
+    &:hover
+      scale: 1.03
 
-    h4
-      @extend %body-3
-      @extend %bold
-      display: inline
-      padding-right: units(0.5)
+    h5
+      @extend %text-button-style
 
-    p
-      @extend %body-3
-      display: inline
-      max-width: 75ch
+    > div
+      @extend %main-content
+      background: $blue-200
+      border-radius: $border-s
+      padding: units(2) units(4)
+      gap: units(3)
+
+      @include min($screen-s)
+        border-radius: 500px
+        display: flex
+        justify-content: center
+        align-items: center
+
+      h4
+        @extend %body-3
+        @extend %bold
+        display: inline
+        padding-right: units(0.5)
+
+      p
+        @extend %body-3
+        display: inline
+        max-width: 75ch
     
