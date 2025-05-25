@@ -15,6 +15,9 @@
       "settings": {
         "title": "",
         "text": "",
+        "text_color": "#000000",
+        "bg_color_1": "#38cafa",
+        "bg_color_2": "#38cafa",
         "collection": "new-sets"
       }
     },
@@ -169,9 +172,13 @@
       "settings": {
         "heading": "Sustainability",
         "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+        "subtext": "",
         "link_text": "Learn more",
         "link_url": "shopify://pages/sustainability",
-        "image": "shopify://shop_images/about-sustainability.jpg"
+        "image": "shopify://shop_images/about-sustainability.jpg",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff",
+        "layout": "left"
       }
     }
   },
