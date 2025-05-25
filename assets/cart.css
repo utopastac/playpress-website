@@ -60,6 +60,23 @@ button[is=command] {
   overflow: hidden;
   box-shadow: none;
 }
+button.blue[is=command] {
+  background: #2D3788;
+  color: white;
+}
+button.blue[is=command]:before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: relative;
+  background: white;
+  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  margin-left: 0.8rem;
+}
 button[is=command]:hover {
   background-color: #2D3788;
   color: white;

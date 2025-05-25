@@ -269,6 +269,23 @@ $bigUnits: 40
   overflow: hidden
   box-shadow: none
 
+  &.blue
+    background: $blue-1000
+    color: white
+
+    &:before
+      content: ""
+      display: block
+      width: units(2)
+      height: units(2)
+      position: relative
+      background: white
+      -webkit-mask-image: url(icon-arrow-right.svg)
+      -webkit-mask-position: center
+      -webkit-mask-repeat: no-repeat
+      -webkit-mask-size: contain
+      margin-left: units(1)
+
   &:hover
     background-color: $blue-1000
     color: white
