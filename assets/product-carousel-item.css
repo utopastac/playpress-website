@@ -84,6 +84,7 @@ a[is=outline-button]:hover {
 }
 [is=product-carousel-item] .image {
   transition: all 0.3s ease-in-out;
+  padding: 0.8rem;
 }
 [is=product-carousel-item] .image img {
   border-radius: 8px;
@@ -99,7 +100,7 @@ a[is=outline-button]:hover {
   border-radius: 1.2rem;
 }
 [is=product-carousel-item]:hover .image {
-  scale: 1.05;
+  scale: 1.07;
 }
 [is=product-carousel-item] a:hover {
   text-decoration: underline;
