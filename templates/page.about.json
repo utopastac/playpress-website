@@ -1,12 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "warning_banner_axGcqR": {
+      "type": "warning-banner",
+      "name": "Warning banner",
+      "settings": {
+        "heading": "New sets for Summer 2025!",
+        "text": "",
+        "link_text": "Check them out",
+        "link_url": "shopify://pages/new-products",
+        "bg_color": "#ed2a51",
+        "text_color": "#FFFFFF",
+        "show_banner": true
+      }
+    },
     "intro": {
       "type": "intro",
       "settings": {
         "heading": "A world of creativity that doesn’t cost the earth",
         "text": "We created Playpress because we wanted to help children create new stories with toys that were affordable and eco-friendly. Our love of creativity and ingenuity is what gets us up every day and as a family-owned business, care and quality really matter to us.",
         "link_text": "Contact us",
-        "link_url": "shopify:\/\/pages\/contact",
+        "link_url": "shopify://pages/contact",
         "show_delivery_info": false
       }
     },
@@ -15,9 +37,13 @@
       "settings": {
         "heading": "Sustainability",
         "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+        "subtext": "",
         "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/sustainability",
-        "image": "shopify:\/\/shop_images\/about-sustainability.jpg"
+        "link_url": "shopify://pages/sustainability",
+        "image": "shopify://shop_images/about-sustainability.jpg",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff",
+        "layout": "left"
       }
     },
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754": {
@@ -33,8 +59,8 @@
         "subtitle": "Awards",
         "text": "Our sets have been nominated for many awards, and we have been fortunate enough to win on several occassions.",
         "link_text": "Learn more",
-        "link_url": "shopify:\/\/pages\/awards",
-        "image": "shopify:\/\/shop_images\/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
+        "link_url": "shopify://pages/awards",
+        "image": "shopify://shop_images/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
         "bg_color": "#19226b",
         "is_text_color": false,
         "text_color": "#0a122a",
@@ -54,16 +80,16 @@
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
+            "image": "shopify://shop_images/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
             "link_url": "",
             "title": "Make it fun",
-            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.<\/p>"
+            "text": "<p>Our toys are for playing with. We want children to love building our toys, and then love playing with them. They aren’t just models for a mantlepiece, but an entrance to a world of imagination.</p>"
           }
         },
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/inks.jpg",
+            "image": "shopify://shop_images/inks.jpg",
             "link_url": "",
             "title": "Make it for everyone",
             "text": "We want all children to be represented in our products. Because we want our toys to be available for everyone, we keep the prices as low as we can."
@@ -72,7 +98,7 @@
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
           "type": "accordian_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
+            "image": "shopify://shop_images/sustainability.jpg",
             "link_url": "",
             "title": "Make it sustainably",
             "text": "We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design."
@@ -99,10 +125,10 @@
       "type": "image-with-text",
       "settings": {
         "title": "Press out, build up and play on!",
-        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!<\/p>",
+        "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/S0002_Check-up_Time_Child_Playing.jpg",
+        "image": "shopify://shop_images/S0002_Check-up_Time_Child_Playing.jpg",
         "bg_color": "#ebedfa",
         "text_color": "#0a122a",
         "show_signpost_link": false,
@@ -125,9 +151,9 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+            "image": "shopify://shop_images/about-sustainability.jpg",
             "link_text": "Get in touch",
-            "link_url": "shopify:\/\/pages\/contact",
+            "link_url": "shopify://pages/contact",
             "title": "Contact",
             "subtitle": "We are based in East Sussex and always welcome visitors into our design studio!"
           }
@@ -137,7 +163,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Meet the team",
-            "link_url": "shopify:\/\/pages\/team",
+            "link_url": "shopify://pages/team",
             "title": "Team",
             "subtitle": "We are a true family business with loads of experience."
           }
@@ -147,7 +173,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Our design process",
-            "link_url": "shopify:\/\/pages\/design",
+            "link_url": "shopify://pages/design",
             "title": "Design",
             "subtitle": "Our products win awards. Design is everything at Playpress."
           }
@@ -158,11 +184,11 @@
         "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1",
         "6241c0d0-1536-40b2-8692-6481323613ee"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
+    "warning_banner_axGcqR",
     "intro",
     "69daff38-49c3-40ba-87fd-5594871992a9",
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
