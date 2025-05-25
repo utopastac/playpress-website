@@ -1,0 +1,67 @@
+@import '../assets'
+
+[is="product-carousel-item"]
+  display: flex
+  flex-direction: column
+  text-decoration: none
+  min-height: 0
+  height: 100%
+  position: relative
+
+  .image
+    @include animate(0.3s)
+
+  .new
+    position: absolute
+    top: -units(1)
+    left: units(2)
+    height: auto
+    padding: size(2) size(8)
+    @extend %body-4
+    @extend %bold
+    background: $green-1000
+    color: $white
+    border-radius: size(12)
+
+  &:hover
+
+    .image
+      scale: 1.05    
+
+  img
+    border-radius: $border-s
+
+  a:hover
+    text-decoration: underline
+
+  .content
+    position: relative
+    padding-top: units(1)
+    padding-bottom: units(2)
+
+    @include min($screen-m)
+      padding-top: units(1.5)
+      
+    h3
+      @extend %body-3
+      @include min($screen-l)
+        overflow: hidden
+        width: calc(100% - 60px)
+        white-space: nowrap
+        text-overflow: ellipsis
+        
+    p
+      @extend %body-3
+      @extend %bold
+      color: $grey-800
+      margin-top: units(0.5)
+          
+        
+
+  &:focus-visible
+    background: none
+    box-shadow: none
+
+    h3
+      background-color: $focus
+      box-shadow: 0 0 0 3px focus

@@ -1,0 +1,52 @@
+{% comment %} {{ 'sort_collections.js' | asset_url | script_tag }} {% endcomment %}
+{{ 'product-carousel.css' | asset_url | stylesheet_tag }}
+
+<section is="section">
+  
+  {% render 'section-header', title: section.settings.title, text: section.settings.text %}
+
+  {%- assign collection = collections[section.settings.collection] -%}
+
+  {% assign products = collection.products %}
+
+    <div is="product-carousel">
+      <div>
+        {% for product in products %}
+          {%- if product.available -%}
+            {% render 'product-carousel-item', product: product %}
+          {%- endif -%}
+        {% endfor %}
+      </div>
+    </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Product carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Product promos"
+    }
+  ]
+}
+{% endschema %}

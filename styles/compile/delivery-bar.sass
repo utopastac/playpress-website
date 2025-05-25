@@ -60,11 +60,13 @@ a[is="delivery-bar"]
       border-radius: 500px
 
     li
-      @extend %body-3
+      @extend %body-4
       @extend %bold
+      @include fontSize(15, $body-sm-line-height, $body-letter-spacing)
       color: $blue-1000
 
-      @include min($screen-l)
+      @include min($screen-m)
+        @include fontSize(18, $body-sm-line-height, $body-letter-spacing)
         // font-weight: $font-extra-bold-weight
         // text-transform: uppercase
         // @include fontSize(15, $heading-line-height, $all-caps-letter-spacing)
