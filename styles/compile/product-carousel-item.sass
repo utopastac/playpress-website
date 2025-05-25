@@ -19,9 +19,19 @@
   .image
     background: $yolk-1000
     padding: size(6)
+    position: relative
 
     img
       border-radius: 10px
+
+      &.image-1
+        display: block
+
+      &.image-2
+        visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
 
   .new
     position: absolute
@@ -38,6 +48,14 @@
   &:hover
     scale: 1.02
     transform: rotate(3deg)
+
+    img
+      &.image-1
+        display: none
+
+      &.image-2
+        visibility: visible
+        position: relative
 
   a:hover
     text-decoration: underline

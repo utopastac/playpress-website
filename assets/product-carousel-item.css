@@ -86,9 +86,19 @@ a[is=outline-button]:hover {
 [is=product-carousel-item] .image {
   background: #FAB638;
   padding: 0.6rem;
+  position: relative;
 }
 [is=product-carousel-item] .image img {
   border-radius: 10px;
+}
+[is=product-carousel-item] .image img.image-1 {
+  display: block;
+}
+[is=product-carousel-item] .image img.image-2 {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 [is=product-carousel-item] .new {
   position: absolute;
@@ -103,6 +113,13 @@ a[is=outline-button]:hover {
 [is=product-carousel-item]:hover {
   scale: 1.02;
   transform: rotate(3deg);
+}
+[is=product-carousel-item]:hover img.image-1 {
+  display: none;
+}
+[is=product-carousel-item]:hover img.image-2 {
+  visibility: visible;
+  position: relative;
 }
 [is=product-carousel-item] a:hover {
   text-decoration: underline;

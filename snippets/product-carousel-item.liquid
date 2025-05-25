@@ -6,10 +6,21 @@
       <img
         alt="{{ product.featured_image.alt }}"
         src="{{ product.featured_media | img_url: '600x' }}"
+        class="image-1"
         loading="lazy"
         width="600"
         height="400"
       />
+      {% for media in product.media offset:2 limit: 1%}
+        <img
+          src="{{ media | img_url: '600x' }}"
+          alt="{{ media.alt | escape  }}"
+          class="image-2"
+          loading="lazy"
+          width="600"
+          height="400"
+        >
+      {% endfor %}
     </div>
     <div class="content" style="background: {{ section.settings.bg_color_2 }}">
       <h3 style="color: {{ section.settings.text_color }} !important">{{ product.title }}</h3>
