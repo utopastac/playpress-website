@@ -8,7 +8,7 @@
   height: 100%
   position: relative
   width: 60%
-  background: $yolk-1000
+  background: $blue-1200
   border-radius: $border-s
   overflow: hidden
   @include animate(0.3s)
@@ -35,7 +35,8 @@
     border-radius: size(12)
 
   &:hover
-    scale: 1.05 
+    .image
+      scale: 1.05 
 
   a:hover
     text-decoration: underline
@@ -50,13 +51,13 @@
       width: 100%
       white-space: nowrap
       text-overflow: ellipsis
-      color: $grey-1200
+      color: $white
         
         
     p
       @extend %body-3
       @extend %bold
-      color: $grey-1200
+      color: $white
       margin-top: units(0.5)
           
         

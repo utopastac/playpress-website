@@ -73,7 +73,7 @@ a[is=outline-button]:hover {
   height: 100%;
   position: relative;
   width: 60%;
-  background: #FAB638;
+  background: #19226B;
   border-radius: 1.6rem;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -99,7 +99,7 @@ a[is=outline-button]:hover {
   color: #FFFFFF;
   border-radius: 1.2rem;
 }
-[is=product-carousel-item]:hover {
+[is=product-carousel-item]:hover .image {
   scale: 1.05;
 }
 [is=product-carousel-item] a:hover {
@@ -114,10 +114,10 @@ a[is=outline-button]:hover {
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #0A122A;
+  color: #FFFFFF;
 }
 [is=product-carousel-item] .content p {
-  color: #0A122A;
+  color: #FFFFFF;
   margin-top: 0.4rem;
 }
 [is=product-carousel-item]:focus-visible {
