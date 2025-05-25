@@ -23,28 +23,15 @@
   font-weight: 700;
 }
 
-[is=product-carousel-item] .content h3 {
+[is=product-carousel-item] .content p, [is=product-carousel-item] .content h3 {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  [is=product-carousel-item] .content h3 {
+  [is=product-carousel-item] .content p, [is=product-carousel-item] .content h3 {
     font-size: 2.1rem;
     line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-[is=product-carousel-item] .content p {
-  font-size: 1.7rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  [is=product-carousel-item] .content p {
-    font-size: 1.8rem;
-    line-height: 115%;
     letter-spacing: 0px;
   }
 }
@@ -134,7 +121,6 @@ a[is=outline-button]:hover {
 }
 [is=product-carousel-item] .content p {
   color: #FFFFFF;
-  margin-top: 0.4rem;
 }
 [is=product-carousel-item]:focus-visible {
   background: none;
