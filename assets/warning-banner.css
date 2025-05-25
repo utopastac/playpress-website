@@ -79,7 +79,7 @@ section[is=warning-banner] {
   }
 }
 section[is=warning-banner] > div {
-  background: #F0E6D3;
+  background: #EBEDFA;
   border-radius: 500px;
   padding: 1.6rem 3.2rem;
   display: flex;
