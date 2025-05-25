@@ -13,7 +13,7 @@
       <div>
         {% for product in products %}
           {%- if product.available -%}
-            {% render 'product-carousel-item', product: product %}
+            {% render 'product-carousel-item', product: product, bg_color_1: section.settings.bg_color_1, bg_color_2: section.settings.bg_color_2 %}
           {%- endif -%}
         {% endfor %}
       </div>
@@ -36,6 +36,18 @@
       "id": "text",
       "label": "Text",
       "info": "Optional"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_1",
+      "label": "Background color top",
+      "default": "#FAB638"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_2",
+      "label": "Background color bottom",
+      "default": "#2D3788"
     },
     {
       "id": "collection",

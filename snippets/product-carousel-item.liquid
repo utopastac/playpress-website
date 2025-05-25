@@ -2,7 +2,7 @@
 
 <div is="product-carousel-item" class="product-item" data-id="{{ product.variants.first.id }}">
   <a href="{{ product.url }}" >
-    <div class="image">
+    <div class="image" style="background: {{ section.settings.bg_color_1 }}">
       <img
         alt="{{ product.featured_image.alt }}"
         src="{{ product.featured_media | img_url: '600x' }}"
@@ -11,7 +11,7 @@
         height="400"
       />
     </div>
-    <div class="content">
+    <div class="content" style="background: {{ section.settings.bg_color_2 }}">
       <h3>{{ product.title }}</h3>
       <p>{{ product.price | money }}</p>
     </div>
