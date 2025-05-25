@@ -11,6 +11,8 @@
   background: $blue-1000
   border-radius: $border-s
   overflow: hidden
+  @include animate(0.15s)
+  transition-timing-function: cubic-bezier(0.175, 1, 0.2, 1.8)
 
   @include min($screen-m)
     width: size(340)
@@ -20,7 +22,6 @@
     padding: size(6)
 
     img
-      @include animate(0.3s)
       border-radius: 10px
 
   .new
@@ -36,8 +37,8 @@
     border-radius: size(12)
 
   &:hover
-    img
-      scale: 1.05 
+    scale: 1.02
+    transform: rotate(3deg)
 
   a:hover
     text-decoration: underline
