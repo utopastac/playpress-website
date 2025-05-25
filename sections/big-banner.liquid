@@ -1,10 +1,10 @@
 {{ 'big-banner.css' | asset_url | stylesheet_tag }}
 
-<section is="big-banner" style="background: {{ section.settings.bg_color }}">
+<section is="big-banner">
   <a href="{{ section.settings.link_url }}">
     <div>
       {%- if section.settings.background_image == blank -%}
-        <div class="banner-content">
+        <div class="banner-content" style="background: {{ section.settings.bg_color }}">
       {%- else -%}
         <div class="banner-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
       {%- endif -%}
