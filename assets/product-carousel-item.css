@@ -83,6 +83,7 @@ a[is=outline-button]:hover {
   }
 }
 [is=product-carousel-item] .image {
+  background: #FAB638;
   transition: all 0.3s ease-in-out;
   padding: 0.6rem;
 }
