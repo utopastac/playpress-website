@@ -13,7 +13,7 @@
       <div>
         {% for product in products %}
           {%- if product.available -%}
-            {% render 'product-carousel-item', product: product, bg_color_1: section.settings.bg_color_1, bg_color_2: section.settings.bg_color_2 %}
+            {% render 'product-carousel-item', product: product, text_color: section.settings.text_color, bg_color_1: section.settings.bg_color_1, bg_color_2: section.settings.bg_color_2 %}
           {%- endif -%}
         {% endfor %}
       </div>
@@ -36,6 +36,12 @@
       "id": "text",
       "label": "Text",
       "info": "Optional"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
     },
     {
       "type": "color",
