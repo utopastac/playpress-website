@@ -2,19 +2,21 @@
 
 {% if section.settings.show_banner == true %}
   <section is="warning-banner">
-    <div>
+    <a href="{{ section.settings.link_url }}">
       <div>
-        {% if section.settings.heading != blank %}
-          <h4>{{ section.settings.heading | escape }}</h4>
-        {% endif %}
-        {% if section.settings.text != blank %}
-          <p>{{ section.settings.text | escape }}</p>
-        {% endif %}
+        <div>
+          {% if section.settings.heading != blank %}
+            <h4>{{ section.settings.heading | escape }}</h4>
+          {% endif %}
+          {% if section.settings.text != blank %}
+            <p>{{ section.settings.text | escape }}</p>
+          {% endif %}
+        </div>
+        {%- if section.settings.link_url != blank -%}
+          <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
+        {%- endif -%}
       </div>
-      {%- if section.settings.link_url != blank -%}
-        <a href="{{ section.settings.link_url }}" is="text-button" class="small">{{ section.settings.link_text }}</a>
-      {%- endif -%}
-    </div>
+    </a>
   </section>
 {% endif %}
 
