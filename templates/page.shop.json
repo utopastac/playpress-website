@@ -142,20 +142,20 @@
     "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842": {
       "type": "split-hero",
       "settings": {
-        "heading_a": "Take a trip to see these magnificent birds!",
-        "subtitle_a": "RSPB collection",
+        "heading_a": "Explore New Zealand animals!",
+        "subtitle_a": "Animal set",
         "link_text_a": "View",
-        "link_url_a": "shopify://collections/charity-sets",
-        "image_a": "shopify://shop_images/RSPB-2.jpg",
-        "bg_color_a": "#296b4f",
-        "text_color_a": "#ffffff",
-        "heading_b": "Award-winning RNLI Inshore Lifeboat",
-        "subtitle_b": "RNLI",
+        "link_url_a": "shopify://products/new-zealand-animals",
+        "image_a": "shopify://shop_images/kiwi_d5890868-9802-4cff-b2ac-d392b5a8b0ab.jpg",
+        "bg_color_a": "#cafac7",
+        "text_color_a": "#2d3788",
+        "heading_b": "Go down under with these Aussie Animals!",
+        "subtitle_b": "Animal set",
         "link_text_b": "View",
-        "link_url_b": "shopify://products/rnli-lifeboat-eco-friendly-playset",
-        "image_b": "shopify://shop_images/rnli.jpg",
-        "bg_color_b": "#8cddf8",
-        "text_color_b": "#0a122a"
+        "link_url_b": "shopify://products/australian-animals",
+        "image_b": "shopify://shop_images/Aussie_2983b26e-fd5c-4aea-89f0-d1cc40f47ae3.jpg",
+        "bg_color_b": "#fed3d9",
+        "text_color_b": "#2d3788"
       }
     },
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8": {
