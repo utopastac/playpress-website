@@ -3,6 +3,11 @@
 section[is="big-banner"]
   position: relative
   transition: scale 0.5s
+
+  &.swapped
+    @include min($screen-m)
+      div[is="hero-content"]
+        order: 0
   
 
   &:hover

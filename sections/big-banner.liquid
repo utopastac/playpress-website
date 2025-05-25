@@ -1,6 +1,6 @@
 {{ 'big-banner.css' | asset_url | stylesheet_tag }}
 
-<section is="big-banner">
+<section is="big-banner" class="{% if section.settings.layout == 'right' %}swapped{% endif %}">
   <a href="{{ section.settings.link_url }}">
     <div>
       {%- if section.settings.background_image == blank -%}
@@ -89,6 +89,22 @@
       "id": "text_color",
       "label": "Text color",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
     }
   ],
   "presets": [
