@@ -20,16 +20,13 @@
         </a>
         <div class="dropdown">
           <ul>
-            <li>
-              <a is="collection-link" href="/pages/shop">
-                <p>All our sets</p>
-              </a>
-            </li>
-            <li>
-              <a is="collection-link" href="/pages/new-products">
-                <p>⭐️ Summer 2025 release ⭐️</p>
-              </a>
-            </li>
+            {% for link in linklists.dropdown-merchandising.links %}
+              <li>
+                <a is="collection-link" href="{{ link.url }}">
+                  <p>{{ link.title }}</p>
+                </a>
+              </li>
+            {% endfor %}
             <div class="divider"></div>
             {% for link in linklists.collections.links %}
               <li>
