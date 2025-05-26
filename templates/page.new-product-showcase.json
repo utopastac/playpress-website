@@ -19,6 +19,25 @@
         "show_delivery_info": false
       }
     },
+    "product_carousel_mj9cry": {
+      "type": "product-carousel",
+      "name": "Product carousel",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_color": "#2a6538",
+        "bg_color_1": "#9bf2ae",
+        "bg_color_2": "#9bf2ae",
+        "collection": "new-sets"
+      }
+    },
+    "gap_YJxA9y": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "big_banner_K9mjqr": {
       "type": "big-banner",
       "name": "Big Banner",
@@ -29,7 +48,7 @@
         "link_text": "Check them out",
         "link_url": "shopify://collections/animal-sets",
         "image": "shopify://shop_images/aus-big.jpg",
-        "bg_color": "#106dd9",
+        "bg_color": "#d9674d",
         "text_color": "#ffffff",
         "layout": "left"
       }
@@ -49,10 +68,10 @@
         "text": "Shakespeare's play house",
         "subtext": "Take to the stage with a Playpress recreation of one of the most iconic theatre venues in the world. The the theatre and host a play, including the figure of Shakespeare!",
         "link_text": "Set the scene",
-        "link_url": "shopify://collections/animal-sets",
+        "link_url": "shopify://products/discover-stonehenge-copy",
         "image": "shopify://shop_images/big-globe-b_02cec701-f29a-4046-922d-1238e081eb00.jpg",
-        "bg_color": "#ffd760",
-        "text_color": "#0a122a",
+        "bg_color": "#209949",
+        "text_color": "#ffffff",
         "layout": "right"
       }
     },
@@ -71,7 +90,7 @@
         "text": "Stonehenge and a Mythical Castle",
         "subtext": "We've partnered with English Heritage to bring two wonderful new sets to life, exploring Stonehenge and a medieval fantasy castle.",
         "link_text": "Explore",
-        "link_url": "shopify://collections/animal-sets",
+        "link_url": "shopify://pages/english-heritage",
         "image": "shopify://shop_images/english-heritage.jpg",
         "bg_color": "#152f69",
         "text_color": "#ffffff",
@@ -88,6 +107,8 @@
   },
   "order": [
     "intro",
+    "product_carousel_mj9cry",
+    "gap_YJxA9y",
     "big_banner_K9mjqr",
     "gap_wNRCVk",
     "big_banner_awHtWh",
