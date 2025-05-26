@@ -19,6 +19,25 @@
         "show_delivery_info": false
       }
     },
+    "product_carousel_mj9cry": {
+      "type": "product-carousel",
+      "name": "Product carousel",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_color": "#FFFFFF",
+        "bg_color_1": "#FAB638",
+        "bg_color_2": "#2D3788",
+        "collection": "new-sets"
+      }
+    },
+    "gap_YJxA9y": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "big_banner_K9mjqr": {
       "type": "big-banner",
       "name": "Big Banner",
@@ -88,6 +107,8 @@
   },
   "order": [
     "intro",
+    "product_carousel_mj9cry",
+    "gap_YJxA9y",
     "big_banner_K9mjqr",
     "gap_wNRCVk",
     "big_banner_awHtWh",
