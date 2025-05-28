@@ -1,0 +1,201 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "warning_banner_6DfaQh": {
+      "type": "warning-banner",
+      "name": "Warning banner",
+      "settings": {
+        "heading": "New sets for Summer 2025!",
+        "text": "",
+        "link_text": "Check them out",
+        "link_url": "shopify://pages/new-products",
+        "bg_color": "#00c6ff",
+        "text_color": "#2d1f74",
+        "show_banner": true
+      }
+    },
+    "intro": {
+      "type": "intro",
+      "settings": {
+        "heading": "Stocking Playpress",
+        "text": "Stocking our affordable and eco-friendly playsets could not be easier!",
+        "link_text": "Contact us",
+        "link_url": "mailto:team@playpresstoys.com",
+        "show_delivery_info": false
+      }
+    },
+    "690fe1be-3de4-40e8-89bd-88c97cbdcb10": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "Our catalogue & samples",
+        "text": "<p>We will send you a digital catalogue and an order form that typically enables us to fulfil your order in a couple of days or earlier.<br/><br/>If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.</p>",
+        "link_text": "Get a catalogue",
+        "link_url": "mailto:team@playpresstoys.com",
+        "image": "shopify://shop_images/stocking-main.jpg",
+        "bg_color": "#ebedfa",
+        "text_color": "#0a122a",
+        "show_signpost_link": true,
+        "use_button": false,
+        "layout": "right",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "cc86f8de-41de-44d5-ab26-346498cbae74": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "1627753525bae19605": {
+      "type": "prominent-features",
+      "blocks": {
+        "1627753525bae19605-0": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/logos-shops.png",
+            "link_text": "",
+            "link_url": "",
+            "title": "",
+            "subtitle": "Shops",
+            "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>"
+          }
+        },
+        "1627753525bae19605-1": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/logos-attractions.png",
+            "link_text": "",
+            "link_url": "",
+            "title": "",
+            "subtitle": "Museums and galleries",
+            "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.</p>"
+          }
+        },
+        "9061019f-6cbd-4ec2-8995-eeee6dea2a4f": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/logos-museums.png",
+            "link_text": "",
+            "link_url": "",
+            "title": "",
+            "subtitle": "Attractions",
+            "text": "<p>Our sets are stocked at some of the biggest attractions in the UK.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1627753525bae19605-0",
+        "1627753525bae19605-1",
+        "9061019f-6cbd-4ec2-8995-eeee6dea2a4f"
+      ],
+      "settings": {
+        "title": "Our stockists",
+        "text": "We are very proud to be associated with and stocked in an amazing range of organisations, near 100 zero waste stores and over 200 gift, concept and toy stores across the UK. You'll also find our sets in some wonderful attractions.",
+        "grid": 3,
+        "show_signpost_link": false,
+        "link_text": "View more",
+        "link_url": ""
+      }
+    },
+    "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "4b849851-8b36-45e9-9283-91fb033152d9": {
+      "type": "content-blocks-highlight",
+      "blocks": {
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-0": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify://shop_images/stock-us-compact.jpg",
+            "link_url": "",
+            "title": "Compact",
+            "text": "<p>Our toys take up a small amount of shelf spaceand being flat-pack-fun they post extremely well.</p>"
+          }
+        },
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-1": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify://shop_images/stock-us-good-looking.jpg",
+            "link_url": "",
+            "title": "Good looking",
+            "text": "<p>Our vibrant designs give you high visual impact in your store.</p>"
+          }
+        },
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-2": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify://shop_images/stock-us-eco-friendly.jpg",
+            "link_url": "",
+            "title": "Eco-friendly",
+            "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC® certified (FSC®-C004309).</p>"
+          }
+        },
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-3": {
+          "type": "content_block_highlight",
+          "settings": {
+            "image": "shopify://shop_images/stock-us-free-delivery.jpg",
+            "link_url": "",
+            "title": "Free delivery",
+            "text": "<p>No minimum order and free delivery on all orders over £125.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-0",
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-1",
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-2",
+        "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-3"
+      ],
+      "settings": {}
+    },
+    "0495fd63-7334-42f1-bfbd-8ae590f72954": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "95907736-68fc-42a5-8391-983bf894a869": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "We'd love to be stocked by you!",
+        "text": "<p>We love working with shops from small boutiques to large chains. If you have any questions, want a sample set, or just want to chat, please get in touch!</p>",
+        "link_text": "Email us",
+        "link_url": "mailto:team@playpresstoys.com",
+        "image": "shopify://shop_images/stocking-contact.jpg",
+        "bg_color": "#ebedfa",
+        "text_color": "#0a122a",
+        "show_signpost_link": true,
+        "use_button": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    }
+  },
+  "order": [
+    "warning_banner_6DfaQh",
+    "intro",
+    "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
+    "cc86f8de-41de-44d5-ab26-346498cbae74",
+    "1627753525bae19605",
+    "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b",
+    "4b849851-8b36-45e9-9283-91fb033152d9",
+    "0495fd63-7334-42f1-bfbd-8ae590f72954",
+    "95907736-68fc-42a5-8391-983bf894a869"
+  ]
+}
