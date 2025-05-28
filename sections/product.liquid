@@ -80,8 +80,15 @@
             </div>
           </div>
         {%- endif -%}
+        
 
         <div class="description" id="description-text">{{ product.description }}</div>
+
+        {%- if product.metafields.product.instructions != blank -%}
+          <div class="meta-instructions">
+            <a href="{{ product.metafields.product.instructions.value }}" download>Download instructions</a>
+          </div>
+        {%- endif -%}
 
         {%- if product.metafields.product.pack_length != blank -%}
           <div class="meta-dimensions">
