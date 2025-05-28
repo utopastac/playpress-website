@@ -1,19 +1,42 @@
 {% comment %} {{ 'sort_collections.js' | asset_url | script_tag }} {% endcomment %}
 {{ 'linked-files.css' | asset_url | stylesheet_tag }}
 
+
 <section is="section">
-    <div is="linked-files">
-      <ul>
-        {% for link in section.settings.menu.links %}
+  {% assign products = collections['shop-featured'].products %}
+
+  <div is="linked-files">
+    <ul>
+      {% for product in products %}
+        {%- if product.available and product.metafields.custom.instructions.value -%}
           <li>
-            <a href="{{ link.url }}" download>
-              <p>{{ link.title }}</p>
-              <h5>Download</h5>
+            <a href="https://{{ product.metafields.custom.instructions.value.url }}" download>
+              <img
+                alt="{{ product.featured_image.alt }}"
+                src="{{ product.featured_media | img_url: '600x' }}"
+                class="image-1"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div>
+                <p>{{ product.title }}</p>
+                <h5>Download</h5>
+              </div>
             </a>
           </li>
-        {% endfor %}
-      </ul>
-    </div>
+        {%- endif -%}
+      {% endfor %}
+      {% comment %} {% for link in section.settings.menu.links %}
+        <li>
+          <a href="{{ link.url }}" download>
+            <p>{{ link.title }}</p>
+            <h5>Download</h5>
+          </a>
+        </li>
+      {% endfor %} {% endcomment %}
+    </ul>
+  </div>
 </section>
 
 {% schema %}

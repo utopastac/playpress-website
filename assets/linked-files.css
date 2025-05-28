@@ -24,13 +24,13 @@ a[is=outline-button], div[is=linked-files] > ul li a h5 {
 }
 
 div[is=linked-files] > ul li a p {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   div[is=linked-files] > ul li a p {
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
@@ -85,12 +85,12 @@ div[is=linked-files] > ul {
 }
 @media screen and (min-width: 740px) {
   div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1080px) {
   div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 div[is=linked-files] > ul li {
@@ -99,8 +99,16 @@ div[is=linked-files] > ul li {
   height: 100%;
 }
 div[is=linked-files] > ul li a {
-  display: block;
+  display: flex;
   height: 100%;
+}
+div[is=linked-files] > ul li a img {
+  height: 100%;
+  width: 100%;
+  flex: 0.5;
+  object-fit: cover;
+}
+div[is=linked-files] > ul li a > div {
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
