@@ -100,7 +100,7 @@ div[is=linked-files] > ul li {
   overflow: hidden;
 }
 div[is=linked-files] > ul li:hover {
-  border-color: #2D3788;
+  border-color: #19226B;
 }
 div[is=linked-files] > ul li a {
   height: 100%;
