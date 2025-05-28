@@ -19,6 +19,13 @@
         "show_delivery_info": false
       }
     },
+    "linked_files_HK6a4b": {
+      "type": "linked-files",
+      "name": "Linked files",
+      "settings": {
+        "menu": "instructions"
+      }
+    },
     "cc86f8de-41de-44d5-ab26-346498cbae74": {
       "type": "gap",
       "settings": {
@@ -28,6 +35,7 @@
   },
   "order": [
     "intro",
+    "linked_files_HK6a4b",
     "cc86f8de-41de-44d5-ab26-346498cbae74"
   ]
 }
