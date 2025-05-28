@@ -97,6 +97,10 @@ div[is=linked-files] > ul li {
   border: 1px solid #E7E9EF;
   border-radius: 1.6rem;
   height: 100%;
+  overflow: hidden;
+}
+div[is=linked-files] > ul li:hover {
+  border-color: #2D3788;
 }
 div[is=linked-files] > ul li a {
   height: 100%;
