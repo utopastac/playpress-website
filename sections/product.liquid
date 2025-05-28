@@ -84,12 +84,6 @@
 
         <div class="description" id="description-text">{{ product.description }}</div>
 
-        {%- if product.metafields.custom.instructions.value -%}
-          <div class="meta-instructions">
-            <a href="https://{{ shop.permanent_domain }}/cdn/shop/{{ product.metafields.custom.instructions.value }}" download>Download instructions</a>
-          </div>
-        {%- endif -%}
-
         {%- if product.metafields.product.pack_length != blank -%}
           <div class="meta-dimensions">
             <div>
@@ -104,6 +98,11 @@
               <div>
                 <h5>Weight</h5>
                 <p>{{product.metafields.product.pack_weight.value | remove: " "}}</p>
+              </div>
+            {%- endif -%}
+            {%- if product.metafields.custom.instructions.value -%}
+              <div class="meta-instructions">
+                <a href="https://{{ shop.permanent_domain }}/cdn/shop/{{ product.metafields.custom.instructions.value }}" download>Download instructions</a>
               </div>
             {%- endif -%}
           </div>

@@ -97,11 +97,32 @@ div[is="product"]
         @extend %bold
         color: $blue-1000
 
+      a
+        display: flex
+        align-items: center
+        @extend %body-2
+        @extend %bold
+        color: $blue-1000
+
+        &:before
+          content: ""
+          display: block
+          width: units(3)
+          height: units(3)
+          position: relative
+          background: $blue-1000
+          -webkit-mask-image: url(icon-download.svg)
+          -webkit-mask-position: center
+          -webkit-mask-repeat: no-repeat
+          -webkit-mask-size: contain
+          margin-right: units(0.5)
+
       > div
         padding: units(1.5) units(2)
         display: grid
-        grid-template-columns: 0.5fr 1fr 
-        &:first-child
+        &:not(.meta-instructions)
+          grid-template-columns: 0.5fr 1fr 
+        &:not(:last-child)
           border-bottom: 1px solid $grey-200
 
     img
