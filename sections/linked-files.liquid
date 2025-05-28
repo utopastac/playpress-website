@@ -4,10 +4,11 @@
 <section is="section">
     <div is="linked-files">
       <ul>
-        {% for link in settings.menu.links %}
+        {% for link in section.settings.menu.links %}
           <li>
-            <a href="{{ link.url }}">
+            <a href="{{ link.url }}" download>
               <p>{{ link.title }}</p>
+              <h5>Download</h5>
             </a>
           </li>
         {% endfor %}
