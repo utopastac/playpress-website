@@ -34,16 +34,17 @@ div[is="linked-files"]
           color: $blue-1000
           @extend %button-s
           display: flex
+          align-items: center
 
-          &:after
+          &:before
             content: ""
             display: block
-            width: units(2)
-            height: units(2)
+            width: units(3)
+            height: units(3)
             position: relative
             background: $blue-1000
-            -webkit-mask-image: url(icon-arrow-right.svg)
+            -webkit-mask-image: url(icon-download.svg)
             -webkit-mask-position: center
             -webkit-mask-repeat: no-repeat
             -webkit-mask-size: contain
-            margin-left: units(1)
+            margin-right: units(0.5)

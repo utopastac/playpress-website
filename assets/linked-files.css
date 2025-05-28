@@ -112,17 +112,18 @@ div[is=linked-files] > ul li a p {
 div[is=linked-files] > ul li a h5 {
   color: #2D3788;
   display: flex;
+  align-items: center;
 }
-div[is=linked-files] > ul li a h5:after {
+div[is=linked-files] > ul li a h5:before {
   content: "";
   display: block;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
   position: relative;
   background: #2D3788;
-  -webkit-mask-image: url(icon-arrow-right.svg);
+  -webkit-mask-image: url(icon-download.svg);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  margin-left: 0.8rem;
+  margin-right: 0.4rem;
 }
