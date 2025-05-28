@@ -85,12 +85,12 @@ div[is=linked-files] > ul {
 }
 @media screen and (min-width: 740px) {
   div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1080px) {
   div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 div[is=linked-files] > ul li {
@@ -99,14 +99,10 @@ div[is=linked-files] > ul li {
   height: 100%;
 }
 div[is=linked-files] > ul li a {
-  display: flex;
   height: 100%;
 }
-div[is=linked-files] > ul li a img {
-  height: 100%;
+div[is=linked-files] > ul li a img3 {
   width: 100%;
-  flex: 0.5;
-  object-fit: cover;
 }
 div[is=linked-files] > ul li a > div {
   padding: 2.4rem;
