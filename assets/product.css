@@ -265,16 +265,37 @@ div[is=product] > div div[is=product-content] div[is=product-info] header h1 {
 }
 div[is=product] > div .description {
   margin: 3.2rem 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 2.4rem;
+}
+div[is=product] > div .description.hidden {
+  max-height: 18rem;
+  padding-bottom: 4rem;
+}
+div[is=product] > div .description.hidden::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10rem;
+  background: linear-gradient(rgba(255, 255, 255, 0), white 75%);
+  content: "";
 }
 div[is=product] > div .description > div * {
   margin-bottom: 1.6rem;
 }
 div[is=product] > div .description .read-more {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
   text-decoration: underline;
   cursor: pointer;
+  color: #2D3788;
 }
 div[is=product] > div .description .read-more:hover {
-  color: #2D3788;
+  color: #19226B;
 }
 div[is=product] > div .meta {
   border: 1px solid #E7E9EF;

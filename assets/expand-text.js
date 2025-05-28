@@ -4,24 +4,31 @@ window.addEventListener('load', () => {
   const readMore = document.createElement("p");
   readMore.innerHTML = "Full description";
   readMore.classList.add("read-more");
+  readMore.addEventListener('click', (e) => {
+    switchText();
+  });
+  textElement.append(readMore);
   let hidden = false;
   switchText();
   
 
-  textElement.addEventListener('click', (e) => {
-    switchText();
-  });
+  
 
   function switchText(){
-    textElement.innerHTML = "";
-    if(hidden){
-      for (var i = 0; i < originalTextNodes.length; i++) {
-        textElement.append(originalTextNodes[i]);
-      }
-    } else {
-      textElement.append(originalTextNodes[0]);
-      textElement.append(readMore);
-    }
+    // textElement.innerHTML = "";
     hidden = !hidden;
+    
+    if(hidden){
+      // for (var i = 0; i < originalTextNodes.length; i++) {
+      //   textElement.append(originalTextNodes[i]);
+      // }
+      textElement.classList.add("hidden")
+      readMore.innerHTML = "Full description";
+    } else {
+      // textElement.append(originalTextNodes[0]);
+      // textElement.append(readMore);
+      textElement.classList.remove("hidden")
+      readMore.innerHTML = "Close";
+    }
   }
 });
