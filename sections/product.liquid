@@ -84,9 +84,9 @@
 
         <div class="description" id="description-text">{{ product.description }}</div>
 
-        {%- if product.metafields.product.instructions != blank -%}
+        {%- if product.metafields.custom.instructions.value -%}
           <div class="meta-instructions">
-            <a href="{{ product.metafields.product.instructions.value }}" download>Download instructions</a>
+            <a href="https://{{ shop.permanent_domain }}/cdn/shop/{{ product.metafields.custom.instructions.value }}" download>Download instructions</a>
           </div>
         {%- endif -%}
 
