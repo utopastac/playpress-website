@@ -267,11 +267,11 @@ div[is=product] > div .description {
   margin: 3.2rem 0;
   position: relative;
   overflow: hidden;
-  padding-bottom: 2.4rem;
+  padding-bottom: 3.2rem;
 }
 div[is=product] > div .description.hidden {
   max-height: 18rem;
-  padding-bottom: 4rem;
+  padding-bottom: 4.4rem;
 }
 div[is=product] > div .description.hidden::after {
   position: absolute;
