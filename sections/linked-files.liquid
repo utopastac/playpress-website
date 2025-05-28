@@ -1,0 +1,34 @@
+{% comment %} {{ 'sort_collections.js' | asset_url | script_tag }} {% endcomment %}
+{{ 'linked-files.css' | asset_url | stylesheet_tag }}
+
+<section is="section">
+    <div is="linked-files">
+      <ul>
+        {% for link in settings.menu.links %}
+          <li>
+            <a href="{{ link.url }}">
+              <p>{{ link.title }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Linked files",
+  "settings": [
+    {
+      "id": "menu",
+      "type": "link_list",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Linked files"
+    }
+  ]
+}
+{% endschema %}
