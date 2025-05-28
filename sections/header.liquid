@@ -38,7 +38,39 @@
           </ul>
         </div>
       </li>
-      {% for link in linklists.main-menu.links %}
+      <li>
+        <a href="/pages/studio">
+          Studio
+        </a>
+      </li>
+      <li>
+        <a href="/pages/stock-us">
+          Stock us
+        </a>
+      </li>
+      <li>
+        <a href="/pages/about">
+          About
+        </a>
+        <div class="dropdown">
+          <ul>            
+            {% for link in linklists.about-menu.links %}
+              <li>
+                <a is="collection-link" href="{{ link.url }}">
+                  <p>{{ link.title }}</p>
+                </a>
+              </li>
+            {% endfor %}
+            <div class="divider"></div>
+            <li>
+              <a is="collection-link" href="pages/contact">
+                <p>Contact us</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      {% comment %} {% for link in linklists.main-menu.links %}
         {% unless link.title == "Shop" %}
           <li {% if link.active %} class="on"{% endif %}>
             <a href="{{ link.url }}"
@@ -47,7 +79,7 @@
             </a>
           </li>
         {% endunless %}
-      {% endfor %}
+      {% endfor %} {% endcomment %}
     </ul>
   </nav>
   <p id="cart">
