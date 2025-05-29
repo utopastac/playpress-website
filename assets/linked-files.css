@@ -79,48 +79,57 @@ a[is=outline-button]:hover {
 }
 
 div[is=linked-files] > ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2.4rem;
-}
-@media screen and (min-width: 740px) {
-  div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media screen and (min-width: 1080px) {
-  div[is=linked-files] > ul {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+  max-width: 72rem;
+  margin: auto;
 }
 div[is=linked-files] > ul li {
-  border: 1px solid #E7E9EF;
-  border-radius: 1.6rem;
+  border-top: 1px solid #E7E9EF;
   height: 100%;
   overflow: hidden;
 }
 div[is=linked-files] > ul li:hover {
-  border-color: #19226B;
+  background-color: #EBEDFA;
+}
+div[is=linked-files] > ul li:hover h5 {
+  background-color: #2D3788;
+  color: white;
+}
+div[is=linked-files] > ul li:hover h5::before {
+  background: white;
 }
 div[is=linked-files] > ul li a {
   height: 100%;
+  display: flex;
 }
 div[is=linked-files] > ul li a img {
-  width: 100%;
+  width: 10rem;
+  display: none;
+  border-radius: 1.6rem;
 }
-div[is=linked-files] > ul li a > div {
-  padding: 2.4rem;
+@media screen and (min-width: 740px) {
+  div[is=linked-files] > ul li a img {
+    display: block;
+  }
+  div[is=linked-files] > ul li a .image {
+    padding: 0.8rem;
+  }
+  div[is=linked-files] > ul li a .content {
+    padding: 2.4rem;
+  }
+}
+div[is=linked-files] > ul li a .content {
+  flex: 1;
+  padding: 1.6rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-}
-div[is=linked-files] > ul li a p {
-  margin-bottom: 1.6rem;
 }
 div[is=linked-files] > ul li a h5 {
   color: #2D3788;
   display: flex;
   align-items: center;
+  border-radius: 1.6rem;
+  padding: 0.8rem 1.2rem;
 }
 div[is=linked-files] > ul li a h5:before {
   content: "";

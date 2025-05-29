@@ -3,7 +3,7 @@
 
 
 <section is="section">
-  {% assign products = collections['shop-featured'].products %}
+  {% assign products = collections['shop-featured'].products | sort: 'title' %}
 
   <div is="linked-files">
     <ul>
@@ -11,15 +11,17 @@
         {%- if product.available and product.metafields.custom.instructions.value -%}
           <li>
             <a href="https://{{ product.metafields.custom.instructions.value.url }}" download>
-              <img
-                alt="{{ product.featured_image.alt }}"
-                src="{{ product.featured_media | img_url: '600x' }}"
-                class="image-1"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
-              <div>
+              <div class="image">
+                <img
+                  alt="{{ product.featured_image.alt }}"
+                  src="{{ product.featured_media | img_url: '600x' }}"
+                  class="image-1"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+              </div>
+              <div class="content">
                 <p>{{ product.title }}</p>
                 <h5>Download</h5>
               </div>
