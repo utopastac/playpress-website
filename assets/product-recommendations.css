@@ -88,7 +88,7 @@ a[is=outline-button]:hover {
 
 div[is=product-promos] {
   border-top: 1px solid #E7E9EF;
-  padding-top: 3.2rem;
+  padding-top: 4rem;
 }
 @media screen and (min-width: 1200px) {
   div[is=product-promos] > div {
