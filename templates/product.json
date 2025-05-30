@@ -26,16 +26,16 @@
     "93963ba8-9584-466d-a651-b88c93601f03": {
       "type": "collections",
       "blocks": {
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-sets"
+          }
+        },
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-0": {
           "type": "collection",
           "settings": {
             "collection": "best-sellers"
-          }
-        },
-        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "bundle-playsets"
           }
         },
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-2": {
@@ -47,13 +47,13 @@
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-3": {
           "type": "collection",
           "settings": {
-            "collection": "julia-donaldson"
+            "collection": "collaborations"
           }
         }
       },
       "block_order": [
-        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-0",
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-1",
+        "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-0",
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-2",
         "template--15723518886080__93963ba8-9584-466d-a651-b88c93601f03-1669733922411afd44-3"
       ],
