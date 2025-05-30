@@ -1,19 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "product",
-      "settings": {
-      }
+      "settings": {}
     },
     "recommendations": {
       "type": "product-recommendations",
-      "settings": {
-      }
+      "settings": {}
     },
     "5c2acd23-9ab2-4c7c-a39d-3ea2357647fc": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
       }
     },
     "93963ba8-9584-466d-a651-b88c93601f03": {
@@ -67,31 +74,31 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/page-features-award.jpg",
+            "image": "shopify://shop_images/page-features-award.jpg",
             "link_text": "About Playpress",
-            "link_url": "shopify:\/\/pages\/about",
-            "title": "Award-winning & eco-friendly",
-            "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
+            "link_url": "shopify://pages/about",
+            "title": "Eco-friendly fun",
+            "subtitle": "Playpress are buildable playsets for ages 4 and up, designed & manufactured in the UK."
           }
         },
         "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-1": {
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "link_text": "Bespoke sets",
-            "link_url": "shopify:\/\/pages\/studio",
-            "title": "Studio",
-            "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
+            "link_text": "Learn more",
+            "link_url": "shopify://pages/sustainability",
+            "title": "Sustainability",
+            "subtitle": "We put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design."
           }
         },
         "88846a79-f549-4ac4-b4fd-6aba0b07a010": {
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "link_text": "Stock Playpress",
-            "link_url": "shopify:\/\/pages\/stock-us",
-            "title": "Stockists",
-            "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
+            "link_text": "View awards",
+            "link_url": "shopify://pages/awards",
+            "title": "Awards",
+            "subtitle": "Our sets have been nominated for many awards, and we have even won a few!"
           }
         }
       },
@@ -100,8 +107,7 @@
         "template--15723518886080__334be8c7-6a16-4436-94de-726d965fdfe7-1669734017c1b9ccf9-1",
         "88846a79-f549-4ac4-b4fd-6aba0b07a010"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
