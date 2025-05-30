@@ -107,6 +107,13 @@ div[is=linked-files] > ul li a img {
   display: none;
   border-radius: 1.6rem;
 }
+div[is=linked-files] > ul li a .content {
+  flex: 1;
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media screen and (min-width: 740px) {
   div[is=linked-files] > ul li a img {
     display: block;
@@ -115,15 +122,9 @@ div[is=linked-files] > ul li a img {
     padding: 0.8rem;
   }
   div[is=linked-files] > ul li a .content {
-    padding: 1.6rem 2.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
-}
-div[is=linked-files] > ul li a .content {
-  flex: 1;
-  padding: 1.6rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 div[is=linked-files] > ul li a h5 {
   color: #2D3788;
