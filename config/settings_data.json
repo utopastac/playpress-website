@@ -295,11 +295,11 @@
           "link_text": "View awards",
           "link_url": "shopify://pages/awards",
           "image": "shopify://shop_images/awards_79398895-4ef3-4ac7-a50d-5b4e52b9cc89.png",
-          "bg_color": "#2d3788",
-          "is_text_color": false,
+          "bg_color": "#ffffff",
+          "is_text_color": true,
           "text_color": "#0a122a",
           "is_large": true,
-          "is_dark": true
+          "is_dark": false
         }
       },
       "gap_iHqiVb": {
