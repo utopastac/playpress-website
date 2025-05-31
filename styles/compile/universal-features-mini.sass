@@ -1,12 +1,12 @@
 @import '../assets'
 
 div[is="universal-features-mini"]
-  @extend %body-3
+  @extend %body-4
   margin: units(4) 0
 
   ul
     display: grid
-    grid-gap: units(2)
+    grid-gap: units(2.5)
     grid-template-columns: repeat(3, 1fr)
 
   li
@@ -17,7 +17,7 @@ div[is="universal-features-mini"]
       margin-bottom: units(0.5)
 
     h4
-      @extend %body-3
+      @extend %body-4
       text-align: center
 
   @include min($screen-m)

@@ -10,12 +10,12 @@
   background-size: 24px 24px;
 }
 
-a[is=outline-button], div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+div[is=universal-features-mini] li h4, div[is=universal-features-mini], a[is=outline-button] {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
+div[is=universal-features-mini] li h4, div[is=universal-features-mini], a[is=outline-button] {
   font-weight: 400;
 }
 
@@ -23,26 +23,13 @@ a[is=outline-button] {
   font-weight: 700;
 }
 
-div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
-  font-size: 1.7rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=universal-features-mini] li h4, div[is=universal-features-mini] {
-    font-size: 1.8rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
+div[is=universal-features-mini] li h4, div[is=universal-features-mini], a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  a[is=outline-button] {
+  div[is=universal-features-mini] li h4, div[is=universal-features-mini], a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -70,7 +57,7 @@ div[is=universal-features-mini] {
 }
 div[is=universal-features-mini] ul {
   display: grid;
-  grid-gap: 1.6rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
 }
 div[is=universal-features-mini] li {
