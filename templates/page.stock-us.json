@@ -177,10 +177,10 @@
         "link_text": "Email us",
         "link_url": "mailto:team@playpresstoys.com",
         "image": "shopify://shop_images/stocking-contact.jpg",
-        "bg_color": "#ebedfa",
-        "text_color": "#0a122a",
+        "bg_color": "#6247f2",
+        "text_color": "#ffffff",
         "show_signpost_link": true,
-        "use_button": false,
+        "use_button": true,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
