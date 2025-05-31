@@ -271,8 +271,8 @@ div[is=product] {
 }
 div[is=product] > div .three-d-badge {
   position: absolute;
-  top: -1.6rem;
-  left: -1.6rem;
+  top: 1.6rem;
+  left: 1.6rem;
   width: 14rem;
 }
 div[is=product] > div .three-d-badge img {
