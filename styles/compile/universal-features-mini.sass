@@ -6,7 +6,7 @@ div[is="universal-features-mini"]
 
   ul
     display: grid
-    grid-gap: units(2.5)
+    grid-gap: units(2)
     grid-template-columns: repeat(4, 1fr)
 
   li
@@ -25,6 +25,7 @@ div[is="universal-features-mini"]
 
   @include min($screen-m)
     ul
+      grid-gap: units(2.5)
       grid-template-columns: repeat(4, 1fr)
 
   @include min($screen-l)
