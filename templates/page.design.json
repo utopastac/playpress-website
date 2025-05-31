@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
@@ -14,12 +23,12 @@
       "type": "image-with-text",
       "settings": {
         "title": "We love making playsets",
-        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.<\/p>",
+        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/design-main.jpg",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
+        "image": "shopify://shop_images/design-main.jpg",
+        "bg_color": "#ffd760",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "right",
@@ -39,37 +48,37 @@
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-0": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_motor.png",
+            "image": "shopify://shop_images/type_motor.png",
             "link_url": "",
             "title": "Fine MotorSkills",
-            "text": "<p>Playpress is designed to help young people develop fine motor skills.<\/p>"
+            "text": "<p>Playpress is designed to help young people develop fine motor skills.</p>"
           }
         },
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-1": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_eco_play.png",
+            "image": "shopify://shop_images/type_eco_play.png",
             "link_url": "",
             "title": "Eco-friendly Playtime",
-            "text": "<p>Children enjoy themselves without the family worrying about the imapct to the planet.<\/p>"
+            "text": "<p>Children enjoy themselves without the family worrying about the imapct to the planet.</p>"
           }
         },
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-2": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_imagination.png",
+            "image": "shopify://shop_images/type_imagination.png",
             "link_url": "",
             "title": "Imagination & Creativity",
-            "text": "<p>Our playsets encourage children to remix and make their own fun.<\/p>"
+            "text": "<p>Our playsets encourage children to remix and make their own fun.</p>"
           }
         },
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-3": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_storytelling.png",
+            "image": "shopify://shop_images/type_storytelling.png",
             "link_url": "",
             "title": "Storytelling & Vocabulary",
-            "text": "<p>Children can make up their own worlds using our playsets.<\/p>"
+            "text": "<p>Children can make up their own worlds using our playsets.</p>"
           }
         }
       },
@@ -79,8 +88,7 @@
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-2",
         "template--15752535376064__8793f623-3546-4bf0-ba8a-6695eb40e923-1669725057fb6e915f-3"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "0a7098d8-9ba9-41cb-9219-b6f6a58046ac": {
       "type": "gap",
@@ -95,36 +103,36 @@
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/design-details.jpg",
+            "image": "shopify://shop_images/design-details.jpg",
             "link_text": "",
             "link_url": "",
-            "title": "Details",
+            "title": "",
             "subtitle": "Down to the last millimetre",
-            "text": "<p>We obsess over the details, and work tirelessly with our manufacturers to push the boundaries of what is possible. Every piece is a reflection of the careful thought process.<\/p>"
+            "text": "<p>We obsess over the details, and work tirelessly with our manufacturers to push the boundaries of what is possible. Every piece is a reflection of the careful thought process.</p>"
           }
         },
         "template--15752535376064__9f8c7b83-d37f-4a0a-8ea9-2a34ed93517d-166972570239aa7aa6-1": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/design-play.jpg",
+            "image": "shopify://shop_images/design-play.jpg",
             "link_text": "",
             "link_url": "",
-            "title": "Designed for play",
+            "title": "",
             "subtitle": "The wheels go round and round",
-            "text": "<p>Playpress sets are not models - they’re designed to be played with. If there is a door, it will open. If there is a hinge, it will work.<\/p>"
+            "text": "<p>Playpress sets are not models - they’re designed to be played with. If there is a door, it will open. If there is a hinge, it will work.</p>"
           }
         },
         "e319b889-5c41-41ec-9865-6516f87c638d": {
           "type": "prominent_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/design-award.jpg",
+            "image": "shopify://shop_images/design-award.jpg",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/awards",
-            "title": "Award winning",
+            "link_url": "shopify://pages/awards",
+            "title": "",
             "subtitle": "Recognised by our industry",
-            "text": "<p>Our sets have been entered into and won awards for their design.<\/p>"
+            "text": "<p>Our sets have been entered into and won awards for their design.</p>"
           }
         }
       },
@@ -207,9 +215,9 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/page-features-award.jpg",
+            "image": "shopify://shop_images/page-features-award.jpg",
             "link_text": "About Playpress",
-            "link_url": "shopify:\/\/pages\/about",
+            "link_url": "shopify://pages/about",
             "title": "Award-winning & eco-friendly",
             "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
           }
@@ -219,7 +227,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Bespoke sets",
-            "link_url": "shopify:\/\/pages\/studio",
+            "link_url": "shopify://pages/studio",
             "title": "Studio",
             "subtitle": "We collaborate with brands that share our values - affordable fun that doesn't cost the planet."
           }
@@ -229,7 +237,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Stock Playpress",
-            "link_url": "shopify:\/\/pages\/stock-us",
+            "link_url": "shopify://pages/stock-us",
             "title": "Stockists",
             "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
           }
@@ -240,8 +248,7 @@
         "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1",
         "6241c0d0-1536-40b2-8692-6481323613ee"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
