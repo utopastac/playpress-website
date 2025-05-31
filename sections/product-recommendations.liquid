@@ -7,6 +7,17 @@
 >
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
       <div is="product-promos">
+
+        {% comment %} <span class="three-d-badge">
+          <img 
+            src="{{ '3d-adventure.png' | asset_url }}"
+            alt="3D adventure building sytem"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </span> {% endcomment %}
+
         <div class="four">
           {%- for product in recommendations.products -%}
               {% render 'product-promo', product: product %}

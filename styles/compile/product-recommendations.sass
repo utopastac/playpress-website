@@ -5,6 +5,14 @@ div[is="product-promos"]
   padding-top: units(5)
   @extend %product-list
 
+  .three-d-badge
+    position: absolute
+    top: units(2)
+    left: units(2)
+    width: size(140)
+    img
+      border-radius: 0
+
   > div
     @include min($screen-xl)
       grid-gap: units(5)
