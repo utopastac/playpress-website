@@ -78,3 +78,8 @@ div[is=universal-features-mini] li h4 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media screen and (min-width: 1080px) {
+  div[is=universal-features-mini] ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
