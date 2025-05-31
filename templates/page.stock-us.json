@@ -40,7 +40,7 @@
         "link_text": "Get a catalogue",
         "link_url": "mailto:team@playpresstoys.com",
         "image": "shopify://shop_images/stocking-main.jpg",
-        "bg_color": "#ebedfa",
+        "bg_color": "#bcfff3",
         "text_color": "#0a122a",
         "show_signpost_link": true,
         "use_button": false,
