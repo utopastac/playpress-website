@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
@@ -14,12 +23,12 @@
       "type": "image-with-text",
       "settings": {
         "title": "Best supplier 2024",
-        "text": "<p>We are so proud to have won Best Supplier at the Cultural Enterprise Awards. The judges said:<br\/><br\/>\"Exactly the sort of supplier and product the sector needs, with excellent quality and design created in a thoughtful and sustainable way\"<\/p>",
+        "text": "<p>We are so proud to have won Best Supplier at the Cultural Enterprise Awards. The judges said:<br/><br/>\"Exactly the sort of supplier and product the sector needs, with excellent quality and design created in a thoughtful and sustainable way\"</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/Cultural_Enterprises_Awards_Winner.png",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
+        "image": "shopify://shop_images/Cultural_Enterprises_Awards_Winner.png",
+        "bg_color": "#d7e2ff",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "left",
@@ -36,10 +45,21 @@
     "awards_9fa3BX": {
       "type": "awards",
       "blocks": {
+        "award_block_DCFVBj": {
+          "type": "award_block",
+          "settings": {
+            "image": "shopify://shop_images/juno.png",
+            "date": "2025",
+            "award": "Juno magazine",
+            "title": "Featured as a best buy",
+            "placing": "Best buy",
+            "product": ""
+          }
+        },
         "award_block_UCbGwA": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cultural-enterprise-awards_64caebaf-b12f-4c1a-9e78-eecdcc9673fd.png",
+            "image": "shopify://shop_images/cultural-enterprise-awards_64caebaf-b12f-4c1a-9e78-eecdcc9673fd.png",
             "date": "2024",
             "award": "Cultural Enterprises Awards",
             "title": "Best Supplier",
@@ -50,7 +70,7 @@
         "award_block_JPKgnU": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
+            "image": "shopify://shop_images/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
             "date": "2024",
             "award": "Gift of the Year",
             "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
@@ -61,7 +81,7 @@
         "award_block_rM74C9": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Glee.png",
+            "image": "shopify://shop_images/Glee.png",
             "date": "2023",
             "award": "Glee New Product Awards",
             "title": "Gifts, Body & Bath, Christmas, Greeting Cards, Toys and Games",
@@ -72,7 +92,7 @@
         "award_block_yAd8f6": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
+            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
             "date": "2023",
             "award": "The Licensing Awards",
             "title": "Best Sustainable Licensed Product",
@@ -83,7 +103,7 @@
         "award_block_iW6jJN": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
+            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
             "date": "2022",
             "award": "The Licensing Awards",
             "title": "Best Sustainable Licensed Product",
@@ -94,7 +114,7 @@
         "award_block_KbGRq9": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
+            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
             "date": "2021",
             "award": "The Licensing Awards",
             "title": "Best Sustainable Licensed Product",
@@ -105,7 +125,7 @@
         "award_block_J4xynr": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
+            "image": "shopify://shop_images/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
             "date": "2020",
             "award": "Gift of the year",
             "title": "Ethical and Sustainable Gift",
@@ -116,7 +136,7 @@
         "award_block_PnJVUQ": {
           "type": "award_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/play-creators-awards_2d23e6f3-2389-402f-b2d0-f21a8d13a8c4.png",
+            "image": "shopify://shop_images/play-creators-awards_2d23e6f3-2389-402f-b2d0-f21a8d13a8c4.png",
             "date": "2019",
             "award": "Play Creator Awards",
             "title": "Toy Designer of the Year (Licensed Product)",
@@ -126,6 +146,7 @@
         }
       },
       "block_order": [
+        "award_block_DCFVBj",
         "award_block_UCbGwA",
         "award_block_JPKgnU",
         "award_block_rM74C9",
@@ -135,8 +156,7 @@
         "award_block_J4xynr",
         "award_block_PnJVUQ"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
       "type": "gap",
@@ -151,9 +171,9 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+            "image": "shopify://shop_images/about-sustainability.jpg",
             "link_text": "Get in touch",
-            "link_url": "shopify:\/\/pages\/contact",
+            "link_url": "shopify://pages/contact",
             "title": "Contact",
             "subtitle": "We are based in East Sussex and always welcome visitors into our design studio!"
           }
@@ -163,7 +183,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Meet the team",
-            "link_url": "shopify:\/\/pages\/team",
+            "link_url": "shopify://pages/team",
             "title": "Team",
             "subtitle": "We are a true family business with loads of experience."
           }
@@ -173,7 +193,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Our design process",
-            "link_url": "shopify:\/\/pages\/design",
+            "link_url": "shopify://pages/design",
             "title": "Design",
             "subtitle": "Our products win awards. Design is everything at Playpress."
           }
@@ -184,8 +204,7 @@
         "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1",
         "6241c0d0-1536-40b2-8692-6481323613ee"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
