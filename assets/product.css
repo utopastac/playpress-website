@@ -345,7 +345,7 @@ div[is=product] > div div[is=delivery] {
 }
 div[is=product] > div .meta {
   display: flex;
-  margin-top: 2.4rem;
+  margin-top: 3.2rem;
   border: 1px solid #EBEDFA;
   border-radius: 1.2rem 1.2rem 0 0;
 }
