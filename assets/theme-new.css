@@ -707,6 +707,12 @@ a[is=outline-button]:hover {
 .icon.document {
   -webkit-mask-image: url(icon-document.svg);
 }
+.icon.chevron-down {
+  -webkit-mask-image: url(icon-chevron-down.svg);
+}
+.icon.chevron-up {
+  -webkit-mask-image: url(icon-chevron-up.svg);
+}
 .icon.arrow-right {
   -webkit-mask-image: url(icon-arrow-right.svg);
   -webkit-mask-position: center;

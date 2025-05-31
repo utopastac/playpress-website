@@ -6,14 +6,18 @@ div[is="product"]
   > div
     @extend %main-content
 
-    .new
+    .tag
       display: inline-flex
       padding: size(4) size(8)
       @extend %body-3
       @extend %bold
+      background: $blue-100
+      color: $blue-1000
+      border-radius: size(12)
+
+    .new
       background: $new-bg
       color: $new-text
-      border-radius: size(12)
 
     div[is="product-content"]
       position: relative
@@ -83,8 +87,7 @@ div[is="product"]
       border-radius: 0 0 size(12) size(12)
     
     .meta
-      display: grid
-      grid-template-columns: 1fr 1fr
+      display: flex
       margin-top: units(3)
       border: 1px solid $blue-100
       border-radius: size(12) size(12) 0 0
@@ -100,8 +103,9 @@ div[is="product"]
         color: $blue-1000
 
       > div
+        flex: 1
         padding: units(2) units(3)
-        &:first-child
+        &:not(:last-child)
           border-right: 1px solid $grey-200
     
     .meta-dimensions

@@ -8,6 +8,6 @@ window.addEventListener("load", function(){
   function toggleDelivery(){
     deliveryActive = !deliveryActive;
     deliveryActive ? delivery.classList.add("active") : delivery.classList.remove("active");
-    deliveryActive ? deliveryIcon.classList.add("minus") : deliveryIcon.classList.remove("minus");
+    deliveryActive ? deliveryIcon.classList.add("chevron-up") : deliveryIcon.classList.remove("chevron-up");
   }
 });

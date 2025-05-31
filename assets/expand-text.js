@@ -7,6 +7,6 @@ window.addEventListener('load', () => {
   function toggleDescription(){
     descriptionActive = !descriptionActive;
     descriptionActive ? description.classList.add("active") : description.classList.remove("active");
-    descriptionActive ? descriptionIcon.classList.add("minus") : descriptionIcon.classList.remove("minus");
+    descriptionActive ? descriptionIcon.classList.add("chevron-up") : descriptionIcon.classList.remove("chevron-up");
   }
 });

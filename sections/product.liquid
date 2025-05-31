@@ -43,7 +43,10 @@
         <div is="product-info">
           <header>
             {%- if product.metafields.product.is_new == true -%}
-              <div class="new">New</div>
+              <div class="tag new">New</div>
+            {%- endif -%}
+            {%- if product.tags contains 'mini' -%}
+            <div class="tag">Travel sized</div>
             {%- endif -%}
             <h1>{{ product.title }}</h1>
             <p is="product-price">{{ product.price | money }}</p>
@@ -83,7 +86,7 @@
         <div id="description">
           <header>
             <span><div class="icon document"></div>Description & specs</span>
-            <div class="icon plus" id="description-icon"></div>
+            <div class="icon chevron-down" id="description-icon"></div>
           </header>
           <div id="description-content">
             <div class="text">{{ product.description }}</div>
