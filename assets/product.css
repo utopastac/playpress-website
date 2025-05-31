@@ -1,7 +1,7 @@
-div[is=product] > div .description ul {
+div[is=product] > div #description .text ul {
   padding-left: 3.2rem;
 }
-div[is=product] > div .description ul li {
+div[is=product] > div #description .text ul li {
   list-style-type: disc;
 }
 
@@ -51,53 +51,6 @@ div[is=product] > div form button:active {
   background-color: #272f75;
 }
 
-div[is=product] > div .description .read-more {
-  display: inline-flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  background: #EBEDFA;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-  box-shadow: none;
-}
-div[is=product] > div .description .blue.read-more {
-  background: #2D3788;
-  color: white;
-}
-div[is=product] > div .description .blue.read-more:active {
-  background-color: #272f75;
-}
-div[is=product] > div .description .blue.read-more:before {
-  content: "";
-  display: block;
-  width: 1.6rem;
-  height: 1.6rem;
-  position: relative;
-  background: white;
-  -webkit-mask-image: url(icon-arrow-right.svg);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  margin-left: 0.8rem;
-}
-div[is=product] > div .description .read-more:hover {
-  background-color: #2D3788;
-  color: white;
-}
-div[is=product] > div .description .read-more:hover .icon {
-  background: white;
-}
-div[is=product] > div .description .read-more:active {
-  background-color: #d7dbf5;
-}
-
 .button-loading:after {
   content: "";
   display: block;
@@ -110,168 +63,186 @@ div[is=product] > div .description .read-more:active {
   background-size: 24px 24px;
 }
 
-div[is=product] > div .meta h4, div[is=product] > div .description h5, div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s, div[is=product] > div .description h2, div[is=product] > div .description .heading-m, div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
+div[is=product] > div a.instructions, div[is=product] > div #description header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  color: #2D3788;
+  cursor: pointer;
+  border: 1px solid #EBEDFA;
+}
+div[is=product] > div a.instructions span, div[is=product] > div #description header span {
+  display: flex;
+  align-items: center;
+}
+div[is=product] > div a.instructions span .icon, div[is=product] > div #description header span .icon {
+  margin-right: 0.8rem;
+}
+
+div[is=product] > div #description .text h5, div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div #description .text h3, div[is=product] > div #description .text .heading-s, div[is=product] > div #description .text h2, div[is=product] > div #description .text .heading-m, div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div #description .text h1, div[is=product] > div #description .text .heading-l, div[is=product] > div #description .text ul li {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
-a[is=outline-button], div[is=product] > div .description .read-more, div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions a, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+a[is=outline-button], div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .new, div[is=product] > div #description .text .body-2, div[is=product] > div a.instructions span, div[is=product] > div #description header span, div[is=product] > div .meta-dimensions p, div[is=product] > div #description .text h6, div[is=product] > div #description .text .body-1, div[is=product] > div #description .text p, div[is=product] > div #description .text ul li, div[is=product] > div #description .text .button-text, div[is=product] > div form button, div[is=product] > div #description .text h4, div[is=product] > div #description .text .body-0 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-div[is=product] > div div[is=product-content] p[is=product-price], a[is=outline-button], div[is=product] > div .description .read-more, div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2, div[is=product] > div .meta-dimensions a, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button, div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div div[is=product-content] p[is=product-price], a[is=outline-button], div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .new, div[is=product] > div #description .text .body-2, div[is=product] > div a.instructions span, div[is=product] > div #description header span, div[is=product] > div .meta-dimensions p, div[is=product] > div #description .text h6, div[is=product] > div #description .text .body-1, div[is=product] > div #description .text p, div[is=product] > div #description .text ul li, div[is=product] > div #description .text .button-text, div[is=product] > div form button, div[is=product] > div #description .text h4, div[is=product] > div #description .text .body-0 {
   font-weight: 400;
 }
 
-div[is=product] > div .meta-dimensions a, div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .description h6, div[is=product] > div .description h4, div[is=product] > div .description strong, div[is=product] > div .description b, a[is=outline-button], div[is=product] > div .description .read-more, div[is=product] > div .description .button-text, div[is=product] > div form button {
+div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .new, div[is=product] > div #description .text h6, div[is=product] > div #description .text h4, div[is=product] > div #description .text strong, div[is=product] > div #description .text b, a[is=outline-button], div[is=product] > div #description .text .button-text, div[is=product] > div form button, div[is=product] > div a.instructions span, div[is=product] > div #description header span {
   font-weight: 700;
 }
 
-div[is=product] > div .meta h4, div[is=product] > div .description h5 {
+div[is=product] > div #description .text h5 {
   font-weight: 900;
 }
 
-div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
+div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div #description .text h1, div[is=product] > div #description .text .heading-l, div[is=product] > div #description .text ul li {
   font-size: 3.8rem;
   line-height: 115%;
   letter-spacing: -0.76px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div .description h1, div[is=product] > div .description .heading-l, div[is=product] > div .description ul li {
+  div[is=product] > div div[is=product-content] div[is=product-info] header h1, div[is=product] > div #description .text h1, div[is=product] > div #description .text .heading-l, div[is=product] > div #description .text ul li {
     font-size: 5.6rem;
     line-height: 115%;
     letter-spacing: -1.12px;
   }
 }
 
-div[is=product] > div .description h2, div[is=product] > div .description .heading-m {
+div[is=product] > div #description .text h2, div[is=product] > div #description .text .heading-m {
   font-size: 3.2rem;
   line-height: 115%;
   letter-spacing: -0.64px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description h2, div[is=product] > div .description .heading-m {
+  div[is=product] > div #description .text h2, div[is=product] > div #description .text .heading-m {
     font-size: 4.2rem;
     line-height: 115%;
     letter-spacing: -0.84px;
   }
 }
 
-div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div #description .text h3, div[is=product] > div #description .text .heading-s {
   font-size: 2.7rem;
   line-height: 115%;
   letter-spacing: -0.54px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+  div[is=product] > div .meta h3, div[is=product] > div div[is=product-content] p[is=product-price], div[is=product] > div #description .text h3, div[is=product] > div #description .text .heading-s {
     font-size: 3.4rem;
     line-height: 115%;
     letter-spacing: -0.68px;
   }
 }
 
-div[is=product] > div .meta h4, div[is=product] > div .description h5 {
+div[is=product] > div #description .text h5 {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta h4, div[is=product] > div .description h5 {
+  div[is=product] > div #description .text h5 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
   }
 }
 
-div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+div[is=product] > div #description .text h4, div[is=product] > div #description .text .body-0 {
   font-size: 2.2rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .description h4, div[is=product] > div .description .body-0 {
+  div[is=product] > div #description .text h4, div[is=product] > div #description .text .body-0 {
     font-size: 2.6rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-div[is=product] > div .meta-dimensions a, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
+div[is=product] > div .meta-dimensions p, div[is=product] > div #description .text h6, div[is=product] > div #description .text .body-1, div[is=product] > div #description .text p, div[is=product] > div #description .text ul li, div[is=product] > div #description .text .button-text, div[is=product] > div form button {
   font-size: 1.9rem;
   line-height: 140%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta-dimensions a, div[is=product] > div .meta-dimensions p, div[is=product] > div .description h6, div[is=product] > div .description .body-1, div[is=product] > div .description p, div[is=product] > div .description ul li, div[is=product] > div .description .button-text, div[is=product] > div form button {
+  div[is=product] > div .meta-dimensions p, div[is=product] > div #description .text h6, div[is=product] > div #description .text .body-1, div[is=product] > div #description .text p, div[is=product] > div #description .text ul li, div[is=product] > div #description .text .button-text, div[is=product] > div form button {
     font-size: 2.1rem;
     line-height: 140%;
     letter-spacing: 0px;
   }
 }
 
-div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
+div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .new, div[is=product] > div #description .text .body-2, div[is=product] > div a.instructions span, div[is=product] > div #description header span {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=product] > div .meta-dimensions h5, div[is=product] > div .description .body-2 {
+  div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .new, div[is=product] > div #description .text .body-2, div[is=product] > div a.instructions span, div[is=product] > div #description header span {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
-a[is=outline-button], div[is=product] > div .description .read-more {
+a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  a[is=outline-button], div[is=product] > div .description .read-more {
+  a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
   }
 }
 
-div[is=product] > div .description ul {
+div[is=product] > div #description .text ul {
   margin-top: 1.6rem;
 }
-div[is=product] > div .description ul li:not(:first-child) {
+div[is=product] > div #description .text ul li:not(:first-child) {
   margin-top: 1.6rem;
 }
-div[is=product] > div .description a {
+div[is=product] > div #description .text a {
   text-decoration: underline;
 }
-div[is=product] > div .description p + h2, div[is=product] > div .description p + h3, div[is=product] > div .description ul + h2, div[is=product] > div .description ul + h3 {
+div[is=product] > div #description .text p + h2, div[is=product] > div #description .text p + h3, div[is=product] > div #description .text ul + h2, div[is=product] > div #description .text ul + h3 {
   margin-top: 3.2rem;
 }
-div[is=product] > div .description p + h4, div[is=product] > div .description p + h5, div[is=product] > div .description ul + h4, div[is=product] > div .description ul + h5 {
+div[is=product] > div #description .text p + h4, div[is=product] > div #description .text p + h5, div[is=product] > div #description .text ul + h4, div[is=product] > div #description .text ul + h5 {
   margin-top: 2.4rem;
 }
-div[is=product] > div .description blockquote {
+div[is=product] > div #description .text blockquote {
   margin-top: 2.4rem;
   padding: 2.4rem 0 0 0;
 }
-div[is=product] > div .description h1, div[is=product] > div .description .heading-l {
+div[is=product] > div #description .text h1, div[is=product] > div #description .text .heading-l {
   margin-bottom: 3.2rem;
 }
-div[is=product] > div .description h2, div[is=product] > div .description .heading-m {
+div[is=product] > div #description .text h2, div[is=product] > div #description .text .heading-m {
   margin-bottom: 2.4rem;
 }
-div[is=product] > div .description h3, div[is=product] > div .description .heading-s {
+div[is=product] > div #description .text h3, div[is=product] > div #description .text .heading-s {
   margin-bottom: 0.8rem;
 }
-div[is=product] > div .description h4 {
+div[is=product] > div #description .text h4 {
   margin-bottom: 0.8rem;
 }
-div[is=product] > div .description h6 {
+div[is=product] > div #description .text h6 {
   margin-bottom: 0.8rem;
 }
-div[is=product] > div .description hr {
+div[is=product] > div #description .text hr {
   height: 1;
   border: none;
   background: #E7E9EF;
@@ -297,6 +268,13 @@ a[is=outline-button]:hover {
 div[is=product] {
   padding-bottom: 6.4rem;
 }
+div[is=product] > div .new {
+  display: inline-flex;
+  padding: 0.4rem 0.8rem;
+  background: #86FFAE;
+  color: #005B13;
+  border-radius: 1.2rem;
+}
 div[is=product] > div div[is=product-content] {
   position: relative;
 }
@@ -310,44 +288,57 @@ div[is=product] > div div[is=product-content] div[is=product-info] header {
 div[is=product] > div div[is=product-content] div[is=product-info] header h1 {
   margin-bottom: 1.6rem;
 }
-div[is=product] > div .description {
-  margin: 3.2rem 0;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 3.2rem;
+div[is=product] > div #description {
+  border-radius: 0;
+  margin: -0.1rem 0;
 }
-div[is=product] > div .description.hidden {
-  max-height: 18rem;
-  padding-bottom: 4.4rem;
+div[is=product] > div #description:hover:not(.active) {
+  background-color: #EBEDFA;
 }
-div[is=product] > div .description.hidden::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 10rem;
-  background: linear-gradient(rgba(255, 255, 255, 0), white 75%);
-  content: "";
+div[is=product] > div #description header {
+  border-radius: 0;
 }
-div[is=product] > div .description > div * {
-  margin-bottom: 1.6rem;
+div[is=product] > div #description #description-content {
+  visibility: hidden;
+  height: 0;
 }
-div[is=product] > div .description .read-more {
-  position: absolute;
-  z-index: 1000;
-  bottom: 0;
-  left: 0;
-  cursor: pointer;
+div[is=product] > div #description.active {
+  color: white;
+  background: #2D3788;
+}
+div[is=product] > div #description.active header {
+  color: white;
+  border: none;
+}
+div[is=product] > div #description.active .icon {
+  background: white;
+}
+div[is=product] > div #description.active #description-content {
+  visibility: visible;
+  padding: 1.6rem;
+  height: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+div[is=product] > div a.instructions {
+  border-radius: 0;
+  margin-bottom: -0.1rem;
+}
+div[is=product] > div a.instructions:hover {
+  background-color: #EBEDFA;
+}
+div[is=product] > div div[is=delivery] {
+  border-radius: 0 0 1.2rem 1.2rem;
 }
 div[is=product] > div .meta {
-  border: 1px solid #E7E9EF;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-radius: 1.6rem;
   margin-top: 2.4rem;
+  border: 1px solid #EBEDFA;
+  border-radius: 1.2rem 1.2rem 0 0;
 }
 div[is=product] > div .meta h4 {
   color: #41495E;
+  margin-bottom: 0.4rem;
 }
 div[is=product] > div .meta h3 {
   color: #2D3788;
@@ -359,32 +350,16 @@ div[is=product] > div .meta > div:first-child {
   border-right: 1px solid #E7E9EF;
 }
 div[is=product] > div .meta-dimensions {
+  margin: 2.4rem 0 0 0;
   border: 1px solid #E7E9EF;
   border-radius: 0.8rem;
+  background: white;
 }
 div[is=product] > div .meta-dimensions h5 {
   color: #41495E;
 }
 div[is=product] > div .meta-dimensions p {
   color: #2D3788;
-}
-div[is=product] > div .meta-dimensions a {
-  display: flex;
-  align-items: center;
-  color: #2D3788;
-}
-div[is=product] > div .meta-dimensions a:before {
-  content: "";
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  position: relative;
-  background: #2D3788;
-  -webkit-mask-image: url(icon-download.svg);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  margin-right: 0.4rem;
 }
 div[is=product] > div .meta-dimensions > div {
   padding: 1.2rem 1.6rem;

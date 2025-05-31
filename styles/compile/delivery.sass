@@ -12,16 +12,18 @@ div[is="delivery"]
 
   &:hover
     &:not(.active)
-      border-color: $blue-1000
+      background-color: $blue-100
 
   header
     display: flex
     justify-content: space-between
+    align-items: center
 
     span
       display: flex
       @extend %body-3
       @extend %bold
+      align-items: center
 
       .icon
         margin-right: units(1)
@@ -73,9 +75,6 @@ div[is="delivery"]
     align-items: center
     @extend %body-3
     user-select: none
-
-    span
-      margin: 0 units(1)
 
   &.active 
     color: white

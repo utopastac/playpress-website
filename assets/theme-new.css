@@ -698,6 +698,15 @@ a[is=outline-button]:hover {
 .icon.check {
   -webkit-mask-image: url(icon-check.svg);
 }
+.icon.download {
+  -webkit-mask-image: url(icon-download.svg);
+}
+.icon.instructions {
+  -webkit-mask-image: url(icon-instructions.svg);
+}
+.icon.document {
+  -webkit-mask-image: url(icon-document.svg);
+}
 .icon.arrow-right {
   -webkit-mask-image: url(icon-arrow-right.svg);
   -webkit-mask-position: center;

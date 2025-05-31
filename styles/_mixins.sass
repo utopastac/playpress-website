@@ -354,3 +354,22 @@ $bigUnits: 40
     height: 100%
     background: $blue-1000 url(loading-b.gif) no-repeat center center
     background-size: 24px 24px
+
+%expanding-button
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-radius: size(12)
+  padding: units(2)
+  color: $blue-1000  
+  cursor: pointer    
+  border: 1px solid $blue-100
+
+  span
+    display: flex
+    @extend %body-3
+    @extend %bold
+    align-items: center
+
+    .icon
+      margin-right: units(1)

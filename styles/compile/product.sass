@@ -6,6 +6,15 @@ div[is="product"]
   > div
     @extend %main-content
 
+    .new
+      display: inline-flex
+      padding: size(4) size(8)
+      @extend %body-3
+      @extend %bold
+      background: $new-bg
+      color: $new-text
+      border-radius: size(12)
+
     div[is="product-content"]
       position: relative
 
@@ -27,47 +36,64 @@ div[is="product"]
             @extend %heading-1
             margin-bottom: units(2)
 
-    .description
-      @extend %typography-hierarchy
-      margin: units(4) 0
-      position: relative
-      overflow: hidden
-      padding-bottom: size(32)
+    #description
+      border-radius: 0
+      margin: -size(1) 0
 
-      &.hidden
-        max-height: size(180)
-        padding-bottom: size(44)
-        &::after
-          position: absolute
-          bottom: 0
-          left: 0
-          right: 0
-          height: size(100)
-          background: linear-gradient(rgba(white, 0), rgba(white, 100) 75%)
-          content: ""
+      &:hover
+        &:not(.active)
+          background-color: $blue-100
 
+      header
+        @extend %expanding-button
+        border-radius: 0
 
-      > div *
-        margin-bottom: units(2)
+      .text
+        @extend %typography-hierarchy
 
-      .read-more
-        position: absolute
-        z-index: 1000
-        bottom: 0
-        left: 0
-        cursor: pointer
-        @extend %micro-button-style
+      #description-content
+        visibility: hidden
+        height: 0
+
+      &.active 
+        color: white
+        background: $blue-1000
+
+        header
+          color: white
+          border: none
+
+        .icon
+          background: white
+
+        #description-content
+          visibility: visible
+          padding: units(2)
+          height: auto
+          border-top: 1px solid rgba($white, 0.3)
+
+    a.instructions
+      @extend %expanding-button
+      border-radius: 0
+      margin-bottom: -size(1)
+      &:hover
+        background-color: $blue-100
+
+    div[is=delivery]
+      border-radius: 0 0 size(12) size(12)
     
     .meta
-      border: 1px solid $grey-200
       display: grid
       grid-template-columns: 1fr 1fr
-      border-radius: $border-s
       margin-top: units(3)
+      border: 1px solid $blue-100
+      border-radius: size(12) size(12) 0 0
 
       h4
-        @extend %overline
+        @extend %body-3
+        @extend %bold
         color: $grey-800
+        margin-bottom: size(4)
       
       h3
         @extend %heading-3
@@ -79,8 +105,10 @@ div[is="product"]
           border-right: 1px solid $grey-200
     
     .meta-dimensions
+      margin: units(3) 0 0 0
       border: 1px solid $grey-200
       border-radius: $border-xs
+      background: white
 
       h5
         @extend %body-3
@@ -91,26 +119,6 @@ div[is="product"]
         @extend %body-2
         @extend %bold
         color: $blue-1000
-
-      a
-        display: flex
-        align-items: center
-        @extend %body-2
-        @extend %bold
-        color: $blue-1000
-
-        &:before
-          content: ""
-          display: block
-          width: units(3)
-          height: units(3)
-          position: relative
-          background: $blue-1000
-          -webkit-mask-image: url(icon-download.svg)
-          -webkit-mask-position: center
-          -webkit-mask-repeat: no-repeat
-          -webkit-mask-size: contain
-          margin-right: units(0.5)
 
       > div
         padding: units(1.5) units(2)

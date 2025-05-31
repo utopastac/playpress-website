@@ -8,9 +8,6 @@
   <div class="product-item" data-id="{{ product.variants.first.id }}" data-main-product="true">
     <section>
       <div is="gallery">
-        {%- if product.metafields.product.is_new == true -%}
-          <div class="new">✨New✨</div>
-        {%- endif -%}
         <div>
           <img
             class="page-image"
@@ -45,6 +42,9 @@
       <div is="product-content">
         <div is="product-info">
           <header>
+            {%- if product.metafields.product.is_new == true -%}
+              <div class="new">New</div>
+            {%- endif -%}
             <h1>{{ product.title }}</h1>
             <p is="product-price">{{ product.price | money }}</p>
           </header>
@@ -66,8 +66,6 @@
           {% endform %}
         </div>
 
-        {% render 'delivery', expanded: true %}
-
         {%- if product.metafields.product.pieces != blank -%}
           <div class="meta">
             <div>
@@ -82,9 +80,45 @@
         {%- endif -%}
         
 
-        <div class="description" id="description-text">{{ product.description }}</div>
+        <div id="description">
+          <header>
+            <span><div class="icon document"></div>Description & specs</span>
+            <div class="icon plus" id="description-icon"></div>
+          </header>
+          <div id="description-content">
+            <div class="text">{{ product.description }}</div>
+            {%- if product.metafields.product.pack_length != blank -%}
+            <div class="meta-dimensions">
+              <div>
+                <h5>Dimensions</h5>
+                <p>
+                  <span>{{product.metafields.product.pack_length.value | remove: " "}}</span>
+                  <span>x {{product.metafields.product.pack_width.value | remove: " "}}</span>
+                  <span>x {{product.metafields.product.pack_depth.value | remove: " "}}</span>
+                </p>
+              </div>
+              {%- if product.metafields.product.pack_weight != blank -%}
+                <div>
+                  <h5>Weight</h5>
+                  <p>{{product.metafields.product.pack_weight.value | remove: " "}}</p>
+                </div>
+              {%- endif -%}
+            </div>
+            {%- endif -%}
+          </div>
+        </div>
 
-        {%- if product.metafields.product.pack_length != blank -%}
+        {%- if product.metafields.custom.instructions.value -%}
+          <a class="instructions" href="https://{{ product.metafields.custom.instructions.value.url }}" download>
+            <span><div class="icon instructions"></div>Building instructions</span>
+            <div class="icon download" id="download-icon"></div>
+          </a>
+        {%- endif -%}
+
+        {% render 'delivery', expanded: true %}
+
+
+        {% comment %} {%- if product.metafields.product.pack_length != blank -%}
           <div class="meta-dimensions">
             <div>
               <h5>Dimensions</h5>
@@ -106,7 +140,7 @@
               </div>
             {%- endif -%}
           </div>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
 
         
 

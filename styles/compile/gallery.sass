@@ -3,23 +3,6 @@
 div[is="gallery"]
   position: relative
 
-  .new
-    @extend %body-3
-    @extend %bold
-    padding: size(0) size(8)
-    border-radius: $border-s
-    display: inline-block
-    background: $green-1000
-    color: white
-    position: absolute
-    top: units(1)
-    left: units(4)
-    z-index: 1000
-
-    @include min($screen-m)
-      top: -units(1)
-      left: units(2)
-
   @include max($screen-m)
     > div
       white-space: nowrap
