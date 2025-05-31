@@ -269,6 +269,12 @@ a[is=outline-button]:hover {
 div[is=product] {
   padding-bottom: 6.4rem;
 }
+div[is=product] > div .three-d-badge {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  width: 12rem;
+}
 div[is=product] > div .tag {
   display: inline-flex;
   padding: 0.4rem 0.8rem;
