@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
@@ -7,7 +16,7 @@
         "text": "The environment is at the heart of everything we do, and is our core reason for existing.",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/sustainability-main.jpg",
+        "image": "shopify://shop_images/sustainability-main.jpg",
         "show_delivery_info": false
       }
     },
@@ -15,11 +24,14 @@
       "type": "image-with-text",
       "settings": {
         "title": "Earth at the core",
-        "text": "<p>We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.<\/p>",
+        "text": "<p>We don’t think that quality toys need to cost the earth. That’s why we put care into every part of our product, from the sourcing of our materials through to responsible manufacturing and design.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify:\/\/shop_images\/sustainability-header.jpg",
+        "image": "shopify://shop_images/sustainability-header.jpg",
+        "bg_color": "#29ffcb",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
+        "use_button": false,
         "layout": "right",
         "show_colour": false,
         "last_on_page": false
@@ -37,37 +49,37 @@
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-0": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_eco.jpg",
+            "image": "shopify://shop_images/type_eco.jpg",
             "link_url": "",
             "title": "Sustainably Sourced Board",
-            "text": "<p>The fibres for our playboard are bleach- free and sourced from sustainably managed forests in Finland.<\/p>"
+            "text": "<p>The fibres for our playboard are bleach- free and sourced from sustainably managed forests in Finland.</p>"
           }
         },
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-1": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_plant.jpg",
+            "image": "shopify://shop_images/type_plant.jpg",
             "link_url": "",
             "title": "Plant-based inks",
-            "text": "<p>We use food safe water-based inks and glue that are vegan, biodegradable and ocean friendly.<\/p>"
+            "text": "<p>We use food safe water-based inks and glue that are vegan, biodegradable and ocean friendly.</p>"
           }
         },
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-2": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_recycle.jpg",
+            "image": "shopify://shop_images/type_recycle.jpg",
             "link_url": "",
             "title": "Recyclable",
-            "text": "<p>We use materials that are fully recyclable, 100% biodegradable, whilst also being robust for play.<\/p>"
+            "text": "<p>We use materials that are fully recyclable, 100% biodegradable, whilst also being robust for play.</p>"
           }
         },
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-3": {
           "type": "content_block_highlight",
           "settings": {
-            "image": "shopify:\/\/shop_images\/type_UK.jpg",
+            "image": "shopify://shop_images/type_UK.jpg",
             "link_url": "",
             "title": "Locally made",
-            "text": "<p>Our toys conform to European standards and are locally manufactured in the UK to minimise air miles.<\/p>"
+            "text": "<p>Our toys conform to European standards and are locally manufactured in the UK to minimise air miles.</p>"
           }
         }
       },
@@ -77,8 +89,7 @@
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-2",
         "template--15752535310528__b5dd8467-9e57-4b9f-982c-b108a87b87cd-1669741207ddaed790-3"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "fe29a3f4-3733-4e27-9120-71d6a995add7": {
       "type": "gap",
@@ -93,9 +104,9 @@
           "type": "page_feature",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/about-sustainability.jpg",
+            "image": "shopify://shop_images/about-sustainability.jpg",
             "link_text": "Get in touch",
-            "link_url": "shopify:\/\/pages\/contact",
+            "link_url": "shopify://pages/contact",
             "title": "Contact",
             "subtitle": "We are based in East Sussex and always welcome visitors into our design studio!"
           }
@@ -105,7 +116,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Meet the team",
-            "link_url": "shopify:\/\/pages\/team",
+            "link_url": "shopify://pages/team",
             "title": "Team",
             "subtitle": "We are a true family business with loads of experience."
           }
@@ -115,7 +126,7 @@
           "settings": {
             "enable_image": true,
             "link_text": "Our design process",
-            "link_url": "shopify:\/\/pages\/studio",
+            "link_url": "shopify://pages/studio",
             "title": "Design",
             "subtitle": "Our products win awards. Design is everything at Playpress."
           }
@@ -126,8 +137,7 @@
         "template--15723518853312__06ec3cff-61fe-4690-94f1-f255248aab07-16697195281cf56bd5-1",
         "6241c0d0-1536-40b2-8692-6481323613ee"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
