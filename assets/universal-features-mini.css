@@ -62,9 +62,11 @@ div[is=universal-features-mini] ul {
 }
 div[is=universal-features-mini] li {
   list-style: none;
+  text-align: center;
 }
 div[is=universal-features-mini] li img {
   width: 100%;
+  max-width: 10rem;
   margin-bottom: 0.6rem;
 }
 div[is=universal-features-mini] li h4 {
