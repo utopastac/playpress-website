@@ -53,7 +53,7 @@ a[is=outline-button]:hover {
 }
 
 div[is=universal-features-mini] {
-  margin: 3.2rem 0;
+  margin: 4rem 0 3.2rem 0;
 }
 div[is=universal-features-mini] ul {
   display: grid;
@@ -65,7 +65,7 @@ div[is=universal-features-mini] li {
 }
 div[is=universal-features-mini] li img {
   width: 100%;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 div[is=universal-features-mini] li h4 {
   text-align: center;
