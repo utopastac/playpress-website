@@ -178,6 +178,10 @@ section[is=split-hero] div[is=main-promo], section[is=split-hero] div[is=sub-pro
   border-radius: 1.6rem;
   overflow: hidden;
   flex: 1;
+  transition: all 0.3s ease-in-out;
+}
+section[is=split-hero] div[is=main-promo]:hover, section[is=split-hero] div[is=sub-promo]:hover {
+  scale: 1.03;
 }
 section[is=split-hero] div[is=main-promo] a > div, section[is=split-hero] div[is=sub-promo] a > div {
   display: flex;
