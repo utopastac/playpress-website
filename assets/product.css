@@ -72,6 +72,7 @@ div[is=product] > div a.instructions, div[is=product] > div #description header 
   color: #2D3788;
   cursor: pointer;
   border: 1px solid #EBEDFA;
+  user-select: none;
 }
 div[is=product] > div a.instructions span, div[is=product] > div #description header span {
   display: flex;
