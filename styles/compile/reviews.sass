@@ -7,16 +7,20 @@
 article[is="review"]
 
   width: size(280)
-  display: flex
-  flex-direction: column
+  height: size(140)
   align-items: center
+  justify-content: flex-start
   text-align: center
+
+  a
+    display: block
 
   .stars
     display: flex
     flex: 1
     align-items: center
     justify-content: center
+    margin-bottom: size(4)
 
     .icon
       background: $yolk-1000
@@ -26,7 +30,9 @@ article[is="review"]
     @extend %bold
   
   p
-    @extend %body-2
+    @extend %body-3
+    white-space: wrap
+    margin-bottom: size(4)
   
   
 
@@ -41,9 +47,11 @@ div[is="reviews"]
   > div
     white-space: nowrap
     overflow-x: scroll
+    align-items: top
     -webkit-overflow-scrolling: touch
     margin: -units(2) -units(2)
     padding: units(2) units(2)
+    vertical-align: top
 
     @include min($screen-l)
       margin: -units(2) 0
@@ -51,6 +59,7 @@ div[is="reviews"]
 
     > *
       display: inline-block
+      vertical-align: top
       max-width: 80vw
       margin-right: units(1)
   

@@ -10,12 +10,12 @@
   background-size: 24px 24px;
 }
 
-a[is=outline-button], article[is=review] h4, article[is=review] p {
+a[is=outline-button], article[is=review] p, article[is=review] h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], article[is=review] h4, article[is=review] p {
+a[is=outline-button], article[is=review] p, article[is=review] h4 {
   font-weight: 400;
 }
 
@@ -23,26 +23,13 @@ article[is=review] h4, a[is=outline-button] {
   font-weight: 700;
 }
 
-article[is=review] p {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  article[is=review] p {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-article[is=review] h4 {
+article[is=review] p, article[is=review] h4 {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  article[is=review] h4 {
+  article[is=review] p, article[is=review] h4 {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -86,20 +73,29 @@ a[is=outline-button]:hover {
 
 article[is=review] {
   width: 28rem;
-  display: flex;
-  flex-direction: column;
+  height: 14rem;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
+}
+article[is=review] a {
+  display: block;
 }
 article[is=review] .stars {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.4rem;
 }
 article[is=review] .stars .icon {
   background: #FAB638;
 }
+article[is=review] p {
+  white-space: wrap;
+  margin-bottom: 0.4rem;
+}
+
 @media screen and (min-width: 1080px) {
   div[is=reviews] {
     width: 100vw;
@@ -111,9 +107,11 @@ article[is=review] .stars .icon {
 div[is=reviews] > div {
   white-space: nowrap;
   overflow-x: scroll;
+  align-items: top;
   -webkit-overflow-scrolling: touch;
   margin: -1.6rem -1.6rem;
   padding: 1.6rem 1.6rem;
+  vertical-align: top;
 }
 @media screen and (min-width: 1080px) {
   div[is=reviews] > div {
@@ -123,6 +121,7 @@ div[is=reviews] > div {
 }
 div[is=reviews] > div > * {
   display: inline-block;
+  vertical-align: top;
   max-width: 80vw;
   margin-right: 0.8rem;
 }
