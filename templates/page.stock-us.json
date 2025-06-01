@@ -26,7 +26,7 @@
       "type": "intro",
       "settings": {
         "heading": "Stocking Playpress",
-        "text": "Stocking our affordable and eco-friendly playsets could not be easier!",
+        "text": "Stocking our affordable and eco-friendly playsets could not be easier! We are very proud to be stocked in almost 300 independent gift, concept, zero waste, and toy stores across the UK. You'll also find our sets in some wonderful museums and attractions.",
         "link_text": "Contact us",
         "link_url": "shopify://pages/contact",
         "show_delivery_info": false
@@ -53,6 +53,74 @@
       "type": "gap",
       "settings": {
         "size": 2
+      }
+    },
+    "image_with_text_KFpNtm": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "Shops",
+        "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify://shop_images/logos-shops.png",
+        "bg_color": "#e0e2ef",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "gap_rDxQFg": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "image_with_text_wGQamL": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "Museums and galleries",
+        "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.</p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify://shop_images/logos-museums.png",
+        "bg_color": "#dff1d3",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "right",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "gap_UxrhnU": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "image_with_text_D8JaUF": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "Attractions",
+        "text": "<p>Our sets are stocked at some of the biggest attractions in the UK.</p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify://shop_images/logos-attractions.png",
+        "bg_color": "#e7e2cc",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
       }
     },
     "1627753525bae19605": {
@@ -200,6 +268,11 @@
     "intro",
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
+    "image_with_text_KFpNtm",
+    "gap_rDxQFg",
+    "image_with_text_wGQamL",
+    "gap_UxrhnU",
+    "image_with_text_D8JaUF",
     "1627753525bae19605",
     "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b",
     "4b849851-8b36-45e9-9283-91fb033152d9",
