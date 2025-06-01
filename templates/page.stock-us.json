@@ -124,7 +124,9 @@
             "image": "shopify://shop_images/stock-us-compact.jpg",
             "link_url": "",
             "title": "Compact",
-            "text": "<p>Our toys take up a small amount of shelf spaceand being flat-pack-fun they post extremely well.</p>"
+            "text": "<p>Our toys take up a small amount of shelf spaceand being flat-pack-fun they post extremely well.</p>",
+            "bg_color": "#006fcf",
+            "text_color": "#ffffff"
           }
         },
         "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-1": {
@@ -133,7 +135,9 @@
             "image": "shopify://shop_images/stock-us-good-looking.jpg",
             "link_url": "",
             "title": "Good looking",
-            "text": "<p>Our vibrant designs give you high visual impact in your store.</p>"
+            "text": "<p>Our vibrant designs give you high visual impact in your store.</p>",
+            "bg_color": "#d65100",
+            "text_color": "#ffffff"
           }
         },
         "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-2": {
@@ -142,7 +146,9 @@
             "image": "shopify://shop_images/stock-us-eco-friendly.jpg",
             "link_url": "",
             "title": "Eco-friendly",
-            "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC® certified (FSC®-C004309).</p>"
+            "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC® certified (FSC®-C004309).</p>",
+            "bg_color": "#13980a",
+            "text_color": "#ffffff"
           }
         },
         "template--15723518787776__4b849851-8b36-45e9-9283-91fb033152d9-1669732791f218db02-3": {
@@ -151,7 +157,9 @@
             "image": "shopify://shop_images/stock-us-free-delivery.jpg",
             "link_url": "",
             "title": "Free delivery",
-            "text": "<p>No minimum order and free delivery on all orders over £125.</p>"
+            "text": "<p>No minimum order and free delivery on all orders over £125.</p>",
+            "bg_color": "#2d3788",
+            "text_color": "#ffffff"
           }
         }
       },
