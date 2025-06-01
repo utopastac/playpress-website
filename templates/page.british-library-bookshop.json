@@ -25,25 +25,25 @@
         "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-0": {
           "type": "page_gallery_image",
           "settings": {
-            "image": "shopify://shop_images/jojo-maman-bebe-page-1.jpg"
+            "image": "shopify://shop_images/library-page-1.jpg"
           }
         },
         "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-1": {
           "type": "page_gallery_image",
           "settings": {
-            "image": "shopify://shop_images/jojo-maman-bebe-page-2.jpg"
+            "image": "shopify://shop_images/library-page-2.jpg"
           }
         },
         "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-2": {
           "type": "page_gallery_image",
           "settings": {
-            "image": "shopify://shop_images/jojo-maman-bebe-page-3.jpg"
+            "image": "shopify://shop_images/library-page-3.jpg"
           }
         },
         "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-3": {
           "type": "page_gallery_image",
           "settings": {
-            "image": "shopify://shop_images/jojo-maman-bebe-page-4.jpg"
+            "image": "shopify://shop_images/library-page-4.jpg"
           }
         }
       },
