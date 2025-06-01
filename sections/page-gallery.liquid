@@ -6,11 +6,9 @@
       {% for block in section.blocks %}
         <div>
           <img
-            src="{{ block.settings.image | img_url: '400x400' }}"
+            src="{{ block.settings.image }}"
             alt="{{ block.settings.image.alt }}"
             loading="lazy"
-            width="400"
-            height="400"
           />
         </div>
       {% endfor %}
