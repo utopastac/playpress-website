@@ -139,7 +139,7 @@
             "link_url": "",
             "title": "Compact",
             "text": "<p>Our toys take up a small amount of shelf spaceand being flat-pack-fun they post extremely well.</p>",
-            "bg_color": "#006fcf",
+            "bg_color": "#0a9861",
             "text_color": "#ffffff"
           }
         },
@@ -150,7 +150,7 @@
             "link_url": "",
             "title": "Good looking",
             "text": "<p>Our vibrant designs give you high visual impact in your store.</p>",
-            "bg_color": "#d60035",
+            "bg_color": "#e21b67",
             "text_color": "#ffffff"
           }
         },
@@ -161,7 +161,7 @@
             "link_url": "",
             "title": "Eco-friendly",
             "text": "<p>Our sets are eco-friendly, plastic-free, use vegetable based inks, and are FSC® certified (FSC®-C004309).</p>",
-            "bg_color": "#13980a",
+            "bg_color": "#0a9861",
             "text_color": "#ffffff"
           }
         },
@@ -172,7 +172,7 @@
             "link_url": "",
             "title": "Free delivery",
             "text": "<p>No minimum order and free delivery on all orders over £125.</p>",
-            "bg_color": "#2d3788",
+            "bg_color": "#e21b67",
             "text_color": "#ffffff"
           }
         }
