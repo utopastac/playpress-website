@@ -47,38 +47,46 @@
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
-            "name": "Add a name",
-            "body": "Add content"
+            "name": "Susan",
+            "body": "My grandsons just love, love, love Shaun The Sheep. Thank you!!"
           }
         },
         "review_UNTgRW": {
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
-            "name": "Add a name",
-            "body": "Add content"
+            "name": "Therese",
+            "body": "Really cute item and shipped very quickly. My granddaughter loves it"
           }
         },
         "review_yACEn4": {
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
-            "name": "Add a name",
-            "body": "Add content"
+            "name": "Sara",
+            "body": "This is perfect for telling the story as you collect the characters along the way. Arrived quicker than expected."
           }
         },
         "review_MQh9AF": {
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
-            "name": "Add a name",
-            "body": "Add content"
+            "name": "Noczor",
+            "body": "My little daughter of 2 and a half really adores this playset! Shaun the sheep makes her so happy and this set completes it all for her!"
           }
         },
         "review_qiHNiR": {
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
+            "name": "",
+            "body": "This product is so impressive, my son is so obsessed with it! And the customer service I wish I could give 10 stars! "
+          }
+        },
+        "review_imBmbX": {
+          "type": "review",
+          "settings": {
+            "link_url": "",
             "name": "Add a name",
             "body": "Add content"
           }
@@ -87,8 +95,8 @@
           "type": "review",
           "settings": {
             "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
-            "name": "Add a name",
-            "body": "Add content"
+            "name": "Sarah Marie",
+            "body": "This set is awesome and really well designed. Everyone in the house has taken a turn flying the whole gang on their deluxe broom. The set makes a perfect gift!"
           }
         }
       },
@@ -99,6 +107,7 @@
         "review_yACEn4",
         "review_MQh9AF",
         "review_qiHNiR",
+        "review_imBmbX",
         "review_K7HENg"
       ],
       "name": "Review",
