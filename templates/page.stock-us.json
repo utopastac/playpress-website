@@ -38,7 +38,7 @@
         "title": "Catalogue & samples",
         "text": "<p>We will send you a digital catalogue and an order form that typically enables us to fulfil your order in a couple of days or earlier. If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.</p>",
         "link_text": "Get a catalogue",
-        "link_url": "mailto:team@playpresstoys.com",
+        "link_url": "shopify://pages/contact",
         "image": "shopify://shop_images/CATALOGUE.jpg",
         "bg_color": "#2d1f74",
         "text_color": "#ffffff",
