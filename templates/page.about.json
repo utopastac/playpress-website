@@ -35,10 +35,34 @@
     "reviews_TyJBED": {
       "type": "reviews",
       "blocks": {
+        "review_CaQgtK": {
+          "type": "review",
+          "settings": {
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
+            "name": "Sinead",
+            "body": "Great item and quality matched description exactly and exceptional customer service"
+          }
+        },
+        "review_JKgwQh": {
+          "type": "review",
+          "settings": {
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
+            "name": "Add a name",
+            "body": "Add content"
+          }
+        },
+        "review_UNTgRW": {
+          "type": "review",
+          "settings": {
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
+            "name": "Add a name",
+            "body": "Add content"
+          }
+        },
         "review_yACEn4": {
           "type": "review",
           "settings": {
-            "link_url": "",
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
             "name": "Add a name",
             "body": "Add content"
           }
@@ -46,7 +70,7 @@
         "review_MQh9AF": {
           "type": "review",
           "settings": {
-            "link_url": "",
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
             "name": "Add a name",
             "body": "Add content"
           }
@@ -54,7 +78,7 @@
         "review_qiHNiR": {
           "type": "review",
           "settings": {
-            "link_url": "",
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
             "name": "Add a name",
             "body": "Add content"
           }
@@ -62,13 +86,16 @@
         "review_K7HENg": {
           "type": "review",
           "settings": {
-            "link_url": "",
+            "link_url": "https://www.etsy.com/shop/PlayPressStudio?ref=shop-header-name&listing_id=1810646944&from_page=listing#reviews",
             "name": "Add a name",
             "body": "Add content"
           }
         }
       },
       "block_order": [
+        "review_CaQgtK",
+        "review_JKgwQh",
+        "review_UNTgRW",
         "review_yACEn4",
         "review_MQh9AF",
         "review_qiHNiR",
