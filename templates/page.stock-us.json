@@ -55,31 +55,6 @@
         "size": 2
       }
     },
-    "image_with_text_KFpNtm": {
-      "type": "image-with-text",
-      "name": "Image with text",
-      "settings": {
-        "title": "Shops",
-        "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify://shop_images/logos-shops.png",
-        "bg_color": "#ffffff",
-        "text_color": "#0A122A",
-        "show_signpost_link": false,
-        "use_button": false,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
-      }
-    },
-    "gap_rDxQFg": {
-      "type": "gap",
-      "name": "Gap",
-      "settings": {
-        "size": 1
-      }
-    },
     "image_with_text_wGQamL": {
       "type": "image-with-text",
       "name": "Image with text",
@@ -88,12 +63,12 @@
         "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify://shop_images/logos-museums.png",
+        "image": "shopify://shop_images/Museums.jpg",
         "bg_color": "#ffffff",
         "text_color": "#0A122A",
         "show_signpost_link": false,
         "use_button": false,
-        "layout": "right",
+        "layout": "left",
         "show_colour": false,
         "last_on_page": false
       }
@@ -113,7 +88,32 @@
         "text": "<p>Our sets are stocked at some of the biggest attractions in the UK.</p>",
         "link_text": "",
         "link_url": "",
-        "image": "shopify://shop_images/logos-attractions.png",
+        "image": "shopify://shop_images/Attractions.jpg",
+        "bg_color": "#ffffff",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "right",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
+    "gap_rDxQFg": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "image_with_text_KFpNtm": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "Shops",
+        "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify://shop_images/Shops.jpg",
         "bg_color": "#ffffff",
         "text_color": "#0A122A",
         "show_signpost_link": false,
@@ -214,11 +214,11 @@
     "intro",
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
-    "image_with_text_KFpNtm",
-    "gap_rDxQFg",
     "image_with_text_wGQamL",
     "gap_UxrhnU",
     "image_with_text_D8JaUF",
+    "gap_rDxQFg",
+    "image_with_text_KFpNtm",
     "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b",
     "4b849851-8b36-45e9-9283-91fb033152d9",
     "0495fd63-7334-42f1-bfbd-8ae590f72954",
