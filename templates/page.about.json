@@ -32,6 +32,13 @@
         "show_delivery_info": false
       }
     },
+    "gap_FqBWPF": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "reviews_TyJBED": {
       "type": "reviews",
       "blocks": {
@@ -269,6 +276,7 @@
   "order": [
     "warning_banner_axGcqR",
     "intro",
+    "gap_FqBWPF",
     "reviews_TyJBED",
     "gap_hEAaJH",
     "69daff38-49c3-40ba-87fd-5594871992a9",
