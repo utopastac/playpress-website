@@ -145,7 +145,7 @@
       "settings": {
         "title": "",
         "text": "",
-        "grid": 4,
+        "grid": 3,
         "show_signpost_link": false,
         "link_text": "",
         "link_url": ""
@@ -154,7 +154,7 @@
     "c4cf0f2c-ba8c-4d76-8127-85095842da25": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 3
       }
     },
     "16277530953a8433e6": {
