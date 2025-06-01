@@ -35,15 +35,15 @@
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10": {
       "type": "image-with-text",
       "settings": {
-        "title": "Our catalogue & samples",
-        "text": "<p>We will send you a digital catalogue and an order form that typically enables us to fulfil your order in a couple of days or earlier.<br/><br/>If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.</p>",
+        "title": "Catalogue & samples",
+        "text": "<p>We will send you a digital catalogue and an order form that typically enables us to fulfil your order in a couple of days or earlier. If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.</p>",
         "link_text": "Get a catalogue",
         "link_url": "mailto:team@playpresstoys.com",
-        "image": "shopify://shop_images/stocking-main.jpg",
-        "bg_color": "#bcfff3",
-        "text_color": "#0a122a",
+        "image": "shopify://shop_images/CATALOGUE.jpg",
+        "bg_color": "#2d1f74",
+        "text_color": "#ffffff",
         "show_signpost_link": true,
-        "use_button": false,
+        "use_button": true,
         "layout": "right",
         "show_colour": false,
         "last_on_page": false
@@ -121,60 +121,6 @@
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
-      }
-    },
-    "1627753525bae19605": {
-      "type": "prominent-features",
-      "blocks": {
-        "1627753525bae19605-0": {
-          "type": "prominent_feature",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/logos-shops.png",
-            "link_text": "",
-            "link_url": "",
-            "title": "",
-            "subtitle": "Shops",
-            "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>"
-          }
-        },
-        "1627753525bae19605-1": {
-          "type": "prominent_feature",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/logos-attractions.png",
-            "link_text": "",
-            "link_url": "",
-            "title": "",
-            "subtitle": "Museums and galleries",
-            "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.</p>"
-          }
-        },
-        "9061019f-6cbd-4ec2-8995-eeee6dea2a4f": {
-          "type": "prominent_feature",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/logos-museums.png",
-            "link_text": "",
-            "link_url": "",
-            "title": "",
-            "subtitle": "Attractions",
-            "text": "<p>Our sets are stocked at some of the biggest attractions in the UK.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "1627753525bae19605-0",
-        "1627753525bae19605-1",
-        "9061019f-6cbd-4ec2-8995-eeee6dea2a4f"
-      ],
-      "settings": {
-        "title": "Our stockists",
-        "text": "We are very proud to be associated with and stocked in an amazing range of organisations,  including 300 independent gift, concept, zero waste, and toy stores across the UK. You'll also find our sets in some wonderful museums and attractions.",
-        "grid": 3,
-        "show_signpost_link": false,
-        "link_text": "View more",
-        "link_url": ""
       }
     },
     "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b": {
@@ -273,7 +219,6 @@
     "image_with_text_wGQamL",
     "gap_UxrhnU",
     "image_with_text_D8JaUF",
-    "1627753525bae19605",
     "e6ebaaa9-3488-4fdd-9d2c-32fcc86d1f0b",
     "4b849851-8b36-45e9-9283-91fb033152d9",
     "0495fd63-7334-42f1-bfbd-8ae590f72954",
