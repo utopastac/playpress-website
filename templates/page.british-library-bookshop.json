@@ -14,8 +14,8 @@
       "settings": {
         "heading": "British Library Bookshop",
         "text": "We partnered with The British Library to develop our Bookshop playset, celebrating the world of reading.",
-        "link_text": "",
-        "link_url": "",
+        "link_text": "Buy the set",
+        "link_url": "shopify://products/book-shop-playset",
         "show_delivery_info": false
       }
     },
