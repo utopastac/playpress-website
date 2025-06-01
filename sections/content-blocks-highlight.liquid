@@ -5,7 +5,7 @@
   <div is="content-blocks-highlight">
     <div>
       {% for block in section.blocks %}
-        <article is="content-block-highlight">
+        <article is="content-block-highlight" style="background: {{ block.settings.bg_color }}">
           {% if block.settings.image != blank %}
               <img
                 src="{{ block.settings.image | img_url: '800x' }}"
@@ -20,10 +20,10 @@
           {% endif %}
           <div>
             {% if block.settings.title != blank %}
-              <h4>{{ block.settings.title | escape }}</h4>
+              <h4 style="color: {{ block.settings.text_color }}">{{ block.settings.title | escape }}</h4>
             {% endif %}
             {% if block.settings.text != blank %}
-              <p>{{ block.settings.text }}</p>
+              <p style="color: {{ block.settings.text_color }}">{{ block.settings.text }}</p>
             {% endif %}
           </div>
         </article>
@@ -67,7 +67,19 @@
           "id": "text",
           "label": "Text",
           "default": "<p>Add descriptve text</p>"
-        }
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#2D3788"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#FFFFFF"
+        },
       ]
     }
   ],
