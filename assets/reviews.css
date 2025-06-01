@@ -67,13 +67,13 @@ a[is=outline-button]:hover {
 
 @media screen and (min-width: 1080px) {
   .reviews-container {
-    height: 14rem;
+    height: 16rem;
   }
 }
 
 article[is=review] {
   width: 28rem;
-  height: 14rem;
+  height: 16rem;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
