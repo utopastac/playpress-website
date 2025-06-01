@@ -78,8 +78,15 @@ article[is=review] {
   justify-content: flex-start;
   text-align: center;
 }
+article[is=review]:hover a {
+  color: #2D3788;
+}
+article[is=review]:hover .icon {
+  background: #2D3788;
+}
 article[is=review] a {
   display: block;
+  color: #0A122A;
 }
 article[is=review] .stars {
   display: flex;
@@ -88,8 +95,8 @@ article[is=review] .stars {
   justify-content: center;
   margin-bottom: 0.4rem;
 }
-article[is=review] .stars .icon {
-  background: #2D3788;
+article[is=review] .icon {
+  background: #0A122A;
 }
 article[is=review] p {
   white-space: wrap;

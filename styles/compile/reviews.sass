@@ -12,8 +12,16 @@ article[is="review"]
   justify-content: flex-start
   text-align: center
 
+  &:hover
+    a
+      color: $blue-1000
+
+    .icon
+      background: $blue-1000
+
   a
     display: block
+    color: $grey-1200
 
   .stars
     display: flex
@@ -22,8 +30,8 @@ article[is="review"]
     justify-content: center
     margin-bottom: size(4)
 
-    .icon
-      background: $blue-1000
+  .icon
+    background: $grey-1200
 
   h4
     @extend %body-3
