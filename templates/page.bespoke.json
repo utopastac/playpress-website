@@ -58,6 +58,54 @@
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503": {
       "type": "prominent-features",
       "blocks": {
+        "prominent_feature_HNCpHx": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/bespoke-globe-theatre.jpg",
+            "link_text": "Learn more",
+            "link_url": "",
+            "title": "",
+            "subtitle": "The Globe Theatre",
+            "text": "<p>We worked with The Globe Theatre to make a set based on the iconic venue.</p>"
+          }
+        },
+        "prominent_feature_QDThmL": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/bespoke-british-library.jpg",
+            "link_text": "Learn more",
+            "link_url": "",
+            "title": "",
+            "subtitle": "British Library",
+            "text": "<p>The British Library co-designed our wonderful Bookshop playset.</p>"
+          }
+        },
+        "prominent_feature_r9cdGt": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/bespoke-welcome-trust.jpg",
+            "link_text": "Learn more",
+            "link_url": "",
+            "title": "",
+            "subtitle": "Wellcome Trust",
+            "text": "<p>Our hospital playset was made in collaboration with The Wellcome Trust.</p>"
+          }
+        },
+        "prominent_feature_PTgnaf": {
+          "type": "prominent_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/bespoke-global-sweets.jpg",
+            "link_text": "Learn more",
+            "link_url": "",
+            "title": "",
+            "subtitle": "Global Sweets",
+            "text": "<p>We created our smallest ever sets for Global Sweets surprise chocolate egg toys.</p>"
+          }
+        },
         "template--15723518918848__9b58a03a-9d23-40a1-ad93-0c601ff4b503-16697321112d756c98-0": {
           "type": "prominent_feature",
           "settings": {
@@ -108,6 +156,10 @@
         }
       },
       "block_order": [
+        "prominent_feature_HNCpHx",
+        "prominent_feature_QDThmL",
+        "prominent_feature_r9cdGt",
+        "prominent_feature_PTgnaf",
         "template--15723518918848__9b58a03a-9d23-40a1-ad93-0c601ff4b503-16697321112d756c98-0",
         "template--15723518918848__9b58a03a-9d23-40a1-ad93-0c601ff4b503-16697321112d756c98-1",
         "960a8161-6c62-4013-bd35-1bc0095737f1",
