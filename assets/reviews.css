@@ -73,6 +73,7 @@ a[is=outline-button]:hover {
 
 article[is=review] {
   width: 28rem;
+  padding: 0 1.6rem;
   height: 16rem;
   align-items: center;
   justify-content: flex-start;
