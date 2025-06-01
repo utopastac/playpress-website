@@ -83,14 +83,6 @@
             "body": "This product is so impressive, my son is so obsessed with it! And the customer service I wish I could give 10 stars! "
           }
         },
-        "review_imBmbX": {
-          "type": "review",
-          "settings": {
-            "link_url": "",
-            "name": "Add a name",
-            "body": "Add content"
-          }
-        },
         "review_K7HENg": {
           "type": "review",
           "settings": {
@@ -107,7 +99,6 @@
         "review_yACEn4",
         "review_MQh9AF",
         "review_qiHNiR",
-        "review_imBmbX",
         "review_K7HENg"
       ],
       "name": "Review",
