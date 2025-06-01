@@ -32,29 +32,6 @@
         "show_delivery_info": false
       }
     },
-    "c4cf0f2c-ba8c-4d76-8127-85095842da25": {
-      "type": "gap",
-      "settings": {
-        "size": 2
-      }
-    },
-    "16277530953a8433e6": {
-      "type": "image-with-text",
-      "settings": {
-        "title": "We love making playsets",
-        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.</p>",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify://shop_images/XL0001_Space_Station_Child_Playing_On_Floor.jpg",
-        "bg_color": "#ffffff",
-        "text_color": "#0a122a",
-        "show_signpost_link": false,
-        "use_button": false,
-        "layout": "right",
-        "show_colour": true,
-        "last_on_page": false
-      }
-    },
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503": {
       "type": "prominent-features",
       "blocks": {
@@ -64,7 +41,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/bespoke-globe-theatre.jpg",
             "link_text": "Learn more",
-            "link_url": "",
+            "link_url": "shopify://pages/the-globe-theatre",
             "title": "",
             "subtitle": "The Globe Theatre",
             "text": "<p>We worked with The Globe Theatre to make a set based on the iconic venue.</p>"
@@ -76,7 +53,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/bespoke-british-library.jpg",
             "link_text": "Learn more",
-            "link_url": "",
+            "link_url": "shopify://pages/british-library",
             "title": "",
             "subtitle": "British Library",
             "text": "<p>The British Library co-designed our wonderful Bookshop playset.</p>"
@@ -88,7 +65,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/bespoke-welcome-trust.jpg",
             "link_text": "Learn more",
-            "link_url": "",
+            "link_url": "shopify://pages/wellcome-trust",
             "title": "",
             "subtitle": "Wellcome Trust",
             "text": "<p>Our hospital playset was made in collaboration with The Wellcome Trust.</p>"
@@ -100,7 +77,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/bespoke-global-sweets.jpg",
             "link_text": "Learn more",
-            "link_url": "",
+            "link_url": "shopify://pages/global-sweets",
             "title": "",
             "subtitle": "Global Sweets",
             "text": "<p>We created our smallest ever sets for Global Sweets surprise chocolate egg toys.</p>"
@@ -172,6 +149,29 @@
         "show_signpost_link": false,
         "link_text": "",
         "link_url": ""
+      }
+    },
+    "c4cf0f2c-ba8c-4d76-8127-85095842da25": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "16277530953a8433e6": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "We love making playsets",
+        "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.</p>",
+        "link_text": "",
+        "link_url": "",
+        "image": "shopify://shop_images/XL0001_Space_Station_Child_Playing_On_Floor.jpg",
+        "bg_color": "#ffffff",
+        "text_color": "#0a122a",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "right",
+        "show_colour": true,
+        "last_on_page": false
       }
     },
     "c8c55d77-17af-4f2c-b19f-e0c8731e605b": {
