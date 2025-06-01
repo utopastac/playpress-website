@@ -32,6 +32,12 @@
         "show_delivery_info": false
       }
     },
+    "c4cf0f2c-ba8c-4d76-8127-85095842da25": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "16277530953a8433e6": {
       "type": "image-with-text",
       "settings": {
@@ -47,12 +53,6 @@
         "layout": "right",
         "show_colour": true,
         "last_on_page": false
-      }
-    },
-    "c4cf0f2c-ba8c-4d76-8127-85095842da25": {
-      "type": "gap",
-      "settings": {
-        "size": 2
       }
     },
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503": {
@@ -266,9 +266,9 @@
   "order": [
     "warning_banner_99E7wH",
     "intro",
-    "16277530953a8433e6",
-    "c4cf0f2c-ba8c-4d76-8127-85095842da25",
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503",
+    "c4cf0f2c-ba8c-4d76-8127-85095842da25",
+    "16277530953a8433e6",
     "c8c55d77-17af-4f2c-b19f-e0c8731e605b",
     "c9cf4777-b9cd-445b-940e-b2417a3d9630",
     "3b694ed6-420d-41aa-9586-6d7649cf9883",
