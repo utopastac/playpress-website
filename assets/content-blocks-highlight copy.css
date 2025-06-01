@@ -1,0 +1,137 @@
+div[is=content-blocks-highlight] > div {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.button-loading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2D3788 url(loading-b.gif) no-repeat center center;
+  background-size: 24px 24px;
+}
+
+article[is=content-block-highlight] div h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+}
+
+a[is=outline-button], article[is=content-block-highlight] div p {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+a[is=outline-button], article[is=content-block-highlight] div p {
+  font-weight: 400;
+}
+
+a[is=outline-button] {
+  font-weight: 700;
+}
+
+article[is=content-block-highlight] div h4 {
+  font-size: 2.7rem;
+  line-height: 115%;
+  letter-spacing: -0.54px;
+}
+@media screen and (min-width: 1080px) {
+  article[is=content-block-highlight] div h4 {
+    font-size: 3.4rem;
+    line-height: 115%;
+    letter-spacing: -0.68px;
+  }
+}
+
+article[is=content-block-highlight] div p {
+  font-size: 1.9rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  article[is=content-block-highlight] div p {
+    font-size: 2.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  font-size: 1.4rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=outline-button] {
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+  border: 1px solid #EBEDFA;
+}
+a[is=outline-button]:hover {
+  background: #EBEDFA;
+}
+
+article[is=content-block-highlight] {
+  background: #2D3788;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 32rem;
+}
+article[is=content-block-highlight]:nth-child(2n) {
+  flex-direction: column-reverse;
+}
+article[is=content-block-highlight] img {
+  border-radius: 0;
+}
+article[is=content-block-highlight] div {
+  padding: 2.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+article[is=content-block-highlight] div h4, article[is=content-block-highlight] div p {
+  color: white;
+}
+div[is=content-blocks-highlight] {
+  padding-bottom: 3.2rem;
+}
+div[is=content-blocks-highlight] > div {
+  grid-gap: 3.2rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+@media screen and (min-width: 550px) {
+  div[is=content-blocks-highlight] > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1080px) {
+  div[is=content-blocks-highlight] > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,70 @@
+{{ 'reviews.css' | asset_url | stylesheet_tag }}
+
+<section is="section" class="reviews-container">
+
+  <div is="reviews">
+    <div>
+      {% for block in section.blocks %}
+        <article is="review">
+          <a href="{{ block.link_url }}">
+            <div class="stars"></div>
+            <h4>{{ block.settings.name | escape }}</h4>
+            <p>{{ block.settings.body }}</p>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Add a name"
+        },
+        {
+          "type": "text",
+          "id": "body",
+          "label": "Body",
+          "default": "Add content"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+@import '../assets'
+
+.reviews-container
+  @include min($screen-l)
+    height: size(340)
+
+article[is="review"]
+
+  width: size(280)
+
+  .stars
+
+  h4
+    @extend %heading-3
+  
+  p
+    @extend %body-2
+  
+  
+
+div[is="reviews"]
+  
+  @include min($screen-l)
+    width: 100vw
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+  
+  > div
+    white-space: nowrap
+    overflow-x: scroll
+    -webkit-overflow-scrolling: touch
+    margin: -units(2) -units(2)
+    padding: units(2) units(2)
+
+    @include min($screen-l)
+      margin: -units(2) 0
+      padding: units(2) units(10)
+
+    > *
+      display: inline-block
+      max-width: 80vw
+      margin-right: units(1)
+  
