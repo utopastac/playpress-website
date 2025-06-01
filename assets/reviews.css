@@ -10,35 +10,17 @@
   background-size: 24px 24px;
 }
 
-article[is=review] h4 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], article[is=review] p {
+a[is=outline-button], article[is=review] h4, article[is=review] p {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], article[is=review] p {
+a[is=outline-button], article[is=review] h4, article[is=review] p {
   font-weight: 400;
 }
 
-a[is=outline-button] {
+article[is=review] h4, a[is=outline-button] {
   font-weight: 700;
-}
-
-article[is=review] h4 {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
-}
-@media screen and (min-width: 1080px) {
-  article[is=review] h4 {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
-  }
 }
 
 article[is=review] p {
@@ -50,6 +32,19 @@ article[is=review] p {
   article[is=review] p {
     font-size: 2.1rem;
     line-height: 140%;
+    letter-spacing: 0px;
+  }
+}
+
+article[is=review] h4 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  article[is=review] h4 {
+    font-size: 1.8rem;
+    line-height: 115%;
     letter-spacing: 0px;
   }
 }
@@ -85,12 +80,25 @@ a[is=outline-button]:hover {
 
 @media screen and (min-width: 1080px) {
   .reviews-container {
-    height: 34rem;
+    height: 14rem;
   }
 }
 
 article[is=review] {
   width: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+article[is=review] .stars {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+article[is=review] .stars .icon {
+  background: #FAB638;
 }
 @media screen and (min-width: 1080px) {
   div[is=reviews] {

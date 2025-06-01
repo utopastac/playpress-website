@@ -7,9 +7,15 @@
       {% for block in section.blocks %}
         <article is="review">
           <a href="{{ block.link_url }}">
-            <div class="stars"></div>
-            <h4>{{ block.settings.name | escape }}</h4>
+            <div class="stars">
+              <span class="icon star"></span>
+              <span class="icon star"></span>
+              <span class="icon star"></span>
+              <span class="icon star"></span>
+              <span class="icon star"></span>
+            </div>
             <p>{{ block.settings.body }}</p>
+            <h4>{{ block.settings.name | escape }}</h4>
           </a>
         </article>
       {% endfor %}
