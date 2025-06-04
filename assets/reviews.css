@@ -65,9 +65,13 @@ a[is=outline-button]:hover {
   background: #EBEDFA;
 }
 
+.reviews-container {
+  border-top: 1px solid #E7E9EF;
+  padding-top: 4rem;
+}
 @media screen and (min-width: 1080px) {
   .reviews-container {
-    height: 16rem;
+    height: 18rem;
   }
 }
 

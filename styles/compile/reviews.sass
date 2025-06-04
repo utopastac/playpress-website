@@ -1,8 +1,10 @@
 @import '../assets'
 
 .reviews-container
+  border-top: 1px solid $border-color
+  padding-top: units(5)
   @include min($screen-l)
-    height: size(160)
+    height: size(180)
 
 article[is="review"]
   width: size(280)
@@ -51,6 +53,7 @@ div[is="reviews"]
     position: absolute
     left: 50%
     transform: translateX(-50%)
+
   
   > div
     white-space: nowrap
