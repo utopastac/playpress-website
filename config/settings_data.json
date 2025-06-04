@@ -359,9 +359,7 @@
       "reviews_RccfER": {
         "type": "reviews",
         "name": "Reviews",
-        "settings": {
-          "data": "customer"
-        }
+        "settings": {}
       },
       "gap_7TjYFz": {
         "type": "gap",

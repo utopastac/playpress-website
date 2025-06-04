@@ -36,7 +36,7 @@
       "type": "reviews",
       "name": "Review",
       "settings": {
-        "data": "customer"
+        "reviews": "customer"
       }
     },
     "gap_hEAaJH": {
