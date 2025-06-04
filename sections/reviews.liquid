@@ -4,7 +4,7 @@
 
   <div is="reviews">
     <div>
-      {% for review in section.settings.reviews.data %}
+      {% for review in section.settings.reviews.data.values %}
         <article is="review">
           <a href="{{ review.url }}">
             <div class="stars">
@@ -39,7 +39,7 @@
   "name": "Reviews",
   "settings": [
     {
-      "type": "metaobject_list",
+      "type": "metaobject",
       "metaobject_type": "review_display",
       "id": "reviews",
       "label": "Metaobejct datasource"
