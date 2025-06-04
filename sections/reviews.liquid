@@ -8,7 +8,7 @@
         <article is="review">
           <a href="{{ review.url }}">
             <div class="stars">
-              {% for star in review.stars %}
+              {% for num in (1..review.stars) %}
                 <span class="icon star"></span>
               {% endfor %}
             </div>
