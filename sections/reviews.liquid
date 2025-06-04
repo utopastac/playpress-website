@@ -4,6 +4,19 @@
 
   <div is="reviews">
     <div>
+      {% for review in section.settings.reviews.data %}
+        <article is="review">
+          <a href="{{ review.url }}">
+            <div class="stars">
+              {% for num in (1..review.stars) %}
+                <span class="icon star"></span>
+              {% endfor %}
+            </div>
+            <p>{{ review.body }}</p>
+            <h4>{{ review.name | escape }}</h4>
+          </a>
+        </article>
+      {% endfor %}
       {% for review in metaobjects.review.values %}
         <article is="review">
           <a href="{{ review.url }}">
@@ -26,9 +39,9 @@
   "name": "Reviews",
   "settings": [
     {
-      "type": "metaobject",
+      "type": "metaobject_list",
       "metaobject_type": "review_display",
-      "id": "data",
+      "id": "reviews",
       "label": "Metaobejct datasource"
     }
   ],
