@@ -4,18 +4,16 @@
 
   <div is="reviews">
     <div>
-      {% for block in section.blocks %}
+      {% for review in metaobjects.review.values %}
         <article is="review">
-          <a href="{{ block.settings.link_url }}">
+          <a href="{{ review.url }}">
             <div class="stars">
-              <span class="icon star"></span>
-              <span class="icon star"></span>
-              <span class="icon star"></span>
-              <span class="icon star"></span>
-              <span class="icon star"></span>
+              {% for star in review.stars %}
+                <span class="icon star"></span>
+              {% endfor %}
             </div>
-            <p>{{ block.settings.body }}</p>
-            <h4>{{ block.settings.name | escape }}</h4>
+            <p>{{ review.body }}</p>
+            <h4>{{ review.name | escape }}</h4>
           </a>
         </article>
       {% endfor %}
@@ -27,49 +25,16 @@
 {
   "name": "Reviews",
   "settings": [
-  ],
-  "blocks": [
     {
-      "type": "review",
-      "name": "Review",
-      "settings": [
-        {
-          "type": "url",
-          "id": "link_url",
-          "label": "Link URL"
-        },
-        {
-          "type": "text",
-          "id": "name",
-          "label": "Name",
-          "default": "Add a name"
-        },
-        {
-          "type": "text",
-          "id": "body",
-          "label": "Body",
-          "default": "Add content"
-        },
-      ]
+      "type": "metaobject",
+      "metaobject_type": "",
+      "id": "data",
+      "label": "Metaobejct datasource"
     }
   ],
   "presets": [
     {
       "name": "Review",
-      "blocks": [
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        }
-      ]
     }
   ]
 }
