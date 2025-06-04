@@ -360,7 +360,7 @@
         "type": "reviews",
         "name": "Reviews",
         "settings": {
-          "data": ""
+          "data": "customer"
         }
       },
       "gap_7TjYFz": {
