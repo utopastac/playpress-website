@@ -1,22 +1,11 @@
 {{ 'reviews.css' | asset_url | stylesheet_tag }}
 
+
+
 <section is="section" class="reviews-container">
 
   <div is="reviews">
     <div>
-      {% for review in section.settings.reviews.data.values %}
-        <article is="review">
-          <a href="{{ review.url }}">
-            <div class="stars">
-              {% for num in (1..review.stars) %}
-                <span class="icon star"></span>
-              {% endfor %}
-            </div>
-            <p>{{ review.body }}</p>
-            <h4>{{ review.name | escape }}</h4>
-          </a>
-        </article>
-      {% endfor %}
       {% for review in metaobjects.review.values %}
         <article is="review">
           <a href="{{ review.url }}">
@@ -37,14 +26,6 @@
 {% schema %}
 {
   "name": "Reviews",
-  "settings": [
-    {
-      "type": "metaobject",
-      "metaobject_type": "review_display",
-      "id": "reviews",
-      "label": "Metaobejct datasource"
-    }
-  ],
   "presets": [
     {
       "name": "Reviews",
