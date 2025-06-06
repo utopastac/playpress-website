@@ -177,7 +177,7 @@ $bigUnits: 40
 
     @include min($screen-m)
       grid-gap: units(2)
-      repeat(auto-fit, minmax(25rem, 1fr))
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
 
     @include min($screen-l)
       grid-gap: units(2)

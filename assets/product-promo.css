@@ -155,7 +155,7 @@ a[is=outline-button]:hover {
   position: relative;
 }
 [is=product-promo] img {
-  border-radius: 1.6rem;
+  border-radius: 0.8rem;
 }
 [is=product-promo] img.image-1 {
   display: block;
