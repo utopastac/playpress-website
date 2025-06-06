@@ -356,17 +356,17 @@
           "show_banner": true
         }
       },
-      "reviews_RccfER": {
-        "type": "reviews",
-        "name": "Reviews",
-        "settings": {}
-      },
       "gap_7TjYFz": {
         "type": "gap",
         "name": "Gap",
         "settings": {
           "size": 1
         }
+      },
+      "reviews_customers_LyVWny": {
+        "type": "reviews-customers",
+        "name": "Reviews Customers",
+        "settings": {}
       }
     },
     "content_for_index": [
@@ -377,7 +377,7 @@
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
       "1623767875c4b2fbf3",
       "gap_7TjYFz",
-      "reviews_RccfER",
+      "reviews_customers_LyVWny",
       "3da560ad-006d-4360-a1f1-5d809bde06ad",
       "hero_GPmdV6",
       "hero_HBCyiY",
