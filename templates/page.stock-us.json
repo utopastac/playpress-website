@@ -35,6 +35,7 @@
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "Catalogue & samples",
         "text": "<p>We will send you a digital catalogue and an order form that typically enables us to fulfil your order in a couple of days or earlier. If you would like to receive a sample of our playsets before you order, we will try to send it out on the same day of your request.</p>",
         "link_text": "Get a catalogue",
@@ -52,20 +53,33 @@
     "cc86f8de-41de-44d5-ab26-346498cbae74": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
+      }
+    },
+    "reviews_stockist_ynffyC": {
+      "type": "reviews-stockist",
+      "name": "Reviews Stockist",
+      "settings": {}
+    },
+    "gap_UDNJCt": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
       }
     },
     "image_with_text_wGQamL": {
       "type": "image-with-text",
       "name": "Image with text",
       "settings": {
+        "overline": "",
         "title": "Museums and galleries",
         "text": "<p>We have partnered with museum and galleries around the UK and our products are extremely popular in giftshops.</p>",
         "link_text": "",
         "link_url": "",
         "image": "shopify://shop_images/Museums.jpg",
         "bg_color": "#ffffff",
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "left",
@@ -84,13 +98,14 @@
       "type": "image-with-text",
       "name": "Image with text",
       "settings": {
+        "overline": "",
         "title": "Attractions",
         "text": "<p>Our sets are stocked at some of the biggest attractions in the UK.</p>",
         "link_text": "",
         "link_url": "",
         "image": "shopify://shop_images/Attractions.jpg",
         "bg_color": "#ffffff",
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "right",
@@ -109,13 +124,14 @@
       "type": "image-with-text",
       "name": "Image with text",
       "settings": {
+        "overline": "",
         "title": "Shops",
         "text": "<p>Playpress sells really well in small, local, independent stores. Contact us to find out if there are local stockists near you.</p>",
         "link_text": "",
         "link_url": "",
         "image": "shopify://shop_images/Shops.jpg",
         "bg_color": "#ffffff",
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
         "layout": "left",
@@ -194,6 +210,7 @@
     "95907736-68fc-42a5-8391-983bf894a869": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "We'd love to be stocked by you!",
         "text": "<p>We love working with shops from small boutiques to large chains. If you have any questions, want a sample set, or just want to chat, please get in touch!</p>",
         "link_text": "Email us",
@@ -214,6 +231,8 @@
     "intro",
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
+    "reviews_stockist_ynffyC",
+    "gap_UDNJCt",
     "image_with_text_wGQamL",
     "gap_UxrhnU",
     "image_with_text_D8JaUF",
