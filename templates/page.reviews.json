@@ -23,13 +23,14 @@
       "type": "image-with-text",
       "name": "Image with text",
       "settings": {
+        "overline": "November 2024",
         "title": "Beau’s Review of Playpress",
         "text": "<p>\"Here’s the best thing about Playpress Toys – they don’t feel wasteful. All the materials are recyclable & sustainable...so I don’t feel guilty when Beau wants to add “just one more” set to his collection. They’re sturdy and beautifully made.\"<br/><br/>\"If you’re a family that loves interactive toys like this or just want an excuse to avoid screens, Playpress Toys are a great shout. Expect hours of storytelling, imaginative play, and the satisfaction of knowing these toys are doing good for charities and the planet.\"</p>",
         "link_text": "Read review",
         "link_url": "https://www.realparent.co.uk/review-of-playpress/",
         "image": "shopify://shop_images/image_78.jpg",
         "bg_color": "#ffffff",
-        "text_color": "#0A122A",
+        "text_color": "#0a122a",
         "show_signpost_link": true,
         "use_button": true,
         "layout": "left",
@@ -49,9 +50,9 @@
       "settings": {
         "title": "",
         "text": "",
-        "text_color": "#FFFFFF",
-        "bg_color_1": "#FAB638",
-        "bg_color_2": "#2D3788",
+        "text_color": "#ffffff",
+        "bg_color_1": "#fab638",
+        "bg_color_2": "#2d3788",
         "collection": "new-sets"
       }
     },
