@@ -3,11 +3,11 @@
 
 
 <section is="section" class="reviews-container">
-  <h5>Customer reviews</h5>
+  <h5>Stockist reviews</h5>
 
   <div is="reviews">
     <div>
-      {% for review in metaobjects.review.values %}
+      {% for review in metaobjects.review-shops.values %}
         <article is="review">
           <a href="{{ review.url }}">
             <div class="stars">

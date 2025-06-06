@@ -101,6 +101,7 @@ a[is=outline-button]:hover {
 .reviews-container h5 {
   position: absolute;
   background: white;
+  padding: 0 0.8rem;
   left: 50%;
   transform: translateX(-50%);
   height: 2rem;
