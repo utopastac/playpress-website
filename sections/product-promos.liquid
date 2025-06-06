@@ -21,27 +21,11 @@
   {% endif %}
 
   {% assign products = collection.products %}
-  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-
-  {% case sort_by %}
-    {% when 'created-descending' %}
-      {% assign products = products | sort: 'created_at' | reverse %}
-    {% when 'created-ascending' %}
-      {% assign products = products | sort: 'created_at' %}
-    {% when 'price-ascending' %}
-      {% assign products = products | sort: 'price' %}
-    {% when 'price-descending' %}
-      {% assign products = products | sort: 'price' | reverse %}
-    {% when 'title-ascending' %}
-      {% assign products = products | sort: 'title' %}
-    {% when 'title-descending' %}
-      {% assign products = products | sort: 'title' | reverse %}
-  {% endcase %}
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-  <div is="product-promos">
-    <div>
+  <div is="product-promos" class="product-promos-container">
+    <div class="product-grid">
       {% for product in products limit: product_limit %}
         {%- if product.available -%}
           {% render 'product-promo', product: product %}
@@ -67,24 +51,101 @@
     background-color: white;
     cursor: pointer;
   }
+
+  .product-promos-container {
+    position: relative;
+  }
+
+  .product-promos-container.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .product-promos-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const sortSelect = document.getElementById('sort-by');
     
-    // Set initial value based on current sort
-    const currentSort = '{{ sort_by }}';
-    if (currentSort) {
-      sortSelect.value = currentSort;
+    if (!sortSelect) {
+      return;
     }
+
+    const productPromos = document.querySelector('.product-promos-container');
+    const productGrid = productPromos.querySelector('.product-grid');
+    
+    if (!productPromos || !productGrid) {
+      return;
+    }
+    
+    // Store all products in memory
+    const products = Array.from(productGrid.children).map(product => ({
+      element: product,
+      title: product.querySelector('.product-title')?.textContent?.toLowerCase() || '',
+      price: parseFloat(product.querySelector('.product-price')?.dataset.price || '0'),
+      date: new Date(product.dataset.date || '1970-01-01')
+    }));
 
     // Handle sort change
     sortSelect.addEventListener('change', function() {
-      const url = new URL(window.location.href);
-      url.searchParams.set('sort_by', this.value);
-      window.location.href = url.toString();
+      const sortBy = this.value;
+      
+      // Add loading state
+      productPromos.classList.add('loading');
+      
+      // Sort products based on selection
+      const sortedProducts = [...products].sort((a, b) => {
+        switch(sortBy) {
+          case 'title-ascending':
+            return a.title.localeCompare(b.title);
+          case 'title-descending':
+            return b.title.localeCompare(a.title);
+          case 'price-ascending':
+            return a.price - b.price;
+          case 'price-descending':
+            return b.price - a.price;
+          case 'created-descending':
+            return b.date - a.date;
+          case 'created-ascending':
+            return a.date - b.date;
+          default:
+            return 0;
+        }
+      });
+
+      // Clear the grid
+      productGrid.innerHTML = '';
+      
+      // Add sorted products back to the grid
+      sortedProducts.forEach(product => {
+        productGrid.appendChild(product.element);
+      });
+
+      // Remove loading state
+      productPromos.classList.remove('loading');
     });
+
+    // Set initial sort to newest and trigger the change event
+    sortSelect.value = 'created-descending';
+    sortSelect.dispatchEvent(new Event('change'));
   });
 </script>
 

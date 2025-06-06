@@ -1,6 +1,6 @@
 {{ 'product-promo.css' | asset_url | stylesheet_tag }}
 
-<div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}">
+<div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}" data-date="{{ product.created_at | date: '%Y-%m-%d' }}">
   <a href="{{ product.url }}" >
     <div class="image">
       <img
@@ -23,8 +23,8 @@
       {% endfor %}
     </div>
     <div class="content">
-      <h3>{{ product.title }}</h3>
-      <p>{{ product.price | money }}</p>
+      <h3 class="product-title">{{ product.title }}</h3>
+      <p class="product-price" data-price="{{ product.price | money_without_currency | remove: ',' }}">{{ product.price | money }}</p>
     </div>
   </a>
 
