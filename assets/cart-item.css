@@ -64,7 +64,7 @@ a[is=outline-button]:hover {
   margin: 0.8rem 0.8rem 0.8rem 0;
 }
 .cart-item .image img {
-  border-radius: 1.6rem;
+  border-radius: 0.8rem;
 }
 .cart-item .info {
   flex: 1;
