@@ -1,0 +1,36 @@
+{{ 'reviews.css' | asset_url | stylesheet_tag }}
+
+
+
+<section is="section" class="reviews-container">
+  <h5>Stockist reviews</h5>
+
+  <div is="reviews">
+    <div>
+      {% for review in metaobjects.review.values %}
+        <article is="review">
+          <a href="{{ review.url }}">
+            <div class="stars">
+              {% for num in (1..review.stars) %}
+                <span class="icon star"></span>
+              {% endfor %}
+            </div>
+            <p>{{ review.body }}</p>
+            <h4>{{ review.name | escape }}</h4>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "presets": [
+    {
+      "name": "Reviews",
+    }
+  ]
+}
+{% endschema %}
