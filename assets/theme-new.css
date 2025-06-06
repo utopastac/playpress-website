@@ -27,7 +27,8 @@
   src: url(sofia-pro-bold-italic.woff2) format("woff2");
 }
 div[is=product-promos] > div {
-  grid-gap: 1.6rem;
+  grid-gap: 0.8rem;
+  row-gap: 1.6rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
@@ -38,7 +39,7 @@ div[is=product-promos] > div {
 }
 @media screen and (min-width: 770px) {
   div[is=product-promos] > div {
-    grid-gap: 1.6rem;
+    grid-gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
@@ -458,7 +459,8 @@ a:visited:focus-visible {
 }
 
 div[is=product-promos] > div {
-  grid-gap: 1.6rem;
+  grid-gap: 0.8rem;
+  row-gap: 1.6rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
@@ -469,7 +471,7 @@ div[is=product-promos] > div {
 }
 @media screen and (min-width: 770px) {
   div[is=product-promos] > div {
-    grid-gap: 1.6rem;
+    grid-gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
