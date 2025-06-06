@@ -38,6 +38,25 @@
         "last_on_page": false
       }
     },
+    "image_with_text_KEcEkm": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "overline": "November 2024",
+        "title": "Beau’s Review of Playpress",
+        "text": "<p>\"If you’re searching for a compact, eco-friendly toy that sparks creativity while being easy to store and travel with, the Playpress Mini Building Sets are the perfect solution.\"<br/><br/>\"In a world flooded with mass-produced, plastic-heavy toys, Playpress Mini Building Sets provide an eco-friendly, fun, and imaginative alternative. These sets solve the problems of portability, easy storage, and durability, all while encouraging creative, open-ended play.\"</p>",
+        "link_text": "Read review",
+        "link_url": "https://magickidslearning.com/comprehensive-review-of-playpress-mini-building-sets-museum-and-cafe/",
+        "image": "shopify://shop_images/museum.jpg",
+        "bg_color": "#ffffff",
+        "text_color": "#0a122a",
+        "show_signpost_link": true,
+        "use_button": true,
+        "layout": "right",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e": {
       "type": "gap",
       "settings": {
@@ -79,6 +98,7 @@
   "order": [
     "intro",
     "image_with_text_Rkm9Yz",
+    "image_with_text_KEcEkm",
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e",
     "product_carousel_k9HkWz",
     "gap_Fd79wJ",
