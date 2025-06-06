@@ -107,6 +107,7 @@ a[is=outline-button]:hover {
   transform: translateX(-50%);
   height: 2rem;
   top: -1rem;
+  display: none;
 }
 
 article[is=review] {
