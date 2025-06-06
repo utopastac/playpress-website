@@ -16,6 +16,9 @@
     {% endif %}
 
     <div style="color: {{ section.settings.text_color }} !important">
+      {% if section.settings.overline != blank %}
+        <h5 style="color: {{ section.settings.text_color }} !important">{{ section.settings.overline | escape }}</h5>
+      {% endif %}
       {% if section.settings.title != blank %}
         <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.title | escape }}</h3>
       {% endif %}
@@ -31,6 +34,12 @@
 {
   "name": "Image with text",
   "settings": [
+    {
+      "type": "text",
+      "id": "overline",
+      "label": "Overline",
+      "default": ""
+    },
     {
       "type": "text",
       "id": "title",
