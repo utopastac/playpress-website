@@ -15,7 +15,7 @@ section[is=image-with-text] > div {
   background-size: 24px 24px;
 }
 
-section[is=image-with-text] h3, section[is=image-with-text] h3 {
+section[is=image-with-text] h5, section[is=image-with-text] h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
@@ -33,7 +33,7 @@ a[is=outline-button] {
   font-weight: 700;
 }
 
-section[is=image-with-text] h3 {
+section[is=image-with-text] h5 {
   font-weight: 900;
 }
 
@@ -50,14 +50,14 @@ section[is=image-with-text] h3 {
   }
 }
 
-section[is=image-with-text] h3 {
+section[is=image-with-text] h5 {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1080px) {
-  section[is=image-with-text] h3 {
+  section[is=image-with-text] h5 {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 1.5px;
