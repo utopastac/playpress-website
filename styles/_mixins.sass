@@ -169,7 +169,7 @@ $bigUnits: 40
   > div
     @extend %main-content
     grid-gap: units(1)
-    row-gap: units(2)
+    row-gap: units(1.5)
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(size(150), 1fr))
 
@@ -178,6 +178,7 @@ $bigUnits: 40
 
     @include min($screen-m)
       grid-gap: units(1.5)
+      row-gap: units(2)
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
 
     @include min($screen-l)

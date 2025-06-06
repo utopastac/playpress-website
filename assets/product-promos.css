@@ -1,6 +1,6 @@
 div[is=product-promos] > div {
   grid-gap: 0.8rem;
-  row-gap: 1.6rem;
+  row-gap: 1.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
@@ -12,6 +12,7 @@ div[is=product-promos] > div {
 @media screen and (min-width: 770px) {
   div[is=product-promos] > div {
     grid-gap: 1.2rem;
+    row-gap: 1.6rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
