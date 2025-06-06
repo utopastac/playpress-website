@@ -38,6 +38,13 @@
         "last_on_page": false
       }
     },
+    "gap_mcAyer": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "image_with_text_KEcEkm": {
       "type": "image-with-text",
       "name": "Image with text",
@@ -98,6 +105,7 @@
   "order": [
     "intro",
     "image_with_text_Rkm9Yz",
+    "gap_mcAyer",
     "image_with_text_KEcEkm",
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e",
     "product_carousel_k9HkWz",
