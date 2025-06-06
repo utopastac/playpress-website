@@ -30,8 +30,8 @@
         "image": "shopify://shop_images/image_78.jpg",
         "bg_color": "#ffffff",
         "text_color": "#0A122A",
-        "show_signpost_link": false,
-        "use_button": false,
+        "show_signpost_link": true,
+        "use_button": true,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
