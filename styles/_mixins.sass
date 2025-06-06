@@ -177,16 +177,13 @@ $bigUnits: 40
 
     @include min($screen-m)
       grid-gap: units(2)
-      grid-template-columns: repeat(3, 1fr)
+      repeat(auto-fit, minmax(25rem, 1fr))
 
     @include min($screen-l)
       grid-gap: units(2)
-      grid-template-columns: repeat(4, 1fr)
     
     @include min($screen-xl)
-      grid-gap: units(2)
-      grid-template-columns: repeat(5, 1fr)
-      // grid-template-columns: repeat(auto-fit, minmax(size(240), 1fr))
+      grid-gap: units(2)=
 
 %block-link
   display: block
@@ -201,7 +198,7 @@ $bigUnits: 40
   box-shadow: 0px 1px 4px rgba($grey-1200, 0.12), 0px 8px 24px rgba($grey-1200, 0.18)
 //
 %main-content
-  max-width: size(1400)
+  max-width: size(1520)
   margin: 0 auto
   // margin: 0 units(4)
 

@@ -6,7 +6,7 @@ div[is=product] > div #description .text ul li {
 }
 
 div[is=product] > div {
-  max-width: 140rem;
+  max-width: 152rem;
   margin: 0 auto;
 }
 

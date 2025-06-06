@@ -23,12 +23,12 @@ div[is=product-promos] > div {
 @media screen and (min-width: 1200px) {
   div[is=product-promos] > div {
     grid-gap: 1.6rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 
 div[is=product-promos] > div {
-  max-width: 140rem;
+  max-width: 152rem;
   margin: 0 auto;
 }
 
