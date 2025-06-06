@@ -19,6 +19,23 @@
         "show_delivery_info": false
       }
     },
+    "image_with_text_Rkm9Yz": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "link_text": "",
+        "link_url": "",
+        "bg_color": "#ffffff",
+        "text_color": "#0A122A",
+        "show_signpost_link": false,
+        "use_button": false,
+        "layout": "left",
+        "show_colour": false,
+        "last_on_page": false
+      }
+    },
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e": {
       "type": "gap",
       "settings": {
@@ -35,23 +52,6 @@
         "bg_color_1": "#FAB638",
         "bg_color_2": "#2D3788",
         "collection": "new-sets"
-      }
-    },
-    "image_with_text_Rkm9Yz": {
-      "type": "image-with-text",
-      "name": "Image with text",
-      "settings": {
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-        "link_text": "",
-        "link_url": "",
-        "bg_color": "#EBEDFA",
-        "text_color": "#0A122A",
-        "show_signpost_link": false,
-        "use_button": false,
-        "layout": "left",
-        "show_colour": false,
-        "last_on_page": false
       }
     }
   },
