@@ -205,6 +205,9 @@ div[is=page] {
   margin: 3.2rem auto 9.6rem auto;
   max-width: 70rem;
 }
+div[is=page] table {
+  border-top: 1px solid #E7E9EF;
+}
 div[is=page] img {
   border: 1px solid #E7E9EF;
   margin: 4rem -2.4rem;
