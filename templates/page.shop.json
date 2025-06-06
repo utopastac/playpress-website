@@ -132,6 +132,7 @@
         "grid": 4,
         "rows": 20,
         "show_signpost_link": false,
+        "show_sorting_options": true,
         "link_text": "View all",
         "link_url": ""
       }
