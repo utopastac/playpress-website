@@ -7,36 +7,86 @@
 
   {%- assign collection = collections[section.settings.collection] -%}
 
-  {% comment %} <select id="sort-by">
-    {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}>
-    {% for option in collection.sort_options %}
-      {% unless option.value contains 'title-ascending' or option.value contains 'title-descending' %}
-        <option value="{{ option.value }}"{% if sort_by == option.value %} selected="selected"{% endif %}>{{ option.name }}</option>
-      {% endunless %}
-    {% endfor %}
-  </select>
-
-  <h1>LOL {{ sort_by }} </h1>
-
-  {% assign products = collection.products | sort: 'created-ascending' %}  {% endcomment %}
+  {% if section.settings.show_sorting_options %}
+    <div class="product-sorting">
+      <select id="sort-by" class="sort-by-select">
+        <option value="created-descending">Newest</option>
+        <option value="created-ascending">Oldest</option>
+        <option value="price-ascending">Price: Low to High</option>
+        <option value="price-descending">Price: High to Low</option>
+        <option value="title-ascending">Alphabetical: A-Z</option>
+        <option value="title-descending">Alphabetical: Z-A</option>
+      </select>
+    </div>
+  {% endif %}
 
   {% assign products = collection.products %}
+  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+  {% case sort_by %}
+    {% when 'created-descending' %}
+      {% assign products = products | sort: 'created_at' | reverse %}
+    {% when 'created-ascending' %}
+      {% assign products = products | sort: 'created_at' %}
+    {% when 'price-ascending' %}
+      {% assign products = products | sort: 'price' %}
+    {% when 'price-descending' %}
+      {% assign products = products | sort: 'price' | reverse %}
+    {% when 'title-ascending' %}
+      {% assign products = products | sort: 'title' %}
+    {% when 'title-descending' %}
+      {% assign products = products | sort: 'title' | reverse %}
+  {% endcase %}
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-    <div is="product-promos">
-      <div>
-        {% for product in products limit: product_limit %}
-          {%- if product.available -%}
-            {% render 'product-promo', product: product %}
-          {%- endif -%}
-        {% endfor %}
-      </div>
+  <div is="product-promos">
+    <div>
+      {% for product in products limit: product_limit %}
+        {%- if product.available -%}
+          {% render 'product-promo', product: product %}
+        {%- endif -%}
+      {% endfor %}
     </div>
+  </div>
 
   {% render 'signpost', section: section, button: true, center: true %}
 
 </section>
+
+<style>
+  .product-sorting {
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+  
+  .sort-by-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sortSelect = document.getElementById('sort-by');
+    
+    // Set initial value based on current sort
+    const currentSort = '{{ sort_by }}';
+    if (currentSort) {
+      sortSelect.value = currentSort;
+    }
+
+    // Handle sort change
+    sortSelect.addEventListener('change', function() {
+      const url = new URL(window.location.href);
+      url.searchParams.set('sort_by', this.value);
+      window.location.href = url.toString();
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -81,6 +131,12 @@
       "type": "checkbox",
       "id": "show_signpost_link",
       "label": "Show 'View all' link",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sorting_options",
+      "label": "Show Sort options",
       "default": false
     },
     {
