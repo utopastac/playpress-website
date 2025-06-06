@@ -203,7 +203,7 @@ a[is=outline-button]:hover {
 
 div[is=page] {
   margin: 3.2rem auto 9.6rem auto;
-  max-width: 60rem;
+  max-width: 70rem;
 }
 div[is=page] img {
   border: 1px solid #E7E9EF;
