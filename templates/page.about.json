@@ -32,12 +32,10 @@
         "show_delivery_info": false
       }
     },
-    "reviews_TyJBED": {
-      "type": "reviews",
-      "name": "Review",
-      "settings": {
-        "reviews": "customer"
-      }
+    "reviews_customers_ehXPbX": {
+      "type": "reviews-customers",
+      "name": "Reviews Customers",
+      "settings": {}
     },
     "gap_hEAaJH": {
       "type": "gap",
@@ -138,6 +136,7 @@
     "1627851513e6e2c0af": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "Press out, build up and play on!",
         "text": "<p>Playpress is about exploring new possibilities. We take care to make our toys inclusive. They’re designed to let children play creatively while helping them develop key motor and cognitive reasoning skills. Cool!</p>",
         "link_text": "",
@@ -204,7 +203,7 @@
   "order": [
     "warning_banner_axGcqR",
     "intro",
-    "reviews_TyJBED",
+    "reviews_customers_ehXPbX",
     "gap_hEAaJH",
     "69daff38-49c3-40ba-87fd-5594871992a9",
     "a019a4ef-cd2a-4696-9eb2-f8dba2ee0754",
