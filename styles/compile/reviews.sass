@@ -2,11 +2,11 @@
 
 .reviews-container
   position: relative
-  border-top: 1px solid $border-color
-  padding-top: units(5)
-  margin-top: units(2)
+  //border-top: 1px solid $border-color
+  padding-top: size(32)
+  //margin-top: units(2)
   @include min($screen-l)
-    height: size(180)
+    height: size(200)
 
   h5
     position: absolute
@@ -20,12 +20,12 @@
     display: none
 
 article[is="review"]
-  width: size(280)
-  padding: 0 units(2)
-  height: size(160)
-  align-items: center
-  justify-content: flex-start
-  text-align: center
+  width: size(320)
+  max-width: 80vw
+  padding: units(2)
+  height: size(172)
+  background: $grey-100
+  border-radius: $border-xs
 
   &:hover
     a
@@ -35,22 +35,31 @@ article[is="review"]
       background: $blue-1000
 
   a
-    display: block
+    display: flex
+    flex-direction: column
+    align-items: space-between
     color: $grey-1200
+    height: 100%
+
+    > div
+      flex: 1
 
   .stars
     display: flex
     flex: 1
     align-items: center
-    justify-content: center
     margin-bottom: size(4)
 
   .icon
     background: $grey-1200
+    width: size(20)
+    height: size(20)
+    margin-right: -size(2)
 
   h4
     @extend %body-3
     @extend %bold
+    margin-top: size(4)
   
   p
     @extend %body-3

@@ -10,12 +10,14 @@
       {% for review in metaobjects.review.values %}
         <article is="review">
           <a href="{{ review.url }}">
-            <div class="stars">
-              {% for num in (1..review.stars) %}
-                <span class="icon star"></span>
-              {% endfor %}
+            <div>
+              <div class="stars">
+                {% for num in (1..review.stars) %}
+                  <span class="icon star"></span>
+                {% endfor %}
+              </div>
+              <p>{{ review.body }}</p>
             </div>
-            <p>{{ review.body }}</p>
             <h4>{{ review.name | escape }}</h4>
           </a>
         </article>

@@ -90,13 +90,11 @@ a[is=outline-button]:hover {
 
 .reviews-container {
   position: relative;
-  border-top: 1px solid #E7E9EF;
-  padding-top: 4rem;
-  margin-top: 1.6rem;
+  padding-top: 3.2rem;
 }
 @media screen and (min-width: 1080px) {
   .reviews-container {
-    height: 18rem;
+    height: 20rem;
   }
 }
 .reviews-container h5 {
@@ -111,12 +109,12 @@ a[is=outline-button]:hover {
 }
 
 article[is=review] {
-  width: 28rem;
-  padding: 0 1.6rem;
-  height: 16rem;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
+  width: 32rem;
+  max-width: 80vw;
+  padding: 1.6rem;
+  height: 17.2rem;
+  background: #F3F3F7;
+  border-radius: 0.8rem;
 }
 article[is=review]:hover a {
   color: #2D3788;
@@ -125,18 +123,29 @@ article[is=review]:hover .icon {
   background: #2D3788;
 }
 article[is=review] a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   color: #0A122A;
+  height: 100%;
+}
+article[is=review] a > div {
+  flex: 1;
 }
 article[is=review] .stars {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
   margin-bottom: 0.4rem;
 }
 article[is=review] .icon {
   background: #0A122A;
+  width: 2rem;
+  height: 2rem;
+  margin-right: -0.2rem;
+}
+article[is=review] h4 {
+  margin-top: 0.4rem;
 }
 article[is=review] p {
   white-space: wrap;
