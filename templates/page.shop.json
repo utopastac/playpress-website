@@ -27,22 +27,6 @@
         "size": 1
       }
     },
-    "7504f886-e145-4c65-bce0-03930b2ca39a": {
-      "type": "hero",
-      "settings": {
-        "heading": "Mini sets, Maxi fun!",
-        "subtitle": "⭐️ Playpress Minis ⭐️",
-        "text": "",
-        "link_text": "Check them out",
-        "link_url": "shopify://pages/playpress-minis",
-        "image": "shopify://shop_images/mini-sets.jpg",
-        "bg_color": "#9bedf2",
-        "is_text_color": false,
-        "text_color": "#0a122a",
-        "is_large": false,
-        "is_dark": false
-      }
-    },
     "f27d7e12-cdbe-4b45-a78e-84d87711e431": {
       "type": "collections",
       "blocks": {
@@ -120,7 +104,7 @@
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
       }
     },
     "a12f4da8-1300-4739-888c-f63a371dfdb5": {
@@ -140,7 +124,23 @@
     "265795d3-24f1-4483-9b2c-442aa5f6ffbc": {
       "type": "gap",
       "settings": {
-        "size": 2
+        "size": 1
+      }
+    },
+    "7504f886-e145-4c65-bce0-03930b2ca39a": {
+      "type": "hero",
+      "settings": {
+        "heading": "Mini sets, Maxi fun!",
+        "subtitle": "⭐️ Playpress Minis ⭐️",
+        "text": "",
+        "link_text": "Check them out",
+        "link_url": "shopify://pages/playpress-minis",
+        "image": "shopify://shop_images/mini-sets.jpg",
+        "bg_color": "#9bedf2",
+        "is_text_color": false,
+        "text_color": "#0a122a",
+        "is_large": false,
+        "is_dark": false
       }
     },
     "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842": {
@@ -186,11 +186,11 @@
   "order": [
     "product_carousel_hNeEET",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
-    "7504f886-e145-4c65-bce0-03930b2ca39a",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
     "2b832ae5-50d4-4ffe-bf15-0f4e85bf0691",
     "a12f4da8-1300-4739-888c-f63a371dfdb5",
     "265795d3-24f1-4483-9b2c-442aa5f6ffbc",
+    "7504f886-e145-4c65-bce0-03930b2ca39a",
     "ab76a4f6-0a2f-49f0-9a8d-281a4ef03842",
     "23ad1d65-3e83-4fd5-ad9f-e8aba8def8f8",
     "3763d930-8449-428e-8345-451975526916"
