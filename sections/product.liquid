@@ -95,7 +95,7 @@
             {% for review in metaobjects.review.values %}
               {%- if product == review.product.value -%}
                 <article class="review">
-                  <a href="{{ review.url }}">
+                  <a href="{{ review.url }}" target="_blank">
                     <div>
                       <div class="stars">
                         {% for num in (1..review.stars) %}
