@@ -4,10 +4,11 @@ div[is="product-promos"]
   @extend %product-list
 
 .product-sorting
-  margin-bottom: 2rem
   text-align: right
+  position: relative
 
 .sort-by-select
+  margin-bottom: 2rem
   width: size(200)
   height: size(48)
   padding: 0 units(1.5)
@@ -15,3 +16,8 @@ div[is="product-promos"]
   border-radius: $border-xs
   background-color: white
   cursor: pointer
+
+  @include min($screen-m)
+    position: absolute
+    top: -size(72)
+    right: 0
