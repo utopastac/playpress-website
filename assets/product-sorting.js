@@ -13,11 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Store all products in memory
-  const products = Array.from(productGrid.children).map(product => ({
+  const products = Array.from(productGrid.children).map((product, index) => ({
     element: product,
     title: product.querySelector('.product-title')?.textContent?.toLowerCase() || '',
     price: parseFloat(product.querySelector('.product-price')?.dataset.price || '0'),
-    date: new Date(product.dataset.date || '1970-01-01')
+    date: new Date(product.dataset.date || '1970-01-01'),
+    originalIndex: index
   }));
 
   // Handle sort change
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sort products based on selection
     const sortedProducts = [...products].sort((a, b) => {
       switch(sortBy) {
+        case 'featured':
+          return a.originalIndex - b.originalIndex;
         case 'title-ascending':
           return a.title.localeCompare(b.title);
         case 'title-descending':
@@ -60,6 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Set initial sort to newest and trigger the change event
-  sortSelect.value = 'created-descending';
+  sortSelect.value = 'featured';
   sortSelect.dispatchEvent(new Event('change'));
 });
