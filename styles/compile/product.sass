@@ -85,6 +85,51 @@ div[is="product"]
 
     div[is=delivery]
       border-radius: 0 0 size(12) size(12)
+
+    .reviews
+      display: flex
+      padding: units(2)
+      border-left: 1px solid $blue-100
+      border-right: 1px solid $blue-100
+
+      .review
+        justify-content: flex-start
+
+        &:hover
+          a
+            color: $blue-1000
+
+          .icon
+            background: $blue-1000
+
+        a
+          display: block
+          color: $grey-1200
+
+          > div
+            display: flex
+            width: 100%
+            align-items: center
+            justify-content: space-between
+            margin-bottom: size(4)
+
+        .stars
+          display: flex
+          align-items: center
+
+        .icon
+          width: units(2)
+          height: units(2)
+          background: $grey-1200
+
+        h4
+          @extend %body-3
+          @extend %bold
+        
+        p
+          @extend %body-3
+          white-space: wrap
+          margin-bottom: size(4)
     
     .meta
       display: flex
