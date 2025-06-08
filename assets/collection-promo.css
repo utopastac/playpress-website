@@ -10,12 +10,12 @@
   background-size: 24px 24px;
 }
 
-.collection-promo p, .collection-promo h3, a[is=outline-button] {
+.collection-promo p, a[is=outline-button], .collection-promo h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-.collection-promo p, .collection-promo h3, a[is=outline-button] {
+.collection-promo p, a[is=outline-button], .collection-promo h3 {
   font-weight: 400;
 }
 
@@ -27,13 +27,26 @@ a[is=outline-button] {
   font-weight: 700;
 }
 
-.collection-promo p, .collection-promo h3, a[is=outline-button] {
+.collection-promo h3 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  .collection-promo h3 {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+.collection-promo p, a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  .collection-promo p, .collection-promo h3, a[is=outline-button] {
+  .collection-promo p, a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -92,8 +105,5 @@ a[is=outline-button]:hover {
   }
   .collection-promo > div {
     padding: 1.2rem 2rem;
-  }
-  .collection-promo h3 {
-    font-size: 1.8rem;
   }
 }
