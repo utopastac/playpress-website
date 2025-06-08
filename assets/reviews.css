@@ -90,7 +90,6 @@ a[is=outline-button]:hover {
 
 .reviews-container {
   position: relative;
-  padding-top: 3.2rem;
 }
 @media screen and (min-width: 1080px) {
   .reviews-container {
