@@ -3,10 +3,10 @@
 .reviews-container
   position: relative
   //border-top: 1px solid $border-color
-  // padding-top: size(32)
+  padding-top: size(8)
   //margin-top: units(2)
   @include min($screen-l)
-    height: size(200)
+    height: size(210)
 
   h5
     position: absolute
@@ -86,6 +86,7 @@ div[is="reviews"]
   > div
     white-space: nowrap
     overflow-x: scroll
+    overflow-y: hidden
     align-items: top
     -webkit-overflow-scrolling: touch
     margin: -units(2) -units(2)

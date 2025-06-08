@@ -90,10 +90,11 @@ a[is=outline-button]:hover {
 
 .reviews-container {
   position: relative;
+  padding-top: 0.8rem;
 }
 @media screen and (min-width: 1080px) {
   .reviews-container {
-    height: 20rem;
+    height: 21rem;
   }
 }
 .reviews-container h5 {
@@ -169,6 +170,7 @@ article[is=review] p {
 div[is=reviews] > div {
   white-space: nowrap;
   overflow-x: scroll;
+  overflow-y: hidden;
   align-items: top;
   -webkit-overflow-scrolling: touch;
   margin: -1.6rem -1.6rem;
