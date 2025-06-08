@@ -969,20 +969,25 @@ button {
 .copy-text {
   padding: 0.2rem 0.8rem;
   margin-left: 0.4rem;
-  background: #2D8872;
-  color: #FFFFFF;
+  background: #EBEDFA;
+  color: #2D3788;
   border-radius: 1.2rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
 }
+.copy-text.copied {
+  background: #2D3788;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 .copy-text.copied:after {
+  background: #FFFFFF;
   content: "";
   display: inline-flex;
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   position: relative;
-  background: white;
   -webkit-mask-image: url(icon-check.svg);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;

@@ -11,6 +11,12 @@ window.addEventListener("load", function(){
     // alert("Copied the text: " + objectToCopy.innerHTML);
     this.classList.add("copied");
     this.innerHTML = "Copied";
+    setTimeout(()=>{reset(this)}, 2000);
+  }
+
+  function reset(element) {
+    element.classList.remove("copied");
+    element.innerHTML = "Copy";
   }
 
 });

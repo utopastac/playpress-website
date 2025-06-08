@@ -294,20 +294,25 @@ a[is="text-button"], p[is="text-button"], div[is="text-button"]
   margin-left: size(4)
   @extend %body-4
   @extend %bold
-  background: $green-1000
-  color: $white
+  background: $blue-100
+  color: $blue-1000
   border-radius: size(12)
   cursor: pointer
   display: inline-flex
   align-items: center
 
+  &.copied
+    background: $blue-1000
+    color: $white
+    border: 1px solid rgba(white, 0.4)
+
   &.copied:after
+    background: $white
     content: ""
     display: inline-flex
-    width: units(2.5)
-    height: units(2.5)
+    width: units(2)
+    height: units(2)
     position: relative
-    background: white
     -webkit-mask-image: url(icon-check.svg)
     -webkit-mask-position: center
     -webkit-mask-repeat: no-repeat

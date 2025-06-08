@@ -162,6 +162,11 @@ a[is=outline-button]:hover {
     margin-bottom: 4rem;
   }
 }
+div[is=contact] .contact-intro > div {
+  padding: 2.4rem;
+  border: 1px solid #EBEDFA;
+  border-radius: 1.6rem;
+}
 div[is=contact] .contact-intro h2 {
   margin-bottom: 1.6rem;
 }
