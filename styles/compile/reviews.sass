@@ -20,15 +20,21 @@
     display: none
 
 article[is="review"]
-  width: size(320)
+  width: size(340)
   max-width: 80vw
   padding: units(2)
   height: size(172)
-  background: $grey-100
+  border: 1px solid $blue-100
   border-radius: $border-xs
+  @include animate(0.2s)
 
   &:hover
-    a
+    scale: 1.07
+    transform: rotate(-4deg)
+    background: $blue-100
+    color: $blue-1000
+
+    h4, p
       color: $blue-1000
 
     .icon

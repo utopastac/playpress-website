@@ -109,14 +109,21 @@ a[is=outline-button]:hover {
 }
 
 article[is=review] {
-  width: 32rem;
+  width: 34rem;
   max-width: 80vw;
   padding: 1.6rem;
   height: 17.2rem;
-  background: #F3F3F7;
+  border: 1px solid #EBEDFA;
   border-radius: 0.8rem;
+  transition: all 0.2s ease-in-out;
 }
-article[is=review]:hover a {
+article[is=review]:hover {
+  scale: 1.07;
+  transform: rotate(-4deg);
+  background: #EBEDFA;
+  color: #2D3788;
+}
+article[is=review]:hover h4, article[is=review]:hover p {
   color: #2D3788;
 }
 article[is=review]:hover .icon {
