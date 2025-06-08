@@ -91,25 +91,30 @@
         {% endfor %}
 
         {% if has_reviews %}
-          <div class="reviews">
-            {% for review in metaobjects.review.values %}
-              {%- if product == review.product.value -%}
-                <article class="review">
-                  <a href="{{ review.url }}" target="_blank">
-                    <div>
-                      <div class="stars">
-                        {% for num in (1..review.stars) %}
-                          <span class="icon star"></span>
-                        {% endfor %}
+          <div id="reviews">
+            <header>
+              <span><div class="icon star"></div>Reviews</span>
+              <div class="icon chevron-down" id="reviews-icon"></div>
+            </header>
+            <div id="reviews-content">
+              {% for review in metaobjects.review.values %}
+                {%- if product == review.product.value -%}
+                  <article class="review">
+                    <a href="{{ review.url }}" target="_blank">
+                      <div>
+                        <div class="stars">
+                          {% for num in (1..review.stars) %}
+                            <span class="icon star"></span>
+                          {% endfor %}
+                        </div>
+                        {% comment %} <h4>{{ review.name | escape }}</h4> {% endcomment %}
                       </div>
-                      {% comment %} <h4>{{ review.name | escape }}</h4> {% endcomment %}
-                    </div>
-                    <p>{{ review.body }}</p>
-                  </a>
-                </article>
-                {% break %}
-              {%- endif -%}
-            {% endfor %}
+                      <p>{{ review.body }}</p>
+                    </a>
+                  </article>
+                {%- endif -%}
+              {% endfor %}
+            </div>
           </div>
         {% endif %}
         

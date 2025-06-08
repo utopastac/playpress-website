@@ -59,22 +59,17 @@ div[is="product"]
         visibility: hidden
         height: 0
 
-      &.active 
-        color: white
-        background: $blue-1000
+      &.active
 
         header
-          color: white
-          border: none
-
-        .icon
-          background: white
+          border-bottom: none
 
         #description-content
           visibility: visible
-          padding: units(2)
+          padding: units(1) units(3) units(3) units(3)
           height: auto
-          border-top: 1px solid rgba($white, 0.3)
+          border-left: 1px solid $border-color
+          border-right: 1px solid $border-color
 
     a.instructions
       @extend %expanding-button
@@ -86,14 +81,37 @@ div[is="product"]
     div[is=delivery]
       border-radius: 0 0 size(12) size(12)
 
-    .reviews
-      display: flex
-      padding: units(2)
-      border-left: 1px solid $blue-100
-      border-right: 1px solid $blue-100
+    #reviews
+      &:hover
+        &:not(.active)
+          background-color: $blue-100
+
+      header
+        @extend %expanding-button
+        border-top: none
+        border-radius: 0
+
+      #reviews-content
+        visibility: hidden
+        height: 0
+        border-left: 1px solid $border-color
+        border-right: 1px solid $border-color
+
+      &.active
+        header
+          border-bottom: none
+
+        #reviews-content
+          visibility: visible
+          padding: 0 units(3) units(2) units(3)
+          height: auto
 
       .review
         justify-content: flex-start
+        padding: units(2) 0
+
+        &:not(:last-child)
+          border-bottom: 1px solid $border-color
 
         &:hover
           a
@@ -155,9 +173,8 @@ div[is="product"]
     
     .meta-dimensions
       margin: units(3) 0 0 0
-      border: 1px solid $grey-200
+      background: $blue-50
       border-radius: $border-xs
-      background: white
 
       h5
         @extend %body-3
