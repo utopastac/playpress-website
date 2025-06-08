@@ -8,8 +8,7 @@
     align-content: center
     justify-content: center
     flex-wrap: wrap
-    column-gap: units(2)
-    row-gap: units(2)
+    gap: units(1)
     // grid-gap: units(2)
     @extend %main-content
 
@@ -17,11 +16,10 @@
       // grid-template-columns: repeat( auto-fit, minmax(size(100), 1fr) )
 
     @include min($screen-m)
-      // grid-gap: units(3)
+      gap: units(2)
     
     li
       list-style: none
-      width: units(20)
       display: flex
       align-content: center
       align-items: center

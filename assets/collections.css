@@ -63,12 +63,15 @@ a[is=outline-button]:hover {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 1.6rem;
-  row-gap: 1.6rem;
+  gap: 0.8rem;
+}
+@media screen and (min-width: 740px) {
+  .collections ul {
+    gap: 1.6rem;
+  }
 }
 .collections ul li {
   list-style: none;
-  width: 16rem;
   display: flex;
   align-content: center;
   align-items: center;
