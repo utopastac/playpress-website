@@ -371,6 +371,7 @@ div[is=product] > div #reviews .review .icon {
   width: 1.6rem;
   height: 1.6rem;
   background: #0A122A;
+  margin-right: -0.2rem;
 }
 div[is=product] > div #reviews .review p {
   white-space: wrap;
