@@ -15,7 +15,7 @@
       "settings": {
         "heading": "New sets for Summer 2025!",
         "text": "",
-        "link_text": "Check them out",
+        "link_text": "View",
         "link_url": "shopify://pages/new-products",
         "bg_color": "#31ff86",
         "text_color": "#2d1f74",
@@ -160,6 +160,7 @@
     "16277530953a8433e6": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "We love making playsets",
         "text": "<p>Recently we’ve been working with some great brands creating really fun toys that generate value for these amazing institutions. Our offering ranges from the ‘white labelling’ of our existing products to making something special and completely unique.</p>",
         "link_text": "",
@@ -240,6 +241,7 @@
     "949c3f03-8eef-4953-bd48-d885a2c6bd15": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "Every project will have a budget!",
         "text": "<p>The design, set up, and machinery set up involved generally means that most projects need to have a volume of between 1000 and 5000 units - the larger the number the lower the ‘per unit’ cost is.<br/><br/>Depending on the project required, the initial budget expectation would be between £6000 and £12,000, but this would deliver a delightful and unique addition to your brand.</p>",
         "link_text": "",
