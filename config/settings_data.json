@@ -78,6 +78,7 @@
           "grid": 4,
           "rows": 2,
           "show_signpost_link": false,
+          "show_sorting_options": false,
           "link_text": "Shop our other playsets",
           "link_url": "/products"
         }
@@ -149,6 +150,7 @@
           "grid": 4,
           "rows": 5,
           "show_signpost_link": true,
+          "show_sorting_options": false,
           "link_text": "View all products",
           "link_url": "shopify://pages/shop"
         }
@@ -273,7 +275,7 @@
       "44372dd3-96f6-4cbd-ad4b-4ab46c744fba": {
         "type": "gap",
         "settings": {
-          "size": 2
+          "size": 1
         }
       },
       "cart-modal": {
