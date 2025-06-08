@@ -96,7 +96,11 @@ div[is=product] > div div[is=product-content] p[is=product-price], a[is=outline-
   font-weight: 400;
 }
 
-div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div #reviews .review h4, div[is=product] > div .tag, div[is=product] > div #description .text h6, div[is=product] > div #description .text h4, div[is=product] > div #description .text strong, div[is=product] > div #description .text b, a[is=outline-button], div[is=product] > div #description .text .button-text, div[is=product] > div form button, div[is=product] > div #reviews header span, div[is=product] > div a.instructions span, div[is=product] > div #description header span {
+div[is=product] > div #reviews .review h4 {
+  font-weight: 500;
+}
+
+div[is=product] > div .meta-dimensions p, div[is=product] > div .meta-dimensions h5, div[is=product] > div .meta h4, div[is=product] > div .tag, div[is=product] > div #description .text h6, div[is=product] > div #description .text h4, div[is=product] > div #description .text strong, div[is=product] > div #description .text b, a[is=outline-button], div[is=product] > div #description .text .button-text, div[is=product] > div form button, div[is=product] > div #reviews header span, div[is=product] > div a.instructions span, div[is=product] > div #description header span {
   font-weight: 700;
 }
 
@@ -355,26 +359,13 @@ div[is=product] > div #reviews .review {
 div[is=product] > div #reviews .review:not(:last-child) {
   border-bottom: 1px solid #E7E9EF;
 }
-div[is=product] > div #reviews .review:hover a {
-  color: #2D3788;
-}
-div[is=product] > div #reviews .review:hover .icon {
-  background: #2D3788;
-}
-div[is=product] > div #reviews .review a {
-  display: block;
-  color: #0A122A;
-}
-div[is=product] > div #reviews .review a > div {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
+div[is=product] > div #reviews .review a:hover {
+  text-decoration: underline;
 }
 div[is=product] > div #reviews .review .stars {
   display: flex;
   align-items: center;
+  margin-bottom: 0.4rem;
 }
 div[is=product] > div #reviews .review .icon {
   width: 1.6rem;

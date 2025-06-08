@@ -113,27 +113,14 @@ div[is="product"]
         &:not(:last-child)
           border-bottom: 1px solid $border-color
 
-        &:hover
-          a
-            color: $blue-1000
-
-          .icon
-            background: $blue-1000
-
         a
-          display: block
-          color: $grey-1200
-
-          > div
-            display: flex
-            width: 100%
-            align-items: center
-            justify-content: space-between
-            margin-bottom: size(4)
+          &:hover
+            text-decoration: underline
 
         .stars
           display: flex
           align-items: center
+          margin-bottom: size(4)
 
         .icon
           width: units(2)
@@ -142,7 +129,7 @@ div[is="product"]
 
         h4
           @extend %body-3
-          @extend %bold
+          @extend %medium
         
         p
           @extend %body-3

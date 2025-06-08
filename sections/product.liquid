@@ -100,17 +100,15 @@
               {% for review in metaobjects.review.values %}
                 {%- if product == review.product.value -%}
                   <article class="review">
-                    <a href="{{ review.url }}" target="_blank">
-                      <div>
-                        <div class="stars">
-                          {% for num in (1..review.stars) %}
-                            <span class="icon star"></span>
-                          {% endfor %}
-                        </div>
-                        {% comment %} <h4>{{ review.name | escape }}</h4> {% endcomment %}
+                    <div>
+                      <div class="stars">
+                        {% for num in (1..review.stars) %}
+                          <span class="icon star"></span>
+                        {% endfor %}
                       </div>
-                      <p>{{ review.body }}</p>
-                    </a>
+                    </div>
+                    <p>{{ review.body }}</p>
+                    <a href="{{ review.url }}" target="_blank"><h4>{{ review.name | escape }} on {{ review.source | escape }}</h4></a>
                   </article>
                 {%- endif -%}
               {% endfor %}
