@@ -1,0 +1,15 @@
+{{ 'review.css' | asset_url | stylesheet_tag }}
+
+<article is="review">
+  <a href="{{ review.url }}" target="_blank">
+    <div>
+      <div class="stars">
+        {% for num in (1..review.stars) %}
+          <span class="icon star"></span>
+        {% endfor %}
+      </div>
+      <p>{{ review.body }}</p>
+    </div>
+    <h4>{{ review.name | escape }} on {{ review.source | escape }}</h4>
+  </a>
+</article>

@@ -1,0 +1,54 @@
+@import '../assets'
+
+article[is="review"]
+  width: size(340)
+  max-width: 80vw
+  padding: units(2)
+  height: size(172)
+  border: 1px solid $blue-100
+  border-radius: $border-xs
+  @include animate(0.2s)
+
+  &:hover
+    scale: 1.07
+    transform: rotate(-4deg)
+    background: $blue-100
+    color: $blue-1000
+
+    h4, p
+      color: $blue-1000
+
+    .icon
+      background: $blue-1000
+
+  a
+    display: flex
+    flex-direction: column
+    align-items: space-between
+    color: $grey-1200
+    height: 100%
+
+    > div
+      flex: 1
+
+  .stars
+    display: flex
+    flex: 1
+    align-items: center
+    margin-bottom: size(4)
+
+  .icon
+    background: $grey-1200
+    width: size(20)
+    height: size(20)
+    margin-right: -size(2)
+
+  h4
+    @extend %body-3
+    @extend %bold
+    margin-top: size(4)
+  
+  p
+    @extend %body-3
+    white-space: wrap
+    margin-bottom: size(4)

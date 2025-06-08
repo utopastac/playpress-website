@@ -8,19 +8,7 @@
   <div is="reviews">
     <div>
       {% for review in metaobjects.stockist_review.values %}
-        <article is="review">
-          <a href="{{ review.url }}">
-            <div>
-              <div class="stars">
-                {% for num in (1..review.stars) %}
-                  <span class="icon star"></span>
-                {% endfor %}
-              </div>
-              <p>{{ review.body }}</p>
-            </div>
-            <h4>{{ review.name | escape }}</h4>
-          </a>
-        </article>
+        {% render 'review', review: review %}
       {% endfor %}
     </div>
   </div>

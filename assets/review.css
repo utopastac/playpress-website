@@ -1,0 +1,117 @@
+.button-loading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2D3788 url(loading-b.gif) no-repeat center center;
+  background-size: 24px 24px;
+}
+
+a[is=outline-button], article[is=review] p, article[is=review] h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+}
+
+a[is=outline-button], article[is=review] p, article[is=review] h4 {
+  font-weight: 400;
+}
+
+article[is=review] h4, a[is=outline-button] {
+  font-weight: 700;
+}
+
+article[is=review] p, article[is=review] h4 {
+  font-size: 1.7rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  article[is=review] p, article[is=review] h4 {
+    font-size: 1.8rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  font-size: 1.4rem;
+  line-height: 115%;
+  letter-spacing: 0px;
+}
+@media screen and (min-width: 1080px) {
+  a[is=outline-button] {
+    font-size: 1.5rem;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+}
+
+a[is=outline-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #2D3788;
+  height: 3.2rem;
+  white-space: nowrap;
+  border: 1px solid #EBEDFA;
+}
+a[is=outline-button]:hover {
+  background: #EBEDFA;
+}
+
+article[is=review] {
+  width: 34rem;
+  max-width: 80vw;
+  padding: 1.6rem;
+  height: 17.2rem;
+  border: 1px solid #EBEDFA;
+  border-radius: 0.8rem;
+  transition: all 0.2s ease-in-out;
+}
+article[is=review]:hover {
+  scale: 1.07;
+  transform: rotate(-4deg);
+  background: #EBEDFA;
+  color: #2D3788;
+}
+article[is=review]:hover h4, article[is=review]:hover p {
+  color: #2D3788;
+}
+article[is=review]:hover .icon {
+  background: #2D3788;
+}
+article[is=review] a {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  color: #0A122A;
+  height: 100%;
+}
+article[is=review] a > div {
+  flex: 1;
+}
+article[is=review] .stars {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+article[is=review] .icon {
+  background: #0A122A;
+  width: 2rem;
+  height: 2rem;
+  margin-right: -0.2rem;
+}
+article[is=review] h4 {
+  margin-top: 0.4rem;
+}
+article[is=review] p {
+  white-space: wrap;
+  margin-bottom: 0.4rem;
+}
