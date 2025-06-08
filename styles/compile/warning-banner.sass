@@ -7,9 +7,8 @@ section[is="warning-banner"]
     margin-top: -units(3)
 
   > a
-    display: block
+    display: flex
     @extend %main-content
-    text-align: center
     @include animate(0.2s)
 
     &:hover
@@ -17,23 +16,16 @@ section[is="warning-banner"]
 
     h5
       @extend %micro-button-style
-      margin-top: units(1)
 
     > div
       background: $blue-200
       border-radius: $border-s
-      padding: units(2) units(4)
+      padding: units(2) units(2) units(2) units(4)
+      margin: 0 auto
+      display: inline-flex
+      justify-content: center
+      align-items: center
       gap: units(3)
-
-      @include min($screen-s)
-        border-radius: $border-s
-        display: inline-flex
-        justify-content: center
-        align-items: center
-        padding-right: units(2)
-
-        h5
-          margin-top: 0
 
       h4
         @extend %body-3
