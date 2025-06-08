@@ -82,77 +82,86 @@
           </div>
         {%- endif -%}
 
-        {% assign has_reviews = false %}
-        {% for review in metaobjects.review.values %}
-          {%- if product == review.product.value -%}
-            {% assign has_reviews = true %}
-            {% break %}
-          {%- endif -%}
-        {% endfor %}
-
-        {% if has_reviews %}
-          <div id="reviews">
-            <header>
-              <span><div class="icon star"></div>Reviews</span>
-              <div class="icon chevron-down" id="reviews-icon"></div>
-            </header>
-            <div id="reviews-content">
-              {% for review in metaobjects.review.values %}
-                {%- if product == review.product.value -%}
-                  <article class="review">
-                    <div>
-                      <div class="stars">
-                        {% for num in (1..review.stars) %}
-                          <span class="icon star"></span>
-                        {% endfor %}
-                      </div>
-                    </div>
-                    <p>{{ review.body }}</p>
-                    <a href="{{ review.url }}" target="_blank"><h4>{{ review.name | escape }} on {{ review.source | escape }}</h4></a>
-                  </article>
-                {%- endif -%}
-              {% endfor %}
-            </div>
-          </div>
-        {% endif %}
         
+        <div id="expanding-content">
 
-        <div id="description">
-          <header>
-            <span><div class="icon document"></div>Description & specs</span>
-            <div class="icon chevron-down" id="description-icon"></div>
-          </header>
-          <div id="description-content">
-            <div class="text">{{ product.description }}</div>
-            {%- if product.metafields.product.pack_length != blank -%}
-            <div class="meta-dimensions">
-              <div>
-                <h5>Dimensions</h5>
-                <p>
-                  <span>{{product.metafields.product.pack_length.value | remove: " "}}</span>
-                  <span>x {{product.metafields.product.pack_width.value | remove: " "}}</span>
-                  <span>x {{product.metafields.product.pack_depth.value | remove: " "}}</span>
-                </p>
+          {% assign has_reviews = false %}
+          {% for review in metaobjects.review.values %}
+            {%- if product == review.product.value -%}
+              {% assign has_reviews = true %}
+              {% break %}
+            {%- endif -%}
+          {% endfor %}
+
+          {% if has_reviews %}
+            <div id="reviews">
+              <header>
+                <span><div class="icon star"></div>Reviews</span>
+                <div class="icon chevron-down" id="reviews-icon"></div>
+              </header>
+              <div id="reviews-content" class="content">
+                {% for review in metaobjects.review.values %}
+                  {%- if product == review.product.value -%}
+                    <article class="review">
+                      <div>
+                        <div class="stars">
+                          {% for num in (1..review.stars) %}
+                            <span class="icon star"></span>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <p>{{ review.body }}</p>
+                      <a href="{{ review.url }}" target="_blank"><h4>{{ review.name | escape }} on {{ review.source | escape }}</h4></a>
+                    </article>
+                  {%- endif -%}
+                {% endfor %}
               </div>
-              {%- if product.metafields.product.pack_weight != blank -%}
+            </div>
+          {% endif %}
+          
+
+          <div id="description">
+            <header>
+              <span><div class="icon document"></div>Description & specs</span>
+              <div class="icon chevron-down" id="description-icon"></div>
+            </header>
+            <div id="description-content" class="content">
+              <div class="text">{{ product.description }}</div>
+              {%- if product.metafields.product.pack_length != blank -%}
+              <div class="meta-dimensions">
                 <div>
-                  <h5>Weight</h5>
-                  <p>{{product.metafields.product.pack_weight.value | remove: " "}}</p>
+                  <h5>Dimensions</h5>
+                  <p>
+                    <span>{{product.metafields.product.pack_length.value | remove: " "}}</span>
+                    <span>x {{product.metafields.product.pack_width.value | remove: " "}}</span>
+                    <span>x {{product.metafields.product.pack_depth.value | remove: " "}}</span>
+                  </p>
                 </div>
+                {%- if product.metafields.product.pack_weight != blank -%}
+                  <div>
+                    <h5>Weight</h5>
+                    <p>{{product.metafields.product.pack_weight.value | remove: " "}}</p>
+                  </div>
+                {%- endif -%}
+              </div>
               {%- endif -%}
             </div>
-            {%- endif -%}
           </div>
+
+          {% render 'delivery', expanded: true %}
+
+          {%- if product.metafields.custom.instructions.value -%}
+            <div id="instructions">
+              <a href="https://{{ product.metafields.custom.instructions.value.url }}" download>
+                <header>
+                  <span><div class="icon instructions"></div>Building instructions</span>
+                  <div class="icon download" id="download-icon"></div>
+                </header>
+              </a>
+            </div>
+          {%- endif -%}
+
         </div>
-
-        {%- if product.metafields.custom.instructions.value -%}
-          <a class="instructions" href="https://{{ product.metafields.custom.instructions.value.url }}" download>
-            <span><div class="icon instructions"></div>Building instructions</span>
-            <div class="icon download" id="download-icon"></div>
-          </a>
-        {%- endif -%}
-
-        {% render 'delivery', expanded: true %}
 
 
         {% comment %} {%- if product.metafields.product.pack_length != blank -%}

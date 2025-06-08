@@ -29,9 +29,6 @@ div[is="product"]
         padding-right: units(1)
 
       div[is="product-info"]
-        // position: sticky
-        // top: 0px
-        // left: 0px
 
         header
           margin-bottom: units(3)
@@ -39,177 +36,163 @@ div[is="product"]
           h1
             @extend %heading-1
             margin-bottom: units(2)
+  
+  #expanding-content
 
-    #description
-      border-radius: 0
-      margin: -size(1) 0
-
-      &:hover
-        &:not(.active)
-          background-color: $blue-100
-
-      header
-        @extend %expanding-button
-        border-radius: 0
-
-      .text
-        @extend %typography-hierarchy
-
-      #description-content
-        visibility: hidden
-        height: 0
-
-      &.active
-
-        header
-          border-bottom: none
-
-        #description-content
-          visibility: visible
-          padding: units(1) units(3) units(3) units(3)
-          height: auto
-          border-left: 1px solid $border-color
-          border-right: 1px solid $border-color
-
-    a.instructions
-      @extend %expanding-button
-      border-radius: 0
-      margin-bottom: -size(1)
-      &:hover
-        background-color: $blue-100
-
-    div[is=delivery]
-      border-radius: 0 0 size(12) size(12)
-
-    #reviews
-      &:hover
-        &:not(.active)
-          background-color: $blue-100
-
-      header
-        @extend %expanding-button
-        border-top: none
-        border-radius: 0
-
-      #reviews-content
-        visibility: hidden
-        height: 0
-        border-left: 1px solid $border-color
-        border-right: 1px solid $border-color
-
-      &.active
-        header
-          border-bottom: none
-
-        #reviews-content
-          visibility: visible
-          padding: 0 units(3) units(2) units(3)
-          height: auto
-
-      .review
-        justify-content: flex-start
-        padding: units(2) 0
-
-        &:not(:last-child)
-          border-bottom: 1px solid $border-color
-
-        a
-          &:hover
-            text-decoration: underline
-
-        .stars
-          display: flex
-          align-items: center
-          margin-bottom: size(4)
-
-        .icon
-          width: size(20)
-          height: size(20)
-          background: $grey-1200
-          margin-right: -size(2)
-
-        h4
-          @extend %body-3
-          @extend %medium
-        
-        p
-          @extend %body-2
-          white-space: wrap
-          margin-bottom: size(4)
-    
-    .meta
-      display: flex
-      margin-top: units(4)
+    > *
       border: 1px solid $blue-100
-      border-radius: size(12) size(12) 0 0
+      margin-top: -size(1)
+      border-radius: 0
+
+      &:last-child
+        border-radius: 0 0 size(12) size(12) !important
+
+      header
+        @extend %expanding-button
+        border-radius: 0
+
+      .content
+        visibility: hidden
+        height: 0
+
+      &:hover
+        &:not(.active)
+          background-color: $blue-100
+
+      &.active
+        header
+          border-bottom: none
+
+        .content
+          visibility: visible
+          height: auto
+
+  #description
+    .text
+      @extend %typography-hierarchy
+
+    &.active
+      #description-content
+        padding: units(1) units(3) units(3) units(3)
+
+  #instructions
+    a
+      display: block
+
+  div[is=delivery]
+    border-radius: 0
+    margin-top: -size(1)
+
+  #reviews
+
+    &.active
+      #reviews-content
+        padding: 0 units(3) units(2) units(3)
+
+    .review
+      justify-content: flex-start
+      padding: units(2) 0
+
+      &:not(:last-child)
+        border-bottom: 1px solid $border-color
+
+      a
+        &:hover
+          text-decoration: underline
+
+      .stars
+        display: flex
+        align-items: center
+        margin-bottom: size(4)
+
+      .icon
+        width: size(20)
+        height: size(20)
+        background: $grey-1200
+        margin-right: -size(2)
 
       h4
         @extend %body-3
-        @extend %bold
-        color: $grey-800
-        margin-bottom: size(4)
-      
-      h3
-        @extend %heading-3
-        color: $blue-1000
-
-      > div
-        flex: 1
-        padding: units(2) units(3)
-        &:not(:last-child)
-          border-right: 1px solid $grey-200
-    
-    .meta-dimensions
-      margin: units(3) 0 0 0
-      background: $blue-50
-      border-radius: $border-xs
-
-      h5
-        @extend %body-3
-        @extend %bold
-        color: $grey-800
+        @extend %medium
       
       p
         @extend %body-2
-        @extend %bold
-        color: $blue-1000
+        white-space: wrap
+        margin-bottom: size(4)
+  
+  .meta
+    display: flex
+    margin-top: units(4)
+    border: 1px solid $blue-100
+    border-radius: size(12) size(12) 0 0
 
-      > div
-        padding: units(1.5) units(2)
-        display: grid
-        &:not(.meta-instructions)
-          grid-template-columns: 0.5fr 1fr 
-        &:not(:last-child)
-          border-bottom: 1px solid $grey-200
+    h4
+      @extend %body-3
+      @extend %bold
+      color: $grey-800
+      margin-bottom: size(4)
+    
+    h3
+      @extend %heading-3
+      color: $blue-1000
 
-    img
-      border-radius: $border-s
-      width: 100%
-      cursor: pointer
+    > div
+      flex: 1
+      padding: units(2) units(3)
+      &:not(:last-child)
+        border-right: 1px solid $grey-200
+  
+  .meta-dimensions
+    margin: units(3) 0 0 0
+    background: $blue-50
+    border-radius: $border-xs
 
-    > h1 
+    h5
+      @extend %body-3
+      @extend %bold
+      color: $grey-800
+    
+    p
+      @extend %body-2
+      @extend %bold
+      color: $blue-1000
+
+    > div
+      padding: units(1.5) units(2)
+      display: grid
+      &:not(.meta-instructions)
+        grid-template-columns: 0.5fr 1fr 
+      &:not(:last-child)
+        border-bottom: 1px solid $grey-200
+
+  img
+    border-radius: $border-s
+    width: 100%
+    cursor: pointer
+
+  > h1 
+    margin-top: 0
+
+  form 
+    display: flex
+    margin-bottom: units(2)
+
+    #quantity
+      width: units(8)
+
+    button
+      @extend %button-style
+      height: units(7)
+
+    > button, > p 
+      flex: 1
+      margin-left: units(1)
+
+    > p 
+      align-self: center
+      font-size: 1.33em
+      margin-bottom: 0
       margin-top: 0
-
-    form 
-      display: flex
-      margin-bottom: units(2)
-
-      #quantity
-        width: units(8)
-
-      button
-        @extend %button-style
-        height: units(7)
-
-      > button, > p 
-        flex: 1
-        margin-left: units(1)
-
-      > p 
-        align-self: center
-        font-size: 1.33em
-        margin-bottom: 0
-        margin-top: 0
 
   @include min($screen-m)
     > div

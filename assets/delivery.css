@@ -10,16 +10,33 @@
   background-size: 24px 24px;
 }
 
-a[is=outline-button], div[is=delivery] header, div[is=delivery] header span, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+div[is=delivery] header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+  color: #2D3788;
+  cursor: pointer;
+  user-select: none;
+}
+div[is=delivery] header span {
+  display: flex;
+  align-items: center;
+}
+div[is=delivery] header span .icon {
+  margin-right: 0.8rem;
+}
+
+a[is=outline-button], div[is=delivery] header, div[is=delivery], div[is=delivery] header span, div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], div[is=delivery] header, div[is=delivery] header span, div[is=delivery], div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
+a[is=outline-button], div[is=delivery] header, div[is=delivery], div[is=delivery] header span, div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
   font-weight: 400;
 }
 
-div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3, div[is=delivery] header span, a[is=outline-button] {
+div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3, a[is=outline-button], div[is=delivery] header span {
   font-weight: 700;
 }
 
@@ -36,13 +53,13 @@ div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-c
   }
 }
 
-div[is=delivery] header, div[is=delivery] header span, div[is=delivery] {
+div[is=delivery] header, div[is=delivery], div[is=delivery] header span {
   font-size: 1.7rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  div[is=delivery] header, div[is=delivery] header span, div[is=delivery] {
+  div[is=delivery] header, div[is=delivery], div[is=delivery] header span {
     font-size: 1.8rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -82,28 +99,14 @@ div[is=delivery] {
   margin: 0;
   border-radius: 1.6rem;
   max-width: 100%;
-  padding: 1.6rem;
-  color: #2D3788;
   cursor: pointer;
   border: 1px solid #EBEDFA;
 }
 div[is=delivery]:hover:not(.active) {
   background-color: #EBEDFA;
 }
-div[is=delivery] header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div[is=delivery] header span {
-  display: flex;
-  align-items: center;
-}
-div[is=delivery] header span .icon {
-  margin-right: 0.8rem;
-}
 div[is=delivery] div[is=delivery-charges] {
-  background: #FFFFFF;
+  background: #F3F3F7;
   color: #0A122A;
   border-radius: 1.6rem;
   padding: 2.4rem;
@@ -127,16 +130,13 @@ div[is=delivery] div[is=delivery-content] table {
 }
 div[is=delivery] div[is=delivery-content] table td {
   padding: 0.8rem 0;
-  border-color: rgba(10, 18, 42, 0.3);
+  border-color: rgba(10, 18, 42, 0.1);
 }
 div[is=delivery] div[is=delivery-content] table td:last-child {
   text-align: right;
 }
 div[is=delivery] div[is=delivery-content] table tr:last-child td {
   border: none;
-}
-div[is=delivery] h3 {
-  color: white;
 }
 div[is=delivery] header {
   display: flex;
@@ -145,17 +145,10 @@ div[is=delivery] header {
   user-select: none;
 }
 div[is=delivery].active {
-  color: white;
-  background: #2D3788;
   border-radius: 1.6rem;
-}
-div[is=delivery].active .icon {
-  background: white;
 }
 div[is=delivery].active div[is=delivery-content] {
   visibility: visible;
   height: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 1.6rem;
-  margin-top: 1.6rem;
+  padding: 1.6rem 1.6rem 2.4rem 1.6rem;
 }

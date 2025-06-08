@@ -4,8 +4,6 @@ div[is="delivery"]
   margin: 0
   border-radius: $border-s
   max-width: 100%
-  padding: units(2)
-  color: $blue-1000  
   cursor: pointer    
   @extend %body-3
   border: 1px solid $blue-100
@@ -15,21 +13,10 @@ div[is="delivery"]
       background-color: $blue-100
 
   header
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-    span
-      display: flex
-      @extend %body-3
-      @extend %bold
-      align-items: center
-
-      .icon
-        margin-right: units(1)
+    @extend %expanding-button
 
   div[is="delivery-charges"]
-    background: $white
+    background: $grey-100
     color: $grey-1200
     border-radius: $border-s
     padding: units(3)
@@ -57,7 +44,7 @@ div[is="delivery"]
 
       td
         padding: units(1) 0
-        border-color: rgba($grey-1200, 0.3)
+        border-color: rgba($grey-1200, 0.1)
 
       td:last-child
         text-align: right
@@ -65,9 +52,6 @@ div[is="delivery"]
       tr:last-child
         td
           border: none
-  
-  h3
-    color: white
 
   header
     display: flex
@@ -77,17 +61,10 @@ div[is="delivery"]
     user-select: none
 
   &.active 
-    color: white
-    background: $blue-1000
     border-radius: $border-s
-
-    .icon
-      background: white
 
     div[is="delivery-content"]
       visibility: visible
       height: auto
-      border-top: 1px solid rgba($white, 0.3)
-      padding-top: units(2)
-      margin-top: units(2)
+      padding: units(2) units(2) units(3) units(2)
   
