@@ -61,11 +61,15 @@
       "name": "Reviews Stockist",
       "settings": {}
     },
+    "17496501209d531f35": {
+      "type": "apps",
+      "settings": {}
+    },
     "gap_UDNJCt": {
       "type": "gap",
       "name": "Gap",
       "settings": {
-        "size": 2
+        "size": 1
       }
     },
     "image_with_text_wGQamL": {
@@ -232,6 +236,7 @@
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
     "reviews_stockist_ynffyC",
+    "17496501209d531f35",
     "gap_UDNJCt",
     "image_with_text_wGQamL",
     "gap_UxrhnU",
