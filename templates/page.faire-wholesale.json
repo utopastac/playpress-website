@@ -9,49 +9,39 @@
  */
 {
   "sections": {
-    "intro": {
-      "type": "intro",
-      "settings": {
-        "heading": "British Library Bookshop",
-        "text": "We partnered with The British Library to develop our Bookshop playset, celebrating the world of reading.",
-        "link_text": "Buy the set",
-        "link_url": "shopify://products/book-shop-playset",
-        "show_delivery_info": false
-      }
-    },
-    "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed": {
-      "type": "page-gallery",
+    "1749650186ace0d6ea": {
+      "type": "apps",
       "blocks": {
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-0": {
-          "type": "page_gallery_image",
+        "faire_sell_wholesale_shopify_widget_Je4MXp": {
+          "type": "shopify://apps/faire-sell-wholesale/blocks/shopify_widget/7bd83f89-a129-4775-9b2a-1f2d88e8f32c",
           "settings": {
-            "image": "shopify://shop_images/library-page-1.jpg"
-          }
-        },
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-1": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/library-page-2.jpg"
-          }
-        },
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-2": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/library-page-3.jpg"
-          }
-        },
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-3": {
-          "type": "page_gallery_image",
-          "settings": {
-            "image": "shopify://shop_images/library-page-4.jpg"
+            "show_collections": false,
+            "show_reviews": true,
+            "appearance": "custom",
+            "background_color": "#FFFFFF",
+            "corner_radius": 0,
+            "heading_font": "figtree_n5",
+            "heading_color": "#333333",
+            "heading_text_case": "none",
+            "secondary_font": "inter_n4",
+            "secondary_font_color": "#333333",
+            "button_background_color": "#2d3788",
+            "button_font": "inter_n6",
+            "button_font_size_scale": 100,
+            "button_text_color": "#FFFFFF",
+            "button_text_case": "none",
+            "button_corner_radius": 50,
+            "button_border_color": "#FFFFFF",
+            "button_border_thickness": 0,
+            "banner_heading_font": "figtree_n5",
+            "banner_secondary_font": "inter_n4",
+            "banner_background_color": "#d7e2ff",
+            "review_text_and_star_color": "#333333"
           }
         }
       },
       "block_order": [
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-0",
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-1",
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-2",
-        "template--15752580202688__1fb73c56-6d75-4eb1-bb69-82085a3bc2ed-1669828605377cbd30-3"
+        "faire_sell_wholesale_shopify_widget_Je4MXp"
       ],
       "settings": {}
     },
@@ -60,10 +50,6 @@
       "settings": {
         "size": 2
       }
-    },
-    "92e808e5-4ccc-4d44-8a92-c9274c658ddc": {
-      "type": "page-content",
-      "settings": {}
     },
     "06ec3cff-61fe-4690-94f1-f255248aab07": {
       "type": "page-features",
@@ -109,10 +95,8 @@
     }
   },
   "order": [
-    "intro",
-    "1fb73c56-6d75-4eb1-bb69-82085a3bc2ed",
+    "1749650186ace0d6ea",
     "f0bc93fa-10e5-4b75-af4d-b3e7a09c504e",
-    "92e808e5-4ccc-4d44-8a92-c9274c658ddc",
     "06ec3cff-61fe-4690-94f1-f255248aab07"
   ]
 }
