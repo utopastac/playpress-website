@@ -32,6 +32,28 @@
         "show_delivery_info": false
       }
     },
+    "big_banner_8r6V8g": {
+      "type": "big-banner",
+      "name": "Big Banner",
+      "settings": {
+        "heading": "",
+        "text": "Wholesale with Faire",
+        "subtext": "We love shops buying from us directly, but all our products are also available with Faire",
+        "link_text": "Shop with Faire",
+        "link_url": "shopify://pages/faire",
+        "image": "shopify://shop_images/faire.jpg",
+        "bg_color": "#1b1b1b",
+        "text_color": "#FFFFFF",
+        "layout": "left"
+      }
+    },
+    "gap_MMXTVB": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10": {
       "type": "image-with-text",
       "settings": {
@@ -233,6 +255,8 @@
   "order": [
     "warning_banner_6DfaQh",
     "intro",
+    "big_banner_8r6V8g",
+    "gap_MMXTVB",
     "690fe1be-3de4-40e8-89bd-88c97cbdcb10",
     "cc86f8de-41de-44d5-ab26-346498cbae74",
     "reviews_stockist_ynffyC",
