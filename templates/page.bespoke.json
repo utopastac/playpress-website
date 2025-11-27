@@ -9,19 +9,6 @@
  */
 {
   "sections": {
-    "warning_banner_99E7wH": {
-      "type": "warning-banner",
-      "name": "Warning banner",
-      "settings": {
-        "heading": "New sets for Summer 2025!",
-        "text": "",
-        "link_text": "View",
-        "link_url": "shopify://pages/new-products",
-        "bg_color": "#31ff86",
-        "text_color": "#2d1f74",
-        "show_banner": true
-      }
-    },
     "intro": {
       "type": "intro",
       "settings": {
@@ -266,7 +253,6 @@
     }
   },
   "order": [
-    "warning_banner_99E7wH",
     "intro",
     "9b58a03a-9d23-40a1-ad93-0c601ff4b503",
     "c4cf0f2c-ba8c-4d76-8127-85095842da25",

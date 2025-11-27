@@ -9,19 +9,6 @@
  */
 {
   "sections": {
-    "warning_banner_6DfaQh": {
-      "type": "warning-banner",
-      "name": "Warning banner",
-      "settings": {
-        "heading": "New sets for Summer 2025!",
-        "text": "",
-        "link_text": "View",
-        "link_url": "shopify://pages/new-products",
-        "bg_color": "#00c6ff",
-        "text_color": "#2d1f74",
-        "show_banner": true
-      }
-    },
     "intro": {
       "type": "intro",
       "settings": {
@@ -43,7 +30,7 @@
         "link_url": "shopify://pages/faire",
         "image": "shopify://shop_images/faire.jpg",
         "bg_color": "#1b1b1b",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "layout": "left"
       }
     },
@@ -253,7 +240,6 @@
     }
   },
   "order": [
-    "warning_banner_6DfaQh",
     "intro",
     "big_banner_8r6V8g",
     "gap_MMXTVB",
