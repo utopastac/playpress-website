@@ -12,11 +12,30 @@
     "intro": {
       "type": "intro",
       "settings": {
-        "heading": "English Heritage",
-        "text": "We have created two wonderful sets in collaboration with English Heritage, a charity that cares for hundreds of historic sites in every corner of England.",
+        "heading": "Christmas 2025",
+        "text": "",
         "link_text": "",
         "link_url": "",
         "show_delivery_info": false
+      }
+    },
+    "product_carousel_LMNfwM": {
+      "type": "product-carousel",
+      "name": "Product carousel",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_color": "#FFFFFF",
+        "bg_color_1": "#168b6f",
+        "bg_color_2": "#b20d0d",
+        "collection": "best-sellers"
+      }
+    },
+    "gap_EBkccr": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 2
       }
     },
     "b2ea100a-0977-4755-80c8-4d3b83b27afd": {
@@ -42,15 +61,15 @@
       ],
       "settings": {
         "title": "Product Promo",
-        "text": "Discover ancient mysteries with this Stonehenge play press set—build, explore, and learn about one of history’s iconic landmarks!",
-        "product": "stonehenge",
+        "text": "Perfect for fans of the story, our ever popular Gruffalo set is sure to be a hit!",
+        "product": "the-gruffalo-pop-out-playset",
         "layout": "left"
       }
     },
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0": {
       "type": "gap",
       "settings": {
-        "size": 3
+        "size": 2
       }
     },
     "e9bbee40-d7c2-473b-8d33-c1a15608c11b": {
@@ -76,20 +95,57 @@
       ],
       "settings": {
         "title": "Product Promo",
-        "text": "Unleash imagination with this English legends castle set—build towering walls, battle a fierce dragon, and relive epic medieval tales!",
-        "product": "garden-insects-playset-copy",
+        "text": "Perfect for animal lovers, our Australian animals set is full of the cutest critters!",
+        "product": "australian-animals",
         "layout": "left"
       }
     },
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b": {
       "type": "gap",
       "settings": {
-        "size": 3
+        "size": 2
+      }
+    },
+    "product_promo_large_ErTdzR": {
+      "type": "product-promo-large",
+      "blocks": {
+        "gallery_image_NkeRGR": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_image_UzPVMx": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_image_LqcbUR": {
+          "type": "gallery_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "gallery_image_NkeRGR",
+        "gallery_image_UzPVMx",
+        "gallery_image_LqcbUR"
+      ],
+      "name": "Product promo large",
+      "settings": {
+        "title": "Add a title",
+        "text": "A more challenging set for slightly older kids, buying our Lifeboat House set includes a donation to the RNLI.",
+        "product": "rnli-lifeboat-house",
+        "layout": "left"
+      }
+    },
+    "gap_86bxTM": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 2
       }
     },
     "5c8211e7-17c4-4e4d-9f33-3de91c889ef4": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "Small sets, even smaller impact",
         "text": "<p>Our smaller sets for designed for big imaginations. Our Mini range is designed for pocket-money pricing, and shares all of the same sustainability benefits as our larger sets.</p>",
         "link_text": "Sustainability at Playpress",
@@ -107,10 +163,14 @@
   },
   "order": [
     "intro",
+    "product_carousel_LMNfwM",
+    "gap_EBkccr",
     "b2ea100a-0977-4755-80c8-4d3b83b27afd",
     "3a28d277-ee62-4f03-867d-cccf6b4efdd0",
     "e9bbee40-d7c2-473b-8d33-c1a15608c11b",
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b",
+    "product_promo_large_ErTdzR",
+    "gap_86bxTM",
     "5c8211e7-17c4-4e4d-9f33-3de91c889ef4"
   ]
 }
