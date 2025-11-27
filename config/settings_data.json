@@ -325,15 +325,15 @@
         "type": "hero",
         "name": "Hero",
         "settings": {
-          "heading": "A legendary English location",
-          "subtitle": "Discover Stonehenge",
+          "heading": "Check out our Christmas gift guide!",
+          "subtitle": "Christmas 2025",
           "text": "",
-          "link_text": "Buy now",
-          "link_url": "shopify://pages/english-heritage",
-          "image": "shopify://shop_images/stonehenge_1cdf2f4f-6ae7-4596-8ee3-f10fa03e2b5f.png",
-          "bg_color": "#ed2a51",
-          "is_text_color": false,
-          "text_color": "#0a122a",
+          "link_text": "View sets",
+          "link_url": "shopify://pages/christmas-2025",
+          "image": "shopify://shop_images/mini-sets-new.png",
+          "bg_color": "#168b6f",
+          "is_text_color": true,
+          "text_color": "#fff470",
           "is_large": true,
           "is_dark": true
         }
