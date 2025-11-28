@@ -142,6 +142,28 @@
         "size": 2
       }
     },
+    "product_promos_3F6BWU": {
+      "type": "product-promos",
+      "name": "Product promos",
+      "settings": {
+        "title": "Great value stocking fillers",
+        "text": "Our mini sets are great little playsets for big imaginations!",
+        "collection": "mini-sets",
+        "grid": 3,
+        "rows": 2,
+        "show_signpost_link": false,
+        "show_sorting_options": false,
+        "link_text": "View all",
+        "link_url": ""
+      }
+    },
+    "gap_8ENGcB": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 2
+      }
+    },
     "5c8211e7-17c4-4e4d-9f33-3de91c889ef4": {
       "type": "image-with-text",
       "settings": {
@@ -171,6 +193,8 @@
     "89ea955f-faa3-4b8a-ad59-096ce47bb67b",
     "product_promo_large_ErTdzR",
     "gap_86bxTM",
+    "product_promos_3F6BWU",
+    "gap_8ENGcB",
     "5c8211e7-17c4-4e4d-9f33-3de91c889ef4"
   ]
 }
