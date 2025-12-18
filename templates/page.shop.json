@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "warning_banner_JRyCtD": {
+      "type": "warning-banner",
+      "name": "Warning banner",
+      "settings": {
+        "heading": "Order by Monday 22nd for UK Christmas delivery",
+        "text": "",
+        "link_text": "More",
+        "link_url": "shopify://pages/delivery",
+        "bg_color": "#2D8872",
+        "text_color": "#FFFFFF",
+        "show_banner": true
+      }
+    },
     "product_carousel_hNeEET": {
       "type": "product-carousel",
       "name": "Product carousel",
@@ -184,6 +197,7 @@
     }
   },
   "order": [
+    "warning_banner_JRyCtD",
     "product_carousel_hNeEET",
     "79d35488-96a4-4333-8e48-117ea264ecc8",
     "f27d7e12-cdbe-4b45-a78e-84d87711e431",
