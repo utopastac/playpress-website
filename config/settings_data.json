@@ -325,15 +325,15 @@
         "type": "hero",
         "name": "Hero",
         "settings": {
-          "heading": "Check out our Christmas gift guide!",
-          "subtitle": "Christmas 2025",
+          "heading": "Collect all four mini Gruffalo sets",
+          "subtitle": "New!",
           "text": "",
-          "link_text": "View sets",
-          "link_url": "shopify://pages/christmas-2025",
-          "image": "shopify://shop_images/mini-sets-new.png",
-          "bg_color": "#168b6f",
+          "link_text": "Buy now",
+          "link_url": "shopify://collections/gruffalo-playsets",
+          "image": "shopify://shop_images/gruff-main.png",
+          "bg_color": "#ffb85c",
           "is_text_color": true,
-          "text_color": "#fff470",
+          "text_color": "#624000",
           "is_large": true,
           "is_dark": true
         }
