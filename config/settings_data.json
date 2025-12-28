@@ -69,20 +69,6 @@
         "type": "collections",
         "settings": {}
       },
-      "1623767875c4b2fbf3": {
-        "type": "product-promos",
-        "settings": {
-          "title": "Perfect stocking fillers!",
-          "text": "",
-          "collection": "mini-sets",
-          "grid": 4,
-          "rows": 2,
-          "show_signpost_link": false,
-          "show_sorting_options": false,
-          "link_text": "Shop our other playsets",
-          "link_url": "/products"
-        }
-      },
       "skip": {
         "type": "skip",
         "settings": {}
@@ -144,9 +130,9 @@
       "592589cc-23f4-460c-aaa1-a8c5fa26628f": {
         "type": "product-promos",
         "settings": {
-          "title": "Collaborations",
+          "title": "Best sellers",
           "text": "",
-          "collection": "collaborations",
+          "collection": "best-sellers",
           "grid": 4,
           "rows": 5,
           "show_signpost_link": true,
@@ -224,7 +210,7 @@
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f": {
         "type": "gap",
         "settings": {
-          "size": 2
+          "size": 1
         }
       },
       "3da560ad-006d-4360-a1f1-5d809bde06ad": {
@@ -345,27 +331,59 @@
           "size": 1
         }
       },
-      "gap_7TjYFz": {
-        "type": "gap",
-        "name": "Gap",
-        "settings": {
-          "size": 1
-        }
-      },
       "reviews_customers_LyVWny": {
         "type": "reviews-customers",
         "name": "Reviews Customers",
         "settings": {}
+      },
+      "product_promos_individual_nAqaTn": {
+        "type": "product-promos-individual",
+        "blocks": {
+          "product_Wywc4F": {
+            "type": "product",
+            "settings": {
+              "product": "gruffalo-mini"
+            }
+          },
+          "product_YajAaW": {
+            "type": "product",
+            "settings": {
+              "product": "gruffalo-collection-playset-the-gruffalo-copy"
+            }
+          },
+          "product_LKjbKj": {
+            "type": "product",
+            "settings": {
+              "product": "gruffalo-collection-playset-fox-copy"
+            }
+          },
+          "product_QqzCqt": {
+            "type": "product",
+            "settings": {
+              "product": "gruffalo-collection-playset-snake"
+            }
+          }
+        },
+        "block_order": [
+          "product_Wywc4F",
+          "product_YajAaW",
+          "product_LKjbKj",
+          "product_QqzCqt"
+        ],
+        "name": "Product promos individual",
+        "settings": {
+          "title": "",
+          "text": ""
+        }
       }
     },
     "content_for_index": [
       "896052e9-7468-470d-89eb-22991a6f0e2c",
       "hero_pd3q7n",
-      "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
+      "product_promos_individual_nAqaTn",
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
-      "1623767875c4b2fbf3",
-      "gap_7TjYFz",
       "reviews_customers_LyVWny",
+      "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
       "3da560ad-006d-4360-a1f1-5d809bde06ad",
       "hero_GPmdV6",
       "hero_HBCyiY",
