@@ -2,16 +2,42 @@
 
 div[is="product-promos"]
   @extend %product-list
+  
+  > div
+    // Remove %main-content from product grid since it's now on the wrapper
+    max-width: none
+    margin: 0
+
+  .product-item
+    transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out
+
+.product-controls
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  gap: units(2)
+  margin-bottom: units(2.5)
+  flex-wrap: wrap
+
+.product-search-controls
+  flex: 1
+  min-width: size(200)
+  
+  @include min($screen-m)
+    flex: 0 1 auto
+    min-width: size(250)
+    max-width: size(300)
+  
+  .filter-input
+    width: 100%
 
 .product-sorting
-  text-align: right
   position: relative
 
 .sort-by-select
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  margin-bottom: 2rem
   width: size(200)
   height: size(48)
   padding: 0 units(1.5)
@@ -25,51 +51,79 @@ div[is="product-promos"]
   background-size: size(20)
   cursor: pointer
 
-  @include min($screen-m)
-    // position: absolute
-    // top: -size(72)
-    // right: 0
+.product-layout-wrapper
+  @extend %main-content
+  display: flex
+  flex-direction: column
+  gap: units(2.5)
+
+.product-grid-wrapper
+  display: flex
+  flex-direction: column
+  gap: units(2.5)
+
+  @include min($screen-l)
+    flex-direction: row
+    align-items: flex-start
+    gap: units(4)
 
 .product-filter-controls
-  margin-bottom: units(2.5)
-  text-align: right
+  @include min($screen-l)
+    margin-bottom: 0
 
 .filter-toggle-button
-  @extend %micro-button-style
-  display: inline-flex
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: size(200)
+  height: size(48)
+  padding: 0 units(1.5)
+  padding-right: size(40)
+  border: 1px solid $border-color
+  border-radius: $border-xs
+  background-color: white
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+  background-repeat: no-repeat
+  background-position: right units(1) center
+  background-size: size(20)
+  cursor: pointer
+  @extend %paragraph
+  @extend %body-3
+  color: $grey-1000
+  text-align: left
 
 #filter-modal
   width: 100%
+  height: 100vh
   background: white
   position: fixed
   top: 0
   left: 0
   right: 0
+  bottom: 0
   z-index: 1000000
-  padding: units(4) units(3) units(3) units(3)
   @extend %elevation-3
   visibility: hidden
   opacity: 0
-  border-radius: 0 0 $border-s $border-s
-  max-height: 90vh
-  overflow-y: auto
+  display: none
+  flex-direction: column
 
-  @include min($screen-m)
-    width: units(50)
-    border-radius: $border-s
-    padding-top: units(2)
-    top: units(2)
-    left: auto
-    bottom: auto
-    right: units(2)
-    max-height: 80vh
+  @include min($screen-l)
+    display: none !important
 
   header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: white
+    z-index: 1
     display: flex
     justify-content: space-between
     align-items: center
-    padding-bottom: units(1.5)
-    margin-bottom: units(2)
+    padding: units(3) units(4)
+    border-bottom: 1px solid $border-color
+    @extend %elevation-2
 
     .header-title
       display: flex
@@ -101,19 +155,63 @@ div[is="product-promos"]
       @extend %overline
 
   .filter-content
+    flex: 1
     display: flex
     flex-direction: column
     gap: units(2.5)
+    padding: units(4) units(3)
+    padding-top: calc(#{units(3)} * 2 + #{units(4)})
+    overflow-y: auto
+    margin-bottom: units(8)
+
+  footer
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    background: white
+    z-index: 1
+    padding: units(3) units(4)
+    border-top: 1px solid $border-color
+    @extend %elevation-2
+    display: flex
+    justify-content: center
+
+  .filter-apply-button
+    @extend %button-style
+    width: 100%
+    max-width: size(400)
+
+#filter-sidebar
+  display: none
+
+  @include min($screen-l)
+    display: block
+    width: units(24)
+    flex-shrink: 0
+    background: white
+    position: sticky
+    top: units(2)
+    max-height: calc(100vh - #{units(4)})
+    overflow-y: auto
+    align-self: flex-start
+
+.product-content-wrapper
+  flex: 1
+  min-width: 0
 
 .filter-group
   display: flex
   flex-direction: column
   gap: units(1)
   width: 100%
+  padding-bottom: units(2)
+  margin-bottom: units(2)
+  border-bottom: 1px solid $border-color
 
-  label
-    @extend %paragraph
-    @extend %body-3
+  h5
+    @extend %medium
+    @extend %body-2
     color: $grey-1000
 
 .filter-input,
@@ -121,7 +219,6 @@ div[is="product-promos"]
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  width: 100%
   height: size(48)
   padding: 0 units(1.5)
   border: 1px solid $border-color
@@ -137,6 +234,8 @@ div[is="product-promos"]
     border-color: $blue-1000
 
 .filter-input
+  width: 100%
+  
   &::placeholder
     color: #666
 
@@ -156,6 +255,29 @@ div[is="product-promos"]
 .collection-checkbox-item
   display: flex
   align-items: center
+  min-width: 0
+
+  input[type="checkbox"]
+    width: size(20)
+    height: size(20)
+    cursor: pointer
+    pointer-events: auto
+    opacity: 1
+    position: relative
+    margin: 0
+    margin-right: size(2)
+    flex-shrink: 0
+    border: 1px solid $border-color
+    border-radius: $border-xs
+    background-color: white
+    cursor: pointer
+    &:checked
+      background-color: $blue-1000
+      border-color: $blue-1000
+      &:before
+        content: ""
+    + label
+      padding-left: size(4)
 
   label
     @extend %paragraph
@@ -163,6 +285,11 @@ div[is="product-promos"]
     color: $grey-1000
     cursor: pointer
     margin: 0
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    flex: 1
+    min-width: 0
 
 .collection-checkboxes
   display: flex
