@@ -44,6 +44,7 @@
         "show_signpost_link": false,
         "show_sorting_options": true,
         "show_filtering_options": true,
+        "excluded_collections": "shop-featured, under-10, frontpage",
         "link_text": "View all",
         "link_url": ""
       }
