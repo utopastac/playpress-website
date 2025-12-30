@@ -115,16 +115,51 @@ document.addEventListener('DOMContentLoaded', function() {
     // Then apply sorting
     const sortedProducts = applySorting(filteredProducts, sortBy);
 
-    // Clear the grid
-    productGrid.innerHTML = '';
-    
-    // Add filtered and sorted products back to the grid
-    sortedProducts.forEach(product => {
-      productGrid.appendChild(product.element);
-    });
+    // Use requestAnimationFrame to ensure proper CSS recalculation
+    requestAnimationFrame(() => {
+      // Create a set of filtered product elements for quick lookup
+      const filteredElementSet = new Set(sortedProducts.map(p => p.element));
+      
+      // Hide products that don't match filters
+      allProducts.forEach(product => {
+        if (filteredElementSet.has(product.element)) {
+          product.element.style.display = '';
+        } else {
+          product.element.style.display = 'none';
+        }
+      });
+      
+      // Reorder visible products using DocumentFragment for better performance
+      const fragment = document.createDocumentFragment();
+      sortedProducts.forEach(product => {
+        fragment.appendChild(product.element);
+      });
+      
+      // Clear and re-append in one operation
+      // First, get all current children (including hidden ones)
+      const allCurrentChildren = Array.from(productGrid.children);
+      
+      // Remove all children
+      allCurrentChildren.forEach(child => child.remove());
+      
+      // Append the fragment with sorted visible products
+      productGrid.appendChild(fragment);
+      
+      // Re-append hidden products at the end (they'll be hidden but maintain DOM structure)
+      allProducts.forEach(product => {
+        if (!filteredElementSet.has(product.element)) {
+          productGrid.appendChild(product.element);
+        }
+      });
 
-    // Remove loading state
-    productPromos.classList.remove('loading');
+      // Force a reflow to ensure CSS grid recalculates
+      void productGrid.offsetHeight;
+
+      // Remove loading state after a brief delay to ensure rendering
+      requestAnimationFrame(() => {
+        productPromos.classList.remove('loading');
+      });
+    });
   }
 
   // Set up event listeners for sorting
