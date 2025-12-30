@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
     originalIndex: index
   }));
 
+  // Collect all unique collection handles for debugging
+  const allCollectionHandles = new Set();
+  allProducts.forEach(product => {
+    product.collections.forEach(handle => {
+      if (handle) allCollectionHandles.add(handle);
+    });
+  });
+  //console.log('All collection handles:', Array.from(allCollectionHandles).sort().join(', '));
+
   // Get filter elements (works for both modal and sidebar)
   // Use class selector since there are two inputs (one in modal, one in sidebar)
   const keywordFilters = document.querySelectorAll('.filter-keyword-input');
