@@ -1,3 +1,8 @@
+@container product-list-container (width > 550px) {}
+@container product-list-container (width > 770px) {}
+@container product-list-container (width > 1080px) {}
+@container product-list-container (width > 1200px) {}
+
 section[is=product-promo-large] div[is=content] input[type=submit], section[is=product-promo-large] button {
   display: inline-flex;
   align-items: center;

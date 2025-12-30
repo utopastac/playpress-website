@@ -32,6 +32,11 @@ div[is=promos] > div.four {
   }
 }
 
+@container product-list-container (width > 550px) {}
+@container product-list-container (width > 770px) {}
+@container product-list-container (width > 1080px) {}
+@container product-list-container (width > 1200px) {}
+
 div[is=promos] > div {
   max-width: 152rem;
   margin: 0 auto;

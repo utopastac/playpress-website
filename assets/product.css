@@ -5,6 +5,11 @@ div[is=product] #description .text ul li {
   list-style-type: disc;
 }
 
+@container product-list-container (width > 550px) {}
+@container product-list-container (width > 770px) {}
+@container product-list-container (width > 1080px) {}
+@container product-list-container (width > 1200px) {}
+
 div[is=product] > div {
   max-width: 152rem;
   margin: 0 auto;

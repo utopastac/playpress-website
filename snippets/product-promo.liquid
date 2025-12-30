@@ -11,7 +11,7 @@
         width="600"
         height="400"
       />
-      {% for media in product.media offset:2 limit: 1%}
+      {% for media in product.media offset:1 limit: 1%}
         <img
           src="{{ media | img_url: '600x' }}"
           alt="{{ media.alt | escape  }}"

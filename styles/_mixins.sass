@@ -166,25 +166,30 @@ $bigUnits: 40
       grid-template-columns: repeat(4, 1fr)
 
 %product-list
+  container-type: inline-size
+  container-name: product-list-container
+
   > div
     @extend %main-content
     grid-gap: units(1)
     row-gap: units(1.5)
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(size(150), 1fr))
+    grid-template-columns: repeat(1, 1fr)
 
-    @include min($screen-s)
-      grid-template-columns: repeat(auto-fit, minmax(size(170), 1fr))
+    @container product-list-container (width > #{$screen-s})
+      grid-template-columns: repeat(2, 1fr)
 
-    @include min($screen-m)
+    @container product-list-container (width > #{$screen-m})
       grid-gap: units(1.5)
       row-gap: units(2)
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+      grid-template-columns: repeat(3, 1fr)
 
-    @include min($screen-l)
+    @container product-list-container (width > #{$screen-l})
       grid-gap: units(2)
+      grid-template-columns: repeat(4, 1fr)
     
-    @include min($screen-xl)
+    @container product-list-container (width > #{$screen-xl})
+      grid-template-columns: repeat(5, 1fr)
       grid-gap: units(2)
 
 %block-link

@@ -5,6 +5,11 @@ div[is=page] ul li {
   list-style-type: disc;
 }
 
+@container product-list-container (width > 550px) {}
+@container product-list-container (width > 770px) {}
+@container product-list-container (width > 1080px) {}
+@container product-list-container (width > 1200px) {}
+
 .button-loading:after {
   content: "";
   display: block;

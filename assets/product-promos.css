@@ -1,28 +1,34 @@
+div[is=product-promos] {
+  container-type: inline-size;
+  container-name: product-list-container;
+}
 div[is=product-promos] > div {
   grid-gap: 0.8rem;
   row-gap: 1.2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(1, 1fr);
 }
-@media screen and (min-width: 550px) {
+@container product-list-container (width > 550px) {
   div[is=product-promos] > div {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 770px) {
+@container product-list-container (width > 770px) {
   div[is=product-promos] > div {
     grid-gap: 1.2rem;
     row-gap: 1.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (min-width: 1080px) {
+@container product-list-container (width > 1080px) {
   div[is=product-promos] > div {
     grid-gap: 1.6rem;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (min-width: 1200px) {
+@container product-list-container (width > 1200px) {
   div[is=product-promos] > div {
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1.6rem;
   }
 }
@@ -210,6 +216,7 @@ div[is=product-promos] > div {
 }
 div[is=product-promos] .product-item {
   transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+  min-width: 0;
 }
 
 .product-controls {
@@ -335,16 +342,17 @@ div[is=product-promos] .product-item {
 }
 #filter-modal header {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   background: white;
   z-index: 1;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 3.2rem;
+  padding: 1.6rem 3.2rem;
   border-bottom: 1px solid #E7E9EF;
+  margin-bottom: 2.4rem;
 }
 #filter-modal header .header-title {
   display: flex;
@@ -384,11 +392,11 @@ div[is=product-promos] .product-item {
 }
 #filter-modal footer {
   position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
   background: white;
   z-index: 1;
+  bottom: 0;
   padding: 2.4rem 3.2rem;
   border-top: 1px solid #E7E9EF;
   display: flex;
@@ -553,15 +561,13 @@ div[is=product-promos] .product-item {
   box-shadow: none !important;
   outline: none !important;
 }
-.price-checkbox-item input[type=checkbox] + label,
-.price-checkbox-item input[type=radio] + label,
-.collection-checkbox-item input[type=checkbox] + label,
-.collection-checkbox-item input[type=radio] + label {
-  padding-left: 0.4rem;
-}
 .price-checkbox-item input[type=checkbox],
 .collection-checkbox-item input[type=checkbox] {
   border-radius: 0.8rem;
+}
+.price-checkbox-item input[type=checkbox] + label,
+.collection-checkbox-item input[type=checkbox] + label {
+  padding-left: 0.4rem;
 }
 .price-checkbox-item input[type=checkbox][checked], .price-checkbox-item input[type=checkbox]:checked,
 .collection-checkbox-item input[type=checkbox][checked],
@@ -595,36 +601,12 @@ div[is=product-promos] .product-item {
 }
 .price-checkbox-item input[type=radio],
 .collection-checkbox-item input[type=radio] {
-  border-radius: 50%;
-}
-.price-checkbox-item input[type=radio][checked], .price-checkbox-item input[type=radio]:checked,
-.collection-checkbox-item input[type=radio][checked],
-.collection-checkbox-item input[type=radio]:checked {
-  background-color: white !important;
-  border-color: #2D3788 !important;
-  border-width: 2px !important;
-}
-.price-checkbox-item input[type=radio][checked]:focus, .price-checkbox-item input[type=radio][checked]:focus-visible, .price-checkbox-item input[type=radio]:checked:focus, .price-checkbox-item input[type=radio]:checked:focus-visible,
-.collection-checkbox-item input[type=radio][checked]:focus,
-.collection-checkbox-item input[type=radio][checked]:focus-visible,
-.collection-checkbox-item input[type=radio]:checked:focus,
-.collection-checkbox-item input[type=radio]:checked:focus-visible {
-  border-color: #2D3788 !important;
-}
-.price-checkbox-item input[type=radio][checked]::after, .price-checkbox-item input[type=radio]:checked::after,
-.collection-checkbox-item input[type=radio][checked]::after,
-.collection-checkbox-item input[type=radio]:checked::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #2D3788;
-  z-index: 1;
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  margin-right: 0 !important;
 }
 .price-checkbox-item label,
 .collection-checkbox-item label {
@@ -652,9 +634,22 @@ div[is=product-promos] .product-item {
   flex-shrink: 0;
   white-space: nowrap;
 }
+.price-checkbox-item input[type=radio]:not(:checked):not([checked]) + label .label-text,
+.price-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text,
+.collection-checkbox-item input[type=radio]:not(:checked):not([checked]) + label .label-text,
+.collection-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text {
+  color: rgb(89, 98, 119);
+}
 
 .collection-checkboxes {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+
+input[type=checkbox]:checked + label .label-text,
+input[type=radio]:checked + label .label-text,
+input[type=checkbox][checked] + label .label-text,
+input[type=radio][checked] + label .label-text {
+  color: #1D203F;
 }

@@ -1,5 +1,96 @@
 @import '../assets'
 
+// Variables for repeated values
+$dropdown-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+$search-icon-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%238999A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E")
+
+// Mixins for repeated patterns
+@mixin dropdown-select-base
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: size(200)
+  height: size(48)
+  padding: 0 units(1.5)
+  padding-right: size(40)
+  border: 1px solid $border-color
+  border-radius: $border-xs
+  background-color: white
+  background-image: $dropdown-arrow-svg
+  background-repeat: no-repeat
+  background-position: right units(1) center
+  background-size: size(20)
+  cursor: pointer
+
+@mixin input-base
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  height: size(48)
+  padding: 0 units(1.5)
+  border: 1px solid $border-color
+  border-radius: $border-xs
+  background-color: white
+  @extend %paragraph
+  @extend %body-3
+  color: $grey-1000
+  cursor: pointer
+
+  &:focus
+    outline: none
+    border-color: $blue-1000
+
+@mixin modal-fixed-header-footer
+  position: fixed
+  left: 0
+  right: 0
+  background: white
+  z-index: 1
+  @extend %elevation-2
+
+@mixin checkbox-radio-base
+  width: size(20)
+  height: size(20)
+  cursor: pointer
+  pointer-events: auto
+  opacity: 1 !important
+  position: relative
+  margin: 0
+  margin-right: size(2)
+  flex-shrink: 0
+  border: 1px solid $grey-500
+  background-color: white
+  appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  outline: none !important
+  box-shadow: none !important
+  
+  &:focus,
+  &:focus-visible
+    outline: none !important
+    box-shadow: none !important
+    border-color: $grey-500 !important
+  
+  &:disabled
+    opacity: 0.5 !important
+    cursor: not-allowed
+    pointer-events: none
+    
+    + label
+      opacity: 0.5
+      cursor: not-allowed
+  
+  &[checked],
+  &:checked
+    box-shadow: none !important
+    outline: none !important
+    
+    &:focus,
+    &:focus-visible
+      box-shadow: none !important
+      outline: none !important
+
 div[is="product-promos"]
   @extend %product-list
   
@@ -10,6 +101,7 @@ div[is="product-promos"]
 
   .product-item
     transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out
+    min-width: 0
 
 .product-controls
   display: flex
@@ -31,7 +123,7 @@ div[is="product-promos"]
   .filter-input
     width: 100%
     padding-left: size(48)
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%238999A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E")
+    background-image: $search-icon-svg
     background-repeat: no-repeat
     background-position: left units(1.5) center
     background-size: size(20)
@@ -44,21 +136,7 @@ div[is="product-promos"]
   position: relative
 
 .sort-by-select
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
-  width: size(200)
-  height: size(48)
-  padding: 0 units(1.5)
-  padding-right: size(40)
-  border: 1px solid $border-color
-  border-radius: $border-xs
-  background-color: white
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
-  background-repeat: no-repeat
-  background-position: right units(1) center
-  background-size: size(20)
-  cursor: pointer
+  @include dropdown-select-base
 
 .product-layout-wrapper
   @extend %main-content
@@ -81,21 +159,7 @@ div[is="product-promos"]
     display: none
 
 .filter-toggle-button
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
-  width: size(200)
-  height: size(48)
-  padding: 0 units(1.5)
-  padding-right: size(40)
-  border: 1px solid $border-color
-  border-radius: $border-xs
-  background-color: white
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
-  background-repeat: no-repeat
-  background-position: right units(1) center
-  background-size: size(20)
-  cursor: pointer
+  @include dropdown-select-base
   @extend %paragraph
   @extend %body-3
   color: $grey-1000
@@ -121,18 +185,14 @@ div[is="product-promos"]
     display: none !important
 
   header
-    position: fixed
+    @include modal-fixed-header-footer
     top: 0
-    left: 0
-    right: 0
-    background: white
-    z-index: 1
     display: flex
     justify-content: space-between
     align-items: center
-    padding: units(3) units(4)
+    padding: units(2) units(4)
     border-bottom: 1px solid $border-color
-    @extend %elevation-2
+    margin-bottom: units(3)
 
     .header-title
       display: flex
@@ -174,15 +234,10 @@ div[is="product-promos"]
     margin-bottom: units(8)
 
   footer
-    position: fixed
+    @include modal-fixed-header-footer
     bottom: 0
-    left: 0
-    right: 0
-    background: white
-    z-index: 1
     padding: units(3) units(4)
     border-top: 1px solid $border-color
-    @extend %elevation-2
     display: flex
     justify-content: center
 
@@ -225,22 +280,7 @@ div[is="product-promos"]
 
 .filter-input,
 .filter-select
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
-  height: size(48)
-  padding: 0 units(1.5)
-  border: 1px solid $border-color
-  border-radius: $border-xs
-  background-color: white
-  @extend %paragraph
-  @extend %body-3
-  color: $grey-1000
-  cursor: pointer
-
-  &:focus
-    outline: none
-    border-color: $blue-1000
+  @include input-base
 
 .filter-input
   width: 100%
@@ -250,7 +290,7 @@ div[is="product-promos"]
 
 .filter-select
   padding-right: size(40)
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+  background-image: $dropdown-arrow-svg
   background-repeat: no-repeat
   background-position: right units(1) center
   background-size: size(20)
@@ -268,53 +308,13 @@ div[is="product-promos"]
 
   input[type="checkbox"],
   input[type="radio"]
-    width: size(20)
-    height: size(20)
-    cursor: pointer
-    pointer-events: auto
-    opacity: 1 !important
-    position: relative
-    margin: 0
-    margin-right: size(2)
-    flex-shrink: 0
-    border: 1px solid $grey-500
-    background-color: white
-    appearance: none
-    -webkit-appearance: none
-    -moz-appearance: none
-    outline: none !important
-    box-shadow: none !important
+    @include checkbox-radio-base
     
-    &:focus,
-    &:focus-visible
-      outline: none !important
-      box-shadow: none !important
-      border-color: $grey-500 !important
-    
-    &:disabled
-      opacity: 0.5 !important
-      cursor: not-allowed
-      pointer-events: none
-      
-      + label
-        opacity: 0.5
-        cursor: not-allowed
-    
-    &[checked],
-    &:checked
-      box-shadow: none !important
-      outline: none !important
-      
-      &:focus,
-      &:focus-visible
-        box-shadow: none !important
-        outline: none !important
+  input[type="checkbox"]
+    border-radius: $border-xs
     
     + label
       padding-left: size(4)
-
-  input[type="checkbox"]
-    border-radius: $border-xs
     
     &[checked],
     &:checked
@@ -341,30 +341,12 @@ div[is="product-promos"]
         z-index: 1
 
   input[type="radio"]
-    border-radius: 50%
-    
-    &[checked],
-    &:checked
-      background-color: white !important
-      border-color: $blue-1000 !important
-      border-width: 2px !important
-      
-      &:focus,
-      &:focus-visible
-        border-color: $blue-1000 !important
-      
-      &::after
-        content: "" !important
-        display: block !important
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        width: size(10)
-        height: size(10)
-        border-radius: 50%
-        background-color: $blue-1000
-        z-index: 1
+    position: absolute !important
+    opacity: 0 !important
+    width: 0 !important
+    height: 0 !important
+    margin: 0 !important
+    margin-right: 0 !important
 
   label
     @extend %paragraph
@@ -392,6 +374,10 @@ div[is="product-promos"]
       flex-shrink: 0
       white-space: nowrap
 
+  input[type="radio"]:not(:checked):not([checked]) + label .label-text,
+  input[type="checkbox"]:not(:checked):not([checked]) + label .label-text
+    color: $grey-700
+
 .collection-checkboxes
   display: flex
   flex-direction: column
@@ -402,3 +388,4 @@ input[type="radio"]:checked + label .label-text,
 input[type="checkbox"][checked] + label .label-text,
 input[type="radio"][checked] + label .label-text
   @extend %medium
+  color: $grey-1000
