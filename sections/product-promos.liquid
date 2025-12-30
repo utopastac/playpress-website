@@ -9,11 +9,12 @@
   {% assign products = collection.products %}
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-  {%- comment -%} Collect all unique collections and price range for filtering {%- endcomment -%}
+  {%- comment -%} Collect all unique collections, age ranges, and price range for filtering {%- endcomment -%}
   {%- if section.settings.show_filtering_options -%}
     {%- assign excluded_collections_string = section.settings.excluded_collections | strip -%}
     {%- assign excluded_collections = excluded_collections_string | split: ',' -%}
     {%- assign all_collections = '' -%}
+    {%- assign all_age_ranges = '' -%}
     {%- assign min_price = 999999 -%}
     {%- assign max_price = 0 -%}
     {%- for product in products limit: product_limit -%}
@@ -37,6 +38,16 @@
             {%- endif -%}
           {%- endunless -%}
         {%- endfor -%}
+        {%- if product.metafields.product.age_range != blank -%}
+          {%- assign age_range = product.metafields.product.age_range | strip -%}
+          {%- unless all_age_ranges contains age_range -%}
+            {%- if all_age_ranges == '' -%}
+              {%- assign all_age_ranges = age_range -%}
+            {%- else -%}
+              {%- assign all_age_ranges = all_age_ranges | append: ',' | append: age_range -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endif -%}
         {%- assign product_price_num = product.price | money_without_currency | remove: ',' | times: 1 -%}
         {%- if product_price_num < min_price -%}
           {%- assign min_price = product_price_num -%}
@@ -60,7 +71,7 @@
           </div>
         </header>
         <div class="filter-content">
-          {% render 'product-filter-content', all_collections: all_collections, id_prefix: '' %}
+          {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, id_prefix: '' %}
         </div>
         <footer>
           <button id="filter-modal-apply" class="filter-apply-button" type="button">
@@ -100,7 +111,7 @@
       {% if section.settings.show_filtering_options %}
         <div id="filter-sidebar" class="filter-sidebar">
           <div class="filter-content">
-            {% render 'product-filter-content', all_collections: all_collections, id_prefix: 'sidebar' %}
+            {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, id_prefix: 'sidebar' %}
           </div>
         </div>
       {% endif %}

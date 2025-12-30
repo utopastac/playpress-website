@@ -295,13 +295,15 @@ div[is="product-promos"]
   background-position: right units(1) center
   background-size: size(20)
 
-.price-checkboxes
+.price-checkboxes,
+.age-range-checkboxes
   display: flex
   flex-direction: column
   gap: units(1)
 
 .price-checkbox-item,
-.collection-checkbox-item
+.collection-checkbox-item,
+.age-range-checkbox-item
   display: flex
   align-items: center
   min-width: 0
@@ -343,6 +345,7 @@ div[is="product-promos"]
   input[type="radio"]
     position: absolute !important
     opacity: 0 !important
+    visibility: hidden !important
     width: 0 !important
     height: 0 !important
     margin: 0 !important

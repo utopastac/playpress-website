@@ -74,4 +74,32 @@
     </div>
   </div>
 </div>
+{%- if all_age_ranges != blank -%}
+<div class="filter-group">
+  <h5>Age Range</h5>
+  <div class="age-range-checkboxes">
+    {%- assign age_ranges_array = all_age_ranges | split: ',' -%}
+    {%- for age_range in age_ranges_array -%}
+      {%- assign age_range_trimmed = age_range | strip -%}
+      {%- if age_range_trimmed != '' -%}
+        <div class="age-range-checkbox-item">
+          {%- if id_prefix != '' -%}
+            <input type="checkbox" id="filter-age-range-{{ id_prefix }}-{{ age_range_trimmed | handleize }}" name="age-range" value="{{ age_range_trimmed }}" data-age-range="{{ age_range_trimmed }}">
+            <label for="filter-age-range-{{ id_prefix }}-{{ age_range_trimmed | handleize }}">
+              <span class="label-text">{{ age_range_trimmed }}</span>
+              <span class="filter-count" data-age-range="{{ age_range_trimmed }}"></span>
+            </label>
+          {%- else -%}
+            <input type="checkbox" id="filter-age-range-{{ age_range_trimmed | handleize }}" name="age-range" value="{{ age_range_trimmed }}" data-age-range="{{ age_range_trimmed }}">
+            <label for="filter-age-range-{{ age_range_trimmed | handleize }}">
+              <span class="label-text">{{ age_range_trimmed }}</span>
+              <span class="filter-count" data-age-range="{{ age_range_trimmed }}"></span>
+            </label>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
 

@@ -1,6 +1,6 @@
 {{ 'product-promo.css' | asset_url | stylesheet_tag }}
 
-<div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}" data-date="{{ product.created_at | date: '%Y-%m-%d' }}" data-collections="{% for collection in product.collections %}{{ collection.handle }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+<div is="product-promo" class="product-item" data-id="{{ product.variants.first.id }}" data-date="{{ product.created_at | date: '%Y-%m-%d' }}" data-collections="{% for collection in product.collections %}{{ collection.handle }}{% unless forloop.last %},{% endunless %}{% endfor %}"{% if product.metafields.product.age_range != blank %} data-age-range="{{ product.metafields.product.age_range | strip }}"{% endif %}>
   <a href="{{ product.url }}" >
     <div class="image">
       <img

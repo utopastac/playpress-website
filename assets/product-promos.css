@@ -105,17 +105,21 @@ div[is=product-promos] > div {
 }
 
 .price-checkbox-item label,
-.collection-checkbox-item label, .filter-input,
+.collection-checkbox-item label,
+.age-range-checkbox-item label, .filter-input,
 .filter-select, .filter-toggle-button, .price-checkbox-item label .filter-count,
-.collection-checkbox-item label .filter-count, a[is=outline-button],
+.collection-checkbox-item label .filter-count,
+.age-range-checkbox-item label .filter-count, a[is=outline-button],
 .filter-select, .filter-toggle-button, .filter-group h5, #filter-modal .filter-apply-button {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
 .price-checkbox-item label .filter-count,
-.collection-checkbox-item label .filter-count, a[is=outline-button], .price-checkbox-item label,
-.collection-checkbox-item label, .filter-input,
+.collection-checkbox-item label .filter-count,
+.age-range-checkbox-item label .filter-count, a[is=outline-button], .price-checkbox-item label,
+.collection-checkbox-item label,
+.age-range-checkbox-item label, .filter-input,
 .filter-select, .filter-toggle-button, .filter-group h5, #filter-modal .filter-apply-button {
   font-weight: 400;
 }
@@ -163,7 +167,8 @@ a[is=outline-button], #filter-modal .filter-apply-button {
 }
 
 .price-checkbox-item label,
-.collection-checkbox-item label, .filter-input,
+.collection-checkbox-item label,
+.age-range-checkbox-item label, .filter-input,
 .filter-select, .filter-toggle-button {
   font-size: 1.7rem;
   line-height: 115%;
@@ -171,7 +176,8 @@ a[is=outline-button], #filter-modal .filter-apply-button {
 }
 @media screen and (min-width: 1080px) {
   .price-checkbox-item label,
-.collection-checkbox-item label, .filter-input,
+.collection-checkbox-item label,
+.age-range-checkbox-item label, .filter-input,
 .filter-select, .filter-toggle-button {
     font-size: 1.8rem;
     line-height: 115%;
@@ -180,14 +186,16 @@ a[is=outline-button], #filter-modal .filter-apply-button {
 }
 
 .price-checkbox-item label .filter-count,
-.collection-checkbox-item label .filter-count, a[is=outline-button] {
+.collection-checkbox-item label .filter-count,
+.age-range-checkbox-item label .filter-count, a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
   .price-checkbox-item label .filter-count,
-.collection-checkbox-item label .filter-count, a[is=outline-button] {
+.collection-checkbox-item label .filter-count,
+.age-range-checkbox-item label .filter-count, a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -476,14 +484,16 @@ div[is=product-promos] .product-item {
   background-size: 2rem;
 }
 
-.price-checkboxes {
+.price-checkboxes,
+.age-range-checkboxes {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
 .price-checkbox-item,
-.collection-checkbox-item {
+.collection-checkbox-item,
+.age-range-checkbox-item {
   display: flex;
   align-items: center;
   min-width: 0;
@@ -491,7 +501,9 @@ div[is=product-promos] .product-item {
 .price-checkbox-item input[type=checkbox],
 .price-checkbox-item input[type=radio],
 .collection-checkbox-item input[type=checkbox],
-.collection-checkbox-item input[type=radio] {
+.collection-checkbox-item input[type=radio],
+.age-range-checkbox-item input[type=checkbox],
+.age-range-checkbox-item input[type=radio] {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -515,7 +527,11 @@ div[is=product-promos] .product-item {
 .collection-checkbox-item input[type=checkbox]:focus,
 .collection-checkbox-item input[type=checkbox]:focus-visible,
 .collection-checkbox-item input[type=radio]:focus,
-.collection-checkbox-item input[type=radio]:focus-visible {
+.collection-checkbox-item input[type=radio]:focus-visible,
+.age-range-checkbox-item input[type=checkbox]:focus,
+.age-range-checkbox-item input[type=checkbox]:focus-visible,
+.age-range-checkbox-item input[type=radio]:focus,
+.age-range-checkbox-item input[type=radio]:focus-visible {
   outline: none !important;
   box-shadow: none !important;
   border-color: rgb(137, 143, 158) !important;
@@ -523,7 +539,9 @@ div[is=product-promos] .product-item {
 .price-checkbox-item input[type=checkbox]:disabled,
 .price-checkbox-item input[type=radio]:disabled,
 .collection-checkbox-item input[type=checkbox]:disabled,
-.collection-checkbox-item input[type=radio]:disabled {
+.collection-checkbox-item input[type=radio]:disabled,
+.age-range-checkbox-item input[type=checkbox]:disabled,
+.age-range-checkbox-item input[type=radio]:disabled {
   opacity: 0.5 !important;
   cursor: not-allowed;
   pointer-events: none;
@@ -531,7 +549,9 @@ div[is=product-promos] .product-item {
 .price-checkbox-item input[type=checkbox]:disabled + label,
 .price-checkbox-item input[type=radio]:disabled + label,
 .collection-checkbox-item input[type=checkbox]:disabled + label,
-.collection-checkbox-item input[type=radio]:disabled + label {
+.collection-checkbox-item input[type=radio]:disabled + label,
+.age-range-checkbox-item input[type=checkbox]:disabled + label,
+.age-range-checkbox-item input[type=radio]:disabled + label {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -541,7 +561,11 @@ div[is=product-promos] .product-item {
 .collection-checkbox-item input[type=checkbox][checked],
 .collection-checkbox-item input[type=checkbox]:checked,
 .collection-checkbox-item input[type=radio][checked],
-.collection-checkbox-item input[type=radio]:checked {
+.collection-checkbox-item input[type=radio]:checked,
+.age-range-checkbox-item input[type=checkbox][checked],
+.age-range-checkbox-item input[type=checkbox]:checked,
+.age-range-checkbox-item input[type=radio][checked],
+.age-range-checkbox-item input[type=radio]:checked {
   box-shadow: none !important;
   outline: none !important;
 }
@@ -557,21 +581,33 @@ div[is=product-promos] .product-item {
 .collection-checkbox-item input[type=radio][checked]:focus,
 .collection-checkbox-item input[type=radio][checked]:focus-visible,
 .collection-checkbox-item input[type=radio]:checked:focus,
-.collection-checkbox-item input[type=radio]:checked:focus-visible {
+.collection-checkbox-item input[type=radio]:checked:focus-visible,
+.age-range-checkbox-item input[type=checkbox][checked]:focus,
+.age-range-checkbox-item input[type=checkbox][checked]:focus-visible,
+.age-range-checkbox-item input[type=checkbox]:checked:focus,
+.age-range-checkbox-item input[type=checkbox]:checked:focus-visible,
+.age-range-checkbox-item input[type=radio][checked]:focus,
+.age-range-checkbox-item input[type=radio][checked]:focus-visible,
+.age-range-checkbox-item input[type=radio]:checked:focus,
+.age-range-checkbox-item input[type=radio]:checked:focus-visible {
   box-shadow: none !important;
   outline: none !important;
 }
 .price-checkbox-item input[type=checkbox],
-.collection-checkbox-item input[type=checkbox] {
+.collection-checkbox-item input[type=checkbox],
+.age-range-checkbox-item input[type=checkbox] {
   border-radius: 0.8rem;
 }
 .price-checkbox-item input[type=checkbox] + label,
-.collection-checkbox-item input[type=checkbox] + label {
+.collection-checkbox-item input[type=checkbox] + label,
+.age-range-checkbox-item input[type=checkbox] + label {
   padding-left: 0.4rem;
 }
 .price-checkbox-item input[type=checkbox][checked], .price-checkbox-item input[type=checkbox]:checked,
 .collection-checkbox-item input[type=checkbox][checked],
-.collection-checkbox-item input[type=checkbox]:checked {
+.collection-checkbox-item input[type=checkbox]:checked,
+.age-range-checkbox-item input[type=checkbox][checked],
+.age-range-checkbox-item input[type=checkbox]:checked {
   background-color: #2D3788 !important;
   border-color: #2D3788 !important;
   border-width: 1px !important;
@@ -580,12 +616,18 @@ div[is=product-promos] .product-item {
 .collection-checkbox-item input[type=checkbox][checked]:focus,
 .collection-checkbox-item input[type=checkbox][checked]:focus-visible,
 .collection-checkbox-item input[type=checkbox]:checked:focus,
-.collection-checkbox-item input[type=checkbox]:checked:focus-visible {
+.collection-checkbox-item input[type=checkbox]:checked:focus-visible,
+.age-range-checkbox-item input[type=checkbox][checked]:focus,
+.age-range-checkbox-item input[type=checkbox][checked]:focus-visible,
+.age-range-checkbox-item input[type=checkbox]:checked:focus,
+.age-range-checkbox-item input[type=checkbox]:checked:focus-visible {
   border-color: #2D3788 !important;
 }
 .price-checkbox-item input[type=checkbox][checked]::after, .price-checkbox-item input[type=checkbox]:checked::after,
 .collection-checkbox-item input[type=checkbox][checked]::after,
-.collection-checkbox-item input[type=checkbox]:checked::after {
+.collection-checkbox-item input[type=checkbox]:checked::after,
+.age-range-checkbox-item input[type=checkbox][checked]::after,
+.age-range-checkbox-item input[type=checkbox]:checked::after {
   content: "" !important;
   display: block !important;
   position: absolute;
@@ -600,16 +642,19 @@ div[is=product-promos] .product-item {
   z-index: 1;
 }
 .price-checkbox-item input[type=radio],
-.collection-checkbox-item input[type=radio] {
+.collection-checkbox-item input[type=radio],
+.age-range-checkbox-item input[type=radio] {
   position: absolute !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   width: 0 !important;
   height: 0 !important;
   margin: 0 !important;
   margin-right: 0 !important;
 }
 .price-checkbox-item label,
-.collection-checkbox-item label {
+.collection-checkbox-item label,
+.age-range-checkbox-item label {
   color: #1D203F;
   cursor: pointer;
   margin: 0;
@@ -620,7 +665,8 @@ div[is=product-promos] .product-item {
   min-width: 0;
 }
 .price-checkbox-item label .label-text,
-.collection-checkbox-item label .label-text {
+.collection-checkbox-item label .label-text,
+.age-range-checkbox-item label .label-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -628,7 +674,8 @@ div[is=product-promos] .product-item {
   min-width: 0;
 }
 .price-checkbox-item label .filter-count,
-.collection-checkbox-item label .filter-count {
+.collection-checkbox-item label .filter-count,
+.age-range-checkbox-item label .filter-count {
   color: rgb(137, 143, 158);
   margin-left: 0.8rem;
   flex-shrink: 0;
@@ -637,7 +684,9 @@ div[is=product-promos] .product-item {
 .price-checkbox-item input[type=radio]:not(:checked):not([checked]) + label .label-text,
 .price-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text,
 .collection-checkbox-item input[type=radio]:not(:checked):not([checked]) + label .label-text,
-.collection-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text {
+.collection-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text,
+.age-range-checkbox-item input[type=radio]:not(:checked):not([checked]) + label .label-text,
+.age-range-checkbox-item input[type=checkbox]:not(:checked):not([checked]) + label .label-text {
   color: rgb(89, 98, 119);
 }
 

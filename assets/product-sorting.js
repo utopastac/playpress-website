@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     price: parseFloat(product.querySelector('.product-price')?.dataset.price || '0'),
     date: new Date(product.dataset.date || '1970-01-01'),
     collections: (product.dataset.collections || '').split(',').filter(c => c),
+    ageRange: product.dataset.ageRange || '',
     originalIndex: index
   }));
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const keywordFilters = document.querySelectorAll('.filter-keyword-input');
   const collectionRadios = document.querySelectorAll('input[name="collection-filter"]');
   const priceCheckboxes = document.querySelectorAll('input[name="price-range"]');
+  const ageRangeCheckboxes = document.querySelectorAll('input[name="age-range"]');
   
   // Sync keyword inputs between modal and sidebar
   function syncKeywordInputs(sourceInput) {
@@ -97,6 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
+      // Age range filter (checkboxes - OR logic: product matches if it matches ANY selected age range)
+      if (ageRangeCheckboxes && ageRangeCheckboxes.length > 0) {
+        const selectedAgeRanges = Array.from(ageRangeCheckboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+        
+        if (selectedAgeRanges.length > 0) {
+          // Check if product age range matches any of the selected age ranges
+          if (!product.ageRange || !selectedAgeRanges.includes(product.ageRange)) {
+            return false;
+          }
+        }
+      }
+
       return true;
     });
   }
@@ -158,6 +174,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
+      // Age range filter
+      if (testFilters.ageRanges && testFilters.ageRanges.length > 0) {
+        if (!product.ageRange || !testFilters.ageRanges.includes(product.ageRange)) {
+          return false;
+        }
+      }
+
       return true;
     });
     
@@ -213,6 +236,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
+      // Age range filter
+      if (testFilters.ageRanges && testFilters.ageRanges.length > 0) {
+        if (!product.ageRange || !testFilters.ageRanges.includes(product.ageRange)) {
+          return false;
+        }
+      }
+
       return true;
     }).length;
   }
@@ -231,6 +261,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPrices = Array.from(priceCheckboxes)
       .filter(cb => cb.checked)
       .map(cb => parseFloat(cb.value));
+    const currentAgeRanges = Array.from(ageRangeCheckboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
 
     // Update counts for collection radio buttons
     collectionRadios.forEach(radio => {
@@ -238,7 +271,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const testFilters = {
         keyword: currentKeyword,
         collections: [collectionHandle],
-        prices: currentPrices
+        prices: currentPrices,
+        ageRanges: currentAgeRanges
       };
       const count = countResultsForFilter(testFilters);
       const countElements = document.querySelectorAll(`.filter-count[data-collection-handle="${collectionHandle}"]`);
@@ -256,10 +290,30 @@ document.addEventListener('DOMContentLoaded', function() {
       const testFilters = {
         keyword: currentKeyword,
         collections: selectedCollection ? [selectedCollection] : [],
-        prices: testPrices
+        prices: testPrices,
+        ageRanges: currentAgeRanges
       };
       const count = countResultsForFilter(testFilters);
       const countElements = document.querySelectorAll(`.filter-count[data-price-value="${priceValue}"]`);
+      countElements.forEach(el => {
+        el.textContent = `(${count})`;
+      });
+    });
+
+    // Update counts for age range checkboxes
+    ageRangeCheckboxes.forEach(checkbox => {
+      const ageRangeValue = checkbox.value;
+      // For age range counts, show what the count would be if this checkbox was toggled
+      // If checked, show count with it; if unchecked, show count if it were added
+      const testAgeRanges = checkbox.checked ? currentAgeRanges : [...currentAgeRanges, ageRangeValue];
+      const testFilters = {
+        keyword: currentKeyword,
+        collections: selectedCollection ? [selectedCollection] : [],
+        prices: currentPrices,
+        ageRanges: testAgeRanges
+      };
+      const count = countResultsForFilter(testFilters);
+      const countElements = document.querySelectorAll(`.filter-count[data-age-range="${ageRangeValue}"]`);
       countElements.forEach(el => {
         el.textContent = `(${count})`;
       });
@@ -280,6 +334,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPrices = Array.from(priceCheckboxes)
       .filter(cb => cb.checked)
       .map(cb => parseFloat(cb.value));
+    const currentAgeRanges = Array.from(ageRangeCheckboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
 
     // Test each unselected collection radio button
     collectionRadios.forEach(radio => {
@@ -287,7 +344,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const testFilters = {
           keyword: currentKeyword,
           collections: [radio.value],
-          prices: currentPrices
+          prices: currentPrices,
+          ageRanges: currentAgeRanges
         };
         radio.disabled = !wouldHaveResults(testFilters);
       } else {
@@ -305,7 +363,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const testFilters = {
           keyword: currentKeyword,
           collections: selectedCollection ? [selectedCollection] : [],
-          prices: testPrices
+          prices: testPrices,
+          ageRanges: currentAgeRanges
+        };
+        checkbox.disabled = !wouldHaveResults(testFilters);
+      } else {
+        checkbox.disabled = false;
+      }
+    });
+
+    // Test each unchecked age range checkbox
+    ageRangeCheckboxes.forEach(checkbox => {
+      if (!checkbox.checked) {
+        const testAgeRange = checkbox.value;
+        const testAgeRanges = [...currentAgeRanges, testAgeRange];
+        const selectedCollection = Array.from(collectionRadios)
+          .find(radio => radio.checked)?.value;
+        const testFilters = {
+          keyword: currentKeyword,
+          collections: selectedCollection ? [selectedCollection] : [],
+          prices: currentPrices,
+          ageRanges: testAgeRanges
         };
         checkbox.disabled = !wouldHaveResults(testFilters);
       } else {
@@ -482,6 +560,47 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set up event listeners for price checkboxes
   if (priceCheckboxes && priceCheckboxes.length > 0) {
     priceCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateDisplay);
+    });
+  }
+
+  // Function to extract numeric value from age range (e.g., "3-5" -> 3, "6-8" -> 6, "9+" -> 9)
+  function getAgeRangeNumericValue(ageRange) {
+    if (!ageRange) return 999; // Put empty/invalid at end
+    const match = ageRange.toString().match(/^(\d+)/);
+    return match ? parseInt(match[1], 10) : 999;
+  }
+
+  // Function to sort age range checkboxes numerically
+  function sortAgeRangeCheckboxes() {
+    const ageRangeContainers = document.querySelectorAll('.age-range-checkboxes');
+    
+    ageRangeContainers.forEach(container => {
+      const items = Array.from(container.querySelectorAll('.age-range-checkbox-item'));
+      
+      // Sort items by extracting the first number from the age range value
+      items.sort((a, b) => {
+        const checkboxA = a.querySelector('input[name="age-range"]');
+        const checkboxB = b.querySelector('input[name="age-range"]');
+        if (!checkboxA || !checkboxB) return 0;
+        
+        const valueA = getAgeRangeNumericValue(checkboxA.value);
+        const valueB = getAgeRangeNumericValue(checkboxB.value);
+        
+        return valueA - valueB;
+      });
+      
+      // Reorder DOM elements
+      items.forEach(item => container.appendChild(item));
+    });
+  }
+
+  // Sort age range checkboxes on page load
+  sortAgeRangeCheckboxes();
+
+  // Set up event listeners for age range checkboxes
+  if (ageRangeCheckboxes && ageRangeCheckboxes.length > 0) {
+    ageRangeCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', updateDisplay);
     });
   }
