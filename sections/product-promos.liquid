@@ -37,30 +37,57 @@
   {%- endif -%}
 
   {% if section.settings.show_filtering_options %}
-    <div class="product-filters">
-      <div class="filter-group">
-        <label for="filter-keyword">Search</label>
-        <input type="text" id="filter-keyword" class="filter-input" placeholder="Search products...">
-      </div>
-      <div class="filter-group">
-        <label for="filter-collection">Collection</label>
-        <select id="filter-collection" class="filter-select">
-          <option value="">All Collections</option>
-          {%- assign collections_array = all_collections | split: ',' -%}
-          {%- for collection_handle in collections_array -%}
-            {%- assign filter_collection = collections[collection_handle] -%}
-            {%- if filter_collection -%}
-              <option value="{{ collection_handle }}">{{ filter_collection.title }}</option>
-            {%- endif -%}
-          {%- endfor -%}
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="filter-price-min">Price Range</label>
-        <div class="price-range">
-          <input type="number" id="filter-price-min" class="filter-input price-input" placeholder="Min" min="0" step="0.01" data-min="{{ min_price }}">
-          <span class="price-separator">-</span>
-          <input type="number" id="filter-price-max" class="filter-input price-input" placeholder="Max" min="0" step="0.01" data-max="{{ max_price }}">
+    <div class="product-filter-controls">
+      <button id="filter-toggle" class="filter-toggle-button" type="button">
+        Filters
+      </button>
+    </div>
+
+    <div id="filter-modal" class="filter-modal">
+      <header>
+        <div class="header-title">
+          <h2>Filter Products</h2>
+        </div>
+        <div id="filter-modal-close" class="filter-close">
+          <div class="icon close"></div>
+        </div>
+      </header>
+      <div class="filter-content">
+        <div class="filter-group">
+          <label for="filter-keyword">Search</label>
+          <input type="text" id="filter-keyword" class="filter-input" placeholder="Search products...">
+        </div>
+        <div class="filter-group">
+          <label>Collection</label>
+          <div class="collection-checkboxes">
+            {%- assign collections_array = all_collections | split: ',' -%}
+            {%- for collection_handle in collections_array -%}
+              {%- assign filter_collection = collections[collection_handle] -%}
+              {%- if filter_collection -%}
+                <div class="collection-checkbox-item">
+                  <input type="checkbox" id="filter-collection-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}">
+                  <label for="filter-collection-{{ collection_handle }}">{{ filter_collection.title }}</label>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Price Range</label>
+          <div class="price-checkboxes">
+            <div class="price-checkbox-item">
+              <input type="checkbox" id="filter-price-10" name="price-range" value="10">
+              <label for="filter-price-10">Under £10</label>
+            </div>
+            <div class="price-checkbox-item">
+              <input type="checkbox" id="filter-price-15" name="price-range" value="15">
+              <label for="filter-price-15">Under £15</label>
+            </div>
+            <div class="price-checkbox-item">
+              <input type="checkbox" id="filter-price-20" name="price-range" value="20">
+              <label for="filter-price-20">Under £20</label>
+            </div>
+          </div>
         </div>
       </div>
     </div>

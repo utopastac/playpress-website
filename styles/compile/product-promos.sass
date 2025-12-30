@@ -30,25 +30,86 @@ div[is="product-promos"]
     // top: -size(72)
     // right: 0
 
-.product-filters
-  display: flex
-  flex-wrap: wrap
-  gap: units(2)
+.product-filter-controls
   margin-bottom: units(2.5)
-  align-items: flex-end
+  text-align: right
+
+.filter-toggle-button
+  @extend %micro-button-style
+  display: inline-flex
+
+#filter-modal
+  width: 100%
+  background: white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1000000
+  padding: units(4) units(3) units(3) units(3)
+  @extend %elevation-3
+  visibility: hidden
+  opacity: 0
+  border-radius: 0 0 $border-s $border-s
+  max-height: 90vh
+  overflow-y: auto
 
   @include min($screen-m)
+    width: units(50)
+    border-radius: $border-s
+    padding-top: units(2)
+    top: units(2)
+    left: auto
+    bottom: auto
+    right: units(2)
+    max-height: 80vh
+
+  header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: units(1.5)
+    margin-bottom: units(2)
+
+    .header-title
+      display: flex
+      justify-content: center
+      align-items: center
+
+    #filter-modal-close
+      width: units(4)
+      height: units(4)
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+
+    .icon.close
+      width: units(2)
+      height: units(2)
+      background: $grey-1000
+      -webkit-mask-image: url(icon-close.svg)
+      -webkit-mask-position: center
+      -webkit-mask-repeat: no-repeat
+      -webkit-mask-size: contain
+      mask-image: url(icon-close.svg)
+      mask-position: center
+      mask-repeat: no-repeat
+      mask-size: contain
+
+    h2
+      @extend %overline
+
+  .filter-content
+    display: flex
+    flex-direction: column
     gap: units(2.5)
 
 .filter-group
   display: flex
   flex-direction: column
   gap: units(1)
-  flex: 1
-  min-width: size(150)
-
-  @include min($screen-m)
-    min-width: size(180)
+  width: 100%
 
   label
     @extend %paragraph
@@ -86,16 +147,24 @@ div[is="product-promos"]
   background-position: right units(1) center
   background-size: size(20)
 
-.price-range
+.price-checkboxes
   display: flex
-  align-items: center
+  flex-direction: column
   gap: units(1)
 
-.price-input
-  flex: 1
+.price-checkbox-item,
+.collection-checkbox-item
+  display: flex
+  align-items: center
 
-.price-separator
-  @extend %paragraph
-  @extend %body-3
-  color: $grey-1000
-  flex-shrink: 0
+  label
+    @extend %paragraph
+    @extend %body-3
+    color: $grey-1000
+    cursor: pointer
+    margin: 0
+
+.collection-checkboxes
+  display: flex
+  flex-direction: column
+  gap: units(1)
