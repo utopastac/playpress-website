@@ -14,22 +14,31 @@ div[is="product-promos"]
 .product-controls
   display: flex
   align-items: center
-  justify-content: flex-end
+  justify-content: flex-start
   gap: units(2)
   margin-bottom: units(2.5)
   flex-wrap: wrap
 
 .product-search-controls
-  flex: 1
+  flex: 0 1 auto
   min-width: size(200)
+  position: relative
   
   @include min($screen-m)
-    flex: 0 1 auto
     min-width: size(250)
     max-width: size(300)
   
   .filter-input
     width: 100%
+    padding-left: size(48)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%238999A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: left units(1.5) center
+    background-size: size(20)
+
+.product-filter-controls,
+.product-sorting
+  margin-left: auto
 
 .product-sorting
   position: relative
@@ -69,7 +78,7 @@ div[is="product-promos"]
 
 .product-filter-controls
   @include min($screen-l)
-    margin-bottom: 0
+    display: none
 
 .filter-toggle-button
   -webkit-appearance: none
@@ -257,27 +266,105 @@ div[is="product-promos"]
   align-items: center
   min-width: 0
 
-  input[type="checkbox"]
+  input[type="checkbox"],
+  input[type="radio"]
     width: size(20)
     height: size(20)
     cursor: pointer
     pointer-events: auto
-    opacity: 1
+    opacity: 1 !important
     position: relative
     margin: 0
     margin-right: size(2)
     flex-shrink: 0
-    border: 1px solid $border-color
-    border-radius: $border-xs
+    border: 1px solid $grey-500
     background-color: white
-    cursor: pointer
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    outline: none !important
+    box-shadow: none !important
+    
+    &:focus,
+    &:focus-visible
+      outline: none !important
+      box-shadow: none !important
+      border-color: $grey-500 !important
+    
+    &:disabled
+      opacity: 0.5 !important
+      cursor: not-allowed
+      pointer-events: none
+      
+      + label
+        opacity: 0.5
+        cursor: not-allowed
+    
+    &[checked],
     &:checked
-      background-color: $blue-1000
-      border-color: $blue-1000
-      &:before
-        content: ""
+      box-shadow: none !important
+      outline: none !important
+      
+      &:focus,
+      &:focus-visible
+        box-shadow: none !important
+        outline: none !important
+    
     + label
       padding-left: size(4)
+
+  input[type="checkbox"]
+    border-radius: $border-xs
+    
+    &[checked],
+    &:checked
+      background-color: $blue-1000 !important
+      border-color: $blue-1000 !important
+      border-width: 1px !important
+      
+      &:focus,
+      &:focus-visible
+        border-color: $blue-1000 !important
+      
+      &::after
+        content: "" !important
+        display: block !important
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(45deg)
+        width: size(4)
+        height: size(8)
+        border-bottom: 2px solid white
+        border-right: 2px solid white
+        margin-top: size(-2)
+        z-index: 1
+
+  input[type="radio"]
+    border-radius: 50%
+    
+    &[checked],
+    &:checked
+      background-color: white !important
+      border-color: $blue-1000 !important
+      border-width: 2px !important
+      
+      &:focus,
+      &:focus-visible
+        border-color: $blue-1000 !important
+      
+      &::after
+        content: "" !important
+        display: block !important
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: size(10)
+        height: size(10)
+        border-radius: 50%
+        background-color: $blue-1000
+        z-index: 1
 
   label
     @extend %paragraph
@@ -285,13 +372,33 @@ div[is="product-promos"]
     color: $grey-1000
     cursor: pointer
     margin: 0
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
-    flex: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
     min-width: 0
+    
+    .label-text
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      flex: 1
+      min-width: 0
+    
+    .filter-count
+      color: $grey-500
+      @extend %body-4
+      margin-left: units(1)
+      flex-shrink: 0
+      white-space: nowrap
 
 .collection-checkboxes
   display: flex
   flex-direction: column
   gap: units(1)
+
+input[type="checkbox"]:checked + label .label-text,
+input[type="radio"]:checked + label .label-text,
+input[type="checkbox"][checked] + label .label-text,
+input[type="radio"][checked] + label .label-text
+  @extend %medium

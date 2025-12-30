@@ -7,11 +7,17 @@
       {%- if filter_collection -%}
         <div class="collection-checkbox-item">
           {%- if id_prefix != '' -%}
-            <input type="checkbox" id="filter-collection-{{ id_prefix }}-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}">
-            <label for="filter-collection-{{ id_prefix }}-{{ collection_handle }}">{{ filter_collection.title }}</label>
+            <input type="radio" id="filter-collection-{{ id_prefix }}-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
+            <label for="filter-collection-{{ id_prefix }}-{{ collection_handle }}">
+              <span class="label-text">{{ filter_collection.title }}</span>
+              <span class="filter-count" data-collection-handle="{{ collection_handle }}"></span>
+            </label>
           {%- else -%}
-            <input type="checkbox" id="filter-collection-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}">
-            <label for="filter-collection-{{ collection_handle }}">{{ filter_collection.title }}</label>
+            <input type="radio" id="filter-collection-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
+            <label for="filter-collection-{{ collection_handle }}">
+              <span class="label-text">{{ filter_collection.title }}</span>
+              <span class="filter-count" data-collection-handle="{{ collection_handle }}"></span>
+            </label>
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -23,29 +29,47 @@
   <div class="price-checkboxes">
     <div class="price-checkbox-item">
       {%- if id_prefix != '' -%}
-        <input type="checkbox" id="filter-price-{{ id_prefix }}-10" name="price-range" value="10">
-        <label for="filter-price-{{ id_prefix }}-10">Under £10</label>
+        <input type="checkbox" id="filter-price-{{ id_prefix }}-10" name="price-range" value="10" data-price-value="10">
+        <label for="filter-price-{{ id_prefix }}-10">
+          <span class="label-text">Under £10</span>
+          <span class="filter-count" data-price-value="10"></span>
+        </label>
       {%- else -%}
-        <input type="checkbox" id="filter-price-10" name="price-range" value="10">
-        <label for="filter-price-10">Under £10</label>
+        <input type="checkbox" id="filter-price-10" name="price-range" value="10" data-price-value="10">
+        <label for="filter-price-10">
+          <span class="label-text">Under £10</span>
+          <span class="filter-count" data-price-value="10"></span>
+        </label>
       {%- endif -%}
     </div>
     <div class="price-checkbox-item">
       {%- if id_prefix != '' -%}
-        <input type="checkbox" id="filter-price-{{ id_prefix }}-15" name="price-range" value="15">
-        <label for="filter-price-{{ id_prefix }}-15">Under £15</label>
+        <input type="checkbox" id="filter-price-{{ id_prefix }}-15" name="price-range" value="15" data-price-value="15">
+        <label for="filter-price-{{ id_prefix }}-15">
+          <span class="label-text">Under £15</span>
+          <span class="filter-count" data-price-value="15"></span>
+        </label>
       {%- else -%}
-        <input type="checkbox" id="filter-price-15" name="price-range" value="15">
-        <label for="filter-price-15">Under £15</label>
+        <input type="checkbox" id="filter-price-15" name="price-range" value="15" data-price-value="15">
+        <label for="filter-price-15">
+          <span class="label-text">Under £15</span>
+          <span class="filter-count" data-price-value="15"></span>
+        </label>
       {%- endif -%}
     </div>
     <div class="price-checkbox-item">
       {%- if id_prefix != '' -%}
-        <input type="checkbox" id="filter-price-{{ id_prefix }}-20" name="price-range" value="20">
-        <label for="filter-price-{{ id_prefix }}-20">Under £20</label>
+        <input type="checkbox" id="filter-price-{{ id_prefix }}-20" name="price-range" value="20" data-price-value="20">
+        <label for="filter-price-{{ id_prefix }}-20">
+          <span class="label-text">Under £20</span>
+          <span class="filter-count" data-price-value="20"></span>
+        </label>
       {%- else -%}
-        <input type="checkbox" id="filter-price-20" name="price-range" value="20">
-        <label for="filter-price-20">Under £20</label>
+        <input type="checkbox" id="filter-price-20" name="price-range" value="20" data-price-value="20">
+        <label for="filter-price-20">
+          <span class="label-text">Under £20</span>
+          <span class="filter-count" data-price-value="20"></span>
+        </label>
       {%- endif -%}
     </div>
   </div>

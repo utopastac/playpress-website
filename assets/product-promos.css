@@ -100,19 +100,24 @@ div[is=product-promos] > div {
 
 .price-checkbox-item label,
 .collection-checkbox-item label, .filter-input,
-.filter-select, .filter-toggle-button, a[is=outline-button],
+.filter-select, .filter-toggle-button, .price-checkbox-item label .filter-count,
+.collection-checkbox-item label .filter-count, a[is=outline-button],
 .filter-select, .filter-toggle-button, .filter-group h5, #filter-modal .filter-apply-button {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
 }
 
-a[is=outline-button], .price-checkbox-item label,
+.price-checkbox-item label .filter-count,
+.collection-checkbox-item label .filter-count, a[is=outline-button], .price-checkbox-item label,
 .collection-checkbox-item label, .filter-input,
 .filter-select, .filter-toggle-button, .filter-group h5, #filter-modal .filter-apply-button {
   font-weight: 400;
 }
 
-.filter-group h5 {
+input[type=checkbox]:checked + label .label-text,
+input[type=radio]:checked + label .label-text,
+input[type=checkbox][checked] + label .label-text,
+input[type=radio][checked] + label .label-text, .filter-group h5 {
   font-weight: 500;
 }
 
@@ -168,13 +173,15 @@ a[is=outline-button], #filter-modal .filter-apply-button {
   }
 }
 
-a[is=outline-button] {
+.price-checkbox-item label .filter-count,
+.collection-checkbox-item label .filter-count, a[is=outline-button] {
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 1080px) {
-  a[is=outline-button] {
+  .price-checkbox-item label .filter-count,
+.collection-checkbox-item label .filter-count, a[is=outline-button] {
     font-size: 1.5rem;
     line-height: 115%;
     letter-spacing: 0px;
@@ -208,25 +215,35 @@ div[is=product-promos] .product-item {
 .product-controls {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 1.6rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 .product-search-controls {
-  flex: 1;
+  flex: 0 1 auto;
   min-width: 20rem;
+  position: relative;
 }
 @media screen and (min-width: 740px) {
   .product-search-controls {
-    flex: 0 1 auto;
     min-width: 25rem;
     max-width: 30rem;
   }
 }
 .product-search-controls .filter-input {
   width: 100%;
+  padding-left: 4.8rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%238999A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 1.2rem center;
+  background-size: 2rem;
+}
+
+.product-filter-controls,
+.product-sorting {
+  margin-left: auto;
 }
 
 .product-sorting {
@@ -272,7 +289,7 @@ div[is=product-promos] .product-item {
 
 @media screen and (min-width: 1080px) {
   .product-filter-controls {
-    margin-bottom: 0;
+    display: none;
   }
 }
 
@@ -464,44 +481,176 @@ div[is=product-promos] .product-item {
   min-width: 0;
 }
 .price-checkbox-item input[type=checkbox],
-.collection-checkbox-item input[type=checkbox] {
+.price-checkbox-item input[type=radio],
+.collection-checkbox-item input[type=checkbox],
+.collection-checkbox-item input[type=radio] {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   pointer-events: auto;
-  opacity: 1;
+  opacity: 1 !important;
   position: relative;
   margin: 0;
   margin-right: 0.2rem;
   flex-shrink: 0;
-  border: 1px solid #E7E9EF;
-  border-radius: 0.8rem;
+  border: 1px solid rgb(137, 143, 158);
   background-color: white;
-  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
-.price-checkbox-item input[type=checkbox]:checked,
-.collection-checkbox-item input[type=checkbox]:checked {
-  background-color: #2D3788;
-  border-color: #2D3788;
+.price-checkbox-item input[type=checkbox]:focus, .price-checkbox-item input[type=checkbox]:focus-visible,
+.price-checkbox-item input[type=radio]:focus,
+.price-checkbox-item input[type=radio]:focus-visible,
+.collection-checkbox-item input[type=checkbox]:focus,
+.collection-checkbox-item input[type=checkbox]:focus-visible,
+.collection-checkbox-item input[type=radio]:focus,
+.collection-checkbox-item input[type=radio]:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgb(137, 143, 158) !important;
 }
-.price-checkbox-item input[type=checkbox]:checked:before,
-.collection-checkbox-item input[type=checkbox]:checked:before {
-  content: "";
+.price-checkbox-item input[type=checkbox]:disabled,
+.price-checkbox-item input[type=radio]:disabled,
+.collection-checkbox-item input[type=checkbox]:disabled,
+.collection-checkbox-item input[type=radio]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.price-checkbox-item input[type=checkbox]:disabled + label,
+.price-checkbox-item input[type=radio]:disabled + label,
+.collection-checkbox-item input[type=checkbox]:disabled + label,
+.collection-checkbox-item input[type=radio]:disabled + label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.price-checkbox-item input[type=checkbox][checked], .price-checkbox-item input[type=checkbox]:checked,
+.price-checkbox-item input[type=radio][checked],
+.price-checkbox-item input[type=radio]:checked,
+.collection-checkbox-item input[type=checkbox][checked],
+.collection-checkbox-item input[type=checkbox]:checked,
+.collection-checkbox-item input[type=radio][checked],
+.collection-checkbox-item input[type=radio]:checked {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.price-checkbox-item input[type=checkbox][checked]:focus, .price-checkbox-item input[type=checkbox][checked]:focus-visible, .price-checkbox-item input[type=checkbox]:checked:focus, .price-checkbox-item input[type=checkbox]:checked:focus-visible,
+.price-checkbox-item input[type=radio][checked]:focus,
+.price-checkbox-item input[type=radio][checked]:focus-visible,
+.price-checkbox-item input[type=radio]:checked:focus,
+.price-checkbox-item input[type=radio]:checked:focus-visible,
+.collection-checkbox-item input[type=checkbox][checked]:focus,
+.collection-checkbox-item input[type=checkbox][checked]:focus-visible,
+.collection-checkbox-item input[type=checkbox]:checked:focus,
+.collection-checkbox-item input[type=checkbox]:checked:focus-visible,
+.collection-checkbox-item input[type=radio][checked]:focus,
+.collection-checkbox-item input[type=radio][checked]:focus-visible,
+.collection-checkbox-item input[type=radio]:checked:focus,
+.collection-checkbox-item input[type=radio]:checked:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
 }
 .price-checkbox-item input[type=checkbox] + label,
-.collection-checkbox-item input[type=checkbox] + label {
+.price-checkbox-item input[type=radio] + label,
+.collection-checkbox-item input[type=checkbox] + label,
+.collection-checkbox-item input[type=radio] + label {
   padding-left: 0.4rem;
+}
+.price-checkbox-item input[type=checkbox],
+.collection-checkbox-item input[type=checkbox] {
+  border-radius: 0.8rem;
+}
+.price-checkbox-item input[type=checkbox][checked], .price-checkbox-item input[type=checkbox]:checked,
+.collection-checkbox-item input[type=checkbox][checked],
+.collection-checkbox-item input[type=checkbox]:checked {
+  background-color: #2D3788 !important;
+  border-color: #2D3788 !important;
+  border-width: 1px !important;
+}
+.price-checkbox-item input[type=checkbox][checked]:focus, .price-checkbox-item input[type=checkbox][checked]:focus-visible, .price-checkbox-item input[type=checkbox]:checked:focus, .price-checkbox-item input[type=checkbox]:checked:focus-visible,
+.collection-checkbox-item input[type=checkbox][checked]:focus,
+.collection-checkbox-item input[type=checkbox][checked]:focus-visible,
+.collection-checkbox-item input[type=checkbox]:checked:focus,
+.collection-checkbox-item input[type=checkbox]:checked:focus-visible {
+  border-color: #2D3788 !important;
+}
+.price-checkbox-item input[type=checkbox][checked]::after, .price-checkbox-item input[type=checkbox]:checked::after,
+.collection-checkbox-item input[type=checkbox][checked]::after,
+.collection-checkbox-item input[type=checkbox]:checked::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 0.4rem;
+  height: 0.8rem;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  margin-top: -0.2rem;
+  z-index: 1;
+}
+.price-checkbox-item input[type=radio],
+.collection-checkbox-item input[type=radio] {
+  border-radius: 50%;
+}
+.price-checkbox-item input[type=radio][checked], .price-checkbox-item input[type=radio]:checked,
+.collection-checkbox-item input[type=radio][checked],
+.collection-checkbox-item input[type=radio]:checked {
+  background-color: white !important;
+  border-color: #2D3788 !important;
+  border-width: 2px !important;
+}
+.price-checkbox-item input[type=radio][checked]:focus, .price-checkbox-item input[type=radio][checked]:focus-visible, .price-checkbox-item input[type=radio]:checked:focus, .price-checkbox-item input[type=radio]:checked:focus-visible,
+.collection-checkbox-item input[type=radio][checked]:focus,
+.collection-checkbox-item input[type=radio][checked]:focus-visible,
+.collection-checkbox-item input[type=radio]:checked:focus,
+.collection-checkbox-item input[type=radio]:checked:focus-visible {
+  border-color: #2D3788 !important;
+}
+.price-checkbox-item input[type=radio][checked]::after, .price-checkbox-item input[type=radio]:checked::after,
+.collection-checkbox-item input[type=radio][checked]::after,
+.collection-checkbox-item input[type=radio]:checked::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #2D3788;
+  z-index: 1;
 }
 .price-checkbox-item label,
 .collection-checkbox-item label {
   color: #1D203F;
   cursor: pointer;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+}
+.price-checkbox-item label .label-text,
+.collection-checkbox-item label .label-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
   min-width: 0;
+}
+.price-checkbox-item label .filter-count,
+.collection-checkbox-item label .filter-count {
+  color: rgb(137, 143, 158);
+  margin-left: 0.8rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .collection-checkboxes {
