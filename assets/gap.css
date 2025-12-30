@@ -55,6 +55,9 @@ a[is=outline-button]:hover {
 div[is=gap] {
   height: 6.4rem;
 }
+div[is=gap].extra-small {
+  height: 2.4rem;
+}
 div[is=gap].small {
   height: 4rem;
 }
@@ -67,6 +70,9 @@ div[is=gap].large {
 @media screen and (min-width: 740px) {
   div[is=gap] {
     height: 9.6rem;
+  }
+  div[is=gap].extra-small {
+    height: 3.2rem;
   }
   div[is=gap].small {
     height: 6.4rem;
