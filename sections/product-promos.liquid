@@ -6,6 +6,65 @@
   {% render 'section-header', title: section.settings.title, text: section.settings.text %}
 
   {%- assign collection = collections[section.settings.collection] -%}
+  {% assign products = collection.products %}
+  {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+
+  {%- comment -%} Collect all unique collections and price range for filtering {%- endcomment -%}
+  {%- if section.settings.show_filtering_options -%}
+    {%- assign all_collections = '' -%}
+    {%- assign min_price = 999999 -%}
+    {%- assign max_price = 0 -%}
+    {%- for product in products limit: product_limit -%}
+      {%- if product.available -%}
+        {%- for product_collection in product.collections -%}
+          {%- unless all_collections contains product_collection.handle -%}
+            {%- if all_collections == '' -%}
+              {%- assign all_collections = product_collection.handle -%}
+            {%- else -%}
+              {%- assign all_collections = all_collections | append: ',' | append: product_collection.handle -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+        {%- assign product_price_num = product.price | money_without_currency | remove: ',' | times: 1 -%}
+        {%- if product_price_num < min_price -%}
+          {%- assign min_price = product_price_num -%}
+        {%- endif -%}
+        {%- if product_price_num > max_price -%}
+          {%- assign max_price = product_price_num -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {% if section.settings.show_filtering_options %}
+    <div class="product-filters">
+      <div class="filter-group">
+        <label for="filter-keyword">Search</label>
+        <input type="text" id="filter-keyword" class="filter-input" placeholder="Search products...">
+      </div>
+      <div class="filter-group">
+        <label for="filter-collection">Collection</label>
+        <select id="filter-collection" class="filter-select">
+          <option value="">All Collections</option>
+          {%- assign collections_array = all_collections | split: ',' -%}
+          {%- for collection_handle in collections_array -%}
+            {%- assign filter_collection = collections[collection_handle] -%}
+            {%- if filter_collection -%}
+              <option value="{{ collection_handle }}">{{ filter_collection.title }}</option>
+            {%- endif -%}
+          {%- endfor -%}
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-price-min">Price Range</label>
+        <div class="price-range">
+          <input type="number" id="filter-price-min" class="filter-input price-input" placeholder="Min" min="0" step="0.01" data-min="{{ min_price }}">
+          <span class="price-separator">-</span>
+          <input type="number" id="filter-price-max" class="filter-input price-input" placeholder="Max" min="0" step="0.01" data-max="{{ max_price }}">
+        </div>
+      </div>
+    </div>
+  {% endif %}
 
   {% if section.settings.show_sorting_options %}
     <div class="product-sorting">
@@ -19,10 +78,6 @@
       </select>
     </div>
   {% endif %}
-
-  {% assign products = collection.products %}
-
-  {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
   <div is="product-promos" class="product-promos-container">
     <div class="product-grid">
@@ -87,6 +142,12 @@
       "type": "checkbox",
       "id": "show_sorting_options",
       "label": "Show Sort options",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filtering_options",
+      "label": "Show Filter options",
       "default": false
     },
     {
