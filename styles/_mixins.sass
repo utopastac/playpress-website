@@ -174,9 +174,9 @@ $bigUnits: 40
     grid-gap: units(1)
     row-gap: units(1.5)
     display: grid
-    grid-template-columns: repeat(1, 1fr)
+    grid-template-columns: repeat(2, 1fr)
 
-    @container product-list-container (width > #{$screen-s})
+    @container product-list-container (width > #{$screen-xs})
       grid-template-columns: repeat(2, 1fr)
 
     @container product-list-container (width > #{$screen-m})

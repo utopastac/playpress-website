@@ -84,27 +84,37 @@
 
     <div class="product-controls">
       {% if section.settings.show_filtering_options %}
-        <div class="product-search-controls">
-          <input type="text" class="filter-input filter-keyword-input" placeholder="Search">
-        </div>
         <div class="product-filter-controls">
           <button id="filter-toggle" class="filter-toggle-button" type="button">
             Filters
           </button>
         </div>
       {% endif %}
-  {% if section.settings.show_sorting_options %}
-    <div class="product-sorting">
-      <select id="sort-by" class="sort-by-select">
-        <option value="featured">Sort: Featured</option>
-        <option value="created-descending">Sort: Newest</option>
-        <option value="price-ascending">Sort: Price: Low to High</option>
-        <option value="price-descending">Sort: Price: High to Low</option>
-        <option value="title-ascending">Sort: Alphabetical: A-Z</option>
-        <option value="title-descending">Sort: Alphabetical: Z-A</option>
-      </select>
-    </div>
-  {% endif %}
+      {% if section.settings.show_sorting_options %}
+        <div class="product-sorting">
+          <button id="sort-toggle" class="sort-toggle-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="sort-label">Sort:</span>
+            <span id="sort-selected" class="sort-selected">Featured</span>
+            <span class="sort-arrow"></span>
+          </button>
+          <div id="sort-dropdown" class="sort-dropdown" role="listbox">
+            <button class="sort-option" data-value="featured" type="button" role="option" aria-selected="true">Featured</button>
+            <button class="sort-option" data-value="created-descending" type="button" role="option">Newest</button>
+            <button class="sort-option" data-value="price-ascending" type="button" role="option">Price: Low to High</button>
+            <button class="sort-option" data-value="price-descending" type="button" role="option">Price: High to Low</button>
+            <button class="sort-option" data-value="title-ascending" type="button" role="option">Alphabetical: A-Z</button>
+            <button class="sort-option" data-value="title-descending" type="button" role="option">Alphabetical: Z-A</button>
+          </div>
+          <select id="sort-by" class="sort-by-select" hidden aria-hidden="true">
+            <option value="featured">Sort: Featured</option>
+            <option value="created-descending">Sort: Newest</option>
+            <option value="price-ascending">Sort: Price: Low to High</option>
+            <option value="price-descending">Sort: Price: High to Low</option>
+            <option value="title-ascending">Sort: Alphabetical: A-Z</option>
+            <option value="title-descending">Sort: Alphabetical: Z-A</option>
+          </select>
+        </div>
+      {% endif %}
     </div>
 
     <div class="product-grid-wrapper">

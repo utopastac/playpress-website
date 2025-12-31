@@ -488,11 +488,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   }
 
-  // Set up event listeners for sorting
+  // Custom dropdown for sorting
+  const sortToggle = document.getElementById('sort-toggle');
+  const sortDropdown = document.getElementById('sort-dropdown');
+  const sortSelected = document.getElementById('sort-selected');
+  const sortOptions = document.querySelectorAll('.sort-option');
+
+  // Map sort values to display text
+  const sortLabels = {
+    'featured': 'Featured',
+    'created-descending': 'Newest',
+    'price-ascending': 'Price: Low to High',
+    'price-descending': 'Price: High to Low',
+    'title-ascending': 'Alphabetical: A-Z',
+    'title-descending': 'Alphabetical: Z-A'
+  };
+
+  // Function to update sort display
+  function updateSortDisplay(value) {
+    if (sortSelected) {
+      sortSelected.textContent = sortLabels[value] || 'Featured';
+    }
+    if (sortSelect) {
+      sortSelect.value = value;
+    }
+    // Update active state
+    sortOptions.forEach(option => {
+      if (option.dataset.value === value) {
+        option.setAttribute('aria-selected', 'true');
+      } else {
+        option.setAttribute('aria-selected', 'false');
+      }
+    });
+  }
+
+  // Toggle dropdown
+  if (sortToggle && sortDropdown) {
+    sortToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isOpen = sortDropdown.classList.toggle('open');
+      sortToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Handle option selection
+    sortOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const value = this.dataset.value;
+        updateSortDisplay(value);
+        sortDropdown.classList.remove('open');
+        if (sortToggle) {
+          sortToggle.setAttribute('aria-expanded', 'false');
+        }
+        updateDisplay();
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (sortDropdown && !sortDropdown.contains(e.target) && !sortToggle.contains(e.target)) {
+        sortDropdown.classList.remove('open');
+        sortToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close dropdown on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && sortDropdown && sortDropdown.classList.contains('open')) {
+        sortDropdown.classList.remove('open');
+        sortToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Set up event listeners for sorting (hidden select for compatibility)
   if (sortSelect) {
     sortSelect.addEventListener('change', updateDisplay);
     // Set initial sort to featured
-  sortSelect.value = 'featured';
+    sortSelect.value = 'featured';
+    updateSortDisplay('featured');
   }
 
   // Set up event listeners for filtering

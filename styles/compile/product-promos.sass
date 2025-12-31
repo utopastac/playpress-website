@@ -9,7 +9,6 @@ $search-icon-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  width: size(200)
   height: size(48)
   padding: 0 units(1.5)
   padding-right: size(40)
@@ -108,17 +107,15 @@ div[is="product-promos"]
   align-items: center
   justify-content: flex-start
   gap: units(2)
-  margin-bottom: units(2.5)
-  flex-wrap: wrap
+  margin-bottom: 0
+  flex-wrap: nowrap
+
+  @include min($screen-m)
+    flex-wrap: wrap
 
 .product-search-controls
-  flex: 0 1 auto
-  min-width: size(200)
+  width: 100%
   position: relative
-  
-  @include min($screen-m)
-    min-width: size(250)
-    max-width: size(300)
   
   .filter-input
     width: 100%
@@ -128,15 +125,137 @@ div[is="product-promos"]
     background-position: left units(1.5) center
     background-size: size(20)
 
+.filter-search-group
+  padding-bottom: units(2)
+  margin-bottom: units(2)
+  border-bottom: none
+
 .product-filter-controls,
 .product-sorting
-  margin-left: auto
+  @include min($screen-m)
+    margin-left: auto
 
 .product-sorting
   position: relative
 
+.filter-toggle-button
+  display: inline-flex
+  align-items: center
+  gap: units(1)
+  height: size(48)
+  padding: 0 units(2)
+  border: 1px solid $border-color
+  border-radius: $border-xs
+  background-color: white
+  @extend %paragraph
+  @extend %body-3
+  color: $grey-1000
+  cursor: pointer
+  white-space: nowrap
+  transition: border-color 0.2s
+
+  &:hover
+    border-color: $blue-1000
+
+  &:focus
+    outline: none
+    border-color: $blue-1000
+
+.sort-toggle-button
+  display: inline-flex
+  align-items: center
+  gap: units(1)
+  height: size(48)
+  padding: 0 units(2)
+  border: 1px solid $border-color
+  border-radius: $border-xs
+  background-color: white
+  @extend %paragraph
+  @extend %body-3
+  color: $grey-1000
+  cursor: pointer
+  white-space: nowrap
+  transition: border-color 0.2s
+
+  &:hover
+    border-color: $blue-1000
+
+  &:focus
+    outline: none
+    border-color: $blue-1000
+
+  .sort-label
+    color: $grey-700
+
+  .sort-selected
+    color: $grey-1000
+
+  .sort-arrow
+    width: size(20)
+    height: size(20)
+    margin-left: units(0.5)
+    background-image: $dropdown-arrow-svg
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    transition: transform 0.2s
+    flex-shrink: 0
+
+  &[aria-expanded="true"] .sort-arrow
+    transform: rotate(180deg)
+
+.sort-dropdown
+  display: none
+  position: absolute
+  top: calc(100% + units(1))
+  right: 0
+  background: white
+  padding: size(20) size(24)
+  border-radius: $border-s
+  box-shadow: $elevation-1
+  z-index: 1000
+  min-width: size(200)
+
+  &.open
+    display: block
+
+  .sort-option
+    display: block
+    width: 100%
+    padding: size(4) 0
+    text-align: left
+    background: none
+    border: none
+    @extend %body-3
+    color: $blue-1200
+    opacity: 0.7
+    cursor: pointer
+    transition: opacity 0.2s
+    position: relative
+    padding-left: size(24)
+
+    &::before
+      content: "✓"
+      position: absolute
+      left: 0
+      color: $blue-1000
+      opacity: 0
+      transition: opacity 0.2s
+
+    &:hover
+      opacity: 1
+
+    &[aria-selected="true"]
+      opacity: 1
+      @extend %medium
+
+      &::before
+        opacity: 1
+
 .sort-by-select
-  @include dropdown-select-base
+  position: absolute
+  opacity: 0
+  pointer-events: none
 
 .product-layout-wrapper
   @extend %main-content
@@ -271,7 +390,8 @@ div[is="product-promos"]
   width: 100%
   padding-bottom: units(2)
   margin-bottom: units(2)
-  border-bottom: 1px solid $border-color
+  &:not(:first-child)
+    border-bottom: 1px solid $border-color
 
   h5
     @extend %medium

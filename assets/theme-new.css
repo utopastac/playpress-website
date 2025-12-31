@@ -34,9 +34,9 @@ div[is=product-promos] > div {
   grid-gap: 0.8rem;
   row-gap: 1.2rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-@container product-list-container (width > 550px) {
+@container product-list-container (width > 350px) {
   div[is=product-promos] > div {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -411,9 +411,9 @@ div[is=product-promos] > div {
   grid-gap: 0.8rem;
   row-gap: 1.2rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-@container product-list-container (width > 550px) {
+@container product-list-container (width > 350px) {
   div[is=product-promos] > div {
     grid-template-columns: repeat(2, 1fr);
   }
