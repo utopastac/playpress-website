@@ -377,11 +377,19 @@
           "is_large": true,
           "is_dark": true
         }
+      },
+      "gap_FLLJh9": {
+        "type": "gap",
+        "name": "Gap",
+        "settings": {
+          "size": 1
+        }
       }
     },
     "content_for_index": [
       "896052e9-7468-470d-89eb-22991a6f0e2c",
       "hero_pd3q7n",
+      "gap_FLLJh9",
       "product_promos_individual_nAqaTn",
       "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
       "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
