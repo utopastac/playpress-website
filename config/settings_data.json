@@ -138,6 +138,7 @@
           "show_signpost_link": true,
           "show_sorting_options": false,
           "show_filtering_options": false,
+          "excluded_collections": "",
           "link_text": "View all products",
           "link_url": "shopify://pages/shop"
         }
@@ -312,15 +313,15 @@
         "type": "hero",
         "name": "Hero",
         "settings": {
-          "heading": "Collect all four mini Gruffalo sets",
+          "heading": "The Very Hungry Caterpillar is here!",
           "subtitle": "New!",
           "text": "",
           "link_text": "Buy now",
           "link_url": "shopify://collections/gruffalo-playsets",
-          "image": "shopify://shop_images/gruff-main.png",
-          "bg_color": "#ffb85c",
+          "image": "shopify://shop_images/main.png",
+          "bg_color": "#009584",
           "is_text_color": true,
-          "text_color": "#624000",
+          "text_color": "#ffffff",
           "is_large": true,
           "is_dark": true
         }
@@ -373,7 +374,7 @@
         ],
         "name": "Product promos individual",
         "settings": {
-          "title": "",
+          "title": "Collect all 4 Gruffalo mini sets",
           "text": ""
         }
       }
