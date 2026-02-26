@@ -21,18 +21,18 @@
       <h2>{{ award.award_title | escape }}</h2>
       <p class="{% if award.award_status == 'Winner' %}winner{% endif %}">{{ award.award_status }}</p>
     </div>
-    {%- if award.product != blank -%}
-      <a is="product-link" href="{{ award.product.url }}">
+    {%- if award.product != blank and award.product.value != blank -%}
+      <a is="product-link" href="{{ award.product.value.url }}">
         <img
-          alt="{{ award.product.featured_image.alt }}"
-          src="{{ award.product.featured_media | img_url: '400x' }}"
+          alt="{{ award.product.value.featured_image.alt }}"
+          src="{{ award.product.value.featured_media | img_url: '400x' }}"
           loading="lazy"
           width="400"
           height="200"
         />
         <div>
-          <p>{{ award.product.title }}</p>
-          <span>{{ award.product.price | money }}</span>
+          <p>{{ award.product.value.title }}</p>
+          <span>{{ award.product.value.price | money }}</span>
         </div>
       </a>
     {%- endif -%}
