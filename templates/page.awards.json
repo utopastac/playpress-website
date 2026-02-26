@@ -28,10 +28,10 @@
         "link_text": "See the Castle",
         "link_url": "shopify://products/garden-insects-playset-copy",
         "image": "shopify://shop_images/big-castle-b.jpg",
-        "bg_color": "#a59ef8",
+        "bg_color": "#d2cfff",
         "text_color": "#0a122a",
-        "show_signpost_link": false,
-        "use_button": false,
+        "show_signpost_link": true,
+        "use_button": true,
         "layout": "left",
         "show_colour": false,
         "last_on_page": false
