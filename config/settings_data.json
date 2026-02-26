@@ -365,15 +365,15 @@
         "type": "hero",
         "name": "Hero",
         "settings": {
-          "heading": "The Very Hungry Caterpillar is here!",
-          "subtitle": "New!",
+          "heading": "Legends Castle set is an Award finalist 🏆",
+          "subtitle": "Gift of the year 2026",
           "text": "",
           "link_text": "Buy now",
-          "link_url": "shopify://products/gruffalo-mini-set-owl-copy",
-          "image": "shopify://shop_images/main-2.png",
-          "bg_color": "#009584",
+          "link_url": "shopify://products/garden-insects-playset-copy",
+          "image": "shopify://shop_images/big-castle-b.jpg",
+          "bg_color": "#a1a9ff",
           "is_text_color": true,
-          "text_color": "#ffffff",
+          "text_color": "#130658",
           "is_large": true,
           "is_dark": true
         }
