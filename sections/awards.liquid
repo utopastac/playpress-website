@@ -1,7 +1,8 @@
 {{ 'awards.css' | asset_url | stylesheet_tag }}
 
 <section is="awards">
-  {% for award in metaobjects.award.values | sort: "date_year" reversed %}
+  {% assign sorted_awards = metaobjects.award.values | sort: 'date_year' | reverse %}
+  {% for award in sorted_awards %}
     {% render 'award', award: award %}
   {% endfor %}
 </section>

@@ -23,12 +23,12 @@
       "type": "image-with-text",
       "settings": {
         "overline": "",
-        "title": "Best supplier 2024",
-        "text": "<p>We are so proud to have won Best Supplier at the Cultural Enterprise Awards. The judges said:<br/><br/>\"Exactly the sort of supplier and product the sector needs, with excellent quality and design created in a thoughtful and sustainable way\"</p>",
-        "link_text": "",
-        "link_url": "",
-        "image": "shopify://shop_images/Cultural_Enterprises_Awards_Winner.png",
-        "bg_color": "#d7e2ff",
+        "title": "Gift of the year finalist",
+        "text": "<p>We are so proud that our Legends Castle set has been nominated as a finalist for the Gift of the year awards 2026.</p>",
+        "link_text": "See the Castle",
+        "link_url": "shopify://products/garden-insects-playset-copy",
+        "image": "shopify://shop_images/big-castle-b.jpg",
+        "bg_color": "#a59ef8",
         "text_color": "#0a122a",
         "show_signpost_link": false,
         "use_button": false,
@@ -45,130 +45,6 @@
     },
     "awards_9fa3BX": {
       "type": "awards",
-      "blocks": {
-        "award_block_fmCtWw": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/GOTY_Full_Colour_-_Finalist_2_9141402b-46a3-49ea-b5bc-298c68f84612.jpg",
-            "date": "2026",
-            "award": "Gift of the year",
-            "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
-            "placing": "Finalist",
-            "product": "garden-insects-playset-copy"
-          }
-        },
-        "award_block_DCFVBj": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/juno.png",
-            "date": "2025",
-            "award": "Juno magazine",
-            "title": "Featured as a best buy",
-            "placing": "Best buy",
-            "product": ""
-          }
-        },
-        "award_block_UCbGwA": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/cultural-enterprise-awards_64caebaf-b12f-4c1a-9e78-eecdcc9673fd.png",
-            "date": "2024",
-            "award": "Cultural Enterprises Awards",
-            "title": "Best Supplier",
-            "placing": "Winner",
-            "product": ""
-          }
-        },
-        "award_block_JPKgnU": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
-            "date": "2024",
-            "award": "Gift of the Year",
-            "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
-            "placing": "Finalist",
-            "product": ""
-          }
-        },
-        "award_block_rM74C9": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/Glee.png",
-            "date": "2023",
-            "award": "Glee New Product Awards",
-            "title": "Gifts, Body & Bath, Christmas, Greeting Cards, Toys and Games",
-            "placing": "Winner",
-            "product": "mini-vets-play-set"
-          }
-        },
-        "award_block_yAd8f6": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
-            "date": "2023",
-            "award": "The Licensing Awards",
-            "title": "Best Sustainable Licensed Product",
-            "placing": "Finalist",
-            "product": "room-on-the-broom-pop-out-playset"
-          }
-        },
-        "award_block_iW6jJN": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
-            "date": "2022",
-            "award": "The Licensing Awards",
-            "title": "Best Sustainable Licensed Product",
-            "placing": "Finalist",
-            "product": "shaun-the-sheep-eco-friendly-playset"
-          }
-        },
-        "award_block_KbGRq9": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/the-licensing-awards_041c2a0e-a5b1-4674-a04e-b5b7bd053b9f.png",
-            "date": "2021",
-            "award": "The Licensing Awards",
-            "title": "Best Sustainable Licensed Product",
-            "placing": "Finalist",
-            "product": "the-gruffalo-pop-out-playset"
-          }
-        },
-        "award_block_J4xynr": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/gift-of-the-year_f486e1d7-509e-42b1-977d-19e304d73749.png",
-            "date": "2020",
-            "award": "Gift of the year",
-            "title": "Ethical and Sustainable Gift",
-            "placing": "Highly Commended",
-            "product": "space-station-eco-friendly-playset"
-          }
-        },
-        "award_block_PnJVUQ": {
-          "type": "award_block",
-          "settings": {
-            "image": "shopify://shop_images/play-creators-awards_2d23e6f3-2389-402f-b2d0-f21a8d13a8c4.png",
-            "date": "2019",
-            "award": "Play Creator Awards",
-            "title": "Toy Designer of the Year (Licensed Product)",
-            "placing": "Winner",
-            "product": "rnli-lifeboat-eco-friendly-playset"
-          }
-        }
-      },
-      "block_order": [
-        "award_block_fmCtWw",
-        "award_block_DCFVBj",
-        "award_block_UCbGwA",
-        "award_block_JPKgnU",
-        "award_block_rM74C9",
-        "award_block_yAd8f6",
-        "award_block_iW6jJN",
-        "award_block_KbGRq9",
-        "award_block_J4xynr",
-        "award_block_PnJVUQ"
-      ],
       "settings": {}
     },
     "9eda9169-756a-48c2-b50b-ae18ad7b469f": {
