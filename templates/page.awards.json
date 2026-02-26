@@ -22,6 +22,7 @@
     "image_with_text_iM3G8B": {
       "type": "image-with-text",
       "settings": {
+        "overline": "",
         "title": "Best supplier 2024",
         "text": "<p>We are so proud to have won Best Supplier at the Cultural Enterprise Awards. The judges said:<br/><br/>\"Exactly the sort of supplier and product the sector needs, with excellent quality and design created in a thoughtful and sustainable way\"</p>",
         "link_text": "",
@@ -45,6 +46,17 @@
     "awards_9fa3BX": {
       "type": "awards",
       "blocks": {
+        "award_block_fmCtWw": {
+          "type": "award_block",
+          "settings": {
+            "image": "shopify://shop_images/GOTY_Full_Colour_-_Finalist_2_9141402b-46a3-49ea-b5bc-298c68f84612.jpg",
+            "date": "2026",
+            "award": "Gift of the yesr",
+            "title": "Heritage Gifts incorporating Commemorative, Collectable and Charitable",
+            "placing": "Finalist",
+            "product": "garden-insects-playset-copy"
+          }
+        },
         "award_block_DCFVBj": {
           "type": "award_block",
           "settings": {
@@ -146,6 +158,7 @@
         }
       },
       "block_order": [
+        "award_block_fmCtWw",
         "award_block_DCFVBj",
         "award_block_UCbGwA",
         "award_block_JPKgnU",
