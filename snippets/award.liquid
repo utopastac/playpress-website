@@ -1,0 +1,41 @@
+{{ 'award.css' | asset_url | stylesheet_tag }}
+
+<article is="award">
+  <div is="gallery">
+    {%- if award.image == blank -%}
+      {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
+    {%- else -%}
+      <img
+        src="{{ award.image | img_url: 'master' }}"
+        alt="{{ award.image.alt }}"
+        width="900"
+        height="600"
+        is="in-action"
+        loading="lazy"
+      />
+    {%- endif -%}
+  </div>
+  <div is="content">
+    <div is="main-content">
+      <h4>{{ award.date_year | escape }} • {{ award.award_body | escape }}</h4>
+      <h2>{{ award.award_title | escape }}</h2>
+      <p class="{% if award.award_status == 'Winner' %}winner{% endif %}">{{ award.award_status }}</p>
+    </div>
+    {%- if award.product != blank -%}
+      <a is="product-link" href="{{ award.product.url }}">
+        <img
+          alt="{{ award.product.featured_image.alt }}"
+          src="{{ award.product.featured_media | img_url: '400x' }}"
+          loading="lazy"
+          width="400"
+          height="200"
+        />
+        <div>
+          <p>{{ award.product.title }}</p>
+          <span>{{ award.product.price | money }}</span>
+        </div>
+      </a>
+    {%- endif -%}
+  </div>
+</article>
+

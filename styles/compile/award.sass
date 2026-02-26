@@ -1,0 +1,71 @@
+@import '../assets'
+
+article[is="award"]
+  position: relative
+
+  div[is="gallery"]
+    img
+      display: block
+      border: 1px solid $border-color
+
+  div[is="content"]
+
+    div[is="main-content"]
+      padding: units(1.5) 0 units(1)
+
+      h4
+        @extend %body-3
+        @extend %bold
+
+      h2
+        @extend %body-1
+        // @extend %bold
+        line-height: $heading-line-height
+        margin: units(1) 0 units(1) 0
+
+      p
+        position: absolute
+        top: units(1.5)
+        left: units(1.5)
+        @extend %body-3
+        @extend %medium
+        padding: units(0.5) units(1.5)
+        border-radius: 500px
+        background-color: $blue-200
+        display: inline
+
+        &.winner
+          background-color: $blue-1000
+          color: $white
+          border: 3px solid $yolk-1000
+
+
+  a[is="product-link"]
+    cursor: pointer !important
+    padding: units(1) units(1)
+    display: flex
+    align-items: flex-start
+    align-content: flex-start
+    border: 1px solid $border-color
+    border-radius: $border-s
+
+    &:hover
+      border: 1px solid $blue-1000
+
+    p
+      @extend %medium
+      @extend %body-3
+      margin-bottom: units(0.5)
+      width: 100%
+
+    span
+      display: block
+      @extend %body-3
+
+    img
+      width: 40%
+      max-width: size(120)
+      height: auto
+      border-radius: $border-s
+      margin-right: units(1.5)
+      
