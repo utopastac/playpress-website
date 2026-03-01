@@ -174,22 +174,22 @@ $bigUnits: 40
     grid-gap: units(1)
     row-gap: units(1.5)
     display: grid
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, minmax(0, 1fr))
 
     @container product-list-container (width > #{$screen-xs})
-      grid-template-columns: repeat(2, 1fr)
+      grid-template-columns: repeat(2, minmax(0, 1fr))
 
     @container product-list-container (width > #{$screen-m})
       grid-gap: units(1.5)
       row-gap: units(2)
-      grid-template-columns: repeat(3, 1fr)
+      grid-template-columns: repeat(3, minmax(0, 1fr))
 
     @container product-list-container (width > #{$screen-l})
       grid-gap: units(2)
-      grid-template-columns: repeat(4, 1fr)
+      grid-template-columns: repeat(4, minmax(0, 1fr))
     
     @container product-list-container (width > #{$screen-xl})
-      grid-template-columns: repeat(5, 1fr)
+      grid-template-columns: repeat(5, minmax(0, 1fr))
       grid-gap: units(2)
 
 %block-link
