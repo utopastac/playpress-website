@@ -287,6 +287,10 @@ div[is=product] > div .new {
   background: #86FFAE;
   color: #005B13;
 }
+div[is=product] > div .award {
+  background: #F9A200;
+  color: #2D3788;
+}
 div[is=product] > div div[is=product-content] {
   position: relative;
 }

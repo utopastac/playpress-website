@@ -46,7 +46,7 @@
               <div class="tag new">New</div>
             {%- endif -%}
             {%- if product.metafields.custom.award.value != blank and product.metafields.custom.award.value.award_status != blank -%}
-              <div class="tag">🏆 {{ product.metafields.custom.award.value.award_status }}</div>
+              <div class="tag award">🏆 {{ product.metafields.custom.award.value.award_status }}</div>
             {%- endif -%}
             {%- if product.tags contains 'mini' -%}
             <div class="tag">Travel sized</div>
