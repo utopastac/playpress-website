@@ -88,8 +88,7 @@
       {
         "type": "url",
         "id": "delivery_bar_link_url",
-        "label": "Link URL",
-        "default": "/pages/delivery"
+        "label": "Link URL"
       }
     ]
   }
