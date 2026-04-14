@@ -1,11 +1,19 @@
 {{ 'delivery-bar.css' | asset_url | stylesheet_tag }}
 
-{% comment %} <a href="/pages/delivery" is="delivery-bar" class="christmas"> {% endcomment %}
-<a href="/pages/delivery" is="delivery-bar">
+<a href="{{ settings.delivery_bar_link_url | default: '/pages/delivery' }}" is="delivery-bar">
   <ul>
     <div class="icon delivery"></div>
-    <li>We are away for a couple of days, Orders will be sent Monday the 9/04 <span class="not-mobile">Royal Mail 1st Class Tracked</span></li>
-    <div class="dot not-mobile-tablet"></div>
-    <li class="not-mobile-tablet">Sustainable, recyclable, biodegradable!</li>
+    <li>{{ settings.delivery_bar_primary_text }} <span class="not-mobile">{{ settings.delivery_bar_primary_subtext }}</span></li>
+    {%- if settings.delivery_bar_secondary_text != blank -%}
+      <div class="dot not-mobile-tablet"></div>
+      <li class="not-mobile-tablet">{{ settings.delivery_bar_secondary_text }}</li>
+    {%- endif -%}
   </ul>
 </a>
+
+{% schema %}
+{
+  "name": "Delivery bar",
+  "settings": []
+}
+{% endschema %}

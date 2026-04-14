@@ -60,7 +60,36 @@
         "id": "link_text",
         "type": "text",
         "label": "Link text",
-        "default": "Learn more about us"
+      "default": "Learn more about us"
+    }
+  ]
+  },
+  {
+    "name": "Delivery bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "delivery_bar_primary_text",
+        "label": "Primary text",
+        "default": "Free UK delivery on orders over £30"
+      },
+      {
+        "type": "text",
+        "id": "delivery_bar_primary_subtext",
+        "label": "Primary subtext (desktop only)",
+        "default": "Royal Mail 1st Class Tracked"
+      },
+      {
+        "type": "text",
+        "id": "delivery_bar_secondary_text",
+        "label": "Secondary text (desktop only)",
+        "default": "Sustainable, recyclable, biodegradable!"
+      },
+      {
+        "type": "url",
+        "id": "delivery_bar_link_url",
+        "label": "Link URL",
+        "default": "/pages/delivery"
       }
     ]
   }
