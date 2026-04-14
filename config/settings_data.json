@@ -18,6 +18,8 @@
     "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
     "link_url": "shopify://pages/about",
     "link_text": "Learn more about Playpress!",
+    "delivery_bar_primary_subtext": "Royal Mail 1st Class Tracked",
+    "delivery_bar_link_url": "shopify://pages/delivery",
     "checkout_logo_image": "shopify://shop_images/PP_Logo_1.3R_HR-01_512.png",
     "checkout_logo_size": "large",
     "checkout_sidebar_background_color": "#e9e9f2",
