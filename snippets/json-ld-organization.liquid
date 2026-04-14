@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ shop.name | json }},
+  "url": {{ shop.url | json }},
+  "logo": {{ 'logo-no-r.svg' | asset_url | prepend: 'https:' | json }},
+  "sameAs": [
+    {%- if settings.social_twitter_link != blank %}{{ settings.social_twitter_link | json }}{% endif -%}
+    {%- if settings.social_facebook_link != blank %},{{ settings.social_facebook_link | json }}{% endif -%}
+    {%- if settings.social_instagram_link != blank %},{{ settings.social_instagram_link | json }}{% endif -%}
+  ]
+}
+</script>

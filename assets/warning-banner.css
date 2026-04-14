@@ -15,7 +15,7 @@ section[is="warning-banner"] {
       scale: 1.03;
     }
 
-    & h5 {
+    & .cta-label {
       display: inline-flex;
       flex-direction: row-reverse;
       align-items: center;

@@ -17,10 +17,10 @@
             {% endif %}
             <div is="content">
               {% if block.settings.title != blank %}
-                <h4>{{ block.settings.title | escape }}</h4>
+                <h3>{{ block.settings.title | escape }}</h3>
               {% endif %}
               {% if block.settings.subtitle != blank %}
-                <h3>{{ block.settings.subtitle | escape }}</h3>
+                <p class="subtitle">{{ block.settings.subtitle | escape }}</p>
               {% endif %}
               {% if block.settings.text != blank %}
                 <p>{{ block.settings.text }}</p>

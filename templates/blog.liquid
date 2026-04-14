@@ -6,7 +6,7 @@
     <a href="{{ article.url }}">
 
       {%- if article.image -%}
-        <img src="{{ article.image | image_url: width: 300, height: 300 }}" alt="" width="300" height="300">
+        <img src="{{ article.image | image_url: width: 300, height: 300 }}" alt="{{ article.title | escape }}" width="300" height="300">
 
         <noscript>
         <p>

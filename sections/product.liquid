@@ -72,16 +72,16 @@
         </div>
 
         {%- if product.metafields.product.pieces != blank -%}
-          <div class="meta">
+          <dl class="meta">
             <div>
-              <h4>Age range</h4>
-              <h3>{{ product.metafields.product.age_range }}</h3>
+              <dt>Age range</dt>
+              <dd>{{ product.metafields.product.age_range }}</dd>
             </div>
             <div>
-              <h4>Pieces</h4>
-              <h3>{{ product.metafields.product.pieces }}</h3>
+              <dt>Pieces</dt>
+              <dd>{{ product.metafields.product.pieces }}</dd>
             </div>
-          </div>
+          </dl>
         {%- endif -%}
 
         

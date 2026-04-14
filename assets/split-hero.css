@@ -74,7 +74,7 @@ section[is="split-hero"] {
     position: relative;
     z-index: var(--z-navigation);
 
-    & h1 {
+    & h2 {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
       font-size: var(--text-heading-2);

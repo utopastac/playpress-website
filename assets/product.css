@@ -217,7 +217,7 @@ div[is="product"] {
     border: 1px solid var(--color-blue-100);
     border-radius: 1.2rem 1.2rem 0 0;
 
-    & h4 {
+    & dt {
       font-size: var(--text-body-3);
       font-weight: var(--weight-bold);
       line-height: var(--leading-snug);
@@ -225,12 +225,13 @@ div[is="product"] {
       margin-bottom: 0.4rem;
     }
 
-    & h3 {
+    & dd {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
       font-size: var(--text-heading-3);
       line-height: var(--leading-tight);
       letter-spacing: var(--tracking-heading);
+      margin: 0;
       color: var(--color-blue-1000);
     }
 

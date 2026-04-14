@@ -12,7 +12,7 @@ div[is="linked-files"] {
         background-color: var(--color-blue-100);
         color: var(--color-blue-1000);
 
-        & h5 {
+        & .download-icon {
           background-color: var(--color-blue-1000);
           color: var(--color-white);
 
@@ -45,7 +45,7 @@ div[is="linked-files"] {
           line-height: var(--leading-body);
         }
 
-        & h5 {
+        & .download-icon {
           color: var(--color-blue-1000);
           font-size: var(--text-body-3);
           font-weight: var(--weight-bold);

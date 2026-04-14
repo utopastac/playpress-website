@@ -105,7 +105,7 @@ section[is="product-promo-large"] {
       height: var(--btn-height);
     }
 
-    & h1 {
+    & h2 {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
       font-size: var(--text-heading-2);

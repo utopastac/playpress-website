@@ -53,7 +53,7 @@ section[is="hero"] {
       border-radius: var(--radius-m);
     }
 
-    & h1 {
+    & h2 {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
       font-size: var(--text-heading-2);

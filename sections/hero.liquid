@@ -15,7 +15,8 @@
         src="{{ section.settings.image | image_url: width: 2048 }}"
         alt="{{ section.settings.image.alt }}"
         is="in-action"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         width="1200"
         height="800"
         />

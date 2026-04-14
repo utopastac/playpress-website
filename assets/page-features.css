@@ -6,20 +6,20 @@ a[is="page-feature"] {
 
   & h3 {
     font-family: var(--font-heading);
-    font-weight: var(--weight-bold);
-    font-size: var(--text-heading-3);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-heading);
-  }
-
-  & h4 {
-    font-family: var(--font-heading);
     font-weight: var(--weight-extra-bold);
     font-size: var(--text-overline);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-caps);
     text-transform: uppercase;
     margin-bottom: var(--space-0-5);
+  }
+
+  & .subtitle {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-3);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
   }
 
   & p {
@@ -98,7 +98,7 @@ a[is="page-feature"] {
   &:nth-child(3) {
     padding: var(--space-3);
 
-    & h4, & h3, & a {
+    & h3, & .subtitle, & a {
       color: var(--color-white);
     }
 
