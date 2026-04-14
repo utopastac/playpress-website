@@ -444,8 +444,13 @@ div[is=product-promos] .product-item {
   z-index: 1000000;
   visibility: hidden;
   opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s;
   display: none;
   flex-direction: column;
+}
+#filter-modal.is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 @media screen and (min-width: 1080px) {
   #filter-modal {

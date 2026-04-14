@@ -7,7 +7,7 @@ window.addEventListener("load", function(){
     item.addEventListener('click', itemClicked);
   });
 
-  function itemClicked(e){
+  function itemClicked(){
     const index = Array.prototype.indexOf.call(items, this);
     switchItem(index)
   }

@@ -5,7 +5,7 @@
     <div class="image" style="background: {{ section.settings.bg_color_1 }}">
       <img
         alt="{{ product.featured_image.alt }}"
-        src="{{ product.featured_media | img_url: '600x' }}"
+        src="{{ product.featured_media | image_url: width: 600 }}"
         class="image-1"
         loading="lazy"
         width="600"
@@ -13,7 +13,7 @@
       />
       {% for media in product.media offset:2 limit: 1%}
         <img
-          src="{{ media | img_url: '600x' }}"
+          src="{{ media | image_url: width: 600 }}"
           alt="{{ media.alt | escape  }}"
           class="image-2"
           loading="lazy"

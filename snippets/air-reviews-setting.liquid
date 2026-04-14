@@ -1,5 +1,8 @@
 
-{% include 'air-reviews-status' %}
+{% assign airReviewsStatus = false %}
+{% assign airReviewsBranding = false %}
+{% assign airReviewsAppBlock = true %}
+{% assign airReviewSummaryStatus = false %}
 {% assign scripttags = content_for_header | split: 'var urls = ["' %}
 {% if scripttags.size > 1 %}
   {% assign scripttags = scripttags[1] %}
@@ -49,7 +52,7 @@
   AIR_REVIEWS.appBlock = {{ airReviewsAppBlock }};
   AIR_REVIEWS.shopData = {{ shop.metafields.air_reviews_shop.data | default: false }};
   AIR_REVIEWS.settings = {{ shop.metafields.air_reviews_settings.data | default: false }};
-  AIR_REVIEWS.hasStorefrontToken = {{ shop.metafields.air_reviews_has_storefront_token.data | false }};
+  AIR_REVIEWS.hasStorefrontToken = {{ shop.metafields.air_reviews_has_storefront_token.data | default: false | json }};
   AIR_REVIEWS.translations = {{ shop.metafields.air_reviews_translation.data | default: false }};
   AIR_REVIEWS.productReview = {{ product.metafields.air_reviews_product.data | default: false }};
   AIR_REVIEWS.shopLogo = {{ shop.brand.logo | json }};

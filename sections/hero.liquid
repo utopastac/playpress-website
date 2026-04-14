@@ -1,6 +1,6 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
-{% comment %} style="background-image: url({{ section.settings.image | img_url: 'master' }})" {% endcomment %}
+{% comment %} style="background-image: url({{ section.settings.image | image_url: width: 2048 }})" {% endcomment %}
 <section is="hero">
   <a href="{{ section.settings.link_url }}">
     <div is="hero-main" class="{% if section.settings.is_large %}large{% endif %}">
@@ -8,11 +8,11 @@
       {%- if section.settings.background_image == blank -%}
         <div is="hero-background" style="background: {{ section.settings.bg_color }}"></div>
       {%- else -%}
-        <div is="hero-background" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})"></div>
+        <div is="hero-background" style="background-image: url({{ section.settings.background_image | image_url: width: 2048 }})"></div>
       {%- endif -%}
       
       <img
-        src="{{ section.settings.image | img_url: 'master' }}"
+        src="{{ section.settings.image | image_url: width: 2048 }}"
         alt="{{ section.settings.image.alt }}"
         is="in-action"
         loading="lazy"

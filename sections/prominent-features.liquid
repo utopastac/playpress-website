@@ -23,7 +23,7 @@
           {% if block.settings.enable_image %}
             {% if block.settings.image != blank %}
                 <img
-                  src="{{ block.settings.image | img_url: '800x' }}"
+                  src="{{ block.settings.image | image_url: width: 800 }}"
                   alt=""
                   is="in-action"
                   loading="lazy"

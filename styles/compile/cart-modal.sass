@@ -12,7 +12,12 @@
   @extend %elevation-3
   visibility: hidden
   opacity: 0
+  transition: opacity 0.5s ease, visibility 0.5s
   border-radius: 0 0 $border-s $border-s
+
+  &.is-visible
+    visibility: visible
+    opacity: 1
 
   @include min($screen-m)
     width: units(50)

@@ -1,4 +1,4 @@
-{{ 'delivery.js' | asset_url | script_tag }}
+<script src="{{ 'delivery.js' | asset_url }}" defer></script>
 {{ 'delivery.css' | asset_url | stylesheet_tag }}
 
 <div is="delivery" id="delivery">

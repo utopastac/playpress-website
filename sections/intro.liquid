@@ -4,7 +4,7 @@
   <div>
     {%- if section.settings.image != blank -%}
       <img
-        src="{{ section.settings.image | img_url: '900x' }}"
+        src="{{ section.settings.image | image_url: width: 900 }}"
         alt="{{ section.settings.image.alt }}"
         width="900"
         height="600"

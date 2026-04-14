@@ -108,6 +108,14 @@ div[is=gallery] {
   z-index: 10000;
   padding: 1.6rem;
   visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s;
+}
+#gallery-lightbox.is-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 #gallery-lightbox #close-button {
   position: fixed;

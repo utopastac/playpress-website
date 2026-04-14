@@ -1,5 +1,5 @@
-{{ 'product.js' | asset_url | script_tag }}
-{{ 'expand-text.js' | asset_url | script_tag }}
+<script src="{{ 'product.js' | asset_url }}" defer></script>
+<script src="{{ 'expand-text.js' | asset_url }}" defer></script>
 {{ 'product.css' | asset_url | stylesheet_tag }}
 {{ 'gallery.css' | asset_url | stylesheet_tag }}
 
@@ -13,11 +13,11 @@
             class="page-image"
             data-index="1"
             srcset="
-              {{ product.featured_image | img_url: '320x' }} 320w,
-              {{ product.featured_image | img_url: '500x' }} 500w,
-              {{ product.featured_image | img_url: '740x' }} 740w,
-              {{ product.featured_image | img_url: '1000x' }} 1000w"
-            src="{{ product.featured_image | img_url: '500x' }}"
+              {{ product.featured_image | image_url: width: 320 }} 320w,
+              {{ product.featured_image | image_url: width: 500 }} 500w,
+              {{ product.featured_image | image_url: width: 740 }} 740w,
+              {{ product.featured_image | image_url: width: 1000 }} 1000w"
+            src="{{ product.featured_image | image_url: width: 500 }}"
             sizes="calc(100vw - 2rem)"
             width="1000"
             loading="lazy"
@@ -25,11 +25,10 @@
             alt="{{ product.featured_image.alt | escape }}"
           />
           {% for media in product.media offset:1 %}
-            {{ index}}
             <img
               class="page-image"
               data-index="{{ forloop.index | plus: 1 }}"
-              src="{{ media | img_url: '800x' }}"
+              src="{{ media | image_url: width: 800 }}"
               alt="{{ media.alt | escape  }}"
               loading="lazy"
               width="800"
@@ -207,7 +206,7 @@
           <img
             class="image"
             data-index="{{ forloop.index }}"
-            src="{{ media | img_url: '800x' }}"
+            src="{{ media | image_url: width: 800 }}"
             alt="{{ media.alt | escape  }}"
             loading="lazy"
             width="800"

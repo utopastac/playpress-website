@@ -297,8 +297,13 @@ div[is="product-promos"]
   @extend %elevation-3
   visibility: hidden
   opacity: 0
+  transition: opacity 0.3s ease, visibility 0.3s
   display: none
   flex-direction: column
+
+  &.is-visible
+    visibility: visible
+    opacity: 1
 
   @include min($screen-l)
     display: none !important

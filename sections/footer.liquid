@@ -58,7 +58,7 @@
             <a is="product-link" href="{{ product.url }}">
               <img
                 alt="{{ product.featured_image.alt }}"
-                src="{{ product.featured_media | img_url: '400x' }}"
+                src="{{ product.featured_media | image_url: width: 400 }}"
                 loading="lazy"
                 width="400"
                 height="200"

@@ -6,7 +6,7 @@
       {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
     {%- else -%}
       <img
-        src="{{ award.image | img_url: 'master' }}"
+        src="{{ award.image | image_url: width: 2048 }}"
         alt="{{ award.image.alt }}"
         width="900"
         height="600"
@@ -25,7 +25,7 @@
       <a is="product-link" href="{{ award.product.value.url }}">
         <img
           alt="{{ award.product.value.featured_image.alt }}"
-          src="{{ award.product.value.featured_media | img_url: '400x' }}"
+          src="{{ award.product.value.featured_media | image_url: width: 400 }}"
           loading="lazy"
           width="400"
           height="200"

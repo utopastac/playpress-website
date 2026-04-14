@@ -13,7 +13,7 @@
             {% if block.settings.image != blank %}
               <div
                 is="image"
-                style="background-image: url({{ block.settings.image | img_url: 'master' }})"></div>       
+                style="background-image: url({{ block.settings.image | image_url: width: 2048 }})"></div>       
             {% endif %}
             <div is="content">
               {% if block.settings.title != blank %}

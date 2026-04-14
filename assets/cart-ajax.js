@@ -3,7 +3,6 @@ window.addEventListener("load", function(){
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const plus = button.classList.contains('plus');
-      const minus = button.classList.contains('minus');
       const input = button.parentElement.querySelector('input');
       const value = Number(input.value);
       const key = button.closest(".cart-item").getAttribute("data-key");
@@ -17,18 +16,26 @@ window.addEventListener("load", function(){
   });
 
   function changeItemQuantity(key, quantity) {
-    axios.post('/cart/change.js', {
-      id: key,
-      quantity
-    }).then((res) => {
-      const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
-      const totalPrice = formatMoney(res.data.total_price, format);
-      const item = res.data.items.find(item => item.key===key);
-      const itemPrice = formatMoney(item.final_line_price, format);
-      document.querySelector(`[data-key="${key}"] .price`).textContent = itemPrice;
-      const totalCount = res.data.item_count;
-      resetPrices(totalPrice, totalCount);
-    });
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ id: key, quantity: Number(quantity) })
+    })
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error('Cart update failed');
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        const format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+        const totalPrice = formatMoney(data.total_price, format);
+        const item = data.items.find(function (line) { return line.key === key; });
+        const itemPrice = formatMoney(item.final_line_price, format);
+        document.querySelector(`[data-key="${key}"] .price`).textContent = itemPrice;
+        const totalCount = data.item_count;
+        resetPrices(totalPrice, totalCount);
+      });
   }
 
   document.querySelectorAll('.remove-item').forEach(button => {
@@ -38,22 +45,30 @@ window.addEventListener("load", function(){
       const key = item.getAttribute("data-key");
       const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
 
-      axios.post('/cart/change.js', {
-        id: key,
-        quantity: 0
-      }).then((res) => {
-        if(res.data.items.length === 0){
-          document.querySelector('#cart-table').remove();
-          document.querySelector('#checkout-button').remove();
-          document.querySelector('#main-title').textContent = "Your cart is empty";
-          resetPrices(formatMoney(0, format));
-        } else {
-          const totalPrice = formatMoney(res.data.total_price, format);
-          item.remove();
-          const totalCount = res.data.item_count;
-          resetPrices(totalPrice, totalCount);
-        }
-      });
+      fetch('/cart/change.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ id: key, quantity: 0 })
+      })
+        .then(function (res) {
+          if (!res.ok) {
+            throw new Error('Cart update failed');
+          }
+          return res.json();
+        })
+        .then(function (data) {
+          if (data.items.length === 0) {
+            document.querySelector('#cart-table').remove();
+            document.querySelector('#checkout-button').remove();
+            document.querySelector('#main-title').textContent = 'Your cart is empty';
+            resetPrices(formatMoney(0, format));
+          } else {
+            const totalPrice = formatMoney(data.total_price, format);
+            item.remove();
+            const totalCount = data.item_count;
+            resetPrices(totalPrice, totalCount);
+          }
+        });
     })
   });
 

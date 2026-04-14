@@ -1,0 +1,10 @@
+extends: theme-check:recommended
+ignore:
+  - node_modules/**
+
+ValidJSON:
+  enabled: false
+ContentForHeaderModification:
+  enabled: false
+RemoteAsset:
+  enabled: false

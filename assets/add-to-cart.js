@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
   let timeout = null;
   let addButton = null;
 
-  document.querySelector('#cart-modal-close').addEventListener('click', (e) => {
+  document.querySelector('#cart-modal-close').addEventListener('click', () => {
     hideModal();
   });
 
@@ -24,23 +24,42 @@ window.addEventListener("load", function(){
   });
 
   function addToCart(id, quantity) {
-    axios.post('/cart/add.js', {
-      'items': [{
-        'id': id,
-        'quantity': quantity
-        }]
-    }).then((res) => {
-      const item = res.data.items[0];
-      showModal(item, quantity);
-      
-      axios.get('/cart.js', {}).then((res) => {
-        const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
-        const totalPrice = formatMoney(res.data.total_price, format);
-        const totalCount = res.data.item_count;
+    const jsonHeaders = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: jsonHeaders,
+      body: JSON.stringify({
+        items: [{ id, quantity }]
+      })
+    })
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error('Add to cart failed');
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        const item = data.items[0];
+        showModal(item, quantity);
+        return fetch('/cart.js', { headers: { Accept: 'application/json' } });
+      })
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error('Cart fetch failed');
+        }
+        return res.json();
+      })
+      .then(function (cart) {
+        const format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+        const totalPrice = formatMoney(cart.total_price, format);
+        const totalCount = cart.item_count;
         resetPrices(totalPrice, totalCount);
+      })
+      .catch(function () {
+        if (addButton) {
+          addButton.classList.remove('button-loading');
+        }
       });
-      
-    });
   }
 
   function showModal(item, quantity){
@@ -52,19 +71,22 @@ window.addEventListener("load", function(){
     document.querySelector('#cart-modal-image').src = item.image;
     document.querySelector('#cart-modal-title').textContent = title;
     document.querySelector('#cart-modal-price').textContent = formatMoney(item.price, format);
-    gsap.to('#cart-modal', {autoAlpha: 1, duration: 0.5});
+    cartModal.classList.add('is-visible');
     clearTimeout(timeout);
     timeout = setTimeout(hideModal, 5000);
-    cartModal.addEventListener('mouseenter', (e) => {
+    cartModal.addEventListener('mouseenter', () => {
       clearTimeout(timeout);
     });
-    cartModal.addEventListener('mouseleave', (e) => {
+    cartModal.addEventListener('mouseleave', () => {
       timeout = setTimeout(hideModal, 2000);
     });
   }
 
   function hideModal(){
-    gsap.to('#cart-modal', {autoAlpha: 0, duration: 0.5});
+    const cartModal = document.querySelector('#cart-modal');
+    if (cartModal) {
+      cartModal.classList.remove('is-visible');
+    }
   }
 
   function resetPrices(totalPrice, totalCount){

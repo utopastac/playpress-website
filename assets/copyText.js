@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
     item.addEventListener('click', copy);
   });
 
-  function copy(e) {
+  function copy() {
     const objectToCopy = this.parentNode.querySelector(".text-to-copy");
     navigator.clipboard.writeText(objectToCopy.innerHTML);
     // alert("Copied the text: " + objectToCopy.innerHTML);

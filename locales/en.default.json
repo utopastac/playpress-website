@@ -1,11 +1,28 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
+  "general": {
+    "search": {
+      "heading": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} results"
+      },
+      "results_with_count": {
+        "one": "{{ terms }} — {{ count }} result",
+        "other": "{{ terms }} — {{ count }} results"
+      }
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "404": {
+      "title": "Page not found",
+      "subtext": "The page you were looking for does not exist.",
+      "link": "Continue shopping"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "no_content": "This section has no content yet."
+    }
+  }
 }

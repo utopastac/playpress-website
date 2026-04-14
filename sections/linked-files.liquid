@@ -14,7 +14,7 @@
               <div class="image">
                 <img
                   alt="{{ product.featured_image.alt }}"
-                  src="{{ product.featured_media | img_url: '600x' }}"
+                  src="{{ product.featured_media | image_url: width: 600 }}"
                   class="image-1"
                   loading="lazy"
                   width="600"

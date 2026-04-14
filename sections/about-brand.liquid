@@ -6,7 +6,7 @@
     <div>
       <img
         is="in-action"
-        src="{{ settings.image_primary | img_url : '900x' }}"
+        src="{{ settings.image_primary | image_url: width: 900 }}"
         alt="{{ settings.image_primary.img_alt }}"
         width="900"
         height="600"
@@ -20,28 +20,28 @@
     <div>
       <img
         is="in-action"
-        src="{{ settings.image_primary | img_url : '900x' }}"
+        src="{{ settings.image_primary | image_url: width: 900 }}"
         alt="{{ settings.image_primary.img_alt }}"
         width="900"
         height="600"
         loading="lazy"
       />
       <div>
-        <h4>{{ settings.heading_secondary | escape }}</h5>
+        <h4>{{ settings.heading_secondary | escape }}</h4>
         <p>{{ settings.text_secondary | escape }}</p>
       </div>
     </div><!-- second block -->
     <div>
       <img
         is="in-action"
-        src="{{ settings.image_primary | img_url : '900x' }}"
+        src="{{ settings.image_primary | image_url: width: 900 }}"
         alt="{{ settings.image_primary.img_alt }}"
         width="900"
         height="600"
         loading="lazy"
       />
       <div>
-        <h4>{{ settings.heading_tertiary | escape }}</h5>
+        <h4>{{ settings.heading_tertiary | escape }}</h4>
         <p>{{ settings.text_tertiary | escape }}</p>
       </div>
     </div><!-- third block -->

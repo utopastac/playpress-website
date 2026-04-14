@@ -6,9 +6,11 @@
       {% for media in section.settings.product.media limit:3 %}
         <div>
           <img
-            src="{{ media | img_url: '800x' }}"
+            src="{{ media | image_url: width: 800 }}"
             alt="{{ media.alt }}"
             loading="lazy"
+            width="800"
+            height="800"
           />
         </div>
       {% endfor %}
@@ -16,7 +18,7 @@
       {% for block in section.blocks %}
         <div>
           <img
-            src="{{ block.settings.image | img_url: '400x400' }}"
+            src="{{ block.settings.image | image_url: width: 400, height: 400 }}"
             alt="{{ block.settings.image.alt }}"
             loading="lazy"
             width="400"
@@ -37,7 +39,7 @@
           <h3>Age {{ section.settings.product.metafields.product.age_range }}, {{ section.settings.product.metafields.product.pieces }} pieces</h3>
         </div>
       {%- endif -%}
-      <div class="description"><p>{{ section.settings.text }}<p></div>
+      <div class="description"><p>{{ section.settings.text }}</p></div>
       <div is="call-to-action">
         <p is="product-price">{{ section.settings.product.price | money }}</p>
         <form method="post" action="/cart/add">

@@ -329,8 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }) || keywordFilters[0];
     
     const currentKeyword = visibleKeywordInput ? visibleKeywordInput.value.trim() : '';
-    const selectedCollection = Array.from(collectionRadios)
-      .find(radio => radio.checked)?.value;
     const currentPrices = Array.from(priceCheckboxes)
       .filter(cb => cb.checked)
       .map(cb => parseFloat(cb.value));
@@ -609,7 +607,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Handle click on label as well (since clicking label triggers radio)
       const label = document.querySelector(`label[for="${radio.id}"]`);
       if (label) {
-        label.addEventListener('click', function(e) {
+        label.addEventListener('click', function() {
           // Small delay to let native radio behavior happen first
           setTimeout(() => {
             if (radio.checked) {
@@ -622,7 +620,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // Also handle direct click on radio button
-      radio.addEventListener('click', function(e) {
+      radio.addEventListener('click', function() {
         // Ensure checked attribute is set
         if (this.checked) {
           this.setAttribute('checked', 'checked');
@@ -682,10 +680,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Modal toggle functionality (mobile only)
   function toggleFilters() {
     if (filterModal) {
-      // Toggle modal
-      const isVisible = filterModal.style.visibility === 'visible' || 
-                       (filterModal.style.opacity === '1' && filterModal.style.visibility !== 'hidden');
-      
+      const isVisible = filterModal.classList.contains('is-visible');
+
       if (isVisible) {
         hideFilterModal();
       } else {
@@ -695,27 +691,27 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function hideFilterModal() {
-    if (filterModal && typeof gsap !== 'undefined') {
-      gsap.to('#filter-modal', {autoAlpha: 0, duration: 0.3, onComplete: function() {
+    if (!filterModal) {
+      return;
+    }
+    filterModal.classList.remove('is-visible');
+    window.setTimeout(function() {
+      if (!filterModal.classList.contains('is-visible')) {
         filterModal.style.display = 'none';
-      }});
-    } else if (filterModal) {
-      filterModal.style.visibility = 'hidden';
-      filterModal.style.opacity = '0';
-      filterModal.style.display = 'none';
-    }
-  }
-  
-  function showFilterModal() {
-    if (filterModal && !isLargeScreen()) {
-      filterModal.style.display = 'flex';
-      if (typeof gsap !== 'undefined') {
-        gsap.to('#filter-modal', {autoAlpha: 1, duration: 0.3});
-      } else {
-        filterModal.style.visibility = 'visible';
-        filterModal.style.opacity = '1';
       }
+    }, 300);
+  }
+
+  function showFilterModal() {
+    if (!filterModal || isLargeScreen()) {
+      return;
     }
+    filterModal.style.display = 'flex';
+    window.requestAnimationFrame(function() {
+      window.requestAnimationFrame(function() {
+        filterModal.classList.add('is-visible');
+      });
+    });
   }
 
   if (filterToggle) {
@@ -727,6 +723,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isLargeScreen() && filterSidebar) {
       // On large screens, ensure sidebar is visible
       filterSidebar.style.display = '';
+      if (filterModal) {
+        filterModal.classList.remove('is-visible');
+        filterModal.style.display = 'none';
+      }
     } else if (filterSidebar) {
       // On small screens, hide sidebar
       filterSidebar.style.display = 'none';
@@ -755,7 +755,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Close modal on Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && filterModal && filterModal.style.visibility === 'visible') {
+    if (e.key === 'Escape' && filterModal && filterModal.classList.contains('is-visible')) {
       hideFilterModal();
     }
   });

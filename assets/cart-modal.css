@@ -162,7 +162,12 @@ a[is=outline-button]:hover {
   padding: 3.2rem 2.4rem 2.4rem 2.4rem;
   visibility: hidden;
   opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s;
   border-radius: 0 0 1.6rem 1.6rem;
+}
+#cart-modal.is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 @media screen and (min-width: 740px) {
   #cart-modal {

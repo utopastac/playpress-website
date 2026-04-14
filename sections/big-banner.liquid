@@ -1,19 +1,22 @@
 {{ 'big-banner.css' | asset_url | stylesheet_tag }}
 
 <section is="big-banner" class="{% if section.settings.layout == 'right' %}swapped{% endif %}">
+  {%- liquid
+    if section.settings.background_image == blank
+      assign banner_bg_style = 'background: ' | append: section.settings.bg_color
+    else
+      assign banner_bg_url = section.settings.background_image | image_url: width: 2048
+      assign banner_bg_style = 'background-image: url(' | append: banner_bg_url | append: ')'
+    endif
+  -%}
   <a href="{{ section.settings.link_url }}">
-    <div>
-      {%- if section.settings.background_image == blank -%}
-        <div class="banner-content" style="background: {{ section.settings.bg_color }}">
-      {%- else -%}
-        <div class="banner-content" style="background-image: url({{ section.settings.background_image | img_url: 'master' }})">
-      {%- endif -%}
+    <div class="banner-content" style="{{ banner_bg_style }}">
 
         {%- if section.settings.image == blank -%}
           {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
         {%- else -%}
           <img
-            src="{{ section.settings.image | img_url: 'master' }}"
+            src="{{ section.settings.image | image_url: width: 2048 }}"
             alt="{{ section.settings.image.alt }}"
             width="900"
             height="600"
@@ -31,9 +34,7 @@
           <div is="button">{{ section.settings.link_text }}<div class="icon arrow-right"></div></div>
         </div>
 
-        
-      </div>
-    </div>
+  </div>
   </a>
 </section>
 

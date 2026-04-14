@@ -1,17 +1,10 @@
 {{ 'collection-promo.css' | asset_url | stylesheet_tag }}
 
-{% case collection.products_count %}
-  {% when 1 %}
-    {%- assign product_label = 'playset' -%}
-  {% else %}
-    {%- assign product_label = 'playsets' -%}
-{% endcase %}
-
 <a class="collection-promo" href="{{ collection.url }}">
   {% if collection.featured_media != blank %}
     <img
       alt="{{ collection.featured_image.alt }}"
-      src="{{ collection.featured_media | img_url: '600x' }}"
+      src="{{ collection.featured_media | image_url: width: 600 }}"
       loading="lazy"
       width="600"
       height="400"

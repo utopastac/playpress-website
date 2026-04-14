@@ -44,6 +44,14 @@ div[is="gallery"]
   z-index: 10000
   padding: units(2)
   visibility: hidden
+  opacity: 0
+  pointer-events: none
+  transition: opacity 0.2s ease, visibility 0.2s
+
+  &.is-visible
+    visibility: visible
+    opacity: 1
+    pointer-events: auto
 
   // &.active
   //   display: block

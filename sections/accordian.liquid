@@ -1,4 +1,4 @@
-{{ 'accordian.js' | asset_url | script_tag }}
+<script src="{{ 'accordian.js' | asset_url }}" defer></script>
 {{ 'accordian.css' | asset_url | stylesheet_tag }}
 
 <section is="section">
@@ -25,7 +25,7 @@
       <div id="accordian-images">
         {% for block in section.blocks %}
           <img
-            src="{{ block.settings.image | img_url: '800x' }}"
+            src="{{ block.settings.image | image_url: width: 800 }}"
             alt="{{ block.settings.image.alt }}"
             is="in-action"
             loading="lazy"
