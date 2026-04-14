@@ -1,0 +1,195 @@
+:root {
+  /* ─── Colour palette ──────────────────────────────────────── */
+
+  --color-white: #ffffff;
+  --color-white-10: rgb(255 255 255 / 0.1);
+  --color-white-12: rgb(255 255 255 / 0.12);
+  --color-white-20: rgb(255 255 255 / 0.2);
+  --color-white-25: rgb(255 255 255 / 0.25);
+  --color-white-40: rgb(255 255 255 / 0.4);
+  --color-white-50: rgb(255 255 255 / 0.5);
+  --color-white-75: rgb(255 255 255 / 0.75);
+
+  --color-yolk-100: #f3f0eb;
+  --color-yolk-200: #f0e6d3;
+  --color-yolk-800: #f6d18a;
+  --color-yolk-1000: #fab638;
+  --color-yolk-1200: #f9a200;
+
+  --color-grey-100: #f3f3f7;
+  --color-grey-200: #e7e9ef;
+  --color-grey-500: rgb(137 143 158);
+  --color-grey-700: rgb(89 98 119);
+  --color-grey-800: #41495e;
+  --color-grey-1000: #1d203f;
+  --color-grey-1200: #0a122a;
+
+  --color-blue-50: #f0f2f9;
+  --color-blue-100: #ebedfa;
+  --color-blue-200: #ebedfa;
+  --color-blue-300: #c9ccdf;
+  --color-blue-800: #5b5e95;
+  --color-blue-1000: #2d3788;
+  --color-blue-1200: #19226b;
+
+  --color-red-1000: #232838;
+  --color-green-1000: #2d8872;
+  --color-teal-1000: #0c7489;
+  --color-magenta-1000: #c92358;
+  --color-lime-1000: #a6b61b;
+  --color-sky-1000: #acdced;
+
+  --color-new-bg: #86ffae;
+  --color-new-text: #005b13;
+
+  --color-gradient-blue-a: #3d51f5;
+  --color-gradient-blue-b: #3645bf;
+
+  /* ─── Semantic colour aliases ──────────────────────────────── */
+
+  --color-text: var(--color-grey-1200);
+  --color-text-muted: var(--color-grey-700);
+  --color-text-subtle: var(--color-grey-800);
+  --color-surface: var(--color-white);
+  --color-surface-alt: var(--color-grey-100);
+  --color-border: var(--color-grey-200);
+  --color-border-on-dark: var(--color-white-10);
+  --color-focus: var(--color-yolk-1000);
+  --color-error: var(--color-red-1000);
+  --color-accent: var(--color-yolk-1000);
+  --color-link: var(--color-blue-1000);
+
+  /* ─── Spacing (1 unit = 0.8 rem) ──────────────────────────── */
+
+  --space-0-5: 0.4rem;
+  --space-1: 0.8rem;
+  --space-1-5: 1.2rem;
+  --space-2: 1.6rem;
+  --space-2-5: 2rem;
+  --space-3: 2.4rem;
+  --space-3-5: 2.8rem;
+  --space-4: 3.2rem;
+  --space-5: 4rem;
+  --space-6: 4.8rem;
+  --space-7: 5.6rem;
+  --space-8: 6.4rem;
+  --space-10: 8rem;
+  --space-12: 9.6rem;
+  --space-15: 12rem;
+  --space-18: 14.4rem;
+  --space-20: 16rem;
+  --space-24: 19.2rem;
+  --space-25: 20rem;
+  --space-32: 25.6rem;
+
+  /* ─── Border radius ───────────────────────────────────────── */
+
+  --radius-xs: 0.8rem;
+  --radius-s: 1.6rem;
+  --radius-m: 3.2rem;
+  --radius-l: 4rem;
+  --radius-pill: 500px;
+  --radius-round: 50%;
+
+  /* ─── Breakpoints (reference only — can't use in @media) ─── */
+  /*
+    xs   350px
+    s    550px
+    m    770px
+    l   1080px
+    xl  1200px
+    xxl 1400px
+  */
+
+  /* ─── Elevation ────────────────────────────────────────────── */
+
+  --shadow-1: 0 1px 4px rgb(10 18 42 / 0.05);
+  --shadow-2: 0 40px 50px -40px rgb(10 18 42 / 0.08);
+  --shadow-3: 0 1px 4px rgb(10 18 42 / 0.12),
+              0 8px 24px rgb(10 18 42 / 0.18);
+  --shadow-button: 0 2px 2px 0 rgb(0 0 0 / 0.18),
+                   0 6px 12px 0 rgb(0 0 0 / 0.12),
+                   0 2px 4px 0 rgb(255 255 255 / 0.25) inset;
+
+  /* ─── Z-index ──────────────────────────────────────────────── */
+
+  --z-base: 1;
+  --z-navigation: 1000;
+  --z-main-menu: 1100;
+  --z-contextual: 3000;
+  --z-pickers: 5000;
+  --z-overlay: 10000;
+  --z-modal: 1000000;
+
+  /* ─── Typography ───────────────────────────────────────────── */
+
+  --font-body: brandon-grotesque, sans-serif;
+  --font-heading: brandon-grotesque, sans-serif;
+  --font-mono: "Sofia Pro", system-ui, -apple-system, "Segoe UI", roboto,
+               "Helvetica Neue", sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-extra-bold: 900;
+
+  --leading-tight: 1.15;
+  --leading-body: 1.4;
+  --leading-snug: 1.15;
+  --leading-normal: 1.5;
+
+  --tracking-heading: -0.02em;
+  --tracking-caps: 0.1em;
+
+  /* Responsive type scale — mobile-first, overridden at --bp-l */
+  --text-heading-1: 3.8rem;
+  --text-heading-2: 3.2rem;
+  --text-heading-3: 2.7rem;
+  --text-overline: 1.4rem;
+  --text-body-1: 2.2rem;
+  --text-body-2: 1.9rem;
+  --text-body-3: 1.7rem;
+  --text-body-4: 1.4rem;
+
+  /* ─── Layout ───────────────────────────────────────────────── */
+
+  --content-max: 152rem;
+  --page-max: 140rem;
+  --text-max: 75ch;
+
+  /* ─── Motion ───────────────────────────────────────────────── */
+
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --ease-standard: ease-in-out;
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-spring: cubic-bezier(0.175, 1, 0.2, 1.8);
+
+  /* ─── Buttons ──────────────────────────────────────────────── */
+
+  --btn-height: var(--space-6);
+  --btn-height-sm: var(--space-5);
+  --btn-height-micro: var(--space-4);
+  --btn-radius: var(--radius-s);
+  --btn-bg: linear-gradient(186deg,
+    var(--color-gradient-blue-a) 4.97%,
+    var(--color-gradient-blue-b) 19.29%,
+    var(--color-blue-1000) 85.82%);
+  --btn-color: var(--color-white);
+  --btn-shadow: var(--shadow-button);
+}
+
+/* Desktop type scale */
+@media (width >= 1080px) {
+  :root {
+    --text-heading-1: 5.6rem;
+    --text-heading-2: 4.2rem;
+    --text-heading-3: 3.4rem;
+    --text-overline: 1.5rem;
+    --text-body-1: 2.6rem;
+    --text-body-2: 2.1rem;
+    --text-body-3: 1.8rem;
+    --text-body-4: 1.5rem;
+  }
+}

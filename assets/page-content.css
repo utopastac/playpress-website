@@ -1,223 +1,74 @@
-div[is=page-content] ul {
-  padding-left: 3.2rem;
-}
-div[is=page-content] ul li {
-  list-style-type: disc;
-}
-
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
-
-div[is=page-content] h5, div[is=page-content] h3, div[is=page-content] .heading-s, div[is=page-content] h2, div[is=page-content] .heading-m, div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], div[is=page-content] .body-2, div[is=page-content] h6, div[is=page-content] .body-1, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .button-text, div[is=page-content] h4, div[is=page-content] .body-0 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], div[is=page-content] .body-2, div[is=page-content] h6, div[is=page-content] .body-1, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .button-text, div[is=page-content] h4, div[is=page-content] .body-0 {
-  font-weight: 400;
-}
-
-div[is=page-content] h6, div[is=page-content] h4, div[is=page-content] strong, div[is=page-content] b, a[is=outline-button], div[is=page-content] .button-text {
-  font-weight: 700;
-}
-
-div[is=page-content] h5 {
-  font-weight: 900;
-}
-
-div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
-  font-size: 3.8rem;
-  line-height: 115%;
-  letter-spacing: -0.76px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h1, div[is=page-content] .heading-l, div[is=page-content] ul li {
-    font-size: 5.6rem;
-    line-height: 115%;
-    letter-spacing: -1.12px;
-  }
-}
-
-div[is=page-content] h2, div[is=page-content] .heading-m {
-  font-size: 3.2rem;
-  line-height: 115%;
-  letter-spacing: -0.64px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h2, div[is=page-content] .heading-m {
-    font-size: 4.2rem;
-    line-height: 115%;
-    letter-spacing: -0.84px;
-  }
-}
-
-div[is=page-content] h3, div[is=page-content] .heading-s {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h3, div[is=page-content] .heading-s {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
-  }
-}
-
-div[is=page-content] h5 {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h5 {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
-  }
-}
-
-div[is=page-content] h4, div[is=page-content] .body-0 {
-  font-size: 2.2rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h4, div[is=page-content] .body-0 {
-    font-size: 2.6rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-div[is=page-content] h6, div[is=page-content] .body-1, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .button-text {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] h6, div[is=page-content] .body-1, div[is=page-content] p, div[is=page-content] ul li, div[is=page-content] .button-text {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-div[is=page-content] .body-2 {
-  font-size: 1.7rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=page-content] .body-2 {
-    font-size: 1.8rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-div[is=page-content] ul {
-  margin-top: 1.6rem;
-}
-div[is=page-content] ul li:not(:first-child) {
-  margin-top: 1.6rem;
-}
-div[is=page-content] a {
-  text-decoration: underline;
-}
-div[is=page-content] p + h2, div[is=page-content] p + h3, div[is=page-content] ul + h2, div[is=page-content] ul + h3 {
-  margin-top: 3.2rem;
-}
-div[is=page-content] p + h4, div[is=page-content] p + h5, div[is=page-content] ul + h4, div[is=page-content] ul + h5 {
-  margin-top: 2.4rem;
-}
-div[is=page-content] blockquote {
-  margin-top: 2.4rem;
-  padding: 2.4rem 0 0 0;
-}
-div[is=page-content] h1, div[is=page-content] .heading-l {
-  margin-bottom: 3.2rem;
-}
-div[is=page-content] h2, div[is=page-content] .heading-m {
-  margin-bottom: 2.4rem;
-}
-div[is=page-content] h3, div[is=page-content] .heading-s {
-  margin-bottom: 0.8rem;
-}
-div[is=page-content] h4 {
-  margin-bottom: 0.8rem;
-}
-div[is=page-content] h6 {
-  margin-bottom: 0.8rem;
-}
-div[is=page-content] hr {
-  height: 1;
-  border: none;
-  background: #E7E9EF;
-  margin: 3.2rem 0 2.4rem 0;
-}
-
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
-
-div[is=page-content] {
-  margin: 3.2rem auto 9.6rem auto;
-  padding: 0 3.2rem;
+div[is="page-content"] {
+  margin: var(--space-4) auto var(--space-12);
+  padding-inline: var(--space-4);
   max-width: 60rem;
-}
-div[is=page-content] img {
-  border-radius: 3.2rem;
-  border: 1px solid #E7E9EF;
-  margin: 2.4rem -2.4rem;
-}
-@media screen and (min-width: 550px) {
-  div[is=page-content] {
-    padding: 3.2rem 3.2rem 4.8rem 3.2rem;
+
+  /* Prose typography */
+  & p, & ul li {
+    font-family: var(--font-heading);
+    font-size: var(--text-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-body);
+  }
+
+  & strong, & b { font-weight: var(--weight-bold); }
+  & a { text-decoration: underline; }
+
+  & ul {
+    padding-inline-start: var(--space-4);
+
+    & li { list-style-type: disc; }
+  }
+
+  & h1 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-1);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-4);
+  }
+
+  & h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-2);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-3);
+  }
+
+  & h3 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-3);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-1);
+  }
+
+  & h4 {
+    font-size: var(--text-body-1);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-1);
+  }
+
+  & h5 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-extra-bold);
+    font-size: var(--text-overline);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+  }
+
+  & img {
+    border-radius: var(--radius-m);
+    border: 1px solid var(--color-grey-200);
+    margin: var(--space-3) calc(-1 * var(--space-3));
+  }
+
+  @media (width >= 550px) {
+    padding: var(--space-4) var(--space-4) var(--space-6);
   }
 }

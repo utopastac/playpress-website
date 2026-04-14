@@ -1,15 +1,15 @@
-<script src="{{ 'accordian.js' | asset_url }}" defer></script>
-{{ 'accordian.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'accordion.js' | asset_url }}" defer></script>
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
 
 <section is="section">
 
   {% render 'section-header', title: section.settings.title, text: section.settings.text, center: false %}
 
-  <div is="accordian">
-    <div id="accordian-content">
+  <div is="accordion">
+    <div id="accordion-content">
 
         {% for block in section.blocks %}
-          <article is="accordian-item" class="accordian-item">
+          <article is="accordion-item" class="accordion-item">
             <header>
                 <h4>{{ block.settings.title | escape }}</h4>
                 <div class="icons">
@@ -22,7 +22,7 @@
         {% endfor %}
 
     </div>
-      <div id="accordian-images">
+      <div id="accordion-images">
         {% for block in section.blocks %}
           <img
             src="{{ block.settings.image | image_url: width: 800 }}"
@@ -31,7 +31,7 @@
             loading="lazy"
             width="800"
             height="600"
-            class="accordian-image"
+            class="accordion-image"
             />
         {% endfor %}
       </div>
@@ -56,8 +56,8 @@
   ],
   "blocks": [
     {
-      "type": "accordian_item",
-      "name": "accordian item",
+      "type": "accordion_item",
+      "name": "accordion item",
       "settings": [
         {
           "type": "image_picker",
@@ -89,13 +89,13 @@
       "name": "Accordian",
       "blocks": [
         {
-          "type": "accordian_item"
+          "type": "accordion_item"
         },
         {
-          "type": "accordian_item"
+          "type": "accordion_item"
         },
         {
-          "type": "accordian_item"
+          "type": "accordion_item"
         }
       ]
     }

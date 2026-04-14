@@ -74,10 +74,10 @@
       }
     },
     "3b41803c-8040-4774-b0f7-9dfed59a656a": {
-      "type": "accordian",
+      "type": "accordion",
       "blocks": {
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-0": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/board_3cd21372-1e79-417e-aa73-b0d8c3f15524.jpg",
             "link_url": "",
@@ -86,7 +86,7 @@
           }
         },
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-1": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/inks.jpg",
             "link_url": "",
@@ -95,7 +95,7 @@
           }
         },
         "template--15723518853312__3b41803c-8040-4774-b0f7-9dfed59a656a-1669206421435f26bf-2": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/sustainability.jpg",
             "link_url": "",

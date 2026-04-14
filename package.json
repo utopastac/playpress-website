@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "gulp sass",
-    "watch": "gulp watch",
     "theme:check": "shopify theme check",
     "lint:js": "eslint assets/**/*.js",
     "test": "npm run theme:check"
@@ -19,11 +17,6 @@
     "url": "https://github.com/utopastac/playpress-website/issues"
   },
   "homepage": "https://github.com/utopastac/playpress-website#readme",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.55.0"
-  },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "eslint": "^9.15.0",

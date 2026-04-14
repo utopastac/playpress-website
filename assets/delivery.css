@@ -1,159 +1,96 @@
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
-
-div[is=delivery] header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.6rem;
-  color: #2D3788;
-  cursor: pointer;
-  user-select: none;
-}
-div[is=delivery] header span {
-  display: flex;
-  align-items: center;
-}
-div[is=delivery] header span .icon {
-  margin-right: 0.8rem;
-}
-
-a[is=outline-button], div[is=delivery] header, div[is=delivery], div[is=delivery] header span, div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], div[is=delivery] header, div[is=delivery], div[is=delivery] header span, div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-  font-weight: 400;
-}
-
-div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3, a[is=outline-button], div[is=delivery] header span {
-  font-weight: 700;
-}
-
-div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-  font-size: 2.2rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=delivery] div[is=delivery-content] h4, div[is=delivery] div[is=delivery-content] h3 {
-    font-size: 2.6rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-div[is=delivery] header, div[is=delivery], div[is=delivery] header span {
-  font-size: 1.7rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  div[is=delivery] header, div[is=delivery], div[is=delivery] header span {
-    font-size: 1.8rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
-
-div[is=delivery] {
+div[is="delivery"] {
   margin: 0;
-  border-radius: 1.6rem;
+  border-radius: var(--radius-s);
   max-width: 100%;
   cursor: pointer;
-  border: 1px solid #EBEDFA;
-}
-div[is=delivery]:hover:not(.active) {
-  background-color: #EBEDFA;
-}
-div[is=delivery] div[is=delivery-charges] {
-  background: #F3F3F7;
-  color: #0A122A;
-  border-radius: 1.6rem;
-  padding: 2.4rem;
-  margin-top: 2.4rem;
-}
-div[is=delivery] div[is=delivery-content] {
-  visibility: hidden;
-  height: 0;
-}
-div[is=delivery] div[is=delivery-content] h3 {
-  margin-bottom: 0.8rem;
-}
-div[is=delivery] div[is=delivery-content] p + h3 {
-  margin-top: 3.2rem;
-}
-div[is=delivery] div[is=delivery-content] h4 {
-  margin-bottom: 0.8rem;
-}
-div[is=delivery] div[is=delivery-content] table {
-  width: 100%;
-}
-div[is=delivery] div[is=delivery-content] table td {
-  padding: 0.8rem 0;
-  border-color: rgba(10, 18, 42, 0.1);
-}
-div[is=delivery] div[is=delivery-content] table td:last-child {
-  text-align: right;
-}
-div[is=delivery] div[is=delivery-content] table tr:last-child td {
-  border: none;
-}
-div[is=delivery] header {
-  display: flex;
-  margin-bottom: 0;
-  align-items: center;
-  user-select: none;
-}
-div[is=delivery].active {
-  border-radius: 1.6rem;
-}
-div[is=delivery].active div[is=delivery-content] {
-  visibility: visible;
-  height: auto;
-  padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+  font-size: var(--text-body-3);
+  line-height: var(--leading-snug);
+  border: 1px solid var(--color-blue-100);
+
+  &:hover:not(.active) {
+    background-color: var(--color-blue-100);
+  }
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+    color: var(--color-blue-1000);
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 0;
+    font-size: var(--text-body-3);
+    line-height: var(--leading-snug);
+
+    & span {
+      display: flex;
+      font-size: var(--text-body-3);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-snug);
+      align-items: center;
+
+      & .icon {
+        margin-inline-end: var(--space-1);
+      }
+    }
+  }
+
+  & div[is="delivery-charges"] {
+    background: var(--color-surface-alt);
+    color: var(--color-text);
+    border-radius: var(--radius-s);
+    padding: var(--space-3);
+    margin-top: var(--space-3);
+  }
+
+  & div[is="delivery-content"] {
+    visibility: hidden;
+    height: 0;
+
+    & h3 {
+      font-size: var(--text-body-1);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-body);
+      margin-bottom: var(--space-1);
+    }
+
+    & p + h3 {
+      margin-top: var(--space-4);
+    }
+
+    & h4 {
+      font-size: var(--text-body-1);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-body);
+      margin-bottom: var(--space-1);
+    }
+
+    & table {
+      width: 100%;
+
+      & td {
+        padding: var(--space-1) 0;
+        border-color: rgb(10 18 42 / 0.1);
+
+        &:last-child {
+          text-align: end;
+        }
+      }
+
+      & tr:last-child td {
+        border: none;
+      }
+    }
+  }
+
+  &.active {
+    border-radius: var(--radius-s);
+
+    & div[is="delivery-content"] {
+      visibility: visible;
+      height: auto;
+      padding: var(--space-2) var(--space-2) var(--space-3);
+    }
+  }
 }

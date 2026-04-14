@@ -169,10 +169,10 @@
       }
     },
     "c9cf4777-b9cd-445b-940e-b2417a3d9630": {
-      "type": "accordian",
+      "type": "accordion",
       "blocks": {
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-0": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/studio-design.jpg",
             "link_url": "",
@@ -181,7 +181,7 @@
           }
         },
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-1": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/studio-prototypes.jpg",
             "link_url": "",
@@ -190,7 +190,7 @@
           }
         },
         "template--15723518918848__c9cf4777-b9cd-445b-940e-b2417a3d9630-166973230958fd1d09-2": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/studio-brand.jpg",
             "link_url": "",
@@ -199,7 +199,7 @@
           }
         },
         "4b0d6989-b130-4287-9348-9e999052082e": {
-          "type": "accordian_item",
+          "type": "accordion_item",
           "settings": {
             "image": "shopify://shop_images/studio-manufacture.jpg",
             "link_url": "",

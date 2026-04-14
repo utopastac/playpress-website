@@ -1,245 +1,135 @@
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-section[is=split-hero] div[is=button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.6rem;
-  padding: 0 2.4rem;
-  color: white;
-  background-color: #2D3788;
-  background: linear-gradient(186deg, #3D51F5 4.97%, #3645BF 19.29%, #2D3788 85.82%);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.18), 0px 6px 12px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset;
-  height: 4.8rem;
-  white-space: nowrap;
-  outline: none;
-  border: none;
-  transition: scale 0.3s;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+section[is="split-hero"] {
   position: relative;
-  overflow: hidden;
-}
-section[is=split-hero] div[is=button] .icon {
-  background-color: white;
-  margin-left: 0.8rem;
-  width: 2rem;
-  height: 2rem;
-  transition: all 0.3s ease-in-out;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-section[is=split-hero] div[is=button]:hover {
-  scale: 1.03;
-}
-section[is=split-hero] div[is=button]:hover .icon {
-  transform: translateX(0.4rem);
-}
-section[is=split-hero] div[is=button]:hover {
-  background-color: #333f9b;
-}
-section[is=split-hero] div[is=button]:active {
-  box-shadow: 1px 2px 0 0 #FAB638;
-  background-color: #272f75;
-}
 
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
+  & div[is="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-body-2);
+    font-weight: var(--weight-bold);
+    border-radius: var(--btn-radius);
+    padding-inline: var(--space-3);
+    color: var(--btn-color);
+    background: var(--btn-bg);
+    box-shadow: var(--btn-shadow);
+    height: var(--btn-height);
+    white-space: nowrap;
+    border: none;
+    transition: scale var(--duration-normal) var(--ease-bounce);
 
-section[is=split-hero] div[is=split-hero-content] h4, section[is=split-hero] div[is=sub-promo] div[is=split-hero-content] h1, section[is=split-hero] div[is=split-hero-content] h1 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], section[is=split-hero] div[is=button] {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], section[is=split-hero] div[is=button] {
-  font-weight: 400;
-}
-
-a[is=outline-button], section[is=split-hero] div[is=button] {
-  font-weight: 700;
-}
-
-section[is=split-hero] div[is=split-hero-content] h4 {
-  font-weight: 900;
-}
-
-section[is=split-hero] div[is=split-hero-content] h1 {
-  font-size: 3.2rem;
-  line-height: 115%;
-  letter-spacing: -0.64px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=split-hero] div[is=split-hero-content] h1 {
-    font-size: 4.2rem;
-    line-height: 115%;
-    letter-spacing: -0.84px;
+    &:hover {
+      scale: 1.03;
+    }
   }
-}
 
-section[is=split-hero] div[is=sub-promo] div[is=split-hero-content] h1 {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=split-hero] div[is=sub-promo] div[is=split-hero-content] h1 {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
-}
 
-section[is=split-hero] div[is=split-hero-content] h4 {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1080px) {
-  section[is=split-hero] div[is=split-hero-content] h4 {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
+  & > div a {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
-}
 
-section[is=split-hero] div[is=button] {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=split-hero] div[is=button] {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
+  & div[is="main-promo"],
+  & div[is="sub-promo"] {
+    border-radius: var(--radius-s);
+    overflow: hidden;
+    flex: 1;
+    transition: all var(--duration-normal) var(--ease-standard);
+
+    &:hover {
+      scale: 1.03;
+    }
+
+    & a > div {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
   }
-}
 
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
+  & div[is="main-promo"] {
+    margin-bottom: var(--space-3);
+
+    & a > div {
+      flex-direction: column-reverse;
+    }
   }
-}
 
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
+  & div[is="sub-promo"] div[is="split-hero-content"] h1 {
+    font-size: var(--text-heading-3);
+  }
 
-section[is=split-hero] {
-  position: relative;
-}
-section[is=split-hero] img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-@media screen and (min-width: 740px) {
-  section[is=split-hero] {
+  & div[is="split-hero-content"] {
+    padding: var(--space-5);
+    border-radius: var(--radius-s);
+    margin-top: calc(-1 * var(--radius-s));
+    position: relative;
+    z-index: var(--z-navigation);
+
+    & h1 {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-heading-2);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-heading);
+    }
+
+    & h4 {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-extra-bold);
+      font-size: var(--text-overline);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-caps);
+      text-transform: uppercase;
+    }
+
+    & > div:first-child {
+      margin-bottom: var(--space-3);
+    }
+  }
+
+  & div[is="split-hero-image"] {
+    flex: 1;
+  }
+
+  @media (width >= 770px) {
     display: flex;
     align-items: stretch;
+
+    & div[is="main-promo"],
+    & div[is="sub-promo"] {
+      height: 48rem;
+    }
+
+    & div[is="main-promo"] {
+      margin-bottom: 0;
+      margin-inline-end: var(--space-3);
+
+      & a > div {
+        flex-direction: row;
+      }
+
+      & div[is="split-hero-content"] {
+        margin-inline-end: calc(-1 * var(--radius-s));
+        margin-top: 0;
+        max-width: 28rem;
+      }
+    }
+
+    & div[is="sub-promo"] {
+      max-width: 36rem;
+    }
+
+    & div[is="split-hero-content"] {
+      border-radius: var(--radius-s) 0 0 var(--radius-s);
+    }
   }
-}
-section[is=split-hero] > div a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-section[is=split-hero] div[is=main-promo], section[is=split-hero] div[is=sub-promo] {
-  border-radius: 1.6rem;
-  overflow: hidden;
-  flex: 1;
-  transition: all 0.3s ease-in-out;
-}
-section[is=split-hero] div[is=main-promo]:hover, section[is=split-hero] div[is=sub-promo]:hover {
-  scale: 1.03;
-}
-section[is=split-hero] div[is=main-promo] a > div, section[is=split-hero] div[is=sub-promo] a > div {
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-@media screen and (min-width: 740px) {
-  section[is=split-hero] div[is=main-promo], section[is=split-hero] div[is=sub-promo] {
-    height: 48rem;
-  }
-}
-section[is=split-hero] div[is=main-promo] {
-  margin-bottom: 2.4rem;
-}
-section[is=split-hero] div[is=main-promo] a > div {
-  flex-direction: column-reverse;
-}
-@media screen and (min-width: 740px) {
-  section[is=split-hero] div[is=main-promo] {
-    margin-bottom: 0;
-    margin-right: 2.4rem;
-  }
-  section[is=split-hero] div[is=main-promo] div[is=split-hero-content] {
-    margin-right: -1.6rem;
-    margin-top: 0;
-    max-width: 28rem;
-  }
-  section[is=split-hero] div[is=main-promo] a > div {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 740px) {
-  section[is=split-hero] div[is=sub-promo] {
-    max-width: 36rem;
-  }
-}
-section[is=split-hero] div[is=split-hero-content] {
-  padding: 4rem;
-  border-radius: 1.6rem;
-  margin-top: -1.6rem;
-  position: relative;
-  z-index: 1000;
-}
-section[is=split-hero] div[is=split-hero-content] > div:first-child {
-  margin-bottom: 2.4rem;
-}
-@media screen and (min-width: 1080px) {
-  section[is=split-hero] div[is=split-hero-content] {
-    border-radius: 1.6rem 0 0 1.6rem;
-  }
-}
-section[is=split-hero] div[is=split-hero-image] {
-  flex: 1;
 }

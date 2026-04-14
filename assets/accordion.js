@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
-  const items = document.querySelectorAll('.accordian-item');
-  const images = document.querySelectorAll('.accordian-image');
+  const items = document.querySelectorAll('.accordion-item');
+  const images = document.querySelectorAll('.accordion-image');
   switchItem(0);
 
   items.forEach((item) => {

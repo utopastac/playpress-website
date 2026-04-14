@@ -1,127 +1,43 @@
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-header[is=section-header] {
-  max-width: 152rem;
+header[is="section-header"] {
+  max-width: var(--content-max);
   margin: 0 auto;
-}
 
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
-
-header[is=section-header] h2, header[is=section-header].large h2 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], header[is=section-header] p {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], header[is=section-header] p {
-  font-weight: 400;
-}
-
-a[is=outline-button] {
-  font-weight: 700;
-}
-
-header[is=section-header].large h2 {
-  font-size: 3.8rem;
-  line-height: 115%;
-  letter-spacing: -0.76px;
-}
-@media screen and (min-width: 1080px) {
-  header[is=section-header].large h2 {
-    font-size: 5.6rem;
-    line-height: 115%;
-    letter-spacing: -1.12px;
+  & > div {
+    padding-block-end: var(--space-4);
+    max-width: 60rem;
   }
-}
 
-header[is=section-header] h2 {
-  font-size: 3.2rem;
-  line-height: 115%;
-  letter-spacing: -0.64px;
-}
-@media screen and (min-width: 1080px) {
-  header[is=section-header] h2 {
-    font-size: 4.2rem;
-    line-height: 115%;
-    letter-spacing: -0.84px;
+  & h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-2);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
   }
-}
 
-header[is=section-header] p {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  header[is=section-header] p {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
+  & p {
+    font-size: var(--text-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-body);
+    margin-top: var(--space-1);
   }
-}
 
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
+  &.large h2 {
+    font-size: var(--text-heading-1);
+    margin-bottom: var(--space-2);
   }
-}
 
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
+  &.center {
+    & > div {
+      margin: 0 auto;
+      padding-block-end: var(--space-5);
+    }
 
-header[is=section-header] > div {
-  padding: 0 0 3.2rem 0;
-  max-width: 60rem;
-}
-header[is=section-header] p {
-  margin-top: 0.8rem;
-}
-header[is=section-header].large h2 {
-  margin-bottom: 1.6rem;
-}
-header[is=section-header].center > div {
-  margin: 0 auto;
-  padding-bottom: 4rem;
-}
-header[is=section-header].center h2, header[is=section-header].center h3, header[is=section-header].center p {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    & h2,
+    & h3,
+    & p {
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
 }

@@ -1,136 +1,65 @@
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-section[is=intro] > div {
-  max-width: 152rem;
-  margin: 0 auto;
-}
-
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
-
-section[is=intro] h1 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], section[is=intro] a, section[is=intro] p {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], section[is=intro] a, section[is=intro] p {
-  font-weight: 400;
-}
-
-section[is=intro] a, a[is=outline-button] {
-  font-weight: 700;
-}
-
-section[is=intro] h1 {
-  font-size: 3.8rem;
-  line-height: 115%;
-  letter-spacing: -0.76px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=intro] h1 {
-    font-size: 5.6rem;
-    line-height: 115%;
-    letter-spacing: -1.12px;
-  }
-}
-
-section[is=intro] a, section[is=intro] p {
-  font-size: 2.2rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=intro] a, section[is=intro] p {
-    font-size: 2.6rem;
-    line-height: 140%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
-
-section[is=intro] {
+section[is="intro"] {
   position: relative;
-  padding: 3.2rem 0;
-}
-section[is=intro] img {
-  margin-bottom: 2.4rem;
-}
-section[is=intro] p {
-  margin: 1.6rem 0 3.2rem 0;
-}
-@media screen and (min-width: 550px) {
-  section[is=intro] {
-    padding: 4rem 5.6rem;
+  padding: var(--space-4) 0;
+
+  & > div {
+    max-width: var(--content-max);
+    margin: 0 auto;
   }
-  section[is=intro] > div > div {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60rem;
-    text-align: center;
+
+  & img {
+    margin-bottom: var(--space-3);
   }
-  section[is=intro] > div > div h1, section[is=intro] > div > div p {
-    margin-left: auto;
-    margin-right: auto;
+
+  & h1 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-1);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
   }
-  section[is=intro].with-image > div {
-    grid-column-gap: 3.2rem;
-    display: grid;
-    grid-auto-flow: column;
-    grid-row: auto;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
+
+  & p {
+    font-size: var(--text-body-1);
+    line-height: var(--leading-body);
+    margin: var(--space-2) 0 var(--space-4);
   }
-  section[is=intro].with-image > div > div {
-    grid-column: 2;
-    max-width: 48rem;
-    text-align: left;
+
+  & a {
+    font-size: var(--text-body-1);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-body);
   }
-  section[is=intro].with-image > div > img {
-    grid-column: 1;
+
+  @media (width >= 550px) {
+    padding: var(--space-5) var(--space-7);
+
+    & > div > div {
+      margin-inline: auto;
+      max-width: 60rem;
+      text-align: center;
+
+      & h1, & p {
+        margin-inline: auto;
+      }
+    }
+
+    &.with-image > div {
+      display: grid;
+      gap: var(--space-4);
+      grid-auto-flow: column;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+
+      & > div {
+        grid-column: 2;
+        max-width: 48rem;
+        text-align: start;
+      }
+
+      & > img {
+        grid-column: 1;
+      }
+    }
   }
 }

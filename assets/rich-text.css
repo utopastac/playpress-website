@@ -1,226 +1,67 @@
-section[is=rich-text] ul {
-  padding-left: 3.2rem;
-}
-section[is=rich-text] ul li {
-  list-style-type: disc;
-}
-
-@container product-list-container (width > 350px) {}
-@container product-list-container (width > 770px) {}
-@container product-list-container (width > 1080px) {}
-@container product-list-container (width > 1200px) {}
-
-section[is=rich-text] {
-  max-width: 152rem;
+section[is="rich-text"] {
+  max-width: var(--content-max);
   margin: 0 auto;
-}
 
-.button-loading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D3788 url(loading-b.gif) no-repeat center center;
-  background-size: 24px 24px;
-}
+  /* Inherits .prose typography via theme-new.css — apply directly here too
+     so the section is self-contained in case .prose class isn't on the element. */
 
-section[is=rich-text] h5, section[is=rich-text] h3, section[is=rich-text] .heading-s, section[is=rich-text] h2, section[is=rich-text] .heading-m, section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-}
-
-a[is=outline-button], section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-}
-
-a[is=outline-button], section[is=rich-text] .body-2, section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text, section[is=rich-text] h4, section[is=rich-text] .body-0 {
-  font-weight: 400;
-}
-
-section[is=rich-text] h6, section[is=rich-text] h4, section[is=rich-text] strong, section[is=rich-text] b, a[is=outline-button], section[is=rich-text] .button-text {
-  font-weight: 700;
-}
-
-section[is=rich-text] h5 {
-  font-weight: 900;
-}
-
-section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
-  font-size: 3.8rem;
-  line-height: 115%;
-  letter-spacing: -0.76px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h1, section[is=rich-text] .heading-l, section[is=rich-text] ul li {
-    font-size: 5.6rem;
-    line-height: 115%;
-    letter-spacing: -1.12px;
+  & p, & ul li {
+    font-family: var(--font-heading);
+    font-size: var(--text-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-body);
   }
-}
 
-section[is=rich-text] h2, section[is=rich-text] .heading-m {
-  font-size: 3.2rem;
-  line-height: 115%;
-  letter-spacing: -0.64px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h2, section[is=rich-text] .heading-m {
-    font-size: 4.2rem;
-    line-height: 115%;
-    letter-spacing: -0.84px;
+  & strong, & b { font-weight: var(--weight-bold); }
+
+  & h1 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-1);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-4);
   }
-}
 
-section[is=rich-text] h3, section[is=rich-text] .heading-s {
-  font-size: 2.7rem;
-  line-height: 115%;
-  letter-spacing: -0.54px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h3, section[is=rich-text] .heading-s {
-    font-size: 3.4rem;
-    line-height: 115%;
-    letter-spacing: -0.68px;
+  & h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-2);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-3);
   }
-}
 
-section[is=rich-text] h5 {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h5 {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 1.5px;
+  & h3 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-heading-3);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    margin-bottom: var(--space-1);
   }
-}
 
-section[is=rich-text] h4, section[is=rich-text] .body-0 {
-  font-size: 2.2rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h4, section[is=rich-text] .body-0 {
-    font-size: 2.6rem;
-    line-height: 140%;
-    letter-spacing: 0px;
+  & ul {
+    padding-inline-start: var(--space-4);
+
+    & li {
+      list-style-type: disc;
+    }
   }
-}
 
-section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
-  font-size: 1.9rem;
-  line-height: 140%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] h6, section[is=rich-text] .body-1, section[is=rich-text] p, section[is=rich-text] ul li, section[is=rich-text] .button-text {
-    font-size: 2.1rem;
-    line-height: 140%;
-    letter-spacing: 0px;
+  & a { text-decoration: underline; }
+
+  & > div {
+    padding: 3rem 1rem;
   }
-}
 
-section[is=rich-text] .body-2 {
-  font-size: 1.7rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  section[is=rich-text] .body-2 {
-    font-size: 1.8rem;
-    line-height: 115%;
-    letter-spacing: 0px;
+  & h1, & h2, & h3,
+  & ol, & p, & ul {
+    margin-inline: auto;
+    max-width: 48rem;
   }
-}
 
-a[is=outline-button] {
-  font-size: 1.4rem;
-  line-height: 115%;
-  letter-spacing: 0px;
-}
-@media screen and (min-width: 1080px) {
-  a[is=outline-button] {
-    font-size: 1.5rem;
-    line-height: 115%;
-    letter-spacing: 0px;
-  }
-}
-
-section[is=rich-text] ul {
-  margin-top: 1.6rem;
-}
-section[is=rich-text] ul li:not(:first-child) {
-  margin-top: 1.6rem;
-}
-section[is=rich-text] a {
-  text-decoration: underline;
-}
-section[is=rich-text] p + h2, section[is=rich-text] p + h3, section[is=rich-text] ul + h2, section[is=rich-text] ul + h3 {
-  margin-top: 3.2rem;
-}
-section[is=rich-text] p + h4, section[is=rich-text] p + h5, section[is=rich-text] ul + h4, section[is=rich-text] ul + h5 {
-  margin-top: 2.4rem;
-}
-section[is=rich-text] blockquote {
-  margin-top: 2.4rem;
-  padding: 2.4rem 0 0 0;
-}
-section[is=rich-text] h1, section[is=rich-text] .heading-l {
-  margin-bottom: 3.2rem;
-}
-section[is=rich-text] h2, section[is=rich-text] .heading-m {
-  margin-bottom: 2.4rem;
-}
-section[is=rich-text] h3, section[is=rich-text] .heading-s {
-  margin-bottom: 0.8rem;
-}
-section[is=rich-text] h4 {
-  margin-bottom: 0.8rem;
-}
-section[is=rich-text] h6 {
-  margin-bottom: 0.8rem;
-}
-section[is=rich-text] hr {
-  height: 1;
-  border: none;
-  background: #E7E9EF;
-  margin: 3.2rem 0 2.4rem 0;
-}
-
-a[is=outline-button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  padding: 0 1.2rem;
-  color: #2D3788;
-  height: 3.2rem;
-  white-space: nowrap;
-  border: 1px solid #EBEDFA;
-}
-a[is=outline-button]:hover {
-  background: #EBEDFA;
-}
-
-section[is=rich-text] > div {
-  padding: 3rem 1rem;
-}
-section[is=rich-text] h1, section[is=rich-text] h2, section[is=rich-text] h3, section[is=rich-text] ol, section[is=rich-text] p, section[is=rich-text] ul {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 48rem;
-}
-@media screen and (min-width: 550px) {
-  section[is=rich-text] {
+  @media (width >= 550px) {
     padding: 5rem 2rem;
     text-align: center;
   }

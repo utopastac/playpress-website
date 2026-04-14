@@ -1,11 +1,11 @@
 # Playpress — Shopify theme
 
-Online Store 2.0 theme for the Playpress shop: Liquid layouts and sections, JSON templates, Sass-built CSS, and small browser scripts for cart, product gallery, and collection filtering.
+Online Store 2.0 theme built with Liquid, JSON templates, and a **modern CSS design system** powered by custom properties.
 
 ## Requirements
 
-- [Shopify CLI](https://shopify.dev/docs/themes/tools/cli) (`shopify` command)
-- Node.js 18+ (for Sass build, Theme Check, and ESLint)
+- [Shopify CLI](https://shopify.dev/docs/themes/tools/cli)
+- Node.js 18+ (for Theme Check and ESLint)
 
 ## Setup
 
@@ -15,45 +15,46 @@ npm install
 
 ## Local development
 
-Push the theme and watch changes (replace the store flag with yours):
-
 ```bash
 shopify theme dev --store="playpress"
 ```
 
-## CSS (Sass)
+## CSS architecture
 
-Source files live under `styles/` (partials and `styles/compile/*.sass`). Gulp compiles them into `assets/*.css`.
+There is **no build step** for CSS. All styles are plain, modern CSS with native nesting.
 
-| Command        | Description                          |
-|----------------|--------------------------------------|
-| `npm run sass` | One-off compile (`gulp sass`)        |
-| `npm run watch`| Rebuild on save (`gulp watch`)       |
+| File | Purpose |
+|------|---------|
+| `assets/design-tokens.css` | `:root` custom properties — colours, spacing, typography scale, radii, shadows, z-index, motion, button tokens. The type scale is **responsive** (tokens update at the `1080px` breakpoint). |
+| `assets/theme-new.css` | Global bundle — font faces, reset, icon system, forms, button system, layout utilities, prose/typography hierarchy. |
+| `assets/*.css` | One file per section/component, self-contained, using tokens from `design-tokens.css`. |
 
-The main global bundle is `styles/compile/theme-new.sass` → `assets/theme-new.css`. Many sections also ship their own compiled CSS file loaded from that section or a snippet.
+Edit CSS directly in `assets/`. Use `var(--*)` tokens from `design-tokens.css` for all values.
+
+## Naming conventions
+
+All files in `assets/` use **kebab-case** (`product-promo.css`, `add-to-cart.js`, `icon-arrow-right.svg`). CSS and JS files map 1:1 to their section/component name. Icons are prefixed `icon-`.
 
 ## Locales
 
-English copy is in `locales/en.default.json`. Add other locale files (e.g. `fr.json`) as needed for additional languages.
+`locales/en.default.json` — add more locale files as needed.
 
 ## Quality checks
 
-| Command              | Description                    |
-|----------------------|--------------------------------|
-| `npm test`           | Runs `shopify theme check`     |
-| `npm run theme:check`| Same as `npm test`             |
-| `npm run lint:js`    | ESLint on `assets/**/*.js`     |
-
-Theme Check config is in `.theme-check.yml` (some rules are relaxed for Shopify JSON with comment headers and third-party script patterns).
+| Command | Description |
+|---------|-------------|
+| `npm test` | `shopify theme check` |
+| `npm run theme:check` | same |
+| `npm run lint:js` | ESLint on `assets/**/*.js` |
 
 ## JavaScript
 
-Scripts in `assets/` are loaded from `layout/theme.liquid` or individual sections (often with `defer`). They use plain DOM APIs and the browser **`fetch` API** for Shopify Cart JSON endpoints (`/cart/add.js`, `/cart/change.js`, `/cart.js`). **GSAP and Axios were removed** — UI fades use CSS `transition` and an `.is-visible` class on `#cart-modal`, `#gallery-lightbox`, and `#filter-modal`.
+Plain DOM APIs, `fetch` for the Cart API, CSS transitions + `.is-visible` for modals.
 
 ## Deploy
 
-The repo connects to GitHub for theme deployment. For experiments you do not want published, duplicate the theme in the Shopify admin before editing.
+GitHub deploy; duplicate the theme in admin for experiments.
 
 ## License
 
-See `package.json` (`license` field).
+See `package.json`.
