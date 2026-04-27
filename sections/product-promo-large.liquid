@@ -41,12 +41,15 @@
       {%- endif -%}
       <div class="description"><p>{{ section.settings.text }}</p></div>
       <div is="call-to-action">
-        <p is="product-price">{{ section.settings.product.price | money }}</p>
+        <spark-pdp parent-id="{{ section.settings.product.id }}"></spark-pdp>
+        <p is="product-price" data-spark="b2c-only">{{ section.settings.product.price | money }}</p>
+        <div data-spark="b2c-only">
         <form method="post" action="/cart/add">
           <input type="hidden" name="id" value="{{ section.settings.product.variants.first.id }}" />
           <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
           <button type="submit" value="Add" class="add-to-cart">Add to cart</button>
         </form>
+        </div>
       </div>
     </div>
   </div>

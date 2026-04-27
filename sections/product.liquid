@@ -51,9 +51,11 @@
             <div class="tag">Travel sized</div>
             {%- endif -%}
             <h1>{{ product.title }}</h1>
-            <p is="product-price">{{ product.price | money }}</p>
+            <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
+            <p is="product-price" data-spark="b2c-only">{{ product.price | money }}</p>
           </header>
 
+          <div data-spark="b2c-only">
           {% form 'product', product %}
             <select name="id" hidden>
               {%- for variant in product.variants -%}
@@ -69,6 +71,7 @@
               <p>Sold Out</p>
             {%- endif -%}
           {% endform %}
+          </div>
         </div>
 
         {%- if product.metafields.product.pieces != blank -%}

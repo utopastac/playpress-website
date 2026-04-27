@@ -24,15 +24,18 @@
     </div>
     <div class="content">
       <h3 class="product-title">{{ product.title }}</h3>
-      <p class="product-price" data-price="{{ product.price | money_without_currency | remove: ',' }}">{{ product.price | money }}</p>
+      <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
+      <p class="product-price" data-spark="b2c-only" data-price="{{ product.price | money_without_currency | remove: ',' }}">{{ product.price | money }}</p>
     </div>
   </a>
 
+  <div data-spark="b2c-only">
   <form method="post" action="/cart/add">
     <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
     <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
     <button type="submit" value="Add" class="add-to-cart">Add</button>
   </form>
+  </div>
   
   {%- if product.metafields.product.is_new == true -%}
     <div class="new">New</div>
