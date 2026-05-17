@@ -374,9 +374,9 @@
           "link_text": "Buy now",
           "link_url": "shopify://products/garden-insects-playset-copy",
           "image": "shopify://shop_images/big-castle-win.jpg",
-          "bg_color": "#d3b229",
+          "bg_color": "#ffd760",
           "is_text_color": true,
-          "text_color": "#594e1e",
+          "text_color": "#564600",
           "is_large": true,
           "is_dark": true
         }
