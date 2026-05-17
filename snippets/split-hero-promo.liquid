@@ -1,0 +1,27 @@
+{%- assign bg_url = promo_background_image | image_url: width: 2048 -%}
+{%- if promo_background_image == blank -%}
+  {%- assign bg_style = 'background: ' | append: promo_bg_color -%}
+{%- else -%}
+  {%- assign bg_style = 'background-image: url(' | append: bg_url | append: ')' -%}
+{%- endif -%}
+
+<a href="{{ promo_link_url }}">
+  <div is="split-hero-promo-container">
+    <div is="split-hero-image">
+      <img
+        src="{{ promo_image | image_url: width: 2048 }}"
+        alt="{{ promo_image.alt }}"
+        loading="lazy"
+        width="1200"
+        height="800"
+      />
+    </div>
+    <div is="split-hero-content" style="{{ bg_style }}">
+      <div>
+        {% comment %} <h4 style="color: {{ promo_text_color }} !important">{{ promo_subtitle | escape }}</h4> {% endcomment %}
+        <h2 class="heading-s" style="color: {{ promo_text_color }} !important">{{ promo_heading | escape }}</h2>
+      </div>
+      <div is="button">{{ promo_link_text }}</div>
+    </div>
+  </div>
+</a>

@@ -66,26 +66,10 @@ div[is="cart"] {
       }
     }
 
-    & button {
+    & button[type="submit"] {
       margin: var(--space-2) 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-size: var(--text-body-2);
-      font-weight: var(--weight-bold);
-      border-radius: var(--btn-radius);
-      padding-inline: var(--space-3);
-      color: var(--btn-color);
-      background: var(--btn-bg);
-      box-shadow: var(--btn-shadow);
       height: var(--space-7);
       width: 100%;
-      white-space: nowrap;
-      border: none;
-      transition: scale var(--duration-normal) var(--ease-bounce);
-
-      &:hover { scale: 1.03; }
     }
   }
 

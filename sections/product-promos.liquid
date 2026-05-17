@@ -64,7 +64,7 @@
       <div id="filter-modal" class="filter-modal">
         <header>
           <div class="header-title">
-            <h2>Filter Products</h2>
+            <h2 is="label">Filter Products</h2>
           </div>
           <div id="filter-modal-close" class="filter-close">
             <div class="icon close"></div>
@@ -74,7 +74,7 @@
           {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, id_prefix: '' %}
         </div>
         <footer>
-          <button id="filter-modal-apply" class="filter-apply-button" type="button">
+          <button id="filter-modal-apply" class="filter-apply-button" is="button" type="button">
             Apply filters
           </button>
         </footer>

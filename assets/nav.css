@@ -23,8 +23,7 @@ nav[is="menu"] {
         background: var(--color-white);
         padding: 2rem 2.4rem;
         border-radius: var(--radius-s);
-        box-shadow: 0 1px 4px rgb(10 18 42 / 0.1),
-                    0 8px 24px rgb(10 18 42 / 0.12);
+        box-shadow: var(--shadow-dropdown);
 
         & li {
           width: 24rem;
@@ -45,13 +44,7 @@ nav[is="menu"] {
           background: var(--color-border);
         }
 
-        & h4 {
-          font-family: var(--font-heading);
-          font-weight: var(--weight-extra-bold);
-          font-size: var(--text-overline);
-          line-height: var(--leading-tight);
-          letter-spacing: var(--tracking-caps);
-          text-transform: uppercase;
+        & h4[is="label"] {
           color: var(--color-text-subtle);
           margin: var(--space-2) 0 var(--space-1);
         }

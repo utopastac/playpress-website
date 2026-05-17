@@ -26,8 +26,8 @@
         {%- endif -%}
 
         <div is="hero-content">
-          <h2 style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h2>
-          <h3 style="color: {{ section.settings.text_color }} !important">{{ section.settings.text }}</h3>
+          <h2 is="label" style="color: {{ section.settings.text_color }} !important">{{ section.settings.heading | escape }}</h2>
+          <h3 class="heading-s" style="color: {{ section.settings.text_color }} !important">{{ section.settings.text }}</h3>
           {%- if section.settings.subtext != blank -%}
             <p style="color: {{ section.settings.text_color }} !important">{{ section.settings.subtext }}</p>
           {%- endif -%}

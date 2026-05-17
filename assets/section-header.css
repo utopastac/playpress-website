@@ -7,14 +7,6 @@ header[is="section-header"] {
     max-width: 60rem;
   }
 
-  & h2 {
-    font-family: var(--font-heading);
-    font-weight: var(--weight-bold);
-    font-size: var(--text-heading-2);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-heading);
-  }
-
   & p {
     font-size: var(--text-body-2);
     font-weight: var(--weight-regular);

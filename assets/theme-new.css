@@ -412,6 +412,7 @@ a[is="outline-button"] {
 
 a[is="button"],
 p[is="button"],
+div[is="button"],
 input[type="submit"],
 button[type="submit"] {
   display: inline-flex;
@@ -574,9 +575,48 @@ div[is="product-promos"] {
 }
 
 
+/* ─── Typography utilities ───────────────────────────────────────── */
+
+[is="label"] {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-extra-bold);
+  font-size: var(--text-overline);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.heading-l {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-heading-1);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
+}
+
+.heading-m {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-heading-2);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
+}
+
+.heading-s {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-heading-3);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
+}
+
+
 /* ─── Prose (rich text / typography hierarchy) ───────────────────── */
 
-.prose {
+.prose,
+div[is="page"],
+div[is="page-content"],
+section[is="rich-text"] {
   & p,
   & ul li {
     font-family: var(--font-heading);
@@ -628,9 +668,9 @@ div[is="product-promos"] {
 
   & h1,
   & .heading-l {
+    font-size: var(--text-heading-1);
     font-family: var(--font-heading);
     font-weight: var(--weight-bold);
-    font-size: var(--text-heading-1);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-heading);
     margin-bottom: var(--space-4);
@@ -638,9 +678,9 @@ div[is="product-promos"] {
 
   & h2,
   & .heading-m {
+    font-size: var(--text-heading-2);
     font-family: var(--font-heading);
     font-weight: var(--weight-bold);
-    font-size: var(--text-heading-2);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-heading);
     margin-bottom: var(--space-3);
@@ -648,9 +688,9 @@ div[is="product-promos"] {
 
   & h3,
   & .heading-s {
+    font-size: var(--text-heading-3);
     font-family: var(--font-heading);
     font-weight: var(--weight-bold);
-    font-size: var(--text-heading-3);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-heading);
     margin-bottom: var(--space-1);
@@ -664,7 +704,8 @@ div[is="product-promos"] {
     margin-bottom: var(--space-1);
   }
 
-  & h5 {
+  & h5,
+  & [is="label"] {
     font-family: var(--font-heading);
     font-weight: var(--weight-extra-bold);
     font-size: var(--text-overline);

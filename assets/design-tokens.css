@@ -107,6 +107,8 @@
   --shadow-2: 0 40px 50px -40px rgb(10 18 42 / 0.08);
   --shadow-3: 0 1px 4px rgb(10 18 42 / 0.12),
               0 8px 24px rgb(10 18 42 / 0.18);
+  --shadow-dropdown: 0 1px 4px rgb(10 18 42 / 0.1),
+                     0 8px 24px rgb(10 18 42 / 0.12);
   --shadow-button: 0 2px 2px 0 rgb(0 0 0 / 0.18),
                    0 6px 12px 0 rgb(0 0 0 / 0.12),
                    0 2px 4px 0 rgb(255 255 255 / 0.25) inset;

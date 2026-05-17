@@ -6,15 +6,6 @@ div[is="contact"] {
       border-radius: var(--radius-s);
     }
 
-    & h2 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      font-size: var(--text-heading-3);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-heading);
-      margin-bottom: var(--space-2);
-    }
-
     & h3 {
       font-size: var(--text-body-1);
       font-weight: var(--weight-medium);
@@ -58,12 +49,7 @@ div[is="contact"] {
       margin-bottom: var(--space-3);
     }
 
-    & h2 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      font-size: var(--text-heading-3);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-heading);
+    & h2.heading-s {
       margin-bottom: var(--space-2);
     }
 

@@ -136,13 +136,7 @@ footer[is="footer"] {
       }
     }
 
-    & h2 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-extra-bold);
-      font-size: var(--text-overline);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-caps);
-      text-transform: uppercase;
+    & h2[is="label"] {
       color: var(--color-white);
       margin-bottom: var(--space-1);
     }

@@ -2,55 +2,6 @@ section[is="rich-text"] {
   max-width: var(--content-max);
   margin: 0 auto;
 
-  /* Inherits .prose typography via theme-new.css — apply directly here too
-     so the section is self-contained in case .prose class isn't on the element. */
-
-  & p, & ul li {
-    font-family: var(--font-heading);
-    font-size: var(--text-body-2);
-    font-weight: var(--weight-regular);
-    line-height: var(--leading-body);
-  }
-
-  & strong, & b { font-weight: var(--weight-bold); }
-
-  & h1 {
-    font-family: var(--font-heading);
-    font-weight: var(--weight-bold);
-    font-size: var(--text-heading-1);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-heading);
-    margin-bottom: var(--space-4);
-  }
-
-  & h2 {
-    font-family: var(--font-heading);
-    font-weight: var(--weight-bold);
-    font-size: var(--text-heading-2);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-heading);
-    margin-bottom: var(--space-3);
-  }
-
-  & h3 {
-    font-family: var(--font-heading);
-    font-weight: var(--weight-bold);
-    font-size: var(--text-heading-3);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-heading);
-    margin-bottom: var(--space-1);
-  }
-
-  & ul {
-    padding-inline-start: var(--space-4);
-
-    & li {
-      list-style-type: disc;
-    }
-  }
-
-  & a { text-decoration: underline; }
-
   & > div {
     padding: 3rem 1rem;
   }

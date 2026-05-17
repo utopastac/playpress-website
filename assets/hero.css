@@ -53,23 +53,6 @@ section[is="hero"] {
       border-radius: var(--radius-m);
     }
 
-    & h2 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      font-size: var(--text-heading-2);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-heading);
-    }
-
-    & h4 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-extra-bold);
-      font-size: var(--text-overline);
-      line-height: var(--leading-tight);
-      letter-spacing: var(--tracking-caps);
-      text-transform: uppercase;
-    }
-
     & p {
       font-size: var(--text-body-2);
       line-height: var(--leading-body);
@@ -105,41 +88,6 @@ section[is="hero"] {
     margin: var(--space-3);
 
     & div[is="button"] {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-size: var(--text-body-2);
-      font-weight: var(--weight-bold);
-      border-radius: var(--btn-radius);
-      padding-inline: var(--space-3);
-      color: var(--btn-color);
-      background: var(--btn-bg);
-      box-shadow: var(--btn-shadow);
-      height: var(--btn-height);
-      white-space: nowrap;
-      border: none;
-      position: relative;
-      overflow: hidden;
-      transition: scale var(--duration-normal);
-      transition-timing-function: var(--ease-bounce);
-
-      & .icon {
-        background-color: var(--color-white);
-        margin-inline-start: var(--space-1);
-        width: var(--space-2-5);
-        height: var(--space-2-5);
-        transition: all var(--duration-normal) var(--ease-bounce);
-      }
-
-      &:hover {
-        scale: 1.03;
-
-        & .icon {
-          transform: translateX(var(--space-0-5));
-        }
-      }
-
       @media (max-width: 769px) {
         margin-top: var(--space-2);
       }

@@ -42,7 +42,7 @@
         {% endfor %}
       </ul> {% endcomment %}
       <ul>
-        <h2>Our collections</h2>
+        <h2 is="label">Our collections</h2>
         {% for link in linklists.collections.links %}
           <li>
             <a is="collection-link" href="{{ link.url }}">
@@ -52,7 +52,7 @@
       {% endfor %}
       </ul>
       <ul>
-        <h2>Our best-selling sets</h2>
+        <h2 is="label">Our best-selling sets</h2>
         {% for product in collections['best-sellers'].products limit: 3 %}
           <li>
             <a is="product-link" href="{{ product.url }}">

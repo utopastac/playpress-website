@@ -3,56 +3,28 @@
 {% comment %} style="background-image: url({{ section.settings.image | image_url: width: 2048 }})" {% endcomment %}
 <section is="split-hero">
   <div is="main-promo">
-    <a href="{{ section.settings.link_url_a }}">
-      <div>
-        {%- if section.settings.background_image_a == blank -%}
-          <div is="split-hero-content" style="background: {{ section.settings.bg_color_a }}">
-        {%- else -%}
-          <div is="split-hero-content" style="background-image: url({{ section.settings.background_image_a | image_url: width: 2048 }})">
-        {%- endif -%}
-            <div>
-              <h4 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.subtitle_a | escape }}</h4>
-              <h2 style="color: {{ section.settings.text_color_a }} !important">{{ section.settings.heading_a | escape }}</h2>
-            </div>
-            <div is="button">{{ section.settings.link_text_a }}</div>
-          </div>
-        <div is="split-hero-image">
-          <img
-            src="{{ section.settings.image_a | image_url: width: 2048 }}"
-            alt="{{ section.settings.image_a.alt }}"
-            loading="lazy"
-            width="1200"
-            height="800"
-          />
-        </div>
-      </div>
-    </a>
+    {%- render 'split-hero-promo',
+      promo_link_url: section.settings.link_url_a,
+      promo_image: section.settings.image_a,
+      promo_background_image: section.settings.background_image_a,
+      promo_bg_color: section.settings.bg_color_a,
+      promo_text_color: section.settings.text_color_a,
+      promo_subtitle: section.settings.subtitle_a,
+      promo_heading: section.settings.heading_a,
+      promo_link_text: section.settings.link_text_a
+    -%}
   </div>
   <div is="sub-promo">
-    <a href="{{ section.settings.link_url_b }}">
-      <div>
-        <div is="split-hero-image">
-          <img
-            src="{{ section.settings.image_b | image_url: width: 2048 }}"
-            alt="{{ section.settings.image_b.alt }}"
-            loading="lazy"
-            width="1200"
-            height="800"
-          />
-        </div>
-        {%- if section.settings.background_image_b == blank -%}
-          <div is="split-hero-content" style="background: {{ section.settings.bg_color_b }}">
-        {%- else -%}
-          <div is="split-hero-content" style="background-image: url({{ section.settings.background_image_b | image_url: width: 2048 }})">
-        {%- endif -%}
-            <div>
-              <h4 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.subtitle_b | escape }}</h4>
-              <h2 style="color: {{ section.settings.text_color_b }} !important">{{ section.settings.heading_b | escape }}</h2>
-            </div>
-            <div is="button">{{ section.settings.link_text_b }}</div>
-          </div>
-        </div>
-    </a>
+    {%- render 'split-hero-promo',
+      promo_link_url: section.settings.link_url_b,
+      promo_image: section.settings.image_b,
+      promo_background_image: section.settings.background_image_b,
+      promo_bg_color: section.settings.bg_color_b,
+      promo_text_color: section.settings.text_color_b,
+      promo_subtitle: section.settings.subtitle_b,
+      promo_heading: section.settings.heading_b,
+      promo_link_text: section.settings.link_text_b
+    -%}
   </div>
 </section>
 
