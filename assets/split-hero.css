@@ -64,10 +64,9 @@ section[is="split-hero"] {
 
   & div[is="split-hero-content"] {
     flex: 1;
-    width: 80%;
-    padding: var(--space-10) var(--space-5) var(--space-5) var(--space-5);
+    width: 100%;
+    padding: var(--space-5);
     border-radius: var(--radius-s);
-    margin-top: calc(-1 * var(--space-5));
     position: relative;
     z-index: var(--z-base);
     transition: all var(--duration-normal);
@@ -76,11 +75,17 @@ section[is="split-hero"] {
     & > div:first-child {
       margin-bottom: var(--space-3);
     }
+
+    @media (width >= 770px) {
+      width: 80%;
+      padding: var(--space-10) var(--space-5) var(--space-5) var(--space-5);
+      margin-top: calc(-1 * var(--space-5));
+    }
   }
 
   & div[is="split-hero-image"] {
     height: 30rem;
-    width: 90%;
+    width: 100%;
     border-radius: var(--radius-s);
     overflow: hidden;
     flex-shrink: 0;
@@ -88,6 +93,10 @@ section[is="split-hero"] {
     z-index: var(--z-navigation);
     transition: all var(--duration-normal);
     transition-timing-function: var(--ease-spring);
+
+    @media (width >= 770px) {
+      width: 90%;
+    }
   }
 
   @media (width >= 770px) {
