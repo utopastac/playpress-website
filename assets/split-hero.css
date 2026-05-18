@@ -5,9 +5,9 @@ section[is="split-hero"] {
   gap: var(--space-5);
 
   & img {
-    object-fit: cover;
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   & > div a {
@@ -89,7 +89,6 @@ section[is="split-hero"] {
   }
 
   & div[is="split-hero-image"] {
-    height: 30rem;
     width: 100%;
     border-radius: var(--radius-s);
     overflow: hidden;
