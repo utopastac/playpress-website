@@ -18,7 +18,9 @@
     </div>
     <div is="split-hero-content" style="{{ bg_style }}">
       <div>
-        {% comment %} <h4 style="color: {{ promo_text_color }} !important">{{ promo_subtitle | escape }}</h4> {% endcomment %}
+        {%- if promo_subtitle != blank -%}
+          <h4 is="label" style="color: {{ promo_text_color }} !important">{{ promo_subtitle | escape }}</h4>
+        {%- endif -%}
         <h2 class="heading-s" style="color: {{ promo_text_color }} !important">{{ promo_heading | escape }}</h2>
       </div>
       <div is="button">{{ promo_link_text }}</div>
