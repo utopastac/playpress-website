@@ -1,22 +1,24 @@
-window.addEventListener("load", function(){
+window.addEventListener('load', () => {
+  document.querySelectorAll('.copy-text').forEach(item => {
+    item.addEventListener('click', async function () {
+      const target = this.parentNode?.querySelector('.text-to-copy');
+      if (!target) { return; }
 
-  const copyItems = document.querySelectorAll('.copy-text');
-  copyItems.forEach((item) => {
-    item.addEventListener('click', copy);
+      const text = target.textContent.trim();
+
+      try {
+        if (!navigator.clipboard) { throw new Error('Clipboard API unavailable'); }
+        await navigator.clipboard.writeText(text);
+        const original = this.textContent;
+        this.classList.add('copied');
+        this.textContent = 'Copied';
+        setTimeout(() => {
+          this.classList.remove('copied');
+          this.textContent = original;
+        }, 2000);
+      } catch (err) {
+        console.error('Copy failed:', err);
+      }
+    });
   });
-
-  function copy() {
-    const objectToCopy = this.parentNode.querySelector(".text-to-copy");
-    navigator.clipboard.writeText(objectToCopy.innerHTML);
-    // alert("Copied the text: " + objectToCopy.innerHTML);
-    this.classList.add("copied");
-    this.innerHTML = "Copied";
-    setTimeout(()=>{reset(this)}, 2000);
-  }
-
-  function reset(element) {
-    element.classList.remove("copied");
-    element.innerHTML = "Copy";
-  }
-
 });

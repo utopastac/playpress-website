@@ -136,11 +136,6 @@ export class DarkModeToggle extends HTMLElement {
       this._updateCheckbox();
     });
 
-    doc.addEventListener(PERMANENT_COLOR_SCHEME, (event) => {
-      this.permanent = event.detail.permanent;
-      this._permanentCheckbox.checked = this.permanent;
-    });
-
     this._initializeDOM();
   }
 
@@ -165,7 +160,7 @@ export class DarkModeToggle extends HTMLElement {
     const hasNativePrefersColorScheme = matchMedia(MQ_DARK).media !== NOT_ALL;
     // Listen to `prefers-color-scheme` changes.
     if (hasNativePrefersColorScheme) {
-      matchMedia(MQ_DARK).addListener(({ matches }) => {
+      matchMedia(MQ_DARK).addEventListener('change', ({ matches }) => {
         this.mode = matches ? DARK : LIGHT;
         this._dispatchEvent(COLOR_SCHEME_CHANGE, { colorScheme: this.mode });
       });

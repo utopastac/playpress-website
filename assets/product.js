@@ -13,7 +13,7 @@ window.addEventListener("load", function(){
   });
 
   function openGallery(event){
-    const index = event.target.getAttribute("data-index");
+    const index = event.currentTarget.getAttribute("data-index");
     const imageTarget = galleryLightbox.querySelector(`[data-index="${index}"]`);
     if (!imageTarget) {
       return;

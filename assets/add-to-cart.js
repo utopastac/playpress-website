@@ -1,141 +1,86 @@
-window.addEventListener("load", function(){
-
-  let timeout = null;
+window.addEventListener('load', () => {
+  let hideTimeout = null;
   let addButton = null;
 
-  document.querySelector('#cart-modal-close').addEventListener('click', () => {
-    hideModal();
-  });
+  const cartModal = document.querySelector('#cart-modal');
+  const cartModalClose = document.querySelector('#cart-modal-close');
+
+  if (cartModalClose) {
+    cartModalClose.addEventListener('click', hideModal);
+  }
+
+  if (cartModal) {
+    cartModal.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+    cartModal.addEventListener('mouseleave', () => { hideTimeout = setTimeout(hideModal, 2000); });
+  }
 
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
       addButton = button;
-      const id = button.closest(".product-item").getAttribute("data-id");
-      const mainProduct = button.closest(".product-item").getAttribute("data-main-product");
+      const productItem = button.closest('.product-item');
+      if (!productItem) { return; }
+      const id = productItem.getAttribute('data-id');
+      const isMainProduct = productItem.getAttribute('data-main-product') === 'true';
       let quantity = 1;
-      addButton.classList.add("button-loading");
-      if(mainProduct === "true"){
+      if (isMainProduct) {
         const input = document.querySelector('#quantity');
-        quantity = Number(input.value);
-      };
+        if (input) { quantity = Number(input.value) || 1; }
+      }
+      button.classList.add('button-loading');
       addToCart(id, quantity);
-    })
+    });
   });
 
-  function addToCart(id, quantity) {
-    const jsonHeaders = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: jsonHeaders,
-      body: JSON.stringify({
-        items: [{ id, quantity }]
-      })
-    })
-      .then(function (res) {
-        if (!res.ok) {
-          throw new Error('Add to cart failed');
-        }
-        return res.json();
-      })
-      .then(function (data) {
-        const item = data.items[0];
-        showModal(item, quantity);
-        return fetch('/cart.js', { headers: { Accept: 'application/json' } });
-      })
-      .then(function (res) {
-        if (!res.ok) {
-          throw new Error('Cart fetch failed');
-        }
-        return res.json();
-      })
-      .then(function (cart) {
-        const format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-        const totalPrice = formatMoney(cart.total_price, format);
-        const totalCount = cart.item_count;
-        resetPrices(totalPrice, totalCount);
-      })
-      .catch(function () {
-        if (addButton) {
-          addButton.classList.remove('button-loading');
-        }
+  async function addToCart(id, quantity) {
+    try {
+      const addRes = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ items: [{ id, quantity }] }),
       });
+      if (!addRes.ok) { throw new Error('Add to cart failed'); }
+      const data = await addRes.json();
+      showModal(data.items[0], quantity);
+
+      const cartRes = await fetch('/cart.js', { headers: { Accept: 'application/json' } });
+      if (!cartRes.ok) { throw new Error('Cart fetch failed'); }
+      const cart = await cartRes.json();
+      updateHeaderPrices(cart);
+    } catch (err) {
+      console.error(err);
+      if (addButton) { addButton.classList.remove('button-loading'); }
+    }
   }
 
-  function showModal(item, quantity){
-    addButton.classList.remove("button-loading");
-    const format = document.querySelector('[data-money-format]').getAttribute("data-money-format");
-    const cartModal = document.querySelector('#cart-modal');
+  function showModal(item, quantity) {
+    if (!cartModal || !item) { return; }
+    addButton?.classList.remove('button-loading');
+
+    const format = document.querySelector('[data-money-format]')?.getAttribute('data-money-format') ?? '';
     const title = quantity > 1 ? `${quantity} x ${item.product_title}` : item.product_title;
-    document.querySelector('#cart-modal-image').src = '';
-    document.querySelector('#cart-modal-image').src = item.image;
-    document.querySelector('#cart-modal-title').textContent = title;
-    document.querySelector('#cart-modal-price').textContent = formatMoney(item.price, format);
+
+    const img = document.querySelector('#cart-modal-image');
+    const titleEl = document.querySelector('#cart-modal-title');
+    const priceEl = document.querySelector('#cart-modal-price');
+    if (img) { img.src = item.image ?? ''; }
+    if (titleEl) { titleEl.textContent = title; }
+    if (priceEl) { priceEl.textContent = window.formatMoney(item.price, format); }
+
     cartModal.classList.add('is-visible');
-    clearTimeout(timeout);
-    timeout = setTimeout(hideModal, 5000);
-    cartModal.addEventListener('mouseenter', () => {
-      clearTimeout(timeout);
-    });
-    cartModal.addEventListener('mouseleave', () => {
-      timeout = setTimeout(hideModal, 2000);
-    });
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(hideModal, 5000);
   }
 
-  function hideModal(){
-    const cartModal = document.querySelector('#cart-modal');
-    if (cartModal) {
-      cartModal.classList.remove('is-visible');
-    }
+  function hideModal() {
+    cartModal?.classList.remove('is-visible');
   }
 
-  function resetPrices(totalPrice, totalCount){
-    document.querySelector('#header-cart-total').textContent = totalPrice;
-    document.querySelector('#header-cart-item-count').textContent = totalCount;
+  function updateHeaderPrices(cart) {
+    const format = document.querySelector('[data-money-format]')?.getAttribute('data-money-format') ?? '';
+    const totalEl = document.querySelector('#header-cart-total');
+    const countEl = document.querySelector('#header-cart-item-count');
+    if (totalEl) { totalEl.textContent = window.formatMoney(cart.total_price, format); }
+    if (countEl) { countEl.textContent = cart.item_count; }
   }
-
-  function formatMoney(cents, format) {
-    if (typeof cents == 'string') { cents = cents.replace('.',''); }
-    var value = '';
-    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
-    var formatString = (format || this.money_format);
-  
-    function defaultOption(opt, def) {
-       return (typeof opt == 'undefined' ? def : opt);
-    }
-  
-    function formatWithDelimiters(number, precision, thousands, decimal) {
-      precision = defaultOption(precision, 2);
-      thousands = defaultOption(thousands, ',');
-      decimal   = defaultOption(decimal, '.');
-  
-      if (isNaN(number) || number == null) { return 0; }
-  
-      number = (number/100.0).toFixed(precision);
-  
-      var parts   = number.split('.'),
-          dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
-          cents   = parts[1] ? (decimal + parts[1]) : '';
-  
-      return dollars + cents;
-    }
-  
-    switch(formatString.match(placeholderRegex)[1]) {
-      case 'amount':
-        value = formatWithDelimiters(cents, 2);
-        break;
-      case 'amount_no_decimals':
-        value = formatWithDelimiters(cents, 0);
-        break;
-      case 'amount_with_comma_separator':
-        value = formatWithDelimiters(cents, 2, '.', ',');
-        break;
-      case 'amount_no_decimals_with_comma_separator':
-        value = formatWithDelimiters(cents, 0, '.', ',');
-        break;
-    }
-  
-    return formatString.replace(placeholderRegex, value);
-  };
-
 });

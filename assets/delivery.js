@@ -1,13 +1,9 @@
-
-window.addEventListener("load", function(){
+window.addEventListener('load', () => {
   const delivery = document.querySelector('#delivery');
-  const deliveryIcon = document.querySelector('#delivery-icon');
-  var deliveryActive = false;
-  delivery.addEventListener('click', toggleDelivery);
-
-  function toggleDelivery(){
-    deliveryActive = !deliveryActive;
-    deliveryActive ? delivery.classList.add("active") : delivery.classList.remove("active");
-    deliveryActive ? deliveryIcon.classList.add("chevron-up") : deliveryIcon.classList.remove("chevron-up");
-  }
+  const icon = document.querySelector('#delivery-icon');
+  if (!delivery) { return; }
+  delivery.addEventListener('click', () => {
+    const active = delivery.classList.toggle('active');
+    icon?.classList.toggle('chevron-up', active);
+  });
 });
