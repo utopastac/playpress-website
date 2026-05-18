@@ -74,6 +74,11 @@ section[is="split-hero"] {
 
     & > div:first-child {
       margin-bottom: var(--space-3);
+
+      & [is="label"] {
+        margin-bottom: var(--space-1);
+        display: block;
+      }
     }
 
     @media (width >= 770px) {
