@@ -15,6 +15,7 @@
     {%- assign excluded_collections = excluded_collections_string | split: ',' -%}
     {%- assign all_collections = '' -%}
     {%- assign all_age_ranges = '' -%}
+    {%- assign has_new_products = false -%}
     {%- assign min_price = 999999 -%}
     {%- assign max_price = 0 -%}
     {%- for product in products limit: product_limit -%}
@@ -38,6 +39,9 @@
             {%- endif -%}
           {%- endunless -%}
         {%- endfor -%}
+        {%- if product.metafields.product.is_new == true -%}
+          {%- assign has_new_products = true -%}
+        {%- endif -%}
         {%- if product.metafields.product.age_range != blank -%}
           {%- assign age_range = product.metafields.product.age_range | strip -%}
           {%- unless all_age_ranges contains age_range -%}
@@ -71,7 +75,7 @@
           </div>
         </header>
         <div class="filter-content">
-          {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, id_prefix: '' %}
+          {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, show_new_filter: has_new_products, id_prefix: '' %}
         </div>
         <footer>
           <button id="filter-modal-apply" class="filter-apply-button" is="button" type="button">
@@ -121,7 +125,7 @@
       {% if section.settings.show_filtering_options %}
         <div id="filter-sidebar" class="filter-sidebar">
           <div class="filter-content">
-            {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, id_prefix: 'sidebar' %}
+            {% render 'product-filter-content', all_collections: all_collections, all_age_ranges: all_age_ranges, show_new_filter: has_new_products, id_prefix: 'sidebar' %}
           </div>
         </div>
       {% endif %}

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     date: new Date(product.dataset.date || '1970-01-01'),
     collections: (product.dataset.collections || '').split(',').filter(c => c),
     ageRange: product.dataset.ageRange || '',
+    isNew: product.dataset.isNew === 'true',
     originalIndex: index
   }));
 
@@ -28,21 +29,52 @@ document.addEventListener('DOMContentLoaded', function() {
   //console.log('All collection handles:', Array.from(allCollectionHandles).sort().join(', '));
 
   // Get filter elements (works for both modal and sidebar)
-  // Use class selector since there are two inputs (one in modal, one in sidebar)
-  const keywordFilters = document.querySelectorAll('.filter-keyword-input');
-  const collectionRadios = document.querySelectorAll('input[name="collection-filter"]');
+  const collectionCheckboxes = document.querySelectorAll('input[name="collection-filter"]');
   const priceCheckboxes = document.querySelectorAll('input[name="price-range"]');
   const ageRangeCheckboxes = document.querySelectorAll('input[name="age-range"]');
-  
-  // Sync keyword inputs between modal and sidebar
-  function syncKeywordInputs(sourceInput) {
-    keywordFilters.forEach(input => {
-      if (input !== sourceInput) {
-        input.value = sourceInput.value;
+  const newOnlyCheckboxes = document.querySelectorAll('input[name="new-only"]');
+
+  function getCheckedValues(inputs) {
+    const values = new Set();
+    Array.from(inputs).forEach(input => {
+      if (input.checked) {
+        values.add(input.value);
+      }
+    });
+    return Array.from(values);
+  }
+
+  function getUniqueFilterInputs(inputs) {
+    const seen = new Set();
+    return Array.from(inputs).filter(input => {
+      if (seen.has(input.value)) {
+        return false;
+      }
+      seen.add(input.value);
+      return true;
+    });
+  }
+
+  function isNewOnlyActive() {
+    return Array.from(newOnlyCheckboxes).some(checkbox => checkbox.checked);
+  }
+
+  function syncNewOnlyCheckboxes(sourceCheckbox) {
+    newOnlyCheckboxes.forEach(checkbox => {
+      if (checkbox !== sourceCheckbox) {
+        checkbox.checked = sourceCheckbox.checked;
       }
     });
   }
-  
+
+  function syncCollectionCheckboxes(sourceCheckbox) {
+    collectionCheckboxes.forEach(checkbox => {
+      if (checkbox !== sourceCheckbox && checkbox.value === sourceCheckbox.value) {
+        checkbox.checked = sourceCheckbox.checked;
+      }
+    });
+  }
+
   // Get modal and sidebar elements
   const filterModal = document.getElementById('filter-modal');
   const filterSidebar = document.getElementById('filter-sidebar');
@@ -58,16 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const filterClearButtons = document.querySelectorAll('.filter-clear-button');
 
   function hasActiveFilters() {
-    const visibleKeywordInput = Array.from(keywordFilters).find(input => {
-      const style = window.getComputedStyle(input);
-      return style.display !== 'none' && style.visibility !== 'hidden';
-    }) || keywordFilters[0];
-
-    if (visibleKeywordInput?.value.trim()) {
-      return true;
-    }
-
-    if (Array.from(collectionRadios).some(radio => radio.checked)) {
+    if (getCheckedValues(collectionCheckboxes).length > 0) {
       return true;
     }
 
@@ -79,17 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
       return true;
     }
 
+    if (isNewOnlyActive()) {
+      return true;
+    }
+
     return false;
   }
 
   function clearFilters() {
-    keywordFilters.forEach(input => {
-      input.value = '';
-    });
-
-    collectionRadios.forEach(radio => {
-      radio.checked = false;
-      radio.removeAttribute('checked');
+    collectionCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
     });
 
     priceCheckboxes.forEach(checkbox => {
@@ -100,73 +122,55 @@ document.addEventListener('DOMContentLoaded', function() {
       checkbox.checked = false;
     });
 
+    newOnlyCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
     updateDisplay();
   }
 
   function updateClearFiltersVisibility() {
     const active = hasActiveFilters();
 
-    document.querySelectorAll('.filter-clear').forEach(container => {
-      container.hidden = !active;
+    document.querySelectorAll('.filter-clear-group').forEach(container => {
+      container.classList.toggle('is-active', active);
     });
   }
 
   // Function to apply filters
   function applyFilters(products) {
     return products.filter(product => {
-      // Keyword filter (check first visible input)
-      const visibleKeywordInput = Array.from(keywordFilters).find(input => {
-        const style = window.getComputedStyle(input);
-        return style.display !== 'none' && style.visibility !== 'hidden';
-      }) || keywordFilters[0];
-      
-      if (visibleKeywordInput && visibleKeywordInput.value.trim()) {
-        const keyword = visibleKeywordInput.value.trim().toLowerCase();
-        if (!product.title.includes(keyword)) {
+      // Collection filter (checkboxes - OR: product matches if it's in any selected collection)
+      const selectedCollections = getCheckedValues(collectionCheckboxes);
+      if (selectedCollections.length > 0) {
+        const matchesCollection = selectedCollections.some(collectionHandle =>
+          product.collections.includes(collectionHandle)
+        );
+        if (!matchesCollection) {
           return false;
         }
       }
 
-      // Collection filter (radio buttons - single selection: product matches if it's in the selected collection)
-      if (collectionRadios && collectionRadios.length > 0) {
-        const selectedCollection = Array.from(collectionRadios)
-          .find(radio => radio.checked)?.value;
-        
-        if (selectedCollection) {
-          // Check if product is in the selected collection
-          if (!product.collections.includes(selectedCollection)) {
-            return false;
-          }
-        }
-      }
-
       // Price filter (checkboxes - OR logic: product matches if it's under ANY selected price)
-      if (priceCheckboxes && priceCheckboxes.length > 0) {
-        const selectedPrices = Array.from(priceCheckboxes)
-          .filter(cb => cb.checked)
-          .map(cb => parseFloat(cb.value));
+      const selectedPrices = getCheckedValues(priceCheckboxes).map(value => parseFloat(value));
+      if (selectedPrices.length > 0) {
         
-        if (selectedPrices.length > 0) {
-          // Check if product price is under any of the selected price thresholds
-          const matchesPrice = selectedPrices.some(priceThreshold => product.price < priceThreshold);
-          if (!matchesPrice) {
-            return false;
-          }
+        const matchesPrice = selectedPrices.some(priceThreshold => product.price < priceThreshold);
+        if (!matchesPrice) {
+          return false;
         }
       }
 
       // Age range filter (checkboxes - OR logic: product matches if it matches ANY selected age range)
-      if (ageRangeCheckboxes && ageRangeCheckboxes.length > 0) {
-        const selectedAgeRanges = Array.from(ageRangeCheckboxes)
-          .filter(cb => cb.checked)
-          .map(cb => cb.value);
-        
-        if (selectedAgeRanges.length > 0) {
-          // Check if product age range matches any of the selected age ranges
-          if (!product.ageRange || !selectedAgeRanges.includes(product.ageRange)) {
-            return false;
-          }
+      const selectedAgeRanges = getCheckedValues(ageRangeCheckboxes);
+      if (selectedAgeRanges.length > 0) {
+        if (!product.ageRange || !selectedAgeRanges.includes(product.ageRange)) {
+          return false;
         }
+      }
+
+      if (isNewOnlyActive() && !product.isNew) {
+        return false;
       }
 
       return true;
@@ -204,14 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to check if a filter combination would result in any products
   function wouldHaveResults(testFilters) {
     const testProducts = allProducts.filter(product => {
-      // Keyword filter
-      if (testFilters.keyword && testFilters.keyword.trim()) {
-        const keyword = testFilters.keyword.trim().toLowerCase();
-        if (!product.title.includes(keyword)) {
-          return false;
-        }
-      }
-
       // Collection filter
       if (testFilters.collections && testFilters.collections.length > 0) {
         const matchesCollection = testFilters.collections.some(selectedCollection => 
@@ -235,6 +231,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!product.ageRange || !testFilters.ageRanges.includes(product.ageRange)) {
           return false;
         }
+      }
+
+      if (testFilters.newOnly && !product.isNew) {
+        return false;
       }
 
       return true;
@@ -243,37 +243,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return testProducts.length > 0;
   }
 
-  // Function to sync radio buttons between modal and sidebar
-  function syncCollectionRadios(sourceRadio) {
-    if (!sourceRadio || !sourceRadio.checked) return;
-    
-    collectionRadios.forEach(radio => {
-      if (radio !== sourceRadio && radio.value === sourceRadio.value) {
-        radio.checked = true;
-        radio.setAttribute('checked', 'checked');
-      } else if (radio !== sourceRadio && radio.value !== sourceRadio.value) {
-        radio.checked = false;
-        radio.removeAttribute('checked');
-      }
-    });
-    
-    // Also ensure the source radio has the attribute
-    if (sourceRadio.checked) {
-      sourceRadio.setAttribute('checked', 'checked');
-    }
-  }
-
   // Function to count results for a filter option
   function countResultsForFilter(testFilters) {
     return allProducts.filter(product => {
-      // Keyword filter
-      if (testFilters.keyword && testFilters.keyword.trim()) {
-        const keyword = testFilters.keyword.trim().toLowerCase();
-        if (!product.title.includes(keyword)) {
-          return false;
-        }
-      }
-
       // Collection filter
       if (testFilters.collections && testFilters.collections.length > 0) {
         const matchesCollection = testFilters.collections.some(selectedCollection => 
@@ -299,147 +271,145 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
+      if (testFilters.newOnly && !product.isNew) {
+        return false;
+      }
+
       return true;
     }).length;
   }
 
   // Function to update filter counts
   function updateFilterCounts() {
-    // Get current filter state
-    const visibleKeywordInput = Array.from(keywordFilters).find(input => {
-      const style = window.getComputedStyle(input);
-      return style.display !== 'none' && style.visibility !== 'hidden';
-    }) || keywordFilters[0];
-    
-    const currentKeyword = visibleKeywordInput ? visibleKeywordInput.value.trim() : '';
-    const selectedCollection = Array.from(collectionRadios)
-      .find(radio => radio.checked)?.value;
-    const currentPrices = Array.from(priceCheckboxes)
-      .filter(cb => cb.checked)
-      .map(cb => parseFloat(cb.value));
-    const currentAgeRanges = Array.from(ageRangeCheckboxes)
-      .filter(cb => cb.checked)
-      .map(cb => cb.value);
+    const currentCollections = getCheckedValues(collectionCheckboxes);
+    const currentPrices = getCheckedValues(priceCheckboxes).map(value => parseFloat(value));
+    const currentAgeRanges = getCheckedValues(ageRangeCheckboxes);
+    const newOnly = isNewOnlyActive();
 
-    // Update counts for collection radio buttons
-    collectionRadios.forEach(radio => {
-      const collectionHandle = radio.value;
-      const testFilters = {
-        keyword: currentKeyword,
+    getUniqueFilterInputs(collectionCheckboxes).forEach(checkbox => {
+      const collectionHandle = checkbox.value;
+      const count = countResultsForFilter({
         collections: [collectionHandle],
         prices: currentPrices,
-        ageRanges: currentAgeRanges
-      };
-      const count = countResultsForFilter(testFilters);
-      const countElements = document.querySelectorAll(`.filter-count[data-collection-handle="${collectionHandle}"]`);
-      countElements.forEach(el => {
+        ageRanges: currentAgeRanges,
+        newOnly
+      });
+      document.querySelectorAll(`.filter-count[data-collection-handle="${collectionHandle}"]`).forEach(el => {
         el.textContent = `(${count})`;
       });
     });
 
-    // Update counts for price checkboxes
-    priceCheckboxes.forEach(checkbox => {
+    getUniqueFilterInputs(priceCheckboxes).forEach(checkbox => {
       const priceValue = parseFloat(checkbox.value);
-      // For price counts, show what the count would be if this checkbox was toggled
-      // If checked, show count with it; if unchecked, show count if it were added
-      const testPrices = checkbox.checked ? currentPrices : [...currentPrices, priceValue];
       const testFilters = {
-        keyword: currentKeyword,
-        collections: selectedCollection ? [selectedCollection] : [],
-        prices: testPrices,
-        ageRanges: currentAgeRanges
+        collections: currentCollections,
+        prices: [priceValue],
+        ageRanges: currentAgeRanges,
+        newOnly
       };
       const count = countResultsForFilter(testFilters);
-      const countElements = document.querySelectorAll(`.filter-count[data-price-value="${priceValue}"]`);
-      countElements.forEach(el => {
+      document.querySelectorAll(`.filter-count[data-price-value="${priceValue}"]`).forEach(el => {
         el.textContent = `(${count})`;
       });
     });
 
-    // Update counts for age range checkboxes
-    ageRangeCheckboxes.forEach(checkbox => {
+    getUniqueFilterInputs(ageRangeCheckboxes).forEach(checkbox => {
       const ageRangeValue = checkbox.value;
-      // For age range counts, show what the count would be if this checkbox was toggled
-      // If checked, show count with it; if unchecked, show count if it were added
-      const testAgeRanges = checkbox.checked ? currentAgeRanges : [...currentAgeRanges, ageRangeValue];
-      const testFilters = {
-        keyword: currentKeyword,
-        collections: selectedCollection ? [selectedCollection] : [],
+      const count = countResultsForFilter({
+        collections: currentCollections,
         prices: currentPrices,
-        ageRanges: testAgeRanges
-      };
-      const count = countResultsForFilter(testFilters);
-      const countElements = document.querySelectorAll(`.filter-count[data-age-range="${ageRangeValue}"]`);
-      countElements.forEach(el => {
+        ageRanges: [ageRangeValue],
+        newOnly
+      });
+      document.querySelectorAll(`.filter-count[data-age-range="${ageRangeValue}"]`).forEach(el => {
         el.textContent = `(${count})`;
       });
+    });
+
+    document.querySelectorAll('.filter-count[data-filter-new]').forEach(el => {
+      const count = countResultsForFilter({
+        collections: currentCollections,
+        prices: currentPrices,
+        ageRanges: currentAgeRanges,
+        newOnly: true
+      });
+      el.textContent = `(${count})`;
     });
   }
 
   // Function to update disabled state of filter options
   function updateFilterAvailability() {
-    // Get current filter state
-    const visibleKeywordInput = Array.from(keywordFilters).find(input => {
-      const style = window.getComputedStyle(input);
-      return style.display !== 'none' && style.visibility !== 'hidden';
-    }) || keywordFilters[0];
-    
-    const currentKeyword = visibleKeywordInput ? visibleKeywordInput.value.trim() : '';
-    const currentPrices = Array.from(priceCheckboxes)
-      .filter(cb => cb.checked)
-      .map(cb => parseFloat(cb.value));
-    const currentAgeRanges = Array.from(ageRangeCheckboxes)
-      .filter(cb => cb.checked)
-      .map(cb => cb.value);
+    const currentCollections = getCheckedValues(collectionCheckboxes);
+    const currentPrices = getCheckedValues(priceCheckboxes).map(value => parseFloat(value));
+    const currentAgeRanges = getCheckedValues(ageRangeCheckboxes);
+    const newOnly = isNewOnlyActive();
 
-    // Test each unselected collection radio button
-    collectionRadios.forEach(radio => {
-      if (!radio.checked) {
-        const testFilters = {
-          keyword: currentKeyword,
-          collections: [radio.value],
-          prices: currentPrices,
-          ageRanges: currentAgeRanges
-        };
-        radio.disabled = !wouldHaveResults(testFilters);
-      } else {
-        radio.disabled = false;
-      }
-    });
-
-    // Test each unchecked price checkbox
-    priceCheckboxes.forEach(checkbox => {
+    getUniqueFilterInputs(collectionCheckboxes).forEach(checkbox => {
       if (!checkbox.checked) {
-        const testPrice = parseFloat(checkbox.value);
-        const testPrices = [...currentPrices, testPrice];
-        const selectedCollection = Array.from(collectionRadios)
-          .find(radio => radio.checked)?.value;
         const testFilters = {
-          keyword: currentKeyword,
-          collections: selectedCollection ? [selectedCollection] : [],
-          prices: testPrices,
-          ageRanges: currentAgeRanges
+          collections: [...currentCollections, checkbox.value],
+          prices: currentPrices,
+          ageRanges: currentAgeRanges,
+          newOnly
         };
         checkbox.disabled = !wouldHaveResults(testFilters);
       } else {
         checkbox.disabled = false;
       }
+      collectionCheckboxes.forEach(synced => {
+        if (synced.value === checkbox.value) {
+          synced.disabled = checkbox.disabled;
+        }
+      });
     });
 
-    // Test each unchecked age range checkbox
-    ageRangeCheckboxes.forEach(checkbox => {
+    getUniqueFilterInputs(priceCheckboxes).forEach(checkbox => {
       if (!checkbox.checked) {
-        const testAgeRange = checkbox.value;
-        const testAgeRanges = [...currentAgeRanges, testAgeRange];
-        const selectedCollection = Array.from(collectionRadios)
-          .find(radio => radio.checked)?.value;
+        const testPrice = parseFloat(checkbox.value);
         const testFilters = {
-          keyword: currentKeyword,
-          collections: selectedCollection ? [selectedCollection] : [],
-          prices: currentPrices,
-          ageRanges: testAgeRanges
+          collections: currentCollections,
+          prices: [...currentPrices, testPrice],
+          ageRanges: currentAgeRanges,
+          newOnly
         };
         checkbox.disabled = !wouldHaveResults(testFilters);
+      } else {
+        checkbox.disabled = false;
+      }
+      priceCheckboxes.forEach(synced => {
+        if (synced.value === checkbox.value) {
+          synced.disabled = checkbox.disabled;
+        }
+      });
+    });
+
+    getUniqueFilterInputs(ageRangeCheckboxes).forEach(checkbox => {
+      if (!checkbox.checked) {
+        const testFilters = {
+          collections: currentCollections,
+          prices: currentPrices,
+          ageRanges: [...currentAgeRanges, checkbox.value],
+          newOnly
+        };
+        checkbox.disabled = !wouldHaveResults(testFilters);
+      } else {
+        checkbox.disabled = false;
+      }
+      ageRangeCheckboxes.forEach(synced => {
+        if (synced.value === checkbox.value) {
+          synced.disabled = checkbox.disabled;
+        }
+      });
+    });
+
+    newOnlyCheckboxes.forEach(checkbox => {
+      if (!checkbox.checked) {
+        checkbox.disabled = !wouldHaveResults({
+          collections: currentCollections,
+          prices: currentPrices,
+          ageRanges: currentAgeRanges,
+          newOnly: true
+        });
       } else {
         checkbox.disabled = false;
       }
@@ -449,6 +419,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to update display
   function updateDisplay() {
     const sortBy = sortSelect ? sortSelect.value : 'featured';
+
+    updateClearFiltersVisibility();
     
     // Apply filters first
     let filteredProducts = applyFilters(allProducts);
@@ -624,70 +596,16 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSortDisplay('featured');
   }
 
-  // Set up event listeners for filtering
-  keywordFilters.forEach(input => {
-    input.addEventListener('input', function() {
-      syncKeywordInputs(this);
-      updateDisplay();
-    });
-  });
-  
-  // Set up event listeners for collection radio buttons
-  if (collectionRadios && collectionRadios.length > 0) {
-    collectionRadios.forEach(radio => {
-      // Ensure all radios have the same name for proper grouping
-      radio.name = 'collection-filter';
-      
-      radio.addEventListener('change', function() {
-        // Ensure this radio has the checked attribute
-        if (this.checked) {
-          this.setAttribute('checked', 'checked');
-        } else {
-          this.removeAttribute('checked');
-        }
-        
-        // Sync all radios with the same value
-        syncCollectionRadios(this);
-        
-        // Ensure only one radio is selected across all radios (in case sync didn't work)
-        if (this.checked) {
-          collectionRadios.forEach(r => {
-            if (r !== this && r.value !== this.value && r.checked) {
-              r.checked = false;
-              r.removeAttribute('checked');
-            }
-          });
-        }
+  if (collectionCheckboxes.length > 0) {
+    collectionCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        syncCollectionCheckboxes(this);
         updateDisplay();
-      });
-      
-      // Handle click on label as well (since clicking label triggers radio)
-      const label = document.querySelector(`label[for="${radio.id}"]`);
-      if (label) {
-        label.addEventListener('click', function() {
-          // Small delay to let native radio behavior happen first
-          setTimeout(() => {
-            if (radio.checked) {
-              radio.setAttribute('checked', 'checked');
-              syncCollectionRadios(radio);
-              updateDisplay();
-            }
-          }, 0);
-        });
-      }
-      
-      // Also handle direct click on radio button
-      radio.addEventListener('click', function() {
-        // Ensure checked attribute is set
-        if (this.checked) {
-          this.setAttribute('checked', 'checked');
-        }
       });
     });
   }
-  
-  // Set up event listeners for price checkboxes
-  if (priceCheckboxes && priceCheckboxes.length > 0) {
+
+  if (priceCheckboxes.length > 0) {
     priceCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', updateDisplay);
     });
@@ -731,6 +649,15 @@ document.addEventListener('DOMContentLoaded', function() {
   if (ageRangeCheckboxes && ageRangeCheckboxes.length > 0) {
     ageRangeCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', updateDisplay);
+    });
+  }
+
+  if (newOnlyCheckboxes.length > 0) {
+    newOnlyCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        syncNewOnlyCheckboxes(this);
+        updateDisplay();
+      });
     });
   }
 

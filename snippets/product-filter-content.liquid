@@ -1,11 +1,27 @@
-<div class="filter-group filter-search-group">
-  <div class="product-search-controls">
-    <input type="text" class="filter-input filter-keyword-input" placeholder="Search">
-  </div>
-  <div class="filter-clear" hidden>
-    <button type="button" class="filter-clear-button">Clear filters</button>
+<div class="filter-group filter-clear-group">
+  <button type="button" class="filter-clear-button">Clear filters</button>
+</div>
+{%- if show_new_filter -%}
+<div class="filter-group">
+  <div class="new-checkboxes">
+    <div class="new-checkbox-item">
+      {%- if id_prefix != '' -%}
+        <input type="checkbox" id="filter-new-{{ id_prefix }}" name="new-only" value="1">
+        <label for="filter-new-{{ id_prefix }}">
+          <span class="label-text">New</span>
+          <span class="filter-count" data-filter-new></span>
+        </label>
+      {%- else -%}
+        <input type="checkbox" id="filter-new" name="new-only" value="1">
+        <label for="filter-new">
+          <span class="label-text">New</span>
+          <span class="filter-count" data-filter-new></span>
+        </label>
+      {%- endif -%}
+    </div>
   </div>
 </div>
+{%- endif -%}
 <div class="filter-group">
   <h5>Collection</h5>
   <div class="collection-checkboxes">
@@ -15,13 +31,13 @@
       {%- if filter_collection -%}
         <div class="collection-checkbox-item">
           {%- if id_prefix != '' -%}
-            <input type="radio" id="filter-collection-{{ id_prefix }}-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
+            <input type="checkbox" id="filter-collection-{{ id_prefix }}-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
             <label for="filter-collection-{{ id_prefix }}-{{ collection_handle }}">
               <span class="label-text">{{ filter_collection.title }}</span>
               <span class="filter-count" data-collection-handle="{{ collection_handle }}"></span>
             </label>
           {%- else -%}
-            <input type="radio" id="filter-collection-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
+            <input type="checkbox" id="filter-collection-{{ collection_handle }}" name="collection-filter" value="{{ collection_handle }}" data-collection-handle="{{ collection_handle }}">
             <label for="filter-collection-{{ collection_handle }}">
               <span class="label-text">{{ filter_collection.title }}</span>
               <span class="filter-count" data-collection-handle="{{ collection_handle }}"></span>

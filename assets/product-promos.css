@@ -34,21 +34,6 @@ div[is="product-promos"] {
   }
 }
 
-.product-search-controls {
-  width: 100%;
-  position: relative;
-
-  & .filter-input {
-    width: 100%;
-    padding-inline-start: 4.8rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%238999A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.35-4.35'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: left var(--space-1-5) center;
-    background-size: 2rem;
-  }
-}
-
-
 .product-filter-controls,
 .product-sorting {
   @media (width >= 770px) {
@@ -332,8 +317,6 @@ div[is="product-promos"] {
     background: var(--color-white);
     position: sticky;
     top: var(--space-2);
-    max-height: calc(100vh - var(--space-4));
-    overflow-y: auto;
     align-self: flex-start;
   }
 }
@@ -349,13 +332,17 @@ div[is="product-promos"] {
   padding-bottom: var(--space-2);
   margin-bottom: var(--space-2);
 
-  &.filter-search-group {
-    & .filter-clear {
-      display: block;
+  &.filter-clear-group {
+    display: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
 
-      &[hidden] {
-        display: none;
-      }
+    &.is-active {
+      display: flex;
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-2);
+      gap: var(--space-1);
     }
 
     & .filter-clear-button {
@@ -442,6 +429,7 @@ div[is="product-promos"] {
 
 .price-checkboxes,
 .age-range-checkboxes,
+.new-checkboxes,
 .collection-checkboxes {
   display: flex;
   flex-direction: column;
@@ -450,7 +438,8 @@ div[is="product-promos"] {
 
 .price-checkbox-item,
 .collection-checkbox-item,
-.age-range-checkbox-item {
+.age-range-checkbox-item,
+.new-checkbox-item {
   display: flex;
   align-items: center;
   min-width: 0;
