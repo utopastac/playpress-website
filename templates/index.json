@@ -1,0 +1,310 @@
+{
+  "sections": {
+    "896052e9-7468-470d-89eb-22991a6f0e2c": {
+      "type": "warning-banner",
+      "settings": {
+        "heading": "Free UK delivery",
+        "text": "",
+        "link_text": "More",
+        "link_url": "shopify://pages/delivery",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff",
+        "show_banner": false
+      }
+    },
+    "hero_pd3q7n": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "heading": "The Legends castle is Highly commended 🏆",
+        "subtitle": "Gift of the year 2026",
+        "text": "",
+        "link_text": "Buy now",
+        "link_url": "shopify://products/garden-insects-playset-copy",
+        "image": "shopify://shop_images/big-castle-win_8abb7fc6-8341-456b-ba60-9d249007336a.jpg",
+        "bg_color": "#e9d392",
+        "is_text_color": true,
+        "text_color": "#564600",
+        "is_large": true,
+        "is_dark": true
+      }
+    },
+    "gap_FLLJh9": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "product_promos_individual_nAqaTn": {
+      "type": "product-promos-individual",
+      "blocks": {
+        "product_Wywc4F": {
+          "type": "product",
+          "settings": {
+            "product": "gruffalo-mini"
+          }
+        },
+        "product_YajAaW": {
+          "type": "product",
+          "settings": {
+            "product": "gruffalo-collection-playset-the-gruffalo-copy"
+          }
+        },
+        "product_LKjbKj": {
+          "type": "product",
+          "settings": {
+            "product": "gruffalo-collection-playset-fox-copy"
+          }
+        },
+        "product_QqzCqt": {
+          "type": "product",
+          "settings": {
+            "product": "gruffalo-collection-playset-snake"
+          }
+        }
+      },
+      "block_order": [
+        "product_Wywc4F",
+        "product_YajAaW",
+        "product_LKjbKj",
+        "product_QqzCqt"
+      ],
+      "name": "Product promos individual",
+      "settings": {
+        "title": "Collect all 4 Gruffalo mini sets",
+        "text": ""
+      }
+    },
+    "3568c2d6-9ceb-4812-a57c-ed938ca2807f": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a": {
+      "type": "collections",
+      "blocks": {
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-sets"
+          }
+        },
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "mini-sets"
+          }
+        },
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "stocking-fillers"
+          }
+        },
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "under-10"
+          }
+        },
+        "9a5a200c-99bc-4fb3-be02-d09091f1e20d": {
+          "type": "collection",
+          "settings": {
+            "collection": "julia-donaldson"
+          }
+        }
+      },
+      "block_order": [
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-0",
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-1",
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-2",
+        "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a-1669123572b15eebe7-3",
+        "9a5a200c-99bc-4fb3-be02-d09091f1e20d"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "3da560ad-006d-4360-a1f1-5d809bde06ad": {
+      "type": "gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "hero_GPmdV6": {
+      "type": "hero",
+      "settings": {
+        "heading": "Explore our Dino Dig, Hospital, Bookshop, and more!",
+        "subtitle": "New mini sets!",
+        "text": "",
+        "link_text": "Buy now",
+        "link_url": "shopify://collections/new-sets",
+        "image": "shopify://shop_images/mini-sets-new.png",
+        "bg_color": "#ffd760",
+        "is_text_color": true,
+        "text_color": "#0a122a",
+        "is_large": false,
+        "is_dark": true
+      }
+    },
+    "hero_HBCyiY": {
+      "type": "hero",
+      "disabled": true,
+      "settings": {
+        "heading": "Explore the capital city with our new London Landmarks set",
+        "subtitle": "New Set",
+        "text": "",
+        "link_text": "Shop",
+        "link_url": "shopify://products/london-landmarks-pop-out-playset",
+        "image": "shopify://shop_images/london_d3c9af5b-1471-455d-a5bb-eab102d03b6c.png",
+        "bg_color": "#d7e2ff",
+        "is_text_color": true,
+        "text_color": "#2d3788",
+        "is_large": false,
+        "is_dark": true
+      }
+    },
+    "44372dd3-96f6-4cbd-ad4b-4ab46c744fba": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "592589cc-23f4-460c-aaa1-a8c5fa26628f": {
+      "type": "product-promos",
+      "settings": {
+        "title": "Best sellers",
+        "text": "",
+        "collection": "best-sellers",
+        "grid": 4,
+        "rows": 5,
+        "show_signpost_link": true,
+        "show_sorting_options": false,
+        "show_filtering_options": false,
+        "excluded_collections": "",
+        "link_text": "View all products",
+        "link_url": "shopify://pages/shop"
+      }
+    },
+    "gap_Tij7bb": {
+      "type": "gap",
+      "name": "Gap",
+      "settings": {
+        "size": 2
+      }
+    },
+    "0f90aaf7-9415-44a5-98d5-18b88d507cde": {
+      "type": "hero",
+      "settings": {
+        "heading": "Celebrate 200 years of saving lives at sea",
+        "subtitle": "RNLI 200 anniversary",
+        "text": "",
+        "link_text": "Buy now",
+        "link_url": "shopify://products/rnli-lifeboat-house",
+        "image": "shopify://shop_images/transparent_bd68e209-1a87-42cf-a7e1-42f79da44815.png",
+        "bg_color": "#2d1f74",
+        "is_text_color": false,
+        "text_color": "#0a122a",
+        "is_large": false,
+        "is_dark": false,
+        "background_image": "shopify://shop_images/bg.jpg"
+      }
+    },
+    "596be5df-64e8-4ac6-aa05-eba2affa0b31": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "b19a403a-f605-4887-957c-be3ec277c046": {
+      "type": "page-features",
+      "blocks": {
+        "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-0": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cover_Image_1920x1080_f73dde4c-84b3-4941-8856-c9308f64f4a7.png",
+            "link_text": "About Playpress",
+            "link_url": "shopify://pages/about",
+            "title": "Award-winning & eco-friendly",
+            "subtitle": "Playpress are buildable playsets for ages 4 and up, made right here in the UK."
+          }
+        },
+        "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-1": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": false,
+            "link_text": "View awards",
+            "link_url": "shopify://pages/awards",
+            "title": "Awards",
+            "subtitle": "Our sets have been nominated for many awards, and we have even won a few!"
+          }
+        },
+        "437d887c-504f-4cbc-a795-00b31560b553": {
+          "type": "page_feature",
+          "settings": {
+            "enable_image": false,
+            "link_text": "Stock Playpress",
+            "link_url": "shopify://pages/stock-us",
+            "title": "Stockists",
+            "subtitle": "Stocking our affordable and eco-friendly playsets could not be easier!"
+          }
+        }
+      },
+      "block_order": [
+        "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-0",
+        "b19a403a-f605-4887-957c-be3ec277c046-1669124199d6d4d102-1",
+        "437d887c-504f-4cbc-a795-00b31560b553"
+      ],
+      "settings": {}
+    },
+    "gap_iHqiVb": {
+      "type": "gap",
+      "settings": {
+        "size": 1
+      }
+    },
+    "reviews_customers_LyVWny": {
+      "type": "reviews-customers",
+      "name": "Reviews Customers",
+      "settings": {}
+    },
+    "374a1a21-6dd3-4c54-8468-049ad77014ea": {
+      "type": "big-banner",
+      "settings": {
+        "heading": "Sustainability",
+        "text": "We’re creating a world of play that doesn’t cost the earth by minimising our environmental impact without sacrificing on quality or fun.",
+        "subtext": "",
+        "link_text": "Learn more",
+        "link_url": "shopify://pages/sustainability",
+        "image": "shopify://shop_images/sustainability.jpg",
+        "bg_color": "#2d8872",
+        "text_color": "#ffffff",
+        "layout": "left"
+      }
+    }
+  },
+  "order": [
+    "896052e9-7468-470d-89eb-22991a6f0e2c",
+    "hero_pd3q7n",
+    "gap_FLLJh9",
+    "product_promos_individual_nAqaTn",
+    "3568c2d6-9ceb-4812-a57c-ed938ca2807f",
+    "60bf2a24-ed6a-41a9-b1a7-a0ba2f6e8c1a",
+    "3da560ad-006d-4360-a1f1-5d809bde06ad",
+    "hero_GPmdV6",
+    "hero_HBCyiY",
+    "44372dd3-96f6-4cbd-ad4b-4ab46c744fba",
+    "592589cc-23f4-460c-aaa1-a8c5fa26628f",
+    "gap_Tij7bb",
+    "0f90aaf7-9415-44a5-98d5-18b88d507cde",
+    "596be5df-64e8-4ac6-aa05-eba2affa0b31",
+    "b19a403a-f605-4887-957c-be3ec277c046",
+    "gap_iHqiVb",
+    "reviews_customers_LyVWny",
+    "374a1a21-6dd3-4c54-8468-049ad77014ea"
+  ]
+}

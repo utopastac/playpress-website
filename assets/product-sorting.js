@@ -55,6 +55,62 @@ document.addEventListener('DOMContentLoaded', function() {
     return window.matchMedia('(min-width: 1080px)').matches;
   }
 
+  const filterClearButtons = document.querySelectorAll('.filter-clear-button');
+
+  function hasActiveFilters() {
+    const visibleKeywordInput = Array.from(keywordFilters).find(input => {
+      const style = window.getComputedStyle(input);
+      return style.display !== 'none' && style.visibility !== 'hidden';
+    }) || keywordFilters[0];
+
+    if (visibleKeywordInput?.value.trim()) {
+      return true;
+    }
+
+    if (Array.from(collectionRadios).some(radio => radio.checked)) {
+      return true;
+    }
+
+    if (Array.from(priceCheckboxes).some(checkbox => checkbox.checked)) {
+      return true;
+    }
+
+    if (Array.from(ageRangeCheckboxes).some(checkbox => checkbox.checked)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  function clearFilters() {
+    keywordFilters.forEach(input => {
+      input.value = '';
+    });
+
+    collectionRadios.forEach(radio => {
+      radio.checked = false;
+      radio.removeAttribute('checked');
+    });
+
+    priceCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    ageRangeCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    updateDisplay();
+  }
+
+  function updateClearFiltersVisibility() {
+    const active = hasActiveFilters();
+
+    document.querySelectorAll('.filter-clear').forEach(container => {
+      container.hidden = !active;
+    });
+  }
+
   // Function to apply filters
   function applyFilters(products) {
     return products.filter(product => {
@@ -483,6 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Remove loading state
     productPromos.classList.remove('loading');
+    updateClearFiltersVisibility();
   });
   }
 
@@ -743,6 +800,10 @@ document.addEventListener('DOMContentLoaded', function() {
       updateDisplay();
     });
   }
+
+  filterClearButtons.forEach(button => {
+    button.addEventListener('click', clearFilters);
+  });
 
   // Close modal when clicking outside (on backdrop)
   if (filterModal) {

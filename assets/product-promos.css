@@ -48,10 +48,6 @@ div[is="product-promos"] {
   }
 }
 
-.filter-search-group {
-  padding-bottom: var(--space-2);
-  margin-bottom: var(--space-2);
-}
 
 .product-filter-controls,
 .product-sorting {
@@ -352,6 +348,45 @@ div[is="product-promos"] {
   width: 100%;
   padding-bottom: var(--space-2);
   margin-bottom: var(--space-2);
+
+  &.filter-search-group {
+    & .filter-clear {
+      display: block;
+
+      &[hidden] {
+        display: none;
+      }
+    }
+
+    & .filter-clear-button {
+      appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: var(--color-blue-100);
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: var(--text-body-4);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-snug);
+      border-radius: var(--radius-xs);
+      padding-inline: var(--space-1-5);
+      color: var(--color-blue-1000);
+      height: var(--btn-height-micro);
+      white-space: nowrap;
+      border: none;
+      box-shadow: none;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        background-color: var(--color-blue-1000);
+        color: var(--color-white);
+      }
+    }
+  }
 
   &:not(:first-child) {
     border-bottom: 1px solid var(--color-border);

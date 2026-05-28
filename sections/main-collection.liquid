@@ -1,7 +1,6 @@
 {{ 'shop.css' | asset_url | stylesheet_tag }}
 
 <div is="shop">
-
   {% render 'section-header', title: collection.title, text: collection.description, large: true, center: true %}
 
   <div is="product-promos">
@@ -14,3 +13,15 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Collection",
+  "tag": "section",
+  "class": "main-collection",
+  "enabled_on": {
+    "templates": ["collection"]
+  },
+  "settings": []
+}
+{% endschema %}
