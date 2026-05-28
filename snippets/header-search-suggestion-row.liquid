@@ -1,0 +1,15 @@
+{%- if url != blank and title != blank -%}
+  <a class="header-search-result" href="{{ url }}">
+    {%- if image != blank -%}
+      <img src="{{ image }}" alt="" width="48" height="48" loading="lazy">
+    {%- endif -%}
+    <span class="header-search-result-body">
+      <span class="header-search-result-title">{{ title | escape }}</span>
+      {%- if price_cents != blank -%}
+        <span class="header-search-result-meta">{{ price_cents | money }}</span>
+      {%- elsif meta != blank -%}
+        <span class="header-search-result-meta">{{ meta | escape }}</span>
+      {%- endif -%}
+    </span>
+  </a>
+{%- endif -%}

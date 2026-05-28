@@ -32,8 +32,39 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "search_sugg_shop": {
+            "type": "search_suggestion",
+            "settings": {
+              "title": "Shop all products",
+              "subtitle": "Browse the full range",
+              "link_url": "shopify://pages/shop"
+            }
+          },
+          "search_sugg_new_sets": {
+            "type": "search_suggestion",
+            "settings": {
+              "collection": "new-sets"
+            }
+          },
+          "search_sugg_delivery": {
+            "type": "search_suggestion",
+            "settings": {
+              "title": "Delivery",
+              "subtitle": "Free UK delivery & shipping info",
+              "link_url": "shopify://pages/delivery"
+            }
+          }
+        },
+        "block_order": [
+          "search_sugg_shop",
+          "search_sugg_new_sets",
+          "search_sugg_delivery"
+        ],
         "settings": {
-          "main_linklist": "main-menu"
+          "main_linklist": "main-menu",
+          "enable_search": true,
+          "search_placeholder": "Search products…"
         }
       },
       "footer": {

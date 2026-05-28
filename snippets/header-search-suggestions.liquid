@@ -1,0 +1,114 @@
+{%- assign suggestion_blocks = blocks | default: blank -%}
+{%- assign delivery_page = pages['delivery'] -%}
+{%- assign delivery_url = delivery_page.url | default: '/pages/delivery' -%}
+{%- assign delivery_title = 'general.search.suggestions_delivery_title' | t -%}
+{%- assign delivery_meta = settings.delivery_bar_primary_text | default: 'general.search.suggestions_delivery_meta' | t -%}
+{%- assign show_delivery = true -%}
+
+<div class="header-search-results-group">
+  <h3>{{ 'general.search.suggestions_heading' | t }}</h3>
+
+  {%- if suggestion_blocks != blank -%}
+    {%- for block in suggestion_blocks -%}
+      {%- if block.type == 'search_suggestion' -%}
+        {%- assign row_url = blank -%}
+        {%- assign row_title = blank -%}
+        {%- assign row_meta = block.settings.subtitle -%}
+        {%- assign row_image = blank -%}
+        {%- assign row_price_cents = blank -%}
+
+        {%- if block.settings.product != blank -%}
+          {%- assign row_product = block.settings.product -%}
+          {%- assign row_url = row_product.url -%}
+          {%- assign row_title = block.settings.title | default: row_product.title -%}
+          {%- unless row_meta != blank -%}
+            {%- assign row_price_cents = row_product.price -%}
+          {%- endunless -%}
+          {%- if row_product.featured_image -%}
+            {%- assign row_image = row_product.featured_image | image_url: width: 96 -%}
+          {%- endif -%}
+        {%- elsif block.settings.collection != blank -%}
+          {%- assign row_collection = block.settings.collection -%}
+          {%- assign row_url = row_collection.url -%}
+          {%- assign row_title = block.settings.title | default: row_collection.title -%}
+          {%- if row_collection.image -%}
+            {%- assign row_image = row_collection.image | image_url: width: 96 -%}
+          {%- endif -%}
+          {%- if row_meta == blank -%}
+            {%- assign row_meta = 'general.search.collection_meta' | t: count: row_collection.products_count -%}
+          {%- endif -%}
+        {%- elsif block.settings.page != blank -%}
+          {%- assign row_page = block.settings.page -%}
+          {%- assign row_url = row_page.url -%}
+          {%- assign row_title = block.settings.title | default: row_page.title -%}
+          {%- if row_page.url == delivery_url -%}
+            {%- assign show_delivery = false -%}
+          {%- endif -%}
+        {%- elsif block.settings.link_url != blank -%}
+          {%- assign row_url = block.settings.link_url -%}
+          {%- assign row_title = block.settings.title -%}
+          {%- if row_url contains '/pages/delivery' -%}
+            {%- assign show_delivery = false -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {% render 'header-search-suggestion-row',
+          url: row_url,
+          title: row_title,
+          meta: row_meta,
+          price_cents: row_price_cents,
+          image: row_image
+        %}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    {% render 'header-search-suggestion-row',
+      url: '/pages/shop',
+      title: 'general.search.fallback_shop' | t,
+      meta: 'general.search.fallback_shop_meta' | t
+    %}
+    {%- assign fallback_collection = collections['new-sets'] -%}
+    {%- if fallback_collection != blank -%}
+      {% render 'header-search-suggestion-row',
+        url: fallback_collection.url,
+        title: fallback_collection.title,
+        meta: 'general.search.collection_meta' | t: count: fallback_collection.products_count,
+        image: fallback_collection.image | image_url: width: 96
+      %}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if show_delivery -%}
+    {% render 'header-search-suggestion-row',
+      url: delivery_url,
+      title: delivery_title,
+      meta: delivery_meta
+    %}
+  {%- endif -%}
+</div>
+
+{%- assign best_sellers_collection = collections['best-sellers'] -%}
+{%- if best_sellers_collection != blank -%}
+  {%- capture best_seller_rows -%}
+    {%- for product in best_sellers_collection.products limit: 3 -%}
+      {%- if product.available -%}
+        {%- assign product_image = blank -%}
+        {%- if product.featured_image -%}
+          {%- assign product_image = product.featured_image | image_url: width: 96 -%}
+        {%- endif -%}
+        {% render 'header-search-suggestion-row',
+          url: product.url,
+          title: product.title,
+          price_cents: product.price,
+          image: product_image
+        %}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if best_seller_rows != blank -%}
+    <div class="header-search-results-group">
+      <h3>{{ 'general.search.suggestions_best_sellers_heading' | t }}</h3>
+      {{ best_seller_rows }}
+    </div>
+  {%- endif -%}
+{%- endif -%}

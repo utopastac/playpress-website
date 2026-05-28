@@ -10,6 +10,27 @@
 {
   "general": {
     "search": {
+      "title": "Search",
+      "open": "Open search",
+      "close": "Close search",
+      "placeholder": "Search products…",
+      "submit": "Search",
+      "suggestions": "Search suggestions",
+      "suggestions_heading": "Popular",
+      "collection_meta": "{{ count }} products",
+      "fallback_shop": "Shop all products",
+      "fallback_shop_meta": "Browse the full range",
+      "suggestions_delivery_title": "Delivery",
+      "suggestions_delivery_meta": "Free UK delivery & shipping info",
+      "suggestions_best_sellers_heading": "Best sellers",
+      "products": "Products",
+      "pages": "Pages",
+      "articles": "Articles",
+      "pagination": "Search results pagination",
+      "no_results_title": "No results for \"{{ terms }}\"",
+      "no_results_message": "Try a different search term or browse our shop.",
+      "view_all": "View all results",
+      "suggest_empty": "No results found",
       "heading": {
         "one": "{{ count }} result",
         "other": "{{ count }} results"

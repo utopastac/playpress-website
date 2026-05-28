@@ -82,13 +82,18 @@
       {% endfor %} {% endcomment %}
     </ul>
   </nav>
-  <p id="cart">
-    <a href="/cart" data-spark-link="cart">
-      <span class="icon cart"></span>
-      <strong id="header-cart-item-count">{{ cart.item_count }}</strong>
-      <span id="header-cart-total">{{ cart.total_price | money }}</span>
-    </a>
-  </p>
+  <div class="header-actions">
+    {%- if section.settings.enable_search -%}
+      {% render 'header-search', placeholder: section.settings.search_placeholder, blocks: section.blocks %}
+    {%- endif -%}
+    <p id="cart" class="header-cart">
+      <a href="/cart" data-spark-link="cart">
+        <span class="icon cart"></span>
+        <strong id="header-cart-item-count">{{ cart.item_count }}</strong>
+        <span id="header-cart-total">{{ cart.total_price | money }}</span>
+      </a>
+    </p>
+  </div>
 </header>
 
 {% schema %}
@@ -100,7 +105,61 @@
       "id": "main_linklist",
       "label": "Menu",
       "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "Enable search",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search placeholder",
+      "default": "Search products…"
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "search_suggestion",
+      "name": "Search suggestion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Optional. Uses product, collection, or page title when left blank."
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "info": "Optional. Shown below the title."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Custom link",
+          "info": "Used when no product, collection, or page is selected. Requires a title."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8
 }
 {% endschema %}

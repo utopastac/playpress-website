@@ -1,0 +1,121 @@
+{{ 'main-search.css' | asset_url | stylesheet_tag }}
+{{ 'shop.css' | asset_url | stylesheet_tag }}
+
+<div is="search-page">
+  {%- if search.performed -%}
+    {%- if search.results_count > 0 -%}
+      {%- capture search_heading -%}
+        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      {%- endcapture -%}
+    {%- else -%}
+      {%- capture search_heading -%}
+        {{ 'general.search.no_results_title' | t: terms: search.terms }}
+      {%- endcapture -%}
+    {%- endif -%}
+
+    {% render 'section-header', title: search_heading, large: true, center: true %}
+
+    {%- paginate search.results by 24 -%}
+      {%- assign has_products = false -%}
+      {%- assign has_pages = false -%}
+      {%- assign has_articles = false -%}
+
+      {%- for item in search.results -%}
+        {%- if item.object_type == 'product' and item.available -%}
+          {%- assign has_products = true -%}
+        {%- elsif item.object_type == 'page' -%}
+          {%- assign has_pages = true -%}
+        {%- elsif item.object_type == 'article' -%}
+          {%- assign has_articles = true -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if has_products -%}
+        <section class="search-results-group">
+          <h2 is="label">{{ 'general.search.products' | t }}</h2>
+          <div is="product-promos">
+            <div class="four">
+              {%- for item in search.results -%}
+                {%- if item.object_type == 'product' and item.available -%}
+                  {% render 'product-promo', product: item %}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </section>
+      {%- endif -%}
+
+      {%- if has_pages -%}
+        <section class="search-results-group">
+          <h2 is="label">{{ 'general.search.pages' | t }}</h2>
+          <ul class="search-results-list">
+            {%- for item in search.results -%}
+              {%- if item.object_type == 'page' -%}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </section>
+      {%- endif -%}
+
+      {%- if has_articles -%}
+        <section class="search-results-group">
+          <h2 is="label">{{ 'general.search.articles' | t }}</h2>
+          <ul class="search-results-list">
+            {%- for item in search.results -%}
+              {%- if item.object_type == 'article' -%}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </section>
+      {%- endif -%}
+
+      {%- if paginate.pages > 1 -%}
+        <nav class="search-pagination" aria-label="{{ 'general.search.pagination' | t }}">
+          {{ paginate | default_pagination }}
+        </nav>
+      {%- endif -%}
+    {%- endpaginate -%}
+
+    {%- if search.results_count == 0 -%}
+      <p class="search-empty-message">{{ 'general.search.no_results_message' | t }}</p>
+      <p class="search-empty-link">
+        <a href="{{ routes.root_url }}">{{ 'general.404.link' | t }}</a>
+      </p>
+    {%- endif -%}
+  {%- else -%}
+    {%- assign search_page_title = 'general.search.title' | t -%}
+    {% render 'section-header', title: search_page_title, large: true, center: true %}
+
+    <div class="search-landing">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search-landing-form">
+        <label class="visually-hidden" for="search-landing-input">{{ 'general.search.placeholder' | t }}</label>
+        <input
+          id="search-landing-input"
+          type="search"
+          name="q"
+          placeholder="{{ 'general.search.placeholder' | t }}"
+          autocomplete="off"
+        >
+        <button type="submit" is="button">{{ 'general.search.submit' | t }}</button>
+      </form>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Search results",
+  "tag": "section",
+  "class": "main-search",
+  "enabled_on": {
+    "templates": ["search"]
+  },
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,96 @@
+{{ 'header-search.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'header-search.js' | asset_url }}" defer></script>
+
+{%- assign search_placeholder = placeholder | default: 'Search products…' -%}
+
+<div
+  class="header-search"
+  data-header-search
+  data-label-products="{{ 'general.search.products' | t | escape }}"
+  data-label-pages="{{ 'general.search.pages' | t | escape }}"
+  data-label-articles="{{ 'general.search.articles' | t | escape }}"
+  data-label-view-all="{{ 'general.search.view_all' | t | escape }}"
+  data-label-empty="{{ 'general.search.suggest_empty' | t | escape }}"
+  data-label-open="{{ 'general.search.open' | t | escape }}"
+  data-label-close="{{ 'general.search.close' | t | escape }}"
+  data-label-suggestions="{{ 'general.search.suggestions_heading' | t | escape }}"
+>
+  <button
+    type="button"
+    class="header-search-trigger"
+    aria-haspopup="dialog"
+    aria-controls="header-search-palette"
+    aria-expanded="false"
+  >
+    <span class="icon search" aria-hidden="true"></span>
+    <span class="visually-hidden">{{ 'general.search.open' | t }}</span>
+  </button>
+
+  <div
+    id="header-search-palette"
+    class="header-search-palette"
+    role="dialog"
+    aria-modal="true"
+    aria-label="{{ 'general.search.title' | t }}"
+    hidden
+  >
+    <div class="header-search-backdrop" data-search-close tabindex="-1"></div>
+
+    <div class="header-search-panel">
+      <header class="header-search-panel-header">
+        <form
+          class="header-search-form"
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+        >
+          <div class="header-search-field">
+            <span class="icon search" aria-hidden="true"></span>
+            <label class="visually-hidden" for="header-search-input">{{ search_placeholder }}</label>
+            <input
+              id="header-search-input"
+              class="header-search-input"
+              type="search"
+              name="q"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ search_placeholder | escape }}"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-expanded="false"
+              aria-controls="header-search-results"
+              aria-autocomplete="list"
+            >
+          </div>
+        </form>
+        <button type="button" class="header-search-close" data-search-close>
+          <span class="icon close" aria-hidden="true"></span>
+          <span class="visually-hidden">{{ 'general.search.close' | t }}</span>
+        </button>
+      </header>
+
+      <div class="header-search-body">
+        <div class="header-search-scroll">
+          <div
+            id="header-search-defaults"
+            class="header-search-results header-search-defaults"
+            role="listbox"
+            aria-label="{{ 'general.search.suggestions_heading' | t }}"
+            hidden
+          >
+            {% render 'header-search-suggestions', blocks: blocks %}
+          </div>
+          <div
+            id="header-search-results"
+            class="header-search-results"
+            role="listbox"
+            aria-label="{{ 'general.search.suggestions' | t }}"
+            hidden
+          ></div>
+        </div>
+        <div id="header-search-footer" class="header-search-footer" hidden></div>
+      </div>
+    </div>
+  </div>
+</div>

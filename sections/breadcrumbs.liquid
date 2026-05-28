@@ -1,6 +1,6 @@
 {{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
-{%- if template == 'product' -%} {%- assign t = template | split: '.' | first
+{%- if template == 'product' or template == 'search' -%} {%- assign t = template | split: '.' | first
 -%}
   <ul is="breadcrumbs" class="christmas">
     <li>
@@ -13,6 +13,19 @@
         </li>
         <li class="active">
           <p><span>{{ product.title | remove: "Eco-Friendly Playset" | remove: "Eco Friendly Playset" | remove: "Playset" | remove: "Eco"}}</span></p>
+        </li>
+      {%- when 'search' -%}
+        <li>
+          <a href="/pages/shop/">Shop</a>
+        </li>
+        <li class="active">
+          <p><span>
+            {%- if search.performed -%}
+              {{ search.terms }}
+            {%- else -%}
+              {{ 'general.search.title' | t }}
+            {%- endif -%}
+          </span></p>
         </li>
       {%- when 'collection' and collection.handle -%}
         {%- if current_tags -%}

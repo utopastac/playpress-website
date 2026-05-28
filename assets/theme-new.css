@@ -43,6 +43,18 @@
 
 /* ─── Reset & base ───────────────────────────────────────────────── */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -208,6 +220,7 @@ hr {
   &.close      { mask-image: url(icon-close.svg); }
   &.trash      { mask-image: url(icon-trash.svg); }
   &.cart       { mask-image: url(icon-cart.svg); }
+  &.search     { mask-image: url(icon-search.svg); }
   &.check      { mask-image: url(icon-check.svg); }
   &.download   { mask-image: url(icon-download.svg); }
   &.instructions { mask-image: url(icon-instructions.svg); }
