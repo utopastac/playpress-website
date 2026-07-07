@@ -257,7 +257,7 @@ window.sparkOptions = {
   }
 
   /* SparkLayer — price wildcard (excludes containers with spark-product-card or spark-pdp) */
-  [class*="price"]:not(:has(spark-product-card)):not(:has(spark-pdp)) {
+  [class*="price"]:not(:has(spark-product-card)):not(:has(spark-pdp)):not(div[is="cart"] *) {
     display: none !important;
   }
 

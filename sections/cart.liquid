@@ -2,7 +2,7 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {{ 'cart-item.css' | asset_url | stylesheet_tag }}
 
-<div is="cart">
+<div is="cart" data-cart-url="{{ routes.cart_url | append: '.js' }}" data-cart-update-url="{{ routes.cart_url | append: '/update.js' }}" data-cart-change-url="{{ routes.cart_url | append: '/change.js' }}" data-discount-root="{{ routes.root_url }}discount/" data-checkout-url="{{ routes.root_url }}checkout">
   <div>
     <form action="/cart" method="post">
       <div>
@@ -58,11 +58,44 @@
           </section>
           <div is="checkout">
             <div is="checkout-wrapper">
-              <header>
-                <h3>Total</h3>
-                <p class="total-price">{{cart.total_price | money }}</p>
-              </header>
-              <button type="submit" name="checkout" id="checkout-button">Proceed to checkout<div class = "icon arrow-right"></div></button>
+              <div class="cart-discount">
+                <div id="discount-form" class="cart-discount__form">
+                  <div class="cart-discount__row">
+                    <input
+                      type="text"
+                      id="discount-code"
+                      name="discount"
+                      autocomplete="off"
+                      placeholder="Discount code"
+                    />
+                    <button type="button" id="discount-apply" is="outline-button">Apply</button>
+                  </div>
+                  <div class="cart-discount__chips" id="discount-chips" hidden>
+                    <span class="cart-discount__chip">
+                      <span class="cart-discount__chip-label" id="discount-chip-label"></span>
+                      <button type="button" class="cart-discount__chip-remove" id="discount-chip-remove" aria-label="Remove discount">×</button>
+                    </span>
+                  </div>
+                  <p class="cart-discount__message" id="discount-message" role="status" aria-live="polite" hidden></p>
+                </div>
+              </div>
+              <table class="cart-totals">
+                <tbody>
+                  <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row" hidden>
+                    <th scope="row">Subtotal</th>
+                    <td class="subtotal-price"></td>
+                  </tr>
+                  <tr class="cart-totals__row cart-totals__discount" id="cart-discount-row" hidden>
+                    <th scope="row">Discount</th>
+                    <td class="discount-price"></td>
+                  </tr>
+                  <tr class="cart-totals__row cart-totals__total">
+                    <th scope="row">Total</th>
+                    <td class="total-price">{{ cart.total_price | money }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" id="checkout-button">Proceed to checkout<div class = "icon arrow-right"></div></button>
               <p class="meta">Delivery charges calculated at checkout.</p>
             </div>
             {% render 'delivery' %}

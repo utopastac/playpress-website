@@ -400,7 +400,8 @@ button {
   border: none;
 }
 
-a[is="outline-button"] {
+a[is="outline-button"],
+button[is="outline-button"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +428,8 @@ a[is="button"],
 p[is="button"],
 div[is="button"],
 input[type="submit"],
-button[type="submit"] {
+button[type="submit"],
+#checkout-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;

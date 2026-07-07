@@ -299,7 +299,7 @@
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_c4735e7_jrDdFt": {
-          "type": "ai_gen_block_c4735e7",
+          "type": "party-bag-builder",
           "settings": {
             "title": "Build Your Party Bag",
             "description": "Select your favorite items and quantities. The more you add, the more you save!",

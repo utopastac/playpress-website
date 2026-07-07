@@ -47,27 +47,151 @@ div[is="cart"] {
       border-radius: var(--radius-s);
       margin-bottom: var(--space-2);
 
-      & > header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: 0;
+      & .cart-discount {
+        margin-bottom: 0;
 
-        & h3 {
-          font-size: var(--text-body-1);
-          font-weight: var(--weight-bold);
-          line-height: var(--leading-body);
+        & .cart-discount__row {
+          display: flex;
+          gap: var(--space-1);
+          align-items: stretch;
+
+          & input {
+            flex: 1;
+            min-width: 0;
+            background: var(--color-white);
+            border: 1px solid var(--color-blue-300);
+            border-radius: var(--radius-xs);
+          }
+
+          & button[is="outline-button"] {
+            flex-shrink: 0;
+            height: auto;
+            background: var(--color-white);
+            border-color: var(--color-blue-300);
+            align-self: stretch;
+
+            &:hover {
+              background: var(--color-blue-50);
+            }
+          }
         }
 
-        & p {
+        & .cart-discount__chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--space-0-5);
+          margin-top: var(--space-1);
+
+          &[hidden] {
+            display: none;
+          }
+        }
+
+        & .cart-discount__chip {
+          display: inline-flex;
+          align-items: center;
+          gap: var(--space-0-5);
+          padding: var(--space-0-5) var(--space-1);
+          background: var(--color-white);
+          border: 1px solid var(--color-blue-300);
+          border-radius: var(--radius-xs);
+          font-size: var(--text-body-4);
+          font-weight: var(--weight-medium);
+          line-height: 1;
+          color: var(--color-text);
+        }
+
+        & .cart-discount__chip-remove {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: var(--space-2);
+          height: var(--space-2);
+          padding: 0;
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-size: var(--text-body-2);
+          line-height: 1;
+          color: var(--color-text-muted);
+
+          &:hover {
+            color: var(--color-text);
+          }
+        }
+
+        & .cart-discount__message {
+          font-size: var(--text-body-4);
+          line-height: var(--leading-snug);
+          margin-top: var(--space-0-5);
+
+          &[hidden] {
+            display: none;
+          }
+
+          &.cart-discount__message--error {
+            color: var(--color-magenta-1000);
+          }
+        }
+      }
+
+      & .cart-totals {
+        width: 100%;
+        border-collapse: collapse;
+        margin: var(--space-2) 0 0;
+
+        & th,
+        & td {
+          padding: var(--space-0-5) 0;
+          vertical-align: baseline;
+        }
+
+        & th {
+          text-align: left;
+          font-weight: var(--weight-medium);
+          font-size: var(--text-body-3);
+          line-height: var(--leading-body);
+          color: var(--color-text-muted);
+        }
+
+        & td {
+          text-align: right;
           font-size: var(--text-body-2);
           line-height: var(--leading-body);
+          white-space: nowrap;
+        }
+
+        & .cart-totals__discount {
+          & .discount-price {
+            color: var(--color-green-1000);
+          }
+        }
+
+        & .cart-totals__total {
+          & th,
+          & td {
+            padding-top: var(--space-2);
+            border-top: 1px solid var(--color-blue-300);
+            font-weight: var(--weight-bold);
+            font-size: var(--text-body-1);
+            color: var(--color-text);
+          }
+        }
+
+        &:has(#cart-subtotal-row:not([hidden])) {
+          & .cart-totals__total {
+            & th,
+            & td {
+              padding-top: var(--space-1);
+            }
+          }
         }
       }
     }
 
-    & button[type="submit"] {
-      margin: var(--space-2) 0;
+    & button[type="submit"],
+    & #checkout-button {
+      margin: var(--space-1) 0 var(--space-2);
       height: var(--space-7);
       width: 100%;
     }

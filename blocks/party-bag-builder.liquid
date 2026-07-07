@@ -1,0 +1,532 @@
+<script src="{{ 'party-bag-builder.js' | asset_url }}" defer></script>
+{{ 'party-bag-builder.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  capture discount_tiers
+    echo '['
+    assign first_tier = true
+    for i in (1..4)
+      assign min_key = 'tier_' | append: i | append: '_min_qty'
+      assign disc_key = 'tier_' | append: i | append: '_discount'
+      assign min_qty = block.settings[min_key]
+      if min_qty > 0
+        unless first_tier
+          echo ','
+        endunless
+        echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: block.settings[disc_key] | append: '}'
+        assign first_tier = false
+      endif
+    endfor
+    echo ']'
+  endcapture
+-%}
+
+<section
+  is="party-bag-builder"
+  style="
+    --party-bag-bg: {{ block.settings.background_color }};
+    --party-bag-text: {{ block.settings.text_color }};
+    --party-bag-price: {{ block.settings.price_color }};
+    --party-bag-discount: {{ block.settings.discount_color }};
+    --party-bag-card-bg: {{ block.settings.product_card_bg }};
+    --party-bag-card-border: {{ block.settings.product_card_border }};
+    --party-bag-banner-bg: {{ block.settings.discount_banner_bg }};
+    --party-bag-banner-text: {{ block.settings.discount_banner_text }};
+    --party-bag-summary-bg: {{ block.settings.summary_bg }};
+    --party-bag-summary-border: {{ block.settings.summary_border }};
+    --party-bag-btn-bg: {{ block.settings.button_bg_color }};
+    --party-bag-btn-text: {{ block.settings.button_text_color }};
+    --party-bag-btn-border: {{ block.settings.button_border_color }};
+    --party-bag-btn-hover-bg: {{ block.settings.button_hover_bg }};
+    --party-bag-btn-hover-text: {{ block.settings.button_hover_text }};
+    --party-bag-cta-bg: {{ block.settings.cta_bg_color }};
+    --party-bag-cta-text: {{ block.settings.cta_text_color }};
+    --party-bag-cta-hover-bg: {{ block.settings.cta_hover_bg }};
+    --party-bag-cta-hover-text: {{ block.settings.cta_hover_text }};
+    --party-bag-radius: {{ block.settings.border_radius }}px;
+    --party-bag-btn-radius: {{ block.settings.button_border_radius }}px;
+    --party-bag-title-size: {{ block.settings.title_size }}px;
+    --party-bag-description-size: {{ block.settings.description_size }}px;
+  "
+  data-cart-url="{{ routes.cart_add_url }}"
+  data-button-text="{{ block.settings.button_text | escape }}"
+  data-discount-tiers='{{ discount_tiers }}'
+  {{ block.shopify_attributes }}
+>
+  <div class="party-bag-builder__container">
+    <div class="party-bag-builder__header">
+      {%- if block.settings.title != blank -%}
+        <h2 class="party-bag-builder__title">{{ block.settings.title }}</h2>
+      {%- endif -%}
+      {%- if block.settings.description != blank -%}
+        <p class="party-bag-builder__description">{{ block.settings.description }}</p>
+      {%- endif -%}
+    </div>
+
+    {%- assign has_products = false -%}
+    {%- for i in (1..12) -%}
+      {%- assign product_key = 'product_' | append: i -%}
+      {%- assign product = block.settings[product_key] -%}
+      {%- if product != blank -%}
+        {%- assign has_products = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if has_products -%}
+      <div class="party-bag-builder__discount-banner" data-discount-banner>
+        <div class="party-bag-builder__discount-current" data-current-tier>
+          Select items to see your discount
+        </div>
+        <div class="party-bag-builder__discount-next" data-next-tier></div>
+      </div>
+
+      <div class="party-bag-builder__products">
+        {%- for i in (1..12) -%}
+          {%- assign product_key = 'product_' | append: i -%}
+          {%- assign product = block.settings[product_key] -%}
+
+          {%- if product != blank -%}
+            <div class="party-bag-builder__product" data-product-card>
+              <div class="party-bag-builder__product-image-wrapper">
+                {%- if product.featured_image -%}
+                  <img
+                    src="{{ product.featured_image | image_url: width: 400 }}"
+                    alt="{{ product.featured_image.alt | escape }}"
+                    class="party-bag-builder__product-image"
+                    loading="lazy"
+                    width="400"
+                    height="400"
+                  >
+                {%- else -%}
+                  <div class="party-bag-builder__product-image-placeholder">
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <div class="party-bag-builder__product-info">
+                <h3 class="party-bag-builder__product-title">{{ product.title }}</h3>
+                <p class="party-bag-builder__product-price">{{ product.price | money }}</p>
+              </div>
+
+              <div class="party-bag-builder__quantity-selector">
+                <button
+                  type="button"
+                  class="party-bag-builder__quantity-button"
+                  data-quantity-decrease
+                  data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                  data-product-price="{{ product.price }}"
+                  aria-label="Decrease quantity"
+                  disabled
+                >
+                  −
+                </button>
+                <span class="party-bag-builder__quantity-display" data-quantity-display>0</span>
+                <button
+                  type="button"
+                  class="party-bag-builder__quantity-button"
+                  data-quantity-increase
+                  data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                  data-product-price="{{ product.price }}"
+                  aria-label="Increase quantity"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="party-bag-builder__summary">
+        <div class="party-bag-builder__summary-row">
+          <span class="party-bag-builder__summary-label">Total items:</span>
+          <span class="party-bag-builder__summary-value" data-total-quantity>0</span>
+        </div>
+        <div class="party-bag-builder__summary-row">
+          <span class="party-bag-builder__summary-label">Subtotal:</span>
+          <span class="party-bag-builder__summary-value" data-subtotal>{{ 0 | money }}</span>
+        </div>
+        <div class="party-bag-builder__summary-row" data-discount-row hidden>
+          <span class="party-bag-builder__summary-label party-bag-builder__summary-discount">Discount:</span>
+          <span class="party-bag-builder__summary-value party-bag-builder__summary-discount" data-discount-amount>{{ 0 | money }}</span>
+        </div>
+        <div class="party-bag-builder__summary-row party-bag-builder__summary-total">
+          <span class="party-bag-builder__summary-label">Total:</span>
+          <span class="party-bag-builder__summary-value" data-total>{{ 0 | money }}</span>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="party-bag-builder__add-to-cart"
+        data-add-to-cart
+        disabled
+      >
+        {{ block.settings.button_text }}
+      </button>
+
+      <div class="party-bag-builder__message" data-message hidden></div>
+    {%- else -%}
+      <div class="party-bag-builder__empty-state">
+        <p>Add products to your party bag builder in the theme editor settings.</p>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Party bag builder",
+  "tag": null,
+  "class": "party-bag-builder-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Build Your Party Bag"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Select your favorite items and quantities. The more you add, the more you save!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product 3"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Product 4"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Product 5"
+    },
+    {
+      "type": "product",
+      "id": "product_6",
+      "label": "Product 6"
+    },
+    {
+      "type": "product",
+      "id": "product_7",
+      "label": "Product 7"
+    },
+    {
+      "type": "product",
+      "id": "product_8",
+      "label": "Product 8"
+    },
+    {
+      "type": "product",
+      "id": "product_9",
+      "label": "Product 9"
+    },
+    {
+      "type": "product",
+      "id": "product_10",
+      "label": "Product 10"
+    },
+    {
+      "type": "product",
+      "id": "product_11",
+      "label": "Product 11"
+    },
+    {
+      "type": "product",
+      "id": "product_12",
+      "label": "Product 12"
+    },
+    {
+      "type": "header",
+      "content": "Discount tiers"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set quantity thresholds and discount percentages. Discounts compound as customers add more items."
+    },
+    {
+      "type": "range",
+      "id": "tier_1_min_qty",
+      "label": "Tier 1 minimum quantity",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "tier_1_discount",
+      "label": "Tier 1 discount",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "tier_2_min_qty",
+      "label": "Tier 2 minimum quantity",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tier_2_discount",
+      "label": "Tier 2 discount",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tier_3_min_qty",
+      "label": "Tier 3 minimum quantity",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "tier_3_discount",
+      "label": "Tier 3 discount",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "tier_4_min_qty",
+      "label": "Tier 4 minimum quantity",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "tier_4_discount",
+      "label": "Tier 4 discount",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price",
+      "default": "#2b68a0"
+    },
+    {
+      "type": "color",
+      "id": "discount_color",
+      "label": "Discount",
+      "default": "#c4275b"
+    },
+    {
+      "type": "color",
+      "id": "product_card_bg",
+      "label": "Product card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "product_card_border",
+      "label": "Product card border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "discount_banner_bg",
+      "label": "Discount banner background",
+      "default": "#f9b42b"
+    },
+    {
+      "type": "color",
+      "id": "discount_banner_text",
+      "label": "Discount banner text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "summary_bg",
+      "label": "Summary background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "summary_border",
+      "label": "Summary border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Quantity button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Quantity button text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Quantity button border",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Quantity button hover background",
+      "default": "#2b68a0"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text",
+      "label": "Quantity button hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "cta_bg_color",
+      "label": "Add to cart background",
+      "default": "#f9b42b"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "Add to cart text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_bg",
+      "label": "Add to cart hover background",
+      "default": "#2b68a0"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_text",
+      "label": "Add to cart hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Party bag builder"
+    }
+  ]
+}
+{% endschema %}
