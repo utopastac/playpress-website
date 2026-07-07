@@ -8,12 +8,12 @@
     for i in (1..4)
       assign min_key = 'tier_' | append: i | append: '_min_qty'
       assign disc_key = 'tier_' | append: i | append: '_discount'
-      assign min_qty = block.settings[min_key]
+      assign min_qty = section.settings[min_key]
       if min_qty > 0
         unless first_tier
           echo ','
         endunless
-        echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: block.settings[disc_key] | append: '}'
+        echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: section.settings[disc_key] | append: '}'
         assign first_tier = false
       endif
     endfor
@@ -24,49 +24,48 @@
 <section
   is="party-bag-builder"
   style="
-    --party-bag-bg: {{ block.settings.background_color }};
-    --party-bag-text: {{ block.settings.text_color }};
-    --party-bag-price: {{ block.settings.price_color }};
-    --party-bag-discount: {{ block.settings.discount_color }};
-    --party-bag-card-bg: {{ block.settings.product_card_bg }};
-    --party-bag-card-border: {{ block.settings.product_card_border }};
-    --party-bag-banner-bg: {{ block.settings.discount_banner_bg }};
-    --party-bag-banner-text: {{ block.settings.discount_banner_text }};
-    --party-bag-summary-bg: {{ block.settings.summary_bg }};
-    --party-bag-summary-border: {{ block.settings.summary_border }};
-    --party-bag-btn-bg: {{ block.settings.button_bg_color }};
-    --party-bag-btn-text: {{ block.settings.button_text_color }};
-    --party-bag-btn-border: {{ block.settings.button_border_color }};
-    --party-bag-btn-hover-bg: {{ block.settings.button_hover_bg }};
-    --party-bag-btn-hover-text: {{ block.settings.button_hover_text }};
-    --party-bag-cta-bg: {{ block.settings.cta_bg_color }};
-    --party-bag-cta-text: {{ block.settings.cta_text_color }};
-    --party-bag-cta-hover-bg: {{ block.settings.cta_hover_bg }};
-    --party-bag-cta-hover-text: {{ block.settings.cta_hover_text }};
-    --party-bag-radius: {{ block.settings.border_radius }}px;
-    --party-bag-btn-radius: {{ block.settings.button_border_radius }}px;
-    --party-bag-title-size: {{ block.settings.title_size }}px;
-    --party-bag-description-size: {{ block.settings.description_size }}px;
+    --party-bag-bg: {{ section.settings.background_color }};
+    --party-bag-text: {{ section.settings.text_color }};
+    --party-bag-price: {{ section.settings.price_color }};
+    --party-bag-discount: {{ section.settings.discount_color }};
+    --party-bag-card-bg: {{ section.settings.product_card_bg }};
+    --party-bag-card-border: {{ section.settings.product_card_border }};
+    --party-bag-banner-bg: {{ section.settings.discount_banner_bg }};
+    --party-bag-banner-text: {{ section.settings.discount_banner_text }};
+    --party-bag-summary-bg: {{ section.settings.summary_bg }};
+    --party-bag-summary-border: {{ section.settings.summary_border }};
+    --party-bag-btn-bg: {{ section.settings.button_bg_color }};
+    --party-bag-btn-text: {{ section.settings.button_text_color }};
+    --party-bag-btn-border: {{ section.settings.button_border_color }};
+    --party-bag-btn-hover-bg: {{ section.settings.button_hover_bg }};
+    --party-bag-btn-hover-text: {{ section.settings.button_hover_text }};
+    --party-bag-cta-bg: {{ section.settings.cta_bg_color }};
+    --party-bag-cta-text: {{ section.settings.cta_text_color }};
+    --party-bag-cta-hover-bg: {{ section.settings.cta_hover_bg }};
+    --party-bag-cta-hover-text: {{ section.settings.cta_hover_text }};
+    --party-bag-radius: {{ section.settings.border_radius }}px;
+    --party-bag-btn-radius: {{ section.settings.button_border_radius }}px;
+    --party-bag-title-size: {{ section.settings.title_size }}px;
+    --party-bag-description-size: {{ section.settings.description_size }}px;
   "
   data-cart-url="{{ routes.cart_add_url }}"
-  data-button-text="{{ block.settings.button_text | escape }}"
+  data-button-text="{{ section.settings.button_text | escape }}"
   data-discount-tiers='{{ discount_tiers }}'
-  {{ block.shopify_attributes }}
 >
   <div class="party-bag-builder__container">
     <div class="party-bag-builder__header">
-      {%- if block.settings.title != blank -%}
-        <h2 class="party-bag-builder__title">{{ block.settings.title }}</h2>
+      {%- if section.settings.title != blank -%}
+        <h2 class="party-bag-builder__title">{{ section.settings.title }}</h2>
       {%- endif -%}
-      {%- if block.settings.description != blank -%}
-        <p class="party-bag-builder__description">{{ block.settings.description }}</p>
+      {%- if section.settings.description != blank -%}
+        <p class="party-bag-builder__description">{{ section.settings.description }}</p>
       {%- endif -%}
     </div>
 
     {%- assign has_products = false -%}
     {%- for i in (1..12) -%}
       {%- assign product_key = 'product_' | append: i -%}
-      {%- assign product = block.settings[product_key] -%}
+      {%- assign product = section.settings[product_key] -%}
       {%- if product != blank -%}
         {%- assign has_products = true -%}
         {%- break -%}
@@ -84,7 +83,7 @@
       <div class="party-bag-builder__products">
         {%- for i in (1..12) -%}
           {%- assign product_key = 'product_' | append: i -%}
-          {%- assign product = block.settings[product_key] -%}
+          {%- assign product = section.settings[product_key] -%}
 
           {%- if product != blank -%}
             <div class="party-bag-builder__product" data-product-card>
@@ -164,7 +163,7 @@
         data-add-to-cart
         disabled
       >
-        {{ block.settings.button_text }}
+        {{ section.settings.button_text }}
       </button>
 
       <div class="party-bag-builder__message" data-message hidden></div>
