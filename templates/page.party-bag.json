@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blocks_RDpMjc": {
+      "type": "_blocks",
+      "name": "Party bag builder",
+      "settings": {}
+    },
+    "party_bag_builder_H4HfQb": {
+      "type": "party-bag-builder",
+      "name": "Party bag builder",
+      "settings": {
+        "title": "Build Your Party Bag",
+        "description": "Select your favorite items and quantities. The more you add, the more you save!",
+        "button_text": "Add to Cart",
+        "product_1": "gruffalo-collection-playset-the-gruffalo-copy",
+        "product_2": "gruffalo-collection-playset-fox-copy",
+        "product_3": "gruffalo-collection-playset-snake",
+        "product_4": "gruffalo-mini",
+        "product_5": "",
+        "product_6": "",
+        "product_7": "",
+        "product_8": "",
+        "product_9": "",
+        "product_10": "",
+        "product_11": "",
+        "product_12": "",
+        "tier_1_min_qty": 5,
+        "tier_1_discount": 5,
+        "tier_2_min_qty": 10,
+        "tier_2_discount": 10,
+        "tier_3_min_qty": 15,
+        "tier_3_discount": 15,
+        "tier_4_min_qty": 20,
+        "tier_4_discount": 20,
+        "title_size": 32,
+        "description_size": 16,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "price_color": "#2b68a0",
+        "discount_color": "#c4275b",
+        "product_card_bg": "#ffffff",
+        "product_card_border": "#e0e0e0",
+        "discount_banner_bg": "#f9b42b",
+        "discount_banner_text": "#000000",
+        "summary_bg": "#f9f9f9",
+        "summary_border": "#e0e0e0",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#cccccc",
+        "button_hover_bg": "#2b68a0",
+        "button_hover_text": "#ffffff",
+        "cta_bg_color": "#f9b42b",
+        "cta_text_color": "#000000",
+        "cta_hover_bg": "#2b68a0",
+        "cta_hover_text": "#ffffff",
+        "button_border_radius": 4,
+        "border_radius": 8
+      }
+    }
+  },
+  "order": [
+    "blocks_RDpMjc",
+    "party_bag_builder_H4HfQb"
+  ]
+}
