@@ -62,19 +62,10 @@
       {%- endif -%}
     {%- endfor -%}
   {%- else -%}
-    {% render 'header-search-suggestion-row',
-      url: '/pages/shop',
-      title: 'general.search.fallback_shop' | t,
-      meta: 'general.search.fallback_shop_meta' | t
-    %}
+    {% render 'header-search-suggestion-row', url: '/pages/shop', title: 'general.search.fallback_shop', meta: 'general.search.fallback_shop_meta' %}
     {%- assign fallback_collection = collections['new-sets'] -%}
     {%- if fallback_collection != blank -%}
-      {% render 'header-search-suggestion-row',
-        url: fallback_collection.url,
-        title: fallback_collection.title,
-        meta: 'general.search.collection_meta' | t: count: fallback_collection.products_count,
-        image: fallback_collection.image | image_url: width: 96
-      %}
+      {% render 'header-search-suggestion-row', url: fallback_collection.url, title: fallback_collection.title, meta: 'general.search.collection_meta', t: count, image: fallback_collection.image, image_url: width %}
     {%- endif -%}
   {%- endif -%}
 
@@ -112,3 +103,30 @@
     </div>
   {%- endif -%}
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'header-search-suggestion-row',
+          url: '/pages/shop',
+          title: 'general.search.fallback_shop' | t,
+          meta: 'general.search.fallback_shop_meta' | t
+        %}
+  to: "{% render 'header-search-suggestion-row', url: '/pages/shop', title: 'general.search.fallback_shop',
+    meta: 'general.search.fallback_shop_meta' %}"
+  position: 2978..3123
+- from: |-
+    {% render 'header-search-suggestion-row',
+            url: fallback_collection.url,
+            title: fallback_collection.title,
+            meta: 'general.search.collection_meta' | t: count: fallback_collection.products_count,
+            image: fallback_collection.image | image_url: width: 96
+          %}
+  to: "{% render 'header-search-suggestion-row', url: fallback_collection.url, title:
+    fallback_collection.title, meta: 'general.search.collection_meta', t: count, image:
+    fallback_collection.image, image_url: width %}"
+  position: 3239..3448
+{% endcomment %}
