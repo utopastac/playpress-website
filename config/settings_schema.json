@@ -91,5 +91,24 @@
         "label": "Link URL"
       }
     ]
+  },
+  {
+    "name": "Free UK delivery",
+    "settings": [
+      {
+        "type": "number",
+        "id": "free_uk_delivery_threshold",
+        "label": "Minimum spend for free UK delivery (£)",
+        "default": 10,
+        "info": "Keep this matched to your Shopify shipping free-rate rule. Used for cart messaging."
+      },
+      {
+        "type": "number",
+        "id": "uk_delivery_charge_below_threshold",
+        "label": "UK delivery charge when under minimum (£)",
+        "default": 2.5,
+        "info": "Shown in the delivery panel for UK orders under the threshold. Use 0 to show “Charged at checkout”."
+      }
+    ]
   }
 ]

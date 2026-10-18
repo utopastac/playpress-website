@@ -6,6 +6,8 @@ window.addEventListener('load', () => {
   const cartChangeUrl = cartRoot?.dataset.cartChangeUrl ?? `${getRoutesRoot()}cart/change.js`;
   const discountRoot = cartRoot?.dataset.discountRoot ?? `${getRoutesRoot()}discount/`;
   const checkoutUrl = cartRoot?.dataset.checkoutUrl ?? `${getRoutesRoot()}checkout`;
+  const postageThresholdCents = Number(cartRoot?.dataset.postageThreshold) || 1000;
+  const postageThresholdLabel = cartRoot?.dataset.postageThresholdLabel || '£10';
   let appliedDiscountCode = '';
 
   // Capture phase so cart page adds skip the global cart-modal handler
@@ -394,6 +396,52 @@ window.addEventListener('load', () => {
     }
 
     resetPrices(formatMoney(cart.total_price, format), cart.item_count);
+    updatePostageUi(cart.total_price, format);
+  }
+
+  function updatePostageUi(totalCents, format) {
+    const met = totalCents >= postageThresholdCents;
+    const remaining = Math.max(0, postageThresholdCents - totalCents);
+    const progress = met
+      ? 100
+      : Math.min(100, Math.round((totalCents / postageThresholdCents) * 100));
+
+    const postage = document.querySelector('#cart-postage');
+    const message = document.querySelector('#cart-postage-message');
+    const bar = document.querySelector('#cart-postage-bar');
+    const fill = document.querySelector('#cart-postage-bar-fill');
+    const note = document.querySelector('#cart-delivery-note');
+    const delivery = document.querySelector('#delivery');
+
+    postage?.classList.toggle('cart-postage--met', met);
+    postage?.classList.toggle('cart-postage--under', !met);
+
+    if (message) {
+      message.textContent = met
+        ? "You've unlocked free UK delivery"
+        : `Add ${formatMoney(remaining, format)} more for free UK delivery`;
+    }
+
+    if (bar) { bar.setAttribute('aria-valuenow', String(progress)); }
+    if (fill) { fill.style.width = `${progress}%`; }
+
+    if (note) {
+      note.textContent = met
+        ? 'Free UK delivery on this order.'
+        : `UK orders under ${postageThresholdLabel} include a delivery charge.`;
+    }
+
+    if (!delivery) { return; }
+
+    delivery.classList.toggle('postage-met', met);
+    delivery.classList.toggle('postage-under', !met);
+
+    const charge = delivery.querySelector('[data-postage-uk-charge]');
+    const chargeLabel = delivery.dataset.postageCharge || 'Charged at checkout';
+
+    if (charge) {
+      charge.textContent = met ? 'Free' : chargeLabel;
+    }
   }
 
   function updateDiscountChip(code) {

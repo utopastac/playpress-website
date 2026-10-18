@@ -1,25 +1,46 @@
 <script src="{{ 'delivery.js' | asset_url }}" defer></script>
 {{ 'delivery.css' | asset_url | stylesheet_tag }}
 
-<div is="delivery" id="delivery">
+{%- assign free_delivery_threshold = settings.free_uk_delivery_threshold | default: 10 -%}
+{%- assign free_delivery_threshold_cents = free_delivery_threshold | times: 100 -%}
+{%- assign uk_charge_pounds = settings.uk_delivery_charge_below_threshold -%}
+{%- if uk_charge_pounds != blank and uk_charge_pounds > 0 -%}
+  {%- assign uk_charge_cents = uk_charge_pounds | times: 100 -%}
+  {%- assign uk_charge_below = uk_charge_cents | money -%}
+{%- else -%}
+  {%- assign uk_charge_below = 'Charged at checkout' -%}
+{%- endif -%}
+{%- assign postage_met = false -%}
+{%- if cart.total_price >= free_delivery_threshold_cents -%}
+  {%- assign postage_met = true -%}
+{%- endif -%}
+
+<div
+  is="delivery"
+  id="delivery"
+  data-postage-threshold="{{ free_delivery_threshold_cents }}"
+  data-postage-charge="{{ uk_charge_below | escape }}"
+  data-postage-threshold-label="£{{ free_delivery_threshold }}"
+  class="{% if postage_met %}postage-met{% else %}postage-under{% endif %}"
+>
   <header>
     <span><div class="icon delivery"></div>Delivery information</span>
     <div class="icon chevron-down" id="delivery-icon"></div>
   </header>
   <div is="delivery-content">
-    <h3>Free delivery for all orders within the UK</h3>
+    <h3>Free UK delivery on orders of £{{ free_delivery_threshold }} or more</h3>
     <p>Delivery to the UK will normally be made within 1- 2 working days after your order is accepted. Orders before 4pm are sent the same day Royal Mail 1st Class Tracked.</p>
     <p>Orders are shipped via Royal Mail and are delivered Monday to Saturday, excluding Bank Holidays.</p>
 
     <h3>Delivery to the rest of the world</h3>
     <p>Delivery to the rest of the World will normally be made within 5- 10 working days after your order is accepted.</p>
-    
+
     <div is="delivery-charges">
       <h4>Delivery charges</h4>
       <table>
         <tr>
           <td>UK orders</td>
-          <td><strong>Free</strong></td>
+          <td><strong data-postage-uk-charge>{%- if postage_met -%}Free{%- else -%}{{ uk_charge_below }}{%- endif -%}</strong></td>
         </tr>
         <tr>
           <td>North America</td>

@@ -453,7 +453,7 @@ button[type="submit"],
   transition-timing-function: var(--ease-bounce);
 
   & .icon {
-    background-color: var(--color-white);
+    background-color: currentColor;
     margin-inline-start: var(--space-1);
     width: var(--space-2-5);
     height: var(--space-2-5);
@@ -509,10 +509,6 @@ div[is="text-button"] {
 
   &.white {
     color: var(--color-white);
-
-    &::after {
-      background: var(--color-white);
-    }
   }
 
   &::after {
@@ -521,7 +517,7 @@ div[is="text-button"] {
     width: var(--space-3);
     height: var(--space-3);
     position: relative;
-    background: var(--color-grey-1000);
+    background: currentColor;
     mask-image: url(icon-arrow-right.svg);
     mask-position: center;
     mask-repeat: no-repeat;

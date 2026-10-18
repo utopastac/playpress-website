@@ -2,6 +2,17 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {{ 'cart-item.css' | asset_url | stylesheet_tag }}
 
+{%- assign free_delivery_threshold = settings.free_uk_delivery_threshold | default: 10 -%}
+{%- assign free_delivery_threshold_cents = free_delivery_threshold | times: 100 -%}
+{%- assign postage_met = false -%}
+{%- if cart.total_price >= free_delivery_threshold_cents -%}
+  {%- assign postage_met = true -%}
+{%- endif -%}
+{%- assign postage_remaining = free_delivery_threshold_cents | minus: cart.total_price -%}
+{%- if postage_remaining < 0 -%}
+  {%- assign postage_remaining = 0 -%}
+{%- endif -%}
+
 <div
   is="cart"
   data-cart-url="{{ routes.cart_url | append: '.js' }}"
@@ -10,6 +21,8 @@
   data-cart-change-url="{{ routes.cart_url | append: '/change.js' }}"
   data-discount-root="{{ routes.root_url }}discount/"
   data-checkout-url="{{ routes.root_url }}checkout"
+  data-postage-threshold="{{ free_delivery_threshold_cents }}"
+  data-postage-threshold-label="£{{ free_delivery_threshold }}"
 >
   <div>
     <div class="cart-layout">
@@ -145,6 +158,32 @@
                 <p class="cart-discount__message" id="discount-message" role="status" aria-live="polite" hidden></p>
               </div>
             </div>
+            <div
+              class="cart-postage {% if postage_met %}cart-postage--met{% else %}cart-postage--under{% endif %}"
+              id="cart-postage"
+            >
+              <p class="cart-postage__message" id="cart-postage-message" role="status">
+                {%- if postage_met -%}
+                  You've unlocked free UK delivery
+                {%- else -%}
+                  Add {{ postage_remaining | money }} more for free UK delivery
+                {%- endif -%}
+              </p>
+              <div
+                class="cart-postage__bar"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="{% if postage_met %}100{% else %}{{ cart.total_price | times: 100.0 | divided_by: free_delivery_threshold_cents | round }}{% endif %}"
+                id="cart-postage-bar"
+              >
+                <div
+                  class="cart-postage__bar-fill"
+                  id="cart-postage-bar-fill"
+                  style="width: {% if postage_met %}100%{% else %}{{ cart.total_price | times: 100.0 | divided_by: free_delivery_threshold_cents }}%{% endif %};"
+                ></div>
+              </div>
+            </div>
             <table class="cart-totals">
               <tbody>
                 <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row" hidden>
@@ -162,7 +201,13 @@
               </tbody>
             </table>
             <button type="button" id="checkout-button">Proceed to checkout<div class="icon arrow-right"></div></button>
-            <p class="meta">Delivery charges calculated at checkout.</p>
+            <p class="meta" id="cart-delivery-note">
+              {%- if postage_met -%}
+                Free UK delivery on this order.
+              {%- else -%}
+                UK orders under £{{ free_delivery_threshold }} include a delivery charge.
+              {%- endif -%}
+            </p>
           </div>
           {% render 'delivery' %}
         </div>
