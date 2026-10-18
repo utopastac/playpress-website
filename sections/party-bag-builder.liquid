@@ -2,21 +2,50 @@
 {{ 'party-bag-builder.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
+  assign party_bag_collection = section.settings.collection
+  assign config_tiers = blank
+
+  if shop.metafields.party_bag.config != blank
+    assign party_bag_config = shop.metafields.party_bag.config.value
+    if party_bag_config.tiers == blank
+      assign party_bag_config = shop.metafields.party_bag.config.value | parse_json
+    endif
+    if party_bag_config.tiers != blank
+      assign config_tiers = party_bag_config.tiers
+    endif
+  endif
+
   capture discount_tiers
     echo '['
     assign first_tier = true
-    for i in (1..4)
-      assign min_key = 'tier_' | append: i | append: '_min_qty'
-      assign disc_key = 'tier_' | append: i | append: '_discount'
-      assign min_qty = section.settings[min_key]
-      if min_qty > 0
-        unless first_tier
-          echo ','
-        endunless
-        echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: section.settings[disc_key] | append: '}'
-        assign first_tier = false
-      endif
-    endfor
+
+    if config_tiers != blank
+      for tier in config_tiers
+        assign min_qty = tier.minQty | default: tier.min_qty | default: 0
+        assign discount = tier.discount | default: 0
+        if min_qty > 0
+          unless first_tier
+            echo ','
+          endunless
+          echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: discount | append: '}'
+          assign first_tier = false
+        endif
+      endfor
+    else
+      for i in (1..4)
+        assign min_key = 'tier_' | append: i | append: '_min_qty'
+        assign disc_key = 'tier_' | append: i | append: '_discount'
+        assign min_qty = section.settings[min_key]
+        if min_qty > 0
+          unless first_tier
+            echo ','
+          endunless
+          echo '{"minQty":' | append: min_qty | append: ',"discount":' | append: section.settings[disc_key] | append: '}'
+          assign first_tier = false
+        endif
+      endfor
+    endif
+
     echo ']'
   endcapture
 -%}
@@ -62,114 +91,179 @@
       {%- endif -%}
     </div>
 
-    {%- assign has_products = false -%}
-    {%- for i in (1..12) -%}
-      {%- assign product_key = 'product_' | append: i -%}
-      {%- assign product = section.settings[product_key] -%}
-      {%- if product != blank -%}
-        {%- assign has_products = true -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
-
-    {%- if has_products -%}
-      <div class="party-bag-builder__discount-banner" data-discount-banner>
-        <div class="party-bag-builder__discount-current" data-current-tier>
-          Select items to see your discount
-        </div>
-        <div class="party-bag-builder__discount-next" data-next-tier></div>
-      </div>
-
-      <div class="party-bag-builder__products">
-        {%- for i in (1..12) -%}
-          {%- assign product_key = 'product_' | append: i -%}
-          {%- assign product = section.settings[product_key] -%}
-
-          {%- if product != blank -%}
-            <div class="party-bag-builder__product" data-product-card>
-              <div class="party-bag-builder__product-image-wrapper">
-                {%- if product.featured_image -%}
-                  <img
-                    src="{{ product.featured_image | image_url: width: 400 }}"
-                    alt="{{ product.featured_image.alt | escape }}"
-                    class="party-bag-builder__product-image"
-                    loading="lazy"
-                    width="400"
-                    height="400"
-                  >
-                {%- else -%}
-                  <div class="party-bag-builder__product-image-placeholder">
-                    {{ 'product-1' | placeholder_svg_tag }}
-                  </div>
+    {%- if party_bag_collection != blank and party_bag_collection.products_count > 0 -%}
+      <div class="party-bag-builder__layout">
+        <div class="party-bag-builder__products-col">
+          <table class="party-bag-builder__products-table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for product in party_bag_collection.products -%}
+                {%- if product.available -%}
+                  <tr class="party-bag-builder__product" data-product-card>
+                    <td>
+                      <div class="party-bag-builder__product-cell">
+                        <div class="party-bag-builder__product-image-wrapper">
+                          {%- if product.featured_image -%}
+                            <img
+                              src="{{ product.featured_image | image_url: width: 120 }}"
+                              alt="{{ product.featured_image.alt | escape }}"
+                              class="party-bag-builder__product-image"
+                              loading="lazy"
+                              width="60"
+                              height="60"
+                            >
+                          {%- else -%}
+                            <div class="party-bag-builder__product-image-placeholder">
+                              {{ 'product-1' | placeholder_svg_tag }}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                        <span class="party-bag-builder__product-title">{{ product.title }}</span>
+                      </div>
+                    </td>
+                    <td class="party-bag-builder__product-price">{{ product.price | money }}</td>
+                    <td>
+                      <div class="party-bag-builder__quantity-selector">
+                        <button
+                          type="button"
+                          class="party-bag-builder__quantity-button"
+                          data-quantity-decrease
+                          data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                          data-product-price="{{ product.price }}"
+                          aria-label="Decrease quantity"
+                          disabled
+                        >
+                          −
+                        </button>
+                        <span class="party-bag-builder__quantity-display" data-quantity-display>0</span>
+                        <button
+                          type="button"
+                          class="party-bag-builder__quantity-button"
+                          data-quantity-increase
+                          data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                          data-product-price="{{ product.price }}"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
                 {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="party-bag-builder__sidebar">
+          <div class="party-bag-builder__checkout" data-spark="b2c-only">
+            <div class="party-bag-builder__info">
+              <div class="party-bag-builder__discount-status" data-discount-banner>
+                <p class="party-bag-builder__discount-current" data-current-tier>
+                  Select items to see your discount
+                </p>
+                <p class="party-bag-builder__discount-next" data-next-tier></p>
               </div>
 
-              <div class="party-bag-builder__product-info">
-                <h3 class="party-bag-builder__product-title">{{ product.title }}</h3>
-                <p class="party-bag-builder__product-price">{{ product.price | money }}</p>
-              </div>
-
-              <div class="party-bag-builder__quantity-selector">
-                <button
-                  type="button"
-                  class="party-bag-builder__quantity-button"
-                  data-quantity-decrease
-                  data-product-id="{{ product.selected_or_first_available_variant.id }}"
-                  data-product-price="{{ product.price }}"
-                  aria-label="Decrease quantity"
-                  disabled
-                >
-                  −
-                </button>
-                <span class="party-bag-builder__quantity-display" data-quantity-display>0</span>
-                <button
-                  type="button"
-                  class="party-bag-builder__quantity-button"
-                  data-quantity-increase
-                  data-product-id="{{ product.selected_or_first_available_variant.id }}"
-                  data-product-price="{{ product.price }}"
-                  aria-label="Increase quantity"
-                >
-                  +
-                </button>
-              </div>
+              <p is="product-price" data-total>{{ 0 | money }}</p>
             </div>
-          {%- endif -%}
-        {%- endfor -%}
+
+            <form class="party-bag-builder__form">
+              <button
+                type="button"
+                class="add-to-cart"
+                data-add-to-cart
+                disabled
+              >
+                {{ section.settings.button_text }}
+              </button>
+            </form>
+
+            <dl class="party-bag-builder__summary">
+              <div>
+                <dt>Total items</dt>
+                <dd data-total-quantity>0</dd>
+              </div>
+              <div>
+                <dt>Subtotal</dt>
+                <dd data-subtotal>{{ 0 | money }}</dd>
+              </div>
+              <div data-discount-row hidden>
+                <dt>Discount</dt>
+                <dd class="party-bag-builder__summary-discount" data-discount-amount>−{{ 0 | money }}</dd>
+              </div>
+            </dl>
+
+            {%- assign has_tiers = false -%}
+            {%- if config_tiers != blank -%}
+              {%- for tier in config_tiers -%}
+                {%- assign tier_min = tier.minQty | default: tier.min_qty | default: 0 -%}
+                {%- if tier_min > 0 -%}
+                  {%- assign has_tiers = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..4) -%}
+                {%- assign min_key = 'tier_' | append: i | append: '_min_qty' -%}
+                {%- if section.settings[min_key] > 0 -%}
+                  {%- assign has_tiers = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+
+            {%- if has_tiers -%}
+              <div is="delivery" id="party-bag-tiers">
+                <header>
+                  <span>Discount tiers</span>
+                  <div class="icon chevron-down" id="party-bag-tiers-icon"></div>
+                </header>
+                <div is="delivery-content">
+                  <table>
+                    {%- if config_tiers != blank -%}
+                      {%- for tier in config_tiers -%}
+                        {%- assign tier_min = tier.minQty | default: tier.min_qty | default: 0 -%}
+                        {%- assign tier_discount = tier.discount | default: 0 -%}
+                        {%- if tier_min > 0 -%}
+                          <tr>
+                            <td>{{ tier_min }}+ items</td>
+                            <td><strong>Save {{ tier_discount }}%</strong></td>
+                          </tr>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- else -%}
+                      {%- for i in (1..4) -%}
+                        {%- assign min_key = 'tier_' | append: i | append: '_min_qty' -%}
+                        {%- assign disc_key = 'tier_' | append: i | append: '_discount' -%}
+                        {%- assign min_qty = section.settings[min_key] -%}
+                        {%- assign discount = section.settings[disc_key] -%}
+                        {%- if min_qty > 0 -%}
+                          <tr>
+                            <td>{{ min_qty }}+ items</td>
+                            <td><strong>Save {{ discount }}%</strong></td>
+                          </tr>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+                  </table>
+                </div>
+              </div>
+            {%- endif -%}
+
+            <div class="party-bag-builder__message" data-message hidden></div>
+          </div>
+        </aside>
       </div>
-
-      <div class="party-bag-builder__summary">
-        <div class="party-bag-builder__summary-row">
-          <span class="party-bag-builder__summary-label">Total items:</span>
-          <span class="party-bag-builder__summary-value" data-total-quantity>0</span>
-        </div>
-        <div class="party-bag-builder__summary-row">
-          <span class="party-bag-builder__summary-label">Subtotal:</span>
-          <span class="party-bag-builder__summary-value" data-subtotal>{{ 0 | money }}</span>
-        </div>
-        <div class="party-bag-builder__summary-row" data-discount-row hidden>
-          <span class="party-bag-builder__summary-label party-bag-builder__summary-discount">Discount:</span>
-          <span class="party-bag-builder__summary-value party-bag-builder__summary-discount" data-discount-amount>{{ 0 | money }}</span>
-        </div>
-        <div class="party-bag-builder__summary-row party-bag-builder__summary-total">
-          <span class="party-bag-builder__summary-label">Total:</span>
-          <span class="party-bag-builder__summary-value" data-total>{{ 0 | money }}</span>
-        </div>
-      </div>
-
-      <button
-        type="button"
-        class="party-bag-builder__add-to-cart"
-        data-add-to-cart
-        disabled
-      >
-        {{ section.settings.button_text }}
-      </button>
-
-      <div class="party-bag-builder__message" data-message hidden></div>
     {%- else -%}
       <div class="party-bag-builder__empty-state">
-        <p>Add products to your party bag builder in the theme editor settings.</p>
+        <p>Select a party bag collection in the theme editor. Products are managed in that collection in Shopify admin.</p>
       </div>
     {%- endif -%}
   </div>
@@ -207,72 +301,17 @@
       "content": "Products"
     },
     {
-      "type": "product",
-      "id": "product_1",
-      "label": "Product 1"
-    },
-    {
-      "type": "product",
-      "id": "product_2",
-      "label": "Product 2"
-    },
-    {
-      "type": "product",
-      "id": "product_3",
-      "label": "Product 3"
-    },
-    {
-      "type": "product",
-      "id": "product_4",
-      "label": "Product 4"
-    },
-    {
-      "type": "product",
-      "id": "product_5",
-      "label": "Product 5"
-    },
-    {
-      "type": "product",
-      "id": "product_6",
-      "label": "Product 6"
-    },
-    {
-      "type": "product",
-      "id": "product_7",
-      "label": "Product 7"
-    },
-    {
-      "type": "product",
-      "id": "product_8",
-      "label": "Product 8"
-    },
-    {
-      "type": "product",
-      "id": "product_9",
-      "label": "Product 9"
-    },
-    {
-      "type": "product",
-      "id": "product_10",
-      "label": "Product 10"
-    },
-    {
-      "type": "product",
-      "id": "product_11",
-      "label": "Product 11"
-    },
-    {
-      "type": "product",
-      "id": "product_12",
-      "label": "Product 12"
-    },
-    {
-      "type": "header",
-      "content": "Discount tiers"
+      "type": "collection",
+      "id": "collection",
+      "label": "Party bag collection"
     },
     {
       "type": "paragraph",
-      "content": "Set quantity thresholds and discount percentages. Discounts compound as customers add more items."
+      "content": "Discount tiers are configured in the Party Bag Discount app. Theme tier settings below are only used as a fallback preview until the app is installed."
+    },
+    {
+      "type": "header",
+      "content": "Discount tiers (fallback preview)"
     },
     {
       "type": "range",

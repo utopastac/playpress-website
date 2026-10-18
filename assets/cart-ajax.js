@@ -1,30 +1,47 @@
 window.addEventListener('load', () => {
   const cartRoot = document.querySelector('div[is="cart"]');
   const cartJsUrl = cartRoot?.dataset.cartUrl ?? `${getRoutesRoot()}cart.js`;
+  const cartAddUrl = cartRoot?.dataset.cartAddUrl ?? `${getRoutesRoot()}cart/add.js`;
   const cartUpdateUrl = cartRoot?.dataset.cartUpdateUrl ?? `${getRoutesRoot()}cart/update.js`;
   const cartChangeUrl = cartRoot?.dataset.cartChangeUrl ?? `${getRoutesRoot()}cart/change.js`;
   const discountRoot = cartRoot?.dataset.discountRoot ?? `${getRoutesRoot()}discount/`;
   const checkoutUrl = cartRoot?.dataset.checkoutUrl ?? `${getRoutesRoot()}checkout`;
   let appliedDiscountCode = '';
 
-  document.querySelectorAll('.quantity button').forEach(button => {
-    button.addEventListener('click', (e) => {
+  // Capture phase so cart page adds skip the global cart-modal handler
+  cartRoot?.addEventListener('click', (e) => {
+    const easyAddBtn = e.target.closest('.cart-easy-add .add-to-cart');
+    if (!easyAddBtn) { return; }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const productItem = easyAddBtn.closest('.product-item');
+    const variantId = productItem?.getAttribute('data-id');
+    if (!variantId) { return; }
+
+    addEasyAddItem(variantId, easyAddBtn, productItem);
+  }, true);
+
+  cartRoot?.addEventListener('click', (e) => {
+    const quantityBtn = e.target.closest('.quantity button');
+    if (quantityBtn) {
       e.preventDefault();
-      const plus = button.classList.contains('plus');
-      const input = button.parentElement?.querySelector('input');
+      const plus = quantityBtn.classList.contains('plus');
+      const input = quantityBtn.parentElement?.querySelector('input');
       if (!input) { return; }
       const value = Number(input.value);
-      const key = button.closest('.cart-item')?.getAttribute('data-key');
+      const key = quantityBtn.closest('.cart-item')?.getAttribute('data-key');
       if (!key) { return; }
       input.value = plus ? value + 1 : Math.max(1, value - 1);
       changeItemQuantity(key, input.value);
-    });
-  });
+      return;
+    }
 
-  document.querySelectorAll('.remove-item').forEach(button => {
-    button.addEventListener('click', (e) => {
+    const removeBtn = e.target.closest('.remove-item');
+    if (removeBtn) {
       e.preventDefault();
-      const item = button.closest('.cart-item');
+      const item = removeBtn.closest('.cart-item');
       const key = item?.getAttribute('data-key');
       if (!key) { return; }
       fetch(cartChangeUrl, {
@@ -35,20 +52,14 @@ window.addEventListener('load', () => {
         .then(res => { if (!res.ok) { throw new Error('Cart update failed'); } return res.json(); })
         .then(data => {
           if (data.items.length === 0) {
-            document.querySelector('#cart-table')?.remove();
-            document.querySelector('#checkout-button')?.remove();
-            document.querySelector('.cart-discount')?.remove();
-            document.querySelector('.cart-totals')?.remove();
-            const title = document.querySelector('#main-title');
-            if (title) { title.textContent = 'Your cart is empty'; }
-            resetPrices(formatMoney(0, getMoneyFormat()), 0);
+            clearCartUi();
           } else {
             item?.remove();
             updateCartSummary(data);
           }
         })
         .catch(err => console.error('Remove item failed:', err));
-    });
+    }
   });
 
   document.querySelector('#discount-apply')?.addEventListener('click', () => {
@@ -80,6 +91,121 @@ window.addEventListener('load', () => {
       }
     })
     .catch(err => console.error('Cart sync failed:', err));
+
+  async function addEasyAddItem(variantId, button, productItem) {
+    button.classList.add('button-loading');
+    button.disabled = true;
+
+    try {
+      const addRes = await fetch(cartAddUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ items: [{ id: Number(variantId), quantity: 1 }] }),
+      });
+      if (!addRes.ok) { throw new Error('Add to cart failed'); }
+
+      const cartRes = await fetch(cartJsUrl, { headers: { Accept: 'application/json' } });
+      if (!cartRes.ok) { throw new Error('Cart fetch failed'); }
+      const cart = await cartRes.json();
+
+      syncCartItems(cart);
+      updateCartSummary(cart);
+      productItem?.remove();
+
+      const grid = document.querySelector('.cart-easy-add [is="product-promos"] > div');
+      if (!grid?.querySelector('.product-item')) {
+        document.querySelector('.cart-easy-add')?.setAttribute('hidden', '');
+      }
+    } catch (err) {
+      console.error('Easy add failed:', err);
+      button.classList.remove('button-loading');
+      button.disabled = false;
+    }
+  }
+
+  function syncCartItems(cart) {
+    const list = document.querySelector('#cart-table ul');
+    if (!list) { return; }
+
+    const format = getMoneyFormat();
+    const existingKeys = new Set();
+
+    cart.items.forEach(item => {
+      existingKeys.add(item.key);
+      let el = list.querySelector(`[data-key="${CSS.escape(item.key)}"]`);
+
+      if (!el) {
+        el = list.querySelector(`[data-variant-id="${CSS.escape(String(item.variant_id))}"]`);
+      }
+
+      if (el) {
+        el.setAttribute('data-key', item.key);
+        el.setAttribute('data-variant-id', String(item.variant_id));
+        el.setAttribute('data-product-id', String(item.product_id));
+        const input = el.querySelector('.quantity input');
+        if (input) {
+          input.value = item.quantity;
+          input.id = `updates_${item.id}`;
+        }
+        const priceEl = el.querySelector('.price');
+        if (priceEl) { priceEl.textContent = formatMoney(item.final_line_price, format); }
+        return;
+      }
+
+      const created = createCartItemElement(item, format);
+      if (created) { list.appendChild(created); }
+    });
+
+    list.querySelectorAll('.cart-item').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (key && !existingKeys.has(key)) { el.remove(); }
+    });
+  }
+
+  function createCartItemElement(item, format) {
+    const template = document.querySelector('#cart-item-template');
+    if (!template) { return null; }
+
+    const el = template.content.firstElementChild.cloneNode(true);
+    el.setAttribute('data-key', item.key);
+    el.setAttribute('data-variant-id', String(item.variant_id));
+    el.setAttribute('data-product-id', String(item.product_id));
+
+    const imageLink = el.querySelector('.image a');
+    const image = el.querySelector('.image img');
+    const titleLink = el.querySelector('.title a');
+    const input = el.querySelector('.quantity input');
+    const priceEl = el.querySelector('.price');
+
+    if (imageLink) { imageLink.href = item.url; }
+    if (image) {
+      image.src = item.image ?? '';
+      image.alt = item.product_title ?? '';
+    }
+    if (titleLink) {
+      titleLink.href = item.url;
+      titleLink.textContent = item.product_title ?? '';
+    }
+    if (input) {
+      input.value = item.quantity;
+      input.id = `updates_${item.id}`;
+    }
+    if (priceEl) { priceEl.textContent = formatMoney(item.final_line_price, format); }
+
+    return el;
+  }
+
+  function clearCartUi() {
+    document.querySelector('#cart-table')?.remove();
+    document.querySelector('.cart-easy-add')?.remove();
+    document.querySelector('#checkout-button')?.remove();
+    document.querySelector('.cart-discount')?.remove();
+    document.querySelector('.cart-totals')?.remove();
+    document.querySelector('div[is="checkout"]')?.remove();
+    const title = document.querySelector('#main-title');
+    if (title) { title.textContent = 'Your cart is empty'; }
+    resetPrices(formatMoney(0, getMoneyFormat()), 0);
+  }
 
   function changeItemQuantity(key, quantity) {
     fetch(cartChangeUrl, {
@@ -239,6 +365,8 @@ window.addEventListener('load', () => {
     cart.items.forEach(item => {
       const priceEl = document.querySelector(`[data-key="${CSS.escape(item.key)}"] .price`);
       if (priceEl) { priceEl.textContent = formatMoney(item.final_line_price, format); }
+      const input = document.querySelector(`[data-key="${CSS.escape(item.key)}"] .quantity input`);
+      if (input) { input.value = item.quantity; }
     });
 
     const subtotalRow = document.querySelector('#cart-subtotal-row');

@@ -51,6 +51,16 @@ All files in `assets/` use **kebab-case** (`product-promo.css`, `add-to-cart.js`
 
 Plain DOM APIs, `fetch` for the Cart API, CSS transitions + `.is-visible` for modals.
 
+## Party bag volume discount app
+
+Checkout discounts for the party bag builder are handled by a separate Shopify app (Discount Function). See [`party-bag-discount-app/playpress-party-bag-discount/README.md`](party-bag-discount-app/playpress-party-bag-discount/README.md).
+
+1. Create a **Party bag** collection in admin and add eligible products.
+2. Install and configure the app (collection + tiers).
+3. In the theme editor, set the same collection on the **Party bag builder** section.
+
+The theme section reads tier previews from `shop.metafields.party_bag.config` when the app has saved configuration.
+
 ## Deploy
 
 GitHub deploy; duplicate the theme in admin for experiments.

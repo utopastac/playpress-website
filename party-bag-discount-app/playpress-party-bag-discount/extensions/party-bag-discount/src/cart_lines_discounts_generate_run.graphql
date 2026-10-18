@@ -1,0 +1,22 @@
+query CartInput($collectionIds: [ID!]) {
+  cart {
+    lines {
+      id
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            inAnyCollection(ids: $collectionIds)
+          }
+        }
+      }
+    }
+  }
+  discount {
+    discountClasses
+    metafield(namespace: "$app:party-bag-discount", key: "function-configuration") {
+      jsonValue
+    }
+  }
+}

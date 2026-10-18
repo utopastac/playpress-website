@@ -3,3 +3,8 @@ node_modules
 .stylelintcache
 .DS_Store
 config.yml
+party-bag-discount-app/**/node_modules
+party-bag-discount-app/**/dist
+party-bag-discount-app/**/.shopify
+party-bag-discount-app/**/build
+party-bag-discount-app/**/prisma/dev.sqlite*

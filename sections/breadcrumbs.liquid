@@ -1,7 +1,7 @@
 {{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
-{%- if template == 'product' or template == 'search' -%} {%- assign t = template | split: '.' | first
--%}
+{%- assign t = template | split: '.' | first -%}
+{%- if t == 'product' or t == 'search' or t == 'collection' -%}
   <ul is="breadcrumbs" class="christmas">
     <li>
       <a href="/">Home</a>
@@ -12,7 +12,7 @@
           <a href="/pages/shop/">Shop</a>
         </li>
         <li class="active">
-          <p><span>{{ product.title | remove: "Eco-Friendly Playset" | remove: "Eco Friendly Playset" | remove: "Playset" | remove: "Eco"}}</span></p>
+          <p><span>{{ product.title | remove: "Eco-Friendly Playset" | remove: "Eco Friendly Playset" | remove: "Playset" | remove: "Eco" }}</span></p>
         </li>
       {%- when 'search' -%}
         <li>
@@ -53,13 +53,3 @@
     {%- endcase -%}
   </ul>
 {%- endif -%}
-{% comment %}
-
-This file has been rewritten to preserve the original behavior.
-
----
-Changes:
-- from: "{%- when 'collection' and collection.handle -%}"
-  to: "{%- when 'collection' -%}"
-  position: 916..941
-{% endcomment %}

@@ -1,0 +1,27 @@
+api_version = "2026-01"
+
+[[extensions]]
+name = "Party bag volume discount"
+handle = "party-bag-discount"
+uid = "7c4e8a2b-1d9f-4e6a-b3c8-9f2a1e5d6b0c"
+type = "function"
+description = "Volume discounts for party bag collection items based on total quantity."
+
+  [[extensions.targeting]]
+  target = "cart.lines.discounts.generate.run"
+  input_query = "src/cart_lines_discounts_generate_run.graphql"
+  export = "cart-lines-discounts-generate-run"
+  discount_classes = ["PRODUCT"]
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+  watch = ["src/**/*.js"]
+
+[extensions.input.variables]
+namespace = "$app:party-bag-discount"
+key = "function-configuration"
+
+[extensions.ui.paths]
+create = "/app/discount/:functionId/new"
+details = "/app/discount/:functionId/:id"

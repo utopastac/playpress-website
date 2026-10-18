@@ -1,6 +1,5 @@
 {{ 'shop.css' | asset_url | stylesheet_tag }}
 {{ 'collections.css' | asset_url | stylesheet_tag }}
-{{ assign }}
 
 <div is="shop">
   <div class="main-content">
@@ -16,17 +15,8 @@
         {% endfor %}
       </ul>
     </div>
-  
+
     {% comment %} <div is='delivery-container'>{% render 'delivery' %}</div> {% endcomment %}
     {% comment %} {% render 'universal-features' %} {% endcomment %}
   </div>
-</div>{%- comment -%}
-
-This file has been rewritten to preserve the original behavior.
-
----
-Changes:
-- from: '{{ assign pagetitle = "Shop" }}'
-  to: "{{ assign }}"
-  position: 99..111
-{%- endcomment -%}
+</div>

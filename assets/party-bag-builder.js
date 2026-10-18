@@ -29,6 +29,15 @@ class PartyBagBuilder {
     if (addToCartButton) {
       addToCartButton.addEventListener('click', () => this.handleAddToCart());
     }
+
+    const tiersAccordion = this.root.querySelector('#party-bag-tiers');
+    const tiersIcon = this.root.querySelector('#party-bag-tiers-icon');
+    if (tiersAccordion) {
+      tiersAccordion.addEventListener('click', () => {
+        const active = tiersAccordion.classList.toggle('active');
+        tiersIcon?.classList.toggle('chevron-up', active);
+      });
+    }
   }
 
   handleQuantityChange(button, change) {

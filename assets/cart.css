@@ -27,7 +27,7 @@ div[is="cart"] {
     line-height: var(--leading-body);
   }
 
-  & form > div {
+  & .cart-layout {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -197,20 +197,55 @@ div[is="cart"] {
     }
   }
 
-  @media (width >= 770px) {
-    & form > div {
-      column-gap: var(--space-8);
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto 1fr;
-      align-items: start;
+  & .cart-easy-add {
+    margin-top: var(--space-10);
 
-      & > * {
-        grid-column: 1;
+    & h2 {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-body-1);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-heading);
+      margin-bottom: var(--space-2);
+    }
+
+    /* Keep Add visible on cart (normally desktop-only in product-promo) */
+    & [is="product-promo"] {
+      & form {
+        display: block;
+        position: static;
+        margin-top: var(--space-1);
+
+        @media (width >= 1080px) {
+          position: absolute;
+          bottom: var(--space-3-5);
+          right: 0;
+          margin-top: 0;
+        }
       }
 
+      & .content h3 {
+        @media (width < 1080px) {
+          width: 100%;
+          white-space: normal;
+          overflow: visible;
+          text-overflow: unset;
+        }
+      }
+    }
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  @media (width >= 770px) {
+    & .cart-layout {
+      column-gap: var(--space-8);
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+
       & > div[is="checkout"] {
-        grid-column: 2;
-        grid-row: 1 / -1;
         position: sticky;
         top: var(--space-1);
       }

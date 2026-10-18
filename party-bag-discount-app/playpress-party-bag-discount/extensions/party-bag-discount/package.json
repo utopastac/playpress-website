@@ -1,0 +1,35 @@
+{
+  "name": "party-bag-discount",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "shopify app function build",
+    "preview": "shopify app function run"
+  },
+  "dependencies": {
+    "@shopify/shopify_function": "~2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.0",
+    "@graphql-codegen/typescript-operations": "^4.0.0"
+  },
+  "codegen": {
+    "schema": "schema.graphql",
+    "documents": "src/*.graphql",
+    "generates": {
+      "generated/api.ts": {
+        "plugins": [
+          "typescript",
+          "typescript-operations"
+        ]
+      }
+    },
+    "config": {
+      "omitOperationSuffix": true
+    }
+  }
+}

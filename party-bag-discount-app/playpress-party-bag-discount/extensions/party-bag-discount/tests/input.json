@@ -1,0 +1,39 @@
+{
+  "cart": {
+    "lines": [
+      {
+        "id": "gid://shopify/CartLine/1",
+        "quantity": 6,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "product": {
+            "inAnyCollection": true
+          }
+        }
+      },
+      {
+        "id": "gid://shopify/CartLine/2",
+        "quantity": 4,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "product": {
+            "inAnyCollection": true
+          }
+        }
+      }
+    ]
+  },
+  "discount": {
+    "discountClasses": ["PRODUCT"],
+    "metafield": {
+      "jsonValue": {
+        "collectionIds": ["gid://shopify/Collection/123"],
+        "tiers": [
+          { "minQty": 5, "discount": 5 },
+          { "minQty": 10, "discount": 10 },
+          { "minQty": 15, "discount": 15 }
+        ]
+      }
+    }
+  }
+}
