@@ -1,6 +1,7 @@
 a[is="promo"] {
   background: var(--color-blue-100);
   border-radius: var(--radius-m);
+  box-shadow: var(--shadow-inset-surface);
   display: grid;
   grid-template-columns: 1fr;
   padding: var(--space-4) var(--space-3);
@@ -17,7 +18,7 @@ a[is="promo"] {
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 4px var(--color-focus);
+    box-shadow: var(--shadow-inset-surface), 0 0 0 4px var(--color-focus);
   }
 
   & > img {

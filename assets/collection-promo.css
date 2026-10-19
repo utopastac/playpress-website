@@ -4,6 +4,7 @@
   text-align: center;
   background: var(--color-blue-100);
   border-radius: var(--radius-s);
+  box-shadow: var(--shadow-inset-surface);
   height: 100%;
   transition: scale var(--duration-slow);
 

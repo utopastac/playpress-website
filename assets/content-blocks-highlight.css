@@ -1,6 +1,7 @@
 article[is="content-block-highlight"] {
   background: var(--color-blue-1000);
   border-radius: var(--radius-m);
+  box-shadow: var(--shadow-inset-surface);
   overflow: hidden;
   display: flex;
   flex-direction: column;

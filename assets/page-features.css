@@ -1,6 +1,7 @@
 a[is="page-feature"] {
   background: var(--color-white);
   border-radius: var(--radius-m);
+  box-shadow: var(--shadow-inset-surface);
   overflow: hidden;
   transition: all var(--duration-slow);
 
@@ -82,6 +83,7 @@ a[is="page-feature"] {
         background: var(--color-white);
         position: relative;
         border-radius: var(--radius-m);
+        box-shadow: var(--shadow-inset-surface);
         padding: var(--space-5);
         max-width: 80%;
       }

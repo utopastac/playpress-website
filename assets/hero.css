@@ -7,6 +7,7 @@ section[is="hero"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: var(--shadow-inset-surface);
     position: absolute;
     top: var(--space-5);
     left: 0;
@@ -85,6 +86,7 @@ section[is="hero"] {
     transition-timing-function: var(--ease-spring);
     background: var(--color-white);
     border-radius: var(--radius-s);
+    box-shadow: var(--shadow-inset-surface);
     margin: var(--space-3);
 
     & div[is="button"] {
@@ -99,6 +101,7 @@ section[is="hero"] {
 
     &.dark {
       background: none;
+      box-shadow: none;
       padding: 0;
 
       @media (width >= 1080px) {

@@ -4,6 +4,7 @@ section[is="image-with-text"] {
     margin: 0 auto;
     background: var(--color-blue-100);
     border-radius: var(--radius-m);
+    box-shadow: var(--shadow-inset-surface);
     overflow: hidden;
 
     & > div {

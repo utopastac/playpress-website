@@ -73,39 +73,6 @@
             </ul>
           </section>
 
-          {%- assign under_10 = collections['under-11'] -%}
-          {%- if under_10 != blank and under_10.products_count > 0 -%}
-            {%- capture easy_add_items -%}
-              {%- assign easy_add_shown = 0 -%}
-              {%- for product in under_10.products -%}
-                {%- if easy_add_shown >= 8 -%}{%- break -%}{%- endif -%}
-                {%- unless product.available -%}{%- continue -%}{%- endunless -%}
-                {%- if product.price >= 1000 -%}{%- continue -%}{%- endif -%}
-                {%- assign already_in_cart = false -%}
-                {%- for item in cart.items -%}
-                  {%- if item.product_id == product.id -%}
-                    {%- assign already_in_cart = true -%}
-                    {%- break -%}
-                  {%- endif -%}
-                {%- endfor -%}
-                {%- unless already_in_cart -%}
-                  {%- assign easy_add_shown = easy_add_shown | plus: 1 -%}
-                  {% render 'product-promo', product: product %}
-                {%- endunless -%}
-              {%- endfor -%}
-            {%- endcapture -%}
-            {%- if easy_add_shown > 0 -%}
-              <section class="cart-easy-add" aria-labelledby="cart-easy-add-title">
-                <h2 id="cart-easy-add-title">Also available for under £10</h2>
-                <div is="product-promos">
-                  <div>
-                    {{ easy_add_items }}
-                  </div>
-                </div>
-              </section>
-            {%- endif -%}
-          {%- endif -%}
-
           <template id="cart-item-template">
             <li class="cart-item" data-key="" data-variant-id="" data-product-id="">
               <div class="image">
@@ -211,6 +178,39 @@
           </div>
           {% render 'delivery' %}
         </div>
+
+        {%- assign under_10 = collections['under-11'] -%}
+        {%- if under_10 != blank and under_10.products_count > 0 -%}
+          {%- capture easy_add_items -%}
+            {%- assign easy_add_shown = 0 -%}
+            {%- for product in under_10.products -%}
+              {%- if easy_add_shown >= 8 -%}{%- break -%}{%- endif -%}
+              {%- unless product.available -%}{%- continue -%}{%- endunless -%}
+              {%- if product.price >= 1000 -%}{%- continue -%}{%- endif -%}
+              {%- assign already_in_cart = false -%}
+              {%- for item in cart.items -%}
+                {%- if item.product_id == product.id -%}
+                  {%- assign already_in_cart = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- unless already_in_cart -%}
+                {%- assign easy_add_shown = easy_add_shown | plus: 1 -%}
+                {% render 'product-promo', product: product %}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+          {%- if easy_add_shown > 0 -%}
+            <section class="cart-easy-add" aria-labelledby="cart-easy-add-title">
+              <h2 id="cart-easy-add-title">Also available for under £10</h2>
+              <div is="product-promos">
+                <div>
+                  {{ easy_add_items }}
+                </div>
+              </div>
+            </section>
+          {%- endif -%}
+        {%- endif -%}
       {%- endif -%}
     </div>
   </div>

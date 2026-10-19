@@ -34,6 +34,7 @@ section[is="big-banner"] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: var(--shadow-inset-surface);
     overflow: hidden;
     display: block;
 

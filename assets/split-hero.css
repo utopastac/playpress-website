@@ -67,6 +67,7 @@ section[is="split-hero"] {
     width: 100%;
     padding: var(--space-5);
     border-radius: var(--radius-s);
+    box-shadow: var(--shadow-inset-surface);
     position: relative;
     z-index: var(--z-base);
     transition: all var(--duration-normal);

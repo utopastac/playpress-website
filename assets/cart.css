@@ -247,8 +247,18 @@ div[is="cart"] {
       margin-bottom: var(--space-2);
     }
 
+    & [is="product-promos"] > div {
+      row-gap: var(--space-3);
+    }
+
     /* Keep Add visible on cart (normally desktop-only in product-promo) */
     & [is="product-promo"] {
+      & .content {
+        @media (width < 1080px) {
+          padding-bottom: var(--space-1);
+        }
+      }
+
       & form {
         display: block;
         position: static;
@@ -283,9 +293,21 @@ div[is="cart"] {
       grid-template-columns: 2fr 1fr;
       align-items: start;
 
+      & > .cart-main {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
       & > div[is="checkout"] {
+        grid-column: 2;
+        grid-row: 1 / -1;
         position: sticky;
         top: var(--space-1);
+      }
+
+      & > .cart-easy-add {
+        grid-column: 1;
+        grid-row: 2;
       }
     }
   }

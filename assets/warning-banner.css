@@ -35,6 +35,7 @@ section[is="warning-banner"] {
     & > div {
       background: var(--color-blue-200);
       border-radius: var(--radius-s);
+      box-shadow: var(--shadow-inset-surface);
       padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
       margin: 0 auto;
       display: inline-flex;
