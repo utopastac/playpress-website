@@ -58,7 +58,12 @@ div[is="cart"] {
       background: var(--color-blue-100);
       padding: var(--space-3);
       border-radius: var(--radius-s);
+      margin-top: var(--space-4);
       margin-bottom: var(--space-2);
+
+      @media (width >= 770px) {
+        margin-top: 0;
+      }
     }
 
     & .cart-checkout-section {
