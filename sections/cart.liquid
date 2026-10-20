@@ -50,9 +50,9 @@
             <h1 id="main-title">Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
             <a is="outline-button" href="/shop">Continue shopping</a>
           </header>
-          {%- if cart.item_count > 0 -%}
-            <section id="cart-table">
-              <ul>
+          <section id="cart-table"{% if cart.item_count == 0 %} hidden{% endif %}>
+            <ul>
+              {%- if cart.item_count > 0 -%}
                 {%- for item in cart.items -%}
                   <li class="cart-item" data-key="{{ item.key }}" data-variant-id="{{ item.variant_id }}" data-product-id="{{ item.product_id }}">
                     <div class="image">
@@ -89,10 +89,11 @@
                     </div>
                   </li>
                 {%- endfor -%}
-              </ul>
-            </section>
+              {%- endif -%}
+            </ul>
+          </section>
 
-            <template id="cart-item-template">
+          <template id="cart-item-template">
               <li class="cart-item" data-key="" data-variant-id="" data-product-id="">
                 <div class="image">
                   <a href="">
@@ -117,11 +118,9 @@
                 </div>
               </li>
             </template>
-          {%- endif -%}
         </div>
 
-        {%- if cart.item_count > 0 -%}
-          {%- assign under_10 = collections['under-11'] -%}
+        {%- assign under_10 = collections['under-11'] -%}
           {%- if under_10 != blank and under_10.products_count > 0 -%}
             {%- capture easy_add_items -%}
               {%- assign easy_add_shown = 0 -%}
@@ -153,11 +152,9 @@
               </section>
             {%- endif -%}
           {%- endif -%}
-        {%- endif -%}
       </div>
 
-      {%- if cart.item_count > 0 -%}
-        <div is="checkout">
+      <div is="checkout">
           <div is="checkout-wrapper">
             <div class="cart-checkout-section">
               <div class="cart-discount" id="cart-discount">
@@ -305,7 +302,7 @@
             <div class="cart-checkout-section">
               <table class="cart-totals">
                 <tbody>
-                  <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row">
+                  <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row"{% if cart.item_count == 0 %} hidden{% endif %}>
                     <th scope="row">Subtotal</th>
                     <td class="subtotal-price">{{ cart.total_price | money }}</td>
                   </tr>
@@ -313,22 +310,21 @@
                     <th scope="row">Discount</th>
                     <td class="discount-price"></td>
                   </tr>
-                  <tr class="cart-totals__row cart-totals__shipping" id="cart-shipping-row">
+                  <tr class="cart-totals__row cart-totals__shipping" id="cart-shipping-row"{% if cart.item_count == 0 %} hidden{% endif %}>
                     <th scope="row">Estimated UK shipping</th>
                     <td class="shipping-price">{{ estimated_shipping_display }}</td>
                   </tr>
                   <tr class="cart-totals__row cart-totals__total">
                     <th scope="row">Total</th>
-                    <td class="total-price">{{ cart_total_with_shipping | money }}</td>
+                    <td class="total-price">{%- if cart.item_count == 0 -%}{{ 0 | money }}{%- else -%}{{ cart_total_with_shipping | money }}{%- endif -%}</td>
                   </tr>
                 </tbody>
               </table>
-              <button type="button" id="checkout-button">Proceed to checkout<div class="icon arrow-right"></div></button>
+              <button type="button" id="checkout-button"{% if cart.item_count == 0 %} disabled{% endif %}>Proceed to checkout<div class="icon arrow-right"></div></button>
             </div>
           </div>
           {% render 'delivery' %}
         </div>
-      {%- endif -%}
     </div>
   </div>
 </div>

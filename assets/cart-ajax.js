@@ -214,18 +214,6 @@ window.addEventListener('load', () => {
     return el;
   }
 
-  function clearCartUi() {
-    document.querySelector('#cart-table')?.remove();
-    document.querySelector('.cart-easy-add')?.remove();
-    document.querySelector('#checkout-button')?.remove();
-    document.querySelector('.cart-discount')?.remove();
-    document.querySelector('.cart-totals')?.remove();
-    document.querySelector('div[is="checkout"]')?.remove();
-    const title = document.querySelector('#main-title');
-    if (title) { title.textContent = 'Your cart is empty'; }
-    resetPrices(formatMoney(0, getMoneyFormat()), 0);
-  }
-
   function removeCartItem(item, key) {
     fetch(cartChangeUrl, {
       method: 'POST',
@@ -234,12 +222,8 @@ window.addEventListener('load', () => {
     })
       .then(res => { if (!res.ok) { throw new Error('Cart update failed'); } return res.json(); })
       .then(data => {
-        if (data.items.length === 0) {
-          clearCartUi();
-        } else {
-          item?.remove();
-          updateCartSummary(data);
-        }
+        item?.remove();
+        updateCartSummary(data);
       })
       .catch(err => console.error('Remove item failed:', err));
   }
@@ -441,8 +425,28 @@ window.addEventListener('load', () => {
         : (ukShippingCents > 0 ? formatMoney(ukShippingCents, format) : ukShippingLabel);
     }
 
-    resetPrices(formatMoney(totalWithShipping, format), cart.item_count);
+    const isEmpty = cart.item_count === 0;
+    const subtotalRow = document.querySelector('#cart-subtotal-row');
+    const shippingRow = document.querySelector('#cart-shipping-row');
+
+    if (isEmpty) {
+      subtotalRow?.setAttribute('hidden', '');
+      shippingRow?.setAttribute('hidden', '');
+    } else {
+      subtotalRow?.removeAttribute('hidden');
+      shippingRow?.removeAttribute('hidden');
+    }
+
+    resetPrices(formatMoney(isEmpty ? 0 : totalWithShipping, format), cart.item_count);
     updatePostageUi(cart.total_price, format);
+
+    const title = document.querySelector('#main-title');
+    const table = document.querySelector('#cart-table');
+    const checkoutBtn = document.querySelector('#checkout-button');
+
+    if (title) { title.textContent = isEmpty ? 'Your cart is empty' : 'Your cart'; }
+    if (table) { table.hidden = isEmpty; }
+    if (checkoutBtn) { checkoutBtn.disabled = isEmpty; }
   }
 
   function updatePostageUi(totalCents, format) {

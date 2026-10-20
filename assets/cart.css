@@ -414,6 +414,16 @@ div[is="cart"] {
           font-size: var(--text-body-1);
         }
       }
+
+      &:not(:has(#cart-subtotal-row:not([hidden]))) {
+        & .cart-totals__total {
+          & th,
+          & td {
+            padding-top: 0;
+            border-top: none;
+          }
+        }
+      }
     }
 
     & button[type="submit"],
@@ -421,6 +431,11 @@ div[is="cart"] {
       margin: 0;
       height: var(--space-7);
       width: 100%;
+
+      &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
     }
   }
 
