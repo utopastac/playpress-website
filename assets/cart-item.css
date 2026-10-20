@@ -65,11 +65,7 @@
   }
 
   & .actions {
-    display: none;
-
-    @media (width >= 1080px) {
-      display: block;
-    }
+    display: block;
   }
 
   & .item-button {

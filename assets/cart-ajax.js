@@ -45,9 +45,14 @@ window.addEventListener('load', () => {
       const input = quantityBtn.parentElement?.querySelector('input');
       if (!input) { return; }
       const value = Number(input.value);
-      const key = quantityBtn.closest('.cart-item')?.getAttribute('data-key');
+      const item = quantityBtn.closest('.cart-item');
+      const key = item?.getAttribute('data-key');
       if (!key) { return; }
-      input.value = plus ? value + 1 : Math.max(1, value - 1);
+      if (!plus && value <= 1) {
+        removeCartItem(item, key);
+        return;
+      }
+      input.value = plus ? value + 1 : value - 1;
       changeItemQuantity(key, input.value);
       return;
     }
@@ -58,21 +63,7 @@ window.addEventListener('load', () => {
       const item = removeBtn.closest('.cart-item');
       const key = item?.getAttribute('data-key');
       if (!key) { return; }
-      fetch(cartChangeUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ id: key, quantity: 0 }),
-      })
-        .then(res => { if (!res.ok) { throw new Error('Cart update failed'); } return res.json(); })
-        .then(data => {
-          if (data.items.length === 0) {
-            clearCartUi();
-          } else {
-            item?.remove();
-            updateCartSummary(data);
-          }
-        })
-        .catch(err => console.error('Remove item failed:', err));
+      removeCartItem(item, key);
     }
   });
 
@@ -233,6 +224,24 @@ window.addEventListener('load', () => {
     const title = document.querySelector('#main-title');
     if (title) { title.textContent = 'Your cart is empty'; }
     resetPrices(formatMoney(0, getMoneyFormat()), 0);
+  }
+
+  function removeCartItem(item, key) {
+    fetch(cartChangeUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ id: key, quantity: 0 }),
+    })
+      .then(res => { if (!res.ok) { throw new Error('Cart update failed'); } return res.json(); })
+      .then(data => {
+        if (data.items.length === 0) {
+          clearCartUi();
+        } else {
+          item?.remove();
+          updateCartSummary(data);
+        }
+      })
+      .catch(err => console.error('Remove item failed:', err));
   }
 
   function changeItemQuantity(key, quantity) {
