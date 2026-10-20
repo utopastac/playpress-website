@@ -7,11 +7,23 @@ window.addEventListener('load', () => {
   const discountRoot = cartRoot?.dataset.discountRoot ?? `${getRoutesRoot()}discount/`;
   const checkoutUrl = cartRoot?.dataset.checkoutUrl ?? `${getRoutesRoot()}checkout`;
   const postageThresholdCents = Number(cartRoot?.dataset.postageThreshold) || 1000;
-  const postageThresholdLabel = cartRoot?.dataset.postageThresholdLabel || '£10';
+  const ukShippingCents = Number(cartRoot?.dataset.ukShippingCents) || 0;
+  const ukShippingLabel = cartRoot?.dataset.ukShippingLabel || 'Charged at checkout';
   let appliedDiscountCode = '';
 
   // Capture phase so cart page adds skip the global cart-modal handler
   cartRoot?.addEventListener('click', (e) => {
+    const suggestBtn = e.target.closest('#cart-suggest .add-to-cart');
+    if (suggestBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const suggest = suggestBtn.closest('#cart-suggest');
+      const variantId = suggest?.getAttribute('data-variant-id') || suggestBtn.getAttribute('data-id');
+      if (!variantId) { return; }
+      addEasyAddItem(variantId, suggestBtn, suggest);
+      return;
+    }
+
     const easyAddBtn = e.target.closest('.cart-easy-add .add-to-cart');
     if (!easyAddBtn) { return; }
 
@@ -64,6 +76,10 @@ window.addEventListener('load', () => {
     }
   });
 
+  document.querySelector('#discount-toggle')?.addEventListener('click', () => {
+    toggleDiscountForm();
+  });
+
   document.querySelector('#discount-apply')?.addEventListener('click', () => {
     const input = document.querySelector('#discount-code');
     applyDiscount(input?.value ?? '');
@@ -112,7 +128,17 @@ window.addEventListener('load', () => {
 
       syncCartItems(cart);
       updateCartSummary(cart);
+
+      const removedVariantId = productItem?.getAttribute('data-variant-id')
+        || productItem?.getAttribute('data-id')
+        || variantId;
       productItem?.remove();
+
+      if (removedVariantId) {
+        document.querySelector(
+          `.cart-easy-add .product-item[data-id="${CSS.escape(String(removedVariantId))}"]`,
+        )?.remove();
+      }
 
       const grid = document.querySelector('.cart-easy-add [is="product-promos"] > div');
       if (!grid?.querySelector('.product-item')) {
@@ -363,6 +389,9 @@ window.addEventListener('load', () => {
   function updateCartSummary(cart) {
     const format = getMoneyFormat();
     const hasDiscount = cart.total_discount > 0 || cart.cart_level_discount_applications?.length > 0;
+    const met = cart.total_price >= postageThresholdCents;
+    const shippingCents = met ? 0 : ukShippingCents;
+    const totalWithShipping = cart.total_price + shippingCents;
 
     cart.items.forEach(item => {
       const priceEl = document.querySelector(`[data-key="${CSS.escape(item.key)}"] .price`);
@@ -371,17 +400,20 @@ window.addEventListener('load', () => {
       if (input) { input.value = item.quantity; }
     });
 
-    const subtotalRow = document.querySelector('#cart-subtotal-row');
     const discountRow = document.querySelector('#cart-discount-row');
     const subtotalEl = document.querySelector('.subtotal-price');
     const discountEl = document.querySelector('.discount-price');
+    const shippingEl = document.querySelector('.shipping-price');
+
+    if (subtotalEl) {
+      subtotalEl.textContent = formatMoney(
+        hasDiscount ? cart.original_total_price : cart.total_price,
+        format,
+      );
+    }
 
     if (hasDiscount) {
-      subtotalRow?.removeAttribute('hidden');
       discountRow?.removeAttribute('hidden');
-      if (subtotalEl) {
-        subtotalEl.textContent = formatMoney(cart.original_total_price, format);
-      }
       if (discountEl) {
         discountEl.textContent = `−${formatMoney(cart.total_discount, format)}`;
       }
@@ -391,11 +423,16 @@ window.addEventListener('load', () => {
     } else {
       appliedDiscountCode = '';
       updateDiscountChip('');
-      subtotalRow?.setAttribute('hidden', '');
       discountRow?.setAttribute('hidden', '');
     }
 
-    resetPrices(formatMoney(cart.total_price, format), cart.item_count);
+    if (shippingEl) {
+      shippingEl.textContent = met
+        ? 'Free'
+        : (ukShippingCents > 0 ? formatMoney(ukShippingCents, format) : ukShippingLabel);
+    }
+
+    resetPrices(formatMoney(totalWithShipping, format), cart.item_count);
     updatePostageUi(cart.total_price, format);
   }
 
@@ -409,8 +446,7 @@ window.addEventListener('load', () => {
     const postage = document.querySelector('#cart-postage');
     const message = document.querySelector('#cart-postage-message');
     const bar = document.querySelector('#cart-postage-bar');
-    const fill = document.querySelector('#cart-postage-bar-fill');
-    const note = document.querySelector('#cart-delivery-note');
+    const barFill = document.querySelector('#cart-postage-bar-fill');
     const delivery = document.querySelector('#delivery');
 
     postage?.classList.toggle('cart-postage--met', met);
@@ -423,12 +459,20 @@ window.addEventListener('load', () => {
     }
 
     if (bar) { bar.setAttribute('aria-valuenow', String(progress)); }
-    if (fill) { fill.style.width = `${progress}%`; }
+    if (barFill) { barFill.style.width = `${progress}%`; }
 
-    if (note) {
-      note.textContent = met
-        ? 'Free UK delivery on this order.'
-        : `UK orders under ${postageThresholdLabel} include a delivery charge.`;
+    const suggest = document.querySelector('#cart-suggest');
+    if (suggest) {
+      const suggestProductId = suggest.getAttribute('data-product-id');
+      const suggestInCart = suggestProductId
+        && document.querySelector(
+          `#cart-table .cart-item[data-product-id="${CSS.escape(suggestProductId)}"]`,
+        );
+      if (met || suggestInCart) {
+        suggest.setAttribute('hidden', '');
+      } else {
+        suggest.removeAttribute('hidden');
+      }
     }
 
     if (!delivery) { return; }
@@ -437,10 +481,34 @@ window.addEventListener('load', () => {
     delivery.classList.toggle('postage-under', !met);
 
     const charge = delivery.querySelector('[data-postage-uk-charge]');
-    const chargeLabel = delivery.dataset.postageCharge || 'Charged at checkout';
+    const chargeLabel = delivery.dataset.postageCharge || ukShippingLabel;
 
     if (charge) {
       charge.textContent = met ? 'Free' : chargeLabel;
+    }
+  }
+
+  function toggleDiscountForm(forceOpen) {
+    const root = document.querySelector('#cart-discount');
+    const toggle = document.querySelector('#discount-toggle');
+    const form = document.querySelector('#discount-form');
+    if (!toggle || !form) { return; }
+
+    const open = forceOpen === true
+      ? true
+      : forceOpen === false
+        ? false
+        : form.hasAttribute('hidden');
+
+    if (open) {
+      form.removeAttribute('hidden');
+      root?.classList.add('cart-discount--open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.querySelector('#discount-code')?.focus();
+    } else {
+      form.setAttribute('hidden', '');
+      root?.classList.remove('cart-discount--open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   }
 
@@ -453,6 +521,7 @@ window.addEventListener('load', () => {
       if (label) { label.textContent = code; }
       chips?.removeAttribute('hidden');
       if (input) { input.value = ''; }
+      toggleDiscountForm(false);
     } else {
       chips?.setAttribute('hidden', '');
       if (label) { label.textContent = ''; }

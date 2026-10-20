@@ -4,6 +4,14 @@
 
 {%- assign free_delivery_threshold = settings.free_uk_delivery_threshold | default: 10 -%}
 {%- assign free_delivery_threshold_cents = free_delivery_threshold | times: 100 -%}
+{%- assign uk_charge_pounds = settings.uk_delivery_charge_below_threshold -%}
+{%- if uk_charge_pounds != blank and uk_charge_pounds > 0 -%}
+  {%- assign uk_shipping_cents = uk_charge_pounds | times: 100 -%}
+  {%- assign uk_shipping_label = uk_shipping_cents | money -%}
+{%- else -%}
+  {%- assign uk_shipping_cents = 0 -%}
+  {%- assign uk_shipping_label = 'Charged at checkout' -%}
+{%- endif -%}
 {%- assign postage_met = false -%}
 {%- if cart.total_price >= free_delivery_threshold_cents -%}
   {%- assign postage_met = true -%}
@@ -12,6 +20,14 @@
 {%- if postage_remaining < 0 -%}
   {%- assign postage_remaining = 0 -%}
 {%- endif -%}
+{%- if postage_met -%}
+  {%- assign estimated_shipping_cents = 0 -%}
+  {%- assign estimated_shipping_display = 'Free' -%}
+{%- else -%}
+  {%- assign estimated_shipping_cents = uk_shipping_cents -%}
+  {%- assign estimated_shipping_display = uk_shipping_label -%}
+{%- endif -%}
+{%- assign cart_total_with_shipping = cart.total_price | plus: estimated_shipping_cents -%}
 
 <div
   is="cart"
@@ -23,6 +39,8 @@
   data-checkout-url="{{ routes.root_url }}checkout"
   data-postage-threshold="{{ free_delivery_threshold_cents }}"
   data-postage-threshold-label="£{{ free_delivery_threshold }}"
+  data-uk-shipping-cents="{{ uk_shipping_cents }}"
+  data-uk-shipping-label="{{ uk_shipping_label | escape }}"
 >
   <div>
     <div class="cart-layout">
@@ -141,17 +159,29 @@
       {%- if cart.item_count > 0 -%}
         <div is="checkout">
           <div is="checkout-wrapper">
-            <div class="cart-discount">
-              <div id="discount-form" class="cart-discount__form">
-                <div class="cart-discount__row">
-                  <input
-                    type="text"
-                    id="discount-code"
-                    name="discount"
-                    autocomplete="off"
-                    placeholder="Discount code"
-                  />
-                  <button type="button" id="discount-apply" is="outline-button">Apply</button>
+            <div class="cart-checkout-section">
+              <div class="cart-discount" id="cart-discount">
+                <button
+                  type="button"
+                  class="cart-discount__toggle"
+                  id="discount-toggle"
+                  aria-expanded="false"
+                  aria-controls="discount-form"
+                >
+                  Have a discount code?
+                  <span class="cart-discount__toggle-mark" aria-hidden="true">+</span>
+                </button>
+                <div id="discount-form" class="cart-discount__form" hidden>
+                  <div class="cart-discount__row">
+                    <input
+                      type="text"
+                      id="discount-code"
+                      name="discount"
+                      autocomplete="off"
+                      placeholder="Discount code"
+                    />
+                    <button type="button" id="discount-apply" is="outline-button">Apply</button>
+                  </div>
                 </div>
                 <div class="cart-discount__chips" id="discount-chips" hidden>
                   <span class="cart-discount__chip">
@@ -162,56 +192,139 @@
                 <p class="cart-discount__message" id="discount-message" role="status" aria-live="polite" hidden></p>
               </div>
             </div>
-            <div
-              class="cart-postage {% if postage_met %}cart-postage--met{% else %}cart-postage--under{% endif %}"
-              id="cart-postage"
-            >
-              <p class="cart-postage__message" id="cart-postage-message" role="status">
-                {%- if postage_met -%}
-                  You've unlocked free UK delivery
-                {%- else -%}
-                  Add {{ postage_remaining | money }} more for free UK delivery
+
+            <div class="cart-checkout-section">
+              {%- if postage_met -%}
+                {%- assign postage_progress = 100 -%}
+              {%- else -%}
+                {%- assign postage_progress = cart.total_price | times: 100.0 | divided_by: free_delivery_threshold_cents -%}
+              {%- endif -%}
+
+              {%- assign suggest_product = blank -%}
+              {%- assign suggest_fit_price = blank -%}
+              {%- assign suggest_fallback = blank -%}
+              {%- unless postage_met -%}
+                {%- assign mini_sets = collections['mini-sets'] -%}
+                {%- if mini_sets != blank -%}
+                  {%- for product in mini_sets.products -%}
+                    {%- unless product.available -%}{%- continue -%}{%- endunless -%}
+                    {%- assign suggest_in_cart = false -%}
+                    {%- for item in cart.items -%}
+                      {%- if item.product_id == product.id -%}
+                        {%- assign suggest_in_cart = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- if suggest_in_cart -%}{%- continue -%}{%- endif -%}
+                    {%- if product.price >= postage_remaining -%}
+                      {%- if suggest_fit_price == blank or product.price < suggest_fit_price -%}
+                        {%- assign suggest_product = product -%}
+                        {%- assign suggest_fit_price = product.price -%}
+                      {%- endif -%}
+                    {%- elsif suggest_fallback == blank -%}
+                      {%- assign suggest_fallback = product -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- if suggest_product == blank -%}
+                    {%- assign suggest_product = suggest_fallback -%}
+                  {%- endif -%}
                 {%- endif -%}
-              </p>
+              {%- endunless -%}
+
               <div
-                class="cart-postage__bar"
-                role="progressbar"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-valuenow="{% if postage_met %}100{% else %}{{ cart.total_price | times: 100.0 | divided_by: free_delivery_threshold_cents | round }}{% endif %}"
-                id="cart-postage-bar"
+                class="cart-postage {% if postage_met %}cart-postage--met{% else %}cart-postage--under{% endif %}"
+                id="cart-postage"
               >
-                <div
-                  class="cart-postage__bar-fill"
-                  id="cart-postage-bar-fill"
-                  style="width: {% if postage_met %}100%{% else %}{{ cart.total_price | times: 100.0 | divided_by: free_delivery_threshold_cents }}%{% endif %};"
-                ></div>
+                <div class="cart-postage__status">
+                  <div class="icon check cart-postage__check" aria-hidden="true"></div>
+                  <p class="cart-postage__message" id="cart-postage-message" role="status">
+                    {%- if postage_met -%}
+                      You've unlocked free UK delivery
+                    {%- else -%}
+                      Add {{ postage_remaining | money }} more for free UK delivery
+                    {%- endif -%}
+                  </p>
+                  <div
+                    class="cart-postage__bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="{{ postage_progress | round }}"
+                    aria-labelledby="cart-postage-message"
+                    id="cart-postage-bar"
+                  >
+                    <div
+                      class="cart-postage__bar-fill"
+                      id="cart-postage-bar-fill"
+                      style="width: {{ postage_progress }}%;"
+                    ></div>
+                  </div>
+                </div>
+
+                {%- if suggest_product != blank -%}
+                  {%- assign suggest_unlocks = false -%}
+                  {%- if suggest_product.price >= postage_remaining -%}
+                    {%- assign suggest_unlocks = true -%}
+                  {%- endif -%}
+                  <div
+                    class="cart-suggest"
+                    id="cart-suggest"
+                    data-product-id="{{ suggest_product.id }}"
+                    data-variant-id="{{ suggest_product.variants.first.id }}"
+                  >
+                    <a class="cart-suggest__image" href="{{ suggest_product.url }}">
+                      <img
+                        src="{{ suggest_product.featured_media | image_url: width: 180 }}"
+                        alt="{{ suggest_product.featured_media.alt | default: suggest_product.title | escape }}"
+                        width="{{ suggest_product.featured_media.width }}"
+                        height="{{ suggest_product.featured_media.height }}"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="cart-suggest__info">
+                      <a class="cart-suggest__title" href="{{ suggest_product.url }}">{{ suggest_product.title }}</a>
+                      <p class="cart-suggest__meta">
+                        {{ suggest_product.price | money }}
+                        {%- if suggest_unlocks -%}
+                          <span>· Unlocks free delivery</span>
+                        {%- endif -%}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      class="add-to-cart cart-suggest__add"
+                      data-id="{{ suggest_product.variants.first.id }}"
+                    >
+                      Add
+                    </button>
+                  </div>
+                {%- endif -%}
               </div>
             </div>
-            <table class="cart-totals">
-              <tbody>
-                <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row" hidden>
-                  <th scope="row">Subtotal</th>
-                  <td class="subtotal-price"></td>
-                </tr>
-                <tr class="cart-totals__row cart-totals__discount" id="cart-discount-row" hidden>
-                  <th scope="row">Discount</th>
-                  <td class="discount-price"></td>
-                </tr>
-                <tr class="cart-totals__row cart-totals__total">
-                  <th scope="row">Total</th>
-                  <td class="total-price">{{ cart.total_price | money }}</td>
-                </tr>
-              </tbody>
-            </table>
-            <button type="button" id="checkout-button">Proceed to checkout<div class="icon arrow-right"></div></button>
-            <p class="meta" id="cart-delivery-note">
-              {%- if postage_met -%}
-                Free UK delivery on this order.
-              {%- else -%}
-                UK orders under £{{ free_delivery_threshold }} include a delivery charge.
-              {%- endif -%}
-            </p>
+
+            <div class="cart-checkout-section">
+              <table class="cart-totals">
+                <tbody>
+                  <tr class="cart-totals__row cart-totals__subtotal" id="cart-subtotal-row">
+                    <th scope="row">Subtotal</th>
+                    <td class="subtotal-price">{{ cart.total_price | money }}</td>
+                  </tr>
+                  <tr class="cart-totals__row cart-totals__discount" id="cart-discount-row" hidden>
+                    <th scope="row">Discount</th>
+                    <td class="discount-price"></td>
+                  </tr>
+                  <tr class="cart-totals__row cart-totals__shipping" id="cart-shipping-row">
+                    <th scope="row">Estimated UK shipping</th>
+                    <td class="shipping-price">{{ estimated_shipping_display }}</td>
+                  </tr>
+                  <tr class="cart-totals__row cart-totals__total">
+                    <th scope="row">Total</th>
+                    <td class="total-price">{{ cart_total_with_shipping | money }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" id="checkout-button">Proceed to checkout<div class="icon arrow-right"></div></button>
+            </div>
           </div>
           {% render 'delivery' %}
         </div>

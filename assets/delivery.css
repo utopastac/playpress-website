@@ -23,6 +23,13 @@ div[is="delivery"] {
     font-size: var(--text-body-3);
     line-height: var(--leading-snug);
 
+    & .delivery-summary {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-0-5);
+      min-width: 0;
+    }
+
     & span {
       display: flex;
       font-size: var(--text-body-3);
@@ -33,6 +40,15 @@ div[is="delivery"] {
       & .icon {
         margin-inline-end: var(--space-1);
       }
+    }
+
+    & .delivery-subline {
+      margin: 0;
+      margin-inline-start: calc(var(--space-3) + var(--space-1));
+      font-size: var(--text-body-4);
+      font-weight: var(--weight-regular);
+      line-height: var(--leading-snug);
+      color: var(--color-text-muted);
     }
   }
 

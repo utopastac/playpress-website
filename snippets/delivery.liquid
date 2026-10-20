@@ -24,7 +24,12 @@
   class="{% if postage_met %}postage-met{% else %}postage-under{% endif %}"
 >
   <header>
-    <span><div class="icon delivery"></div>Delivery information</span>
+    <div class="delivery-summary">
+      <span><div class="icon delivery"></div>Delivery information</span>
+      <p class="delivery-subline">
+        UK delivery {{ uk_charge_below }} | Free for orders over £{{ free_delivery_threshold }}
+      </p>
+    </div>
     <div class="icon chevron-down" id="delivery-icon"></div>
   </header>
   <div is="delivery-content">
