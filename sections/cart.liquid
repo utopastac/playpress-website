@@ -26,78 +26,115 @@
 >
   <div>
     <div class="cart-layout">
-      <div class="cart-main">
-        <header>
-          <h1 id="main-title">Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
-          <a is="outline-button" href="/shop">Continue shopping</a>
-        </header>
-        {%- if cart.item_count > 0 -%}
-          <section id="cart-table">
-            <ul>
-              {%- for item in cart.items -%}
-                <li class="cart-item" data-key="{{ item.key }}" data-variant-id="{{ item.variant_id }}" data-product-id="{{ item.product_id }}">
-                  <div class="image">
-                    <a href="{{ item.url | within: collections.all }}">
-                      {%- assign cart_image = item.image | default: item.product.featured_image -%}
-                      <img
-                        src="{{ cart_image | image_url: width: 200 }}"
-                        alt="{{ cart_image.alt | escape }}"
-                        width="{{ cart_image.width }}"
-                        height="{{ cart_image.height }}"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="info">
-                    <div class="title">
-                      <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
+      <div class="cart-primary">
+        <div class="cart-main">
+          <header>
+            <h1 id="main-title">Your cart {%- if cart.item_count == 0 %} is empty{%- endif -%}</h1>
+            <a is="outline-button" href="/shop">Continue shopping</a>
+          </header>
+          {%- if cart.item_count > 0 -%}
+            <section id="cart-table">
+              <ul>
+                {%- for item in cart.items -%}
+                  <li class="cart-item" data-key="{{ item.key }}" data-variant-id="{{ item.variant_id }}" data-product-id="{{ item.product_id }}">
+                    <div class="image">
+                      <a href="{{ item.url | within: collections.all }}">
+                        {%- assign cart_image = item.image | default: item.product.featured_image -%}
+                        <img
+                          src="{{ cart_image | image_url: width: 200 }}"
+                          alt="{{ cart_image.alt | escape }}"
+                          width="{{ cart_image.width }}"
+                          height="{{ cart_image.height }}"
+                          loading="lazy"
+                        />
+                      </a>
                     </div>
-                    <div class="meta">
-                      <div class="quantity">
-                        <button type="button" class="minus item-button"><div class="icon minus"></div></button>
-                        <input
-                          name="updates[]"
-                          size="2"
-                          id="updates_{{ item.id }}"
-                          value="{{ item.quantity }}" />
-                        <button type="button" class="plus item-button"><div class="icon plus"></div></button>
+                    <div class="info">
+                      <div class="title">
+                        <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
                       </div>
-                      <div class="price">{{ item.final_line_price | money }}</div>
-                      <div class="actions">
-                        <button type="button" class="remove-item item-button"><div class="icon trash"></div></button>
+                      <div class="meta">
+                        <div class="quantity">
+                          <button type="button" class="minus item-button"><div class="icon minus"></div></button>
+                          <input
+                            name="updates[]"
+                            size="2"
+                            id="updates_{{ item.id }}"
+                            value="{{ item.quantity }}" />
+                          <button type="button" class="plus item-button"><div class="icon plus"></div></button>
+                        </div>
+                        <div class="price">{{ item.final_line_price | money }}</div>
+                        <div class="actions">
+                          <button type="button" class="remove-item item-button"><div class="icon trash"></div></button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </section>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </section>
 
-          <template id="cart-item-template">
-            <li class="cart-item" data-key="" data-variant-id="" data-product-id="">
-              <div class="image">
-                <a href="">
-                  <img src="" alt="" width="200" height="200" loading="lazy" />
-                </a>
-              </div>
-              <div class="info">
-                <div class="title">
-                  <a href=""></a>
+            <template id="cart-item-template">
+              <li class="cart-item" data-key="" data-variant-id="" data-product-id="">
+                <div class="image">
+                  <a href="">
+                    <img src="" alt="" width="200" height="200" loading="lazy" />
+                  </a>
                 </div>
-                <div class="meta">
-                  <div class="quantity">
-                    <button type="button" class="minus item-button"><div class="icon minus"></div></button>
-                    <input name="updates[]" size="2" value="1" />
-                    <button type="button" class="plus item-button"><div class="icon plus"></div></button>
+                <div class="info">
+                  <div class="title">
+                    <a href=""></a>
                   </div>
-                  <div class="price"></div>
-                  <div class="actions">
-                    <button type="button" class="remove-item item-button"><div class="icon trash"></div></button>
+                  <div class="meta">
+                    <div class="quantity">
+                      <button type="button" class="minus item-button"><div class="icon minus"></div></button>
+                      <input name="updates[]" size="2" value="1" />
+                      <button type="button" class="plus item-button"><div class="icon plus"></div></button>
+                    </div>
+                    <div class="price"></div>
+                    <div class="actions">
+                      <button type="button" class="remove-item item-button"><div class="icon trash"></div></button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-          </template>
+              </li>
+            </template>
+          {%- endif -%}
+        </div>
+
+        {%- if cart.item_count > 0 -%}
+          {%- assign under_10 = collections['under-11'] -%}
+          {%- if under_10 != blank and under_10.products_count > 0 -%}
+            {%- capture easy_add_items -%}
+              {%- assign easy_add_shown = 0 -%}
+              {%- for product in under_10.products -%}
+                {%- if easy_add_shown >= 8 -%}{%- break -%}{%- endif -%}
+                {%- unless product.available -%}{%- continue -%}{%- endunless -%}
+                {%- if product.price >= 1000 -%}{%- continue -%}{%- endif -%}
+                {%- assign already_in_cart = false -%}
+                {%- for item in cart.items -%}
+                  {%- if item.product_id == product.id -%}
+                    {%- assign already_in_cart = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                {%- unless already_in_cart -%}
+                  {%- assign easy_add_shown = easy_add_shown | plus: 1 -%}
+                  {% render 'product-promo', product: product %}
+                {%- endunless -%}
+              {%- endfor -%}
+            {%- endcapture -%}
+            {%- if easy_add_shown > 0 -%}
+              <section class="cart-easy-add" aria-labelledby="cart-easy-add-title">
+                <h2 id="cart-easy-add-title">Also available for under £10</h2>
+                <div is="product-promos">
+                  <div>
+                    {{ easy_add_items }}
+                  </div>
+                </div>
+              </section>
+            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
       </div>
 
@@ -178,39 +215,6 @@
           </div>
           {% render 'delivery' %}
         </div>
-
-        {%- assign under_10 = collections['under-11'] -%}
-        {%- if under_10 != blank and under_10.products_count > 0 -%}
-          {%- capture easy_add_items -%}
-            {%- assign easy_add_shown = 0 -%}
-            {%- for product in under_10.products -%}
-              {%- if easy_add_shown >= 8 -%}{%- break -%}{%- endif -%}
-              {%- unless product.available -%}{%- continue -%}{%- endunless -%}
-              {%- if product.price >= 1000 -%}{%- continue -%}{%- endif -%}
-              {%- assign already_in_cart = false -%}
-              {%- for item in cart.items -%}
-                {%- if item.product_id == product.id -%}
-                  {%- assign already_in_cart = true -%}
-                  {%- break -%}
-                {%- endif -%}
-              {%- endfor -%}
-              {%- unless already_in_cart -%}
-                {%- assign easy_add_shown = easy_add_shown | plus: 1 -%}
-                {% render 'product-promo', product: product %}
-              {%- endunless -%}
-            {%- endfor -%}
-          {%- endcapture -%}
-          {%- if easy_add_shown > 0 -%}
-            <section class="cart-easy-add" aria-labelledby="cart-easy-add-title">
-              <h2 id="cart-easy-add-title">Also available for under £10</h2>
-              <div is="product-promos">
-                <div>
-                  {{ easy_add_items }}
-                </div>
-              </div>
-            </section>
-          {%- endif -%}
-        {%- endif -%}
       {%- endif -%}
     </div>
   </div>

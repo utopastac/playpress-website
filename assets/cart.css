@@ -28,11 +28,22 @@ div[is="cart"] {
   }
 
   & .cart-layout {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Flatten primary column on mobile so checkout can sit between table and grid */
+  & .cart-primary {
+    display: contents;
+  }
+
+  & .cart-main {
+    order: 1;
   }
 
   & div[is="checkout"] {
+    order: 2;
+
     & .meta {
       font-size: var(--text-body-4);
       line-height: var(--leading-snug);
@@ -236,6 +247,7 @@ div[is="cart"] {
   }
 
   & .cart-easy-add {
+    order: 3;
     margin-top: var(--space-10);
 
     & h2 {
@@ -289,26 +301,27 @@ div[is="cart"] {
 
   @media (width >= 770px) {
     & .cart-layout {
+      display: grid;
       column-gap: var(--space-8);
       grid-template-columns: 2fr 1fr;
       align-items: start;
+    }
 
-      & > .cart-main {
-        grid-column: 1;
-        grid-row: 1;
-      }
+    & .cart-primary {
+      display: block;
+      grid-column: 1;
+    }
 
-      & > div[is="checkout"] {
-        grid-column: 2;
-        grid-row: 1 / -1;
-        position: sticky;
-        top: var(--space-1);
-      }
+    & .cart-main,
+    & .cart-easy-add,
+    & div[is="checkout"] {
+      order: initial;
+    }
 
-      & > .cart-easy-add {
-        grid-column: 1;
-        grid-row: 2;
-      }
+    & div[is="checkout"] {
+      grid-column: 2;
+      position: sticky;
+      top: var(--space-1);
     }
   }
 }
