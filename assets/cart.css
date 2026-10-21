@@ -218,6 +218,8 @@ div[is="cart"] {
       }
 
       & .cart-suggest__add {
+        position: relative;
+        overflow: hidden;
         display: inline-flex;
         flex-direction: row-reverse;
         flex-shrink: 0;
